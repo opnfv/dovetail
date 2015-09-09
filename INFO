@@ -1,0 +1,21 @@
+Project: OPNFV qualification testing (dovetail)
+Project Creation Date: September 1st, 2015
+Project Category: Testing
+Lifecycle State: Incubation
+Primary Contact: Christopher Price (christopher.price@ericsson.com)
+Project Lead: Christopher Price (christopher.price@ericsson.com)
+Jira Project Name: OPNFV qualification testing
+Jira Project Prefix: dovetail
+Mailing list tag: [dovetail]
+IRC: Server:freenode.net Channel:#opnfv-testperf
+Repository: dovetail
+
+Committers:
+christopher.price@ericsson.com
+wenjing_chu@dell.com
+hongbo.tianhongbo@huawei.com
+dneary@redhat.com
+
+Link to TSC approval of the project: http://meetbot.opnfv.org/meetings/opnfv-meeting/2015/opnfv-meeting.2015-09-01-13.59.html
+Link(s) to approval of additional committers:
+* Approval of Dave Neary as a committer: http://lists.opnfv.org/pipermail/opnfv-tsc/2015-September/001252.html
