@@ -1,0 +1,2 @@
+Section 05: This directory includes test cases for VNF application deployment
+on the OPNFV platform.

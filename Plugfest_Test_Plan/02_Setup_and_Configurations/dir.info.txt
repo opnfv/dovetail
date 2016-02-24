@@ -1,0 +1,3 @@
+Section 02: This directory includes files and information for the test 
+equipment, setup, configuration, and other general items that apply
+to multiple test cases.

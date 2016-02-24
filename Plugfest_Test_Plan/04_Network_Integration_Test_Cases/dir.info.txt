@@ -1,0 +1,3 @@
+Section 04: This directory includes test cases for testing integration 
+between the OPNFV platform and netwrok equipment (i.e. SDN Controllers,
+Routers, etc.).
