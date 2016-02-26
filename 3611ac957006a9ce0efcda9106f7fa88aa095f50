@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a486d77_15e4d20b",
+        "filename": "Plugfest_Test_Plan/TEST_PLAN_INFO",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2016-02-26T21:09:16Z",
+      "side": 1,
+      "message": "whitespace example",
+      "range": {
+        "startLine": 1,
+        "startChar": 75,
+        "endLine": 1,
+        "endChar": 76
+      },
+      "revId": "3611ac957006a9ce0efcda9106f7fa88aa095f50",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a486d77_f5f016cb",
+        "filename": "Plugfest_Test_Plan/TEST_PLAN_INFO",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2016-02-26T21:09:16Z",
+      "side": 1,
+      "message": "Suggest:\n\"Please follow the number scheme for file names to ensure a consistent ordering of files.\"",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 75
+      },
+      "revId": "3611ac957006a9ce0efcda9106f7fa88aa095f50",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a486d77_d5ed1af1",
+        "filename": "Plugfest_Test_Plan/TEST_PLAN_INFO",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2016-02-26T21:09:16Z",
+      "side": 1,
+      "message": "I prefer raw text because diffs are possible - difficult to do a line by line commentary on a .odt file. I suggest rephrasing this to default to raw text, and fall back to .odt only when necessary.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 47
+      },
+      "revId": "3611ac957006a9ce0efcda9106f7fa88aa095f50",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
