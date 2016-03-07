@@ -5,9 +5,9 @@ collaborate, without causing collisions.
 
 Developer Guidelines
 1. Please check with a project leader before creating a new directory.
-2. Please use a number scheme for file names to logical order the files as 
-   the document should read when a “natural sort” operation is applied.
-3. The LibreOffice format has been selected to provide a file format that 
-   allows the inclusion of figures, pictures, and tables.  Please keep all 
-   files in this format, or as a raw text file.
+2. The content is ordered by the corresponding inclusions in the index.rst
+   file and associated collation files.
+3. The RST format has been selected to provide a file format that 
+   allows the inclusion of figures, pictures, and tables while maintaining
+   clear text contribution for the documents and toolchain support.
 
