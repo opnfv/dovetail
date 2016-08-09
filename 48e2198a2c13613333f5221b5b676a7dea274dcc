@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_935f9d72",
+        "filename": "docs/testsuites/ipv6/testspecification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1247
+      },
+      "writtenOn": "2016-08-09T06:46:04Z",
+      "side": 1,
+      "message": "Here is the Grafana page for IPV6 testing result . http://testresults.opnfv.org/grafana/dashboard/db/yardstick-tc027",
+      "range": {
+        "startLine": 49,
+        "startChar": 48,
+        "endLine": 49,
+        "endChar": 49
+      },
+      "revId": "48e2198a2c13613333f5221b5b676a7dea274dcc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
