@@ -133,6 +133,24 @@
       "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_20666c52",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2016-08-10T15:29:21Z",
+      "side": 1,
+      "message": "No - NFVi is correct - NFV Infrastructure is managed by the Virtual Infrastructure Manager.",
+      "parentUuid": "1a76adc5_401da865",
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
