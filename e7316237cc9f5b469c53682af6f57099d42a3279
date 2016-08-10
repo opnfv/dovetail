@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_0006d0ce",
+        "filename": "docs/testsuites/ipv6/designspecification.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 404
+      },
+      "writtenOn": "2016-08-10T12:42:46Z",
+      "side": 1,
+      "message": "We can probably add some additional info (if required) to elaborate the requirements. \n\nThe following link has some details.\nhttp://artifacts.opnfv.org/ipv6/docs/userguide/index.html#ipv6-gap-analysis-with-openstack-mitaka",
+      "parentUuid": "1a76adc5_ba5869fb",
+      "range": {
+        "startLine": 26,
+        "startChar": 16,
+        "endLine": 26,
+        "endChar": 20
+      },
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_9a6fad92",
         "filename": "docs/testsuites/ipv6/designspecification.rst",
         "patchSetId": 5
