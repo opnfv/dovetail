@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_cb6eb9c9",
+        "filename": "docs/testsuites/ipv6/designspecification.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-08-10T21:07:47Z",
+      "side": 1,
+      "message": "Agree with Sridhar. We need to leverage what IPv6 has done already. Perhaps we only need to refer to:\n(1) http://artifacts.opnfv.org/ipv6/docs/installationprocedure/index.html#testing-methodology, where testing methodology has been articulate. Tempest API Testing and Scenario Testing Test Cases are summarized for Overlay IPv6 Testing.\n(2) Sridhar already suggested to look at http://artifacts.opnfv.org/ipv6/docs/userguide/index.html, where feature list and gap list are summarized.\n(3) http://artifacts.opnfv.org/ipv6/docs/configurationguide/index.html, where our unique feature \"Service VM as IPv6 vRouter\" is introduced in detail.\n\nIn this cases, we only need to leverage:\n- Overlay test cases listed in (1)\n- Service VM as IPv6 vRouter described in (3) and its test case in Yardstick (TC-027).",
+      "parentUuid": "1a76adc5_ba5869fb",
+      "range": {
+        "startLine": 26,
+        "startChar": 16,
+        "endLine": 26,
+        "endChar": 20
+      },
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_9a6fad92",
         "filename": "docs/testsuites/ipv6/designspecification.rst",
         "patchSetId": 5
@@ -148,6 +172,41 @@
       "side": 1,
       "message": "No - NFVi is correct - NFV Infrastructure is managed by the Virtual Infrastructure Manager.",
       "parentUuid": "1a76adc5_401da865",
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_eb7375af",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-08-10T21:07:47Z",
+      "side": 1,
+      "message": "But \"NVFi\" is incorrect as in the original text :). So it should be \"NFVi\".\n\nIn addition, as I suggested in prior comments, we should refer to http://artifacts.opnfv.org/ipv6/docs/installationprocedure/index.html, and leverage the comprehensive list of API and Scenario test cases that are available to address those Overlay IPv6 features.",
+      "parentUuid": "1a76adc5_20666c52",
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_8b68c1bb",
+        "filename": "docs/testsuites/ipv6/testprocedure.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-08-10T21:07:47Z",
+      "side": 1,
+      "message": "Refer to http://artifacts.opnfv.org/ipv6/docs/installationprocedure/index.html. There is a comprehensive list of tests to test those Overlay IPv6 features. Those tests are default in Smoke Test in FuncTest, and in CI/CD.",
       "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
