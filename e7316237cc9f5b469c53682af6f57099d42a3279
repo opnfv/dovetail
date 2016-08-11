@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_eb5db5ea",
+        "filename": "docs/testsuites/ipv6/designspecification.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-08-11T01:43:10Z",
+      "side": 1,
+      "message": "In order to guide the co-work with dovetail and ipv6/Functest/yardstick, etc, I create a draft wiki page https://wiki.opnfv.org/display/dovetail/Ipv6 for discussion. My idea is that this table can be a draft, it can be envolved in later patches, such as amend the test case requirements description, amend the test available status, amend the test case links.",
+      "parentUuid": "1a76adc5_cb6eb9c9",
+      "range": {
+        "startLine": 26,
+        "startChar": 16,
+        "endLine": 26,
+        "endChar": 20
+      },
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_9a6fad92",
         "filename": "docs/testsuites/ipv6/designspecification.rst",
         "patchSetId": 5
