@@ -234,6 +234,24 @@
       "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_6b69a58a",
+        "filename": "docs/testsuites/ipv6/testprocedure.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-08-11T01:51:18Z",
+      "side": 1,
+      "message": "yep, this can be added in later patches I think when the test case/projects are mature enough. such as, there is a need to run the test case without CI/CD just like what we do in plugfest this May, still need many works in test projects.",
+      "parentUuid": "1a76adc5_8b68c1bb",
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
