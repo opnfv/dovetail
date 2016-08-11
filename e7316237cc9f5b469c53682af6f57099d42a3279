@@ -120,6 +120,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_6c69bb8a",
+        "filename": "docs/testsuites/ipv6/designspecification.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-08-11T17:31:57Z",
+      "side": 1,
+      "message": "Hi Folks, my view of this test spec is that it will contain a number of explicit text cases rather than being a single fass/fail monolithic sequence.\nI\u0027m not trying to do that in this patch, but we really need to make sure our tests are structured in a consistent and granular manner.  These tests in this spec then make up a piece of a larger test suite for ipv6 which would address additional areas.\nI guess what I\u0027m saying is I don\u0027t think this current approach is what we need for dovetail.  And we should identify what we need and then embark on the work to get the ipv6 tests in that structure and sequence.",
+      "parentUuid": "1a76adc5_eb5db5ea",
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_9a6fad92",
         "filename": "docs/testsuites/ipv6/designspecification.rst",
         "patchSetId": 5
@@ -161,6 +179,24 @@
         "endLine": 40,
         "endChar": 60
       },
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_0c0607cf",
+        "filename": "docs/testsuites/ipv6/designspecification.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-08-11T17:31:57Z",
+      "side": 1,
+      "message": "Yep, this is a data dump and maybe a mistake.   We need to identify what use cases would be addressed in any test spec and which of these features fit into different sceps within the overall test suite.",
+      "parentUuid": "1a76adc5_a0103c4f",
       "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
