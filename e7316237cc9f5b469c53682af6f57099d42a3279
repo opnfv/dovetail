@@ -16,6 +16,24 @@
       "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_99646423",
+        "filename": "docs/testsuites/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-08T04:50:30Z",
+      "side": 0,
+      "message": "Current content of this section doesn\u0027t match test cases. Of course, we can bring this section back after re-write the content based on test cases. But the principle is to keep it simple.",
+      "parentUuid": "1a76adc5_f9f79857",
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
