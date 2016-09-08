@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_9996a4ef",
+        "filename": "docs/testsuites/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-08T04:27:29Z",
+      "side": 1,
+      "message": "test cases should not be linked from the top level doc, but embedded in the specification as is usually handled in test procedure documentation.",
+      "revId": "d2137af0a880a5b1bcfd8af72e9bf0706cd33c27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_b9992021",
+        "filename": "docs/testsuites/l3vpn/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-08T04:27:29Z",
+      "side": 1,
+      "message": "let\u0027s do L3VPN in another patch and include the SDNVPN team in that work.",
+      "revId": "d2137af0a880a5b1bcfd8af72e9bf0706cd33c27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_59a00c43",
+        "filename": "docs/testsuites/l3vpn/l3vpn_testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-08T04:27:29Z",
+      "side": 1,
+      "message": "let\u0027s do L3VPN in another patch and include the SDNVPN team in that work.",
+      "revId": "d2137af0a880a5b1bcfd8af72e9bf0706cd33c27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}

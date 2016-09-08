@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_f9f79857",
+        "filename": "docs/testsuites/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-08T04:27:29Z",
+      "side": 0,
+      "message": "This section is intended to be a descriptive test specification.  The purpose of this is to describe to a VNFi provider what the purpose intent and approach of the test suite to be executed is from the persepctive of the IPv6 capabilities provided in the OPNFV platform.\n\nThese sections should be put back.",
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
