@@ -1,18 +1,15 @@
 .. This work is licensed under a Creative Commons Attribution 4.0 International License.
 .. http://creativecommons.org/licenses/by/4.0
-.. (c) Christopher Price (Ericsson AB) and others
+.. (c) OPNFV
 
 *******************************
-OPNFV IPv6 compliance test plan
+OPNFV IPv6 Compliance Test Plan
 *******************************
 
 .. toctree::
    :maxdepth: 2
 
    ./testplan.rst
-   ./designspecification.rst
-.. <Start>
-.. We should iterate here to cover all test specifications in the test suite
-   ./testspecification.rst
-.. <End>
-   ./testprocedure.rst
+   ./ipv6.tc001.specification.rst
+   ./ipv6.tc026.specification.rst
+
