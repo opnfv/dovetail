@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_6013c90d",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-09T16:56:01Z",
+      "side": 1,
+      "message": "Should we maybe use a name like \"Operational management of IPv6 networks, ports and subnets\"?",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_00fa15bd",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-09T16:56:01Z",
+      "side": 1,
+      "message": "To verify that the platform is able to sufficiently execute create, update and delete operations on IPv6 enabled network, port and subnet objects.   \n\"The SUT is VIM+NVFi so we need to either state that or use a generic term like \"platform\" which should be defined in the \"desing.rst\" file to describe the SUT.",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_20f5d1ca",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-09T16:56:01Z",
+      "side": 1,
+      "message": "We should be careful not to list implementations as modules under test.  nova and neutron are specific implementations of workload and networking control planes.  Let\u0027s try to use generic terminology of which modules are affected or refer back to the SUT.",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_c003bdb6",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-09T16:56:01Z",
+      "side": 1,
+      "message": "I think we should likely remove this.",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_802dc548",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-09T16:56:01Z",
+      "side": 1,
+      "message": "For this section I would expect us to be able to provide results for create network one/many, create subnet one/many, create port object one/many.\nWe should also here define the relationship between test items, here I would have dependencies of test cases (subnet is dependant on network for instance).\nThe reason is that we may have implementation that have limitations in their IPv6 support which needs to be articulated in the test results and will form part of the evaluation of the results.",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_a030019f",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-09T16:56:01Z",
+      "side": 1,
+      "message": "This should refer to the information model we use for the provisioning of these functions within the test case.  Preferably an IETF info model for instance for IPv6, and the interface definition supported by the suite at this time.",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_4027ad64",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-09T16:56:01Z",
+      "side": 1,
+      "message": "We may need to break this test case up into pieces.\nIt may be that we want to be able to pass a test suite for creating a network object, that for instance is not dependent on creating a subnet.  Thus our pass fail criteria would need to be either more detailed or split into seperate files/test cases.",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_602ae92d",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-09T16:56:01Z",
+      "side": 1,
+      "message": "This is a TBD item.  We have requirements that the test reports be encrypted, identifiable and securely provided to the evaluation committee.  The dashoard may even be suppressed in this instance to protect the SUT results while the evaluiation of the secure results is done.\n\nSuggest we state TDB until we have the tooling and methodology ready.",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
