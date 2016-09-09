@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_60e189fd",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-09T18:28:39Z",
+      "side": 1,
+      "message": "25 out of 26 test cases are all operational management of IPv6 tenant networks per se. So current title seems appropriate. I will update it more accurately",
+      "parentUuid": "1a76adc5_6013c90d",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_00fa15bd",
         "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2016-09-09T16:56:01Z",
       "side": 1,
       "message": "To verify that the platform is able to sufficiently execute create, update and delete operations on IPv6 enabled network, port and subnet objects.   \n\"The SUT is VIM+NVFi so we need to either state that or use a generic term like \"platform\" which should be defined in the \"desing.rst\" file to describe the SUT.",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_00e8d5e0",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-09T18:28:39Z",
+      "side": 1,
+      "message": "Good point and modified",
+      "parentUuid": "1a76adc5_00fa15bd",
       "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_20e39106",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-09T18:28:39Z",
+      "side": 1,
+      "message": "Good point. Agree. I removed this line because we don\u0027t test it separately on Nova, Neutron etc.",
+      "parentUuid": "1a76adc5_20f5d1ca",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_c003bdb6",
         "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
         "patchSetId": 3
@@ -64,6 +118,24 @@
       "writtenOn": "2016-09-09T16:56:01Z",
       "side": 1,
       "message": "I think we should likely remove this.",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_a0bec1d2",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-09T18:28:39Z",
+      "side": 1,
+      "message": "It lists dependencies on Tempest and Functest",
+      "parentUuid": "1a76adc5_c003bdb6",
       "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_e0ecb9f5",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-09T18:28:39Z",
+      "side": 1,
+      "message": "This bulk create/delete of networks etc. Single network creation/deletion are handled in a different test case.\n\nDependency is a good point. I will add step 1, 2 and 3 there",
+      "parentUuid": "1a76adc5_802dc548",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_a030019f",
         "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
         "patchSetId": 3
@@ -98,6 +188,24 @@
       "writtenOn": "2016-09-09T16:56:01Z",
       "side": 1,
       "message": "This should refer to the information model we use for the provisioning of these functions within the test case.  Preferably an IETF info model for instance for IPv6, and the interface definition supported by the suite at this time.",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_40b56dec",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-09T18:28:39Z",
+      "side": 1,
+      "message": "Not sure which IETF info model that is applicable to IPv6 test here. The test simply executes Neutron\u0027s net-create, subnet-create and port-create APIs. I am not aware those APIs are based on any IETF info model. Appreciate if you can point out which IETF info model is used by those APIs.",
+      "parentUuid": "1a76adc5_a030019f",
       "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_60b8a9e5",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-09T18:28:39Z",
+      "side": 1,
+      "message": "Technically, Neutron is designed in a way that port, subnet and network are closely tied together.\nGluon is trying to break those ties, and have an independent port/subnet/network in the future.\nWe have to wait until Gluon replaces Neutron.",
+      "parentUuid": "1a76adc5_4027ad64",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_602ae92d",
         "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
         "patchSetId": 3
@@ -132,6 +258,24 @@
       "writtenOn": "2016-09-09T16:56:01Z",
       "side": 1,
       "message": "This is a TBD item.  We have requirements that the test reports be encrypted, identifiable and securely provided to the evaluation committee.  The dashoard may even be suppressed in this instance to protect the SUT results while the evaluiation of the secure results is done.\n\nSuggest we state TDB until we have the tooling and methodology ready.",
+      "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_00cf7580",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-09T18:28:39Z",
+      "side": 1,
+      "message": "Good point. Will change it",
+      "parentUuid": "1a76adc5_602ae92d",
       "revId": "546bff48aa68e6f707edbba4a4d3a5cd1013e08a",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
