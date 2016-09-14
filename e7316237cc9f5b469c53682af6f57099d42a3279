@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_f4d9d283",
+        "filename": "docs/testsuites/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-14T16:57:21Z",
+      "side": 0,
+      "message": "Looking at 26 test cases in ipv6_all_testcases.rst, neither this design spec itself nor the content within this design spec is relevant or correct. In another word, this design spec doesn\u0027t work for those 26 test cases. Thus it is redundant and no longer needed.",
+      "parentUuid": "1a76adc5_d9d2cfff",
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_f9cd4b5e",
         "filename": "docs/testsuites/ipv6/index.rst",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2016-09-14T11:59:43Z",
       "side": 0,
       "message": "why has the test procedure been removed.",
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_74d5c241",
+        "filename": "docs/testsuites/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-14T16:57:21Z",
+      "side": 0,
+      "message": "Looking at 26 test cases in ipv6_all_testcases.rst, neither this test procedure itself nor the content within this test procedure is relevant or correct. In another word, this test procedure doesn\u0027t work for those 26 test cases. Thus it is redundant and no longer needed.",
+      "parentUuid": "1a76adc5_f9cd4b5e",
       "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false

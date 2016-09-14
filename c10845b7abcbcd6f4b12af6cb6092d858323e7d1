@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_74ee2224",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-14T16:57:21Z",
+      "side": 1,
+      "message": "Clarified and made consistent with line 13 in patchset 7",
+      "parentUuid": "1a76adc5_79093b94",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_19004766",
         "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2016-09-14T11:59:43Z",
       "side": 1,
       "message": "Suggest renaming this test case.  tc001 might well be \"create network\" followed by tc002 \"update network\" etc etc.\nThe \"bulk\" test case would then be somewhere further along at tc012 (as a randomly guessed number) or something.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_34cf4ab2",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-14T16:57:21Z",
+      "side": 1,
+      "message": "This test case will test the bulk operation, i.e. creating and deleting more than one tenant networks in one operation. The title in line 6 is revised to be consistent. Because we are giving an exemplary test case here, once all test cases are agreed, we can optimize the sequence of all test cases in entirety.",
+      "parentUuid": "1a76adc5_19004766",
       "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_d4de166d",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-14T16:57:21Z",
+      "side": 1,
+      "message": "Agree that we don\u0027t need this dependency anywhere. Thus it is removed in patchset 7.",
+      "parentUuid": "1a76adc5_3903c374",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_99dc5714",
         "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
         "patchSetId": 6
@@ -64,6 +118,24 @@
       "writtenOn": "2016-09-14T11:59:43Z",
       "side": 1,
       "message": "This should be the specification of input data that is used to execute the test case.  What is sent to the SUT for instance.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_d4c5b68e",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-14T16:57:21Z",
+      "side": 1,
+      "message": "Added \"The parameters needed to execute Neutron network APIs. Refer to Neutron Networking API v2.0\" in patchset 7.",
+      "parentUuid": "1a76adc5_99dc5714",
       "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_94bf3efb",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-14T16:57:21Z",
+      "side": 1,
+      "message": "Added \"The responses after executing Network network APIs. Refer to Neutron Networking API v2.0\" in patchset 7",
+      "parentUuid": "1a76adc5_b9d7d3ec",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_5906bf87",
         "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
         "patchSetId": 6
@@ -98,6 +188,24 @@
       "writtenOn": "2016-09-14T11:59:43Z",
       "side": 1,
       "message": "This should explain the way the output is evaluated to determine the result of the test case.  If I were to design a system to fulfill this test case this area is where I would look to find the design requirements for the system.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_5439a6a2",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-14T16:57:21Z",
+      "side": 1,
+      "message": "Added \"If normal response code 200 is returned, the test passes. Otherwise, the test fails with various  error codes. Refer to Neutron Networking API v2.0 \" in patchset 7.",
+      "parentUuid": "1a76adc5_5906bf87",
       "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_743ce293",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-14T16:57:21Z",
+      "side": 1,
+      "message": "I don",
+      "parentUuid": "1a76adc5_f9c6ab48",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_99c5373e",
         "filename": "docs/testsuites/ipv6/testplan.rst",
         "patchSetId": 6
@@ -132,6 +258,24 @@
       "writtenOn": "2016-09-14T11:59:43Z",
       "side": 1,
       "message": "can remove the \"that are already\" form this sentence",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_145a4ef3",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-14T16:57:21Z",
+      "side": 1,
+      "message": "Good point. Removed in patchset 7.",
+      "parentUuid": "1a76adc5_99c5373e",
       "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -155,6 +299,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_f46eb295",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-14T16:57:21Z",
+      "side": 1,
+      "message": "Good point. Moved to Scope section in patchset 7.",
+      "parentUuid": "1a76adc5_59df9f0d",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_19e927b8",
         "filename": "docs/testsuites/ipv6/testplan.rst",
         "patchSetId": 6
@@ -172,6 +334,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_1411ee04",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-14T16:57:21Z",
+      "side": 1,
+      "message": "[BH526R] Good point. Removed in patchset 7.",
+      "parentUuid": "1a76adc5_19e927b8",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_39ec23c7",
         "filename": "docs/testsuites/ipv6/testplan.rst",
         "patchSetId": 6
@@ -183,6 +363,24 @@
       "writtenOn": "2016-09-14T11:59:43Z",
       "side": 1,
       "message": "Each suite should be executed in a consistent manner.  If there are multiple test execution solutions they should likely be seperated into seperate test suites.  This should describe the method of execution expected for the test suite.  I dont\u0027 think we want to reproduce that information for every single test case.  That woudl be cumbersome.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_94041ec1",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-14T16:57:21Z",
+      "side": 1,
+      "message": "Please refer to attached test-case-example.jpg in my email. This is a regular test case document in industry. The specific test steps are described in each test case document. That is what I meant \"specific setup and execution procedure\" in each test case. I don\u0027t believe it is cumbersome or redundant, because in essence, each test case is different, and they logically have their own specific test setup and execution procedure. Some may share similar procedures, most of them do not. So in reality, each test case should have its own test steps. That is how industry performs the test.",
+      "parentUuid": "1a76adc5_39ec23c7",
       "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
