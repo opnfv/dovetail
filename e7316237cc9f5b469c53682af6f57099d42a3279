@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_d9d2cfff",
+        "filename": "docs/testsuites/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-14T11:59:43Z",
+      "side": 0,
+      "message": "Why has the design spec been removed?",
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_f9cd4b5e",
+        "filename": "docs/testsuites/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-14T11:59:43Z",
+      "side": 0,
+      "message": "why has the test procedure been removed.",
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}

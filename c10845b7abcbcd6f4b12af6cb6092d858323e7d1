@@ -1,0 +1,191 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_79093b94",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-14T11:59:43Z",
+      "side": 1,
+      "message": "The title of this test case indicates it will test Creation and Deletion of an IPv6 network port and subnet, the document then describes the test as a \"bulk\" test case.  This should be clarified.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_19004766",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-14T11:59:43Z",
+      "side": 1,
+      "message": "Suggest renaming this test case.  tc001 might well be \"create network\" followed by tc002 \"update network\" etc etc.\nThe \"bulk\" test case would then be somewhere further along at tc012 (as a randomly guessed number) or something.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_3903c374",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-14T11:59:43Z",
+      "side": 1,
+      "message": "Not sure this is relevant for a test specification.  The tools and organisation of interest should likely be described in the test design specification rather than the test case specification.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_99dc5714",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-14T11:59:43Z",
+      "side": 1,
+      "message": "This should be the specification of input data that is used to execute the test case.  What is sent to the SUT for instance.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_b9d7d3ec",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-14T11:59:43Z",
+      "side": 1,
+      "message": "This should be the specification of result information received from the SUT that is used to evaluate the test case.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_5906bf87",
+        "filename": "docs/testsuites/ipv6/ipv6.tc001.specification.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-14T11:59:43Z",
+      "side": 1,
+      "message": "This should explain the way the output is evaluated to determine the result of the test case.  If I were to design a system to fulfill this test case this area is where I would look to find the design requirements for the system.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_f9c6ab48",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-14T11:59:43Z",
+      "side": 1,
+      "message": "Is there any reason the definition of SUT has been changed from VNFi and VIM to \"OPNFV-based platform\"?  This would seem to make things a little less clear in that the term \"platform\" is not defined by OPNFV nor in this document.\n\nSuggest using VNFi \u0026 VIM and referring to the ETSI reference as that is the closest defined statement of the SUT we have as of today.  It could be done to then defer all references to \"platform\" in the document.\n\nEg.  ...as defined by ETSI NFV ISG, forthwith referred to as \"platform\" or \"the platform\" in this document.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_99c5373e",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-14T11:59:43Z",
+      "side": 1,
+      "message": "can remove the \"that are already\" form this sentence",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_59df9f0d",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-14T11:59:43Z",
+      "side": 1,
+      "message": "This line seems redundant. We have stated the scope earlier if clarification is required let\u0027s keep it there.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_19e927b8",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-14T11:59:43Z",
+      "side": 1,
+      "message": "Suggest removing this.  Our test suite will test what it tests, any future or additional work should not be described in the specification documentation.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_39ec23c7",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-14T11:59:43Z",
+      "side": 1,
+      "message": "Each suite should be executed in a consistent manner.  If there are multiple test execution solutions they should likely be seperated into seperate test suites.  This should describe the method of execution expected for the test suite.  I dont\u0027 think we want to reproduce that information for every single test case.  That woudl be cumbersome.",
+      "revId": "c10845b7abcbcd6f4b12af6cb6092d858323e7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
