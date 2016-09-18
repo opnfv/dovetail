@@ -1,0 +1,10 @@
+dovetail.ipv6.tc001:
+  name: dovetail.ipv6.tc001
+  objective: VIM ipv6 operations, to create/delete network, port and subnet
+  scripts:
+    type: functest
+    testcase: tempest_smoke_serial
+    sub_testcase_list: 
+      - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_network
+      - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_port
+      - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_subnet

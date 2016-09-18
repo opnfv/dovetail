@@ -1,0 +1,9 @@
+
+work_dir: /home/opnfv/dovetail
+result_dir: /home/opnfv/dovetail/results
+
+extra_config: 
+  - functest_config.yml
+  - yardstick_config.yml
+
+
