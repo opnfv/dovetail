@@ -1,0 +1,16 @@
+functest:
+  image_name: opnfv/functest
+  docker_tag: latest
+  envs: '-e INSTALLER_TYPE=compass -e INSTALLER_IP=192.168.200.2
+         -e NODE_NAME=dovetail-pod -e DEPLOY_SCENARIO=ha_nosdn
+         -e BUILD_TAG=dovetail -e CI_DEBUG=true -e DEPLOY_TYPE=baremetal'
+  opts: '-id --privileged=true'
+  result_dir: '/home/opnfv/functest/results'
+  testcase:
+    pre_cmd: 'python /home/opnfv/repos/functest/ci/prepare_env.py start'
+    exec_cmd: 'python /home/opnfv/repos/functest/ci/run_tests.py -t %s -r'
+    post_cmd: ''
+  result:
+    dir: '/home/opnfv/functest/results'
+    store_type: 'file'
+    file_path: 'tempest/tempest.log'
