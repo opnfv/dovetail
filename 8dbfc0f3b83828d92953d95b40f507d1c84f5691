@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_3cdf2c0f",
+        "filename": "scripts/conf/functest_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-18T04:15:47Z",
+      "side": 1,
+      "message": "Understand that as a starting point, the test scenario is \"ha_nosdn\". We need to test another scenario \"ha_odl-l2\" in the future. Phase 2 is fine.",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_5ce228d6",
+        "filename": "scripts/conf/yardstick_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-18T04:15:47Z",
+      "side": 1,
+      "message": "Understand that as a starting point, the test scenario is \"ha_nosdn\". We need to test another scenario \"ha_odl-l2\" in the future. Phase 2 is fine",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_fce8d4b5",
+        "filename": "scripts/testcase/ipv6.tc001.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-18T04:15:47Z",
+      "side": 1,
+      "message": "Suggest to add \"in bulk operation\" at the end to be consistent with test case definition in patch 20719.",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
