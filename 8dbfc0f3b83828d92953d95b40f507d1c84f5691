@@ -36,6 +36,74 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_97e3bb32",
+        "filename": "scripts/prepare_test_yard/build_flavor_image.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-18T17:30:00Z",
+      "side": 1,
+      "message": "This line needs to be solved.  This will only work for a OPNFV scenario, it will not allow a platform that is not an OPNFV developed platform to support DPDK.   (not to mention fd.io also uses DPDK so this will break even for OPNFV scenarions)\n\nMaybe we can move to an environment configuration file approach or equivalent (even args would do).  There should be no dependancies to OPNFV specific tools or build conventions in dovetail.",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_b7def76b",
+        "filename": "scripts/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-18T17:30:00Z",
+      "side": 1,
+      "message": "I\u0027m not very keen on this naming.  \"Loading a scenario\" really is not what we are doing here, can we discuss naming on the next call to ensure we agree on how to do this.  I would think \"test_sequence\" or something descriptive of the task would be preferable.",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_d7d93384",
+        "filename": "scripts/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-18T17:30:00Z",
+      "side": 1,
+      "message": "I maybe need to learn more about the way we structure our test containers, this seems like a clunky way to evaluate if the test should be run.",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_17f80be4",
+        "filename": "scripts/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-18T17:30:00Z",
+      "side": 1,
+      "message": "May be worth defining a \"functest\" routine in order that run_test does not get overwhelmed with the specifics of interacting with different test objects.",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_fce8d4b5",
         "filename": "scripts/testcase/ipv6.tc001.yml",
         "patchSetId": 1
