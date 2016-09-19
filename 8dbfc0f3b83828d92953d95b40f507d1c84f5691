@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a76adc5_9c02000a",
+        "filename": "scripts/cert/basic.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-09-19T01:23:47Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 4,
+        "startChar": 25,
+        "endLine": 4,
+        "endChar": 26
+      },
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_3cdf2c0f",
         "filename": "scripts/conf/functest_config.yml",
         "patchSetId": 1
@@ -13,6 +36,23 @@
       "writtenOn": "2016-09-18T04:15:47Z",
       "side": 1,
       "message": "Understand that as a starting point, the test scenario is \"ha_nosdn\". We need to test another scenario \"ha_odl-l2\" in the future. Phase 2 is fine.",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_37018705",
+        "filename": "scripts/conf/functest_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-09-19T01:23:47Z",
+      "side": 1,
+      "message": "1,whitespace\n2, should think out a way to satisfy different platform\u0027s requirements. what I mean is that to let the users know how to adjust these parameters to satisfy their platform, maybe we need some documents later or in a code way.",
       "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -36,6 +76,29 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_570a03d3",
+        "filename": "scripts/prepare_test_yard/build_flavor_image.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-09-19T01:23:47Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 20,
+        "startChar": 6,
+        "endLine": 20,
+        "endChar": 8
+      },
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_97e3bb32",
         "filename": "scripts/prepare_test_yard/build_flavor_image.sh",
         "patchSetId": 1
@@ -47,6 +110,75 @@
       "writtenOn": "2016-09-18T17:30:00Z",
       "side": 1,
       "message": "This line needs to be solved.  This will only work for a OPNFV scenario, it will not allow a platform that is not an OPNFV developed platform to support DPDK.   (not to mention fd.io also uses DPDK so this will break even for OPNFV scenarions)\n\nMaybe we can move to an environment configuration file approach or equivalent (even args would do).  There should be no dependancies to OPNFV specific tools or build conventions in dovetail.",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_b7cfd77e",
+        "filename": "scripts/prepare_test_yard/build_flavor_image.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-09-19T01:23:47Z",
+      "side": 1,
+      "message": "the images here is already exist in functest/yardstick docker or need to download used for dovetail? if the latter, we need to store the image in community artifacts.opnfv.org to make it works. same as line 73, 92.",
+      "range": {
+        "startLine": 50,
+        "startChar": 27,
+        "endLine": 50,
+        "endChar": 32
+      },
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_d71cd315",
+        "filename": "scripts/prepare_test_yard/build_run_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-09-19T01:23:47Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 18,
+        "startChar": 43,
+        "endLine": 18,
+        "endChar": 44
+      },
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_97165bf0",
+        "filename": "scripts/report.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-09-19T01:23:47Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 72,
+        "endChar": 8
+      },
       "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
