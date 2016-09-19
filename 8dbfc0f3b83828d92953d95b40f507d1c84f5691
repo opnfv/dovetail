@@ -376,6 +376,24 @@
       "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_b7dcb7e5",
+        "filename": "scripts/testcase/ipv6.tc001.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-19T04:18:37Z",
+      "side": 1,
+      "message": "Sorry for confusion. I meant that in the line of \"objective:\", add \"in bulk operation\" at the end. So the whole sentence reads \"Objective: VIM IPv6 operations to create/delete networks, ports and subnets in bulk operation\"",
+      "parentUuid": "1a76adc5_57044314",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
