@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_b76ef72d",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-09-19T03:34:29Z",
+      "side": 1,
+      "message": "add one line \nENV REPOS_DIR ${HOME}/repos\n\nfuture, may use other repos beside dovetail",
+      "range": {
+        "startLine": 14,
+        "startChar": 15,
+        "endLine": 14,
+        "endChar": 20
+      },
+      "revId": "39a59a99d12aed530e9467441e5e860f0c7d68e0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_77785ff2",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-09-19T03:34:29Z",
+      "side": 1,
+      "message": "${REPOS_DIR}/dovetail",
+      "range": {
+        "startLine": 18,
+        "startChar": 65,
+        "endLine": 18,
+        "endChar": 70
+      },
+      "revId": "39a59a99d12aed530e9467441e5e860f0c7d68e0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_9773bb14",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-09-19T03:34:29Z",
+      "side": 1,
+      "message": "${REPOS_DIR}/dovetail/results",
+      "revId": "39a59a99d12aed530e9467441e5e860f0c7d68e0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_3762e73e",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-09-19T03:34:29Z",
+      "side": 1,
+      "message": "${REPOS_DIR}/dovetail/script/run.py",
+      "range": {
+        "startLine": 22,
+        "startChar": 25,
+        "endLine": 22,
+        "endChar": 33
+      },
+      "revId": "39a59a99d12aed530e9467441e5e860f0c7d68e0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
