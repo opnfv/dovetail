@@ -42,6 +42,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_bc781cc5",
+        "filename": "scripts/conf/functest_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-09-19T03:57:17Z",
+      "side": 1,
+      "message": "OK",
+      "parentUuid": "1a76adc5_3cdf2c0f",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_37018705",
         "filename": "scripts/conf/functest_config.yml",
         "patchSetId": 1
@@ -70,6 +88,24 @@
       "writtenOn": "2016-09-18T04:15:47Z",
       "side": 1,
       "message": "Understand that as a starting point, the test scenario is \"ha_nosdn\". We need to test another scenario \"ha_odl-l2\" in the future. Phase 2 is fine",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_7c07e41c",
+        "filename": "scripts/conf/yardstick_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-09-19T03:57:17Z",
+      "side": 1,
+      "message": "OK",
+      "parentUuid": "1a76adc5_5ce228d6",
       "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -110,6 +146,24 @@
       "writtenOn": "2016-09-18T17:30:00Z",
       "side": 1,
       "message": "This line needs to be solved.  This will only work for a OPNFV scenario, it will not allow a platform that is not an OPNFV developed platform to support DPDK.   (not to mention fd.io also uses DPDK so this will break even for OPNFV scenarions)\n\nMaybe we can move to an environment configuration file approach or equivalent (even args would do).  There should be no dependancies to OPNFV specific tools or build conventions in dovetail.",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_57cc4335",
+        "filename": "scripts/prepare_test_yard/build_flavor_image.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-09-19T03:57:17Z",
+      "side": 1,
+      "message": "yes,it\u0027s a temporary workaround, will be fixed in future",
+      "parentUuid": "1a76adc5_97e3bb32",
       "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -202,6 +256,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_37c98726",
+        "filename": "scripts/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-09-19T03:57:17Z",
+      "side": 1,
+      "message": "here we just load certification YAML file , no more action. Maybe you mean some high level action?",
+      "parentUuid": "1a76adc5_b7def76b",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_d7d93384",
         "filename": "scripts/run.py",
         "patchSetId": 1
@@ -213,6 +285,24 @@
       "writtenOn": "2016-09-18T17:30:00Z",
       "side": 1,
       "message": "I maybe need to learn more about the way we structure our test containers, this seems like a clunky way to evaluate if the test should be run.",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_974adbaa",
+        "filename": "scripts/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-09-19T03:57:17Z",
+      "side": 1,
+      "message": "we run the same test case in functest only once, so i check if there is already a result existing to determine if the test should be run",
+      "parentUuid": "1a76adc5_d7d93384",
       "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -236,6 +326,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_774fffbd",
+        "filename": "scripts/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-09-19T03:57:17Z",
+      "side": 1,
+      "message": "sure we need a generic method to hide the details in this run_test, we are working on it now",
+      "parentUuid": "1a76adc5_17f80be4",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_fce8d4b5",
         "filename": "scripts/testcase/ipv6.tc001.yml",
         "patchSetId": 1
@@ -247,6 +355,24 @@
       "writtenOn": "2016-09-18T04:15:47Z",
       "side": 1,
       "message": "Suggest to add \"in bulk operation\" at the end to be consistent with test case definition in patch 20719.",
+      "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_57044314",
+        "filename": "scripts/testcase/ipv6.tc001.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-09-19T03:57:17Z",
+      "side": 1,
+      "message": "Do you mean add a parameter \"in bulk operation\"? this configuration is used by dovetail tool, and every test case is executed one by one, no need to add such parameter as there is only one way to run these test cases.",
+      "parentUuid": "1a76adc5_fce8d4b5",
       "revId": "8dbfc0f3b83828d92953d95b40f507d1c84f5691",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
