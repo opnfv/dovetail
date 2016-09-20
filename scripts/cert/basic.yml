@@ -1,0 +1,4 @@
+certification_basic:
+  name: certification_basic
+  testcase_list:
+    - dovetail.ipv6.tc001

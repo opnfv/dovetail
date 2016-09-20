@@ -1,0 +1,17 @@
+yardstick:
+  image_name: opnfv/yardstick
+  docker_tag: stable
+  envs: '-e INSTALLER_TYPE=compass -e INSTALLER_IP=192.168.200.2
+         -e NODE_NAME=dovetail-pod -e DEPLOY_SCENARIO=ha_nosdn
+         -e BUILD_TAG=dovetail -e CI_DEBUG=true -e DEPLOY_TYPE=baremetal
+         -e EXTERNAL_NETWORK=ext-net'
+  opts: '-id --privileged=true'
+  result_dir: '/tmp/yardstick/result'
+  shell_dir: '/tmp/yardstick'
+  shell_dir_name: 'prepare_test_yard'
+  result:
+    dir: '/tmp/yardstick/result'
+    store_type: 'file'
+    db_url: 'http://testresults.opnfv.org/test/api/v1/results?case=%s&last=1'
+    file_path: '/tmp/yardstick/result/yardstick.log'
+
