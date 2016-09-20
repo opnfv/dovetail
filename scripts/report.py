@@ -52,20 +52,30 @@ class Report:
             report += '+-----------------------------------------------------------------------------+\n'
 
         logger.info(report)
+        cls.save(report)
         return report
+
+    #save to disk as default
+    @classmethod
+    def save(cls, report):
+        report_file_path = dovetail_config['report_file']
+        try:
+            with open(os.path.join(dovetail_config['result_dir'], report_file_path),'w') as report_file:
+                report_file.write(report)
+            logger.info('save report to %s' % report_file_path)
+        except Exception as e:
+            logger.error('Failed to save: %s' % report_file_path)
 
     @classmethod
     def get_result(cls, testcase):
         script_testcase = testcase.script_testcase()
         type = testcase.script_type()
+        crawler = CrawlerFactory.create(type)
 
         if script_testcase in cls.results[type]:
             return cls.results[type][script_testcase]
 
-        if dovetail_config[type]['result']['store_type'] == 'file':
-            result = cls.get_results_from_file(type)
-        else:
-            result = cls.get_results_from_db(type, script_testcase)
+        result = crawler.crawl(script_testcase)
 
         if result is not None:
             cls.results[type][script_testcase] = result
@@ -76,21 +86,33 @@ class Report:
             logger.debug('testcase: %s -> result acquired retry:%d' % (script_testcase, retry))
         return result
 
-    @classmethod
-    def get_results_from_db(cls, type, testcase):
-        #url = 'http://testresults.opnfv.org/test/api/v1/results?case=%s&last=1' % testcase
-        url = dovetail_config[type]['result']['db_url'] % testcase
-        logger.debug("Query to rest api: %s" % url)
-        try:
-            data = json.load(urllib2.urlopen(url))
-            return data['results'][0]
-        except Exception as e:
-            logger.error("Cannot read content from the url: %s, exception: %s" % (url, e))
-            return None
+class CrawlerFactory:
 
     @classmethod
-    def get_results_from_file(cls, type, testcase=None):
-        file_path = os.path.join(dovetail_config['result_dir'],dovetail_config[type]['result']['file_path'])
+    def create(cls, type):
+        if type == 'functest':
+            return FunctestCrawler()
+
+        if type == 'yardstick':
+            return YardstickCrawler()
+
+        return None
+
+class FunctestCrawler:
+
+    def __init__(self):
+        self.type = 'functest'
+
+    def crawl(self, testcase=None):
+        store_type = dovetail_config[self.type]['result']['store_type']
+        if store_type == 'file':
+            return self.crawl_from_file(testcase)
+
+        if store_type == 'url':
+            return self.crawl_from_url(testcase)
+
+    def crawl_from_file(self, testcase=None):
+        file_path = os.path.join(dovetail_config['result_dir'],dovetail_config[self.type]['result']['file_path'])
         if not os.path.exists(file_path):
             logger.info('result file not found: %s' % file_path)
             return None
@@ -118,6 +140,24 @@ class Report:
         except Exception as e:
             logger.error('Cannot read content from the file: %s, exception: %s' % (file_path, e))
             return None
+
+    def crawl_from_url(self, testcase=None):
+        url = dovetail_config[self.type]['result']['db_url'] % testcase
+        logger.debug("Query to rest api: %s" % url)
+        try:
+            data = json.load(urllib2.urlopen(url))
+            return data['results'][0]
+        except Exception as e:
+            logger.error("Cannot read content from the url: %s, exception: %s" % (url, e))
+            return None
+
+class YardstickCrawler:
+
+    def __init__(self):
+        self.type = 'yardstick'
+
+    def crawl(self, testcase=None):
+        return None
 
 class CheckerFactory:
 
