@@ -12,11 +12,13 @@ RUN pip install pyyaml
 RUN pip install click
 
 ENV HOME /home/opnfv
-WORKDIR /home/opnfv
 ENV REPOS_DIR /home/opnfv/dovetail
+WORKDIR /home/opnfv
 
 RUN git config --global http.sslVerify false
 RUN git clone https://gerrit.opnfv.org/gerrit/dovetail.git ${REPOS_DIR}
 
 RUN mkdir -p ${REPOS_DIR}/results
+
+WORKDIR /home/opnfv/dovetail/scripts
 
