@@ -67,4 +67,9 @@ class Container:
         cmd = 'sudo docker exec %s %s' % (container_id, sub_cmd)
         dt_utils.exec_cmd(cmd,logger,exit_on_error)
 
-
+    @classmethod
+    def copy_file(cls, file_dir, container_id, container_dir):
+        for root, dirs, files in os.walk(file_dir):
+            for file_name in files:
+                cmd = 'sudo docker cp %s %s:%s' % (os.path.join(file_dir,file_name), container_id, container_dir)
+                dt_utils.exec_cmd(cmd, logger, exit_on_error = False)

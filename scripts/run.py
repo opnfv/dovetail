@@ -29,12 +29,6 @@ def load_scenario(scenario):
 def load_testcase():
     Testcase.load()
 
-def copy_file(file_dir, container_id, container_dir):
-    for root, dirs, files in os.walk(file_dir):
-        for file_name in files:
-            cmd = 'sudo docker cp %s %s:%s' % (os.path.join(file_dir,file_name), container_id, container_dir)
-            dt_utils.exec_cmd(cmd, logger, exit_on_error = False)
-
 def run_functest(testcase, container_id):
     sub_cmd = dovetail_config[testcase.script_type()]['testcase']['pre_cmd']
     Container.exec_cmd(container_id, sub_cmd)
@@ -42,18 +36,15 @@ def run_functest(testcase, container_id):
     Container.exec_cmd(container_id, sub_cmd)
 
 def run_yardstick(testcase, container_id):
-    copy_file(os.path.join(os.getcwd(),container_config[testcase.script_type()]['shell_dir_name']),\
-        container_id,container_config[testcase.script_type()]['shell_dir'])
-    if container_config[testcase.script_type()]['has_build_images'] == True:
-        cmd = 'sudo docker exec %s %s/run_test.sh %s.yaml %s/%s.out' \
-            % (container_id, container_config[testcase.script_type()]['shell_dir'], testcase.script_testcase(),\
-              container_config[testcase.script_type()]['result_dir'], testcase.name())
+    type = testcase.script_type()
+    Container.copy_file(os.path.join(os.getcwd(), dovetail_config[type]['shell_dir_name']),\
+                        container_id, dovetail_config[type]['shell_dir'])
+    if container_config[type]['has_build_images'] == True:
+        sub_cmd = dovetail_config[type]['testcase']['test_cmd'] % (testcase.script_testcase(), testcase.name())
     else:
-        container_config[testcase.script_type()]['has_build_images'] = True
-        cmd = 'sudo docker exec %s %s/build_run_test.sh %s.yaml %s/%s.out' \
-            % (container_id, container_config[testcase.script_type()]['shell_dir'], testcase.script_testcase(),\
-              container_config[testcase.script_type()]['result_dir'], testcase.name())
-    dt_utils.exec_cmd(cmd,logger,exit_on_error = False)
+        container_config[type]['has_build_images'] = True
+        sub_cmd = dovetail_config[type]['testcase']['build_test_cmd'] % (testcase.script_testcase(), testcase.name())
+    Container.exec_cmd(container_id, sub_cmd)
     time.sleep(5)
 
 def run_test(scenario):
