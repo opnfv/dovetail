@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_bd6facc4",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-09-21T02:34:27Z",
+      "side": 1,
+      "message": "explanation: this path is used for line 18 RUN git config --global http.sslVerify false",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 19
+      },
+      "revId": "9a4faf7c4bf22b7683e89d1b287b1a1389657233",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_1d790093",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-09-21T02:34:27Z",
+      "side": 1,
+      "message": "explanation: this relative path will be used in python files to get the relative path.",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 36
+      },
+      "revId": "9a4faf7c4bf22b7683e89d1b287b1a1389657233",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
