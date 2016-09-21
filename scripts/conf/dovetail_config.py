@@ -26,7 +26,3 @@ container_config = {}
 
 container_config['functest'] = dovetail_config['functest']
 container_config['yardstick'] = dovetail_config['yardstick']
-
-container_config['functest']['has_pull'] = False
-container_config['yardstick']['has_pull'] = False
-container_config['yardstick']['has_build_images'] = False

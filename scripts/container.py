@@ -16,6 +16,8 @@ logger = dt_logger.Logger('container.py').getLogger()
 class Container:
 
     container_list = {}
+    has_pull_latest_image = {'yardstick':False, 'functest':False}
+    has_build_images = {'yardstick':False, 'functest':False}
 
     def __init__(cls):
         pass
@@ -48,12 +50,12 @@ class Container:
     @classmethod
     def pull_image(cls, type):
         docker_image = cls.get_docker_image(type)
-        if container_config[type]['has_pull'] == True:
+        if cls.has_pull_latest_image[type] == True:
             logger.debug('%s is already the newest version.' % (docker_image))
         else:
             cmd = 'sudo docker pull %s' % (docker_image)
             dt_utils.exec_cmd(cmd,logger)
-            container_config[type]['has_pull'] = True
+            cls.has_pull_latest_image[type] = True
 
     @classmethod
     def clean(cls, container_id):
@@ -67,4 +69,9 @@ class Container:
         cmd = 'sudo docker exec %s %s' % (container_id, sub_cmd)
         dt_utils.exec_cmd(cmd,logger,exit_on_error)
 
-
+    @classmethod
+    def copy_file(cls, file_dir, container_id, container_dir):
+        for root, dirs, files in os.walk(file_dir):
+            for file_name in files:
+                cmd = 'sudo docker cp %s %s:%s' % (os.path.join(file_dir,file_name), container_id, container_dir)
+                dt_utils.exec_cmd(cmd, logger, exit_on_error = False)
