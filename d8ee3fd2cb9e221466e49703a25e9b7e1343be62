@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_232a9a90",
+        "filename": "scripts/report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2016-09-22T13:42:57Z",
+      "side": 1,
+      "message": "Should provide context from exception as to why the save failed. Was it the open, or the write? Path does not exist, or insufficient privileges, or disk full? The exception should have the context.",
+      "range": {
+        "startLine": 67,
+        "startChar": 12,
+        "endLine": 67,
+        "endChar": 65
+      },
+      "revId": "d8ee3fd2cb9e221466e49703a25e9b7e1343be62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_c31ac67c",
+        "filename": "scripts/report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2016-09-22T13:42:57Z",
+      "side": 1,
+      "message": "The abstraction of the Functest/YardstickCrawler seems unrelated to the code review subject, about saving the file to disk - should this not be in a separate patch review?",
+      "range": {
+        "startLine": 73,
+        "startChar": 8,
+        "endLine": 73,
+        "endChar": 45
+      },
+      "revId": "d8ee3fd2cb9e221466e49703a25e9b7e1343be62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
