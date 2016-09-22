@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_2367fab8",
+        "filename": "scripts/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-22T10:00:37Z",
+      "side": 1,
+      "message": "May be subject for a refactoring, or an education.  \nBut I\u0027m interested to understand how the script_type object might contain a build image.  :)  Anyway not a blocking issue for now but we might want to draw out the information relationships for clarity soon.",
+      "revId": "08f99d6f2752b7876287015a82898dd0f3e500ee",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
