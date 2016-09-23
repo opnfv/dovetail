@@ -3,6 +3,13 @@ work_dir: /home/opnfv/dovetail
 result_dir: /home/opnfv/dovetail/results
 report_file: 'dovetail_report.txt'
 
+#used for testcase cmd template
+parameters:
+  - keyword: testcase
+    path: '("name",)'
+  - keyword: script_testcase
+    path: '("scripts", "testcase")'
+
 extra_config:
   - functest_config.yml
   - yardstick_config.yml

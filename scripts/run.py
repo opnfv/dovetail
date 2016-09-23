@@ -15,12 +15,14 @@ import time
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
-logger = dt_logger.Logger('run.py').getLogger()
+
 
 from container import Container
 from testcase import *
 from report import *
 from conf.dovetail_config import *
+
+logger = dt_logger.Logger('run.py').getLogger()
 
 def load_scenario(scenario):
     Scenario.load()
@@ -36,10 +38,8 @@ def copy_file(file_dir, container_id, container_dir):
             dt_utils.exec_cmd(cmd, logger, exit_on_error = False)
 
 def run_functest(testcase, container_id):
-    sub_cmd = dovetail_config[testcase.script_type()]['testcase']['pre_cmd']
-    Container.exec_cmd(container_id, sub_cmd)
-    sub_cmd = dovetail_config[testcase.script_type()]['testcase']['exec_cmd'] % testcase.script_testcase()
-    Container.exec_cmd(container_id, sub_cmd)
+    for cmd in testcase.cmds:
+        Container.exec_cmd(container_id, cmd)
 
 def run_yardstick(testcase, container_id):
     copy_file(os.path.join(os.getcwd(),container_config[testcase.script_type()]['shell_dir_name']),\
@@ -73,10 +73,13 @@ def run_test(scenario):
             container_id = Container.create(testcase.script_type())
             logger.debug('container id:%s' % container_id)
 
-            if testcase.script_type() == 'functest':
-                run_functest(testcase, container_id)
+            if not testcase.prepare_cmd():
+                logger.error('failed to prepare testcase:%s' % testcase.name())
             else:
-                run_yardstick(testcase, container_id)
+                if testcase.script_type() == 'functest':
+                    run_functest(testcase, container_id)
+                else:
+                    run_yardstick(testcase, container_id)
 
             Container.clean(container_id)
 
