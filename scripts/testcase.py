@@ -7,8 +7,12 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 
+import jinja2
+
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
+
+from  parser import *
 
 logger = dt_logger.Logger('testcase.py').getLogger()
 
@@ -19,8 +23,18 @@ class Testcase:
     def __init__(self, testcase_yaml):
         self.testcase = testcase_yaml.values()[0]
         self.testcase['passed'] = False
+        self.cmds = []
         self.sub_testcase_status = {}
         Testcase.update_script_testcase(self.script_type(), self.script_testcase())
+
+    def prepare_cmd(self):
+        for cmd in dovetail_config[self.script_type()]['testcase']['cmds']:
+            cmd_lines = Parser.parse_cmd(cmd,self)
+            if not cmd_lines:
+                return False
+            self.cmds.append(cmd_lines)
+
+        return True
 
     def __str__(self):
         return self.testcase
@@ -63,6 +77,13 @@ class Testcase:
     def script_result_acquired(self, acquired=None):
         return Testcase._result_acquired(self.script_type(), self.script_testcase(), acquired)
 
+    def pre_condition(self):
+        return Testcase.pre_condition(self.script_type())
+
+    def post_condition(self):
+        return Testcase.post_condition(self.script_type())
+
+
     #testcase in upstream testing project
     script_testcase_list = {'functest':{}, 'yardstick':{}}
 
@@ -70,9 +91,31 @@ class Testcase:
     testcase_list = {}
 
     @classmethod
+    def prepared(cls, script_type, prepared=None):
+        if prepared is not None:
+            cls.script_testcase_list[script_type]['prepared'] = prepared
+        return cls.script_testcase_list[script_type]['prepared']
+
+    @classmethod
+    def cleaned(cls, script_type, cleaned=None):
+        if cleaned is not None:
+            cls.scrpit_testcase_list[script_type]['cleaned'] = cleaned
+        return cls.script_testcase_list[script_type]['cleaned']
+
+    @classmethod
+    def pre_condition(cls, script_type):
+        return dovetail_config[script_type]['pre_condition']
+
+    def post_condition(cls, script_type):
+        return dovetail_config[script_type]['post_condition']
+
+
+    @classmethod
     def update_script_testcase(cls,script_type, script_testcase):
         if script_testcase not in cls.script_testcase_list[script_type]:
             cls.script_testcase_list[script_type][script_testcase] = {'retry':0, 'acquired':False}
+            cls.script_testcase_list[script_type]['prepared'] = False
+            cls.script_testcase_list[script_type]['cleaned'] = False
 
     @classmethod
     def _exceed_max_retry_times(cls, script_type, script_testcase ):

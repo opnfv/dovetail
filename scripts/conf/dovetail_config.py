@@ -17,7 +17,7 @@ import os
 with open(os.path.join(os.getcwd(),'conf','dovetail_config.yml')) as f:
     dovetail_config = yaml.safe_load(f)
 
-for extra_config_file in dovetail_config['extra_config']:
+for extra_config_file in dovetail_config['include_config']:
     with open(os.path.join(os.getcwd(),'conf',extra_config_file)) as f:
         extra_config = yaml.safe_load(f)
         dovetail_config.update(extra_config)
