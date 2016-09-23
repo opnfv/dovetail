@@ -9,9 +9,14 @@ yardstick:
   result_dir: '/tmp/yardstick/result'
   shell_dir: '/tmp/yardstick'
   shell_dir_name: 'prepare_test_yard'
+  testcase:
+    cmds:
+      - '/tmp/yardstick/build_run_test.sh {{script_testcase}}.yaml /tmp/yardstick/result/{{testcase}}.out'
+      - '/tmp/yardstick/run_test.sh {{script_testcase}}.yaml /tmp/yardstick/result/{{testcase}}.out'
+
   result:
     dir: '/tmp/yardstick/result'
     store_type: 'file'
     db_url: 'http://testresults.opnfv.org/test/api/v1/results?case=%s&last=1'
-    file_path: '/tmp/yardstick/result/yardstick.log'
+    file_path: '/home/opnfv/dovetail/results/yardstick.log'
 
