@@ -18,6 +18,6 @@ logger = dt_logger.Logger('prepare_env.py').getLogger()
 cmd = "sudo apt-get -y install docker.io python-pip"
 dt_utils.exec_cmd(cmd, logger)
 
-cmd = "sudo pip install click pyyaml"
+cmd = "sudo pip install click pyyaml jinja2"
 dt_utils.exec_cmd(cmd, logger)
 

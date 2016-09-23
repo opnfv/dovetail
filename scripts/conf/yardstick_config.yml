@@ -9,9 +9,18 @@ yardstick:
   result_dir: '/tmp/yardstick/result'
   shell_dir: '/tmp/yardstick'
   shell_dir_name: 'prepare_test_yard'
+  pre_condition:
+    cmds:
+      - 'echo test for precondition'
   testcase:
     build_test_cmd: '/tmp/yardstick/build_run_test.sh %s.yaml /tmp/yardstick/result/%s.out'
     test_cmd: '/tmp/yardstick/run_test.sh %s.yaml /tmp/yardstick/result/%s.out'
+    cmds:
+      - '/tmp/yardstick/build_run_test.sh {{script_testcase}}.yaml /tmp/yardstick/result/{{testcase}}.out'
+      - '/tmp/yardstick/run_test.sh {{script_testcase}}.yaml /tmp/yardstick/result/{{testcase}}.out'
+  post_condition:
+    cmds:
+      - ''
   result:
     dir: '/tmp/yardstick/result'
     store_type: 'file'
