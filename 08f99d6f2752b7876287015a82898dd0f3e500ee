@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_86fcdc73",
+        "filename": "scripts/container.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-09-23T06:08:48Z",
+      "side": 1,
+      "message": "Good suggestion, thank you.There has some exception handlers in the following parts, but still consider to do something here in future.",
+      "parentUuid": "1a76adc5_a629d838",
+      "range": {
+        "startLine": 74,
+        "startChar": 16,
+        "endLine": 74,
+        "endChar": 113
+      },
+      "revId": "08f99d6f2752b7876287015a82898dd0f3e500ee",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_2367fab8",
         "filename": "scripts/run.py",
         "patchSetId": 1
