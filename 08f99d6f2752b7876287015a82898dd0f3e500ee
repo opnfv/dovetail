@@ -63,6 +63,24 @@
       "revId": "08f99d6f2752b7876287015a82898dd0f3e500ee",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_06476cbd",
+        "filename": "scripts/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-09-23T07:24:25Z",
+      "side": 1,
+      "message": "It seems to be a little improper to put the tag \"has_build_image\" in the config file. I will move it into class Container. Thanks.",
+      "parentUuid": "1a76adc5_2367fab8",
+      "revId": "08f99d6f2752b7876287015a82898dd0f3e500ee",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
