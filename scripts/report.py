@@ -13,10 +13,10 @@ import re
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
 
-logger = dt_logger.Logger('report.py').getLogger()
-
 from conf.dovetail_config import *
 from testcase import *
+
+logger = dt_logger.Logger('report.py').getLogger()
 
 def get_pass_str(passed):
     if passed:

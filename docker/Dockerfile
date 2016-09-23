@@ -10,6 +10,7 @@ git \
 
 RUN pip install pyyaml
 RUN pip install click
+RUN pip install jinja2
 
 ENV HOME /home/opnfv
 ENV REPOS_DIR /home/opnfv/dovetail

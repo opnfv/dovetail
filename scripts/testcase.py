@@ -7,8 +7,12 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 
+import jinja2
+
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
+
+from  parser import *
 
 logger = dt_logger.Logger('testcase.py').getLogger()
 
@@ -19,8 +23,18 @@ class Testcase:
     def __init__(self, testcase_yaml):
         self.testcase = testcase_yaml.values()[0]
         self.testcase['passed'] = False
+        self.cmds = []
         self.sub_testcase_status = {}
         Testcase.update_script_testcase(self.script_type(), self.script_testcase())
+
+    def prepare_cmd(self):
+        for cmd in dovetail_config[self.script_type()]['testcase']['cmds']:
+            cmd_lines = Parser.parse_cmd(cmd,self)
+            if not cmd_lines:
+                return False
+            self.cmds.append(cmd_lines)
+
+        return True
 
     def __str__(self):
         return self.testcase

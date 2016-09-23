@@ -9,6 +9,9 @@ yardstick:
   result_dir: '/tmp/yardstick/result'
   shell_dir: '/tmp/yardstick'
   shell_dir_name: 'prepare_test_yard'
+  testcase:
+    cmds:
+
   result:
     dir: '/tmp/yardstick/result'
     store_type: 'file'
