@@ -3,7 +3,17 @@ work_dir: /home/opnfv/dovetail
 result_dir: /home/opnfv/dovetail/results
 report_file: 'dovetail_report.txt'
 
-extra_config:
+# used for testcase cmd template in jinja2 format
+# we have two variables available now
+# parameter path, use this path to walk through python object and get value
+# and the python object is "testcase" object by hard-coded
+parameters:
+  - name: testcase
+    path: '("name",)'
+  - name: script_testcase
+    path: '("scripts", "testcase")'
+
+include_config:
   - functest_config.yml
   - yardstick_config.yml
 
