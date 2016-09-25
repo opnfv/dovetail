@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_8cf15b03",
+        "filename": "docs/testsuites/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-25T23:50:57Z",
+      "side": 1,
+      "message": "If this is a proposal for the IPv6 test spec the naming of the test cases needs to be more explicit.  I suggest starting with the target SUT implementation, the target feature suite , then the specific use cases being tested.  Something like os-ipv6-crd would best describe this test case.",
+      "revId": "afa53fdaf1d390a2fcf6f2888404fecc8bfd5a62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_4cdfc369",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-25T23:50:57Z",
+      "side": 1,
+      "message": "Repeating my previous comment here.  OPNFV platform is not a defied term int his document, nor in any technical reference documentation for OPNFV.  \nI strongly suggest using an explicit reference that identifies the SUT more clearly.",
+      "revId": "afa53fdaf1d390a2fcf6f2888404fecc8bfd5a62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_6cdcff73",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-25T23:50:57Z",
+      "side": 1,
+      "message": "I don\u0027t think we can refer to test cases as a reference as the test cases under reference here are a specific implementation based on a specific tool and SUT implementaiton.  The DoveTaiol document will need to explain the test case in detail \"so that it could be manually run\" without the presense of a specific test suite or tool.",
+      "revId": "afa53fdaf1d390a2fcf6f2888404fecc8bfd5a62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}

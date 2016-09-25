@@ -69,6 +69,23 @@
       "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_acf697f7",
+        "filename": "docs/testsuites/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-09-25T23:50:57Z",
+      "side": 0,
+      "message": "I find it difficult to evaluate how I would execute this test case manually with these files missing.  If the automated script inherited from tempest was not available and I needed to run the script manually I lack the context needed to do that.  I would suggest having a detailed test procedure explaining the step by step instructions in the context of the pharos system deisgn and the SUT.",
+      "revId": "e7316237cc9f5b469c53682af6f57099d42a3279",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
