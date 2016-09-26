@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_d7bcbcde",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2016-09-26T21:09:29Z",
+      "side": 1,
+      "message": "I agree with Chris here - is there a specific scenario, or set of prerequisites, needed? Do we even need to talk about an OPNFV-based platform? Could this be removed entirely, and replaced with \"This test, and other tests in the test suite, are designed to verify an entire SUT, and not any individual component of the system\"? If the SUT passes the test suite, it will be, by definition, an OPNFV compatible system.",
+      "parentUuid": "1a76adc5_2c15a7e4",
+      "revId": "afa53fdaf1d390a2fcf6f2888404fecc8bfd5a62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_6cdcff73",
         "filename": "docs/testsuites/ipv6/testplan.rst",
         "patchSetId": 7
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "The technical reality is that the reference of OpenStack API in test cases is the only VIM integrated with OPNFV platform. There is no plan or even proposal in OPNFV to integrate with other VIM yet. In addition, ",
       "parentUuid": "1a76adc5_6cdcff73",
+      "revId": "afa53fdaf1d390a2fcf6f2888404fecc8bfd5a62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_f7c1b854",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2016-09-26T21:09:29Z",
+      "side": 1,
+      "message": "I am happy with this as written. I do not think we need to abstract things further here - the test cases define required behaviours, the test tool tests those behaviours, and (in general, but out of scope for this patch) the test tool/test cases should be VIM independent. There is no mention of a specific VIM here.",
+      "parentUuid": "1a76adc5_ccd5131d",
       "revId": "afa53fdaf1d390a2fcf6f2888404fecc8bfd5a62",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
