@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_ece48fe2",
+        "filename": "scripts/utils/dovetail_utils.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-09-26T08:15:15Z",
+      "side": 1,
+      "message": "white space",
+      "range": {
+        "startLine": 35,
+        "startChar": 37,
+        "endLine": 35,
+        "endChar": 38
+      },
+      "revId": "2511eb370947af2d782f787a8a13c68c52dd901b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
