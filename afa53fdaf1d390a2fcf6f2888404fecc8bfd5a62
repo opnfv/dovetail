@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_6c1f1f09",
+        "filename": "docs/testsuites/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-26T03:45:27Z",
+      "side": 1,
+      "message": "Naming is a clerical or administrative issue. Certainly the clerical and administrative issue needs to be addressed later on when all test cases including IPv6, L3VPN, SFC etc are all developed in order to have a more consistent way of naming across all test cases in Dovetail. Thus this comment is out of scope of the intention of this patch. And it has nothing to do with any technical issue of IPv6 tests. This comment is not a gating factor.",
+      "parentUuid": "1a76adc5_8cf15b03",
+      "revId": "afa53fdaf1d390a2fcf6f2888404fecc8bfd5a62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_4cdfc369",
         "filename": "docs/testsuites/ipv6/testplan.rst",
         "patchSetId": 7
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_2c15a7e4",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-26T03:45:27Z",
+      "side": 1,
+      "message": "Repeating my previous response here. OPNFV is a carrier-grade, integrated, open source platform. The architecture and components of OPNFV platform is available in home page and wiki page, and marketed in various occasions in industry. Certainly, like any technical work, certain level technical knowledge of OPNFV platform is a prerequisite for those who intends to work on technical aspects of OPNFV including compliance testing. Even if a definition or other documentation of OPNFV Platform is indeed needed to serve educational purpose, it should be addressed in TSC. Thus this comment is out of scope of the intention of this patch. And it has nothing to do with any technical issue of IPv6 tests. This comment is not a gating factor.",
+      "parentUuid": "1a76adc5_4cdfc369",
+      "revId": "afa53fdaf1d390a2fcf6f2888404fecc8bfd5a62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_6cdcff73",
         "filename": "docs/testsuites/ipv6/testplan.rst",
         "patchSetId": 7
@@ -47,6 +83,24 @@
       "writtenOn": "2016-09-25T23:50:57Z",
       "side": 1,
       "message": "I don\u0027t think we can refer to test cases as a reference as the test cases under reference here are a specific implementation based on a specific tool and SUT implementaiton.  The DoveTaiol document will need to explain the test case in detail \"so that it could be manually run\" without the presense of a specific test suite or tool.",
+      "revId": "afa53fdaf1d390a2fcf6f2888404fecc8bfd5a62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_ccd5131d",
+        "filename": "docs/testsuites/ipv6/testplan.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2016-09-26T03:45:27Z",
+      "side": 1,
+      "message": "The technical reality is that the reference of OpenStack API in test cases is the only VIM integrated with OPNFV platform. There is no plan or even proposal in OPNFV to integrate with other VIM yet. In addition, ",
+      "parentUuid": "1a76adc5_6cdcff73",
       "revId": "afa53fdaf1d390a2fcf6f2888404fecc8bfd5a62",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
