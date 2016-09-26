@@ -22,6 +22,29 @@
       "revId": "2511eb370947af2d782f787a8a13c68c52dd901b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_2c1b67cb",
+        "filename": "scripts/utils/dovetail_utils.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-09-26T09:18:59Z",
+      "side": 1,
+      "message": "maybe it\u0027s just for debugging",
+      "range": {
+        "startLine": 84,
+        "startChar": 4,
+        "endLine": 84,
+        "endChar": 18
+      },
+      "revId": "2511eb370947af2d782f787a8a13c68c52dd901b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
