@@ -1,0 +1,293 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_577e6c1a",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "Prefer to start sentence with a capital letter. Also wrap docs/ in backticks.",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_777b6828",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "No capital \"C\" after a comma.\n\nSentence better structured as:\n\nTo create your own documentation, create any number of directories (depending on your needs) and place an ``index.rst`` file in each of them.",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_17747434",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "\"The ``index.rst`` file must reference all other ``rst`` files in the directory structure.",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_37717044",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "Wrap index.rst in backticks.",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_d7911c48",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "You\u0027ve mixed full capitalization and mixed capitalization on your topics. You should pick one style and stick with it.",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_f796983e",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "s/gerrit/Gerrit/\ns/jenkins/Jenkins/\ns/html/HTML/",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_9797243a",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "This should be a sub-section with ------ as the underline. This doesn\u0027t seem like a list to me.",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_b79ca05e",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "s/gerrit/Gerrit/",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_57a50ca0",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "Same as above, sub-section.",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_77a2889a",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "Sentence structure tweak:\n\nOnce you are happy with the look of your documentation, you can submit the patchset. The merge job will... (etc)",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_17ab1476",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "s/rst/reStructuredText/\n\nAlso finish this sentence with a full-stop (period).",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_37a89076",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "It might be better to make this look a bit more like code... e.g.\n\n#!/usr/bin/env bash\necho \"Here is some code. Note that it is intented.\"",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_d7b83cca",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "Start sentences with a capital letter. Also you should add a colon after \"documentation:\"",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_f7bd38b8",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "Show multiple levels of indentation here.",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_97ae4480",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "The example I provided earlier would probably would better here too.",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_b7b340e8",
+        "filename": "docs/how-to-use-docs/documentation-example.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "Run on sentence.\n\nLeave the following ``Revision`` and ``Build date`` lines at the bottom of each of your documents. They are used internally.",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_b7858008",
+        "filename": "docs/how-to-use-docs/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-26T23:51:44Z",
+      "side": 1,
+      "message": "Inconsistent use of mixed capitalization in the topic.",
+      "revId": "6925eeee1003a08774f877bea578f6095cabfd27",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
