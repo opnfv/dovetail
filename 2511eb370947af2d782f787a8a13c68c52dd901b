@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_bd38ff3d",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-09-28T06:56:36Z",
+      "side": 1,
+      "message": "good point, i will merge some of the RUN command, but not all of these, to make sure that the Dockerfile is human-readable, since we have 128 layers to go.",
+      "parentUuid": "1a76adc5_17c23434",
+      "revId": "2511eb370947af2d782f787a8a13c68c52dd901b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_ece48fe2",
         "filename": "scripts/utils/dovetail_utils.py",
         "patchSetId": 8
