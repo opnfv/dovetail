@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_2cab6276",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-29T13:08:00Z",
+      "side": 1,
+      "message": "You can easily merge these, and still keep it readable...\n\nJust remove the RUN at the start of the line, and on the previous line append:  \u0026\u0026 \\\n\nThen just indent all the commands 4 spaces for alignment.",
+      "revId": "738e39d13a5bdcc79af5b1767550053e92fb7c8f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_ecb80aca",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-09-29T13:08:00Z",
+      "side": 1,
+      "message": "Same here, this can be easily reduced with \u0026\u0026 \\",
+      "revId": "738e39d13a5bdcc79af5b1767550053e92fb7c8f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
