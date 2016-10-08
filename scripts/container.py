@@ -17,7 +17,6 @@ class Container:
 
     container_list = {}
     has_pull_latest_image = {'yardstick':False, 'functest':False}
-    has_build_images = {'yardstick':False, 'functest':False}
 
     def __init__(cls):
         pass
@@ -68,10 +67,3 @@ class Container:
     def exec_cmd(cls, container_id, sub_cmd, exit_on_error=False):
         cmd = 'sudo docker exec %s /bin/bash -c "%s"' % (container_id, sub_cmd)
         dt_utils.exec_cmd(cmd,logger,exit_on_error)
-
-    @classmethod
-    def copy_file(cls, file_dir, container_id, container_dir):
-        for root, dirs, files in os.walk(file_dir):
-            for file_name in files:
-                cmd = 'sudo docker cp %s %s:%s' % (os.path.join(file_dir,file_name), container_id, container_dir)
-                dt_utils.exec_cmd(cmd, logger, exit_on_error = False)
