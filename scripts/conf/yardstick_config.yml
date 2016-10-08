@@ -1,29 +1,29 @@
 yardstick:
   image_name: opnfv/yardstick
-  docker_tag: stable
+  docker_tag: latest
   envs: '-e INSTALLER_TYPE=compass -e INSTALLER_IP=192.168.200.2
          -e NODE_NAME=dovetail-pod -e DEPLOY_SCENARIO=ha_nosdn
          -e BUILD_TAG=dovetail -e CI_DEBUG=true -e DEPLOY_TYPE=baremetal
          -e EXTERNAL_NETWORK=ext-net'
   opts: '-id --privileged=true'
-  result_dir: '/tmp/yardstick/result'
-  shell_dir: '/tmp/yardstick'
-  shell_dir_name: 'prepare_test_yard'
   pre_condition:
     cmds:
-      - 'echo test for precondition'
+      - 'source /home/opnfv/repos/yardstick/tests/ci/prepare_env.sh &&
+         source /home/opnfv/repos/yardstick/tests/ci/clean_images.sh && cleanup'
+      - 'source /home/opnfv/repos/yardstick/tests/ci/prepare_env.sh &&
+         cd /home/opnfv/repos/yardstick && source tests/ci/load_images.sh'
   testcase:
-    build_test_cmd: '/tmp/yardstick/build_run_test.sh %s.yaml /tmp/yardstick/result/%s.out'
-    test_cmd: '/tmp/yardstick/run_test.sh %s.yaml /tmp/yardstick/result/%s.out'
     cmds:
-      - '/tmp/yardstick/build_run_test.sh {{script_testcase}}.yaml /tmp/yardstick/result/{{testcase}}.out'
-      - '/tmp/yardstick/run_test.sh {{script_testcase}}.yaml /tmp/yardstick/result/{{testcase}}.out'
+      - 'mkdir -p /home/opnfv/yardstick/results/'
+      - 'cd /home/opnfv/repos/yardstick && source tests/ci/prepare_env.sh &&
+         yardstick task start tests/opnfv/test_cases/{{script_testcase}}.yaml
+         --output-file /home/opnfv/yardstick/results/{{script_testcase}}.out &>
+         /home/opnfv/yardstick/results/yardstick.log'
   post_condition:
     cmds:
       - ''
   result:
-    dir: '/tmp/yardstick/result'
+    dir: '/home/opnfv/yardstick/results'
     store_type: 'file'
+    file_path: 'yardstick.log'
     db_url: 'http://testresults.opnfv.org/test/api/v1/results?case=%s&last=1'
-    file_path: '/home/opnfv/dovetail/results/yardstick.log'
-
