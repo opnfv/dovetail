@@ -24,7 +24,7 @@ RUN \
         jinja2
 
 ENV HOME /home/opnfv
-ENV REPOS_DIR /home/opnfv/dovetail
+ENV REPOS_DIR ${HOME}/dovetail
 WORKDIR /home/opnfv
 
 RUN \
@@ -34,4 +34,4 @@ RUN \
 && \
     mkdir -p ${REPOS_DIR}/results
 
-WORKDIR /home/opnfv/dovetail/scripts
+WORKDIR ${REPOS_DIR}/dovetail
