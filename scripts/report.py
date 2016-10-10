@@ -157,6 +157,30 @@ class YardstickCrawler:
         self.type = 'yardstick'
 
     def crawl(self, testcase=None):
+        store_type = dovetail_config[self.type]['result']['store_type']
+        if store_type == 'file':
+            return self.crawl_from_file(testcase)
+
+        if store_type == 'url':
+            return self.crawl_from_url(testcase)
+
+    def crawl_from_file(self, testcase=None):
+        file_path = os.path.join(dovetail_config['result_dir'], testcase+'.out')
+        if not os.path.exists(file_path):
+            logger.info('result file not found: %s' % file_path)
+            return None
+        try:
+            with open(file_path, 'r') as myfile:
+                output = myfile.read()
+            criteria = 'PASS'
+            json_results = {'criteria':criteria}
+            logger.debug('Results: %s' % str(json_results))
+            return json_results
+        except Exception as e:
+            logger.error('Cannot read content from the file: %s, exception: %s' % (file_path, e))
+            return None
+
+    def crawl_from_url(self, testcase=None):
         return None
 
 class CheckerFactory:
@@ -208,6 +232,8 @@ class FunctestChecker:
 class YardstickChecker:
 
     def check(cls, testcase, result):
-        return 'PASS'
-
-
+        if not result:
+            testcase.passed(False)
+        else:
+            testcase.passed(result['criteria'] == 'PASS')
+        return
