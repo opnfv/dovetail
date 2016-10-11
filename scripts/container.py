@@ -37,7 +37,18 @@ class Container:
     def create(cls, type):
         #sshkey="-v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
         docker_image = cls.get_docker_image(type)
-        envs = dovetail_config[type]['envs']
+        global CI_INSTALLER_TYPE
+        global CI_INSTALLER_IP
+        global CI_SCENARIO
+        global CI_DEBUG
+        CI_INSTALLER_TYPE = os.getenv('INSTALLER_TYPE')
+        CI_INSTALLER_IP = os.getenv('INSTALLER_IP')
+        CI_SCENARIO = os.getenv('DEPLOY_SCENARIO')
+        CI_DEPLOY_TYPE= os.getenv('DEPLOY_TYPE')
+        CI_DEBUG = os.getenv('CI_DEBUG')
+        #envs = dovetail_config[type]['envs']
+        envs = "-e INSTALLER_TYPE=%s -e INSTALLER_IP=%s -e DEPLOY_SCENARIO=%s \
+                -e DEPLOY_TYPE=%s -e CI_DEBUG=%s" % (CI_INSTALLER_TYPE, CI_INSTALLER_IP, CI_SCENARIO, CI_DEPLOY_TYPE, CI_DEBUG)
         opts = dovetail_config[type]['opts']
         sshkey = ''
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],dovetail_config[type]['result']['dir'])
