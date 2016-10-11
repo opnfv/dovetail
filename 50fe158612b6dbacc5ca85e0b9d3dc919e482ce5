@@ -46,6 +46,29 @@
       "revId": "50fe158612b6dbacc5ca85e0b9d3dc919e482ce5",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dad5f5cf_06a0488f",
+        "filename": "dovetail/utils/dovetail_logger.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-11T15:16:11Z",
+      "side": 1,
+      "message": "trailing whitespace",
+      "range": {
+        "startLine": 33,
+        "startChar": 33,
+        "endLine": 33,
+        "endChar": 34
+      },
+      "revId": "50fe158612b6dbacc5ca85e0b9d3dc919e482ce5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
