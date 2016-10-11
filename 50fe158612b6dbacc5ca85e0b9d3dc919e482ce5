@@ -22,6 +22,30 @@
       "revId": "50fe158612b6dbacc5ca85e0b9d3dc919e482ce5",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dad5f5cf_eb7b8d27",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-10-11T01:00:33Z",
+      "side": 1,
+      "message": "please see commit message 1), directory name changed to dovetail",
+      "parentUuid": "dad5f5cf_209f7405",
+      "range": {
+        "startLine": 37,
+        "startChar": 20,
+        "endLine": 37,
+        "endChar": 29
+      },
+      "revId": "50fe158612b6dbacc5ca85e0b9d3dc919e482ce5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
