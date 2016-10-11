@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dad5f5cf_469e5058",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-11T15:14:08Z",
+      "side": 1,
+      "message": "Non-failing nit, but \"yardstick\" and length of line should be under 80 chars (ideally 50-70) and then a more descriptive overview can be provided 2 lines below that.",
+      "range": {
+        "startLine": 7,
+        "startChar": 35,
+        "endLine": 7,
+        "endChar": 43
+      },
+      "revId": "afe86e71d491d7e7acb3b58035d4fc8b1a0f4513",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
