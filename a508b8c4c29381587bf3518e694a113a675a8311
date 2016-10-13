@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dad5f5cf_9dbb26c4",
+        "filename": "dovetail/container.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 4609
+      },
+      "writtenOn": "2016-10-13T08:04:23Z",
+      "side": 1,
+      "message": "It does not only introduce new environment variables also removes previous environments (i.e. dovetail_config[type][\u0027envs\u0027]).\n\nCan we \u0027add\u0027 new environment into original one?",
+      "revId": "a508b8c4c29381587bf3518e694a113a675a8311",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
