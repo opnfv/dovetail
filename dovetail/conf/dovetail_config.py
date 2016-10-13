@@ -14,11 +14,12 @@ SCENARIO_NAMING_FMT = 'certification_%s'
 import yaml
 import os
 
-with open(os.path.join(os.getcwd(),'conf','dovetail_config.yml')) as f:
+curr_path = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join(curr_path, 'dovetail_config.yml')) as f:
     dovetail_config = yaml.safe_load(f)
 
 for extra_config_file in dovetail_config['include_config']:
-    with open(os.path.join(os.getcwd(),'conf',extra_config_file)) as f:
+    with open(os.path.join(curr_path, extra_config_file)) as f:
         extra_config = yaml.safe_load(f)
         dovetail_config.update(extra_config)
 

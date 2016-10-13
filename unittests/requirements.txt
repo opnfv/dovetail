@@ -1,0 +1,6 @@
+Click
+coverage==4.1b2
+flake8==2.5.4
+Jinja2==2.8
+PyYAML==3.11
+
