@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dad5f5cf_1d23b606",
+        "filename": "setup.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-10-13T09:11:28Z",
+      "side": 1,
+      "message": "According to the latest dovetail source code, there has no \u0027prepare_test_yard\u0027 directory.",
+      "range": {
+        "startLine": 24,
+        "startChar": 11,
+        "endLine": 24,
+        "endChar": 36
+      },
+      "revId": "1fc676d774f2ad14ade6326a97ebe6daf4c0f267",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
