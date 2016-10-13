@@ -37,6 +37,11 @@ class Container:
         #sshkey="-v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
         docker_image = cls.get_docker_image(type)
         envs = dovetail_config[type]['envs']
+        import re
+        for i in ['INSTALLER_TYPE', 'DEPLOY_SCENARIO', 'DEPLOY_TYPE', 'CI_DEBUG']:
+            envs = re.sub("%s=(\w+)"%i, '%s=%s'%(i, os.getenv(i)), envs)
+        envs = re.sub("INSTALLER_IP=\d+\.?\d+\.?\d+\.?\d+", \
+                        'INSTALLER_IP=' + os.getenv('INSTALLER_IP'), envs)
         opts = dovetail_config[type]['opts']
         sshkey = ''
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],dovetail_config[type]['result']['dir'])
