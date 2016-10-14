@@ -9,27 +9,27 @@
 
 
 import click
-import yaml
-import os
-import time
 
 import utils.dovetail_logger as dt_logger
-import utils.dovetail_utils as dt_utils
 
 
 from container import Container
-from testcase import *
-from report import *
-from conf.dovetail_config import *
+from testcase import Testcase
+from testcase import Scenario
+from report import Report
+from conf.dovetail_config import SCENARIO_NAMING_FMT
 
 logger = dt_logger.Logger('run.py').getLogger()
+
 
 def load_scenario(scenario):
     Scenario.load()
     return Scenario.get(SCENARIO_NAMING_FMT % scenario)
 
+
 def load_testcase():
     Testcase.load()
+
 
 def run_test(scenario):
     for testcase_name in scenario['testcase_list']:
@@ -49,11 +49,12 @@ def run_test(scenario):
             logger.debug('container id:%s' % container_id)
 
             if not Testcase.prepared(testcase.script_type()):
-                cmds = Testcase.pre_condition(testcase.script_type())['cmds']
+                cmds = \
+                    Testcase.pre_condition_cls(testcase.script_type())['cmds']
                 if cmds:
                     for cmd in cmds:
                         Container.exec_cmd(container_id, cmd)
-                Testcase.prepared(testcase.script_type(),True)
+                Testcase.prepared(testcase.script_type(), True)
 
             if not testcase.prepare_cmd():
                 logger.error('failed to prepare testcase:%s' % testcase.name())
@@ -61,12 +62,13 @@ def run_test(scenario):
                 for cmd in testcase.cmds:
                     Container.exec_cmd(container_id, cmd)
 
-            #testcase.post_condition()
+            # testcase.post_condition()
 
             Container.clean(container_id)
 
         db_result = Report.get_result(testcase)
         Report.check_result(testcase, db_result)
+
 
 @click.command()
 @click.option('--scenario', default='basic', help='certification scenario')
