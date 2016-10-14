@@ -7,16 +7,19 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 
-import jinja2
+import os
+import yaml
 
 import utils.dovetail_logger as dt_logger
-import utils.dovetail_utils as dt_utils
 
-from  parser import *
+from parser import Parser
 
 logger = dt_logger.Logger('testcase.py').getLogger()
 
-from conf.dovetail_config import *
+from conf.dovetail_config import CERT_PATH
+from conf.dovetail_config import TESTCASE_PATH
+from conf.dovetail_config import dovetail_config
+
 
 class Testcase:
 
@@ -25,11 +28,12 @@ class Testcase:
         self.testcase['passed'] = False
         self.cmds = []
         self.sub_testcase_status = {}
-        Testcase.update_script_testcase(self.script_type(), self.script_testcase())
+        Testcase.update_script_testcase(self.script_type(),
+                                        self.script_testcase())
 
     def prepare_cmd(self):
         for cmd in dovetail_config[self.script_type()]['testcase']['cmds']:
-            cmd_lines = Parser.parse_cmd(cmd,self)
+            cmd_lines = Parser.parse_cmd(cmd, self)
             if not cmd_lines:
                 return False
             self.cmds.append(cmd_lines)
@@ -62,30 +66,32 @@ class Testcase:
 
     def exceed_max_retry_times(self):
         #logger.debug('retry times:%d' % self.testcase['retry'])
-        return Testcase._exceed_max_retry_times(self.script_type(), self.script_testcase())
+        return Testcase._exceed_max_retry_times(self.script_type(),
+                                                self.script_testcase())
 
     def increase_retry(self):
         #self.testcase['retry'] = self.testcase['retry'] + 1
         #return self.testcase['retry']
-        return Testcase._increase_retry(self.script_type(), self.script_testcase())
+        return Testcase._increase_retry(self.script_type(),
+                                        self.script_testcase())
 
-    def passed(self, passed = None):
+    def passed(self, passed=None):
         if passed is not None:
             self.testcase['passed'] = passed
         return self.testcase['passed']
 
     def script_result_acquired(self, acquired=None):
-        return Testcase._result_acquired(self.script_type(), self.script_testcase(), acquired)
+        return Testcase._result_acquired(self.script_type(),
+                                         self.script_testcase(), acquired)
 
     def pre_condition(self):
-        return Testcase.pre_condition(self.script_type())
+        return Testcase.pre_condition_cls(self.script_type())
 
     def post_condition(self):
-        return Testcase.post_condition(self.script_type())
-
+        return Testcase.post_condition_cls(self.script_type())
 
     #testcase in upstream testing project
-    script_testcase_list = {'functest':{}, 'yardstick':{}}
+    script_testcase_list = {'functest': {}, 'yardstick': {}}
 
     #testcase in dovetail
     testcase_list = {}
@@ -103,23 +109,24 @@ class Testcase:
         return cls.script_testcase_list[script_type]['cleaned']
 
     @classmethod
-    def pre_condition(cls, script_type):
+    def pre_condition_cls(cls, script_type):
         return dovetail_config[script_type]['pre_condition']
 
-    def post_condition(cls, script_type):
+    def post_condition_cls(cls, script_type):
         return dovetail_config[script_type]['post_condition']
 
-
     @classmethod
-    def update_script_testcase(cls,script_type, script_testcase):
+    def update_script_testcase(cls, script_type, script_testcase):
         if script_testcase not in cls.script_testcase_list[script_type]:
-            cls.script_testcase_list[script_type][script_testcase] = {'retry':0, 'acquired':False}
+            cls.script_testcase_list[script_type][script_testcase] = \
+                {'retry': 0, 'acquired': False}
             cls.script_testcase_list[script_type]['prepared'] = False
             cls.script_testcase_list[script_type]['cleaned'] = False
 
     @classmethod
-    def _exceed_max_retry_times(cls, script_type, script_testcase ):
-        return cls.script_testcase_list[script_type][script_testcase]['retry'] > 1
+    def _exceed_max_retry_times(cls, script_type, script_testcase):
+        retry = cls.script_testcase_list[script_type][script_testcase]['retry']
+        return retry > 1
 
     @classmethod
     def _increase_retry(cls, script_type, script_testcase):
@@ -127,10 +134,11 @@ class Testcase:
         return cls.script_testcase_list[script_type][script_testcase]['retry']
 
     @classmethod
-    def _result_acquired(cls, script_type, script_testcase, acquired=None):
+    def _result_acquired(cls, script_type, testcase, acquired=None):
         if acquired is not None:
-            cls.script_testcase_list[script_type][script_testcase]['acquired'] = acquired
-        return cls.script_testcase_list[script_type][script_testcase]['acquired']
+            cls.script_testcase_list[script_type][testcase]['acquired'] = \
+                acquired
+        return cls.script_testcase_list[script_type][testcase]['acquired']
 
     @classmethod
     def load(cls):
@@ -138,8 +146,9 @@ class Testcase:
             for testcase_file in files:
                 with open(os.path.join(root, testcase_file)) as f:
                     testcase_yaml = yaml.safe_load(f)
-                    cls.testcase_list[testcase_yaml.keys()[0]] = Testcase(testcase_yaml)
-        logger.debug( cls.testcase_list )
+                    cls.testcase_list[testcase_yaml.keys()[0]] = \
+                        Testcase(testcase_yaml)
+        logger.debug(cls.testcase_list)
 
     @classmethod
     def get(cls, testcase_name):
@@ -160,6 +169,7 @@ class Scenario:
         return None
 
     scenario_list = {}
+
     @classmethod
     def load(cls):
         for root, dirs, files in os.walk(CERT_PATH):
@@ -175,4 +185,3 @@ class Scenario:
         if scenario_name in cls.scenario_list:
             return cls.scenario_list[scenario_name]
         return None
-

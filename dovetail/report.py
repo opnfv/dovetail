@@ -9,14 +9,15 @@
 import json
 import urllib2
 import re
+import os
 
 import utils.dovetail_logger as dt_logger
-import utils.dovetail_utils as dt_utils
 
-from conf.dovetail_config import *
-from testcase import *
+from conf.dovetail_config import dovetail_config
+from testcase import Testcase
 
 logger = dt_logger.Logger('report.py').getLogger()
+
 
 def get_pass_str(passed):
     if passed:
@@ -24,9 +25,10 @@ def get_pass_str(passed):
     else:
         return 'FAIL'
 
+
 class Report:
 
-    results = {'functest':{},'yardstick':{}}
+    results = {'functest': {}, 'yardstick': {}}
 
     @classmethod
     def check_result(cls, testcase, db_result):
@@ -38,18 +40,22 @@ class Report:
         report = ''
 
         report += '\n\
-+=============================================================================+\n\
-|                                   report                                    | \n\
-+-----------------------------------------------------------------------------+\n'
++==========================================================================+\n\
+|                                   report                                 |\n\
++--------------------------------------------------------------------------+\n'
         report += '|scenario: %s\n' % scenario_yaml['name']
         for testcase_name in scenario_yaml['testcase_list']:
             testcase = Testcase.get(testcase_name)
-            report += '|   [testcase]: %s\t\t\t\t[%s]\n' % (testcase_name, get_pass_str(testcase.passed()))
+            report += '|   [testcase]: %s\t\t\t\t[%s]\n' % \
+                (testcase_name, get_pass_str(testcase.passed()))
             report += '|   |-objective: %s\n' % testcase.objective()
             if testcase.sub_testcase() is not None:
                 for subtest in testcase.sub_testcase():
-                    report += '|       |-%s \t\t [%s]\n' % (subtest, get_pass_str(testcase.sub_testcase_passed(subtest)))
-            report += '+-----------------------------------------------------------------------------+\n'
+                    report += '|       |-%s \t\t [%s]\n' % \
+                        (subtest,
+                         get_pass_str(testcase.sub_testcase_passed(subtest)))
+            report += '+-----------------------------------------------------'
+            report += '---------------------+\n'
 
         logger.info(report)
         cls.save(report)
@@ -60,10 +66,11 @@ class Report:
     def save(cls, report):
         report_file_path = dovetail_config['report_file']
         try:
-            with open(os.path.join(dovetail_config['result_dir'], report_file_path),'w') as report_file:
+            with open(os.path.join(dovetail_config['result_dir'],
+                      report_file_path), 'w') as report_file:
                 report_file.write(report)
             logger.info('save report to %s' % report_file_path)
-        except Exception as e:
+        except Exception:
             logger.error('Failed to save: %s' % report_file_path)
 
     @classmethod
@@ -83,8 +90,10 @@ class Report:
             logger.debug('testcase: %s -> result acquired' % script_testcase)
         else:
             retry = testcase.increase_retry()
-            logger.debug('testcase: %s -> result acquired retry:%d' % (script_testcase, retry))
+            logger.debug('testcase: %s -> result acquired retry:%d' %
+                         (script_testcase, retry))
         return result
+
 
 class CrawlerFactory:
 
@@ -97,6 +106,7 @@ class CrawlerFactory:
             return YardstickCrawler()
 
         return None
+
 
 class FunctestCrawler:
 
@@ -112,7 +122,9 @@ class FunctestCrawler:
             return self.crawl_from_url(testcase)
 
     def crawl_from_file(self, testcase=None):
-        file_path = os.path.join(dovetail_config['result_dir'],dovetail_config[self.type]['result']['file_path'])
+        file_path = \
+            os.path.join(dovetail_config['result_dir'],
+                         dovetail_config[self.type]['result']['file_path'])
         if not os.path.exists(file_path):
             logger.info('result file not found: %s' % file_path)
             return None
@@ -130,15 +142,17 @@ class FunctestCrawler:
             if failed_num != 0:
                 criteria = 'FAIL'
 
-            match =  re.findall('Ran: (\d*) tests in (\d*)\.\d* sec.', output)
+            match = re.findall('Ran: (\d*) tests in (\d*)\.\d* sec.', output)
             num_tests, dur_sec_int = match[0]
-            json_results = {'criteria':criteria,'details':{"timestart": '', "duration": int(dur_sec_int),
+            json_results = {'criteria': criteria, 'details': {"timestart": '',
+                            "duration": int(dur_sec_int),
                             "tests": int(num_tests), "failures": failed_num,
                             "errors": error_logs}}
             logger.debug('Results: %s' % str(json_results))
             return json_results
         except Exception as e:
-            logger.error('Cannot read content from the file: %s, exception: %s' % (file_path, e))
+            logger.error('Cannot read content from the file: %s, exception: %s'
+                         % (file_path, e))
             return None
 
     def crawl_from_url(self, testcase=None):
@@ -148,8 +162,10 @@ class FunctestCrawler:
             data = json.load(urllib2.urlopen(url))
             return data['results'][0]
         except Exception as e:
-            logger.error("Cannot read content from the url: %s, exception: %s" % (url, e))
+            logger.error("Cannot read content from the url: %s, exception: %s"
+                         % (url, e))
             return None
+
 
 class YardstickCrawler:
 
@@ -165,28 +181,31 @@ class YardstickCrawler:
             return self.crawl_from_url(testcase)
 
     def crawl_from_file(self, testcase=None):
-        file_path = os.path.join(dovetail_config['result_dir'], testcase+'.out')
+        file_path = os.path.join(dovetail_config['result_dir'],
+                                 testcase+'.out')
         if not os.path.exists(file_path):
             logger.info('result file not found: %s' % file_path)
             return None
         try:
             with open(file_path, 'r') as myfile:
-                output = myfile.read()
+                myfile.read()
             criteria = 'PASS'
-            json_results = {'criteria':criteria}
+            json_results = {'criteria': criteria}
             logger.debug('Results: %s' % str(json_results))
             return json_results
         except Exception as e:
-            logger.error('Cannot read content from the file: %s, exception: %s' % (file_path, e))
+            logger.error('Cannot read content from the file: %s, exception: %s'
+                         % (file_path, e))
             return None
 
     def crawl_from_url(self, testcase=None):
         return None
 
+
 class CheckerFactory:
 
     @classmethod
-    def create(cls,type):
+    def create(cls, type):
         if type == 'functest':
             return FunctestChecker()
 
@@ -195,17 +214,19 @@ class CheckerFactory:
 
         return None
 
+
 class ResultChecker:
 
     def check(cls):
         return 'PASS'
+
 
 class FunctestChecker:
 
     def check(cls, testcase, db_result):
         if not db_result:
             for sub_testcase in testcase.sub_testcase():
-                testcase.sub_testcase_passed(sub_testcase,False)
+                testcase.sub_testcase_passed(sub_testcase, False)
             return
 
         testcase.passed(db_result['criteria'] == 'PASS')
@@ -213,7 +234,7 @@ class FunctestChecker:
         if testcase.sub_testcase() is None:
             return
 
-        if testcase.testcase['passed'] == True:
+        if testcase.testcase['passed'] is True:
             for sub_testcase in testcase.sub_testcase():
                 testcase.sub_testcase_passed(sub_testcase, True)
             return
@@ -228,6 +249,7 @@ class FunctestChecker:
                 testcase.sub_testcase_passed(sub_testcase, True)
 
         testcase.passed(all_passed)
+
 
 class YardstickChecker:
 
