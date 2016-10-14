@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "dad5f5cf_33dd8b43",
+        "filename": "dovetail/container.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-10-14T09:01:29Z",
+      "side": 1,
+      "message": "it\u0027s good to get value from environment variables, but as TOMOFUMI said, default value is lost, so if user didn\u0027t set these env variables, the tool would fail for missing values, you should set these values by  dovetail_config[type][\u0027envs\u0027] first , then do your stuff",
+      "range": {
+        "startLine": 39,
+        "startChar": 8,
+        "endLine": 50,
+        "endChar": 93
+      },
+      "revId": "a508b8c4c29381587bf3518e694a113a675a8311",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dad5f5cf_9dbb26c4",
         "filename": "dovetail/container.py",
         "patchSetId": 2
