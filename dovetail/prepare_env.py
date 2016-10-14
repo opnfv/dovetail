@@ -7,8 +7,6 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 
-import os
-
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
 
@@ -20,4 +18,3 @@ dt_utils.exec_cmd(cmd, logger)
 
 cmd = "sudo pip install click pyyaml jinja2"
 dt_utils.exec_cmd(cmd, logger)
-

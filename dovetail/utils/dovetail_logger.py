@@ -24,6 +24,7 @@
 import logging
 import os
 
+
 class Logger:
     def __init__(self, logger_name):
 
@@ -52,4 +53,3 @@ class Logger:
 
     def getLogger(self):
         return self.logger
-
