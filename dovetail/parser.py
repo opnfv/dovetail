@@ -17,6 +17,7 @@ logger = dt_logger.Logger('parser.py').getLogger()
 
 from conf.dovetail_config import *
 
+
 class Parser:
     '''preprocess configuration files'''
 
@@ -29,9 +30,10 @@ class Parser:
             for arg in dovetail_config['parameters']:
                 path = eval(arg['path'])
                 logger.debug('name: %s, eval path: %s ' % (arg['name'], path))
-                kwargs[arg['name']] = dt_utils.get_obj_by_path(testcase.testcase,path)
+                kwargs[arg['name']] = \
+                    dt_utils.get_obj_by_path(testcase.testcase, path)
 
-            logger.debug('kwargs: %s' %  kwargs)
+            logger.debug('kwargs: %s' % kwargs)
             cmd_lines = template.render(**kwargs)
         except Exception as e:
             logger.error('failed to parse cmd %s, exception:%s' % (cmd, e))

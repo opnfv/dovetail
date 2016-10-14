@@ -20,4 +20,3 @@ dt_utils.exec_cmd(cmd, logger)
 
 cmd = "sudo pip install click pyyaml jinja2"
 dt_utils.exec_cmd(cmd, logger)
-
