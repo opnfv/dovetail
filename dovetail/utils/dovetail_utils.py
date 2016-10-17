@@ -11,12 +11,11 @@
 
 import sys
 import subprocess
+from collections import Mapping, Set, Sequence
 
-def exec_cmd(cmd, logger=None,
-                    exit_on_error=True,
-                    info=False,
-                    error_msg="",
-                    verbose=True):
+
+def exec_cmd(cmd, logger=None, exit_on_error=True, info=False,
+             error_msg="", verbose=True):
     if not error_msg:
         error_msg = ("The command '%s' failed." % cmd)
     msg_exec = ("Executing command: '%s'" % cmd)
@@ -55,12 +54,16 @@ def exec_cmd(cmd, logger=None,
     return returncode, output[0].strip()
 
 
-#walkthrough the object, yield path and value
-from collections import Mapping, Set, Sequence
+# walkthrough the object, yield path and value
 
 # dual python 2/3 compatability, inspired by the "six" library
 string_types = (str, unicode) if str is bytes else (str, bytes)
-iteritems = lambda mapping: getattr(mapping, 'iteritems', mapping.items)()
+# iteritems = lambda mapping: getattr(mapping, 'iteritems', mapping.items)()
+
+
+def iteritems(mapping):
+    return getattr(mapping, 'iteritems', mapping.items)()
+
 
 def objwalk(obj, path=(), memo=None):
     if memo is None:
@@ -68,7 +71,8 @@ def objwalk(obj, path=(), memo=None):
     iterator = None
     if isinstance(obj, Mapping):
         iterator = iteritems
-    elif isinstance(obj, (Sequence, Set)) and not isinstance(obj, string_types):
+    elif isinstance(obj, (Sequence, Set)) and not isinstance(obj,
+                                                             string_types):
         iterator = enumerate
     if iterator:
         if id(obj) not in memo:
@@ -80,8 +84,8 @@ def objwalk(obj, path=(), memo=None):
     else:
         yield path, obj
 
-def get_obj_by_path(obj,dst_path):
+
+def get_obj_by_path(obj, dst_path):
     for path, obj in objwalk(obj):
         if path == dst_path:
             return obj
-

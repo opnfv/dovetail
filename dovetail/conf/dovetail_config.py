@@ -7,12 +7,12 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 
+import yaml
+import os
+
 CERT_PATH = './cert/'
 TESTCASE_PATH = './testcase/'
 SCENARIO_NAMING_FMT = 'certification_%s'
-
-import yaml
-import os
 
 curr_path = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(curr_path, 'dovetail_config.yml')) as f:
