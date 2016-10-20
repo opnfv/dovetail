@@ -1,9 +1,6 @@
 *.py[cod]
 
-# C extensions
-*.so
-
-# Packages
+#Packages
 *.egg
 *.egg-info
 dist
@@ -14,23 +11,24 @@ bin
 var
 sdist
 develop-eggs
-.installed.cfg
 lib
 lib64
 __pycache__
 
-# Installer logs
+#Installation logs
 pip-log.txt
 
-# Unit test / coverage reports
+#unittest/coverage reports
 .coverage
 .tox
 nosetests.xml
+unittest_results.log
 
-# Translations
+#Translations
 *.mo
 
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
+#Sphinx documentation
+*.sw?
+/docs_build/
+/docs_output/
+/home/opnfv/dovetail/results
