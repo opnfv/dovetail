@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_3e031575",
+        "filename": ".gitignore",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-20T12:34:33Z",
+      "side": 1,
+      "message": "This seems unnecessary as a local environment problem?",
+      "revId": "1cd157cd6d6fe25d0e089a4ca8536f0cac8ea834",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_def7698b",
+        "filename": ".gitignore",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-20T12:34:33Z",
+      "side": 1,
+      "message": "I don\u0027t understand the need for VIM stuff here?",
+      "revId": "1cd157cd6d6fe25d0e089a4ca8536f0cac8ea834",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
