@@ -111,6 +111,7 @@ class Testcase:
     def pre_condition_cls(cls, script_type):
         return dovetail_config[script_type]['pre_condition']
 
+    @classmethod
     def post_condition_cls(cls, script_type):
         return dovetail_config[script_type]['post_condition']
 
