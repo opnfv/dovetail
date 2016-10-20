@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9adffdf1_de6c4939",
+        "filename": ".gitignore",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2016-10-20T13:39:46Z",
+      "side": 1,
+      "message": "Agreed - .vimrc and vim session files should not be present in the git tree unless you have checked out the repo to a $HOME directory.",
+      "parentUuid": "9adffdf1_3e031575",
+      "revId": "1cd157cd6d6fe25d0e089a4ca8536f0cac8ea834",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9adffdf1_def7698b",
         "filename": ".gitignore",
         "patchSetId": 2
@@ -30,6 +48,29 @@
       "writtenOn": "2016-10-20T12:34:33Z",
       "side": 1,
       "message": "I don\u0027t understand the need for VIM stuff here?",
+      "revId": "1cd157cd6d6fe25d0e089a4ca8536f0cac8ea834",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_fe690d26",
+        "filename": ".gitignore",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2016-10-20T13:39:46Z",
+      "side": 1,
+      "message": "Where does \"cover\" come from? Is it created by the test tool, or one of its dependencies?",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 6
+      },
       "revId": "1cd157cd6d6fe25d0e089a4ca8536f0cac8ea834",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
