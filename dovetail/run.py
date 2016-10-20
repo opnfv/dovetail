@@ -50,7 +50,7 @@ def run_test(scenario):
 
             if not Testcase.prepared(testcase.script_type()):
                 cmds = \
-                    Testcase.pre_condition_cls(testcase.script_type())['cmds']
+                    testcase.pre_condition()['cmds']
                 if cmds:
                     for cmd in cmds:
                         Container.exec_cmd(container_id, cmd)
