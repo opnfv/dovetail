@@ -10,5 +10,7 @@ Dovetail Overview
 .. toctree::
    :maxdepth: 2
 
-   installation.instruction
-   feature.configuation
+   dovetail.tool.overview.rst
+   dovetail.tool.installation.rst
+   dovetail.tool.configuation.rst
+   dovetail.tool.configtemplate.rst
