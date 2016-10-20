@@ -22,6 +22,30 @@
       "revId": "26499849c44aa47709d76cea53edca9389dd72e5",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_1e6e51ca",
+        "filename": "dovetail/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-20T09:20:23Z",
+      "side": 1,
+      "message": "good catch Dan, will fix it soon, thanks!",
+      "parentUuid": "9adffdf1_3e2555ab",
+      "range": {
+        "startLine": 52,
+        "startChar": 16,
+        "endLine": 53,
+        "endChar": 52
+      },
+      "revId": "26499849c44aa47709d76cea53edca9389dd72e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
