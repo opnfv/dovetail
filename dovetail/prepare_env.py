@@ -7,6 +7,7 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 
+import platform
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
 
@@ -14,6 +15,8 @@ import utils.dovetail_utils as dt_utils
 logger = dt_logger.Logger('prepare_env.py').getLogger()
 
 cmd = "sudo apt-get -y install docker.io python-pip"
+if platform.dist()[0] in ['centos', 'fedora', 'redhat']:
+    cmd = "sudo yum install -y docker python-pip"
 dt_utils.exec_cmd(cmd, logger)
 
 cmd = "sudo pip install click pyyaml jinja2"
