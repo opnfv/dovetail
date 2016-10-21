@@ -7,7 +7,8 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 
-import os
+# import os
+
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
 from conf.dovetail_config import dovetail_config
@@ -39,18 +40,18 @@ class Container:
         # sshkey="-v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
         docker_image = cls.get_docker_image(type)
         envs = dovetail_config[type]['envs']
-        import re
-        for i in ['INSTALLER_TYPE', 'DEPLOY_SCENARIO',
-                  'DEPLOY_TYPE', 'CI_DEBUG']:
-            envs = re.sub("%s=(\w+)" % i, '%s=%s' % (i, os.getenv(i)), envs)
-        envs = re.sub("INSTALLER_IP=\d+\.?\d+\.?\d+\.?\d+",
-                      'INSTALLER_IP=' + os.getenv('INSTALLER_IP'), envs)
+        # import re
+        # for i in ['INSTALLER_TYPE', 'DEPLOY_SCENARIO',
+        #          'DEPLOY_TYPE', 'CI_DEBUG']:
+        #    envs = re.sub("%s=(\w+)" % i, '%s=%s' % (i, os.getenv(i)), envs)
+        # envs = re.sub("INSTALLER_IP=\d+\.?\d+\.?\d+\.?\d+",
+        #              'INSTALLER_IP=' + os.getenv('INSTALLER_IP'), envs)
         opts = dovetail_config[type]['opts']
         sshkey = ''
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
         cmd = 'sudo docker run %s %s %s %s %s /bin/bash' % \
-              (opts, envs, sshkey, result_volume, docker_image)
+            (opts, envs, sshkey, result_volume, docker_image)
         dt_utils.exec_cmd(cmd, logger)
         ret, container_id = \
             dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +

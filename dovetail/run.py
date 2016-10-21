@@ -18,6 +18,8 @@ from testcase import Testcase
 from testcase import Scenario
 from report import Report
 from conf.dovetail_config import SCENARIO_NAMING_FMT
+from conf.dovetail_config import dovetail_config
+from conf.dovetail_config import update_envs
 
 logger = dt_logger.Logger('run.py').getLogger()
 
@@ -70,17 +72,28 @@ def run_test(scenario):
         Report.check_result(testcase, db_result)
 
 
-@click.command()
-@click.option('--scenario', default='basic', help='certification scenario')
-def main(scenario):
+def main(*args, **kwargs):
     """Dovetail certification test entry!"""
     logger.info('=======================================')
-    logger.info('Dovetail certification: %s!' % scenario)
+    logger.info('Dovetail certification: %s!' % (kwargs['scenario']))
     logger.info('=======================================')
+    update_envs(kwargs)
+    logger.info('Your new envs for functest: %s' %
+                dovetail_config['functest']['envs'])
+    logger.info('Your new envs for yardstick: %s' %
+                dovetail_config['yardstick']['envs'])
     load_testcase()
-    scenario_yaml = load_scenario(scenario)
+    scenario_yaml = load_scenario(kwargs['scenario'])
     run_test(scenario_yaml)
     Report.generate(scenario_yaml)
+
+
+for k, v in dovetail_config['cli'].items():
+    flags = v['flags']
+    del v['flags']
+    main = click.option(*flags, **v)(main)
+main = click.command()(main)
+
 
 if __name__ == '__main__':
     main()

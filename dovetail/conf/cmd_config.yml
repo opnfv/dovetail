@@ -1,0 +1,28 @@
+cli:
+  scenario:
+    flags:
+      - '--scenario'
+    default: 'basic'
+    help: 'certification scenario.'
+  SUT_TYPE:
+    flags:
+      - '--SUT_TYPE'
+      - '-TYPE'
+    help: 'Give SUT_TYPE.'
+  SUT_IP:
+    flags:
+      - '--SUT_IP'
+      - '-IP'
+    help: 'Give SUT_IP.'
+  DEPLOY_SCENARIO:
+    flags:
+      - '--DEPLOY_SCENARIO'
+    help: 'Give DEPLOY_SCENARIO.'
+  DEPLOY_TYPE:
+    flags:
+      - '--DEPLOY_TYPE'
+    help: 'Give DEPLOY_TYPE.'
+  CI_DEBUG:
+    flags:
+      - '--CI_DEBUG'
+    help: 'Give CI_DEBUG.'
