@@ -1,0 +1,33 @@
+cli:
+  arguments:
+
+  options:
+    envs:
+      SUT_TYPE:
+        flags:
+          - '--SUT_TYPE'
+          - '-TYPE'
+        help: 'Installer type of the system under test (SUT).'
+      SUT_IP:
+        flags:
+          - '--SUT_IP'
+          - '-IP'
+        help: 'IP of the system under test (SUT).'
+      DEPLOY_SCENARIO:
+        flags:
+          - '--DEPLOY_SCENARIO'
+        help: 'DEPLOY_SCENARIO of the system under test (SUT).'
+      DEPLOY_TYPE:
+        flags:
+          - '--DEPLOY_TYPE'
+        help: 'DEPLOY_TYPE of the system under test (SUT).'
+      CI_DEBUG:
+        flags:
+          - '--CI_DEBUG'
+        help: 'Give CI_DEBUG.'
+    non-envs:
+      scenario:
+        flags:
+          - '--scenario'
+        default: 'basic'
+        help: 'certification scenario.'
