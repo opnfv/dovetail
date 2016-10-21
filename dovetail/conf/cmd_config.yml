@@ -1,0 +1,45 @@
+cli:
+  arguments:
+    envs:
+      # This is a simple example of arguments.
+      # Dovetail has no need of this kind of parameters currently.
+      # The arguments must be given orderly at the run-time.
+      #
+      # docker_tag:
+      #   flags: 'docker_tag'
+    non-envs:
+
+  options:
+    envs:
+      SUT_TYPE:
+        flags:
+          - '--SUT_TYPE'
+          - '-t'
+        help: 'Installer type of the system under test (SUT).'
+      SUT_IP:
+        flags:
+          - '--SUT_IP'
+          - '-i'
+        help: 'IP of the system under test (SUT).'
+      DEPLOY_SCENARIO:
+        flags:
+          - '--DEPLOY_SCENARIO'
+          - '-S'
+        help: 'DEPLOY_SCENARIO of the system under test (SUT).'
+      DEPLOY_TYPE:
+        flags:
+          - '--DEPLOY_TYPE'
+          - '-T'
+        help: 'DEPLOY_TYPE of the system under test (SUT).'
+      CI_DEBUG:
+        flags:
+          - '--CI_DEBUG'
+          - '-d'
+        help: 'CI_DEBUG for showing debug log.'
+    non-envs:
+      scenario:
+        flags:
+          - '--scenario'
+          - '-s'
+        default: 'basic'
+        help: 'certification scenario.'
