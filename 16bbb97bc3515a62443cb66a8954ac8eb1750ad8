@@ -1,0 +1,8 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Jun Li <matthew.lijun@huawei.com>
+Code-Review+2: Christopher Price <christopher.price@ericsson.com>
+Submitted-by: Christopher Price <christopher.price@ericsson.com>
+Submitted-at: Fri, 21 Oct 2016 09:56:31 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/23405
+Project: dovetail
+Branch: refs/heads/master
