@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_a9059115",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-21T10:15:18Z",
+      "side": 1,
+      "message": "CI_DEBUG may not be accurate as this debug setting is not restricted to CI, but could also be used by manual testing.",
+      "range": {
+        "startLine": 25,
+        "startChar": 2,
+        "endLine": 25,
+        "endChar": 10
+      },
+      "revId": "4b907cbb6c9e849929d9c2734796307fb2978eb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_049364a4",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-21T10:15:18Z",
+      "side": 1,
+      "message": "this will update environ parameters to both functest and yardstick script type with same values, I\u0027m just thinking that if we would give user the flexibility to set different env values to functest \u0026 yardstick cases, which means user can choose to run special cases over specific platforms at the same time. further to this, if we have test cases from multiple projects other than above two, we probably not necessarily have the same environment parameters for all of them.",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 35
+      },
+      "revId": "4b907cbb6c9e849929d9c2734796307fb2978eb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_44464c25",
+        "filename": "dovetail/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-21T10:15:18Z",
+      "side": 1,
+      "message": "I didn;t have a clear understanding of the scope of cmd_config.yml file, is it for setting envs parameters(eg, the \u0027envs\u0027 variable in functest_config.yml) only ? or it is designed to include more cli commands, for example, support dynamical setting of other parameters in configuration files;\nif the latter is true, shall we redefine these functions to not use envs which I think is specified to environment parameters; if the former is true, then are we planning to support more cli commands ?",
+      "range": {
+        "startLine": 80,
+        "startChar": 4,
+        "endLine": 80,
+        "endChar": 15
+      },
+      "revId": "4b907cbb6c9e849929d9c2734796307fb2978eb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
