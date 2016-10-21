@@ -64,14 +64,14 @@ class Report:
     # save to disk as default
     @classmethod
     def save(cls, report):
-        report_file_path = dovetail_config['report_file']
+        report_file_name = dovetail_config['report_file']
         try:
             with open(os.path.join(dovetail_config['result_dir'],
-                      report_file_path), 'w') as report_file:
+                      report_file_name), 'w') as report_file:
                 report_file.write(report)
-            logger.info('save report to %s' % report_file_path)
+            logger.info('save report to %s' % report_file_name)
         except Exception:
-            logger.error('Failed to save: %s' % report_file_path)
+            logger.error('Failed to save: %s' % report_file_name)
 
     @classmethod
     def get_result(cls, testcase):
