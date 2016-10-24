@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "9adffdf1_5b9e2658",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-24T10:21:57Z",
+      "side": 1,
+      "message": "thanks for your explanation Dan, maybe I mis-understood something in dovetail tool, is there a way of enabling DEBUG info when manually run dovetail run.py without setting CI_DEBUG parameter to true?",
+      "parentUuid": "9adffdf1_9b8d6e34",
+      "range": {
+        "startLine": 25,
+        "startChar": 2,
+        "endLine": 25,
+        "endChar": 10
+      },
+      "revId": "4b907cbb6c9e849929d9c2734796307fb2978eb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9adffdf1_049364a4",
         "filename": "dovetail/conf/dovetail_config.py",
         "patchSetId": 1
@@ -180,6 +204,30 @@
       "side": 1,
       "message": "Yes, the parameters such as docker_tag and result_dir can also be added into the cli, and it will make our tool more friendly. For the moment, we mainly want to change the envs via cli and make sure functest/yardstick can run successfully with the envs provided by users.",
       "parentUuid": "9adffdf1_1bdade78",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 35
+      },
+      "revId": "4b907cbb6c9e849929d9c2734796307fb2978eb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_7b79aafb",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-24T10:21:57Z",
+      "side": 1,
+      "message": "thanks Dan for providing your view on current scope of the mechanism, I think both of us agree that this patch is a good improvement and focusing on changing run-time envs parameters;\nmaybe I\u0027m just considering the extension of current mechanism excessively and would like to see more flexibility of adding additional cmds with current mechanism. we could discuss further when new requirement comes up over time.",
+      "parentUuid": "9adffdf1_fb7b5a27",
       "range": {
         "startLine": 52,
         "startChar": 0,
