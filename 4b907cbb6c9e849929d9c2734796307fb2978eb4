@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "9adffdf1_7be9aa19",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-24T05:59:55Z",
+      "side": 1,
+      "message": "I agree that having CI_DEBUG in cmd_config.yml would be more flexible than putting it in container.py; the problem I\u0027d like to comment is that CI_DEBUG is used by opnfv jenkins CI to enable DEBUG info, but we also support running dovetail on local machine(described in installation instruction rst) which allows user to run dovetail directly without having a CI environment, then it may cause confusion whether user should set CI_DEBUG parameter in a non-CI environment.",
+      "parentUuid": "9adffdf1_3ba56204",
+      "range": {
+        "startLine": 25,
+        "startChar": 2,
+        "endLine": 25,
+        "endChar": 10
+      },
+      "revId": "4b907cbb6c9e849929d9c2734796307fb2978eb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9adffdf1_049364a4",
         "filename": "dovetail/conf/dovetail_config.py",
         "patchSetId": 1
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "It\u0027s a good suggestion. Now we want to use the cli to update the common envs\u0027s value for functest and yardstick or even other testing projects. I think in one running, these envs for different projects should be the same and can be set through the cli. For the special envs for each projects, it may be various. If add all these into cli, it will make the command line more complexity for the user to use. And it can be discussed further.",
       "parentUuid": "9adffdf1_049364a4",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 35
+      },
+      "revId": "4b907cbb6c9e849929d9c2734796307fb2978eb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_1bdade78",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-24T05:59:55Z",
+      "side": 1,
+      "message": "I agree that this may be discussed further and case by case if there is a need to add additional parameter in cmd config file. since this patch set is adding a mechanism for user to configure command line parameters dynamically, so just want to make sure this is well defined and could be easily extended to other parameters without having constraints at the initial version. for example, if there are needs to modify docker_tag to test a stable docker container or modify result_dir to save log files in specified directory, we may need to configure them in cmd_config file if these parameters are expected to be set dynamically and have different values for various test projects.",
+      "parentUuid": "9adffdf1_db19b67a",
       "range": {
         "startLine": 52,
         "startChar": 0,
