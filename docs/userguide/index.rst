@@ -15,3 +15,4 @@ Dovetail - user guide
    ./02-certification_criteria.rst
    ./03-certification_progress.rst
    ./04-dovetail_config_template.rst
+   ./05-cli_config_and_use.rst
