@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_3141030c",
+        "filename": "dovetail/prepare_env.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-25T13:32:36Z",
+      "side": 1,
+      "message": "Actually this should be broken out so that Fedora versions \u003e 22 utilize dnf.",
+      "revId": "f67a5ff90d418352b690f2495016694a605d1f12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
