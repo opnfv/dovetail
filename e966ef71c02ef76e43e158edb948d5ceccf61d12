@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "5ac10518_4d5e79eb",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "For Dovetail",
+      "range": {
+        "startLine": 10,
+        "startChar": 1,
+        "endLine": 10,
+        "endChar": 17
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6d6335b2",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "delete this",
+      "range": {
+        "startLine": 10,
+        "startChar": 51,
+        "endLine": 10,
+        "endChar": 60
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_2daa0dd5",
         "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
         "patchSetId": 3
@@ -48,6 +94,207 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_0d5871f9",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "As both functest and yardstick are utilized by Dovetail, their configuration files should be configured as follows, within the ``functest_config.yml`` and ``yardstick_config.yml`` files, respectively.",
+      "parentUuid": "5ac10518_8db8e12b",
+      "range": {
+        "startLine": 11,
+        "startChar": 16,
+        "endLine": 11,
+        "endChar": 82
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2d5d2dea",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "An example functest configuration is shown as follows:",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ed6e4596",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "The configuration in ``yardstick_config.yml`` is similar to ``functest_config.yml``, and an example is shown as follows:",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_8d6b0185",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Please wrap to 80 chars.",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_4d0519c1",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": ". The",
+      "range": {
+        "startLine": 95,
+        "startChar": 63,
+        "endLine": 95,
+        "endChar": 68
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ad683d88",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Please wrap this and the following line to 80 chars.",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6d0a55d4",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": ":",
+      "range": {
+        "startLine": 96,
+        "startChar": 72,
+        "endLine": 96,
+        "endChar": 73
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_0d0f11e3",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Here ``path`` is the path defined in the testcase configuration files.",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_cdf829c7",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": ":",
+      "range": {
+        "startLine": 107,
+        "startChar": 72,
+        "endLine": 107,
+        "endChar": 73
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2d144df4",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Maybe wrap with _ ?",
+      "range": {
+        "startLine": 107,
+        "startChar": 53,
+        "endLine": 107,
+        "endChar": 72
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_edaba5d4",
         "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
         "patchSetId": 3
@@ -64,6 +311,213 @@
         "startChar": 0,
         "endLine": 123,
         "endChar": 120
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_8d0221b3",
+        "filename": "docs/dovetailtool/dovetail.tool.configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "in the ``dovetail/testcase`` directory,\n\nNote that you don\u0027t need to say ``dovetail/dovetail/`` as the working directory is likely dovetail, but could be anything. You only care about the path relative to within the working directory.",
+      "range": {
+        "startLine": 10,
+        "startChar": 60,
+        "endLine": 10,
+        "endChar": 103
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_edf5e5cb",
+        "filename": "docs/dovetailtool/dovetail.tool.configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "compliance and certification",
+      "range": {
+        "startLine": 10,
+        "startChar": 23,
+        "endLine": 10,
+        "endChar": 47
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_4d2c394b",
+        "filename": "docs/dovetailtool/dovetail.tool.configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "shown as:",
+      "range": {
+        "startLine": 11,
+        "startChar": 85,
+        "endLine": 11,
+        "endChar": 100
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_adffdda9",
+        "filename": "docs/dovetailtool/dovetail.tool.configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "defined in yaml format",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 32
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6d31f5a1",
+        "filename": "docs/dovetailtool/dovetail.tool.configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "must?",
+      "range": {
+        "startLine": 26,
+        "startChar": 63,
+        "endLine": 26,
+        "endChar": 69
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ed1c0516",
+        "filename": "docs/dovetailtool/dovetail.tool.configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Since you\u0027re not doing multiple sentences on the same bullet, I would drop the full-stop from all of these bullets.",
+      "range": {
+        "startLine": 26,
+        "startChar": 81,
+        "endLine": 26,
+        "endChar": 82
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2d2bed31",
+        "filename": "docs/dovetailtool/dovetail.tool.configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "compliance and certification\n\nalso wrap this sentence to 80 chars",
+      "range": {
+        "startLine": 27,
+        "startChar": 59,
+        "endLine": 27,
+        "endChar": 83
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_0d263169",
+        "filename": "docs/dovetailtool/dovetail.tool.configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "distinguishes",
+      "range": {
+        "startLine": 27,
+        "startChar": 17,
+        "endLine": 27,
+        "endChar": 28
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_cd1fc908",
+        "filename": "docs/dovetailtool/dovetail.tool.configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "and should start with",
+      "range": {
+        "startLine": 27,
+        "startChar": 85,
+        "endLine": 27,
+        "endChar": 110
       },
       "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -94,6 +548,168 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_8d19c124",
+        "filename": "docs/dovetailtool/dovetail.tool.configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Yea I\u0027m not really sure what is being said here either. You might even just be able to drop it entirely.\n\nI think somewhere in the documentation near the start, that we state other projects are consumed here for testing, including functest and yardstick. Once that has been established, we don\u0027t need to really spell it out any more.",
+      "parentUuid": "5ac10518_adb59d32",
+      "range": {
+        "startLine": 31,
+        "startChar": 2,
+        "endLine": 31,
+        "endChar": 83
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ad16fdef",
+        "filename": "docs/dovetailtool/dovetail.tool.configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "slicing? not sure what you mean here",
+      "range": {
+        "startLine": 32,
+        "startChar": 59,
+        "endLine": 32,
+        "endChar": 66
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_4dd3d938",
+        "filename": "docs/dovetailtool/dovetail.tool.configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "compliance and certification",
+      "range": {
+        "startLine": 33,
+        "startChar": 63,
+        "endLine": 33,
+        "endChar": 87
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_0dddd142",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "either directly on the Linux host, or within a Docker container.",
+      "range": {
+        "startLine": 13,
+        "startChar": 36,
+        "endLine": 13,
+        "endChar": 80
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6dd81554",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "The Dovetail",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 8
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_cde6e916",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "the following sections.",
+      "range": {
+        "startLine": 14,
+        "startChar": 81,
+        "endLine": 14,
+        "endChar": 95
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2de20d04",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "the Linux host or via the Docker container",
+      "range": {
+        "startLine": 14,
+        "startChar": 39,
+        "endLine": 14,
+        "endChar": 67
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_0da5d103",
         "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
         "patchSetId": 3
@@ -110,6 +726,29 @@
         "startChar": 27,
         "endLine": 16,
         "endChar": 40
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ede3a503",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "SUT (System Under Test)\n\n(just needs a space after SUT)\n\nThis sentence needs restructuring. I\u0027m not really sure what is being said here. I don\u0027t think you\u0027re really exposing network interfaces are you? What you\u0027re really doing is defining the type of system being tested, and which network interfaces are exposed for testing?",
+      "range": {
+        "startLine": 16,
+        "startChar": 4,
+        "endLine": 16,
+        "endChar": 26
       },
       "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -134,6 +773,979 @@
         "endLine": 28,
         "endChar": 45
       },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_aded9df1",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "host?",
+      "range": {
+        "startLine": 30,
+        "startChar": 42,
+        "endLine": 30,
+        "endChar": 44
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_4dbaf9e2",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "In order to install Dovetail into a local Linux host environment, the following steps should be performed:",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6dbfb5d1",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "delete and replace with previous comment",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_0db4f1f0",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Downloading Dovetail",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2db9ade9",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Dovetail configuration:",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_edcac56d",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "e.g.\n\n(example given)",
+      "range": {
+        "startLine": 56,
+        "startChar": 35,
+        "endLine": 56,
+        "endChar": 39
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_cdcd8988",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "To",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 2
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_8dc78164",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "System dependencies are installed via the ``prepare_env.py`` file, and you will need ``sudo`` access to complete the installation.",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_adc4bd5f",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "At this point the environment is now ready for Dovetail execution.",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6da6d5c3",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "certification",
+      "range": {
+        "startLine": 69,
+        "startChar": 13,
+        "endLine": 69,
+        "endChar": 26
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_4da199a8",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "and",
+      "range": {
+        "startLine": 69,
+        "startChar": 11,
+        "endLine": 69,
+        "endChar": 12
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_cd94a946",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "under the",
+      "range": {
+        "startLine": 72,
+        "startChar": 55,
+        "endLine": 72,
+        "endChar": 60
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_0dab918a",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "The",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 72,
+        "endChar": 3
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2db0cdf3",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "compliance and certification",
+      "range": {
+        "startLine": 72,
+        "startChar": 4,
+        "endLine": 72,
+        "endChar": 28
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ed916553",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "defined in yaml format.",
+      "range": {
+        "startLine": 73,
+        "startChar": 11,
+        "endLine": 73,
+        "endChar": 47
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_8d9ea162",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "A sample file named ``basic.yml`` is provided as follows:",
+      "range": {
+        "startLine": 73,
+        "startChar": 49,
+        "endLine": 74,
+        "endChar": 14
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6d8d7531",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "defined within",
+      "range": {
+        "startLine": 83,
+        "startChar": 51,
+        "endLine": 83,
+        "endChar": 83
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_4d88b922",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "delete this",
+      "range": {
+        "startLine": 83,
+        "startChar": 19,
+        "endLine": 83,
+        "endChar": 20
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ad9b5d71",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "The",
+      "range": {
+        "startLine": 83,
+        "startChar": 0,
+        "endLine": 83,
+        "endChar": 3
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2d876d11",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "start with",
+      "range": {
+        "startLine": 85,
+        "startChar": 64,
+        "endLine": 85,
+        "endChar": 79
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_0d82b100",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "case",
+      "range": {
+        "startLine": 85,
+        "startChar": 20,
+        "endLine": 85,
+        "endChar": 25
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_cd7b4928",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "in similar fashion as the sample file ``certification_basic``.",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ed78852d",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Running Dovetail",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ad727d47",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "delete this",
+      "range": {
+        "startLine": 91,
+        "startChar": 39,
+        "endLine": 91,
+        "endChar": 42
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_8d754134",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "is complete,",
+      "range": {
+        "startLine": 91,
+        "startChar": 30,
+        "endLine": 91,
+        "endChar": 34
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_4d8f5924",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Dovetail",
+      "range": {
+        "startLine": 91,
+        "startChar": 65,
+        "endLine": 91,
+        "endChar": 73
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_0d99516e",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "name, less the leading ``certification_`` prefix.",
+      "range": {
+        "startLine": 98,
+        "startChar": 61,
+        "endLine": 98,
+        "endChar": 65
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2d9e8d57",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "If not argument is given",
+      "range": {
+        "startLine": 98,
+        "startChar": 68,
+        "endLine": 98,
+        "endChar": 91
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6d949537",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "The value ``basic`` passed to the ``scenario`` flag",
+      "range": {
+        "startLine": 98,
+        "startChar": 0,
+        "endLine": 98,
+        "endChar": 14
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_cda2699a",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "the basic scenario",
+      "range": {
+        "startLine": 99,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 5
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ed9f254f",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Running Dovetail in a Docker container",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_8dac618e",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "The Dovetail tool can be run in a Docker container by utilizing the following steps:",
+      "range": {
+        "startLine": 104,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 90
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_4db679de",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Docker",
+      "range": {
+        "startLine": 106,
+        "startChar": 14,
+        "endLine": 106,
+        "endChar": 20
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6dbb35c5",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "DockerHub",
+      "range": {
+        "startLine": 106,
+        "startChar": 32,
+        "endLine": 106,
+        "endChar": 47
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ada91d7d",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Dovetail",
+      "range": {
+        "startLine": 106,
+        "startChar": 5,
+        "endLine": 106,
+        "endChar": 13
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_edc64549",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "delete this",
+      "range": {
+        "startLine": 113,
+        "startChar": 26,
+        "endLine": 113,
+        "endChar": 30
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_8dc30138",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Docker",
+      "range": {
+        "startLine": 115,
+        "startChar": 9,
+        "endLine": 115,
+        "endChar": 15
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_4ddd1914",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Next, create the ``dovetail-docker-env`` file to define the environment parameters:",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_adc03d2b",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "delete this line",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6de255d7",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Then to instantiate the Dovetail Docker container, execute:",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_0de711e6",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Running test cases",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2dec4dc7",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Before connecting to the container, you can check the container status by running:",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_cdd029fa",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Attach to the container by starting it and obtaining a bash prompt with:",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_edcde55e",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "Inside the container the following commands can be executed to trigger the testcases ::",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6d09f594",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "certification report",
+      "range": {
+        "startLine": 159,
+        "startChar": 4,
+        "endLine": 159,
+        "endChar": 27
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_0dfe316c",
+        "filename": "docs/dovetailtool/dovetail.tool.overview.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "What is Dovetail",
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2d03ed74",
+        "filename": "docs/dovetailtool/dovetail.tool.overview.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T08:17:32Z",
+      "side": 1,
+      "message": "don\u0027t think you need a bullet here.\n\nA toolset for providing an evaluation of a deployed cloud environment for OPNFV certification.",
       "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
