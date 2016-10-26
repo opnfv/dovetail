@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_ed47251c",
+        "filename": ".gitignore",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T07:29:44Z",
+      "side": 1,
+      "message": "I think you need to drop the leading / here -- there should all be relative paths from the working source directory.",
+      "revId": "ebe22a4043284ae993e051aec23d91a771af1610",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_cd4a6927",
+        "filename": ".gitignore",
+        "patchSetId": 5
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-10-26T07:29:44Z",
+      "side": 1,
+      "message": "This isn\u0027t necessary. You only need to include things relative to the source directory.",
+      "revId": "ebe22a4043284ae993e051aec23d91a771af1610",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
