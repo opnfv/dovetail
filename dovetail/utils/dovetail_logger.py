@@ -24,6 +24,8 @@
 import logging
 import os
 
+from conf.dovetail_config import dovetail_config
+
 
 class Logger:
     def __init__(self, logger_name):
@@ -44,9 +46,14 @@ class Logger:
             ch.setLevel(logging.INFO)
         self.logger.addHandler(ch)
 
-        if not os.path.exists('/home/opnfv/dovetail/results/'):
-            os.makedirs('/home/opnfv/dovetail/results/')
-        hdlr = logging.FileHandler('/home/opnfv/dovetail/results/dovetail.log')
+        result_path = dovetail_config['result_dir']
+        if os.path.exists(result_path):
+            for root, dirs, files in os.walk(result_path, topdown=False):
+                for name in files:
+                    os.remove(os.path.join(root, name))
+                os.rmdir(root)
+        os.makedirs(result_path)
+        hdlr = logging.FileHandler(os.path.join(result_path, 'dovetail.log'))
         hdlr.setFormatter(formatter)
         hdlr.setLevel(logging.DEBUG)
         self.logger.addHandler(hdlr)
