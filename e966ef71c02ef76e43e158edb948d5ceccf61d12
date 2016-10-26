@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_2daa0dd5",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-26T06:02:14Z",
+      "side": 1,
+      "message": "files",
+      "range": {
+        "startLine": 11,
+        "startChar": 97,
+        "endLine": 11,
+        "endChar": 101
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_8db8e12b",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-26T06:02:14Z",
+      "side": 1,
+      "message": "I think here you mean that functest and yardstick cases are consumed by dovetail tool, and these cases has already been upstreamed ? let\u0027s refine this sentence.",
+      "range": {
+        "startLine": 11,
+        "startChar": 16,
+        "endLine": 11,
+        "endChar": 82
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_edaba5d4",
+        "filename": "docs/dovetailtool/dovetail.tool.configtemplate.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-26T06:02:14Z",
+      "side": 1,
+      "message": "maybe worth to add that parser.py is used to parse these parameters, and how could we add a new parameter.",
+      "range": {
+        "startLine": 122,
+        "startChar": 0,
+        "endLine": 123,
+        "endChar": 120
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_adb59d32",
+        "filename": "docs/dovetailtool/dovetail.tool.configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-26T06:02:14Z",
+      "side": 1,
+      "message": "does this mean functest and yardstick have different CLIs to run testcases ? maybe refine this sentence",
+      "range": {
+        "startLine": 31,
+        "startChar": 2,
+        "endLine": 31,
+        "endChar": 83
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_0da5d103",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-26T06:02:14Z",
+      "side": 1,
+      "message": "shall we mark some of them with optional?",
+      "range": {
+        "startLine": 16,
+        "startChar": 27,
+        "endLine": 16,
+        "endChar": 40
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6da015f5",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-26T06:02:14Z",
+      "side": 1,
+      "message": "configured",
+      "range": {
+        "startLine": 28,
+        "startChar": 37,
+        "endLine": 28,
+        "endChar": 45
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ed6405e7",
+        "filename": "docs/dovetailtool/dovetail.tool.overview.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-26T06:02:14Z",
+      "side": 1,
+      "message": "wrapper",
+      "range": {
+        "startLine": 20,
+        "startChar": 36,
+        "endLine": 20,
+        "endChar": 42
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_4d9bd9c9",
+        "filename": "docs/dovetailtool/dovetail.tool.overview.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-26T06:02:14Z",
+      "side": 1,
+      "message": "maybe good to use \u0027leverage other integration and verification projects\u0027",
+      "range": {
+        "startLine": 20,
+        "startChar": 49,
+        "endLine": 20,
+        "endChar": 76
+      },
+      "revId": "e966ef71c02ef76e43e158edb948d5ceccf61d12",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
