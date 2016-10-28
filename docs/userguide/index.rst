@@ -14,4 +14,3 @@ Dovetail - user guide
    ./01-introduction.rst
    ./02-certification_criteria.rst
    ./03-certification_progress.rst
-   ./04-dovetail_config_template.rst

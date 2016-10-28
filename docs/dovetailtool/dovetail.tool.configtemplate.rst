@@ -3,18 +3,19 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) OPNFV, Huawei Technologies Co.,Ltd and others.
 
+======================
 Config Template Syntax
 ======================
 
-Dovetail uses Functest/Yardstick Docker container to run its testcases. So you need to give
-configurations for building the container and the commands it needs to do. In dovetail,
-all of these are defined in config yaml files ``dovetail/dovetail/conf/functest_config.yml``
-and ``dovetail/dovetail/conf/yardstick_config.yml``.
+For Dovetail tool, the config files are located in ``dovetail/dovetail/conf``, which are written
+in yaml format. As both functest and yardstick are utilized by Dovetail, their configuration files
+should be configured as follows, within the ``functest_config.yml`` and ``yardstick_config.yml`` files,
+respectively.
 
-Functest template syntax
-------------------------
+Functest config template syntax
+-------------------------------
 
-For example, you can define your ``functest_config.yml`` as:
+An example functest configuration is shown as follows:
 
 ::
 
@@ -41,29 +42,19 @@ For example, you can define your ``functest_config.yml`` as:
       file_path: 'tempest/tempest.log'
       db_url: 'http://testresults.opnfv.org/test/api/v1/results?case=%s&last=1'
 
-First, you need to give the image that you want to use for building functest/yardstick container.
-Besides, there also need some envirnment parameters such as ``INSTALLER_TYPE`` and ``INSTALLER_IP``
-and the options for you container. Then the functest/yardstick container can be build with your
-settings.
+- ``image_name`` and ``docker_tag`` sections define the docker image pulled from the public dockerhub.
+- ``envs`` should be correctly configed according to the SUT(System Under Test).
+- ``pre_condition`` represents some cleanups or preparations.
+  ``testcase`` represents the testcases running cmds.
+  ``post_condition`` represents some cleanups needed after all testcases finished.
+- ``result`` section gives the directory of the dovetail tool test result.
+  ``db_url`` gives the database URL of the dovetail results to be stored.
 
-Second, there need three kinds of commands, ``pre_condition``, ``testcase`` and ``post_condition``.
-If you want to do some cleanups or preparations, the commands can be put into ``pre_condition``
-section orderly. All commands in this section will just be executed once in the begining.
-The ``testcase`` section does the main jobs of the testing. All functest testcases will use the
-container to execute these commands one by one. After finishing that, the test is accomplished
-and the results are stored in files or uploaded to database. The ``post_condition`` section
-does some work such as clean Docker images or something else after all testcases finished.
-All commands in this section will just execute once.
+Yardstick config template syntax
+---------------------------------
 
-Besides, there need a ``result`` section and it gives the directory of the functest/yardstick
-results. The ``store_type`` should be the same with the cmds in ``testcase``. That means if the
-test results are stored in files, then store_type need to be file and the file_path is also
-needed. If the test results are uploaded to database, then a db_url is needed for acquiring the results.
-
-Yardstick template syntax
--------------------------
-
-The framework of ``yardstick_config.yml`` is almost the same as ``functest_config.yml``.
+The configuration in ``yardstick_config.yml`` is similiar to ``functest_config.yml``,
+and an example is shown as follows:
 
 ::
 
@@ -97,12 +88,13 @@ The framework of ``yardstick_config.yml`` is almost the same as ``functest_confi
       file_path: 'yardstick.log'
       db_url: 'http://testresults.opnfv.org/test/api/v1/results?case=%s&last=1'
 
-The main differences between ``yardstick_config.yml`` and ``functest_config.yml`` are the commands.
+The main differences between ``yardstick_config.yml`` and ``functest_config.yml``
+are the ``cmds`` subsection.
 
 Jinja2 template syntax
 ----------------------
 
-Note that you can use jinja2 template for your parameters such as ``{{script_testcase}}``. The
+Jinja2 module can be used to config the ``{{script_testcase}}``. The
 parameters are defined in ``dovetail/dovetail/conf/dovetail_config.yml``:
 
 ::
@@ -113,8 +105,8 @@ parameters are defined in ``dovetail/dovetail/conf/dovetail_config.yml``:
   - name: script_testcase
     path: '("scripts", "testcase")'
 
-Here ``path`` is the path in testcase config files that you can find the value of parameters. Take
-``script_testcase`` as the example. For testcase dovetail.ipv6.tc001:
+Here ``path`` is the path defined in the testcase configuration files.
+Take ``script_testcase`` as an example. For testcase ``dovetail.ipv6.tc001``:
 
 ::
 
@@ -129,6 +121,5 @@ Here ``path`` is the path in testcase config files that you can find the value o
         - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_port
         - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_subnet
 
-The path ("scripts", "testcase") means 'testcase' subsection of 'scripts' section. So follow
-the path ("scripts", "testcase") we can get the value of ``{{script_testcase}}`` that is
-'tempest_smoke_serial'.
+The path ("scripts", "testcase") means 'testcase' is the subsection of 'scripts' section. From above,
+by following the path ("scripts", "testcase") we can get the value of ``{{script_testcase}}`` is 'tempest_smoke_serial'.
