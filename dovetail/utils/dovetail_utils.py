@@ -38,7 +38,7 @@ def exec_cmd(cmd, logger=None, exit_on_error=True, info=False,
             else:
                 logger.debug(line)
         else:
-            print line
+            print(line)
             sys.stdout.flush()
 
     returncode = p.returncode

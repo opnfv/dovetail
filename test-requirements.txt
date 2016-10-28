@@ -1,0 +1,7 @@
+# Documentation requirements
+sphinx
+sphinx_rtd_theme
+
+testrepository
+testscenarios
+testtools
