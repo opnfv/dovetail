@@ -16,4 +16,5 @@ OPNFV Plugfest - test plan
    ./deployment/testcases.rst
    ./integration/testcases.rst
    ./application/testcases.rst
+   ./templates/template.rst
 
