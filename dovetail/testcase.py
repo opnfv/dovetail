@@ -30,7 +30,7 @@ class Testcase:
 
     @classmethod
     def create_log(cls):
-        cls.logger = dt_logger.Logger(__name__+'.Testcase').getLogger()
+        cls.logger = dt_logger.Logger(__name__ + '.Testcase').getLogger()
 
     def prepare_cmd(self):
         script_type = self.script_type()
@@ -56,7 +56,7 @@ class Testcase:
 
     def sub_testcase_passed(self, name, passed=None):
         if passed is not None:
-            self.logger.debug('sub_testcase_passed:%s %s' % (name,  passed))
+            self.logger.debug('sub_testcase_passed:%s %s' % (name, passed))
             self.sub_testcase_status[name] = passed
         return self.sub_testcase_status[name]
 
@@ -169,7 +169,7 @@ class Testsuite:
 
     @classmethod
     def create_log(cls):
-        cls.logger = dt_logger.Logger(__name__+'.Testsuite').getLogger()
+        cls.logger = dt_logger.Logger(__name__ + '.Testsuite').getLogger()
 
     def get_test(self, testcase_name):
         if testcase_name in self.testcase_list:

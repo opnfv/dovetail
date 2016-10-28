@@ -1,0 +1,6 @@
+pytest
+pykwalify
+mock
+testrepository
+testscenarios
+testtools

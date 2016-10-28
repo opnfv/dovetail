@@ -2,7 +2,7 @@
 
 # Packages
 *.egg
-*.egg-info
+.testrepository
 dist
 build
 eggs

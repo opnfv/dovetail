@@ -22,7 +22,7 @@ class Parser:
 
     @classmethod
     def create_log(cls):
-        cls.logger = dt_logger.Logger(__name__+'.Parser').getLogger()
+        cls.logger = dt_logger.Logger(__name__ + '.Parser').getLogger()
 
     @classmethod
     def parse_cmd(cls, cmd, testcase):
