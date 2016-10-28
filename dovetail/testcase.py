@@ -52,7 +52,7 @@ class Testcase:
 
     def sub_testcase_passed(self, name, passed=None):
         if passed is not None:
-            logger.debug('sub_testcase_passed:%s %s' % (name,  passed))
+            logger.debug('sub_testcase_passed:%s %s' % (name, passed))
             self.sub_testcase_status[name] = passed
         return self.sub_testcase_status[name]
 

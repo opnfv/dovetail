@@ -10,6 +10,10 @@ OPNFV IPv6 Compliance Test Plan
    :maxdepth: 2
 
    ./testplan.rst
+   ./testprocedure.rst
+   ./testspecification.rst
+   ./designspecification.rst
    ./ipv6.tc001.specification.rst
    ./ipv6.tc026.specification.rst
+   ./ipv6_all_testcases.rst
 

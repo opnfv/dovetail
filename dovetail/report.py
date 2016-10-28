@@ -216,7 +216,7 @@ class YardstickCrawler:
 
     def crawl_from_file(self, testcase=None):
         file_path = os.path.join(dt_config.dovetail_config['result_dir'],
-                                 testcase+'.out')
+                                 testcase + '.out')
         if not os.path.exists(file_path):
             logger.info('result file not found: %s' % file_path)
             return None
