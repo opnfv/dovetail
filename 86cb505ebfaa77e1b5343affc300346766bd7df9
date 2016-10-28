@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_93f004cb",
+        "filename": "dovetail/conf/functest_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-10-28T06:11:53Z",
+      "side": 1,
+      "message": "\u0027result_dir\u0027 is also redundant. Dovetail uses the subsection \u0027dir\u0027 of \u0027result\u0027",
+      "range": {
+        "startLine": 8,
+        "startChar": 2,
+        "endLine": 8,
+        "endChar": 44
+      },
+      "revId": "86cb505ebfaa77e1b5343affc300346766bd7df9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
