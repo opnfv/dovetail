@@ -1,8 +1,8 @@
 *.py[cod]
 
 # Packages
-*.egg
-*.egg-info
+*.egg*
+.testrepository
 dist
 build
 eggs

@@ -1,0 +1,31 @@
+CHANGES
+=======
+
+* [WIP] Migrate to tox based environment
+* dovetail tool: developer userguide document
+* Simplify getting pre_condition cmds
+* dovetail tool : add @classmethod to post_condition_cls
+* update the committer email address
+* Get envs from environment variables to test multi-SUT
+* [dovetail_tool] Fix the python style scanned by flake8
+* dovetail tool: setup.py added and path error amend
+* preparation for setup.py
+* Add documentation for dovetail tool
+* Add yardstick crawler and checker for the results of testcase
+* Remove scripts in dovetail and use yarstick scripts to prepare environment
+* Use template to unify commands in functest/yardstick
+* IPv6 test cases: Test case specification document example
+* Move copyfile to container and remove hard-code
+* save dovetail report to disk
+* change workdir of docker container for ci
+* add prototype of dovetail tool
+* add dockerfile of dovetail tool
+* Proposing a Dovetail test suite structure for IPv6
+* project document reorganization
+* Remove trailing spaces
+* Upodated INFO file for RST formatting
+* Initial test plan structure for Brahmaputra
+* updates to use new doc toolchain
+* Promoting Hongbo to project lead for dovetail
+* Adding INFO and LICENSE for review
+* Initial empty repository
