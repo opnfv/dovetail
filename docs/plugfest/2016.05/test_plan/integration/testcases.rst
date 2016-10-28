@@ -18,8 +18,3 @@ files in this directory that are imported below the toctree command below.
 
 .. toctree::
    :maxdepth: 2
-
-   ./testcase1.rst
-   ./testcase2.rst
-   ./testcase_etc.rst
-

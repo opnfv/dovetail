@@ -7,32 +7,8 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 ##############################################################################
 
-from setuptools import setup, find_packages
+import setuptools
 
-
-setup(
-    name="dovetail",
-    version="0.dev0",
-    packages=find_packages(),
-    include_package_data=True,
-    package_data={
-        'dovetail': [
-            '*.py',
-            'conf/*.py',
-            'conf/*.yml',
-            'utils/*.py',
-        ]
-    },
-    url="https://www.opnfv.org",
-    install_requires=["coverage>=3.6",
-                      "flake8",
-                      "Jinja2>=2.6",
-                      "PyYAML>=3.10",
-                      "Click"
-                      ],
-    entry_points={
-        'console_scripts': [
-            'dovetail=dovetail.main:main',
-        ],
-    }
-)
+setuptools.setup(
+    setup_requires=['pbr>=1.8'],
+    pbr=True)
