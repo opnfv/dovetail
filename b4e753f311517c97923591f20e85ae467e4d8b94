@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_b62bae93",
+        "filename": "dovetail/tests/unit/test_parser.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-10-31T08:24:05Z",
+      "side": 1,
+      "message": "what about adding testcase method within MockTestcase definition:\nMockTestcase \u003d type(\u0027Testcase\u0027, (object,), {\u0027testcase\u0027: {}})",
+      "range": {
+        "startLine": 47,
+        "startChar": 8,
+        "endLine": 47,
+        "endChar": 31
+      },
+      "revId": "b4e753f311517c97923591f20e85ae467e4d8b94",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
