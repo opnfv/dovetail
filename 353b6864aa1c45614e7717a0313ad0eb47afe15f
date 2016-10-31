@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_36ed7e8c",
+        "filename": "AUTHORS",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-10-31T03:10:08Z",
+      "side": 1,
+      "message": "This is my job mailbox, and i will just use this account. So I think xudan2189 can be deleted.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 26
+      },
+      "revId": "353b6864aa1c45614e7717a0313ad0eb47afe15f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
