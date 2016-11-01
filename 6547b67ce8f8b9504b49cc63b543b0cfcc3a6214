@@ -71,6 +71,23 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_61c7be13",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 4609
+      },
+      "writtenOn": "2016-11-01T04:37:24Z",
+      "side": 1,
+      "message": "\u0027type\u0027 has special meaning in python, hence \u0027type\u0027 as variable name is not recommended even though the word is not reserved.\n\nCould you please change variable name from \u0027type\u0027?",
+      "revId": "6547b67ce8f8b9504b49cc63b543b0cfcc3a6214",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_8130aa57",
         "filename": "dovetail/container.py",
         "patchSetId": 2
