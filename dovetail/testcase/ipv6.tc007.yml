@@ -1,0 +1,8 @@
+dovetail.ipv6.tc007:
+  name: dovetail.ipv6.tc007
+  objective: VIM ipv6 operations, to create an IPv6 port without security groups
+  scripts:
+    type: functest
+    testcase: tempest_smoke_serial
+    sub_testcase_list:
+      - tempest.api.network.test_ports.PortsIpV6TestJSON.test_create_port_with_no_securitygroups
