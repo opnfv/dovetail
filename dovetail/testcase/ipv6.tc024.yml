@@ -1,0 +1,8 @@
+dovetail.ipv6.tc024:
+  name: dovetail.ipv6.tc024
+  objective: VIM ipv6 operations, to do IPv6 address assignment - multiple prefixes, SLAAC
+  scripts:
+    type: functest
+    testcase: tempest_full_parallel
+    sub_testcase_list:
+      - tempest.scenario.test_network_v6.TestGettingAddress.test_multi_prefix_slaac

@@ -1,0 +1,8 @@
+dovetail.ipv6.tc014:
+  name: dovetail.ipv6.tc014
+  objective: VIM ipv6 operations, to create, update, delete, list and show an IPv6 router
+  scripts:
+    type: functest
+    testcase: tempest_smoke_serial
+    sub_testcase_list:
+      - tempest.api.network.test_routers.RoutersIpV6Test.test_create_show_list_update_delete_router

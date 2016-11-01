@@ -1,0 +1,7 @@
+dovetail.nfvi.tc002:
+  name: dovetail.nfvi.tc002
+  objective: testing for vping using userdata
+  scripts:
+    type: functest
+    testcase: vping_userdata
+    sub_testcase_list:
