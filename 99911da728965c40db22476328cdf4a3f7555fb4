@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_fc227500",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-11-01T12:58:59Z",
+      "side": 1,
+      "message": "This initial line is too many chars long (general length should be 72 chars or less)",
+      "revId": "99911da728965c40db22476328cdf4a3f7555fb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_9c1fb1b7",
+        "filename": "dovetail/testcase/vimops.tc004.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-11-01T12:58:59Z",
+      "side": 1,
+      "message": "trailing whitespace",
+      "range": {
+        "startLine": 14,
+        "startChar": 89,
+        "endLine": 14,
+        "endChar": 90
+      },
+      "revId": "99911da728965c40db22476328cdf4a3f7555fb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
