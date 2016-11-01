@@ -71,19 +71,19 @@ Compliance and certification test cases
 
 The compliance and certification test cases can be defined under the ``/dovetail/cert``
 directory, which is defined in yaml format.
-A sample file named ``basic.yml`` is provided as follows:
+A sample file named ``compliance_set.yml`` is provided as follows:
 
 ::
 
-  certification_basic:
-    name: certification_basic
-    testcase_list:
+  certification_compliance_set:
+    name: certification_compliance_set
+    testcases_list:
       - dovetail.ipv6.tc001
 
 The testcase listed here is dovetail.ipv6.tc001, defined within ``dovetail/testcase``.
 
 Note: if a new test case yaml file is created, its name should start with ``certification_``,
-in similiar fashion as the sample file ``certification_basic``.
+in similiar fashion as the sample file ``certification_compliance_set``.
 
 Running Dovetail tool
 ---------------------
@@ -92,10 +92,10 @@ After environment preparation is complete and test cases added, the Dovetail too
 
 ::
 
-  python run.py --scenario basic
+  python run.py --scenario compliance_set
 
-The value ``basic`` passed to the ``scenario`` flag can be replaced with the test cases yaml file.
-If not argument is given, the basic scenario will be run as the default.
+The value ``compliance_set`` passed to the ``scenario`` flag can be replaced with the test cases yaml file.
+If not argument is given, the compliance_set scenario will be run as the default.
 
 Running Dovetail in a Docker container
 ########################################
@@ -145,7 +145,7 @@ Attach to the container by starting it and obtaining a bash prompt with ::
 Inside the container the following commands can be executed to trigger the testcases ::
 
    cd /home/opnfv/dovetail/dovetail
-   python run.py --scenario basic
+   python run.py --scenario compliance_set
 
 Results Output
 ###############

@@ -34,7 +34,7 @@ def load_testcase():
 
 
 def run_test(scenario):
-    for testcase_name in scenario['testcase_list']:
+    for testcase_name in scenario['testcases_list']:
         logger.info('>>[testcase]: %s' % (testcase_name))
         testcase = Testcase.get(testcase_name)
         run_testcase = True

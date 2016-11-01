@@ -1,0 +1,8 @@
+dovetail.ipv6.tc017:
+  name: dovetail.ipv6.tc017
+  objective: VIM ipv6 operations, to list all security groups
+  scripts:
+    type: functest
+    testcase: tempest_smoke_serial
+    sub_testcase_list:
+      - tempest.api.network.test_security_groups.SecGroupIPv6Test.test_list_security_groups

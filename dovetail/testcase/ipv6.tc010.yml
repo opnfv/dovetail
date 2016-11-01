@@ -1,0 +1,8 @@
+dovetail.ipv6.tc010:
+  name: dovetail.ipv6.tc010
+  objective: VIM ipv6 operations, to show information of an IPv6 port
+  scripts:
+    type: functest
+    testcase: tempest_smoke_serial
+    sub_testcase_list:
+      - tempest.api.network.test_ports.PortsIpV6TestJSON.test_show_port

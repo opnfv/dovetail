@@ -41,5 +41,5 @@ cli:
         flags:
           - '--scenario'
           - '-s'
-        default: 'basic'
+        default: 'compliance_set'
         help: 'certification scenario.'
