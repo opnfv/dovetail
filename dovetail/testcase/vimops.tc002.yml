@@ -1,0 +1,11 @@
+dovetail.vimops.tc002:
+  name: dovetail.vimops.tc002
+  objective: Glance Images v2 Delete
+  scripts:
+    type: functest
+    testcase: tempest_full_parallel
+    sub_testcase_list: 
+      - tempest.api.image.v2.test_images.BasicOperationsImagesTest.test_delete_image
+      - tempest.api.image.v2.test_images_negative.ImagesNegativeTest.test_delete_image_null_id
+      - tempest.api.image.v2.test_images_negative.ImagesNegativeTest.test_delete_non_existing_image
+      - tempest.api.image.v2.test_images_tags_negative.ImagesTagsNegativeTest.test_delete_non_existing_tag

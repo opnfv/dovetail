@@ -1,0 +1,8 @@
+dovetail.vimops.tc001:
+  name: dovetail.vimops.tc001
+  objective: Glance images v2 index
+  scripts:
+    type: functest
+    testcase: tempest_full_parallel
+    sub_testcase_list: 
+      - tempest.api.image.v2.test_images.ListImagesTest.test_list_no_params
