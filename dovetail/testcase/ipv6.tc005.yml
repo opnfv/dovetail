@@ -1,0 +1,11 @@
+dovetail.ipv6.tc005:
+  name: dovetail.ipv6.tc005
+  objective: VIM ipv6 operations, to show information of an IPv6 network and subnet
+  scripts:
+    type: functest
+    testcase: tempest_smoke_serial
+    sub_testcase_list:
+      - tempest.api.network.test_networks.NetworksIpV6Test.test_show_network
+      - tempest.api.network.test_networks.NetworksIpV6Test.test_show_subnet
+      - tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_show_network
+      - tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_show_subnet
