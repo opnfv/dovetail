@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "5ac10518_81c18ae6",
+        "filename": ".gitignore",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4609
+      },
+      "writtenOn": "2016-11-01T06:16:07Z",
+      "side": 1,
+      "message": "In this case, I recommend to keep it as following examples:\nhttps://github.com/github/gitignore/blob/master/Python.gitignore",
+      "revId": "353b6864aa1c45614e7717a0313ad0eb47afe15f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_36ed7e8c",
         "filename": "AUTHORS",
         "patchSetId": 1
