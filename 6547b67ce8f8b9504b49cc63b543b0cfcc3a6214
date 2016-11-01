@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_01235a06",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-01T03:19:02Z",
+      "side": 1,
+      "message": "I\u0027d suggest to have simple cmd_config file just like previous patchset1 so that we could avoid nested \u0027for\u0027 loops in run.py and easy to understand how to add new cmds.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "6547b67ce8f8b9504b49cc63b543b0cfcc3a6214",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_411162ab",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-01T03:19:02Z",
+      "side": 1,
+      "message": "could you give an example of argument ?",
+      "range": {
+        "startLine": 2,
+        "startChar": 2,
+        "endLine": 2,
+        "endChar": 11
+      },
+      "revId": "6547b67ce8f8b9504b49cc63b543b0cfcc3a6214",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_e125ee0a",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-01T03:19:02Z",
+      "side": 1,
+      "message": "are we suggesting to put all the other options in non-envs section? or it\u0027s just a temporary code since we only have scenario as non-envs parameter, may need a better name if we decide to add more non-envs parameters.",
+      "range": {
+        "startLine": 28,
+        "startChar": 4,
+        "endLine": 28,
+        "endChar": 12
+      },
+      "revId": "6547b67ce8f8b9504b49cc63b543b0cfcc3a6214",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_8130aa57",
+        "filename": "dovetail/container.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-01T03:19:02Z",
+      "side": 1,
+      "message": "remove this line ?",
+      "range": {
+        "startLine": 10,
+        "startChar": 1,
+        "endLine": 10,
+        "endChar": 11
+      },
+      "revId": "6547b67ce8f8b9504b49cc63b543b0cfcc3a6214",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
