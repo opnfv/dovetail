@@ -46,7 +46,7 @@ class Report:
 |                                   report                                 |\n'
         report += split_line
         report += '|scenario: %s\n' % scenario_yaml['name']
-        for testcase_name in scenario_yaml['testcase_list']:
+        for testcase_name in scenario_yaml['testcases_list']:
             testcase = Testcase.get(testcase_name)
             if testcase is None:
                 report += '|   [testcase]: %s\t\t\t\t[Undefined]\n' % \

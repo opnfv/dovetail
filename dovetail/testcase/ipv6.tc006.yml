@@ -1,0 +1,8 @@
+dovetail.ipv6.tc006:
+  name: dovetail.ipv6.tc006
+  objective: VIM ipv6 operations, to create an IPv6 port in allowed allocation pools
+  scripts:
+    type: functest
+    testcase: tempest_smoke_serial
+    sub_testcase_list:
+      - tempest.api.network.test_ports.PortsIpV6TestJSON.test_create_port_in_allowed_allocation_pools
