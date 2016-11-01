@@ -1,0 +1,40 @@
+certification_proposed_tests:
+  name: certification_proposed_tests
+  testcase_list:
+    # vim operations
+    - dovetail.vimops.tc001
+    - dovetail.vimops.tc002
+    - dovetail.vimops.tc003
+    - dovetail.vimops.tc004
+    - dovetail.vimops.tc005
+    - dovetail.vimops.tc006
+   # ipv6
+    - dovetail.ipv6.tc001
+    - dovetail.ipv6.tc002
+    - dovetail.ipv6.tc003
+    - dovetail.ipv6.tc004
+    - dovetail.ipv6.tc005
+    - dovetail.ipv6.tc006
+    - dovetail.ipv6.tc007
+    - dovetail.ipv6.tc008
+    - dovetail.ipv6.tc009
+    - dovetail.ipv6.tc010
+    - dovetail.ipv6.tc011
+    - dovetail.ipv6.tc012
+    - dovetail.ipv6.tc013
+    - dovetail.ipv6.tc014
+    - dovetail.ipv6.tc015
+    - dovetail.ipv6.tc016
+    - dovetail.ipv6.tc017
+    - dovetail.ipv6.tc018
+    - dovetail.ipv6.tc010
+    - dovetail.ipv6.tc019
+    - dovetail.ipv6.tc020
+    - dovetail.ipv6.tc021
+    - dovetail.ipv6.tc022
+    - dovetail.ipv6.tc023
+    - dovetail.ipv6.tc024
+    - dovetail.ipv6.tc025
+    # nfvi compute/network/storage
+    - dovetail.nfvi.tc001
+    - dovetail.nfvi.tc002

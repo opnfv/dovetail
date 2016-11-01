@@ -1,0 +1,4 @@
+certification_compliance_set:
+  name: certification_compliance_set
+  testcase_list:
+    - dovetail.ipv6.tc001
