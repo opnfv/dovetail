@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_1ce8a17b",
+        "filename": "dovetail/utils/dovetail_logger.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2016-11-01T14:16:28Z",
+      "side": 1,
+      "message": "No risk of accidental excessive rm here? I\u0027m always nervous when I see \"rm -rf\" with user-input.\n\nCan I suggest checking that a file specific to Dovetail test runs is checked as being in the directory before removing the tree?",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 30
+      },
+      "revId": "590a3bee3283725f1d5ddfa7c5e906f00e53e443",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
