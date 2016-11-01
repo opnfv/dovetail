@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_fc691526",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2016-11-01T13:39:27Z",
+      "side": 1,
+      "message": "Isn\u0027t it common to have single-\u0027-\u0027 options be a single letter? I would suggest -t (for SUT_TYPE), -i (for SUT_IP), -s (for DEPLOY_SCENARIO) and -d (for DEBUG)",
+      "range": {
+        "startLine": 9,
+        "startChar": 14,
+        "endLine": 9,
+        "endChar": 18
+      },
+      "revId": "25989ae2cbd1aece39f9dd9fc3c4446b97e0c9cd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
