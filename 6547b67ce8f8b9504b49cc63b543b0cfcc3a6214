@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_e10bae29",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-11-01T07:32:14Z",
+      "side": 1,
+      "message": "for python click module, there are two types of parameters: options and arguments. Now for our dovetail, we just need options. I did not give an example here because I can\u0027t come up with a suitable example. For the format of arguments and options, they will be introduced in the documentation.",
+      "parentUuid": "5ac10518_411162ab",
+      "range": {
+        "startLine": 2,
+        "startChar": 2,
+        "endLine": 2,
+        "endChar": 11
+      },
+      "revId": "6547b67ce8f8b9504b49cc63b543b0cfcc3a6214",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_e125ee0a",
         "filename": "dovetail/conf/cmd_config.yml",
         "patchSetId": 2
@@ -71,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_0174bacd",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-11-01T07:32:14Z",
+      "side": 1,
+      "message": "all other options that will not be used in envs should be put into non-envs section such as scenario, docker_tag or even store_type.\nFor the options in envs, it will be automatically used to update the envs. For others in non-envs, after adding into this config file, there still needs some operations about the souce code just like scenario does.",
+      "parentUuid": "5ac10518_e125ee0a",
+      "range": {
+        "startLine": 28,
+        "startChar": 4,
+        "endLine": 28,
+        "endChar": 12
+      },
+      "revId": "6547b67ce8f8b9504b49cc63b543b0cfcc3a6214",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_61c7be13",
         "filename": "dovetail/conf/dovetail_config.py",
         "patchSetId": 2
@@ -82,6 +130,24 @@
       "writtenOn": "2016-11-01T04:37:24Z",
       "side": 1,
       "message": "\u0027type\u0027 has special meaning in python, hence \u0027type\u0027 as variable name is not recommended even though the word is not reserved.\n\nCould you please change variable name from \u0027type\u0027?",
+      "revId": "6547b67ce8f8b9504b49cc63b543b0cfcc3a6214",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_a105a615",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-11-01T07:32:14Z",
+      "side": 1,
+      "message": "Good suggestion. I will change it.",
+      "parentUuid": "5ac10518_61c7be13",
       "revId": "6547b67ce8f8b9504b49cc63b543b0cfcc3a6214",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
