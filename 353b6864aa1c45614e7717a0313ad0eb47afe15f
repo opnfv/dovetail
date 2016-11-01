@@ -22,6 +22,29 @@
       "revId": "353b6864aa1c45614e7717a0313ad0eb47afe15f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_c1e1d29b",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-01T05:54:44Z",
+      "side": 1,
+      "message": "maybe do this in a separate review as this is related to dovetail tool. we agreed before to add \u0027dovetail tool\u0027 in commit message and JIRA ticket for any changes to dovetail tool.",
+      "range": {
+        "startLine": 41,
+        "startChar": 18,
+        "endLine": 41,
+        "endChar": 22
+      },
+      "revId": "353b6864aa1c45614e7717a0313ad0eb47afe15f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
