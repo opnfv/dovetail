@@ -22,6 +22,47 @@
       "revId": "590a3bee3283725f1d5ddfa7c5e906f00e53e443",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_a74a9653",
+        "filename": "dovetail/utils/dovetail_logger.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-11-01T17:46:00Z",
+      "side": 1,
+      "message": "If you\u0027re just cleaning the results dir, I think it would make sense to just clean out the contents of the directory. Are we expecting there to be subdirs under the result_dir too, or just logs?\n\nIf no subdirs, then we could drop the -r flag (recursive), which at least makes this a bit safer.\n\nAlso, instead of running a direct shell command, shouldn\u0027t we use a more generic interface like shutil, or even glob and loop over the files to drop them?",
+      "parentUuid": "5ac10518_1ce8a17b",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 30
+      },
+      "revId": "590a3bee3283725f1d5ddfa7c5e906f00e53e443",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_e7409e37",
+        "filename": "dovetail/utils/dovetail_logger.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-11-01T17:46:00Z",
+      "side": 1,
+      "message": "Thank you! This has been bothering me.",
+      "revId": "590a3bee3283725f1d5ddfa7c5e906f00e53e443",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
