@@ -19,6 +19,29 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_021d980f",
+        "filename": "dovetail/cert/total.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-11-02T16:17:48Z",
+      "side": 1,
+      "message": "How about \u0027all\u0027 or \u0027full\u0027 instead of total here? I prefer the former over the latter.",
+      "range": {
+        "startLine": 1,
+        "startChar": 14,
+        "endLine": 1,
+        "endChar": 19
+      },
+      "revId": "99911da728965c40db22476328cdf4a3f7555fb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_9c1fb1b7",
         "filename": "dovetail/testcase/vimops.tc004.yml",
         "patchSetId": 3
