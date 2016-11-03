@@ -224,23 +224,26 @@ class ResultChecker:
 class FunctestChecker:
 
     def check(cls, testcase, db_result):
+        sub_testcase_list = testcase.sub_testcase()
+
         if not db_result:
-            for sub_testcase in testcase.sub_testcase():
-                testcase.sub_testcase_passed(sub_testcase, False)
+            if sub_testcase_list is not None:
+                for sub_testcase in sub_testcase_list:
+                    testcase.sub_testcase_passed(sub_testcase, False)
             return
 
         testcase.passed(db_result['criteria'] == 'PASS')
 
-        if testcase.sub_testcase() is None:
+        if sub_testcase_list is None:
             return
 
         if testcase.testcase['passed'] is True:
-            for sub_testcase in testcase.sub_testcase():
+            for sub_testcase in sub_testcase_list:
                 testcase.sub_testcase_passed(sub_testcase, True)
             return
 
         all_passed = True
-        for sub_testcase in testcase.sub_testcase():
+        for sub_testcase in sub_testcase_list:
             logger.debug('check sub_testcase:%s' % sub_testcase)
             if sub_testcase in db_result['details']['errors']:
                 testcase.sub_testcase_passed(sub_testcase, False)
