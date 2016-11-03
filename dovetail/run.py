@@ -37,6 +37,8 @@ def run_test(scenario):
     for testcase_name in scenario['testcase_list']:
         logger.info('>>[testcase]: %s' % (testcase_name))
         testcase = Testcase.get(testcase_name)
+        if testcase is None:
+            continue
         run_testcase = True
 
         if testcase.exceed_max_retry_times():
