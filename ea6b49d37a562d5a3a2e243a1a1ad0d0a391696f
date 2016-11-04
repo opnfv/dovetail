@@ -22,6 +22,30 @@
       "revId": "ea6b49d37a562d5a3a2e243a1a1ad0d0a391696f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_d99b0671",
+        "filename": "dovetail/conf/functest_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-04T08:43:42Z",
+      "side": 1,
+      "message": "Is there a case that we will have two or more different functest containers in one test run ?",
+      "parentUuid": "5ac10518_795e92eb",
+      "range": {
+        "startLine": 10,
+        "startChar": 8,
+        "endLine": 10,
+        "endChar": 67
+      },
+      "revId": "ea6b49d37a562d5a3a2e243a1a1ad0d0a391696f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
