@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_4cf8b2e5",
+        "filename": "dovetail/cert/total.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-11-04T15:14:09Z",
+      "side": 1,
+      "message": "This file should probably be restructured to reflect the topic areas and test cases under discussion as described on the wiki as of today.  Can we have multiple test case lists based on the test areas we have selected?",
+      "parentUuid": "5ac10518_021d980f",
+      "range": {
+        "startLine": 1,
+        "startChar": 14,
+        "endLine": 1,
+        "endChar": 19
+      },
+      "revId": "99911da728965c40db22476328cdf4a3f7555fb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_9c1fb1b7",
         "filename": "dovetail/testcase/vimops.tc004.yml",
         "patchSetId": 3
