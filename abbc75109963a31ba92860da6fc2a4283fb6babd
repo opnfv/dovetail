@@ -16,6 +16,24 @@
       "revId": "abbc75109963a31ba92860da6fc2a4283fb6babd",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_595cf625",
+        "filename": "dovetail/report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-04T04:32:49Z",
+      "side": 1,
+      "message": "good point, Tomo; testcase need to be checked since there might be a mistake that user indicates a testcase which doesn\u0027t exist under testcase folder, a typo in certification yaml file may also hit this issue. I think it may be good to check the testcase a little earlier , for example, in run.py when testcase is first retrieved from Testcase.get function, by doing so , we could avoid multiple checking of testcase in other functions like Report,get_result, Report.check_result; what do you think?",
+      "parentUuid": "5ac10518_b9339af5",
+      "revId": "abbc75109963a31ba92860da6fc2a4283fb6babd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
