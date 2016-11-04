@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_b9339af5",
+        "filename": "dovetail/report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 4609
+      },
+      "writtenOn": "2016-11-04T03:32:22Z",
+      "side": 1,
+      "message": "How about to check testcase as well? \n(i.e \u0027if testcase is not None\u0027)",
+      "revId": "abbc75109963a31ba92860da6fc2a4283fb6babd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
