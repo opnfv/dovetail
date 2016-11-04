@@ -46,6 +46,30 @@
       "revId": "4647ec2fffaa2628f03c5ee08ee5419cded18315",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_590e3636",
+        "filename": "dovetail/report.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-04T04:10:53Z",
+      "side": 1,
+      "message": "well, there is a chance that db_result being None when file_path is not exist, will re-work the patch and send the second version, thanks for your suggestion, Dan!",
+      "parentUuid": "5ac10518_36125963",
+      "range": {
+        "startLine": 227,
+        "startChar": 8,
+        "endLine": 227,
+        "endChar": 56
+      },
+      "revId": "4647ec2fffaa2628f03c5ee08ee5419cded18315",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
