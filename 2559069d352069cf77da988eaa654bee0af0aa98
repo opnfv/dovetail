@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_39ca4aa2",
+        "filename": "dovetail/report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-11-04T06:53:11Z",
+      "side": 1,
+      "message": "I also suggest to report that this test case is undefined in folder \u0027testcase\u0027  rather than just skip it.",
+      "range": {
+        "startLine": 50,
+        "startChar": 16,
+        "endLine": 50,
+        "endChar": 24
+      },
+      "revId": "2559069d352069cf77da988eaa654bee0af0aa98",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_99d57e45",
+        "filename": "dovetail/run.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-11-04T06:53:11Z",
+      "side": 1,
+      "message": "I suggest to print logger.info or logger.error about this before continue. Otherwise, users may be strange about the disappearance of their test cases.",
+      "range": {
+        "startLine": 41,
+        "startChar": 12,
+        "endLine": 41,
+        "endChar": 20
+      },
+      "revId": "2559069d352069cf77da988eaa654bee0af0aa98",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
