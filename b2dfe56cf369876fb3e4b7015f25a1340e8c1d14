@@ -22,6 +22,30 @@
       "revId": "b2dfe56cf369876fb3e4b7015f25a1340e8c1d14",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_d9a9c67c",
+        "filename": "dovetail/report.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-04T08:54:52Z",
+      "side": 1,
+      "message": "I\u0027m not sure if \u0027undefined\u0027 should be the third result option other than \u0027PASS\u0027 and \u0027FAIL\u0027, but this is a good suggestion for discussion.",
+      "parentUuid": "5ac10518_b975da33",
+      "range": {
+        "startLine": 50,
+        "startChar": 16,
+        "endLine": 51,
+        "endChar": 57
+      },
+      "revId": "b2dfe56cf369876fb3e4b7015f25a1340e8c1d14",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
