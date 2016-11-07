@@ -70,6 +70,30 @@
       "revId": "ea6b49d37a562d5a3a2e243a1a1ad0d0a391696f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2f20b89a",
+        "filename": "dovetail/conf/functest_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-11-07T01:32:24Z",
+      "side": 1,
+      "message": "There may be conflicts among test cases, so to reduce the interference in the same container, and to simplify the clearance work after running each test case, it\u0027 s easy to just remove the container and create a new one",
+      "parentUuid": "5ac10518_d99b0671",
+      "range": {
+        "startLine": 10,
+        "startChar": 8,
+        "endLine": 10,
+        "endChar": 67
+      },
+      "revId": "ea6b49d37a562d5a3a2e243a1a1ad0d0a391696f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
