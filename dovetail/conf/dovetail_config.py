@@ -41,6 +41,8 @@ def cmd_name_trans(cmd_name):
         key = 'INSTALLER_TYPE'
     if key == 'SUT_IP':
         key = 'INSTALLER_IP'
+    if key == 'DEBUG':
+        key = 'CI_DEBUG'
     return key
 
 
