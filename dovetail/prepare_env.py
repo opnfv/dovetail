@@ -12,12 +12,14 @@ import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
 
 
-def get_os():
+def get_os_lower():
     """Get distro name.
 
     :returns: return distro name as a string
     """
-    return platform.dist()[0]
+    platform_os = platform.dist()[0]
+    platform_os_lower = platform_os.lower()
+    return platform_os_lower
 
 
 def get_install_bin(os):
@@ -49,7 +51,7 @@ def get_docker_pkgname(os):
 
 logger = dt_logger.Logger('prepare_env.py').getLogger()
 
-os_name = get_os()
+os_name = get_os_lower()
 cmd = "sudo %s -y install %s python-pip" \
       % (get_install_bin(os_name), get_docker_pkgname(os_name))
 dt_utils.exec_cmd(cmd, logger)
