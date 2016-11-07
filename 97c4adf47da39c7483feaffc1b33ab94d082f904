@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_8fee8c21",
+        "filename": "dovetail/report.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-11-07T07:05:26Z",
+      "side": 1,
+      "message": "It may be better to replace it by [Undefined] with square brackets, since the results are all formatted as [PASS] and [FAIL],",
+      "range": {
+        "startLine": 52,
+        "startChar": 52,
+        "endLine": 52,
+        "endChar": 63
+      },
+      "revId": "97c4adf47da39c7483feaffc1b33ab94d082f904",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
