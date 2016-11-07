@@ -28,7 +28,7 @@ import os
 class Logger:
     def __init__(self, logger_name):
 
-        CI_DEBUG = os.getenv('CI_DEBUG')
+        DEBUG = os.getenv('CI_DEBUG')
 
         self.logger = logging.getLogger(logger_name)
         self.logger.propagate = 0
@@ -38,7 +38,7 @@ class Logger:
         formatter = logging.Formatter('%(asctime)s - %(name)s - '
                                       '%(levelname)s - %(message)s')
         ch.setFormatter(formatter)
-        if CI_DEBUG is not None and CI_DEBUG.lower() == "true":
+        if DEBUG is not None and DEBUG.lower() == "true":
             ch.setLevel(logging.DEBUG)
         else:
             ch.setLevel(logging.INFO)
