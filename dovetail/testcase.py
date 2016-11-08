@@ -15,10 +15,10 @@ import utils.dovetail_logger as dt_logger
 from parser import Parser
 from conf.dovetail_config import DovetailConfig as dt_config
 
-logger = dt_logger.Logger('testcase.py').getLogger()
-
 
 class Testcase:
+
+    logger = None
 
     def __init__(self, testcase_yaml):
         self.testcase = testcase_yaml.values()[0]
@@ -27,6 +27,10 @@ class Testcase:
         self.sub_testcase_status = {}
         self.update_script_testcase(self.script_type(),
                                     self.script_testcase())
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = dt_logger.Logger(__name__+'.Testcase').getLogger()
 
     def prepare_cmd(self):
         script_type = self.script_type()
@@ -52,7 +56,7 @@ class Testcase:
 
     def sub_testcase_passed(self, name, passed=None):
         if passed is not None:
-            logger.debug('sub_testcase_passed:%s %s' % (name,  passed))
+            self.logger.debug('sub_testcase_passed:%s %s' % (name,  passed))
             self.sub_testcase_status[name] = passed
         return self.sub_testcase_status[name]
 
@@ -146,7 +150,7 @@ class Testcase:
                     testcase_yaml = yaml.safe_load(f)
                     cls.testcase_list[testcase_yaml.keys()[0]] = \
                         cls(testcase_yaml)
-        logger.debug(cls.testcase_list)
+        cls.logger.debug(cls.testcase_list)
 
     @classmethod
     def get(cls, testcase_name):
@@ -157,9 +161,15 @@ class Testcase:
 
 class Testsuite:
 
+    logger = None
+
     def __init__(self, testsuite):
         self.testsuite = testsuite
         self.testcase_list = {}
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = dt_logger.Logger(__name__+'.Testsuite').getLogger()
 
     def get_test(self, testcase_name):
         if testcase_name in self.testcase_list:
@@ -176,7 +186,7 @@ class Testsuite:
                     testsuite_yaml = yaml.safe_load(f)
                     cls.testsuite_list.update(testsuite_yaml)
 
-        logger.debug(cls.testsuite_list)
+        cls.logger.debug(cls.testsuite_list)
 
     @classmethod
     def get(cls, testsuite_name):

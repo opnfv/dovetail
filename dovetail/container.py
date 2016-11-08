@@ -11,7 +11,6 @@
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
 from conf.dovetail_config import DovetailConfig as dt_config
-logger = dt_logger.Logger('container.py').getLogger()
 
 
 class Container:
@@ -19,11 +18,17 @@ class Container:
     container_list = {}
     has_pull_latest_image = {'yardstick': False, 'functest': False}
 
+    logger = None
+
     def __init__(cls):
         pass
 
     def __str__(cls):
         pass
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = dt_logger.Logger(__name__+'.Container').getLogger()
 
     @classmethod
     def get(cls, type):
@@ -46,10 +51,10 @@ class Container:
                                         dovetail_config[type]['result']['dir'])
         cmd = 'sudo docker run %s %s %s %s %s /bin/bash' % \
             (opts, envs, sshkey, result_volume, docker_image)
-        dt_utils.exec_cmd(cmd, logger)
+        dt_utils.exec_cmd(cmd, cls.logger)
         ret, container_id = \
             dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +
-                              " | awk '{print $1}' | head -1", logger)
+                              " | awk '{print $1}' | head -1", cls.logger)
         cls.container_list[type] = container_id
         return container_id
 
@@ -57,20 +62,21 @@ class Container:
     def pull_image(cls, type):
         docker_image = cls.get_docker_image(type)
         if cls.has_pull_latest_image[type] is True:
-            logger.debug('%s is already the newest version.' % (docker_image))
+            cls.logger.debug('%s is already the newest version.' %
+                             (docker_image))
         else:
             cmd = 'sudo docker pull %s' % (docker_image)
-            dt_utils.exec_cmd(cmd, logger)
+            dt_utils.exec_cmd(cmd, cls.logger)
             cls.has_pull_latest_image[type] = True
 
-    @staticmethod
-    def clean(container_id):
+    @classmethod
+    def clean(cls, container_id):
         cmd1 = 'sudo docker stop %s' % (container_id)
-        dt_utils.exec_cmd(cmd1, logger)
+        dt_utils.exec_cmd(cmd1, cls.logger)
         cmd2 = 'sudo docker rm %s' % (container_id)
-        dt_utils.exec_cmd(cmd2, logger)
+        dt_utils.exec_cmd(cmd2, cls.logger)
 
-    @staticmethod
-    def exec_cmd(container_id, sub_cmd, exit_on_error=False):
+    @classmethod
+    def exec_cmd(cls, container_id, sub_cmd, exit_on_error=False):
         cmd = 'sudo docker exec %s /bin/bash -c "%s"' % (container_id, sub_cmd)
-        dt_utils.exec_cmd(cmd, logger, exit_on_error)
+        dt_utils.exec_cmd(cmd, cls.logger, exit_on_error)

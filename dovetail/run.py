@@ -13,14 +13,16 @@ import sys
 
 import utils.dovetail_logger as dt_logger
 
-
+from parser import Parser
 from container import Container
 from testcase import Testcase
 from testcase import Testsuite
 from report import Report
+from report import FunctestCrawler
+from report import YardstickCrawler
+from report import FunctestChecker
+from report import YardstickChecker
 from conf.dovetail_config import DovetailConfig as dt_config
-
-logger = dt_logger.Logger('run.py').getLogger()
 
 
 def load_testsuite(testsuite):
@@ -40,7 +42,7 @@ def load_testcase():
     Testcase.load()
 
 
-def run_test(testsuite, testarea):
+def run_test(testsuite, testarea, logger):
     testarea_list = []
     for value in testsuite['testcases_list']:
         if value is not None and (testarea == 'full' or testarea in value):
@@ -50,7 +52,7 @@ def run_test(testsuite, testarea):
         logger.info('>>[testcase]: %s' % (testcase_name))
         testcase = Testcase.get(testcase_name)
         if testcase is None:
-            logger.error('testcase %s is not defined in testcase folder, \
+            logger.error('test case %s is not defined in testcase folder, \
                          skipping' % (testcase_name))
             continue
         run_testcase = True
@@ -87,7 +89,7 @@ def run_test(testsuite, testarea):
         Report.check_result(testcase, db_result)
 
 
-def validate_options(input_dict):
+def validate_options(input_dict, logger):
     # for 'tag' option
     for key, value in input_dict.items():
         if key == 'tag' and value is not None:
@@ -106,12 +108,26 @@ def filter_env_options(input_dict):
     return envs_options
 
 
+def create_logs():
+    Container.create_log()
+    Parser.create_log()
+    Report.create_log()
+    FunctestCrawler.create_log()
+    YardstickCrawler.create_log()
+    FunctestChecker.create_log()
+    YardstickChecker.create_log()
+    Testcase.create_log()
+    Testsuite.create_log()
+
+
 def main(*args, **kwargs):
     """Dovetail compliance test entry!"""
+    create_logs()
+    logger = dt_logger.Logger('run').getLogger()
     logger.info('================================================')
     logger.info('Dovetail compliance: %s!' % (kwargs['testsuite']))
     logger.info('================================================')
-    validate_options(kwargs)
+    validate_options(kwargs, logger)
     envs_options = filter_env_options(kwargs)
     dt_config.update_envs(envs_options)
     logger.info('Your new envs for functest: %s' %
@@ -132,7 +148,7 @@ def main(*args, **kwargs):
     if kwargs['testsuite'] in dt_config.testsuite_supported:
         testsuite_validation = True
     if testsuite_validation and testarea_validation:
-        run_test(testsuite_yaml, testarea)
+        run_test(testsuite_yaml, testarea, logger)
         Report.generate(testsuite_yaml, testarea)
     else:
         logger.error('invalid input commands, testsuite %s testarea %s' %
