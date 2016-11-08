@@ -46,6 +46,30 @@
       "revId": "c7c41f8b750d7ae269376a3deb5fe30bd782b32c",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_0ae7ea13",
+        "filename": "dovetail/utils/dovetail_logger.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-11-08T07:04:03Z",
+      "side": 1,
+      "message": "Without CLI, we need to pass DEBUG\u003dtrue to envs manually to print DEBUG messages. And that makes sense.\nNow we want to use CLI to realize this. \nSince we define DEBUG as env option in cmd_config.yml, so it will not be added into the system\u0027s envs until update_envs() called.\nIn my opinion, at the beginning of function main in run.py, we can add DEBUG into system\u0027s envs and then update all logs level. For functest/yardstick containers, they still use CI_DEBUG.\nEven though DEBUG and CI_DEBUG are both come from command DEBUG, but they will be independent of each other in our code. \nMaybe that will be better and avoid confusion.",
+      "parentUuid": "5ac10518_6aaa2ed6",
+      "range": {
+        "startLine": 31,
+        "startChar": 8,
+        "endLine": 31,
+        "endChar": 37
+      },
+      "revId": "c7c41f8b750d7ae269376a3deb5fe30bd782b32c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
