@@ -17,10 +17,10 @@ from conf.dovetail_config import CERT_PATH
 from conf.dovetail_config import TESTCASE_PATH
 from conf.dovetail_config import dovetail_config
 
-logger = dt_logger.Logger('testcase.py').getLogger()
-
 
 class Testcase:
+
+    logger = dt_logger.Logger('testcase').getLogger()
 
     def __init__(self, testcase_yaml):
         self.testcase = testcase_yaml.values()[0]
@@ -53,7 +53,7 @@ class Testcase:
 
     def sub_testcase_passed(self, name, passed=None):
         if passed is not None:
-            logger.debug('sub_testcase_passed:%s %s' % (name,  passed))
+            self.logger.debug('sub_testcase_passed:%s %s' % (name,  passed))
             self.sub_testcase_status[name] = passed
         return self.sub_testcase_status[name]
 
@@ -147,7 +147,7 @@ class Testcase:
                     testcase_yaml = yaml.safe_load(f)
                     cls.testcase_list[testcase_yaml.keys()[0]] = \
                         cls(testcase_yaml)
-        logger.debug(cls.testcase_list)
+        cls.logger.debug(cls.testcase_list)
 
     @classmethod
     def get(cls, testcase_name):
@@ -157,6 +157,8 @@ class Testcase:
 
 
 class Scenario:
+
+    logger = dt_logger.Logger('scenario').getLogger()
 
     def __init__(self, scenario):
         self.scenario = scenario
@@ -177,7 +179,7 @@ class Scenario:
                     scenario_yaml = yaml.safe_load(f)
                     cls.scenario_list.update(scenario_yaml)
 
-        logger.debug(cls.scenario_list)
+        cls.logger.debug(cls.scenario_list)
 
     @classmethod
     def get(cls, scenario_name):

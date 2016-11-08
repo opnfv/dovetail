@@ -14,28 +14,29 @@ import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
 from conf.dovetail_config import dovetail_config
 
-logger = dt_logger.Logger('parser.py').getLogger()
-
 
 class Parser:
     '''preprocess configuration files'''
 
-    @staticmethod
-    def parse_cmd(cmd, testcase):
+    logger = dt_logger.Logger('parser').getLogger()
+
+    @classmethod
+    def parse_cmd(cls, cmd, testcase):
         cmd_lines = None
         try:
             template = jinja2.Template(cmd, undefined=jinja2.StrictUndefined)
             kwargs = {}
             for arg in dovetail_config['parameters']:
                 path = eval(arg['path'])
-                logger.debug('name: %s, eval path: %s ' % (arg['name'], path))
+                cls.logger.debug('name: %s, eval path: %s ' %
+                                 (arg['name'], path))
                 kwargs[arg['name']] = \
                     dt_utils.get_obj_by_path(testcase.testcase, path)
 
-            logger.debug('kwargs: %s' % kwargs)
+            cls.logger.debug('kwargs: %s' % kwargs)
             cmd_lines = template.render(**kwargs)
         except Exception as e:
-            logger.error('failed to parse cmd %s, exception:%s' % (cmd, e))
+            cls.logger.error('failed to parse cmd %s, exception:%s' % (cmd, e))
             return None
 
         return cmd_lines
