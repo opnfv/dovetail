@@ -21,8 +21,6 @@ from conf.dovetail_config import SCENARIO_NAMING_FMT
 from conf.dovetail_config import dovetail_config
 from conf.dovetail_config import update_envs
 
-logger = dt_logger.Logger('run.py').getLogger()
-
 
 def load_scenario(scenario):
     Scenario.load()
@@ -33,7 +31,7 @@ def load_testcase():
     Testcase.load()
 
 
-def run_test(scenario):
+def run_test(scenario, logger):
     for testcase_name in scenario['testcase_list']:
         logger.info('>>[testcase]: %s' % (testcase_name))
         testcase = Testcase.get(testcase_name)
@@ -82,6 +80,7 @@ def filter_env_options(input_dict):
 
 def main(*args, **kwargs):
     """Dovetail certification test entry!"""
+    logger = dt_logger.Logger('run.py').getLogger()
     logger.info('=======================================')
     logger.info('Dovetail certification: %s!' % (kwargs['scenario']))
     logger.info('=======================================')
@@ -93,7 +92,7 @@ def main(*args, **kwargs):
                 dovetail_config['yardstick']['envs'])
     load_testcase()
     scenario_yaml = load_scenario(kwargs['scenario'])
-    run_test(scenario_yaml)
+    run_test(scenario_yaml, logger)
     Report.generate(scenario_yaml)
 
 
