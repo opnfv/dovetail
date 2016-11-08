@@ -16,8 +16,6 @@ import utils.dovetail_logger as dt_logger
 from conf.dovetail_config import dovetail_config
 from testcase import Testcase
 
-logger = dt_logger.Logger('report.py').getLogger()
-
 
 def get_pass_str(passed):
     if passed:
@@ -29,6 +27,8 @@ def get_pass_str(passed):
 class Report:
 
     results = {'functest': {}, 'yardstick': {}}
+
+    logger = dt_logger.Logger('report').getLogger()
 
     @classmethod
     def check_result(cls, testcase, db_result):
@@ -62,7 +62,7 @@ class Report:
                             testcase.sub_testcase_passed(sub_test))
                     })
             report_obj['testcases_list'].append(testcase_in_rpt)
-        logger.info(json.dumps(report_obj))
+        cls.logger.info(json.dumps(report_obj))
         return report_obj
 
     @classmethod
@@ -87,7 +87,7 @@ class Report:
                         (sub_test['name'], sub_test['result'])
             rpt_text += split_line
 
-        logger.info(rpt_text)
+        cls.logger.info(rpt_text)
         cls.save(rpt_text)
         return rpt_text
 
@@ -99,9 +99,9 @@ class Report:
             with open(os.path.join(dovetail_config['result_dir'],
                       report_file_name), 'w') as report_file:
                 report_file.write(report)
-            logger.info('save report to %s' % report_file_name)
+            cls.logger.info('save report to %s' % report_file_name)
         except Exception:
-            logger.error('Failed to save: %s' % report_file_name)
+            cls.logger.error('Failed to save: %s' % report_file_name)
 
     @classmethod
     def get_result(cls, testcase):
@@ -117,11 +117,12 @@ class Report:
         if result is not None:
             cls.results[type][script_testcase] = result
             testcase.script_result_acquired(True)
-            logger.debug('testcase: %s -> result acquired' % script_testcase)
+            cls.logger.debug('testcase: %s -> result acquired' %
+                             script_testcase)
         else:
             retry = testcase.increase_retry()
-            logger.debug('testcase: %s -> result acquired retry:%d' %
-                         (script_testcase, retry))
+            cls.logger.debug('testcase: %s -> result acquired retry:%d' %
+                             (script_testcase, retry))
         return result
 
 
@@ -140,6 +141,8 @@ class CrawlerFactory:
 
 class FunctestCrawler:
 
+    logger = dt_logger.Logger('functestCrawler').getLogger()
+
     def __init__(self):
         self.type = 'functest'
 
@@ -156,7 +159,7 @@ class FunctestCrawler:
             os.path.join(dovetail_config['result_dir'],
                          dovetail_config[self.type]['result']['file_path'])
         if not os.path.exists(file_path):
-            logger.info('result file not found: %s' % file_path)
+            self.logger.info('result file not found: %s' % file_path)
             return None
 
         try:
@@ -178,26 +181,28 @@ class FunctestCrawler:
                             "duration": int(dur_sec_int),
                             "tests": int(num_tests), "failures": failed_num,
                             "errors": error_logs}}
-            logger.debug('Results: %s' % str(json_results))
+            self.logger.debug('Results: %s' % str(json_results))
             return json_results
         except Exception as e:
-            logger.error('Cannot read content from the file: %s, exception: %s'
-                         % (file_path, e))
+            self.logger.error('Cannot read content from the file: %s, '
+                              'exception: %s' % (file_path, e))
             return None
 
     def crawl_from_url(self, testcase=None):
         url = dovetail_config[self.type]['result']['db_url'] % testcase
-        logger.debug("Query to rest api: %s" % url)
+        self.logger.debug("Query to rest api: %s" % url)
         try:
             data = json.load(urllib2.urlopen(url))
             return data['results'][0]
         except Exception as e:
-            logger.error("Cannot read content from the url: %s, exception: %s"
-                         % (url, e))
+            self.logger.error("Cannot read content from the url: %s, "
+                              "exception: %s" % (url, e))
             return None
 
 
 class YardstickCrawler:
+
+    logger = dt_logger.Logger('yardstickCrawler').getLogger()
 
     def __init__(self):
         self.type = 'yardstick'
@@ -214,18 +219,18 @@ class YardstickCrawler:
         file_path = os.path.join(dovetail_config['result_dir'],
                                  testcase+'.out')
         if not os.path.exists(file_path):
-            logger.info('result file not found: %s' % file_path)
+            self.logger.info('result file not found: %s' % file_path)
             return None
         try:
             with open(file_path, 'r') as myfile:
                 myfile.read()
             criteria = 'PASS'
             json_results = {'criteria': criteria}
-            logger.debug('Results: %s' % str(json_results))
+            self.logger.debug('Results: %s' % str(json_results))
             return json_results
         except Exception as e:
-            logger.error('Cannot read content from the file: %s, exception: %s'
-                         % (file_path, e))
+            self.logger.error('Cannot read content from the file: %s, '
+                              'exception: %s' % (file_path, e))
             return None
 
     def crawl_from_url(self, testcase=None):
@@ -253,7 +258,9 @@ class ResultChecker:
 
 class FunctestChecker:
 
-    def check(cls, testcase, db_result):
+    logger = dt_logger.Logger('functestChecker').getLogger()
+
+    def check(self, testcase, db_result):
         sub_testcase_list = testcase.sub_testcase()
 
         if not db_result:
@@ -274,7 +281,7 @@ class FunctestChecker:
 
         all_passed = True
         for sub_testcase in sub_testcase_list:
-            logger.debug('check sub_testcase:%s' % sub_testcase)
+            self.logger.debug('check sub_testcase:%s' % sub_testcase)
             if sub_testcase in db_result['details']['errors']:
                 testcase.sub_testcase_passed(sub_testcase, False)
                 all_passed = False
@@ -286,7 +293,9 @@ class FunctestChecker:
 
 class YardstickChecker:
 
-    def check(cls, testcase, result):
+    logger = dt_logger.Logger('yardstickChecker').getLogger()
+
+    def check(self, testcase, result):
         if not result:
             testcase.passed(False)
         else:

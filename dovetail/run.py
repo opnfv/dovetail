@@ -22,8 +22,6 @@ from conf.dovetail_config import SCENARIO_NAMING_FMT
 from conf.dovetail_config import dovetail_config
 from conf.dovetail_config import update_envs
 
-logger = dt_logger.Logger('run.py').getLogger()
-
 
 def load_scenario(scenario):
     Scenario.load()
@@ -42,12 +40,12 @@ def load_testcase():
     Testcase.load()
 
 
-def run_test(scenario):
+def run_test(scenario, logger):
     for testcase_name in scenario['testcases_list']:
         logger.info('>>[testcase]: %s' % (testcase_name))
         testcase = Testcase.get(testcase_name)
         if testcase is None:
-            logger.error('testcase %s is not defined in testcase folder, \
+            logger.error('test case %s is not defined in testcase folder, \
                          skipping' % (testcase_name))
             continue
         run_testcase = True
@@ -84,7 +82,7 @@ def run_test(scenario):
         Report.check_result(testcase, db_result)
 
 
-def validate_options(input_dict):
+def validate_options(input_dict, logger):
     # for 'tag' option
     for key, value in input_dict.items():
         if key == 'tag':
@@ -105,10 +103,11 @@ def filter_env_options(input_dict):
 
 def main(*args, **kwargs):
     """Dovetail certification test entry!"""
+    logger = dt_logger.Logger('run').getLogger()
     logger.info('=======================================')
     logger.info('Dovetail certification: %s!' % (kwargs['scenario']))
     logger.info('=======================================')
-    validate_options(kwargs)
+    validate_options(kwargs, logger)
     envs_options = filter_env_options(kwargs)
     update_envs(envs_options)
     logger.info('Your new envs for functest: %s' %
@@ -119,7 +118,7 @@ def main(*args, **kwargs):
     scenario_yaml = load_scenario(kwargs['scenario'])
     if 'tag' in kwargs:
         set_container_tags(kwargs['tag'])
-    run_test(scenario_yaml)
+    run_test(scenario_yaml, logger)
     Report.generate(scenario_yaml)
 
 
