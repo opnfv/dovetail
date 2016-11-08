@@ -22,6 +22,30 @@
       "revId": "c7c41f8b750d7ae269376a3deb5fe30bd782b32c",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6aaa2ed6",
+        "filename": "dovetail/utils/dovetail_logger.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-08T02:19:20Z",
+      "side": 1,
+      "message": "thanks for your comment ,Dan; I think we have the issue even without this patch, for example, if we don\u0027t pass the CI_DEBUG parameter to envs in releng/jjb/dovetail-run.sh, it will not print dovetail DEBUG message either; I noticed you have created a JIRA issue about packaging logger cmds into function and class, I think we could fix the problem you described there, thoughts ?  this patch is just focusing on the term we use for debugging, not meant to have any function impact.",
+      "parentUuid": "5ac10518_ef1f1008",
+      "range": {
+        "startLine": 31,
+        "startChar": 8,
+        "endLine": 31,
+        "endChar": 37
+      },
+      "revId": "c7c41f8b750d7ae269376a3deb5fe30bd782b32c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
