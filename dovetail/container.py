@@ -10,7 +10,7 @@
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
-from conf.dovetail_config import dovetail_config
+from conf.dovetail_config import DovetailConfig as dt_config
 logger = dt_logger.Logger('container.py').getLogger()
 
 
@@ -31,12 +31,13 @@ class Container:
 
     @classmethod
     def get_docker_image(cls, type):
-        return '%s:%s' % (dovetail_config[type]['image_name'],
-                          dovetail_config[type]['docker_tag'])
+        return '%s:%s' % (dt_config.dovetail_config[type]['image_name'],
+                          dt_config.dovetail_config[type]['docker_tag'])
 
     @classmethod
     def create(cls, type):
         # sshkey="-v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
+        dovetail_config = dt_config.dovetail_config
         docker_image = cls.get_docker_image(type)
         envs = dovetail_config[type]['envs']
         opts = dovetail_config[type]['opts']
