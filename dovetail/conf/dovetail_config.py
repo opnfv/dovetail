@@ -11,55 +11,52 @@ import yaml
 import os
 import re
 
-CERT_PATH = './cert/'
-TESTCASE_PATH = './testcase/'
-SCENARIO_NAMING_FMT = 'certification_%s'
 
-curr_path = os.path.dirname(os.path.abspath(__file__))
-with open(os.path.join(curr_path, 'dovetail_config.yml')) as f:
-    dovetail_config = yaml.safe_load(f)
+class DovetailConfig:
 
-for extra_config_file in dovetail_config['include_config']:
-    with open(os.path.join(curr_path, extra_config_file)) as f:
-        extra_config = yaml.safe_load(f)
-        dovetail_config.update(extra_config)
+    CERT_PATH = './cert/'
+    TESTCASE_PATH = './testcase/'
+    SCENARIO_NAMING_FMT = 'certification_%s'
 
-container_config = {}
+    curr_path = os.path.dirname(os.path.abspath(__file__))
 
-container_config['functest'] = dovetail_config['functest']
-container_config['yardstick'] = dovetail_config['yardstick']
+    with open(os.path.join(curr_path, 'dovetail_config.yml')) as f:
+        dovetail_config = yaml.safe_load(f)
 
+    for extra_config_file in dovetail_config['include_config']:
+        with open(os.path.join(curr_path, extra_config_file)) as f:
+            extra_config = yaml.safe_load(f)
+            dovetail_config.update(extra_config)
 
-with open(os.path.join(curr_path, dovetail_config['cli_file_name'])) as f:
-    cmd_yml = yaml.safe_load(f)
-    dovetail_config['cli'] = cmd_yml[cmd_yml.keys()[0]]
+    with open(os.path.join(curr_path, dovetail_config['cli_file_name'])) as f:
+        cmd_yml = yaml.safe_load(f)
+        dovetail_config['cli'] = cmd_yml[cmd_yml.keys()[0]]
 
+    @classmethod
+    def cmd_name_trans(cls, cmd_name):
+        key = cmd_name.upper()
+        if key == 'SUT_TYPE':
+            key = 'INSTALLER_TYPE'
+        if key == 'SUT_IP':
+            key = 'INSTALLER_IP'
+        return key
 
-def cmd_name_trans(cmd_name):
-    key = cmd_name.upper()
-    if key == 'SUT_TYPE':
-        key = 'INSTALLER_TYPE'
-    if key == 'SUT_IP':
-        key = 'INSTALLER_IP'
-    return key
+    @classmethod
+    def update_envs(cls, options):
+        for item in options:
+            if options[item] is not None:
+                key = cls.cmd_name_trans(item)
+                os.environ[key] = options[item]
+                cls.update_config_envs('functest', key)
+                cls.update_config_envs('yardstick', key)
 
-
-def update_envs(options):
-    for item in options:
-        if options[item] is not None:
-            key = cmd_name_trans(item)
-            os.environ[key] = options[item]
-            update_config_envs('functest', key)
-            update_config_envs('yardstick', key)
-
-
-def update_config_envs(script_type, key):
-    old_value = re.findall(r'\s+%s=(.*?)(\s+|$)' % key,
-                           dovetail_config[script_type]['envs'])
-    if old_value == []:
-        dovetail_config[script_type]['envs'] += \
-            ' -e ' + key + '=' + os.environ[key]
-    else:
-        dovetail_config[script_type]['envs'] = \
-            dovetail_config[script_type]['envs'].replace(old_value[0][0],
-                                                         os.environ[key])
+    @classmethod
+    def update_config_envs(cls, script_type, key):
+        envs = cls.dovetail_config[script_type]['envs']
+        old_value = re.findall(r'\s+%s=(.*?)(\s+|$)' % key, envs)
+        if old_value == []:
+            envs += ' -e ' + key + '=' + os.environ[key]
+        else:
+            envs = envs.replace(old_value[0][0], os.environ[key])
+        cls.dovetail_config[script_type]['envs'] = envs
+        return envs

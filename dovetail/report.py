@@ -13,7 +13,7 @@ import os
 
 import utils.dovetail_logger as dt_logger
 
-from conf.dovetail_config import dovetail_config
+from conf.dovetail_config import DovetailConfig as dt_config
 from testcase import Testcase
 
 logger = dt_logger.Logger('report.py').getLogger()
@@ -94,9 +94,9 @@ class Report:
     # save to disk as default
     @classmethod
     def save(cls, report):
-        report_file_name = dovetail_config['report_file']
+        report_file_name = dt_config.dovetail_config['report_file']
         try:
-            with open(os.path.join(dovetail_config['result_dir'],
+            with open(os.path.join(dt_config.dovetail_config['result_dir'],
                       report_file_name), 'w') as report_file:
                 report_file.write(report)
             logger.info('save report to %s' % report_file_name)
@@ -144,7 +144,8 @@ class FunctestCrawler:
         self.type = 'functest'
 
     def crawl(self, testcase=None):
-        store_type = dovetail_config[self.type]['result']['store_type']
+        store_type = \
+            dt_config.dovetail_config[self.type]['result']['store_type']
         if store_type == 'file':
             return self.crawl_from_file(testcase)
 
@@ -152,6 +153,7 @@ class FunctestCrawler:
             return self.crawl_from_url(testcase)
 
     def crawl_from_file(self, testcase=None):
+        dovetail_config = dt_config.dovetail_config
         file_path = \
             os.path.join(dovetail_config['result_dir'],
                          dovetail_config[self.type]['result']['file_path'])
@@ -186,7 +188,8 @@ class FunctestCrawler:
             return None
 
     def crawl_from_url(self, testcase=None):
-        url = dovetail_config[self.type]['result']['db_url'] % testcase
+        url = \
+            dt_config.dovetail_config[self.type]['result']['db_url'] % testcase
         logger.debug("Query to rest api: %s" % url)
         try:
             data = json.load(urllib2.urlopen(url))
@@ -203,7 +206,8 @@ class YardstickCrawler:
         self.type = 'yardstick'
 
     def crawl(self, testcase=None):
-        store_type = dovetail_config[self.type]['result']['store_type']
+        store_type = \
+            dt_config.dovetail_config[self.type]['result']['store_type']
         if store_type == 'file':
             return self.crawl_from_file(testcase)
 
@@ -211,7 +215,7 @@ class YardstickCrawler:
             return self.crawl_from_url(testcase)
 
     def crawl_from_file(self, testcase=None):
-        file_path = os.path.join(dovetail_config['result_dir'],
+        file_path = os.path.join(dt_config.dovetail_config['result_dir'],
                                  testcase+'.out')
         if not os.path.exists(file_path):
             logger.info('result file not found: %s' % file_path)
