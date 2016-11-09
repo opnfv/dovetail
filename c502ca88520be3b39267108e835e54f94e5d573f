@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_e01cffc3",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-11-09T12:02:29Z",
+      "side": 1,
+      "message": "Suggest adding an example of how to run the script using the \"proposed test\" suite here, the explanation is not so clear.",
+      "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2023e706",
+        "filename": "dovetail/cert/compliance_set.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-11-09T12:02:29Z",
+      "side": 1,
+      "message": "Suggest we just leave this list blank for now.",
+      "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6011efab",
+        "filename": "dovetail/cert/proposed_tests.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-11-09T12:02:29Z",
+      "side": 1,
+      "message": "test_cases:  maybe",
+      "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_400cf394",
+        "filename": "dovetail/cert/proposed_tests.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-11-09T12:02:29Z",
+      "side": 1,
+      "message": "Can these be grouped in such a way that I can identify which tests should belong to which group.  Then potentially execute a sub-set of the entire test suite via command line argument.",
+      "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_203c472f",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-11-09T12:02:29Z",
+      "side": 1,
+      "message": "This should not refer to the tool used to install the system.. The SUT is the system in it\u0027s end state and thus should not have any deploy tool dependencies.",
+      "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_e045dfb3",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-11-09T12:02:29Z",
+      "side": 1,
+      "message": "Which IP?  Mgmt, operational, jumphost?  Maybe we want to use a URI here rather than an IP address.",
+      "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_8012dbb2",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-11-09T12:02:29Z",
+      "side": 1,
+      "message": "I would remove the term scenario from any configuration file.  What exactly are we asking someone to enter here?  Is it the set of tests they want to exercise?",
+      "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_a017d7a2",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-11-09T12:02:29Z",
+      "side": 1,
+      "message": "?? can this be removed?",
+      "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
