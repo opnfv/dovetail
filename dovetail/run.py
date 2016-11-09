@@ -17,16 +17,14 @@ from container import Container
 from testcase import Testcase
 from testcase import Scenario
 from report import Report
-from conf.dovetail_config import SCENARIO_NAMING_FMT
-from conf.dovetail_config import dovetail_config
-from conf.dovetail_config import update_envs
+from conf.dovetail_config import DovetailConfig as dt_config
 
 logger = dt_logger.Logger('run.py').getLogger()
 
 
 def load_scenario(scenario):
     Scenario.load()
-    return Scenario.get(SCENARIO_NAMING_FMT % scenario)
+    return Scenario.get(dt_config.SCENARIO_NAMING_FMT % scenario)
 
 
 def load_testcase():
@@ -79,7 +77,7 @@ def filter_env_options(input_dict):
     envs_options = {}
     for key, value in input_dict.items():
         key = key.upper()
-        if key in dovetail_config['cli']['options']['envs']:
+        if key in dt_config.dovetail_config['cli']['options']['envs']:
             envs_options[key] = value
     return envs_options
 
@@ -90,11 +88,11 @@ def main(*args, **kwargs):
     logger.info('Dovetail certification: %s!' % (kwargs['scenario']))
     logger.info('=======================================')
     envs_options = filter_env_options(kwargs)
-    update_envs(envs_options)
+    dt_config.update_envs(envs_options)
     logger.info('Your new envs for functest: %s' %
-                dovetail_config['functest']['envs'])
+                dt_config.dovetail_config['functest']['envs'])
     logger.info('Your new envs for yardstick: %s' %
-                dovetail_config['yardstick']['envs'])
+                dt_config.dovetail_config['yardstick']['envs'])
     load_testcase()
     scenario_yaml = load_scenario(kwargs['scenario'])
     run_test(scenario_yaml)
@@ -102,15 +100,15 @@ def main(*args, **kwargs):
 
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
-if dovetail_config['cli']['options'] is not None:
-    for key, value in dovetail_config['cli']['options'].items():
+if dt_config.dovetail_config['cli']['options'] is not None:
+    for key, value in dt_config.dovetail_config['cli']['options'].items():
         if value is not None:
             for k, v in value.items():
                 flags = v['flags']
                 del v['flags']
                 main = click.option(*flags, **v)(main)
-if dovetail_config['cli']['arguments'] is not None:
-    for key, value in dovetail_config['cli']['arguments'].items():
+if dt_config.dovetail_config['cli']['arguments'] is not None:
+    for key, value in dt_config.dovetail_config['cli']['arguments'].items():
         if value is not None:
             for k, v in value.items():
                 flags = v['flags']

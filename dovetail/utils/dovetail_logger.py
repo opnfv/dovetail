@@ -24,12 +24,12 @@
 import logging
 import os
 
-from conf.dovetail_config import dovetail_config
+from conf.dovetail_config import DovetailConfig as dt_config
 import dovetail_utils as dt_utils
 
 
 def clean_results_dir():
-    result_path = dovetail_config['result_dir']
+    result_path = dt_config.dovetail_config['result_dir']
     if os.path.exists(result_path):
         cmd = 'sudo rm -rf %s' % (result_path)
         dt_utils.exec_cmd(cmd)
@@ -56,7 +56,7 @@ class Logger:
             ch.setLevel(logging.INFO)
         self.logger.addHandler(ch)
 
-        result_path = dovetail_config['result_dir']
+        result_path = dt_config.dovetail_config['result_dir']
         if not os.path.exists(result_path):
             os.makedirs(result_path)
         hdlr = logging.FileHandler(os.path.join(result_path, 'dovetail.log'))
