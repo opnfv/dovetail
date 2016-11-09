@@ -12,7 +12,7 @@ import jinja2
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
-from conf.dovetail_config import dovetail_config
+from conf.dovetail_config import DovetailConfig as dt_config
 
 logger = dt_logger.Logger('parser.py').getLogger()
 
@@ -26,7 +26,7 @@ class Parser:
         try:
             template = jinja2.Template(cmd, undefined=jinja2.StrictUndefined)
             kwargs = {}
-            for arg in dovetail_config['parameters']:
+            for arg in dt_config.dovetail_config['parameters']:
                 path = eval(arg['path'])
                 logger.debug('name: %s, eval path: %s ' % (arg['name'], path))
                 kwargs[arg['name']] = \
