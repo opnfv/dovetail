@@ -36,36 +36,58 @@ class Report:
         checker.check(testcase, db_result)
 
     @classmethod
+    def generate_json(cls, scenario_yaml):
+        report_obj = {}
+        report_obj['scenario'] = scenario_yaml['name']
+        report_obj['testcase_list'] = []
+        for testcase_name in scenario_yaml['testcase_list']:
+            testcase = Testcase.get(testcase_name)
+            testcase_in_rpt = {}
+            testcase_in_rpt['name'] = testcase_name
+            if testcase is None:
+                testcase_in_rpt['result'] = 'Undefined'
+                report_obj['testcase_list'].append(testcase_in_rpt)
+                continue
+
+            testcase_in_rpt['result'] = get_pass_str(testcase.passed())
+            testcase_in_rpt['objective'] = testcase.objective()
+            testcase_in_rpt['sub_testcase'] = []
+            if testcase.sub_testcase() is not None:
+                for sub_test in testcase.sub_testcase():
+                    testcase_in_rpt['sub_testcase'].append({
+                        'name': sub_test,
+                        'result': get_pass_str(
+                            testcase.sub_testcase_passed(sub_test))
+                    })
+            report_obj['testcase_list'].append(testcase_in_rpt)
+        logger.info(json.dumps(report_obj))
+        return report_obj
+
+    @classmethod
     def generate(cls, scenario_yaml):
-        report = ''
+        rpt_data = cls.generate_json(scenario_yaml)
+        rpt_text = ''
         split_line = '+-----------------------------------------------------'
         split_line += '---------------------+\n'
 
-        report += '\n\
+        rpt_text += '\n\
 +==========================================================================+\n\
 |                                   report                                 |\n'
-        report += split_line
-        report += '|scenario: %s\n' % scenario_yaml['name']
-        for testcase_name in scenario_yaml['testcase_list']:
-            testcase = Testcase.get(testcase_name)
-            if testcase is None:
-                report += '|   [testcase]: %s\t\t\t\t[Undefined]\n' % \
-                    (testcase_name)
-                report += split_line
-                continue
-            report += '|   [testcase]: %s\t\t\t\t[%s]\n' % \
-                (testcase_name, get_pass_str(testcase.passed()))
-            report += '|   |-objective: %s\n' % testcase.objective()
-            if testcase.sub_testcase() is not None:
-                for subtest in testcase.sub_testcase():
-                    report += '|       |-%s \t\t [%s]\n' % \
-                        (subtest,
-                         get_pass_str(testcase.sub_testcase_passed(subtest)))
-            report += split_line
+        rpt_text += split_line
+        rpt_text += '|scenario: %s\n' % rpt_data['scenario']
+        for testcase in rpt_data['testcase_list']:
+            rpt_text += '|   [testcase]: %s\t\t\t\t[%s]\n' % \
+                (testcase['name'], testcase['result'])
+            rpt_text += '|   |-objective: %s\n' % testcase['objective']
+            if 'sub_testcase' in testcase:
+                for sub_test in testcase['sub_testcase']:
+                    rpt_text += '|       |-%s \t\t [%s]\n' % \
+                        (sub_test['name'], sub_test['result'])
+            rpt_text += split_line
 
-        logger.info(report)
-        cls.save(report)
-        return report
+        logger.info(rpt_text)
+        cls.save(rpt_text)
+        return rpt_text
 
     # save to disk as default
     @classmethod
