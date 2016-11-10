@@ -101,6 +101,17 @@ testarea ``ipv6`` in ``compliance_set``
 
   python run.py --testsuite compliance_set --testarea ipv6
 
+# TO DO: describe more clear with ``compliance_set`` and ``proposed_tests``
+Dovetail provides two sets, ``compliance_set`` and ``proposed_tests``, ``compliance_set`` defines the certification
+tests, ``proposed_tests`` runs as the total tests.
+
+# TO DO: amend when new cmd comes, such as run.py --name1 {**} --name2 {**}
+If you want to run ``proposed_tests``, just run with
+
+::
+
+  python run.py --scenario proposed_tests
+
 Running Dovetail in a Docker container
 ########################################
 
