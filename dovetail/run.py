@@ -9,6 +9,7 @@
 
 
 import click
+import sys
 
 import utils.dovetail_logger as dt_logger
 
@@ -79,6 +80,11 @@ def filter_env_options(input_dict):
     envs_options = {}
     for key, value in input_dict.items():
         key = key.upper()
+        if key == 'TAG':
+            for tag in value.split(','):
+                if len(tag.split(':')) != 2:
+                    logger.error('TAGS option must be "<image>:<tag>,..."')
+                    sys.exit(1)
         if key in dovetail_config['cli']['options']['envs']:
             envs_options[key] = value
     return envs_options

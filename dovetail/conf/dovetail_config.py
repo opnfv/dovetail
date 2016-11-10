@@ -43,14 +43,25 @@ def cmd_name_trans(cmd_name):
         key = 'INSTALLER_IP'
     return key
 
+def update_env_tags(option_str):
+    for script_tag_opt in option_str.split(','):
+        option_str = script_tag_opt.split(':')
+        script_type = option_str[0]
+        script_tag = option_str[1]
+        dovetail_config[script_type]['docker_tag'] = script_tag
 
 def update_envs(options):
     for item in options:
+        print("item:",item)
         if options[item] is not None:
-            key = cmd_name_trans(item)
-            os.environ[key] = options[item]
-            update_config_envs('functest', key)
-            update_config_envs('yardstick', key)
+            if item == "TAG":
+                update_env_tags(options[item])
+                continue
+            else:
+                key = cmd_name_trans(item)
+                os.environ[key] = options[item]
+                update_config_envs('functest', key)
+                update_config_envs('yardstick', key)
 
 
 def update_config_envs(script_type, key):
