@@ -36,6 +36,11 @@ cli:
           - '--CI_DEBUG'
           - '-d'
         help: 'CI_DEBUG for showing debug log.'
+      TAG:
+        flags:
+          - '--TAG'
+          - '-o'
+        help: 'Overwrite tags for each docker container (e.g. "functest:stable,yardstick:latest")'
     non-envs:
       scenario:
         flags:
