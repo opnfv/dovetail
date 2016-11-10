@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_7b81a149",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 4609
+      },
+      "writtenOn": "2016-11-10T08:24:53Z",
+      "side": 1,
+      "message": "I agree with you that putting into non-envs so I will update the diffs, but to separate options for each docker container makes a bit cost at adding new testing project and sometimes we miss it when we add.\nThis option is just a kind of \u0027patch\u0027 to config_*.yml, so I need to put minimum modification and minimum verification as well as other options.",
+      "parentUuid": "5ac10518_bba069f5",
+      "range": {
+        "startLine": 39,
+        "startChar": 6,
+        "endLine": 39,
+        "endChar": 10
+      },
+      "revId": "beb8fc9a4b62c25bae4d5e325234688f42feeeb1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_7bee828d",
         "filename": "dovetail/conf/dovetail_config.py",
         "patchSetId": 3
