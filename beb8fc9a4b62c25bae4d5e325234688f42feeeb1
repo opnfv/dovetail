@@ -160,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_9be9ed1c",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 4609
+      },
+      "writtenOn": "2016-11-10T08:41:55Z",
+      "side": 1,
+      "message": "Thank you for your point out! It will be fixed in incorporation of Leo\u0027s comment.",
+      "parentUuid": "5ac10518_bb870961",
+      "revId": "beb8fc9a4b62c25bae4d5e325234688f42feeeb1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_7b9522e3",
         "filename": "dovetail/run.py",
         "patchSetId": 3
