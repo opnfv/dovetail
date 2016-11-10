@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_3b3eb9b9",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 4609
+      },
+      "writtenOn": "2016-11-10T08:07:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ac10518_7bee828d",
+      "range": {
+        "startLine": 50,
+        "startChar": 8,
+        "endLine": 51,
+        "endChar": 34
+      },
+      "revId": "beb8fc9a4b62c25bae4d5e325234688f42feeeb1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_bb1f0ab7",
         "filename": "dovetail/conf/dovetail_config.py",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_9b748d9d",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 4609
+      },
+      "writtenOn": "2016-11-10T08:07:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ac10518_bb1f0ab7",
+      "range": {
+        "startLine": 58,
+        "startChar": 12,
+        "endLine": 58,
+        "endChar": 29
+      },
+      "revId": "beb8fc9a4b62c25bae4d5e325234688f42feeeb1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_7b9522e3",
         "filename": "dovetail/run.py",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2016-11-10T06:59:32Z",
       "side": 1,
       "message": "This function is used to filter env options.\nMaybe this format check can be defined as a new function, and we can also add other options\u0027 format check into it.\nLet main function do the check before all other operations.",
+      "range": {
+        "startLine": 83,
+        "startChar": 8,
+        "endLine": 87,
+        "endChar": 31
+      },
+      "revId": "beb8fc9a4b62c25bae4d5e325234688f42feeeb1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_5b6e25cb",
+        "filename": "dovetail/run.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 4609
+      },
+      "writtenOn": "2016-11-10T08:07:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ac10518_7b9522e3",
       "range": {
         "startLine": 83,
         "startChar": 8,
