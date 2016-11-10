@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "5ac10518_bba069f5",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-11-10T08:15:04Z",
+      "side": 1,
+      "message": "TAG is not used as an env variable, should be put into non-envs\nit is ok that use one parameter for two config items, but when we have more testing project,like qtip..., then it\u0027s difficult to debug what\u0027s gone wrong with the typo issue, it could take times until you running into these docker issue. i suggest one parameter for one item\nand it will fail immediately with exactly wrong parameter with help msg",
+      "range": {
+        "startLine": 39,
+        "startChar": 6,
+        "endLine": 39,
+        "endChar": 10
+      },
+      "revId": "beb8fc9a4b62c25bae4d5e325234688f42feeeb1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_7bee828d",
         "filename": "dovetail/conf/dovetail_config.py",
         "patchSetId": 3
