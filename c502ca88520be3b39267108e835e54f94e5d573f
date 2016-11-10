@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_fbaef2e6",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-11-10T01:42:25Z",
+      "side": 1,
+      "message": "will do this.",
+      "parentUuid": "5ac10518_e01cffc3",
+      "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_2023e706",
         "filename": "dovetail/cert/compliance_set.yml",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2016-11-09T12:02:29Z",
       "side": 1,
       "message": "Suggest we just leave this list blank for now.",
+      "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_1bac1eed",
+        "filename": "dovetail/cert/compliance_set.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-11-10T01:42:25Z",
+      "side": 1,
+      "message": "suggest to keep, since it runs as the default in CI and common day tool development/debug. will leave a note here.",
+      "parentUuid": "5ac10518_2023e706",
       "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_bbb86a2b",
+        "filename": "dovetail/cert/proposed_tests.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-11-10T01:42:25Z",
+      "side": 1,
+      "message": "will amend :)",
+      "parentUuid": "5ac10518_6011efab",
+      "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_400cf394",
         "filename": "dovetail/cert/proposed_tests.yml",
         "patchSetId": 6
@@ -64,6 +118,24 @@
       "writtenOn": "2016-11-09T12:02:29Z",
       "side": 1,
       "message": "Can these be grouped in such a way that I can identify which tests should belong to which group.  Then potentially execute a sub-set of the entire test suite via command line argument.",
+      "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_7b820254",
+        "filename": "dovetail/cert/proposed_tests.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-11-10T01:42:25Z",
+      "side": 1,
+      "message": "good idea, as I replied in former patch set, will do this in later patches, since it will be big change in software architecture, one patch do one thing. the idea is python run.py --scenario(this should be adjusted) {**}  --suites(think out a name) {**} , if --suites ignores will run all.",
+      "parentUuid": "5ac10518_400cf394",
       "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -132,6 +204,24 @@
       "writtenOn": "2016-11-09T12:02:29Z",
       "side": 1,
       "message": "?? can this be removed?",
+      "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_fb959288",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-11-10T01:42:25Z",
+      "side": 1,
+      "message": "all those is inherited from former patches, will amend those in later dependent patches.",
+      "parentUuid": "5ac10518_a017d7a2",
       "revId": "c502ca88520be3b39267108e835e54f94e5d573f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
