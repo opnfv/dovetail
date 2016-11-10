@@ -16,6 +16,24 @@
       "revId": "845107a7acb29d46e1b5e0d191ca963670392ee5",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_3bc79947",
+        "filename": "dovetail/report.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-11-10T10:31:26Z",
+      "side": 1,
+      "message": "yeah, it will print twice, but with different content, you may want to check the original data in certain situations",
+      "parentUuid": "5ac10518_7bb521cc",
+      "revId": "845107a7acb29d46e1b5e0d191ca963670392ee5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
