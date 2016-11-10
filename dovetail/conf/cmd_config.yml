@@ -11,26 +11,27 @@ cli:
 
   options:
     envs:
+      # For detail, please see https://wiki.opnfv.org/display/dovetail/Dovetail+Terminology
       SUT_TYPE:
         flags:
           - '--SUT_TYPE'
           - '-t'
-        help: 'Installer type of the system under test (SUT).'
+        help: 'Type of System Under Test(SUT) which is already deployed'
       SUT_IP:
         flags:
           - '--SUT_IP'
           - '-i'
-        help: 'IP of the system under test (SUT).'
+        help: 'IP address that can access the System Under Test(SUT) APIs, could be the external ip address of SUT.'
       DEPLOY_SCENARIO:
         flags:
           - '--DEPLOY_SCENARIO'
           - '-S'
-        help: 'DEPLOY_SCENARIO of the system under test (SUT).'
+        help: 'DEPLOY_SCENARIO of the system under test (SUT), such as noha-nosdn/ha-nosdn.'
       DEPLOY_TYPE:
         flags:
           - '--DEPLOY_TYPE'
           - '-T'
-        help: 'DEPLOY_TYPE of the system under test (SUT).'
+        help: 'deployment type of the system under test (SUT), such as baremetal/virtual'
       CI_DEBUG:
         flags:
           - '--CI_DEBUG'
