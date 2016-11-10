@@ -101,6 +101,22 @@ testarea ``ipv6`` in ``compliance_set``
 
   python run.py --testsuite compliance_set --testarea ipv6
 
+Dovetail provides some sets, ``debug``, ``proposed_tests`` and ``compliance_set``,
+``debug`` is used for locally and Continuous Integration(CI) developing purpose,
+which provides typical testcase examples, feel free to edit it when develops locally, such as
+only to run a testcase which only takes minutes. ``proposed_tests`` is the testcase
+candidate which mainly comes from the wiki link
+https://wiki.opnfv.org/display/dovetail/Dovetail+Test+Areas+and+Test+Cases.
+``compliance_set`` is used for compliance. Moreover, dovetail tool can be easily
+extended to support more complicated compliance requirements,
+such as feature set based or scenario based compliance.
+
+If you want to run ``debug``, just run with
+
+::
+
+  python run.py --testsuite debug
+
 Running Dovetail in a Docker container
 ########################################
 
