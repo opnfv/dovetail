@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_a1d03854",
+        "filename": "dovetail/report.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-11-11T08:06:35Z",
+      "side": 1,
+      "message": "If testcase is None, it will not have key \u0027objective\u0027.",
+      "range": {
+        "startLine": 81,
+        "startChar": 50,
+        "endLine": 81,
+        "endChar": 71
+      },
+      "revId": "0a1e56ec00def2003758e4df0c9f54b9020b671b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
