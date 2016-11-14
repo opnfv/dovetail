@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_04735a4e",
+        "filename": "dovetail/report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-14T04:55:51Z",
+      "side": 1,
+      "message": "function \u0027check\u0027 is not decorated with @classmethod, shall we use \u0027self\u0027 here or make \u0027check\u0027 a class method ?  if \u0027check\u0027 is marked as @classmethod, we may need change each caller of \u0027check\u0027 to use class name.",
+      "range": {
+        "startLine": 239,
+        "startChar": 14,
+        "endLine": 239,
+        "endChar": 17
+      },
+      "revId": "26cd6770b26f6d18a3ad73527dabdf56bb1e07a6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_a48fe622",
+        "filename": "dovetail/report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-14T04:55:51Z",
+      "side": 1,
+      "message": "seem above comment",
+      "range": {
+        "startLine": 260,
+        "startChar": 12,
+        "endLine": 260,
+        "endChar": 15
+      },
+      "revId": "26cd6770b26f6d18a3ad73527dabdf56bb1e07a6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
