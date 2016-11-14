@@ -30,8 +30,8 @@ class Report:
 
     results = {'functest': {}, 'yardstick': {}}
 
-    @classmethod
-    def check_result(cls, testcase, db_result):
+    @staticmethod
+    def check_result(testcase, db_result):
         checker = CheckerFactory.create(testcase.script_type())
         checker.check(testcase, db_result)
 
@@ -68,8 +68,8 @@ class Report:
         return report
 
     # save to disk as default
-    @classmethod
-    def save(cls, report):
+    @staticmethod
+    def save(report):
         report_file_name = dovetail_config['report_file']
         try:
             with open(os.path.join(dovetail_config['result_dir'],
@@ -103,8 +103,8 @@ class Report:
 
 class CrawlerFactory:
 
-    @classmethod
-    def create(cls, type):
+    @staticmethod
+    def create(type):
         if type == 'functest':
             return FunctestCrawler()
 
@@ -210,8 +210,8 @@ class YardstickCrawler:
 
 class CheckerFactory:
 
-    @classmethod
-    def create(cls, type):
+    @staticmethod
+    def create(type):
         if type == 'functest':
             return FunctestChecker()
 
@@ -223,13 +223,15 @@ class CheckerFactory:
 
 class ResultChecker:
 
-    def check(cls):
+    @staticmethod
+    def check():
         return 'PASS'
 
 
 class FunctestChecker:
 
-    def check(cls, testcase, db_result):
+    @staticmethod
+    def check(testcase, db_result):
         sub_testcase_list = testcase.sub_testcase()
 
         if not db_result:
@@ -262,7 +264,8 @@ class FunctestChecker:
 
 class YardstickChecker:
 
-    def check(cls, testcase, result):
+    @staticmethod
+    def check(testcase, result):
         if not result:
             testcase.passed(False)
         else:

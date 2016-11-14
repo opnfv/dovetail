@@ -29,8 +29,8 @@ class Container:
     def get(cls, type):
         return cls.container_list[type]
 
-    @classmethod
-    def get_docker_image(cls, type):
+    @staticmethod
+    def get_docker_image(type):
         return '%s:%s' % (dovetail_config[type]['image_name'],
                           dovetail_config[type]['docker_tag'])
 
@@ -62,14 +62,14 @@ class Container:
             dt_utils.exec_cmd(cmd, logger)
             cls.has_pull_latest_image[type] = True
 
-    @classmethod
-    def clean(cls, container_id):
+    @staticmethod
+    def clean(container_id):
         cmd1 = 'sudo docker stop %s' % (container_id)
         dt_utils.exec_cmd(cmd1, logger)
         cmd2 = 'sudo docker rm %s' % (container_id)
         dt_utils.exec_cmd(cmd2, logger)
 
-    @classmethod
-    def exec_cmd(cls, container_id, sub_cmd, exit_on_error=False):
+    @staticmethod
+    def exec_cmd(container_id, sub_cmd, exit_on_error=False):
         cmd = 'sudo docker exec %s /bin/bash -c "%s"' % (container_id, sub_cmd)
         dt_utils.exec_cmd(cmd, logger, exit_on_error)
