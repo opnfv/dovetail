@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_a42cc64b",
+        "filename": "dovetail/prepare_env.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-14T02:26:38Z",
+      "side": 1,
+      "message": "what about adding a short docstring description for main function? for example, \"dovetail prepare env main\"",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 11
+      },
+      "revId": "188d9cacfbddfbdba02e09a2906e645b5401ac14",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
