@@ -27,8 +27,8 @@ class Testcase:
         self.testcase['passed'] = False
         self.cmds = []
         self.sub_testcase_status = {}
-        Testcase.update_script_testcase(self.script_type(),
-                                        self.script_testcase())
+        self.update_script_testcase(self.script_type(),
+                                    self.script_testcase())
 
     def prepare_cmd(self):
         for cmd in dovetail_config[self.script_type()]['testcase']['cmds']:
@@ -65,14 +65,13 @@ class Testcase:
 
     def exceed_max_retry_times(self):
         # logger.debug('retry times:%d' % self.testcase['retry'])
-        return Testcase._exceed_max_retry_times(self.script_type(),
-                                                self.script_testcase())
+        return self._exceed_max_retry_times(self.script_type(),
+                                            self.script_testcase())
 
     def increase_retry(self):
         # self.testcase['retry'] = self.testcase['retry'] + 1
         # return self.testcase['retry']
-        return Testcase._increase_retry(self.script_type(),
-                                        self.script_testcase())
+        return self._increase_retry(self.script_type(), self.script_testcase())
 
     def passed(self, passed=None):
         if passed is not None:
@@ -80,14 +79,14 @@ class Testcase:
         return self.testcase['passed']
 
     def script_result_acquired(self, acquired=None):
-        return Testcase._result_acquired(self.script_type(),
-                                         self.script_testcase(), acquired)
+        return self._result_acquired(self.script_type(),
+                                     self.script_testcase(), acquired)
 
     def pre_condition(self):
-        return Testcase.pre_condition_cls(self.script_type())
+        return self.pre_condition_cls(self.script_type())
 
     def post_condition(self):
-        return Testcase.post_condition_cls(self.script_type())
+        return self.post_condition_cls(self.script_type())
 
     # testcase in upstream testing project
     script_testcase_list = {'functest': {}, 'yardstick': {}}
@@ -107,12 +106,12 @@ class Testcase:
             cls.scrpit_testcase_list[script_type]['cleaned'] = cleaned
         return cls.script_testcase_list[script_type]['cleaned']
 
-    @classmethod
-    def pre_condition_cls(cls, script_type):
+    @staticmethod
+    def pre_condition_cls(script_type):
         return dovetail_config[script_type]['pre_condition']
 
-    @classmethod
-    def post_condition_cls(cls, script_type):
+    @staticmethod
+    def post_condition_cls(script_type):
         return dovetail_config[script_type]['post_condition']
 
     @classmethod
@@ -147,7 +146,7 @@ class Testcase:
                 with open(os.path.join(root, testcase_file)) as f:
                     testcase_yaml = yaml.safe_load(f)
                     cls.testcase_list[testcase_yaml.keys()[0]] = \
-                        Testcase(testcase_yaml)
+                        cls(testcase_yaml)
         logger.debug(cls.testcase_list)
 
     @classmethod

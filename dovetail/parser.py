@@ -20,8 +20,8 @@ logger = dt_logger.Logger('parser.py').getLogger()
 class Parser:
     '''preprocess configuration files'''
 
-    @classmethod
-    def parse_cmd(cls, cmd, testcase):
+    @staticmethod
+    def parse_cmd(cmd, testcase):
         cmd_lines = None
         try:
             template = jinja2.Template(cmd, undefined=jinja2.StrictUndefined)
