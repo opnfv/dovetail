@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_ef4aa7ab",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-15T06:32:22Z",
+      "side": 1,
+      "message": "yes, we could call it SUT and explain what is SUT;\nI think it would also be good for user to understand if we add some description and examples in help message, apex, compass etc could be one of the examples. just for better understanding.",
+      "parentUuid": "5ac10518_4f5adb84",
+      "range": {
+        "startLine": 19,
+        "startChar": 15,
+        "endLine": 19,
+        "endChar": 71
+      },
+      "revId": "76f8a19252ced92992043aaadc6692f75d5ab963",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_afe25fd3",
         "filename": "dovetail/conf/cmd_config.yml",
         "patchSetId": 1
