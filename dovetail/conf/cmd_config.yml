@@ -43,3 +43,8 @@ cli:
           - '-s'
         default: 'compliance_set'
         help: 'certification scenario.'
+      tag:
+        flags:
+          - '--tag'
+          - '-o'
+        help: 'Overwrite tags for each docker container (e.g. "functest:stable,yardstick:latest")'

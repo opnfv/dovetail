@@ -9,6 +9,7 @@
 
 
 import click
+import sys
 
 import utils.dovetail_logger as dt_logger
 
@@ -27,6 +28,14 @@ logger = dt_logger.Logger('run.py').getLogger()
 def load_scenario(scenario):
     Scenario.load()
     return Scenario.get(SCENARIO_NAMING_FMT % scenario)
+
+
+def set_container_tags(option_str):
+    for script_tag_opt in option_str.split(','):
+        option_str = script_tag_opt.split(':')
+        script_type = option_str[0].strip()
+        script_tag = option_str[1].strip()
+        dovetail_config[script_type]['docker_tag'] = script_tag
 
 
 def load_testcase():
@@ -75,6 +84,16 @@ def run_test(scenario):
         Report.check_result(testcase, db_result)
 
 
+def validate_options(input_dict):
+    # for 'tag' option
+    for key, value in input_dict.items():
+        if key == 'tag':
+            for tag in value.split(','):
+                if len(tag.split(':')) != 2:
+                    logger.error('TAGS option must be "<image>:<tag>,..."')
+                    sys.exit(1)
+
+
 def filter_env_options(input_dict):
     envs_options = {}
     for key, value in input_dict.items():
@@ -89,6 +108,7 @@ def main(*args, **kwargs):
     logger.info('=======================================')
     logger.info('Dovetail certification: %s!' % (kwargs['scenario']))
     logger.info('=======================================')
+    validate_options(kwargs)
     envs_options = filter_env_options(kwargs)
     update_envs(envs_options)
     logger.info('Your new envs for functest: %s' %
@@ -97,6 +117,8 @@ def main(*args, **kwargs):
                 dovetail_config['yardstick']['envs'])
     load_testcase()
     scenario_yaml = load_scenario(kwargs['scenario'])
+    if 'tag' in kwargs:
+        set_container_tags(kwargs['tag'])
     run_test(scenario_yaml)
     Report.generate(scenario_yaml)
 
