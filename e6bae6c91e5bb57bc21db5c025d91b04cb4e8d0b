@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_0fd133fb",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-15T03:15:39Z",
+      "side": 1,
+      "message": "I didn\u0027t see this dict is used anywhere, shall we delete it for now ? or did I miss anything ?",
+      "range": {
+        "startLine": 31,
+        "startChar": 3,
+        "endLine": 31,
+        "endChar": 25
+      },
+      "revId": "e6bae6c91e5bb57bc21db5c025d91b04cb4e8d0b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
