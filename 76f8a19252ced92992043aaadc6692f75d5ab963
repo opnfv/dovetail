@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_8fdd2317",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-15T02:20:36Z",
+      "side": 1,
+      "message": "how about using \u0027Type of installer (apex|compass|fuel|joid)\u0027",
+      "range": {
+        "startLine": 19,
+        "startChar": 15,
+        "endLine": 19,
+        "endChar": 71
+      },
+      "revId": "76f8a19252ced92992043aaadc6692f75d5ab963",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_afe25fd3",
+        "filename": "dovetail/conf/cmd_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-15T02:20:36Z",
+      "side": 1,
+      "message": "wrap this line to less than 100 characters ?\n\n\u0027installer IP address which can access System Under Test(SUT) APIs\u0027",
+      "range": {
+        "startLine": 24,
+        "startChar": 15,
+        "endLine": 24,
+        "endChar": 114
+      },
+      "revId": "76f8a19252ced92992043aaadc6692f75d5ab963",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
