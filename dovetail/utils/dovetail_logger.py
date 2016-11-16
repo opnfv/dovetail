@@ -31,8 +31,8 @@ import dovetail_utils as dt_utils
 def clean_results_dir():
     result_path = dovetail_config['result_dir']
     if os.path.exists(result_path):
-        cmd = 'sudo rm -rf %s' % (result_path)
-        dt_utils.exec_cmd(cmd)
+        cmd = 'sudo rm -rf %s/*' % (result_path)
+        dt_utils.exec_cmd(cmd, exit_on_error=False)
 
 clean_results_dir()
 
