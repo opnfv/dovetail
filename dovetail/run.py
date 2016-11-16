@@ -87,7 +87,7 @@ def run_test(scenario):
 def validate_options(input_dict):
     # for 'tag' option
     for key, value in input_dict.items():
-        if key == 'tag':
+        if key == 'tag' and value is not None:
             for tag in value.split(','):
                 if len(tag.split(':')) != 2:
                     logger.error('TAGS option must be "<image>:<tag>,..."')
@@ -117,7 +117,7 @@ def main(*args, **kwargs):
                 dovetail_config['yardstick']['envs'])
     load_testcase()
     scenario_yaml = load_scenario(kwargs['scenario'])
-    if 'tag' in kwargs:
+    if 'tag' in kwargs and kwargs['tag'] is not None:
         set_container_tags(kwargs['tag'])
     run_test(scenario_yaml)
     Report.generate(scenario_yaml)
