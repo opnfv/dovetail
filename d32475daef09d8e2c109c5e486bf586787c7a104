@@ -22,6 +22,30 @@
       "revId": "d32475daef09d8e2c109c5e486bf586787c7a104",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_aa1d6d75",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1469
+      },
+      "writtenOn": "2016-11-16T02:59:42Z",
+      "side": 1,
+      "message": "Ok, I see. But the external network IP is hard to understand. It is easy to confuse this with opestack external network IP.",
+      "parentUuid": "5ac10518_ea2b7592",
+      "range": {
+        "startLine": 23,
+        "startChar": 11,
+        "endLine": 23,
+        "endChar": 30
+      },
+      "revId": "d32475daef09d8e2c109c5e486bf586787c7a104",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
