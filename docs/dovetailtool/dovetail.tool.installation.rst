@@ -20,7 +20,7 @@ running on the SUT (System Under Test):
 ::
 
   SUT_TYPE, SUT type, e.g., apex, compass, fuel, joid, etc
-  SUT_IP, SUT external network IP, e.g., 192.168.200.2
+  SUT_IP, SUT installer master IP, e.g., 192.168.200.2
   NODE_NAME, this can be shown in the test result for users to see which pod the dovetail tool runs
   DEPLOY_SCENARIO, deployment scenario, e.g., os-nosdn-nofeature-ha
   BUILD_TAG, this can be shown in the test result for users to identify logs
