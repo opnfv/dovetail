@@ -1,0 +1,64 @@
+##############################################################################
+# Copyright (c) 2016 Huawei Technologies Co.,Ltd and others.
+#
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Apache License, Version 2.0
+# which accompanies this distribution, and is available at
+# http://www.apache.org/licenses/LICENSE-2.0
+##############################################################################
+
+<h3>Dovetail Test Cases</h3>
+
+<!-- TestCase Filters -->
+<div class="row">
+    <div class="col-md-3">
+        <strong>Version:</strong>
+        <!-- Slicing the version file name here gets rid of the '.json' file extension -->
+        <select ng-model="ctrl.version"
+                ng-change="ctrl.update()"
+                class="form-control"
+                ng-options="versionFile.slice(0,-5) for versionFile in ctrl.versionList">
+        </select>
+    </div>
+    <div class="col-md-4">
+        <strong>System Under Test(SUT):</strong>
+        <span class="program-about"><a target="_blank" href="http://wiki.opnfv.org/display/dovetail/Dovetail+Test+Cases">About</a></span>
+        <select ng-model="ctrl.target" class="form-control" ng-change="ctrl.updateTargetCapabilities()">
+            <option value="platform">System Under Test</option>
+        </select>
+    </div>
+</div>
+
+<br />
+<div ng-if="ctrl.testcases">
+    <strong>TestCases Status:</strong>
+    {{ctrl.TestCases.status | capitalize}}
+</div>
+
+<div ng-show="ctrl.testcases">
+    <strong>Corresponding OPNFV Releases:</strong>
+    <ul class="list-inline">
+        <li ng-repeat="release in ctrl.testcases.releases">
+            {{release | capitalize}}
+        </li>
+    </ul>
+</div>
+
+<strong>Capability Status:</strong>
+<div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="ctrl.status.ComplianceSet">
+    <span class="ComplianceSet">ComplianceSet</span>
+    </label>
+    <label>
+    <input type="checkbox" ng-model="ctrl.status.ProposedTests">
+    <span class="ProposedTests">ProposedTests</span>
+    </label>
+    <a class="test-list-dl pull-right"
+       title="Get a test list for capabilities matching selected statuses."
+       ng-click="ctrl.openTestListModal()">
+
+        Test List <span class="glyphicon glyphicon-file"></span>
+    </a>
+</div>
+<!-- End Capability Filters -->
