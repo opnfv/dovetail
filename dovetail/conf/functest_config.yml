@@ -10,8 +10,8 @@ functest:
       - 'echo test for precondition'
   testcase:
     cmds:
-      - 'python /home/opnfv/repos/functest/ci/prepare_env.py start'
-      - 'python /home/opnfv/repos/functest/ci/run_tests.py -t {{script_testcase}} -r'
+      - 'functest env prepare'
+      - 'functest testcase run {{script_testcase}}'
   post_condition:
     cmds:
       - ''
