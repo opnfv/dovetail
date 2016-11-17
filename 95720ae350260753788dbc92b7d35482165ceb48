@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_505a7c84",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4609
+      },
+      "writtenOn": "2016-11-17T04:14:55Z",
+      "side": 1,
+      "message": "The code, line17-33, is unclear that when it is called because it is not a method, just a code.\n\nHow about to make them to @classmethod first and call it explicitly to clarify when it is called?",
+      "revId": "95720ae350260753788dbc92b7d35482165ceb48",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
