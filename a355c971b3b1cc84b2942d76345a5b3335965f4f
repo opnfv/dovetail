@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_b0cc0037",
+        "filename": "dashboard/backend/dovetail/api/__init__.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 4469
+      },
+      "writtenOn": "2016-11-17T05:43:05Z",
+      "side": 1,
+      "message": "Debug mode will cause security risk. I know it is still under development, but this should be noted.",
+      "revId": "a355c971b3b1cc84b2942d76345a5b3335965f4f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_50d11ccc",
+        "filename": "dashboard/backend/dovetail/db/api.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4469
+      },
+      "writtenOn": "2016-11-17T05:43:05Z",
+      "side": 1,
+      "message": "Inconsistent format with exception_handler.py",
+      "revId": "a355c971b3b1cc84b2942d76345a5b3335965f4f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
