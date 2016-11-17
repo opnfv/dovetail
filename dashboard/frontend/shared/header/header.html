@@ -1,0 +1,40 @@
+##############################################################################
+# Copyright (c) 2016 Huawei Technologies Co.,Ltd and others.
+#
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Apache License, Version 2.0
+# which accompanies this distribution, and is available at
+# http://www.apache.org/licenses/LICENSE-2.0
+##############################################################################
+
+<div class="heading"><a ui-sref="home"><img src="assets/img/dovetail-logo.png" alt="Dovetail"></a>
+Dovetail
+</div>
+<nav class="navbar navbar-default" role="navigation" ng-controller="HeaderController as header">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" ng-click="header.navbarCollapsed = !header.navbarCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar" uib-collapse="header.navbarCollapsed">
+          <ul class="nav navbar-nav">
+            <li ng-class="{ active: header.isActive('/')}"><a ui-sref="home">Home</a></li>
+            <li ng-class="{ active: header.isActive('/about')}"><a ui-sref="about">About</a></li>
+            <li ng-class="{ active: header.isActive('/testcases')}"><a ui-sref="testcases">Dovetail Test Cases</a></li>
+            <li ng-class="{ active: header.isActive('/community_results')}"><a ui-sref="communityResults">Community Results</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-class="{ active: header.isActive('/user_results')}" ng-if="auth.isAuthenticated"><a ui-sref="userResults">My Results</a></li>
+            <li ng-class="{ active: header.isActive('/profile')}" ng-if="auth.isAuthenticated"><a ui-sref="profile">Profile</a></li>
+            <li ng-if="auth.isAuthenticated"><a href="" ng-click="auth.doSignOut()">Sign Out</a></li>
+            <li ng-if="!auth.isAuthenticated"><a href="" ng-click="auth.doSignIn()">Sign In / Sign Up</a></li>
+          </ul>
+        </div>
+    </div>
+</nav>

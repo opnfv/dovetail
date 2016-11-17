@@ -1,0 +1,50 @@
+##############################################################################
+# Copyright (c) 2016 Huawei Technologies Co.,Ltd and others.
+#
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Apache License, Version 2.0
+# which accompanies this distribution, and is available at
+# http://www.apache.org/licenses/LICENSE-2.0
+##############################################################################
+
+<html id="ng-app">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Dovetail">
+        <meta name="viewport" content="width=device-width">
+        <title>Dovetail</title>
+
+        <link rel="stylesheet" href="assets/lib/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/lib/angular-busy/dist/angular-busy.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <script src="assets/lib/angular/angular.min.js"></script>
+        <script src="assets/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="assets/lib/angular-resource/angular-resource.min.js"></script>
+        <script src="assets/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="assets/lib/angular-busy/dist/angular-busy.min.js"></script>
+        <script src="assets/lib/angular-confirm-modal/angular-confirm.js"></script>
+        <script src="app.js"></script>
+
+        <!-- Controllers -->
+        <script src="shared/header/headerController.js"></script>
+        <script src="shared/alerts/alertModalFactory.js"></script>
+        <script src="shared/alerts/confirmModalFactory.js"></script>
+        <script src="components/testcases/testcasesController.js"></script>
+        <script src="components/results/resultsController.js"></script>
+        <script src="components/results-report/resultsReportController.js"></script>
+        <script src="components/profile/profileController.js"></script>
+        <script src="components/auth-failure/authFailureController.js"></script>
+        <script src="components/logout/logoutController.js"></script>
+
+        <!-- Filters -->
+        <script src="shared/filters.js"></script>
+
+    </head>
+
+    <body class="container">
+        <header ng-include src="'shared/header/header.html'"></header>
+
+        <div ui-view></div>
+    </body>
+</html>
