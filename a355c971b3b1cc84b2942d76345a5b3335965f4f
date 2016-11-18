@@ -33,6 +33,24 @@
       "revId": "a355c971b3b1cc84b2942d76345a5b3335965f4f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_47ce3f85",
+        "filename": "dashboard/backend/dovetail/db/api.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-11-18T03:46:02Z",
+      "side": 1,
+      "message": "do you mean the naming format? class and function do have different naming style",
+      "parentUuid": "5ac10518_50d11ccc",
+      "revId": "a355c971b3b1cc84b2942d76345a5b3335965f4f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
