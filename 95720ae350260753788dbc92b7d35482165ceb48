@@ -16,6 +16,24 @@
       "revId": "95720ae350260753788dbc92b7d35482165ceb48",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_070357b9",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-11-18T01:05:29Z",
+      "side": 1,
+      "message": "Good suggestion. Thanks.",
+      "parentUuid": "5ac10518_505a7c84",
+      "revId": "95720ae350260753788dbc92b7d35482165ceb48",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
