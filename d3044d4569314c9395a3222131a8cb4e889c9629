@@ -1,0 +1,625 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_4eadf430",
+        "filename": "docs/testsuites/vimops/designspecification.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": ", provides or\nThis documents aims to provide",
+      "range": {
+        "startLine": 11,
+        "startChar": 31,
+        "endLine": 11,
+        "endChar": 42
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ee80608d",
+        "filename": "docs/testsuites/vimops/designspecification.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "to operate",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 12
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ae4a5881",
+        "filename": "docs/testsuites/vimops/designspecification.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "suite it passes",
+      "range": {
+        "startLine": 100,
+        "startChar": 38,
+        "endLine": 100,
+        "endChar": 50
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ce4fa491",
+        "filename": "docs/testsuites/vimops/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "this file is used to build by sphinx. \n./XXX suggest to be deleted.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 8
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6e447074",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "VIM operations",
+      "range": {
+        "startLine": 15,
+        "startChar": 16,
+        "endLine": 15,
+        "endChar": 41
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ee570025",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "exercised",
+      "range": {
+        "startLine": 15,
+        "startChar": 46,
+        "endLine": 15,
+        "endChar": 55
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ae31f80c",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "operations",
+      "range": {
+        "startLine": 25,
+        "startChar": 28,
+        "endLine": 25,
+        "endChar": 49
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_8e175c51",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "what does this mean?",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 30
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_4e097430",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "control plan   --or\ncontroller nodes and compute nodes",
+      "range": {
+        "startLine": 36,
+        "startChar": 63,
+        "endLine": 37,
+        "endChar": 50
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ee05c014",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "~is~",
+      "range": {
+        "startLine": 39,
+        "startChar": 45,
+        "endLine": 39,
+        "endChar": 47
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_0e036c10",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "restored",
+      "range": {
+        "startLine": 51,
+        "startChar": 40,
+        "endLine": 51,
+        "endChar": 48
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_c9047e17",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "two header spaces before Logs",
+      "range": {
+        "startLine": 55,
+        "startChar": 22,
+        "endLine": 55,
+        "endChar": 28
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6909ca2b",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "same with Logs",
+      "range": {
+        "startLine": 57,
+        "startChar": 23,
+        "endLine": 57,
+        "endChar": 30
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_890e7633",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 21
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2913c25d",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "the same",
+      "range": {
+        "startLine": 68,
+        "startChar": 18,
+        "endLine": 68,
+        "endChar": 23
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_091a866e",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "the",
+      "range": {
+        "startLine": 69,
+        "startChar": 20,
+        "endLine": 69,
+        "endChar": 21
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_e91cda6c",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "artifacts \nmore reasonable?",
+      "range": {
+        "startLine": 69,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 9
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6920ea9b",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "help to execute",
+      "range": {
+        "startLine": 77,
+        "startChar": 73,
+        "endLine": 78,
+        "endChar": 34
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_892516ad",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "the same",
+      "range": {
+        "startLine": 84,
+        "startChar": 26,
+        "endLine": 84,
+        "endChar": 33
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_293ae2cd",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "troubleshooting",
+      "range": {
+        "startLine": 92,
+        "startChar": 59,
+        "endLine": 92,
+        "endChar": 69
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_49372ee4",
+        "filename": "docs/testsuites/vimops/testplan.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "logs",
+      "range": {
+        "startLine": 92,
+        "startChar": 47,
+        "endLine": 92,
+        "endChar": 55
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_e9337af4",
+        "filename": "docs/testsuites/vimops/testprocedure.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "~containing~",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 10
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_093126ec",
+        "filename": "docs/testsuites/vimops/testprocedure.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "\u003e\u003e\u003e\u003e\u003e\u003e is something git used for conflicts, can we change it to others",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 41
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_a94d7274",
+        "filename": "docs/testsuites/vimops/vimops.tc006.specification.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "it is suitable for just use these in items, such as\n* Test Case Name: Image v2 update\n* Test Case ID:\n* Objective:\n\nOr we can use a table. \n\nUsing multiple chapter here is not efficient for description.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 53
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_c9523e13",
+        "filename": "docs/testsuites/vimops/vimops.tc006.specification.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "these definitions are fit for all the items?",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 20
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_69578a03",
+        "filename": "docs/testsuites/vimops/vimops.tc006.specification.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "the test case",
+      "range": {
+        "startLine": 80,
+        "startChar": 40,
+        "endLine": 80,
+        "endChar": 49
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_29418239",
+        "filename": "docs/testsuites/vimops/vimops.tc006.specification.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2016-11-23T08:15:06Z",
+      "side": 1,
+      "message": "the dedicated error code",
+      "range": {
+        "startLine": 81,
+        "startChar": 16,
+        "endLine": 81,
+        "endChar": 35
+      },
+      "revId": "d3044d4569314c9395a3222131a8cb4e889c9629",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
