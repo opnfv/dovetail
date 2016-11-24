@@ -36,11 +36,19 @@ class Report:
         checker.check(testcase, db_result)
 
     @classmethod
-    def generate_json(cls, scenario_yaml):
+    def generate_json(cls, testsuite_yaml, testarea):
         report_obj = {}
-        report_obj['scenario'] = scenario_yaml['name']
+        report_obj['testsuite'] = testsuite_yaml['name']
         report_obj['testcases_list'] = []
-        for testcase_name in scenario_yaml['testcases_list']:
+        testarea_list = []
+        for value in testsuite_yaml['testcases_list']:
+            if testarea == 'full' or (testarea in dt_config.testarea_supported and testarea in value):
+                testarea_validity = True
+            else: 
+                testarea_validity = False
+            if value is not None and testarea_validity:
+                testarea_list.append(value)
+        for testcase_name in testarea_list:
             testcase = Testcase.get(testcase_name)
             testcase_in_rpt = {}
             testcase_in_rpt['name'] = testcase_name
@@ -66,8 +74,8 @@ class Report:
         return report_obj
 
     @classmethod
-    def generate(cls, scenario_yaml):
-        rpt_data = cls.generate_json(scenario_yaml)
+    def generate(cls, testsuite_yaml, testarea):
+        rpt_data = cls.generate_json(testsuite_yaml, testarea)
         rpt_text = ''
         split_line = '+-----------------------------------------------------'
         split_line += '---------------------+\n'
@@ -76,7 +84,7 @@ class Report:
 +==========================================================================+\n\
 |                                   report                                 |\n'
         rpt_text += split_line
-        rpt_text += '|scenario: %s\n' % rpt_data['scenario']
+        rpt_text += '|testsuite: %s\n' % rpt_data['testsuite']
         for testcase in rpt_data['testcases_list']:
             rpt_text += '|   [testcase]: %s\t\t\t\t[%s]\n' % \
                 (testcase['name'], testcase['result'])

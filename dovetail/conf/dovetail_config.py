@@ -14,9 +14,10 @@ import re
 
 class DovetailConfig:
 
-    CERT_PATH = './cert/'
+    COMPLIANCE_PATH = './compliance/'
     TESTCASE_PATH = './testcase/'
-    SCENARIO_NAMING_FMT = 'certification_%s'
+    #testarea supported tuple, should adjust accordingly
+    testarea_supported = ('vimops', 'nfvi', 'ipv6')
 
     curr_path = os.path.dirname(os.path.abspath(__file__))
 
