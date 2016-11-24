@@ -13,7 +13,7 @@ import yaml
 import utils.dovetail_logger as dt_logger
 
 from parser import Parser
-from conf.dovetail_config import CERT_PATH
+from conf.dovetail_config import COMPLIANCE_PATH
 from conf.dovetail_config import TESTCASE_PATH
 from conf.dovetail_config import dovetail_config
 
@@ -156,10 +156,10 @@ class Testcase:
         return None
 
 
-class Scenario:
+class Testsuite:
 
-    def __init__(self, scenario):
-        self.scenario = scenario
+    def __init__(self, testsuite):
+        self.testsuite = testsuite
         self.testcase_list = {}
 
     def get_test(self, testcase_name):
@@ -167,20 +167,20 @@ class Scenario:
             return self.testcase_list[testcase_name]
         return None
 
-    scenario_list = {}
+    testsuite_list = {}
 
     @classmethod
     def load(cls):
-        for root, dirs, files in os.walk(CERT_PATH):
-            for scenario_yaml in files:
-                with open(os.path.join(root, scenario_yaml)) as f:
-                    scenario_yaml = yaml.safe_load(f)
-                    cls.scenario_list.update(scenario_yaml)
+        for root, dirs, files in os.walk(COMPLIANCE_PATH):
+            for testsuite_yaml in files:
+                with open(os.path.join(root, testsuite_yaml)) as f:
+                    testsuite_yaml = yaml.safe_load(f)
+                    cls.testsuite_list.update(testsuite_yaml)
 
-        logger.debug(cls.scenario_list)
+        logger.debug(cls.testsuite_list)
 
     @classmethod
-    def get(cls, scenario_name):
-        if scenario_name in cls.scenario_list:
-            return cls.scenario_list[scenario_name]
+    def get(cls, testsuite_name):
+        if testsuite_name in cls.testsuite_list:
+            return cls.testsuite_list[testsuite_name]
         return None

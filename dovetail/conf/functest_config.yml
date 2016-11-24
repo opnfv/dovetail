@@ -1,6 +1,6 @@
 functest:
   image_name: opnfv/functest
-  docker_tag: latest
+  docker_tag: stable
   envs: '-e INSTALLER_TYPE=compass -e INSTALLER_IP=192.168.200.2
          -e NODE_NAME=dovetail-pod -e DEPLOY_SCENARIO=ha_nosdn
          -e BUILD_TAG=dovetail -e CI_DEBUG=true -e DEPLOY_TYPE=baremetal'
@@ -10,8 +10,8 @@ functest:
       - 'echo test for precondition'
   testcase:
     cmds:
-      - 'python /home/opnfv/repos/functest/ci/prepare_env.py start'
-      - 'python /home/opnfv/repos/functest/ci/run_tests.py -t {{script_testcase}} -r'
+      - 'functest env prepare'
+      - 'functest testcase run {{script_testcase}}'
   post_condition:
     cmds:
       - ''
