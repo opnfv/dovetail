@@ -69,21 +69,18 @@ At this point the environment is now ready for Dovetail execution.
 Compliance and certification test cases
 ----------------------------------------
 
-The compliance and certification test cases can be defined under the ``/dovetail/cert``
+The compliance and certification test cases can be defined under the ``/dovetail/compliance``
 directory, which is defined in yaml format.
 A sample file named ``compliance_set.yml`` is provided as follows:
 
 ::
 
-  certification_compliance_set:
-    name: certification_compliance_set
+  compliance_set:
+    name: compliance_set
     testcases_list:
       - dovetail.ipv6.tc001
 
 The testcase listed here is dovetail.ipv6.tc001, defined within ``dovetail/testcase``.
-
-Note: if a new test case yaml file is created, its name should start with ``certification_``,
-in similiar fashion as the sample file ``certification_compliance_set``.
 
 Running Dovetail tool
 ---------------------
@@ -92,10 +89,17 @@ After environment preparation is complete and test cases added, the Dovetail too
 
 ::
 
-  python run.py --scenario compliance_set
+  python run.py --testsuite compliance_set
 
-The value ``compliance_set`` passed to the ``scenario`` flag can be replaced with the test cases yaml file.
-If not argument is given, the compliance_set scenario will be run as the default.
+The value ``compliance_set`` passed to the ``testsuite`` flag can be replaced with the test cases yaml file.
+If not argument is given, the compliance_set testsuite will be run as the default.
+
+Moreover, the testcases in given testarea can be run with ``testarea`` command line argument, such as
+testarea ``ipv6`` in ``compliance_set``
+
+::
+
+  python run.py --testsuite compliance_set --testarea ipv6
 
 Running Dovetail in a Docker container
 ########################################
@@ -145,10 +149,10 @@ Attach to the container by starting it and obtaining a bash prompt with ::
 Inside the container the following commands can be executed to trigger the testcases ::
 
    cd /home/opnfv/dovetail/dovetail
-   python run.py --scenario compliance_set
+   python run.py --testsuite compliance_set
 
 Results Output
 ###############
 
 The running log is stored in ``/home/opnfv/dovetail/results/dovetail.log``.
-The certification report is stored in ``/home/opnfv/dovetail/results/dovetail_report.txt``.
+The compliance report is stored in ``/home/opnfv/dovetail/results/dovetail_report.txt``.
