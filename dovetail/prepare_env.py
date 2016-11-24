@@ -9,7 +9,6 @@
 
 import platform
 
-import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
 
 
@@ -52,15 +51,14 @@ def get_docker_pkgname(os):
 
 def main():
     """Dovetail prepare env main"""
-    logger = dt_logger.Logger('prepare_env.py').getLogger()
 
     os_name = get_os_lower()
     cmd = "sudo %s -y install %s python-pip" \
         % (get_install_bin(os_name), get_docker_pkgname(os_name))
-    dt_utils.exec_cmd(cmd, logger)
+    dt_utils.exec_cmd(cmd)
 
     cmd = "sudo pip install click pyyaml jinja2"
-    dt_utils.exec_cmd(cmd, logger)
+    dt_utils.exec_cmd(cmd)
 
 
 if __name__ == '__main__':
