@@ -11,9 +11,8 @@ import yaml
 import os
 import re
 
-CERT_PATH = './cert/'
+COMPLIANCE_PATH = './compliance/'
 TESTCASE_PATH = './testcase/'
-SCENARIO_NAMING_FMT = 'certification_%s'
 
 curr_path = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(curr_path, 'dovetail_config.yml')) as f:
