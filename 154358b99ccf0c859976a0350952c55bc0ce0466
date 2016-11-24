@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_f47912fd",
+        "filename": "dovetail/run.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-24T09:58:52Z",
+      "side": 1,
+      "message": "IIUC, testarea refers to \u0027ipv6\u0027 \u0027vimops\u0027 or \u0027nfvi\u0027, then above code may not be accurate, for example, if I give \u0027dovetail\u0027 or \u0027tc\u0027 to testarea, then all the cases will be executed. also might be good to take upper and lower-case letters into consideration just like what we did for envs parameters.",
+      "range": {
+        "startLine": 47,
+        "startChar": 56,
+        "endLine": 47,
+        "endChar": 73
+      },
+      "revId": "154358b99ccf0c859976a0350952c55bc0ce0466",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
