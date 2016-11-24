@@ -1,5 +1,5 @@
-certification_proposed_tests:
-  name: certification_proposed_tests
+proposed_tests:
+  name: proposed_tests
   testcases_list:
     # TO DO: will adjust the dovetail tool to support in later patches
     # run.py --name1 {**/proposed/compliance} --name2 {**/vim/ipv6,etc}

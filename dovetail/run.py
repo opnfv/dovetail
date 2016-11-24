@@ -16,18 +16,17 @@ import utils.dovetail_logger as dt_logger
 
 from container import Container
 from testcase import Testcase
-from testcase import Scenario
+from testcase import Testsuite
 from report import Report
-from conf.dovetail_config import SCENARIO_NAMING_FMT
 from conf.dovetail_config import dovetail_config
 from conf.dovetail_config import update_envs
 
 logger = dt_logger.Logger('run.py').getLogger()
 
 
-def load_scenario(scenario):
-    Scenario.load()
-    return Scenario.get(SCENARIO_NAMING_FMT % scenario)
+def load_testsuite(testsuite):
+    Testsuite.load()
+    return Testsuite.get(testsuite)
 
 
 def set_container_tags(option_str):
@@ -42,8 +41,13 @@ def load_testcase():
     Testcase.load()
 
 
-def run_test(scenario):
-    for testcase_name in scenario['testcases_list']:
+def run_test(testsuite, testarea):
+    testarea_list = []
+    for value in testsuite['testcases_list']:
+        if value is not None and (testarea == 'full' or testarea in value):
+            testarea_list.append(value)
+
+    for testcase_name in testarea_list:
         logger.info('>>[testcase]: %s' % (testcase_name))
         testcase = Testcase.get(testcase_name)
         if testcase is None:
@@ -104,10 +108,10 @@ def filter_env_options(input_dict):
 
 
 def main(*args, **kwargs):
-    """Dovetail certification test entry!"""
-    logger.info('=======================================')
-    logger.info('Dovetail certification: %s!' % (kwargs['scenario']))
-    logger.info('=======================================')
+    """Dovetail compliance test entry!"""
+    logger.info('================================================')
+    logger.info('Dovetail compliance: %s!' % (kwargs['testsuite']))
+    logger.info('================================================')
     validate_options(kwargs)
     envs_options = filter_env_options(kwargs)
     update_envs(envs_options)
@@ -116,11 +120,13 @@ def main(*args, **kwargs):
     logger.info('Your new envs for yardstick: %s' %
                 dovetail_config['yardstick']['envs'])
     load_testcase()
-    scenario_yaml = load_scenario(kwargs['scenario'])
+    testsuite_yaml = load_testsuite(kwargs['testsuite'])
+    testarea = kwargs['testarea']
     if 'tag' in kwargs and kwargs['tag'] is not None:
         set_container_tags(kwargs['tag'])
-    run_test(scenario_yaml)
-    Report.generate(scenario_yaml)
+
+    run_test(testsuite_yaml, testarea)
+    Report.generate(testsuite_yaml, testarea)
 
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
