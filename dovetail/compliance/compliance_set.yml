@@ -1,5 +1,5 @@
-certification_compliance_set:
-  name: certification_compliance_set
+compliance_set:
+  name: compliance_set
   testcases_list:
     # Temporarily, one test case kept here as default to run
     # for use of software development/debug

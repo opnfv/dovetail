@@ -37,12 +37,16 @@ cli:
           - '-d'
         help: 'CI_DEBUG for showing debug log.'
     non-envs:
-      scenario:
+      testsuite:
         flags:
-          - '--scenario'
-          - '-s'
+          - '--testsuite'
         default: 'compliance_set'
-        help: 'certification scenario.'
+        help: 'compliance testsuite.'
+      testarea:
+        flags:
+          - '--testarea'
+        default: 'full'
+        help: 'compliance testarea within testsuite'
       tag:
         flags:
           - '--tag'
