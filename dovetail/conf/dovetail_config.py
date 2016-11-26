@@ -21,19 +21,23 @@ class DovetailConfig:
     # testarea supported tuple, should adjust accordingly
     testarea_supported = ('vimops', 'nfvi', 'ipv6')
 
-    curr_path = os.path.dirname(os.path.abspath(__file__))
+    dovetail_config = {}
 
-    with open(os.path.join(curr_path, 'dovetail_config.yml')) as f:
-        dovetail_config = yaml.safe_load(f)
+    @classmethod
+    def load_config_files(cls):
+        curr_path = os.path.dirname(os.path.abspath(__file__))
+        with open(os.path.join(curr_path, 'dovetail_config.yml')) as f:
+            cls.dovetail_config = yaml.safe_load(f)
 
-    for extra_config_file in dovetail_config['include_config']:
-        with open(os.path.join(curr_path, extra_config_file)) as f:
-            extra_config = yaml.safe_load(f)
-            dovetail_config.update(extra_config)
+        for extra_config_file in cls.dovetail_config['include_config']:
+            with open(os.path.join(curr_path, extra_config_file)) as f:
+                extra_config = yaml.safe_load(f)
+                cls.dovetail_config.update(extra_config)
 
-    with open(os.path.join(curr_path, dovetail_config['cli_file_name'])) as f:
-        cmd_yml = yaml.safe_load(f)
-        dovetail_config['cli'] = cmd_yml[cmd_yml.keys()[0]]
+        path = os.path.join(curr_path, cls.dovetail_config['cli_file_name'])
+        with open(path) as f:
+            cmd_yml = yaml.safe_load(f)
+            cls.dovetail_config['cli'] = cmd_yml[cmd_yml.keys()[0]]
 
     @classmethod
     def cmd_name_trans(cls, cmd_name):

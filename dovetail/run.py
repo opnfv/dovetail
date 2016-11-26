@@ -155,6 +155,8 @@ def main(*args, **kwargs):
                      (kwargs['testsuite'], testarea))
 
 
+dt_config.load_config_files()
+
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 if dt_config.dovetail_config['cli']['options'] is not None:
     for key, value in dt_config.dovetail_config['cli']['options'].items():
