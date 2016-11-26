@@ -10,6 +10,7 @@
 
 import click
 import sys
+import os
 
 import utils.dovetail_logger as dt_logger
 
@@ -101,8 +102,16 @@ def filter_env_options(input_dict):
     return envs_options
 
 
+def clean_results_dir():
+    result_path = dt_config.dovetail_config['result_dir']
+    if os.path.exists(result_path):
+        cmd = 'sudo rm -rf %s/*' % (result_path)
+        dt_utils.exec_cmd(cmd, exit_on_error=False)
+
+
 def main(*args, **kwargs):
     """Dovetail certification test entry!"""
+    clean_results_dir()
     logger.info('=======================================')
     logger.info('Dovetail certification: %s!' % (kwargs['scenario']))
     logger.info('=======================================')

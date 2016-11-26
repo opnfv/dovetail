@@ -28,15 +28,6 @@ from conf.dovetail_config import DovetailConfig as dt_config
 import dovetail_utils as dt_utils
 
 
-def clean_results_dir():
-    result_path = dt_config.dovetail_config['result_dir']
-    if os.path.exists(result_path):
-        cmd = 'sudo rm -rf %s/*' % (result_path)
-        dt_utils.exec_cmd(cmd, exit_on_error=False)
-
-clean_results_dir()
-
-
 class Logger:
     def __init__(self, logger_name):
 
