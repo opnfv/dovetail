@@ -125,7 +125,7 @@ def _do_download(version, download_base, to_dir, download_delay):
     egg = os.path.join(to_dir, tp.format(**locals()))
     if not os.path.exists(egg):
         archive = download_setuptools(version, download_base,
-            to_dir, download_delay)
+                                      to_dir, download_delay)
         _build_egg(egg, archive, to_dir)
     sys.path.insert(0, egg)
 
@@ -235,7 +235,8 @@ def download_file_powershell(url, target):
     ps_cmd = (
         "[System.Net.WebRequest]::DefaultWebProxy.Credentials = "
         "[System.Net.CredentialCache]::DefaultCredentials; "
-        '(new-object System.Net.WebClient).DownloadFile("%(url)s", "%(target)s")'
+        '(new-object System.Net.WebClient).DownloadFile("%(url)s", \
+        "%(target)s")'
         % locals()
     )
     cmd = [
