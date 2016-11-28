@@ -52,6 +52,8 @@ class DovetailConfig:
 
     @classmethod
     def update_config_envs(cls, script_type, key):
+        if key == 'DEBUG':
+            os.environ['CI_DEBUG'] = os.environ[key]
         envs = cls.dovetail_config[script_type]['envs']
         old_value = re.findall(r'\s+%s=(.*?)(\s+|$)' % key, envs)
         if old_value == []:
