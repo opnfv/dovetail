@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_207af088",
+        "filename": "dovetail/run.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-11-28T01:54:34Z",
+      "side": 1,
+      "message": "I think it is more efficient to move Line 125 and line 126 into it, since it will not load the whole testsuites and test cases if with wrong options.",
+      "range": {
+        "startLine": 134,
+        "startChar": 4,
+        "endLine": 134,
+        "endChar": 52
+      },
+      "revId": "3bf95fd09e2128f1cd762905c5d69cf66b56fd75",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
