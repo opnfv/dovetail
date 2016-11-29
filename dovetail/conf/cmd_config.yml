@@ -31,11 +31,11 @@ cli:
           - '--DEPLOY_TYPE'
           - '-T'
         help: 'DEPLOY_TYPE of the system under test (SUT).'
-      CI_DEBUG:
+      DEBUG:
         flags:
-          - '--CI_DEBUG'
+          - '--DEBUG'
           - '-d'
-        help: 'CI_DEBUG for showing debug log.'
+        help: 'DEBUG for showing debug log.'
     non-envs:
       testsuite:
         flags:
