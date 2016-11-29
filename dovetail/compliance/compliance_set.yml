@@ -4,4 +4,5 @@ compliance_set:
     # Temporarily, one test case kept here as default to run
     # for use of software development/debug
     # TO DO: will amend when compliance set is settled
+    - dovetail.ipv6.tc002
     - dovetail.ipv6.tc001

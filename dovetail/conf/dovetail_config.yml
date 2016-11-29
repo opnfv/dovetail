@@ -11,8 +11,8 @@ cli_file_name: 'cmd_config.yml'
 parameters:
   - name: testcase
     path: '("name",)'
-  - name: script_testcase
-    path: '("scripts", "testcase")'
+  - name: validate_testcase
+    path: '("validate", "testcase")'
 
 include_config:
   - functest_config.yml
