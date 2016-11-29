@@ -1,9 +1,17 @@
 dovetail.ipv6.tc001:
   name: dovetail.ipv6.tc001
   objective: Bulk creation and deletion of IPv6 networks, ports and subnets
-  scripts:
+  validate:
     type: functest
     testcase: tempest_smoke_serial
+    pre_condition:
+      - 'echo test for precondition'
+    cmds:
+      - 'functest env prepare'
+      - 'functest testcase run {{script_testcase}}'
+    post_condition:
+      - 'echo test for precondition'
+  report:
     sub_testcase_list:
       - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_network
       - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_port
