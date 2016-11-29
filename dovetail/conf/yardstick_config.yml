@@ -7,21 +7,18 @@ yardstick:
          -e EXTERNAL_NETWORK=ext-net'
   opts: '-id --privileged=true'
   pre_condition:
-    cmds:
-      - 'source /home/opnfv/repos/yardstick/tests/ci/prepare_env.sh &&
+    - 'source /home/opnfv/repos/yardstick/tests/ci/prepare_env.sh &&
          source /home/opnfv/repos/yardstick/tests/ci/clean_images.sh && cleanup'
-      - 'source /home/opnfv/repos/yardstick/tests/ci/prepare_env.sh &&
+    - 'source /home/opnfv/repos/yardstick/tests/ci/prepare_env.sh &&
          cd /home/opnfv/repos/yardstick && source tests/ci/load_images.sh'
-  testcase:
-    cmds:
-      - 'mkdir -p /home/opnfv/yardstick/results/'
-      - 'cd /home/opnfv/repos/yardstick && source tests/ci/prepare_env.sh &&
-         yardstick task start tests/opnfv/test_cases/{{script_testcase}}.yaml
-         --output-file /home/opnfv/yardstick/results/{{script_testcase}}.out &>
+  cmds:
+    - 'mkdir -p /home/opnfv/yardstick/results/'
+    - 'cd /home/opnfv/repos/yardstick && source tests/ci/prepare_env.sh &&
+         yardstick task start tests/opnfv/test_cases/{{validate_testcase}}.yaml
+         --output-file /home/opnfv/yardstick/results/{{validate_testcase}}.out &>
          /home/opnfv/yardstick/results/yardstick.log'
   post_condition:
-    cmds:
-      - ''
+    - ''
   result:
     dir: '/home/opnfv/yardstick/results'
     store_type: 'file'

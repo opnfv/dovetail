@@ -1,8 +1,9 @@
 dovetail.ipv6.tc025:
   name: dovetail.ipv6.tc025
   objective: VIM ipv6 operations, to do IPv6 address assignment - dual stack, multiple prefixes, SLAAC
-  scripts:
+  validate:
     type: functest
     testcase: tempest_full_parallel
+  report:
     sub_testcase_list:
       - tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_multi_prefix_slaac

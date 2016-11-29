@@ -11,7 +11,6 @@
 import click
 import sys
 import os
-import time
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
@@ -24,6 +23,7 @@ from report import Report
 from report import FunctestCrawler, YardstickCrawler
 from report import FunctestChecker, YardstickChecker
 from conf.dovetail_config import DovetailConfig as dt_cfg
+from test_runner import DockerRunner, ShellRunner
 
 
 def load_testsuite(testsuite):
@@ -34,9 +34,9 @@ def load_testsuite(testsuite):
 def set_container_tags(option_str):
     for script_tag_opt in option_str.split(','):
         option_str = script_tag_opt.split(':')
-        script_type = option_str[0].strip()
+        validate_type = option_str[0].strip()
         script_tag = option_str[1].strip()
-        dt_cfg.dovetail_config[script_type]['docker_tag'] = script_tag
+        dt_cfg.dovetail_config[validate_type]['docker_tag'] = script_tag
 
 
 def load_testcase():
@@ -66,29 +66,7 @@ def run_test(testsuite, testarea, logger):
             run_testcase = False
 
         if run_testcase:
-            Container.pull_image(testcase.script_type())
-            container_id = Container.create(testcase.script_type())
-            logger.debug('container id:%s' % container_id)
-
-            if not Testcase.prepared(testcase.script_type()):
-                cmds = testcase.pre_condition()['cmds']
-                if cmds:
-                    for cmd in cmds:
-                        Container.exec_cmd(container_id, cmd)
-                Testcase.prepared(testcase.script_type(), True)
-
-            if not testcase.prepare_cmd():
-                logger.error('failed to prepare testcase:%s' % testcase.name())
-            else:
-                start_time = time.time()
-                for cmd in testcase.cmds:
-                    Container.exec_cmd(container_id, cmd)
-                end_time = time.time()
-                duration = end_time - start_time
-
-            # testcase.post_condition()
-
-            Container.clean(container_id)
+            testcase.run()
 
         db_result = Report.get_result(testcase)
         Report.check_result(testcase, db_result)
@@ -125,6 +103,8 @@ def create_logs():
     YardstickChecker.create_log()
     Testcase.create_log()
     Testsuite.create_log()
+    DockerRunner.create_log()
+    ShellRunner.create_log()
 
 
 def clean_results_dir():
