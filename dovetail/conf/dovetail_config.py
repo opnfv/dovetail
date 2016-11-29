@@ -47,9 +47,10 @@ class DovetailConfig:
     @classmethod
     def update_envs(cls, options):
         for item in options:
-            if options[item] is not None:
-                key = cls.cmd_name_trans(item)
-                os.environ[key] = options[item]
+            key = cls.cmd_name_trans(item)
+            if not options[item] and key in os.environ:
+                options[item] = os.environ[key]
+            if options[item]:
                 cls.update_config_envs('functest', key)
                 cls.update_config_envs('yardstick', key)
 
