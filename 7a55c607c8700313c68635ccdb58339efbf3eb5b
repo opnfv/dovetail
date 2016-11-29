@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_5adb68ed",
+        "filename": "dovetail/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-11-29T07:07:38Z",
+      "side": 1,
+      "message": "what about loading testsuite first and then load_testcase ? in this way, we could have further optimization that only load specified testsuite and testcases;  \ncurrent implementation loads all the cases and suites under given path.",
+      "range": {
+        "startLine": 149,
+        "startChar": 8,
+        "endLine": 150,
+        "endChar": 60
+      },
+      "revId": "7a55c607c8700313c68635ccdb58339efbf3eb5b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
