@@ -11,7 +11,6 @@
 import click
 import sys
 import os
-import time
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
@@ -66,29 +65,7 @@ def run_test(testsuite, testarea, logger):
             run_testcase = False
 
         if run_testcase:
-            Container.pull_image(testcase.script_type())
-            container_id = Container.create(testcase.script_type())
-            logger.debug('container id:%s' % container_id)
-
-            if not Testcase.prepared(testcase.script_type()):
-                cmds = testcase.pre_condition()['cmds']
-                if cmds:
-                    for cmd in cmds:
-                        Container.exec_cmd(container_id, cmd)
-                Testcase.prepared(testcase.script_type(), True)
-
-            if not testcase.prepare_cmd():
-                logger.error('failed to prepare testcase:%s' % testcase.name())
-            else:
-                start_time = time.time()
-                for cmd in testcase.cmds:
-                    Container.exec_cmd(container_id, cmd)
-                end_time = time.time()
-                duration = end_time - start_time
-
-            # testcase.post_condition()
-
-            Container.clean(container_id)
+            testcase.run()
 
         db_result = Report.get_result(testcase)
         Report.check_result(testcase, db_result)
