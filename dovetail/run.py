@@ -138,8 +138,6 @@ def main(*args, **kwargs):
     if 'tag' in kwargs and kwargs['tag'] is not None:
         set_container_tags(kwargs['tag'])
 
-    load_testcase()
-    testsuite_yaml = load_testsuite(kwargs['testsuite'])
     testarea = kwargs['testarea']
     testsuite_validation = False
     testarea_validation = False
@@ -148,6 +146,8 @@ def main(*args, **kwargs):
     if kwargs['testsuite'] in dt_config.testsuite_supported:
         testsuite_validation = True
     if testsuite_validation and testarea_validation:
+        testsuite_yaml = load_testsuite(kwargs['testsuite'])
+        load_testcase()
         run_test(testsuite_yaml, testarea, logger)
         Report.generate(testsuite_yaml, testarea)
     else:
