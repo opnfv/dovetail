@@ -10,7 +10,7 @@ Dovetail Tool
 What is Dovetail tool
 #####################
 
-A toolset for providing an evaluation of a deployed cloud environment for OPNFV certification.
+A toolset for providing an evaluation of a deployed cloud environment for OPNFV compliance.
 
 Overview
 ########
