@@ -1,0 +1,8 @@
+example_set:
+  name: example_set 
+  testcases_list:
+    # Temporarily, one test case kept here as default to run
+    # for use of software development/debug
+    # TO DO: will amend when compliance set is settled
+    - dovetail.example.tc001
+    - dovetail.example.tc002
