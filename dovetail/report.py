@@ -30,7 +30,7 @@ def get_pass_str(passed):
 
 class Report:
 
-    results = {'functest': {}, 'yardstick': {}}
+    results = {'functest': {}, 'yardstick': {}, 'shell': {}}
 
     logger = None
 
@@ -41,7 +41,8 @@ class Report:
     @staticmethod
     def check_result(testcase, db_result):
         checker = CheckerFactory.create(testcase.script_type())
-        checker.check(testcase, db_result)
+        if checker is not None:
+            checker.check(testcase, db_result)
 
     @classmethod
     def generate_json(cls, testsuite_yaml, testarea, duration):
@@ -165,6 +166,8 @@ class Report:
         script_testcase = testcase.script_testcase()
         type = testcase.script_type()
         crawler = CrawlerFactory.create(type)
+        if crawler is None:
+            return None
 
         if script_testcase in cls.results[type]:
             return cls.results[type][script_testcase]

@@ -1,9 +1,10 @@
 dovetail.ipv6.tc004:
   name: dovetail.ipv6.tc004
   objective: VIM ipv6 operations, to list IPv6 networks and subnets of a tenant
-  scripts:
+  validate:
     type: functest
     testcase: tempest_smoke_serial
+  report:
     sub_testcase_list:
       - tempest.api.network.test_networks.NetworksIpV6Test.test_list_networks
       - tempest.api.network.test_networks.NetworksIpV6Test.test_list_subnets

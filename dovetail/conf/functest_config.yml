@@ -6,15 +6,12 @@ functest:
          -e BUILD_TAG=dovetail -e CI_DEBUG=true -e DEPLOY_TYPE=baremetal'
   opts: '-id --privileged=true'
   pre_condition:
-    cmds:
-      - 'echo test for precondition'
-  testcase:
-    cmds:
-      - 'functest env prepare'
-      - 'functest testcase run {{script_testcase}}'
+    - 'echo test for precondition'
+  cmds:
+    - 'functest env prepare'
+    - 'functest testcase run {{validate_testcase}}'
   post_condition:
-    cmds:
-      - ''
+    - ''
   result:
     dir: '/home/opnfv/functest/results'
     store_type: 'file'

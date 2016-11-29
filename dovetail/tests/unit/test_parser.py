@@ -32,7 +32,8 @@ class TestParser(unittest.TestCase):
 
     def test_parser_cmd(self):
         """Test whether the command is correctly parsed."""
-        mock_cmd = "python /functest/ci/run_tests.py -t {{script_testcase}} -r"
+        mock_cmd = "python /functest/ci/run_tests.py "\
+                   "-t {{validate_testcase}} -r"
         with open(os.path.join(self.test_path, 'test_testcase.yaml')) as f:
             mock_testcase_yaml = yaml.safe_load(f)
         MockTestcase = type('Testcase', (object,), {})
@@ -45,7 +46,8 @@ class TestParser(unittest.TestCase):
 
     def test_parser_cmd_fail(self):
         """Test whether the command is correctly parsed."""
-        mock_cmd = "python /functest/ci/run_tests.py -t {{script_testcase}} -r"
+        mock_cmd = "python /functest/ci/run_tests.py "\
+                   "-t {{validate_testcase}} -r"
         mock_testcase_yaml = {}
         MockTestcase = type('Testcase', (object,), {})
         mock_testcase = MockTestcase()
@@ -54,6 +56,7 @@ class TestParser(unittest.TestCase):
         expected_output = ("python /functest/ci/run_tests.py -t "
                            "None -r")
         self.assertEqual(expected_output, output)
+
 
 if __name__ == '__main__':
     unittest.main()
