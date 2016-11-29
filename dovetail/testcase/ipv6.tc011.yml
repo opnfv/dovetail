@@ -1,8 +1,9 @@
 dovetail.ipv6.tc011:
   name: dovetail.ipv6.tc011
   objective: VIM ipv6 operations, to add multiple interfaces for an IPv6 router
-  scripts:
+  validate:
     type: functest
     testcase: tempest_smoke_serial
+  report:
     sub_testcase_list:
       - tempest.api.network.test_routers.RoutersIpV6Test.test_add_multiple_router_interfaces

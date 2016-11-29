@@ -1,8 +1,9 @@
 dovetail.ipv6.tc022:
   name: dovetail.ipv6.tc022
   objective: VIM ipv6 operations, to do IPv6 Address Assignment - SLAAC
-  scripts:
+  validate:
     type: functest
     testcase: tempest_full_parallel
+  report:
     sub_testcase_list:
       - tempest.scenario.test_network_v6.TestGettingAddress.test_slaac_from_os
