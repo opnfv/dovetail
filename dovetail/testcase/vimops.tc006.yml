@@ -1,9 +1,10 @@
 dovetail.vimops.tc006:
   name: dovetail.vimops.tc006
   objective: Glance images v2 update
-  scripts:
+  validate:
     type: functest
     testcase: tempest_full_parallel
+  report:
     sub_testcase_list:
       - tempest.api.image.v2.test_images.BasicOperationsImagesTest.test_update_image
       - tempest.api.image.v2.test_images_tags.ImagesTagsTest.test_update_delete_tags_for_image
