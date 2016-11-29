@@ -55,5 +55,6 @@ class TestParser(unittest.TestCase):
                            "None -r")
         self.assertEqual(expected_output, output)
 
+
 if __name__ == '__main__':
     unittest.main()

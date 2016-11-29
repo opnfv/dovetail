@@ -1,8 +1,9 @@
 dovetail.ipv6.tc009:
   name: dovetail.ipv6.tc009
   objective: VIM ipv6 operations, to list IPv6 ports of a tenant
-  scripts:
+  validate:
     type: functest
     testcase: tempest_smoke_serial
+  report:
     sub_testcase_list:
       - tempest.api.network.test_ports.PortsIpV6TestJSON.test_list_ports
