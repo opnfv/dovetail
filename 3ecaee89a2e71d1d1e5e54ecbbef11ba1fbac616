@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_fa09f495",
+        "filename": "dovetail/run.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 4609
+      },
+      "writtenOn": "2016-11-29T06:22:26Z",
+      "side": 1,
+      "message": "How about to add \"os.path.isdir\" as well in \"if os.path...\"?",
+      "revId": "3ecaee89a2e71d1d1e5e54ecbbef11ba1fbac616",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
