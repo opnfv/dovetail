@@ -54,12 +54,12 @@ class DovetailConfig:
                 cls.update_config_envs('yardstick', key, options[item])
 
     @classmethod
-    def update_config_envs(cls, script_type, key, value):
-        envs = cls.dovetail_config[script_type]['envs']
+    def update_config_envs(cls, validate_type, key, value):
+        envs = cls.dovetail_config[validate_type]['envs']
         old_value = re.findall(r'\s+%s=(.*?)(\s+|$)' % key, envs)
         if old_value == []:
             envs += ' -e ' + key + '=' + value
         else:
             envs = envs.replace(old_value[0][0], value)
-        cls.dovetail_config[script_type]['envs'] = envs
+        cls.dovetail_config[validate_type]['envs'] = envs
         return envs

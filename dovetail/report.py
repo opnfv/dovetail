@@ -30,7 +30,7 @@ def get_pass_str(passed):
 
 class Report:
 
-    results = {'functest': {}, 'yardstick': {}}
+    results = {'functest': {}, 'yardstick': {}, 'shell': {}}
 
     logger = None
 
@@ -40,8 +40,9 @@ class Report:
 
     @staticmethod
     def check_result(testcase, db_result):
-        checker = CheckerFactory.create(testcase.script_type())
-        checker.check(testcase, db_result)
+        checker = CheckerFactory.create(testcase.validate_type())
+        if checker is not None:
+            checker.check(testcase, db_result)
 
     @classmethod
     def generate_json(cls, testsuite_yaml, testarea, duration):
@@ -163,24 +164,26 @@ class Report:
 
     @classmethod
     def get_result(cls, testcase):
-        script_testcase = testcase.script_testcase()
-        type = testcase.script_type()
+        validate_testcase = testcase.validate_testcase()
+        type = testcase.validate_type()
         crawler = CrawlerFactory.create(type)
+        if crawler is None:
+            return None
 
-        if script_testcase in cls.results[type]:
-            return cls.results[type][script_testcase]
+        if validate_testcase in cls.results[type]:
+            return cls.results[type][validate_testcase]
 
-        result = crawler.crawl(script_testcase)
+        result = crawler.crawl(validate_testcase)
 
         if result is not None:
-            cls.results[type][script_testcase] = result
+            cls.results[type][validate_testcase] = result
             testcase.script_result_acquired(True)
             cls.logger.debug('testcase: %s -> result acquired' %
-                             script_testcase)
+                             validate_testcase)
         else:
             retry = testcase.increase_retry()
             cls.logger.debug('testcase: %s -> result acquired retry:%d' %
-                             (script_testcase, retry))
+                             (validate_testcase, retry))
         return result
 
 

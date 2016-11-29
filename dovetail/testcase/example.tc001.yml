@@ -1,5 +1,5 @@
-dovetail.ipv6.tc001:
-  name: dovetail.ipv6.tc001
+dovetail.example.tc001:
+  name: dovetail.example.tc001
   objective: Bulk creation and deletion of IPv6 networks, ports and subnets
   validate:
     type: functest
