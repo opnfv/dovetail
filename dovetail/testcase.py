@@ -14,33 +14,30 @@ import utils.dovetail_logger as dt_logger
 
 from parser import Parser
 from conf.dovetail_config import DovetailConfig as dt_config
+from test_runner import TestRunnerFactory
 
 
-class Testcase:
+class Testcase(object):
 
     logger = None
 
     def __init__(self, testcase_yaml):
         self.testcase = testcase_yaml.values()[0]
+        self.logger.debug('testcase:%s' % self.testcase)
         self.testcase['passed'] = False
         self.cmds = []
         self.sub_testcase_status = {}
-        self.update_script_testcase(self.script_type(),
-                                    self.script_testcase())
+        self.update_validate_testcase(self.script_testcase())
 
     @classmethod
     def create_log(cls):
         cls.logger = dt_logger.Logger(__name__+'.Testcase').getLogger()
 
     def prepare_cmd(self):
-        script_type = self.script_type()
-        for cmd in dt_config.dovetail_config[script_type]['testcase']['cmds']:
-            cmd_lines = Parser.parse_cmd(cmd, self)
-            if not cmd_lines:
-                return False
-            self.cmds.append(cmd_lines)
-
-        return True
+        if 'cmds' in self.testcase['validate']:
+            self.cmds = self.testcase['validate']['cmds']
+            return True
+        return False
 
     def __str__(self):
         return self.testcase
@@ -52,7 +49,9 @@ class Testcase:
         return self.testcase['objective']
 
     def sub_testcase(self):
-        return self.testcase['scripts']['sub_testcase_list']
+        if 'report' in self.testcase:
+            return self.testcase['report']['sub_testcase_list']
+        return []
 
     def sub_testcase_passed(self, name, passed=None):
         if passed is not None:
@@ -61,20 +60,19 @@ class Testcase:
         return self.sub_testcase_status[name]
 
     def script_type(self):
-        return self.testcase['scripts']['type']
+        return self.testcase['validate']['type']
 
     def script_testcase(self):
-        return self.testcase['scripts']['testcase']
+        return self.testcase['validate']['testcase']
 
     def exceed_max_retry_times(self):
         # logger.debug('retry times:%d' % self.testcase['retry'])
-        return self._exceed_max_retry_times(self.script_type(),
-                                            self.script_testcase())
+        return self._exceed_max_retry_times(self.script_testcase())
 
     def increase_retry(self):
         # self.testcase['retry'] = self.testcase['retry'] + 1
         # return self.testcase['retry']
-        return self._increase_retry(self.script_type(), self.script_testcase())
+        return self._increase_retry(self.script_testcase())
 
     def passed(self, passed=None):
         if passed is not None:
@@ -82,8 +80,7 @@ class Testcase:
         return self.testcase['passed']
 
     def script_result_acquired(self, acquired=None):
-        return self._result_acquired(self.script_type(),
-                                     self.script_testcase(), acquired)
+        return self._result_acquired(self.script_testcase(), acquired)
 
     def pre_condition(self):
         return self.pre_condition_cls(self.script_type())
@@ -91,23 +88,28 @@ class Testcase:
     def post_condition(self):
         return self.post_condition_cls(self.script_type())
 
-    # testcase in upstream testing project
-    script_testcase_list = {'functest': {}, 'yardstick': {}}
+    def run(self):
+        runner = TestRunnerFactory.create(self)
+        if runner is not None:
+            runner.run()
 
+    # testcase in upstream testing project
+    # script_testcase_list = {'functest': {}, 'yardstick': {}, 'shell': {}}
+    validate_testcase_list = {}
     # testcase in dovetail
     testcase_list = {}
 
     @classmethod
-    def prepared(cls, script_type, prepared=None):
+    def prepared(cls, prepared=None):
         if prepared is not None:
-            cls.script_testcase_list[script_type]['prepared'] = prepared
-        return cls.script_testcase_list[script_type]['prepared']
+            cls.validate_testcase_list['prepared'] = prepared
+        return cls.validate_testcase_list['prepared']
 
     @classmethod
-    def cleaned(cls, script_type, cleaned=None):
+    def cleaned(cls, cleaned=None):
         if cleaned is not None:
-            cls.scrpit_testcase_list[script_type]['cleaned'] = cleaned
-        return cls.script_testcase_list[script_type]['cleaned']
+            cls.validate_testcase_list['cleaned'] = cleaned
+        return cls.validate_testcase_list['cleaned']
 
     @staticmethod
     def pre_condition_cls(script_type):
@@ -118,29 +120,29 @@ class Testcase:
         return dt_config.dovetail_config[script_type]['post_condition']
 
     @classmethod
-    def update_script_testcase(cls, script_type, script_testcase):
-        if script_testcase not in cls.script_testcase_list[script_type]:
-            cls.script_testcase_list[script_type][script_testcase] = \
+    def update_validate_testcase(cls, testcase_name):
+        if testcase_name not in cls.validate_testcase_list:
+            cls.validate_testcase_list[testcase_name] = \
                 {'retry': 0, 'acquired': False}
-            cls.script_testcase_list[script_type]['prepared'] = False
-            cls.script_testcase_list[script_type]['cleaned'] = False
+            cls.validate_testcase_list['prepared'] = False
+            cls.validate_testcase_list['cleaned'] = False
 
     @classmethod
-    def _exceed_max_retry_times(cls, script_type, script_testcase):
-        retry = cls.script_testcase_list[script_type][script_testcase]['retry']
+    def _exceed_max_retry_times(cls, validate_testcase):
+        retry = cls.validate_testcase_list[validate_testcase]['retry']
         return retry > 1
 
     @classmethod
-    def _increase_retry(cls, script_type, script_testcase):
-        cls.script_testcase_list[script_type][script_testcase]['retry'] += 1
-        return cls.script_testcase_list[script_type][script_testcase]['retry']
+    def _increase_retry(cls, validate_testcase):
+        cls.validate_testcase_list[validate_testcase]['retry'] += 1
+        return cls.validate_testcase_list[validate_testcase]['retry']
 
     @classmethod
-    def _result_acquired(cls, script_type, testcase, acquired=None):
+    def _result_acquired(cls, testcase, acquired=None):
         if acquired is not None:
-            cls.script_testcase_list[script_type][testcase]['acquired'] = \
+            cls.validate_testcase_list[testcase]['acquired'] = \
                 acquired
-        return cls.script_testcase_list[script_type][testcase]['acquired']
+        return cls.validate_testcase_list[testcase]['acquired']
 
     @classmethod
     def load(cls):
@@ -148,8 +150,13 @@ class Testcase:
             for testcase_file in files:
                 with open(os.path.join(root, testcase_file)) as f:
                     testcase_yaml = yaml.safe_load(f)
-                    cls.testcase_list[testcase_yaml.keys()[0]] = \
-                        cls(testcase_yaml)
+                    case_type = testcase_yaml.values()[0]['validate']['type']
+                    testcase = TestcaseFactory.create(case_type, testcase_yaml)
+                    if testcase is not None:
+                        cls.testcase_list[testcase_yaml.keys()[0]] = testcase
+                    else:
+                        cls.logger.error('failed to create testcase: %s' %
+                                         testcase_file)
         cls.logger.debug(cls.testcase_list)
 
     @classmethod
@@ -157,6 +164,61 @@ class Testcase:
         if testcase_name in cls.testcase_list:
             return cls.testcase_list[testcase_name]
         return None
+
+
+class TestcaseFactory(object):
+
+    @staticmethod
+    def create(testcase_type, testcase_yaml):
+        if testcase_type == 'functest':
+            return FunctestTestcase(testcase_yaml)
+
+        if testcase_type == 'yardstick':
+            return YardstickTestcase(testcase_yaml)
+
+        if testcase_type == 'shell':
+            return ShellTestcase(testcase_yaml)
+
+        return None
+
+
+class FunctestTestcase(Testcase):
+
+    validate_testcase_list = {}
+
+    def __init__(self, testcase_yaml):
+        super(FunctestTestcase, self).__init__(testcase_yaml)
+        self.name = 'functest'
+
+    def prepare_cmd(self):
+        ret = super(FunctestTestcase, self).prepare_cmd()
+        if not ret:
+            for cmd in \
+              dt_config.dovetail_config[self.name]['cmds']:
+                cmd_lines = Parser.parse_cmd(cmd, self)
+                if not cmd_lines:
+                    return False
+                self.cmds.append(cmd_lines)
+                return True
+        return ret
+
+
+class YardstickTestcase(Testcase):
+
+    validate_testcae_list = {}
+
+    def __init__(self, testcase_yaml):
+        super(YardstickTestcase, self).__init__(testcase_yaml)
+        self.name = 'yardstick'
+
+
+class ShellTestcase(Testcase):
+
+    validate_testcase_list = {}
+
+    def __init__(self, testcase_yaml):
+        super(ShellTestcase, self).__init__(testcase_yaml)
+        self.name = 'shell'
 
 
 class Testsuite:
