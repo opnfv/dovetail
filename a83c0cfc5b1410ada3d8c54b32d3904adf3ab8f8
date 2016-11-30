@@ -1,0 +1,8 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Juha Kosonen <juha.kosonen@nokia.com>
+Code-Review+2: hongbo tian <hongbo.tianhongbo@huawei.com>
+Submitted-by: hongbo tian <hongbo.tianhongbo@huawei.com>
+Submitted-at: Wed, 30 Nov 2016 03:03:09 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/24929
+Project: dovetail
+Branch: refs/heads/master
