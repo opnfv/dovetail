@@ -10,18 +10,18 @@
 
 import click
 import sys
+import os
 
 import utils.dovetail_logger as dt_logger
+import utils.dovetail_utils as dt_utils
 
 from parser import Parser
 from container import Container
 from testcase import Testcase
 from testcase import Testsuite
 from report import Report
-from report import FunctestCrawler
-from report import YardstickCrawler
-from report import FunctestChecker
-from report import YardstickChecker
+from report import FunctestCrawler, YardstickCrawler
+from report import FunctestChecker, YardstickChecker
 from conf.dovetail_config import DovetailConfig as dt_config
 
 
@@ -120,8 +120,20 @@ def create_logs():
     Testsuite.create_log()
 
 
+def clean_results_dir():
+    result_path = dt_config.dovetail_config['result_dir']
+    if os.path.exists(result_path):
+        if os.path.isdir(result_path):
+            cmd = 'sudo rm -rf %s/*' % (result_path)
+            dt_utils.exec_cmd(cmd, exit_on_error=False)
+        else:
+            print "result_dir in dovetail_config.yml is not a directory."
+            sys.exit(-1)
+
+
 def main(*args, **kwargs):
     """Dovetail compliance test entry!"""
+    clean_results_dir()
     create_logs()
     logger = dt_logger.Logger('run').getLogger()
     logger.info('================================================')
