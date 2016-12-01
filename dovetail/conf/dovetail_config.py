@@ -42,6 +42,8 @@ class DovetailConfig:
             key = 'INSTALLER_TYPE'
         if key == 'SUT_IP':
             key = 'INSTALLER_IP'
+        if key == 'CON_DEBUG':
+            key = 'CI_DEBUG'
         return key
 
     @classmethod
@@ -51,18 +53,16 @@ class DovetailConfig:
             if not options[item] and key in os.environ:
                 options[item] = os.environ[key]
             if options[item]:
-                cls.update_config_envs('functest', key)
-                cls.update_config_envs('yardstick', key)
+                cls.update_config_envs('functest', key, options[item])
+                cls.update_config_envs('yardstick', key, options[item])
 
     @classmethod
-    def update_config_envs(cls, script_type, key):
-        if key == 'DEBUG':
-            os.environ['CI_DEBUG'] = os.environ[key]
+    def update_config_envs(cls, script_type, key, value):
         envs = cls.dovetail_config[script_type]['envs']
         old_value = re.findall(r'\s+%s=(.*?)(\s+|$)' % key, envs)
         if old_value == []:
-            envs += ' -e ' + key + '=' + os.environ[key]
+            envs += ' -e ' + key + '=' + value
         else:
-            envs = envs.replace(old_value[0][0], os.environ[key])
+            envs = envs.replace(old_value[0][0], value)
         cls.dovetail_config[script_type]['envs'] = envs
         return envs
