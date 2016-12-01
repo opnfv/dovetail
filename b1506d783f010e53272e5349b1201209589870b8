@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_a4d10bcf",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1469
+      },
+      "writtenOn": "2016-12-01T08:32:24Z",
+      "side": 1,
+      "message": "In Yardstick and Functest, CI_DEBUG defines log level. But CON_DEBUG, from your description, is a switch to control whether debug log shows on screen. you can not set CON_DEBUG to CI_DEBUG.",
+      "revId": "b1506d783f010e53272e5349b1201209589870b8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
