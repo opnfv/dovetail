@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_24e51ba8",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 459
+      },
+      "writtenOn": "2016-12-01T08:32:11Z",
+      "side": 1,
+      "message": "out of curiosity: why do you install docker engine inside the dovetail container? to manage the other containers (functest, yardstick, ...) ?",
+      "revId": "e566377adc4745428f1ce16f4212628ed64f09ee",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
