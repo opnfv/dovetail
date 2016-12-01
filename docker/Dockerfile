@@ -2,6 +2,8 @@ FROM ubuntu:14.04
 MAINTAINER Leo Wang <grakiss.wanglei@huawei.com>
 LABEL version="0.1" description="OPNFV Dovetail Docker Container"
 
+ARG BRANCH=master
+
 RUN \
     apt-get update \
 && \
@@ -17,7 +19,7 @@ RUN \
 && \
     echo deb https://apt.dockerproject.org/repo ubuntu-trusty main > /etc/apt/sources.list.d/docker.list \
 && \
-    apt-get update &&  apt-get install -y docker-engine=1.9.1-0~trusty \
+    apt-get update &&  apt-get install -y docker-engine=1.12.3-0~trusty \
 && \
     pip install pyyaml \
         click \
@@ -30,7 +32,7 @@ WORKDIR /home/opnfv
 RUN \
     git config --global http.sslVerify false \
 && \
-    git clone https://gerrit.opnfv.org/gerrit/dovetail.git ${REPOS_DIR} \
+    git clone --depth 1 -b $BRANCH https://gerrit.opnfv.org/gerrit/dovetail.git ${REPOS_DIR} \
 && \
     mkdir -p ${REPOS_DIR}/results
 
