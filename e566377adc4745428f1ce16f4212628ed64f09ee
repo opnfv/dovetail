@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "5ac10518_829f1e5f",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-12-02T10:44:26Z",
+      "side": 1,
+      "message": "Seems a littl superfluous until it is available in the config file, but I get the point.",
+      "revId": "e566377adc4745428f1ce16f4212628ed64f09ee",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_24e51ba8",
         "filename": "docker/Dockerfile",
         "patchSetId": 2
