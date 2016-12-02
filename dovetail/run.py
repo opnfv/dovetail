@@ -11,6 +11,7 @@
 import click
 import sys
 import os
+import time
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
@@ -48,6 +49,7 @@ def run_test(testsuite, testarea, logger):
         if value is not None and (testarea == 'full' or testarea in value):
             testarea_list.append(value)
 
+    duration = 0
     for testcase_name in testarea_list:
         logger.info('>>[testcase]: %s' % (testcase_name))
         testcase = Testcase.get(testcase_name)
@@ -79,7 +81,10 @@ def run_test(testsuite, testarea, logger):
                 logger.error('failed to prepare testcase:%s' % testcase.name())
             else:
                 for cmd in testcase.cmds:
+                    start_time = time.time()
                     Container.exec_cmd(container_id, cmd)
+                    end_time = time.time()
+                    duration += (end_time - start_time)
 
             # testcase.post_condition()
 
@@ -87,6 +92,8 @@ def run_test(testsuite, testarea, logger):
 
         db_result = Report.get_result(testcase)
         Report.check_result(testcase, db_result)
+
+    return duration
 
 
 def validate_options(input_dict, logger):
@@ -160,8 +167,8 @@ def main(*args, **kwargs):
     if testsuite_validation and testarea_validation:
         testsuite_yaml = load_testsuite(kwargs['testsuite'])
         load_testcase()
-        run_test(testsuite_yaml, testarea, logger)
-        Report.generate(testsuite_yaml, testarea)
+        duration = run_test(testsuite_yaml, testarea, logger)
+        Report.generate(testsuite_yaml, testarea, duration)
     else:
         logger.error('invalid input commands, testsuite %s testarea %s' %
                      (kwargs['testsuite'], testarea))
