@@ -1,0 +1,8 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Christopher Price <christopher.price@ericsson.com>
+Code-Review+2: hongbo tian <hongbo.tianhongbo@huawei.com>
+Submitted-by: hongbo tian <hongbo.tianhongbo@huawei.com>
+Submitted-at: Fri, 02 Dec 2016 17:41:37 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/25393
+Project: dovetail
+Branch: refs/heads/master
