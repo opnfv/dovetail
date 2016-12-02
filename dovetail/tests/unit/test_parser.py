@@ -17,7 +17,7 @@ import unittest
 
 import yaml
 
-import dovetail.parser as dovetail_parser
+import parser as dovetail_parser
 
 
 class TestParser(unittest.TestCase):
@@ -27,6 +27,7 @@ class TestParser(unittest.TestCase):
     def setUp(self):
         """Test case setup"""
         logging.disable(logging.CRITICAL)
+        dovetail_parser.Parser.create_log()
 
     def test_parser_cmd(self):
         """Test whether the command is correctly parsed."""
