@@ -1,42 +1,58 @@
 cli:
   arguments:
-    envs:
+    config:
       # This is a simple example of arguments.
       # Dovetail has no need of this kind of parameters currently.
       # The arguments must be given orderly at the run-time.
       #
       # docker_tag:
       #   flags: 'docker_tag'
-    non-envs:
+      #   path:
+      #     - 'functest/docker_tag'
+      #     - 'yardstick/docker_tag'
+    control:
 
   options:
-    envs:
+    config:
       SUT_TYPE:
         flags:
           - '--SUT_TYPE'
           - '-t'
+        path:
+          - 'functest/envs'
+          - 'yardstick/envs'
         help: 'Installer type of the system under test (SUT).'
       SUT_IP:
         flags:
           - '--SUT_IP'
           - '-i'
+        path:
+          - 'functest/envs'
+          - 'yardstick/envs'
         help: 'IP of the system under test (SUT).'
-      DEPLOY_SCENARIO:
-        flags:
-          - '--DEPLOY_SCENARIO'
-          - '-S'
-        help: 'DEPLOY_SCENARIO of the system under test (SUT).'
-      DEPLOY_TYPE:
-        flags:
-          - '--DEPLOY_TYPE'
-          - '-T'
-        help: 'DEPLOY_TYPE of the system under test (SUT).'
       DEBUG:
         flags:
           - '--DEBUG'
           - '-d'
+        path:
+          - 'functest/envs'
+          - 'yardstick/envs'
         help: 'DEBUG for showing debug log.'
-    non-envs:
+      yard_tag:
+        flags:
+          - '--yard_tag'
+          - '-y'
+        path:
+          - 'yardstick/docker_tag'
+        help: 'Overwrite tag for yardstick docker container (e.g. stable or latest)'
+      func_tag:
+        flags:
+          - '--func_tag'
+          - '-f'
+        path:
+          - 'functest/docker_tag'
+        help: 'Overwrite tag for functest docker container (e.g. stable or latest)'
+    control:
       testsuite:
         flags:
           - '--testsuite'
@@ -47,8 +63,3 @@ cli:
           - '--testarea'
         default: 'full'
         help: 'compliance testarea within testsuite'
-      tag:
-        flags:
-          - '--tag'
-          - '-o'
-        help: 'Overwrite tags for each docker container (e.g. "functest:stable,yardstick:latest")'

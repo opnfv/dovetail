@@ -9,9 +9,9 @@
 
 
 import click
-import sys
 import os
 import time
+import copy
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
@@ -96,23 +96,52 @@ def run_test(testsuite, testarea, logger):
     return duration
 
 
-def validate_options(input_dict, logger):
-    # for 'tag' option
-    for key, value in input_dict.items():
-        if key == 'tag' and value is not None:
-            for tag in value.split(','):
-                if len(tag.split(':')) != 2:
-                    logger.error('TAGS option must be "<image>:<tag>,..."')
-                    sys.exit(1)
+def validate_input(input_dict, check_dict, logger):
+    # for 'func_tag' option
+    func_tag = input_dict['func_tag']
+    valid_tag = check_dict['valid_docker_tag']
+    if func_tag is not None and func_tag not in valid_tag:
+        logger.error("func_tag can't be %s, valid in %s", func_tag, valid_tag)
+        raise SystemExit(1)
+
+    # for 'SUT_TYPE' option
+    sut_type = input_dict['sut_type']
+    valid_type = check_dict['valid_sut_type']
+    if sut_type is not None and sut_type not in valid_type:
+        logger.error("SUT_TYPE can't be %s, valid in %s", sut_type, valid_type)
+        raise SystemExit(1)
 
 
-def filter_env_options(input_dict):
-    envs_options = {}
-    for key, value in input_dict.items():
-        key = key.upper()
-        if key in dt_config.dovetail_config['cli']['options']['envs']:
-            envs_options[key] = value
-    return envs_options
+def filter_config(input_dict, logger):
+    cli_dict = dt_config.dovetail_config['cli']
+    configs = {}
+    for key in cli_dict:
+        if not cli_dict[key]:
+            continue
+        try:
+            cli_config = cli_dict[key]['config']
+            if cli_config is None:
+                continue
+        except KeyError:
+            continue
+        for key, value in input_dict.items():
+            for config_key, config_value in cli_config.items():
+                value_dict = {}
+                value_dict['value'] = value
+                try:
+                    value_dict['path'] = config_value['path']
+                    if key == config_key:
+                        configs[key] = value_dict
+                        break
+                    if key.upper() == config_key:
+                        configs[key.upper()] = value_dict
+                        break
+                except KeyError as e:
+                    logger.exception('%s lacks subsection %s', config_key, e)
+                    raise SystemExit(1)
+    if not configs:
+        return None
+    return configs
 
 
 def create_logs():
@@ -135,7 +164,7 @@ def clean_results_dir():
             dt_utils.exec_cmd(cmd, exit_on_error=False)
         else:
             print "result_dir in dovetail_config.yml is not a directory."
-            sys.exit(-1)
+            raise SystemExit(1)
 
 
 def main(*args, **kwargs):
@@ -146,16 +175,15 @@ def main(*args, **kwargs):
     logger.info('================================================')
     logger.info('Dovetail compliance: %s!' % (kwargs['testsuite']))
     logger.info('================================================')
-    validate_options(kwargs, logger)
-    envs_options = filter_env_options(kwargs)
-    dt_config.update_envs(envs_options)
+    validate_input(kwargs, dt_config.dovetail_config['validate'], logger)
+    configs = filter_config(kwargs, logger)
+
+    if configs is not None:
+        dt_config.update_config(configs)
     logger.info('Your new envs for functest: %s' %
                 dt_config.dovetail_config['functest']['envs'])
     logger.info('Your new envs for yardstick: %s' %
                 dt_config.dovetail_config['yardstick']['envs'])
-
-    if 'tag' in kwargs and kwargs['tag'] is not None:
-        set_container_tags(kwargs['tag'])
 
     testarea = kwargs['testarea']
     testsuite_validation = False
@@ -175,21 +203,23 @@ def main(*args, **kwargs):
 
 
 dt_config.load_config_files()
-
+dovetail_config = copy.deepcopy(dt_config.dovetail_config)
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
-if dt_config.dovetail_config['cli']['options'] is not None:
-    for key, value in dt_config.dovetail_config['cli']['options'].items():
+if dovetail_config['cli']['options'] is not None:
+    for key, value in dovetail_config['cli']['options'].items():
         if value is not None:
             for k, v in value.items():
                 flags = v['flags']
-                del v['flags']
+                v.pop('flags')
+                v.pop('path', None)
                 main = click.option(*flags, **v)(main)
-if dt_config.dovetail_config['cli']['arguments'] is not None:
-    for key, value in dt_config.dovetail_config['cli']['arguments'].items():
+if dovetail_config['cli']['arguments'] is not None:
+    for key, value in dovetail_config['cli']['arguments'].items():
         if value is not None:
             for k, v in value.items():
                 flags = v['flags']
-                del v['flags']
+                v.pop('flags')
+                v.pop('path', None)
                 main = click.argument(flags, **v)(main)
 main = click.command(context_settings=CONTEXT_SETTINGS)(main)
 
