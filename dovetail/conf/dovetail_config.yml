@@ -3,6 +3,8 @@ work_dir: /home/opnfv/dovetail
 result_dir: /home/opnfv/dovetail/results
 report_file: 'dovetail_report.txt'
 cli_file_name: 'cmd_config.yml'
+# TO DO: once version scheme settled, adjust accordingly
+repo: 'https://github.com/opnfv/dovetail/tree/master/'
 
 # used for testcase cmd template in jinja2 format
 # we have two variables available now
