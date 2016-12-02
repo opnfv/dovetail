@@ -18,4 +18,18 @@ include_config:
   - functest_config.yml
   - yardstick_config.yml
 
+test_project:
+  - 'yardstick'
+  - 'functest'
+
+validate:
+  valid_sut_type:
+    - 'compass'
+    - 'fuel'
+    - 'joid'
+    - 'apex'
+
+  valid_docker_tag:
+    - 'stable'
+    - 'latest'
 
