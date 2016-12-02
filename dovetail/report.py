@@ -6,14 +6,18 @@
 # which accompanies this distribution, and is available at
 # http://www.apache.org/licenses/LICENSE-2.0
 #
+from __future__ import division
+
 import json
 import urllib2
 import re
 import os
+import datetime
+import uuid
 
 import utils.dovetail_logger as dt_logger
 
-from conf.dovetail_config import DovetailConfig as dt_config
+from conf.dovetail_config import DovetailConfig as dt_cfg
 from testcase import Testcase
 
 
@@ -40,9 +44,17 @@ class Report:
         checker.check(testcase, db_result)
 
     @classmethod
-    def generate_json(cls, testsuite_yaml, testarea):
+    def generate_json(cls, testsuite_yaml, testarea, duration):
         report_obj = {}
+        report_obj['version'] = '1.0'
         report_obj['testsuite'] = testsuite_yaml['name']
+        # link to result dashboard
+        report_obj['dashboard'] = None
+        report_obj['validation_ID'] = str(uuid.uuid4())
+        report_obj['upload_date'] =\
+            datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+        report_obj['duration'] = duration
+
         report_obj['testcases_list'] = []
         testarea_list = []
         for value in testsuite_yaml['testcases_list']:
@@ -50,61 +62,95 @@ class Report:
                 testarea_list.append(value)
         for testcase_name in testarea_list:
             testcase = Testcase.get(testcase_name)
-            testcase_in_rpt = {}
-            testcase_in_rpt['name'] = testcase_name
+            testcase_inreport = {}
+            testcase_inreport['name'] = testcase_name
             if testcase is None:
-                testcase_in_rpt['result'] = 'Undefined'
-                testcase_in_rpt['objective'] = ''
-                testcase_in_rpt['sub_testcase'] = []
-                report_obj['testcases_list'].append(testcase_in_rpt)
+                testcase_inreport['result'] = 'Undefined'
+                testcase_inreport['objective'] = ''
+                testcase_inreport['sub_testcase'] = []
+                report_obj['testcases_list'].append(testcase_inreport)
                 continue
 
-            testcase_in_rpt['result'] = get_pass_str(testcase.passed())
-            testcase_in_rpt['objective'] = testcase.objective()
-            testcase_in_rpt['sub_testcase'] = []
+            testcase_inreport['result'] = get_pass_str(testcase.passed())
+            testcase_inreport['objective'] = testcase.objective()
+            testcase_inreport['sub_testcase'] = []
             if testcase.sub_testcase() is not None:
                 for sub_test in testcase.sub_testcase():
-                    testcase_in_rpt['sub_testcase'].append({
+                    testcase_inreport['sub_testcase'].append({
                         'name': sub_test,
                         'result': get_pass_str(
                             testcase.sub_testcase_passed(sub_test))
                     })
-            report_obj['testcases_list'].append(testcase_in_rpt)
+            report_obj['testcases_list'].append(testcase_inreport)
         cls.logger.info(json.dumps(report_obj))
         return report_obj
 
     @classmethod
-    def generate(cls, testsuite_yaml, testarea):
-        rpt_data = cls.generate_json(testsuite_yaml, testarea)
-        rpt_text = ''
-        split_line = '+-----------------------------------------------------'
-        split_line += '---------------------+\n'
+    def generate(cls, testsuite_yaml, testarea, duration):
+        report_data = cls.generate_json(testsuite_yaml, testarea, duration)
+        report_txt = ''
+        report_txt += '\n\nDovetail Report\n'
+        report_txt += 'Version: %s\n' % report_data['version']
+        report_txt += 'TestSuite: %s\n' % report_data['testsuite']
+        report_txt += 'Result Dashboard: %s\n' % report_data['dashboard']
+        report_txt += 'Validation ID: %s\n' % report_data['validation_ID']
+        report_txt += 'Upload Date: %s\n' % report_data['upload_date']
+        if report_data['duration'] == 0:
+            report_txt += 'Duration: %s\n\n' % 'NA'
+        else:
+            report_txt += 'Duration: %.2f s\n\n' % report_data['duration']
 
-        rpt_text += '\n\
-+==========================================================================+\n\
-|                                   report                                 |\n'
-        rpt_text += split_line
-        rpt_text += '|testsuite: %s\n' % rpt_data['testsuite']
-        for testcase in rpt_data['testcases_list']:
-            rpt_text += '|   [testcase]: %s\t\t\t\t[%s]\n' % \
-                (testcase['name'], testcase['result'])
-            rpt_text += '|   |-objective: %s\n' % testcase['objective']
-            if 'sub_testcase' in testcase:
-                for sub_test in testcase['sub_testcase']:
-                    rpt_text += '|       |-%s \t\t [%s]\n' % \
-                        (sub_test['name'], sub_test['result'])
-            rpt_text += split_line
+        total_num = 0
+        pass_num = 0
+        sub_report = {}
+        testcase_num = {}
+        testcase_passnum = {}
+        for area in dt_cfg.testarea_supported:
+            sub_report[area] = ''
+            testcase_num[area] = 0
+            testcase_passnum[area] = 0
 
-        cls.logger.info(rpt_text)
-        cls.save(rpt_text)
-        return rpt_text
+        spec_link = dt_cfg.dovetail_config['repo'] + 'dovetail/testcase'
+        for testcase in report_data['testcases_list']:
+            pattern = re.compile('|'.join(dt_cfg.testarea_supported))
+            area = pattern.findall(testcase['name'])[0]
+            result_dir = dt_cfg.dovetail_config['result_dir']
+            sub_report[area] += '- <%s> %s result: <%s>\n' %\
+                (spec_link, testcase['name'], result_dir)
+            testcase_num[area] += 1
+            total_num += 1
+            if testcase['result'] == 'PASS':
+                testcase_passnum[area] += 1
+                pass_num += 1
+
+        if total_num != 0:
+            pass_rate = pass_num/total_num
+            report_txt += 'Pass Rate: %.2f%% (%s/%s)\n' %\
+                (pass_rate*100, pass_num, total_num)
+            report_txt += 'Assessed test areas:\n'
+        for key in sub_report:
+            if testcase_num[key] != 0:
+                pass_rate = testcase_passnum[key]/testcase_num[key]
+                doc_link = dt_cfg.dovetail_config['repo'] +\
+                    ('docs/testsuites/%s' % key)
+                report_txt += '- %s results: <%s> pass %.2f%%\n' %\
+                    (key, doc_link, pass_rate*100)
+        for key in sub_report:
+            if testcase_num[key] != 0:
+                pass_rate = testcase_passnum[key]/testcase_num[key]
+                report_txt += '%s: pass rate %.2f%%\n' % (key, pass_rate*100)
+                report_txt += sub_report[key]
+
+        cls.logger.info(report_txt)
+        cls.save(report_txt)
+        return report_txt
 
     # save to disk as default
     @classmethod
     def save(cls, report):
-        report_file_name = dt_config.dovetail_config['report_file']
+        report_file_name = dt_cfg.dovetail_config['report_file']
         try:
-            with open(os.path.join(dt_config.dovetail_config['result_dir'],
+            with open(os.path.join(dt_cfg.dovetail_config['result_dir'],
                       report_file_name), 'w') as report_file:
                 report_file.write(report)
             cls.logger.info('save report to %s' % report_file_name)
@@ -160,7 +206,7 @@ class FunctestCrawler:
 
     def crawl(self, testcase=None):
         store_type = \
-            dt_config.dovetail_config[self.type]['result']['store_type']
+            dt_cfg.dovetail_config[self.type]['result']['store_type']
         if store_type == 'file':
             return self.crawl_from_file(testcase)
 
@@ -168,7 +214,7 @@ class FunctestCrawler:
             return self.crawl_from_url(testcase)
 
     def crawl_from_file(self, testcase=None):
-        dovetail_config = dt_config.dovetail_config
+        dovetail_config = dt_cfg.dovetail_config
         file_path = \
             os.path.join(dovetail_config['result_dir'],
                          dovetail_config[self.type]['result']['file_path'])
@@ -204,7 +250,7 @@ class FunctestCrawler:
 
     def crawl_from_url(self, testcase=None):
         url = \
-            dt_config.dovetail_config[self.type]['result']['db_url'] % testcase
+            dt_cfg.dovetail_config[self.type]['result']['db_url'] % testcase
         self.logger.debug("Query to rest api: %s" % url)
         try:
             data = json.load(urllib2.urlopen(url))
@@ -228,7 +274,7 @@ class YardstickCrawler:
 
     def crawl(self, testcase=None):
         store_type = \
-            dt_config.dovetail_config[self.type]['result']['store_type']
+            dt_cfg.dovetail_config[self.type]['result']['store_type']
         if store_type == 'file':
             return self.crawl_from_file(testcase)
 
@@ -236,7 +282,7 @@ class YardstickCrawler:
             return self.crawl_from_url(testcase)
 
     def crawl_from_file(self, testcase=None):
-        file_path = os.path.join(dt_config.dovetail_config['result_dir'],
+        file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
                                  testcase+'.out')
         if not os.path.exists(file_path):
             self.logger.info('result file not found: %s' % file_path)
