@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_02b1eee0",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 459
+      },
+      "writtenOn": "2016-12-02T11:13:49Z",
+      "side": 1,
+      "message": "this means it\u0027s master by default, but the value can be given at build time. Maybe for Dovetail it is not the case (since it has only master branch). But to keep it similar to other projects it makes sense.",
+      "parentUuid": "5ac10518_829f1e5f",
+      "revId": "e566377adc4745428f1ce16f4212628ed64f09ee",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_24e51ba8",
         "filename": "docker/Dockerfile",
         "patchSetId": 2
