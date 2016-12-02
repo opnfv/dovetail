@@ -1,0 +1,9 @@
+# only used for dovetail tool development debug
+# nfvi.tc001 tc002 running time is shorter, about 3 minutes
+# ipv6.tc001 about 20 minutes
+debug:
+  name: debug
+  testcases_list:
+    - dovetail.ipv6.tc001
+    - dovetail.nfvi.tc001
+    - dovetail.nfvi.tc002
