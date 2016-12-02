@@ -1,0 +1,9 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Dan Xu <xudan16@huawei.com>
+Code-Review+1: Jose Lausuch <jose.lausuch@ericsson.com>
+Code-Review+2: Christopher Price <christopher.price@ericsson.com>
+Submitted-by: Christopher Price <christopher.price@ericsson.com>
+Submitted-at: Fri, 02 Dec 2016 10:44:34 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/25289
+Project: dovetail
+Branch: refs/heads/master
