@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_22b18af8",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2016-12-02T10:41:44Z",
+      "side": 1,
+      "message": "I like \"debug\" as the alternative ti compliance suite as a standard.  What the \"proposed_tests\" list is for if not debuging is a little beyond me.",
+      "revId": "569da572c84c1c291bd6143218f92daf36c59160",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
