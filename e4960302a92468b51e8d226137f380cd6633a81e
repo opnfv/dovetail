@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_e8acc1ef",
+        "filename": "dovetail/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-03T00:41:47Z",
+      "side": 1,
+      "message": "which exit is this?  sys.exit()?",
+      "revId": "e4960302a92468b51e8d226137f380cd6633a81e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_6888d171",
+        "filename": "dovetail/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-03T00:41:47Z",
+      "side": 1,
+      "message": "python is designed to use exceptions.\n\nparticularly with dicts we want to avoid checking the dict multiple times, and prefer atomic methods\n\n try:\n    cli_config \u003d cli_dict[key][\u0027config\u0027]\n except KeyError:\n    continue",
+      "revId": "e4960302a92468b51e8d226137f380cd6633a81e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_087d8d6e",
+        "filename": "dovetail/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-03T00:41:47Z",
+      "side": 1,
+      "message": "this type of code is commonly implemented as:\n\n try:\n   value_dict[\u0027path\u0027] \u003d config_value[\u0027path\u0027]\n except KeyError:\n   logger.exception(\u0027%s must have subsection path\u0027, config_key)\n   raise\n\nusing logger.exception and re-raising the original exception so traceback is provided.",
+      "revId": "e4960302a92468b51e8d226137f380cd6633a81e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_2882c94f",
+        "filename": "dovetail/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-03T00:41:47Z",
+      "side": 1,
+      "message": "empty containers are False, so we can just check the container\n\n  if not configs:\n     return None",
+      "revId": "e4960302a92468b51e8d226137f380cd6633a81e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_c896a594",
+        "filename": "dovetail/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-03T00:41:47Z",
+      "side": 1,
+      "message": "we can use dict.pop() with default value\n\n v.pop(\u0027path\u0027, None)",
+      "revId": "e4960302a92468b51e8d226137f380cd6633a81e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
