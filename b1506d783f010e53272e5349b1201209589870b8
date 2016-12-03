@@ -52,6 +52,23 @@
       "revId": "b1506d783f010e53272e5349b1201209589870b8",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_8862ddd6",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-03T00:19:34Z",
+      "side": 1,
+      "message": "can we use dict?\n\n    CMD_NAME_TRANS \u003d {\n        \u0027SUT_TYPE\u0027: \u0027INSTALLER_TYPE\u0027,\n        \u0027SUT_IP\u0027: \u0027INSTALLER_IP\u0027,\n        \u0027CON_DEBUG\u0027: \u0027CI_DEBUG\u0027,\n    }\n\n    @classmethod\n    def cmd_name_trans(cls, cmd_name):\n        key \u003d cmd_name.upper()\n        return cls.CMD_NAME_TRANS.get(key, key)",
+      "revId": "b1506d783f010e53272e5349b1201209589870b8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
