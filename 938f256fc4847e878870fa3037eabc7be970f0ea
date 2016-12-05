@@ -16,6 +16,24 @@
       "revId": "938f256fc4847e878870fa3037eabc7be970f0ea",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_d3cbba70",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-05T09:07:00Z",
+      "side": 1,
+      "message": "Actually, all the keys are loaded from cmd_config.yml instead of inputting by users.\nHere we just change SUT_TYPE, SUT_IP and CON_DEBUG into INSTALLER_TYPE, INSTALLER_IP and CI_DEBUG.\nAll other keys will keep their name.",
+      "parentUuid": "5ac10518_533d8a8e",
+      "revId": "938f256fc4847e878870fa3037eabc7be970f0ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
