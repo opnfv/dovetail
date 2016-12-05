@@ -35,4 +35,26 @@ run_flake8() {
     fi
 }
 
+run_tests() {
+    echo "Running unittest ..."
+    cd dovetail/
+    if [ $FILE_OPTION == "f" ]; then
+        python -m unittest discover -v -s tests/unit > $logfile 2>&1
+    else
+        python -m unittest discover -v -s tests/unit
+    fi
+
+    if [ $? -ne 0 ]; then
+        if [ $FILE_OPTION == "f" ]; then
+            echo "FAILED, results in $logfile"
+        fi
+        exit 1
+    else
+        if [ $FILE_OPTION == "f" ]; then
+            echo "OK, results in $logfile"
+        fi
+    fi
+}
+
 run_flake8
+run_tests
