@@ -52,6 +52,42 @@
       "revId": "938f256fc4847e878870fa3037eabc7be970f0ea",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_d33c1a32",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-05T11:24:07Z",
+      "side": 1,
+      "message": "For completeness sake, note that this is also similar to collections.defaultdict and dict subclasses overriding __missing__ method.\n\nhttps://docs.python.org/2/library/collections.html#collections.defaultdict.__missing__\n\nFor example:\n\n class Foo(dict):\n      def __missing__(self, k):\n          return k",
+      "parentUuid": "5ac10518_f3ab5687",
+      "revId": "938f256fc4847e878870fa3037eabc7be970f0ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_b33f0e25",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-05T11:24:07Z",
+      "side": 1,
+      "message": "If you were to do this, please don\u0027t replace KeyError with NameError.  NameError is not appropriate for this case.\n\n try:\n    return cls.CMS_NAME_TRANS[key]\n except KeyError:\n    logging.warning(...)\n    raise\n\nReplacing exceptions is avoided because it removes the traceback info.",
+      "parentUuid": "5ac10518_533d8a8e",
+      "revId": "938f256fc4847e878870fa3037eabc7be970f0ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
