@@ -34,6 +34,24 @@
       "revId": "938f256fc4847e878870fa3037eabc7be970f0ea",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_f3ab5687",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2016-12-05T09:16:18Z",
+      "side": 1,
+      "message": "Agree. Thanks for your clear explanation.",
+      "parentUuid": "5ac10518_d3cbba70",
+      "revId": "938f256fc4847e878870fa3037eabc7be970f0ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
