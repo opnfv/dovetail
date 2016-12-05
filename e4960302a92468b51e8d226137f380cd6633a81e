@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_f30cb696",
+        "filename": "dovetail/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-05T12:12:39Z",
+      "side": 1,
+      "message": "it is a minor thing, but I personally prefer raising SystemExit().\n\nall sys.exit() does is raise SystemExit.  raising SystemExit makes people aware that we are using the exception handling system to exit the program and all the try/finally blocks will trigger.\n\nhttps://docs.python.org/2/library/sys.html#sys.exit",
+      "parentUuid": "5ac10518_e8512163",
+      "revId": "e4960302a92468b51e8d226137f380cd6633a81e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_6888d171",
         "filename": "dovetail/run.py",
         "patchSetId": 1
