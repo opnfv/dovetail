@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_533d8a8e",
+        "filename": "dovetail/conf/dovetail_config.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2016-12-05T07:39:41Z",
+      "side": 1,
+      "message": "If key is not in CMD_NAME_TRANS, then it will return key. However, this key could not be recognized in the sequential codes. So I suggest it should be rewritten as:\ntry:\n    new_key \u003d cls.CMS_NAME_TRANS.get(key)\n    if new_key \u003d\u003d None:\n        raise NameError(\u0027Wrong command names\u0027)\n    return new_key\nexcept NameError:\n    print \u0027Please input right command!\u0027\n    raise",
+      "revId": "938f256fc4847e878870fa3037eabc7be970f0ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
