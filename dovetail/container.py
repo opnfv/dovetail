@@ -41,12 +41,11 @@ class Container:
 
     @classmethod
     def create(cls, type):
-        # sshkey="-v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
+        sshkey = "-v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
         dovetail_config = dt_config.dovetail_config
         docker_image = cls.get_docker_image(type)
         envs = dovetail_config[type]['envs']
         opts = dovetail_config[type]['opts']
-        sshkey = ''
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
         cmd = 'sudo docker run %s %s %s %s %s /bin/bash' % \
