@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_0e1275b1",
+        "filename": "tox.ini",
+        "patchSetId": 9
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-12-06T06:38:07Z",
+      "side": 1,
+      "message": "have tried with python3 or sth? in my memory, don\u0027t only limited to python2",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 14
+      },
+      "revId": "4980ceaba9b79083c09b57b783e55f9d916f6699",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ee0cc996",
+        "filename": "tox.ini",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-12-06T06:38:07Z",
+      "side": 1,
+      "message": "have tried with python3 or sth? in my memory, don\u0027t only limited to python2",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 7,
+        "endChar": 18
+      },
+      "revId": "4980ceaba9b79083c09b57b783e55f9d916f6699",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
