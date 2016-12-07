@@ -115,8 +115,13 @@ Pull Dovetail Docker image from public Dockerhub
 
 <Tag> here is the version, 'latest' is used for the master branch.
 
-As an alternative way, you can build own docker image from Dockfile(s) under ``docker/`` directory,
-``Dockerfile`` is based on ubuntu system and ``Dockerfile.centos7`` is for centos7.
+As an alternate way, you can build your own Docker image from Dockerfile(s) located under the ``docker/``
+directory. The ``Dockerfile`` is based on Ubuntu based system and the ``Dockerfile.centos7`` file is for
+a CentOS based Docker image.
+
+::
+
+  sudo docker build -t <your_new_image_name> -f <your_Dockerfile> .
 
 Dovetail Docker container creation
 ----------------------------------
