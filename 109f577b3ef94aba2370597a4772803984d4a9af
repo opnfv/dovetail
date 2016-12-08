@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_ab6d4e34",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-12-08T03:39:57Z",
+      "side": 1,
+      "message": "don\u0027t think this is the right place, this is done before \"docker pull\", please refer to https://git.opnfv.org/releng/tree/jjb/releng/opnfv-docker.sh, although this is completed in CI, we can also complete this locally, welcome to supplement the related steps in  our document.",
+      "range": {
+        "startLine": 122,
+        "startChar": 0,
+        "endLine": 124,
+        "endChar": 67
+      },
+      "revId": "109f577b3ef94aba2370597a4772803984d4a9af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
