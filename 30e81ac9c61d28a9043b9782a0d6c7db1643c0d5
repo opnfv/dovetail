@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_9ef8d27d",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-12-08T13:28:26Z",
+      "side": 1,
+      "message": "wrap to 80 chars for the paragraph",
+      "range": {
+        "startLine": 120,
+        "startChar": 97,
+        "endLine": 120,
+        "endChar": 102
+      },
+      "revId": "30e81ac9c61d28a9043b9782a0d6c7db1643c0d5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_defe5a6b",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-12-08T13:28:26Z",
+      "side": 1,
+      "message": "an official",
+      "range": {
+        "startLine": 120,
+        "startChar": 11,
+        "endLine": 120,
+        "endChar": 19
+      },
+      "revId": "30e81ac9c61d28a9043b9782a0d6c7db1643c0d5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_fe031671",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-12-08T13:28:26Z",
+      "side": 1,
+      "message": "Docker(?)",
+      "range": {
+        "startLine": 120,
+        "startChar": 20,
+        "endLine": 120,
+        "endChar": 26
+      },
+      "revId": "30e81ac9c61d28a9043b9782a0d6c7db1643c0d5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_bef58e84",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-12-08T13:28:26Z",
+      "side": 1,
+      "message": "\u003cdelete this\u003e",
+      "range": {
+        "startLine": 121,
+        "startChar": 65,
+        "endLine": 121,
+        "endChar": 78
+      },
+      "revId": "30e81ac9c61d28a9043b9782a0d6c7db1643c0d5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
