@@ -46,6 +46,30 @@
       "revId": "109f577b3ef94aba2370597a4772803984d4a9af",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_0b7342ea",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2016-12-08T05:51:16Z",
+      "side": 1,
+      "message": "agree, \nhow about adding a sentence that default dovetail docker image is built in opnfv CI, one could pull that image directly without building his own; for centos based Docker image, execute below command to build docker image :\n\"docker build --no-cache -t opnfv/dovetail:centos7 --build-arg BRANCH\u003dmaster -f Dockerfile.centos7\"",
+      "parentUuid": "5ac10518_ab6d4e34",
+      "range": {
+        "startLine": 122,
+        "startChar": 0,
+        "endLine": 124,
+        "endChar": 67
+      },
+      "revId": "109f577b3ef94aba2370597a4772803984d4a9af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
