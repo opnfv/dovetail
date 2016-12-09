@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "5ac10518_e10cd796",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-09T03:08:44Z",
+      "side": 1,
+      "message": "This should be packaged into class and call by run.py, otherwise it will get error as:\nTraceback (most recent call last):\n  File \"run.py\", line 20, in \u003cmodule\u003e\n    from testcase import Testcase\n  File \"/home/xudan/dovetail/dovetail/testcase.py\", line 17, in \u003cmodule\u003e\n    from test_runner import TestRunnerFactory\n  File \"/home/xudan/dovetail/dovetail/test_runner.py\", line 15, in \u003cmodule\u003e\n    logger \u003d dt_logger.Logger(__file__).getLogger()\n  File \"/home/xudan/dovetail/dovetail/utils/dovetail_logger.py\", line 49, in __init__\n    result_path \u003d dt_config.dovetail_config[\u0027result_dir\u0027]\nKeyError: \u0027result_dir\u0027",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 47
+      },
+      "revId": "41db57157c0c7a3681da834a0bed8fe703223087",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_a1d1effc",
         "filename": "dovetail/testcase/example.tc001.yml",
         "patchSetId": 13
