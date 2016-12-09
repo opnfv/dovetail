@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_a1d1effc",
+        "filename": "dovetail/testcase/example.tc001.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-09T01:54:18Z",
+      "side": 1,
+      "message": "should be {{validate_testcase}}??",
+      "range": {
+        "startLine": 11,
+        "startChar": 31,
+        "endLine": 11,
+        "endChar": 50
+      },
+      "revId": "41db57157c0c7a3681da834a0bed8fe703223087",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_41e36bd9",
+        "filename": "dovetail/testcase/ipv6.tc001.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-09T01:54:18Z",
+      "side": 1,
+      "message": "Is this should be changed into {{validate_testcase}}?",
+      "range": {
+        "startLine": 11,
+        "startChar": 31,
+        "endLine": 11,
+        "endChar": 51
+      },
+      "revId": "41db57157c0c7a3681da834a0bed8fe703223087",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
