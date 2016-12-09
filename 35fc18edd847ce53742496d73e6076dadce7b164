@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_a126cf14",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1469
+      },
+      "writtenOn": "2016-12-09T03:19:54Z",
+      "side": 1,
+      "message": "I think this is not real CLI.\nCLI is more like \"dovetail run --help\"",
+      "revId": "35fc18edd847ce53742496d73e6076dadce7b164",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
