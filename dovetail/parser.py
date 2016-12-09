@@ -12,7 +12,7 @@ import jinja2
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
-from conf.dovetail_config import DovetailConfig as dt_config
+from conf.dovetail_config import DovetailConfig as dt_cfg
 
 
 class Parser:
@@ -30,7 +30,7 @@ class Parser:
         try:
             template = jinja2.Template(cmd, undefined=jinja2.StrictUndefined)
             kwargs = {}
-            for arg in dt_config.dovetail_config['parameters']:
+            for arg in dt_cfg.dovetail_config['parameters']:
                 path = eval(arg['path'])
                 cls.logger.debug('name: %s, eval path: %s ' %
                                  (arg['name'], path))

@@ -5,6 +5,18 @@ report_file: 'dovetail_report.txt'
 cli_file_name: 'cmd_config.yml'
 # TO DO: once version scheme settled, adjust accordingly
 repo: 'https://github.com/opnfv/dovetail/tree/master/'
+COMPLIANCE_PATH: ./compliance/
+TESTCASE_PATH: ./testcase/
+# testsuite supported, should adjust accordingly
+testsuite_supported:
+  - compliance_set
+  - proposed_tests
+  - debug
+# testarea supported, should adjust accordingly
+testarea_supported:
+  - vimops
+  - nfvi
+  - ipv6
 
 # used for testcase cmd template in jinja2 format
 # we have two variables available now

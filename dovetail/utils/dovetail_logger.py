@@ -24,7 +24,7 @@
 import logging
 import os
 
-from conf.dovetail_config import DovetailConfig as dt_config
+from conf.dovetail_config import DovetailConfig as dt_cfg
 
 
 class Logger:
@@ -46,7 +46,7 @@ class Logger:
             ch.setLevel(logging.INFO)
         self.logger.addHandler(ch)
 
-        result_path = dt_config.dovetail_config['result_dir']
+        result_path = dt_cfg.dovetail_config['result_dir']
         if not os.path.exists(result_path):
             os.makedirs(result_path)
         hdlr = logging.FileHandler(os.path.join(result_path, 'dovetail.log'))
