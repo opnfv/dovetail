@@ -25,6 +25,108 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_01d7a3c2",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-09T04:33:56Z",
+      "side": 1,
+      "message": "don\u0027t use % with logging functions\n\n\nhttps://docs.python.org/2/library/logging.html#logging.Logger.debug\n\n  Logger.debug(msg, *args, **kwargs)\n\nLogs a message with level DEBUG on this logger. The msg is the message format string, and the args are the arguments which are merged into msg using the string formatting operator. (Note that this means that you can use keywords in the format string, together with a single dictionary argument.)\n\nThere are two keyword arguments in kwargs which are inspected: exc_info which, if it does not evaluate as false, causes exception information to be added to the logging message. If an exception tuple (in the format returned by sys.exc_info()) is provided, it is used; otherwise, sys.exc_info() is called to get the exception informatio\n\n\nDeferred interpolation:\n\nString interpolation involves evaluating arguments, so it can introduce significant computation.  The logging module tries to be smart about deferring interpolation until the last possible moment.\n\nThe logging methods check isEnabledFor for the log level and won\u0027t interpolate if the level is not enabled.\n\nhttps://github.com/python/cpython/blob/2.7/Lib/logging/__init__.py#L1178\n\n     def warning(self, msg, *args, **kwargs):\n        if self.isEnabledFor(WARNING):\n            self._log(WARNING, msg, args, **kwargs)\n\nlogging actually waits to interpolate the string in LogRecord.getMessage()\n\nhttps://github.com/python/cpython/blob/2.7/Lib/logging/__init__.py#L328\n        if self.args:\n            msg \u003d msg % self.args\n\n\n\nNote: pylint provides a warning for this issue.  Please check your code with Pylint\n\nhttps://github.com/PyCQA/pylint/blob/1.6.0/pylint/checkers/logging.py#L23\n\n    \u0027W1201\u0027: (\u0027Specify string format arguments as logging function parameters\u0027,\n              \u0027logging-not-lazy\u0027,\n              \u0027Used when a logging statement has a call form of \u0027\n              \u0027\"logging.\u003clogging method\u003e(format_string % (format_args...))\". \u0027\n              \u0027Such calls should leave string interpolation to the logging \u0027\n              \u0027method itself and be written \u0027\n              \u0027\"logging.\u003clogging method\u003e(format_string, format_args...)\" \u0027\n              \u0027so that the program may avoid incurring the cost of the \u0027\n              \u0027interpolation in those cases in which no message will be \u0027\n              \u0027logged. For more, see \u0027\n              \u0027http://www.python.org/dev/peps/pep-0282/.\u0027),",
+      "revId": "41db57157c0c7a3681da834a0bed8fe703223087",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_a1db2fec",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-09T04:33:56Z",
+      "side": 1,
+      "message": "don\u0027t check before access, it is not atomic.  use EAFP \n\n  try:\n     self.cmds \u003d self.testcase[\u0027validate\u0027][\u0027cmds\u0027]\n     return True\n  except KeyError:\n     return False",
+      "revId": "41db57157c0c7a3681da834a0bed8fe703223087",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_c1d8bbf1",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-09T04:33:56Z",
+      "side": 1,
+      "message": "don\u0027t check before access\n\n  try:\n     return self.testcase[\u0027report\u0027][\u0027sbu_testcase_list\u0027]\n  except KeyError:\n     return []",
+      "revId": "41db57157c0c7a3681da834a0bed8fe703223087",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_61e547a7",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-09T04:33:56Z",
+      "side": 1,
+      "message": "don\u0027t check, use exceptions\n\n    try:\n       runner.run()\n    except AttributeError:\n       pass",
+      "revId": "41db57157c0c7a3681da834a0bed8fe703223087",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_21ef3f89",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-09T04:33:56Z",
+      "side": 1,
+      "message": "don\u0027t need to build a list, can use next on iterator\n\n   cls.testcase_list[next(testcase_yaml.iterkeys())] \u003d testcase",
+      "revId": "41db57157c0c7a3681da834a0bed8fe703223087",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_81e2b39d",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1402
+      },
+      "writtenOn": "2016-12-09T04:33:56Z",
+      "side": 1,
+      "message": "we could use dict here\n\n  TESTCASE_TYPE_MAP \u003d {\n    \u0027functest\u0027: FunctTestcase,\n    \u0027yardstick\u0027: YardstickTestcase,\n    \u0027shell\u0027: ShellTestCase,\n  }\n\n  @classmethod\n  def create(cls, testcase_type, testcase_yaml):\n     try:\n        return cls.TESTCASE_TYPE_MAP[testcase_type](testcase_yaml)\n     except KeyError:\n        return None",
+      "revId": "41db57157c0c7a3681da834a0bed8fe703223087",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_a1d1effc",
         "filename": "dovetail/testcase/example.tc001.yml",
         "patchSetId": 13
