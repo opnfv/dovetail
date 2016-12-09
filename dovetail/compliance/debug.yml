@@ -4,6 +4,6 @@
 debug:
   name: debug
   testcases_list:
-    - dovetail.ipv6.tc001
+    #- dovetail.ipv6.tc001
     - dovetail.nfvi.tc001
     - dovetail.nfvi.tc002

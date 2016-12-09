@@ -13,7 +13,7 @@ import yaml
 import utils.dovetail_logger as dt_logger
 
 from parser import Parser
-from conf.dovetail_config import DovetailConfig as dt_config
+from conf.dovetail_config import DovetailConfig as dt_cfg
 
 
 class Testcase:
@@ -34,7 +34,7 @@ class Testcase:
 
     def prepare_cmd(self):
         script_type = self.script_type()
-        for cmd in dt_config.dovetail_config[script_type]['testcase']['cmds']:
+        for cmd in dt_cfg.dovetail_config[script_type]['testcase']['cmds']:
             cmd_lines = Parser.parse_cmd(cmd, self)
             if not cmd_lines:
                 return False
@@ -111,11 +111,11 @@ class Testcase:
 
     @staticmethod
     def pre_condition_cls(script_type):
-        return dt_config.dovetail_config[script_type]['pre_condition']
+        return dt_cfg.dovetail_config[script_type]['pre_condition']
 
     @staticmethod
     def post_condition_cls(script_type):
-        return dt_config.dovetail_config[script_type]['post_condition']
+        return dt_cfg.dovetail_config[script_type]['post_condition']
 
     @classmethod
     def update_script_testcase(cls, script_type, script_testcase):
@@ -144,7 +144,8 @@ class Testcase:
 
     @classmethod
     def load(cls):
-        for root, dirs, files in os.walk(dt_config.TESTCASE_PATH):
+        for root, dirs, files in \
+                 os.walk(dt_cfg.dovetail_config['TESTCASE_PATH']):
             for testcase_file in files:
                 with open(os.path.join(root, testcase_file)) as f:
                     testcase_yaml = yaml.safe_load(f)
@@ -180,7 +181,8 @@ class Testsuite:
 
     @classmethod
     def load(cls):
-        for root, dirs, files in os.walk(dt_config.COMPLIANCE_PATH):
+        for root, dirs, files in \
+                 os.walk(dt_cfg.dovetail_config['COMPLIANCE_PATH']):
             for testsuite_yaml in files:
                 with open(os.path.join(root, testsuite_yaml)) as f:
                     testsuite_yaml = yaml.safe_load(f)

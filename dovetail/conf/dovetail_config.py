@@ -14,13 +14,6 @@ import re
 
 class DovetailConfig:
 
-    COMPLIANCE_PATH = './compliance/'
-    TESTCASE_PATH = './testcase/'
-    # testsuite supported tuple, should adjust accordingly
-    testsuite_supported = ('compliance_set', 'proposed_tests', 'debug')
-    # testarea supported tuple, should adjust accordingly
-    testarea_supported = ('vimops', 'nfvi', 'ipv6')
-
     dovetail_config = {}
 
     @classmethod

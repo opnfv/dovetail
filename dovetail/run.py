@@ -23,7 +23,7 @@ from testcase import Testsuite
 from report import Report
 from report import FunctestCrawler, YardstickCrawler
 from report import FunctestChecker, YardstickChecker
-from conf.dovetail_config import DovetailConfig as dt_config
+from conf.dovetail_config import DovetailConfig as dt_cfg
 
 
 def load_testsuite(testsuite):
@@ -36,7 +36,7 @@ def set_container_tags(option_str):
         option_str = script_tag_opt.split(':')
         script_type = option_str[0].strip()
         script_tag = option_str[1].strip()
-        dt_config.dovetail_config[script_type]['docker_tag'] = script_tag
+        dt_cfg.dovetail_config[script_type]['docker_tag'] = script_tag
 
 
 def load_testcase():
@@ -110,7 +110,7 @@ def filter_env_options(input_dict):
     envs_options = {}
     for key, value in input_dict.items():
         key = key.upper()
-        if key in dt_config.dovetail_config['cli']['options']['envs']:
+        if key in dt_cfg.dovetail_config['cli']['options']['envs']:
             envs_options[key] = value
     return envs_options
 
@@ -128,7 +128,7 @@ def create_logs():
 
 
 def clean_results_dir():
-    result_path = dt_config.dovetail_config['result_dir']
+    result_path = dt_cfg.dovetail_config['result_dir']
     if os.path.exists(result_path):
         if os.path.isdir(result_path):
             cmd = 'sudo rm -rf %s/*' % (result_path)
@@ -148,11 +148,11 @@ def main(*args, **kwargs):
     logger.info('================================================')
     validate_options(kwargs, logger)
     envs_options = filter_env_options(kwargs)
-    dt_config.update_envs(envs_options)
+    dt_cfg.update_envs(envs_options)
     logger.info('Your new envs for functest: %s' %
-                dt_config.dovetail_config['functest']['envs'])
+                dt_cfg.dovetail_config['functest']['envs'])
     logger.info('Your new envs for yardstick: %s' %
-                dt_config.dovetail_config['yardstick']['envs'])
+                dt_cfg.dovetail_config['yardstick']['envs'])
 
     if 'tag' in kwargs and kwargs['tag'] is not None:
         set_container_tags(kwargs['tag'])
@@ -160,9 +160,10 @@ def main(*args, **kwargs):
     testarea = kwargs['testarea']
     testsuite_validation = False
     testarea_validation = False
-    if (testarea == 'full') or (testarea in dt_config.testarea_supported):
+    if (testarea == 'full') or\
+       (testarea in dt_cfg.dovetail_config['testarea_supported']):
         testarea_validation = True
-    if kwargs['testsuite'] in dt_config.testsuite_supported:
+    if kwargs['testsuite'] in dt_cfg.dovetail_config['testsuite_supported']:
         testsuite_validation = True
     if testsuite_validation and testarea_validation:
         testsuite_yaml = load_testsuite(kwargs['testsuite'])
@@ -174,18 +175,18 @@ def main(*args, **kwargs):
                      (kwargs['testsuite'], testarea))
 
 
-dt_config.load_config_files()
+dt_cfg.load_config_files()
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
-if dt_config.dovetail_config['cli']['options'] is not None:
-    for key, value in dt_config.dovetail_config['cli']['options'].items():
+if dt_cfg.dovetail_config['cli']['options'] is not None:
+    for key, value in dt_cfg.dovetail_config['cli']['options'].items():
         if value is not None:
             for k, v in value.items():
                 flags = v['flags']
                 del v['flags']
                 main = click.option(*flags, **v)(main)
-if dt_config.dovetail_config['cli']['arguments'] is not None:
-    for key, value in dt_config.dovetail_config['cli']['arguments'].items():
+if dt_cfg.dovetail_config['cli']['arguments'] is not None:
+    for key, value in dt_cfg.dovetail_config['cli']['arguments'].items():
         if value is not None:
             for k, v in value.items():
                 flags = v['flags']

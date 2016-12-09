@@ -106,7 +106,7 @@ class Report:
         sub_report = {}
         testcase_num = {}
         testcase_passnum = {}
-        for area in dt_cfg.testarea_supported:
+        for area in dt_cfg.dovetail_config['testarea_supported']:
             sub_report[area] = ''
             testcase_num[area] = 0
             testcase_passnum[area] = 0
@@ -114,7 +114,8 @@ class Report:
         # TO DO: once version scheme settled, adjust accordingly
         spec_link = dt_cfg.dovetail_config['repo'] + 'dovetail/testcase'
         for testcase in report_data['testcases_list']:
-            pattern = re.compile('|'.join(dt_cfg.testarea_supported))
+            pattern = re.compile(
+                '|'.join(dt_cfg.dovetail_config['testarea_supported']))
             area = pattern.findall(testcase['name'])[0]
             result_dir = dt_cfg.dovetail_config['result_dir']
             sub_report[area] += '- <%s> %s result: <%s>\n' %\
