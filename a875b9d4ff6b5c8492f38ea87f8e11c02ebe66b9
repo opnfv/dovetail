@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_175fe5e6",
+        "filename": "dovetail/container.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2016-12-09T19:58:00Z",
+      "side": 1,
+      "message": "Just curious about why a rename here? Seems like ideally that would be done separate of the py -\u003e yml conversion.",
+      "revId": "a875b9d4ff6b5c8492f38ea87f8e11c02ebe66b9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
