@@ -16,6 +16,24 @@
       "revId": "a875b9d4ff6b5c8492f38ea87f8e11c02ebe66b9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_37a781bf",
+        "filename": "dovetail/container.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-12-10T04:03:56Z",
+      "side": 1,
+      "message": "The renaming looks short, concise and not lose its meaning. since after config parameters moving, there\u0027s another yaml called dovetail_config will be quoted, which occurs \"dt_cfg.dovetail_config\" such as line 39/40 in this file, after change to \"cfg\", it will raise no confusing to developers.",
+      "parentUuid": "5ac10518_175fe5e6",
+      "revId": "a875b9d4ff6b5c8492f38ea87f8e11c02ebe66b9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
