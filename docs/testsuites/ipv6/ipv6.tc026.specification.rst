@@ -6,8 +6,6 @@
 Dovetail IPv6 tc026 specification - Service VM as IPv6 vRouter
 ==============================================================
 
-.. table::
-   :class: longtable
 
 +-----------------------+--------------------------------------------------------------------------+
 |test case name         |Service VM as IPv6 vRouter                                                |
