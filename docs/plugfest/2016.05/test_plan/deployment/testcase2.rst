@@ -8,13 +8,13 @@ Purpose
 ^^^^^^^
 
 This test case is the second and no one really cares for it.
-If you have it in you please refer to the `Plugfest setup and configuration`_ section,
+If you have it in you please refer to the `Plugfest setup and configuration` section,
 it's OK to simply amble on at this stage.  *(It's only the second test case)*
 
 References
 ^^^^^^^^^^
 
-Somewhere in `ETSI`_ there may be a useful link.
+Somewhere in [ETSI]_ there may be a useful link.
 
 Test Setup
 ^^^^^^^^^^
@@ -36,5 +36,5 @@ Expected Results
 2.  This results is used to indicate the pass/fail status for the test case itself.
 3.  To pass a test case, metrics would be expected to “pass” 1 and not stray to 3.
 
-.. _ETSI: http://www.etsi.org/
+.. [ETSI] http://www.etsi.org/
 

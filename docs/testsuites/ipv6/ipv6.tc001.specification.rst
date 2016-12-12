@@ -57,5 +57,5 @@ Dovetail IPv6 tc001 specification - Bulk Creation and Deletion of IPv6 Networks,
 |test report            |TBD                                                                                                 |
 +-----------------------+----------------------------------------------------------------------------------------------------+
 
-.._[1]: http://developer.openstack.org/api-ref/networking/v2/
-.._[2]: http://wiki.openstack.org/wiki/Neutron/APIv2-specification
+.. _[1] http://developer.openstack.org/api-ref/networking/v2/
+.. _[2] http://wiki.openstack.org/wiki/Neutron/APIv2-specification
