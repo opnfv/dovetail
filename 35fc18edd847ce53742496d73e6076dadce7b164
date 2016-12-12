@@ -16,6 +16,24 @@
       "revId": "35fc18edd847ce53742496d73e6076dadce7b164",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_322c6f99",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-12T01:08:53Z",
+      "side": 1,
+      "message": "CLI means defining commands for running. \"python run.py --help\" is a kind of running. Besides this, we can also use \u0027dovetail --help\u0027 after installing by our setup.py. About CLI you can refer to http://click.pocoo.org/5/",
+      "parentUuid": "5ac10518_a126cf14",
+      "revId": "35fc18edd847ce53742496d73e6076dadce7b164",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
