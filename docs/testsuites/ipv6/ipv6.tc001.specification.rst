@@ -6,8 +6,6 @@
 Dovetail IPv6 tc001 specification - Bulk Creation and Deletion of IPv6 Networks, Ports and Subnets
 ==================================================================================================
 
-.. table::
-   :class: longtable
 
 +-----------------------+----------------------------------------------------------------------------------------------------+
 |test case name         |Bulk creation and deletion of IPv6 networks, ports and subnets                                      |
@@ -45,17 +43,17 @@ Dovetail IPv6 tc001 specification - Bulk Creation and Deletion of IPv6 Networks,
 |                       |                                                                                                    |
 +-----------------------+----------------------------------------------------------------------------------------------------+
 |input specifications   |The parameters needed to execute Neutron network APIs.                                              |
-|                       |Refer to Neutron Networking API v2.0 [1]_ [2]_                                                      |
+|                       |Refer to Neutron Networking API v2.0 `[1]`_ `[2]`_                                                  |
 +-----------------------+----------------------------------------------------------------------------------------------------+
 |output specifications  |The responses after executing Network network APIs.                                                 |
-|                       |Refer to Neutron Networking API v2.0 [1]_ [2]_                                                      |
+|                       |Refer to Neutron Networking API v2.0 `[1]`_ `[2]`_                                                  |
 +-----------------------+----------------------------------------------------------------------------------------------------+
 |pass/fail criteria     |If normal response code 200 is returned, the test passes.                                           |
 |                       |Otherwise, the test fails with various error codes.                                                 |
-|                       |Refer to Neutron Networking API v2.0 [1]_ [2]_                                                      |
+|                       |Refer to Neutron Networking API v2.0 `[1]`_ `[2]`_                                                  |
 +-----------------------+----------------------------------------------------------------------------------------------------+
 |test report            |TBD                                                                                                 |
 +-----------------------+----------------------------------------------------------------------------------------------------+
 
-.._[1]: http://developer.openstack.org/api-ref/networking/v2/
-.._[2]: http://wiki.openstack.org/wiki/Neutron/APIv2-specification
+.. _`[1]`: http://developer.openstack.org/api-ref/networking/v2/
+.. _`[2]`: http://wiki.openstack.org/wiki/Neutron/APIv2-specification
