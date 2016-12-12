@@ -9,12 +9,12 @@ Purpose
 
 This test case is the first and therefore most important test case.
 As the first you should take care to do all the set-up found in the
-`Plugfest setup and configuration`_ section.
+`Plugfest setup and configuration` section.
 
 References
 ^^^^^^^^^^
 
-Somewhere in `ETSI`_ there is a useful link.
+Somewhere in [ETSI]_ there is a useful link.
 
 Test Setup
 ^^^^^^^^^^
@@ -36,5 +36,4 @@ Expected Results
 2.  This results is used to indicate the pass/fail status for the test case executor.
 3.  To pass a test case, it all individual metrics would be expected to “pass”.
 
-.. _ETSI: http://www.etsi.org/
-
+.. [ETSI] http://www.etsi.org/
