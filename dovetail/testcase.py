@@ -145,7 +145,7 @@ class Testcase:
     @classmethod
     def load(cls):
         for root, dirs, files in \
-                 os.walk(dt_cfg.dovetail_config['TESTCASE_PATH']):
+                os.walk(dt_cfg.dovetail_config['TESTCASE_PATH']):
             for testcase_file in files:
                 with open(os.path.join(root, testcase_file)) as f:
                     testcase_yaml = yaml.safe_load(f)
@@ -182,7 +182,7 @@ class Testsuite:
     @classmethod
     def load(cls):
         for root, dirs, files in \
-                 os.walk(dt_cfg.dovetail_config['COMPLIANCE_PATH']):
+                os.walk(dt_cfg.dovetail_config['COMPLIANCE_PATH']):
             for testsuite_yaml in files:
                 with open(os.path.join(root, testsuite_yaml)) as f:
                     testsuite_yaml = yaml.safe_load(f)
