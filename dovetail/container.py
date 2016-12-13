@@ -28,7 +28,7 @@ class Container:
 
     @classmethod
     def create_log(cls):
-        cls.logger = dt_logger.Logger(__name__+'.Container').getLogger()
+        cls.logger = dt_logger.Logger(__name__ + '.Container').getLogger()
 
     @classmethod
     def get(cls, type):

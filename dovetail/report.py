@@ -36,7 +36,7 @@ class Report:
 
     @classmethod
     def create_log(cls):
-        cls.logger = dt_logger.Logger(__name__+'.Report').getLogger()
+        cls.logger = dt_logger.Logger(__name__ + '.Report').getLogger()
 
     @staticmethod
     def check_result(testcase, db_result):
@@ -127,22 +127,22 @@ class Report:
                 pass_num += 1
 
         if total_num != 0:
-            pass_rate = pass_num/total_num
+            pass_rate = pass_num / total_num
             report_txt += 'Pass Rate: %.2f%% (%s/%s)\n' %\
-                (pass_rate*100, pass_num, total_num)
+                (pass_rate * 100, pass_num, total_num)
             report_txt += 'Assessed test areas:\n'
         for key in sub_report:
             if testcase_num[key] != 0:
-                pass_rate = testcase_passnum[key]/testcase_num[key]
+                pass_rate = testcase_passnum[key] / testcase_num[key]
                 # TO DO: once version scheme settled, adjust accordingly
                 doc_link = dt_cfg.dovetail_config['repo'] +\
                     ('docs/testsuites/%s' % key)
                 report_txt += '- %s results: <%s> pass %.2f%%\n' %\
-                    (key, doc_link, pass_rate*100)
+                    (key, doc_link, pass_rate * 100)
         for key in sub_report:
             if testcase_num[key] != 0:
-                pass_rate = testcase_passnum[key]/testcase_num[key]
-                report_txt += '%s: pass rate %.2f%%\n' % (key, pass_rate*100)
+                pass_rate = testcase_passnum[key] / testcase_num[key]
+                report_txt += '%s: pass rate %.2f%%\n' % (key, pass_rate * 100)
                 report_txt += sub_report[key]
 
         cls.logger.info(report_txt)
@@ -206,7 +206,8 @@ class FunctestCrawler:
 
     @classmethod
     def create_log(cls):
-        cls.logger = dt_logger.Logger(__name__+'.FunctestCrawler').getLogger()
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.FunctestCrawler').getLogger()
 
     def crawl(self, testcase=None):
         store_type = \
@@ -274,7 +275,8 @@ class YardstickCrawler:
 
     @classmethod
     def create_log(cls):
-        cls.logger = dt_logger.Logger(__name__+'.YardstickCrawler').getLogger()
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.YardstickCrawler').getLogger()
 
     def crawl(self, testcase=None):
         store_type = \
@@ -287,7 +289,7 @@ class YardstickCrawler:
 
     def crawl_from_file(self, testcase=None):
         file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
-                                 testcase+'.out')
+                                 testcase + '.out')
         if not os.path.exists(file_path):
             self.logger.info('result file not found: %s' % file_path)
             return None
@@ -333,7 +335,8 @@ class FunctestChecker:
 
     @classmethod
     def create_log(cls):
-        cls.logger = dt_logger.Logger(__name__+'.FunctestChecker').getLogger()
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.FunctestChecker').getLogger()
 
     def check(self, testcase, db_result):
         sub_testcase_list = testcase.sub_testcase()
@@ -372,7 +375,8 @@ class YardstickChecker:
 
     @classmethod
     def create_log(cls):
-        cls.logger = dt_logger.Logger(__name__+'.YardstickChecker').getLogger()
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.YardstickChecker').getLogger()
 
     @staticmethod
     def check(testcase, result):
