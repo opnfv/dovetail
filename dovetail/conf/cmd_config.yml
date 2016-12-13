@@ -31,11 +31,11 @@ cli:
           - '--DEPLOY_TYPE'
           - '-T'
         help: 'DEPLOY_TYPE of the system under test (SUT).'
-      DEBUG:
+      CON_DEBUG:
         flags:
-          - '--DEBUG'
-          - '-d'
-        help: 'DEBUG for showing debug log.'
+          - '--CON_DEBUG'
+          - '-c'
+        help: 'True for showing debug log in functest/yardstick container.'
     non-envs:
       testsuite:
         flags:
@@ -52,3 +52,8 @@ cli:
           - '--tag'
           - '-o'
         help: 'Overwrite tags for each docker container (e.g. "functest:stable,yardstick:latest")'
+      debug:
+        flags:
+          - '--debug'
+          - '-d'
+        help: 'True for showing debug log in screen.'

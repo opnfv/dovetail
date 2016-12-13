@@ -141,6 +141,8 @@ def clean_results_dir():
 def main(*args, **kwargs):
     """Dovetail compliance test entry!"""
     clean_results_dir()
+    if kwargs['debug']:
+        os.environ['DEBUG'] = kwargs['debug']
     create_logs()
     logger = dt_logger.Logger('run').getLogger()
     logger.info('================================================')
