@@ -23,7 +23,6 @@ class Testcase(object):
 
     def __init__(self, testcase_yaml):
         self.testcase = testcase_yaml.values()[0]
-        # self.logger.debug('testcase:%s', self.testcase)
         self.testcase['passed'] = False
         self.cmds = []
         self.sub_testcase_status = {}
@@ -35,8 +34,17 @@ class Testcase(object):
 
     def prepare_cmd(self):
         try:
-            self.cmds = self.testcase['validate']['cmds']
-            return True
+            for cmd in self.testcase['validate']['cmds']:
+                cmd_lines = Parser.parse_cmd(cmd, self)
+                if not cmd_lines:
+                    return False
+                # self.logger.debug('cmd_lines:%s', cmd_lines)
+                self.cmds.append(cmd_lines)
+            self.logger.debug('cmds:%s', self.cmds)
+            if len(self.cmds) > 0:
+                return True
+            else:
+                return False
         except KeyError:
             return False
 
@@ -182,8 +190,6 @@ class FunctestTestcase(Testcase):
     def prepare_cmd(self):
         ret = super(FunctestTestcase, self).prepare_cmd()
         if not ret:
-            return False
-        else:
             for cmd in \
                 dt_cfg.dovetail_config[self.name]['cmds']:
                 cmd_lines = Parser.parse_cmd(cmd, self)
@@ -191,7 +197,7 @@ class FunctestTestcase(Testcase):
                     return False
                 self.logger.debug('cmd_lines:%s', cmd_lines)
                 self.cmds.append(cmd_lines)
-            return True
+        return True
 
 
 class YardstickTestcase(Testcase):
