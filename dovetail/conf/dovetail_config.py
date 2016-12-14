@@ -43,15 +43,40 @@ class DovetailConfig:
         key = cmd_name.upper()
         return cls.CMD_NAME_TRANS.get(key, key)
 
+    # Analyze the kind of the giving path,
+    # return true for env path,
+    # return false for non_env path.
     @classmethod
-    def update_envs(cls, options):
-        for item in options:
-            key = cls.cmd_name_trans(item)
-            if not options[item] and key in os.environ:
-                options[item] = os.environ[key]
-            if options[item]:
-                cls.update_config_envs('functest', key, options[item])
-                cls.update_config_envs('yardstick', key, options[item])
+    def is_env_path(cls, path):
+        if len(path) == 2:
+            test_project = cls.dovetail_config['test_project']
+            if path[0] in test_project and path[1] == 'envs':
+                return True
+        else:
+            return False
+
+    # update dovetail_config dict with the giving path.
+    # if path is in the dovetail_config dict, its value will be replaced.
+    # if path is not in the dict, it will be added as a new item of the dict.
+    @classmethod
+    def update_config(cls, config_dict):
+        for key, value in config_dict.items():
+            path_list = []
+            for item in value['path']:
+                path_list.append([(k.strip()) for k in item.split('/')])
+            for path in path_list:
+                if cls.is_env_path(path):
+                    cls.update_envs(key, path, value['value'])
+                else:
+                    cls.update_non_envs(path, value['value'])
+
+    @classmethod
+    def update_envs(cls, key, path, value):
+        key = cls.cmd_name_trans(key)
+        if not value and key in os.environ:
+            value = os.environ[key]
+        if value:
+            cls.update_config_envs(path[0], key, value)
 
     @classmethod
     def update_config_envs(cls, validate_type, key, value):
@@ -63,3 +88,14 @@ class DovetailConfig:
             envs = envs.replace(old_value[0][0], value)
         cls.dovetail_config[validate_type]['envs'] = envs
         return envs
+
+    @staticmethod
+    def set_leaf_dict(dic, path, value):
+        for key in path[:-1]:
+            dic = dic.setdefault(key, {})
+        dic[path[-1]] = value
+
+    @classmethod
+    def update_non_envs(cls, path, value):
+        if value:
+            cls.set_leaf_dict(cls.dovetail_config, path, value)

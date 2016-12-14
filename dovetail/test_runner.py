@@ -38,7 +38,7 @@ class DockerRunner(object):
 
         if not self.testcase.prepare_cmd():
             self.logger.error('failed to prepare testcase:%s',
-                              self.testcase.name())
+                              self.testcase.name)
         else:
             for cmd in self.testcase.cmds:
                 Container.exec_cmd(container_id, cmd)

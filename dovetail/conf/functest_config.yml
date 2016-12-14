@@ -11,7 +11,7 @@ functest:
     - 'functest env prepare'
     - 'functest testcase run {{validate_testcase}}'
   post_condition:
-    - ''
+    - 'echo test for postcondition'
   result:
     dir: '/home/opnfv/functest/results'
     store_type: 'file'

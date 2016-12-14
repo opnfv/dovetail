@@ -77,5 +77,7 @@ class Container:
 
     @classmethod
     def exec_cmd(cls, container_id, sub_cmd, exit_on_error=False):
+        if sub_cmd == "":
+            return
         cmd = 'sudo docker exec %s /bin/bash -c "%s"' % (container_id, sub_cmd)
         dt_utils.exec_cmd(cmd, cls.logger, exit_on_error)
