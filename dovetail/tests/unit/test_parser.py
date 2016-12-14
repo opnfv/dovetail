@@ -25,7 +25,7 @@ class TestParser(unittest.TestCase):
 
     def setUp(self):
         """Test case setup"""
-        from conf.dovetail_config import DovetailConfig as dt_cfg
+        from utils.dovetail_config import DovetailConfig as dt_cfg
         dt_cfg.load_config_files()
         dovetail_parser.Parser.create_log()
         logging.disable(logging.CRITICAL)

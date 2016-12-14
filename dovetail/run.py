@@ -22,7 +22,7 @@ from testcase import Testsuite
 from report import Report
 from report import FunctestCrawler, YardstickCrawler
 from report import FunctestChecker, YardstickChecker
-from conf.dovetail_config import DovetailConfig as dt_cfg
+from utils.dovetail_config import DovetailConfig as dt_cfg
 from test_runner import DockerRunner, ShellRunner
 
 

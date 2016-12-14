@@ -13,7 +13,7 @@ import yaml
 import utils.dovetail_logger as dt_logger
 
 from parser import Parser
-from conf.dovetail_config import DovetailConfig as dt_cfg
+from utils.dovetail_config import DovetailConfig as dt_cfg
 from test_runner import TestRunnerFactory
 
 

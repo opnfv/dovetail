@@ -25,15 +25,16 @@ class DovetailConfig:
     @classmethod
     def load_config_files(cls):
         curr_path = os.path.dirname(os.path.abspath(__file__))
-        with open(os.path.join(curr_path, 'dovetail_config.yml')) as f:
+        config_path = os.path.join(os.path.dirname(curr_path), 'conf')
+        with open(os.path.join(config_path, 'dovetail_config.yml')) as f:
             cls.dovetail_config = yaml.safe_load(f)
 
         for extra_config_file in cls.dovetail_config['include_config']:
-            with open(os.path.join(curr_path, extra_config_file)) as f:
+            with open(os.path.join(config_path, extra_config_file)) as f:
                 extra_config = yaml.safe_load(f)
                 cls.dovetail_config.update(extra_config)
 
-        path = os.path.join(curr_path, cls.dovetail_config['cli_file_name'])
+        path = os.path.join(config_path, cls.dovetail_config['cli_file_name'])
         with open(path) as f:
             cmd_yml = yaml.safe_load(f)
             cls.dovetail_config['cli'] = cmd_yml[cmd_yml.keys()[0]]
