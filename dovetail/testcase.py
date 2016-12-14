@@ -23,7 +23,7 @@ class Testcase(object):
 
     def __init__(self, testcase_yaml):
         self.testcase = testcase_yaml.values()[0]
-        self.logger.debug('testcase:%s', self.testcase)
+        # self.logger.debug('testcase:%s', self.testcase)
         self.testcase['passed'] = False
         self.cmds = []
         self.sub_testcase_status = {}
@@ -163,7 +163,6 @@ class Testcase(object):
                     else:
                         cls.logger.error('failed to create testcase: %s',
                                          testcase_file)
-        cls.logger.debug(cls.testcase_list)
 
     @classmethod
     def get(cls, testcase_name):
@@ -183,14 +182,16 @@ class FunctestTestcase(Testcase):
     def prepare_cmd(self):
         ret = super(FunctestTestcase, self).prepare_cmd()
         if not ret:
+            return False
+        else:
             for cmd in \
                 dt_cfg.dovetail_config[self.name]['cmds']:
                 cmd_lines = Parser.parse_cmd(cmd, self)
                 if not cmd_lines:
                     return False
+                self.logger.debug('cmd_lines:%s', cmd_lines)
                 self.cmds.append(cmd_lines)
-                return True
-        return ret
+            return True
 
 
 class YardstickTestcase(Testcase):
