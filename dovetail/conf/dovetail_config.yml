@@ -17,6 +17,7 @@ testarea_supported:
   - vimops
   - nfvi
   - ipv6
+  - example
 
 # used for testcase cmd template in jinja2 format
 # we have two variables available now
