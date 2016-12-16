@@ -10,6 +10,7 @@
 #
 
 import sys
+import time
 import subprocess
 from collections import Mapping, Set, Sequence
 
@@ -29,6 +30,15 @@ def exec_cmd(cmd, logger=None, exit_on_error=True, info=False,
             print(msg_exec)
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
                          stderr=subprocess.STDOUT)
+
+    # show progress bar
+    seconds = 0
+    while p.poll() is None:
+        seconds += 1
+        if seconds > 3:
+            show_progress_bar(seconds)
+        time.sleep(1)
+
     output = p.communicate()
     for line in output[0].strip().split('\n'):
         line = line.replace('\n', '')
@@ -89,3 +99,12 @@ def get_obj_by_path(obj, dst_path):
     for path, obj in objwalk(obj):
         if path == dst_path:
             return obj
+
+
+def show_progress_bar(length):
+    max_len = 50
+    length %= max_len
+    sys.stdout.write('Running ' + ' ' * max_len + '\r')
+    sys.stdout.flush()
+    sys.stdout.write('Running ' + '=' * length + '>' + '\r')
+    sys.stdout.flush()
