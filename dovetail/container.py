@@ -20,10 +20,10 @@ class Container:
 
     logger = None
 
-    def __init__(cls):
+    def __init__(self):
         pass
 
-    def __str__(cls):
+    def __str__(self):
         pass
 
     @classmethod
