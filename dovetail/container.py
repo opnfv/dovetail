@@ -46,10 +46,12 @@ class Container:
         docker_image = cls.get_docker_image(type)
         envs = dovetail_config[type]['envs']
         opts = dovetail_config[type]['opts']
+        creds = ' -v %s:%s ' % (dovetail_config['creds'],
+                               dovetail_config[type]['creds'])
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
-        cmd = 'sudo docker run %s %s %s %s %s /bin/bash' % \
-            (opts, envs, sshkey, result_volume, docker_image)
+        cmd = 'sudo docker run %s %s %s %s %s %s /bin/bash' % \
+            (opts, envs, sshkey, creds, result_volume, docker_image)
         dt_utils.exec_cmd(cmd, cls.logger)
         ret, container_id = \
             dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +
