@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_24b09f42",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-19T02:49:07Z",
+      "side": 1,
+      "message": "Actually, there are more than this three kinds of logging level in module logging. If you want to make this function more stronger rather than just server for function exec_cmd, you may need to cover all levels. refer to https://docs.python.org/2/library/logging.html#logging-levels",
+      "range": {
+        "startLine": 23,
+        "startChar": 10,
+        "endLine": 23,
+        "endChar": 26
+      },
+      "revId": "ce17214c0717999ba08cd8f094499f2e4efb0712",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_845cf3ee",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-19T02:49:07Z",
+      "side": 1,
+      "message": "I am not clear about the param flush here. I guess it is used to control whether it needs to write messages in the buffer to the terminal immediately.\nIf so, it should not put in the else section. It needs to cover both the logger and print cmds.",
+      "range": {
+        "startLine": 33,
+        "startChar": 8,
+        "endLine": 34,
+        "endChar": 30
+      },
+      "revId": "ce17214c0717999ba08cd8f094499f2e4efb0712",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_e477f700",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-19T02:49:07Z",
+      "side": 1,
+      "message": "I think whether the returncode is zero or nonzero, it should output both the stdout and stderr because we want to log all messages during the exec procedure.\nIf returncode is zero, it will print the msg_err.",
+      "range": {
+        "startLine": 54,
+        "startChar": 4,
+        "endLine": 54,
+        "endChar": 25
+      },
+      "revId": "ce17214c0717999ba08cd8f094499f2e4efb0712",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
