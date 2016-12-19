@@ -11,6 +11,7 @@
 import click
 import os
 import copy
+import time
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
@@ -58,7 +59,10 @@ def run_test(testsuite, testarea, logger):
             run_testcase = False
 
         if run_testcase:
+            start_time = time.time()
             testcase.run()
+            end_time = time.time()
+            duration = end_time - start_time
 
         db_result = Report.get_result(testcase)
         Report.check_result(testcase, db_result)

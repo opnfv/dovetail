@@ -98,7 +98,7 @@ class Report:
         report_txt += 'Validation ID: %s\n' % report_data['validation_ID']
         report_txt += 'Upload Date: %s\n' % report_data['upload_date']
         if report_data['duration'] == 0:
-            report_txt += 'Duration: %s\n\n' % 'NA'
+            report_txt += 'Duration: %s\n\n' % 'N/A'
         else:
             report_txt += 'Duration: %.2f s\n\n' % report_data['duration']
 
