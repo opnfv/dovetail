@@ -9,8 +9,8 @@ creds: '/home/opnfv/dovetail/openstack.creds'
 
 # TO DO: once version scheme settled, adjust accordingly
 repo: 'https://github.com/opnfv/dovetail/tree/master/'
-COMPLIANCE_PATH: ./compliance/
-TESTCASE_PATH: ./testcase/
+COMPLIANCE_PATH: compliance/
+TESTCASE_PATH: testcase/
 # testsuite supported, should adjust accordingly
 testsuite_supported:
   - compliance_set

@@ -158,8 +158,10 @@ class Testcase(object):
 
     @classmethod
     def load(cls):
-        for root, dirs, files in \
-            os.walk(dt_cfg.dovetail_config['TESTCASE_PATH']):
+        testcase_dir = os.path.dirname(os.path.abspath(__file__))
+        testcase_path = dt_cfg.dovetail_config['TESTCASE_PATH']
+        abs_testcase_path = os.path.join(testcase_dir, testcase_path)
+        for root, dirs, files in os.walk(abs_testcase_path):
             for testcase_file in files:
                 with open(os.path.join(root, testcase_file)) as f:
                     testcase_yaml = yaml.safe_load(f)
@@ -254,8 +256,10 @@ class Testsuite:
 
     @classmethod
     def load(cls):
-        for root, dirs, files in \
-            os.walk(dt_cfg.dovetail_config['COMPLIANCE_PATH']):
+        compliance_dir = os.path.dirname(os.path.abspath(__file__))
+        compliance_path = dt_cfg.dovetail_config['COMPLIANCE_PATH']
+        abs_compliance_path = os.path.join(compliance_dir, compliance_path)
+        for root, dirs, files in os.walk(abs_compliance_path):
             for testsuite_yaml in files:
                 with open(os.path.join(root, testsuite_yaml)) as f:
                     testsuite_yaml = yaml.safe_load(f)

@@ -1,7 +1,7 @@
 *.py[cod]
 
 # Packages
-*.egg
+*.egg*
 .testrepository
 dist
 build
