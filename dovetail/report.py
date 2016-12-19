@@ -17,7 +17,7 @@ import uuid
 
 import utils.dovetail_logger as dt_logger
 
-from conf.dovetail_config import DovetailConfig as dt_cfg
+from utils.dovetail_config import DovetailConfig as dt_cfg
 from testcase import Testcase
 
 
