@@ -22,6 +22,7 @@ pip-log.txt
 # unittest/coverage reports
 .coverage
 .tox
+.cache
 nosetests.xml
 unittest_results.log
 
