@@ -16,7 +16,8 @@ import os
 import unittest
 import yaml
 
-import parser as dovetail_parser
+from dovetail import parser
+from dovetail.utils.dovetail_config import DovetailConfig as dt_cfg
 
 
 class TestParser(unittest.TestCase):
@@ -25,9 +26,8 @@ class TestParser(unittest.TestCase):
 
     def setUp(self):
         """Test case setup"""
-        from utils.dovetail_config import DovetailConfig as dt_cfg
         dt_cfg.load_config_files()
-        dovetail_parser.Parser.create_log()
+        parser.Parser.create_log()
         logging.disable(logging.CRITICAL)
 
     def test_parser_cmd(self):
@@ -39,7 +39,7 @@ class TestParser(unittest.TestCase):
         MockTestcase = type('Testcase', (object,), {})
         mock_testcase = MockTestcase()
         mock_testcase.testcase = mock_testcase_yaml.values()[0]
-        output = dovetail_parser.Parser.parse_cmd(mock_cmd, mock_testcase)
+        output = parser.Parser.parse_cmd(mock_cmd, mock_testcase)
         expected_output = ("python /functest/ci/run_tests.py -t "
                            "tempest_smoke_serial -r")
         self.assertEqual(expected_output, output)
@@ -52,7 +52,7 @@ class TestParser(unittest.TestCase):
         MockTestcase = type('Testcase', (object,), {})
         mock_testcase = MockTestcase()
         mock_testcase.testcase = mock_testcase_yaml.values()
-        output = dovetail_parser.Parser.parse_cmd(mock_cmd, mock_testcase)
+        output = parser.Parser.parse_cmd(mock_cmd, mock_testcase)
         expected_output = ("python /functest/ci/run_tests.py -t "
                            "None -r")
         self.assertEqual(expected_output, output)
