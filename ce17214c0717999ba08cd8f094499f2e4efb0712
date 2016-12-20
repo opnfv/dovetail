@@ -164,6 +164,30 @@
       "revId": "ce17214c0717999ba08cd8f094499f2e4efb0712",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_f890f896",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 6365
+      },
+      "writtenOn": "2016-12-20T12:46:04Z",
+      "side": 1,
+      "message": "Thank you for your suggestion!\n\nIf exception occours, the errors messages could keep the information of the exception. RD(research and design) only focus on error messages, because error messages can make us know why the error happened and help us resolve the error.\n\nAnd the stdout just output normal information that make us know the running progress.\n\nFurthermore, in the moment of the exception happened, the stdout output information may be incomplete or fragmented, so it is meaningless.\n\nAt the last, in the seconds of the exception happened, RD just output stderr information normally.",
+      "parentUuid": "5ac10518_1d737616",
+      "range": {
+        "startLine": 54,
+        "startChar": 4,
+        "endLine": 54,
+        "endChar": 25
+      },
+      "revId": "ce17214c0717999ba08cd8f094499f2e4efb0712",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
