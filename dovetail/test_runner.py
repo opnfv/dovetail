@@ -22,7 +22,7 @@ class DockerRunner(object):
 
     @classmethod
     def create_log(cls):
-        cls.logger = dt_logger.Logger(__file__).getLogger()
+        cls.logger = dt_logger.Logger(__name__ + '.DockerRunner').getLogger()
 
     def run(self):
         Container.pull_image(self.testcase.validate_type())
@@ -72,7 +72,7 @@ class ShellRunner(object):
 
     @classmethod
     def create_log(cls):
-        cls.logger = dt_logger.Logger(__file__).getLogger()
+        cls.logger = dt_logger.Logger(__name__ + '.ShellRunner').getLogger()
 
     def __init__(self, testcase):
         super(ShellRunner, self).__init__()
@@ -80,8 +80,12 @@ class ShellRunner(object):
         self.name = 'shell'
 
     def run(self):
-        for cmd in self.testcase.cmds:
-            dt_utils.exec_cmd(cmd, self.logger)
+        if not self.testcase.prepare_cmd():
+            self.logger.error('failed to prepare testcase:%s',
+                              self.testcase.name)
+        else:
+            for cmd in self.testcase.cmds:
+                dt_utils.exec_cmd(cmd, self.logger)
 
 
 class TestRunnerFactory(object):
