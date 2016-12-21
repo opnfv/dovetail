@@ -30,14 +30,14 @@ cli:
           - 'functest/envs'
           - 'yardstick/envs'
         help: 'IP of the system under test (SUT).'
-      CON_DEBUG:
+      debug:
         flags:
-          - '--CON_DEBUG'
-          - '-c'
+          - '--debug'
+          - '-d'
         path:
           - 'functest/envs'
           - 'yardstick/envs'
-        help: 'True for showing debug log in functest/yardstick container.'
+        help: 'True for showing debug log on screen.'
       yard_tag:
         flags:
           - '--yard_tag'
@@ -69,8 +69,3 @@ cli:
           - '--testarea'
         default: 'full'
         help: 'compliance testarea within testsuite'
-      debug:
-        flags:
-          - '--debug'
-          - '-d'
-        help: 'True for showing debug log in screen.'
