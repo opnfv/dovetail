@@ -15,23 +15,34 @@ import subprocess
 from collections import Mapping, Set, Sequence
 
 
-def exec_cmd(cmd, logger=None, exit_on_error=True, info=False,
-             error_msg="", verbose=True):
-    if not error_msg:
-        error_msg = ("The command '%s' failed." % cmd)
-    msg_exec = ("Executing command: '%s'" % cmd)
-    if verbose:
-        if logger:
-            if info:
-                logger.info(msg_exec)
-            else:
-                logger.debug(msg_exec)
-        else:
-            print(msg_exec)
-    p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
-                         stderr=subprocess.STDOUT)
+def exec_log(verbose, logger, msg, level, flush=False):
+    if not verbose:
+        return
 
-    # show progress bar
+    if logger:
+        if level == 'info':
+            logger.info(msg)
+        elif level == 'error':
+            logger.error(msg)
+        elif level == 'debug':
+            logger.debug(msg)
+        else:
+            pass
+    else:
+        print(msg)
+        if flush:
+            sys.stdout.flush()
+
+
+def exec_cmd(cmd, logger=None, exit_on_error=True, info=False,
+             err_msg="", verbose=True):
+    msg_err = ("The command '%s' failed." % cmd) if not err_msg else err_msg
+    msg_exec = ("Executing command: '%s'" % cmd)
+    level = 'info' if info else 'debug'
+    exec_log(verbose, logger, msg_exec, level)
+
+    p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
+                         stderr=subprocess.PIPE)
     seconds = 0
     while p.poll() is None:
         seconds += 1
@@ -39,29 +50,17 @@ def exec_cmd(cmd, logger=None, exit_on_error=True, info=False,
             show_progress_bar(seconds)
         time.sleep(1)
 
-    output = p.communicate()
-    for line in output[0].strip().split('\n'):
-        line = line.replace('\n', '')
-        if logger:
-            if info:
-                logger.info(line)
-            else:
-                logger.debug(line)
-        else:
-            print (line)
-            sys.stdout.flush()
-
-    returncode = p.returncode
-    if returncode != 0:
-        if verbose:
-            if logger:
-                logger.error(error_msg)
-            else:
-                print(error_msg)
+    (stdout, stderr) = p.communicate()
+    if p.returncode == 0:
+        for line in stdout.strip().splitlines():
+            exec_log(verbose, logger, line, level, True)
+    else:
+        exec_log(verbose, logger, stderr, 'error')
+        exec_log(verbose, logger, msg_err, 'error')
         if exit_on_error:
             sys.exit(1)
 
-    return returncode, output[0].strip()
+    return p.returncode, stdout.strip()
 
 
 # walkthrough the object, yield path and value
