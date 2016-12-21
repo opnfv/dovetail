@@ -8,6 +8,7 @@ dovetail.example.tc002:
       - "echo pre_condition"
     cmds:
       - "echo test2"
+      - "mkdir xxx"
     post_condition:
       - "echo post_condition"
   report:

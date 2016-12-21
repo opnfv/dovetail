@@ -34,7 +34,7 @@ def exec_log(verbose, logger, msg, level, flush=False):
             sys.stdout.flush()
 
 
-def exec_cmd(cmd, logger=None, exit_on_error=True, info=False,
+def exec_cmd(cmd, logger=None, exit_on_error=False, info=False,
              err_msg="", verbose=True):
     msg_err = ("The command '%s' failed." % cmd) if not err_msg else err_msg
     msg_exec = ("Executing command: '%s'" % cmd)
