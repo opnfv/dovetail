@@ -168,12 +168,13 @@ class Report:
         type = testcase.validate_type()
         crawler = CrawlerFactory.create(type)
         if crawler is None:
+            cls.logger.error('crawler is None:%s', testcase.name())
             return None
 
         if validate_testcase in cls.results[type]:
             return cls.results[type][validate_testcase]
 
-        result = crawler.crawl(validate_testcase)
+        result = crawler.crawl(testcase)
 
         if result is not None:
             cls.results[type][validate_testcase] = result
@@ -187,25 +188,13 @@ class Report:
         return result
 
 
-class CrawlerFactory:
-
-    @staticmethod
-    def create(type):
-        if type == 'functest':
-            return FunctestCrawler()
-
-        if type == 'yardstick':
-            return YardstickCrawler()
-
-        return None
-
-
 class FunctestCrawler:
 
     logger = None
 
     def __init__(self):
         self.type = 'functest'
+        self.logger.debug('create crawler:%s', self.type)
 
     @classmethod
     def create_log(cls):
@@ -258,7 +247,8 @@ class FunctestCrawler:
 
     def crawl_from_url(self, testcase=None):
         url = \
-            dt_cfg.dovetail_config[self.type]['result']['db_url'] % testcase
+            dt_cfg.dovetail_config[self.type]['result']['db_url'] % \
+            testcase.validate_testcase()
         self.logger.debug("Query to rest api: %s" % url)
         try:
             data = json.load(urllib2.urlopen(url))
@@ -275,6 +265,7 @@ class YardstickCrawler:
 
     def __init__(self):
         self.type = 'yardstick'
+        self.logger.debug('create crawler:%s', self.type)
 
     @classmethod
     def create_log(cls):
@@ -292,7 +283,7 @@ class YardstickCrawler:
 
     def crawl_from_file(self, testcase=None):
         file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
-                                 testcase + '.out')
+                                 testcase.validate_testcase() + '.out')
         if not os.path.exists(file_path):
             self.logger.info('result file not found: %s' % file_path)
             return None
@@ -312,17 +303,39 @@ class YardstickCrawler:
         return None
 
 
-class CheckerFactory:
+class ShellCrawler:
 
-    @staticmethod
-    def create(type):
-        if type == 'functest':
-            return FunctestChecker()
+    def __init__(self):
+        self.type = 'shell'
 
-        if type == 'yardstick':
-            return YardstickChecker()
+    def crawl(self, testcase=None):
+        return self.crawl_from_file(testcase)
 
-        return None
+    def crawl_from_file(self, testcase=None):
+        file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
+                                 testcase.name()) + '.out'
+        if not os.path.exists(file_path):
+            return None
+        try:
+            with open(file_path, 'r') as json_data:
+                result = json.load(json_data)
+            return result
+        except Exception:
+            return None
+
+
+class CrawlerFactory:
+
+    CRAWLER_MAP = {'functest': FunctestCrawler,
+                   'yardstick': YardstickCrawler,
+                   'shell': ShellCrawler}
+
+    @classmethod
+    def create(cls, type):
+        try:
+            return cls.CRAWLER_MAP[type]()
+        except KeyError:
+            return None
 
 
 class ResultChecker:
@@ -388,3 +401,27 @@ class YardstickChecker:
         else:
             testcase.passed(result['criteria'] == 'PASS')
         return
+
+
+class ShellChecker:
+
+    @staticmethod
+    def check(testcase, result):
+        try:
+            testcase.passed(result['pass'])
+        except Exception:
+            testcase.passed(False)
+
+
+class CheckerFactory:
+
+    CHECKER_MAP = {'functest': FunctestChecker,
+                   'yardstick': YardstickChecker,
+                   'shell': ShellChecker}
+
+    @classmethod
+    def create(cls, type):
+        try:
+            return cls.CHECKER_MAP[type]()
+        except KeyError:
+            return None

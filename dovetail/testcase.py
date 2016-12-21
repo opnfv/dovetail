@@ -93,17 +93,33 @@ class Testcase(object):
         return self._result_acquired(self.validate_testcase(), acquired)
 
     def pre_condition(self):
-        return self.pre_condition_cls(self.validate_type())
+        try:
+            pre_condition = self.testcase['validate']['pre_condition']
+            if pre_condition == '':
+                pre_condition = self.pre_condition_cls(self.validate_type())
+            return pre_condition
+        except:
+            self.logger.debug('testcase:%s pre_condition is empty',
+                              self.name())
+            return ''
 
     def post_condition(self):
-        return self.post_condition_cls(self.validate_type())
+        try:
+            post_condition = self.testcase['validate']['post_condition']
+            if post_condition == '':
+                post_condition = self.post_condition_cls(self.validate_type())
+            return post_condition
+        except:
+            self.logger.debug('testcae:%s post_condition is empty',
+                              self.name())
+            return ''
 
     def run(self):
         runner = TestRunnerFactory.create(self)
         try:
             runner.run()
-        except AttributeError:
-            pass
+        except AttributeError as e:
+            self.logger.exception('testcase:%s except:%s', self.name, e)
 
     # testcase in upstream testing project
     # validate_testcase_list = {'functest': {}, 'yardstick': {}, 'shell': {}}
@@ -187,7 +203,7 @@ class FunctestTestcase(Testcase):
 
     def __init__(self, testcase_yaml):
         super(FunctestTestcase, self).__init__(testcase_yaml)
-        self.name = 'functest'
+        self.type = 'functest'
 
     def prepare_cmd(self):
         ret = super(FunctestTestcase, self).prepare_cmd()
@@ -208,7 +224,7 @@ class YardstickTestcase(Testcase):
 
     def __init__(self, testcase_yaml):
         super(YardstickTestcase, self).__init__(testcase_yaml)
-        self.name = 'yardstick'
+        self.type = 'yardstick'
 
 
 class ShellTestcase(Testcase):
@@ -217,7 +233,7 @@ class ShellTestcase(Testcase):
 
     def __init__(self, testcase_yaml):
         super(ShellTestcase, self).__init__(testcase_yaml)
-        self.name = 'shell'
+        self.type = 'shell'
 
 
 class TestcaseFactory(object):
