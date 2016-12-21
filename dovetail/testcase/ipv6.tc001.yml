@@ -5,12 +5,12 @@ dovetail.ipv6.tc001:
     type: functest
     testcase: tempest_smoke_serial
     pre_condition:
-      - 'echo test for precondition'
+      - 'echo test for precondition in testcase'
     cmds:
       - 'functest env prepare'
       - 'functest testcase run {{validate_testcase}}'
     post_condition:
-      - 'echo test for precondition'
+      - 'echo test for precondition in testcase'
   report:
     sub_testcase_list:
       - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_network

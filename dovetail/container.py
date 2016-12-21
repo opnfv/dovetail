@@ -67,8 +67,10 @@ class Container:
                              (docker_image))
         else:
             cmd = 'sudo docker pull %s' % (docker_image)
-            dt_utils.exec_cmd(cmd, cls.logger)
-            cls.has_pull_latest_image[type] = True
+            ret, msg = dt_utils.exec_cmd(cmd, cls.logger)
+            if ret == 0:
+                cls.logger.debug('docker pull %s success!', docker_image)
+                cls.has_pull_latest_image[type] = True
 
     @classmethod
     def clean(cls, container_id):
@@ -80,6 +82,6 @@ class Container:
     @classmethod
     def exec_cmd(cls, container_id, sub_cmd, exit_on_error=False):
         if sub_cmd == "":
-            return
+            return (1, 'sub_cmd is empty')
         cmd = 'sudo docker exec %s /bin/bash -c "%s"' % (container_id, sub_cmd)
-        dt_utils.exec_cmd(cmd, cls.logger, exit_on_error)
+        return dt_utils.exec_cmd(cmd, cls.logger, exit_on_error)

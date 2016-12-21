@@ -93,17 +93,23 @@ class Testcase(object):
         return self._result_acquired(self.validate_testcase(), acquired)
 
     def pre_condition(self):
-        return self.pre_condition_cls(self.validate_type())
+        try:
+            return self.testcase['validate']['pre_condition']
+        except:
+            return self.pre_condition_cls(self.validate_type())
 
     def post_condition(self):
-        return self.post_condition_cls(self.validate_type())
+        try:
+            return self.testcase['validate']['post_condition']
+        except:
+            return self.post_condition_cls(self.validate_type())
 
     def run(self):
         runner = TestRunnerFactory.create(self)
         try:
             runner.run()
-        except AttributeError:
-            pass
+        except AttributeError as e:
+            self.logger.exception('testcase:%s except:%s', self.name, e)
 
     # testcase in upstream testing project
     # validate_testcase_list = {'functest': {}, 'yardstick': {}, 'shell': {}}
@@ -187,7 +193,7 @@ class FunctestTestcase(Testcase):
 
     def __init__(self, testcase_yaml):
         super(FunctestTestcase, self).__init__(testcase_yaml)
-        self.name = 'functest'
+        self.type = 'functest'
 
     def prepare_cmd(self):
         ret = super(FunctestTestcase, self).prepare_cmd()
@@ -208,7 +214,7 @@ class YardstickTestcase(Testcase):
 
     def __init__(self, testcase_yaml):
         super(YardstickTestcase, self).__init__(testcase_yaml)
-        self.name = 'yardstick'
+        self.type = 'yardstick'
 
 
 class ShellTestcase(Testcase):
@@ -217,7 +223,7 @@ class ShellTestcase(Testcase):
 
     def __init__(self, testcase_yaml):
         super(ShellTestcase, self).__init__(testcase_yaml)
-        self.name = 'shell'
+        self.type = 'shell'
 
 
 class TestcaseFactory(object):
