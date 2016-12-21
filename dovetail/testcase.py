@@ -32,19 +32,40 @@ class Testcase(object):
     def create_log(cls):
         cls.logger = dt_logger.Logger(__name__ + '.Testcase').getLogger()
 
-    def prepare_cmd(self):
-        try:
-            for cmd in self.testcase['validate']['cmds']:
-                cmd_lines = Parser.parse_cmd(cmd, self)
-                if not cmd_lines:
-                    return False
-                # self.logger.debug('cmd_lines:%s', cmd_lines)
-                self.cmds.append(cmd_lines)
-            self.logger.debug('cmds:%s', self.cmds)
-            if len(self.cmds) > 0:
-                return True
-            else:
+    def parse_cmd(self, cmds_list):
+        if not cmds_list:
+            return self.cmds
+        for cmd in cmds_list:
+            if not cmd:
+                continue
+            cmd_lines = Parser.parse_cmd(cmd, self)
+            if not cmd_lines:
                 return False
+            # self.logger.debug('cmd_lines:%s', cmd_lines)
+            self.cmds.append(cmd_lines)
+        self.logger.debug('cmds:%s', self.cmds)
+        return self.cmds
+
+    def prepare_cmd(self, test_type):
+        try:
+            cmds_list = self.testcase['validate']['cmds']
+            ret = self.parse_cmd(cmds_list)
+            if ret is False:
+                return False
+            if len(ret) > 0:
+                return True
+            if test_type.lower() == 'shell':
+                return True
+        except KeyError:
+            if test_type.lower() == 'shell':
+                return True
+            pass
+        try:
+            cmds_list = dt_cfg.dovetail_config[test_type]['cmds']
+            ret = self.parse_cmd(cmds_list)
+            if ret is False:
+                return False
+            return True
         except KeyError:
             return False
 
@@ -206,16 +227,7 @@ class FunctestTestcase(Testcase):
         self.type = 'functest'
 
     def prepare_cmd(self):
-        ret = super(FunctestTestcase, self).prepare_cmd()
-        if not ret:
-            for cmd in \
-                dt_cfg.dovetail_config[self.name]['cmds']:
-                cmd_lines = Parser.parse_cmd(cmd, self)
-                if not cmd_lines:
-                    return False
-                self.logger.debug('cmd_lines:%s', cmd_lines)
-                self.cmds.append(cmd_lines)
-        return True
+        return super(FunctestTestcase, self).prepare_cmd(self.name)
 
 
 class YardstickTestcase(Testcase):
@@ -226,6 +238,9 @@ class YardstickTestcase(Testcase):
         super(YardstickTestcase, self).__init__(testcase_yaml)
         self.type = 'yardstick'
 
+    def prepare_cmd(self):
+        return super(YardstickTestcase, self).prepare_cmd(self.name)
+
 
 class ShellTestcase(Testcase):
 
@@ -234,6 +249,9 @@ class ShellTestcase(Testcase):
     def __init__(self, testcase_yaml):
         super(ShellTestcase, self).__init__(testcase_yaml)
         self.type = 'shell'
+
+    def prepare_cmd(self):
+        return super(ShellTestcase, self).prepare_cmd(self.name)
 
 
 class TestcaseFactory(object):
