@@ -64,8 +64,8 @@ def run_test(testsuite, testarea, logger):
             end_time = time.time()
             duration = end_time - start_time
 
-        db_result = Report.get_result(testcase)
-        Report.check_result(testcase, db_result)
+        result = Report.get_result(testcase)
+        Report.check_result(testcase, result)
 
     return duration
 
