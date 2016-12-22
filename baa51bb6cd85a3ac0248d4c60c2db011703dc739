@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_f63a4833",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-12-22T01:42:48Z",
+      "side": 1,
+      "message": "here is the post condition,  we have to make sure all cmds are executed to clean the environment, so we do not need the check, just walk through all the cmds",
+      "parentUuid": "5ac10518_f6cc8863",
+      "range": {
+        "startLine": 66,
+        "startChar": 15,
+        "endLine": 66,
+        "endChar": 64
+      },
+      "revId": "baa51bb6cd85a3ac0248d4c60c2db011703dc739",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_f6f3289d",
         "filename": "dovetail/test_runner.py",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2016-12-22T01:20:39Z",
       "side": 1,
       "message": "it should also check the ret here.",
+      "range": {
+        "startLine": 106,
+        "startChar": 16,
+        "endLine": 106,
+        "endChar": 62
+      },
+      "revId": "baa51bb6cd85a3ac0248d4c60c2db011703dc739",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_964984d2",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-12-22T01:42:48Z",
+      "side": 1,
+      "message": "yes, we can put a check here",
+      "parentUuid": "5ac10518_f6f3289d",
       "range": {
         "startLine": 106,
         "startChar": 16,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_761658a9",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-12-22T01:42:48Z",
+      "side": 1,
+      "message": "the same reason at 66, so no check",
+      "parentUuid": "5ac10518_96f2e498",
+      "range": {
+        "startLine": 131,
+        "startChar": 12,
+        "endLine": 131,
+        "endChar": 58
+      },
+      "revId": "baa51bb6cd85a3ac0248d4c60c2db011703dc739",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_16ffd468",
         "filename": "dovetail/testcase.py",
         "patchSetId": 2
@@ -82,6 +154,30 @@
       "writtenOn": "2016-12-22T01:20:39Z",
       "side": 1,
       "message": "If validate_type is shell, it will have KeyError when call pre_condition_cls.",
+      "range": {
+        "startLine": 99,
+        "startChar": 12,
+        "endLine": 99,
+        "endChar": 63
+      },
+      "revId": "baa51bb6cd85a3ac0248d4c60c2db011703dc739",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_160d9490",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-12-22T01:42:48Z",
+      "side": 1,
+      "message": "pre_condition and post_condition can be empty, we do need check here",
+      "parentUuid": "5ac10518_16ffd468",
       "range": {
         "startLine": 99,
         "startChar": 12,
