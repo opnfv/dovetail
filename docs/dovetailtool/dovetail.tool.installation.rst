@@ -66,6 +66,24 @@ access to complete the installation.
 
 At this point the environment is now ready for Dovetail execution.
 
+The tool ``tox`` is used, environment preparation progress is included in tox
+until completely replaced, the configuration information is set in:
+
+::
+
+  setup.py
+  setup.cfg
+  requirements.txt
+  test-requirements.txt
+
+by running:
+
+::
+
+  tox
+
+the environment prepartion is completed.
+
 Compliance and certification test cases
 ----------------------------------------
 
@@ -183,3 +201,15 @@ Results Output
 
 The running log is stored in ``/home/opnfv/dovetail/results/dovetail.log``.
 The compliance report is stored in ``/home/opnfv/dovetail/results/dovetail_report.txt``.
+
+Dovetail Version and Release
+############################
+
+Dovetail version tag is shown in ``setup.cfg``, which will also shown in the
+``dovetail report``. At the time of version release, just to set the version value in
+``setup.cfg``.
+
+# TO DO: (which should be discussed)
+1)how to pubish version, such as both the online and offline package in some website
+or somewhere.
+2)provide version download address, userguide, etc.
