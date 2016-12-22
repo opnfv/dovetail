@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_f6cc8863",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-22T01:20:39Z",
+      "side": 1,
+      "message": "I think it should also check the ret here just as pre_condition and cmds do.",
+      "range": {
+        "startLine": 66,
+        "startChar": 15,
+        "endLine": 66,
+        "endChar": 64
+      },
+      "revId": "baa51bb6cd85a3ac0248d4c60c2db011703dc739",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_f6f3289d",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-22T01:20:39Z",
+      "side": 1,
+      "message": "it should also check the ret here.",
+      "range": {
+        "startLine": 106,
+        "startChar": 16,
+        "endLine": 106,
+        "endChar": 62
+      },
+      "revId": "baa51bb6cd85a3ac0248d4c60c2db011703dc739",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_96f2e498",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-22T01:20:39Z",
+      "side": 1,
+      "message": "need to check the ret.",
+      "range": {
+        "startLine": 131,
+        "startChar": 12,
+        "endLine": 131,
+        "endChar": 58
+      },
+      "revId": "baa51bb6cd85a3ac0248d4c60c2db011703dc739",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_16ffd468",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-22T01:20:39Z",
+      "side": 1,
+      "message": "If validate_type is shell, it will have KeyError when call pre_condition_cls.",
+      "range": {
+        "startLine": 99,
+        "startChar": 12,
+        "endLine": 99,
+        "endChar": 63
+      },
+      "revId": "baa51bb6cd85a3ac0248d4c60c2db011703dc739",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_36021070",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-22T01:20:39Z",
+      "side": 1,
+      "message": "This will have the same error as Line 99.",
+      "range": {
+        "startLine": 105,
+        "startChar": 12,
+        "endLine": 105,
+        "endChar": 64
+      },
+      "revId": "baa51bb6cd85a3ac0248d4c60c2db011703dc739",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
