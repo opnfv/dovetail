@@ -7,8 +7,11 @@ cli_file_name: 'cmd_config.yml'
 # OPENSTACK Credential file
 creds: '/home/opnfv/dovetail/openstack.creds'
 
-# TO DO: once version scheme settled, adjust accordingly
-repo: 'https://github.com/opnfv/dovetail/tree/master/'
+version: '0.1'
+repo:
+  tag: tag_name
+  path: https://github.com/opnfv/dovetail/tree/
+
 COMPLIANCE_PATH: compliance/
 TESTCASE_PATH: testcase/
 # testsuite supported, should adjust accordingly
@@ -51,4 +54,3 @@ validate_input:
   valid_docker_tag:
     - 'stable'
     - 'latest'
-
