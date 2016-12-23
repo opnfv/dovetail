@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_7c7dd7e6",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-12-23T04:05:01Z",
+      "side": 1,
+      "message": "return True/False to keep the consistence,  or it will confuse the caller",
+      "range": {
+        "startLine": 47,
+        "startChar": 8,
+        "endLine": 47,
+        "endChar": 24
+      },
+      "revId": "2111bb60acc3b79022d3d31e9127d1883258b23b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_1c84d3d2",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-12-23T04:05:01Z",
+      "side": 1,
+      "message": "why return True when the test type is \"shell\"? Here the \u0027cmds\u0027 is the key part of a test case, it can not be empty",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 27
+      },
+      "revId": "2111bb60acc3b79022d3d31e9127d1883258b23b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_5c7a5bf2",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-12-23T04:05:01Z",
+      "side": 1,
+      "message": "derived class do not need to re-implement this function if no extra operation",
+      "range": {
+        "startLine": 229,
+        "startChar": 4,
+        "endLine": 230,
+        "endChar": 67
+      },
+      "revId": "2111bb60acc3b79022d3d31e9127d1883258b23b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_bc1b3fc9",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-12-23T04:05:01Z",
+      "side": 1,
+      "message": "derived class do not need to re-implement this function if no extra operation",
+      "range": {
+        "startLine": 241,
+        "startChar": 4,
+        "endLine": 242,
+        "endChar": 68
+      },
+      "revId": "2111bb60acc3b79022d3d31e9127d1883258b23b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_9c20c3f8",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-12-23T04:05:01Z",
+      "side": 1,
+      "message": "derived class do not need to re-implement this function if no extra operation",
+      "range": {
+        "startLine": 253,
+        "startChar": 4,
+        "endLine": 254,
+        "endChar": 64
+      },
+      "revId": "2111bb60acc3b79022d3d31e9127d1883258b23b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
