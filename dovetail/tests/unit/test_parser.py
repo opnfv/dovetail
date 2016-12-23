@@ -15,11 +15,13 @@ import logging
 import os
 import unittest
 import yaml
+import mock
 
 from dovetail import parser
 from dovetail.utils.dovetail_config import DovetailConfig as dt_cfg
 
 
+@mock.patch('dovetail.parser.Parser.logger')
 class TestParser(unittest.TestCase):
 
     test_path = os.path.dirname(os.path.realpath(__file__))
@@ -27,10 +29,9 @@ class TestParser(unittest.TestCase):
     def setUp(self):
         """Test case setup"""
         dt_cfg.load_config_files()
-        parser.Parser.create_log()
         logging.disable(logging.CRITICAL)
 
-    def test_parser_cmd(self):
+    def test_parser_cmd(self, mock_logger):
         """Test whether the command is correctly parsed."""
         mock_cmd = "python /functest/ci/run_tests.py "\
                    "-t {{validate_testcase}} -r"
@@ -44,7 +45,7 @@ class TestParser(unittest.TestCase):
                            "tempest_smoke_serial -r")
         self.assertEqual(expected_output, output)
 
-    def test_parser_cmd_fail(self):
+    def test_parser_cmd_fail(self, mock_logger):
         """Test whether the command is correctly parsed."""
         mock_cmd = "python /functest/ci/run_tests.py "\
                    "-t {{validate_testcase}} -r"
