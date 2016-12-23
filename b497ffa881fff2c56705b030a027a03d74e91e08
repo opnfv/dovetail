@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_dca3ab9c",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-12-23T02:23:55Z",
+      "side": 1,
+      "message": "maybe like this, tag name is enough to get the right code:\nrepo:\n  path:https://github.com/opnfv/dovgetail/tree\n  tag: tag_name",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 16
+      },
+      "revId": "b497ffa881fff2c56705b030a027a03d74e91e08",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_fc9ea753",
+        "filename": "dovetail/report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-12-23T02:23:55Z",
+      "side": 1,
+      "message": "it\u0027s better to put version info in config file",
+      "range": {
+        "startLine": 50,
+        "startChar": 8,
+        "endLine": 50,
+        "endChar": 40
+      },
+      "revId": "b497ffa881fff2c56705b030a027a03d74e91e08",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_9cad238b",
+        "filename": "setup.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2016-12-23T02:23:55Z",
+      "side": 1,
+      "message": "this version info should be in one place, not everywhere",
+      "range": {
+        "startLine": 14,
+        "startChar": 4,
+        "endLine": 14,
+        "endChar": 16
+      },
+      "revId": "b497ffa881fff2c56705b030a027a03d74e91e08",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
