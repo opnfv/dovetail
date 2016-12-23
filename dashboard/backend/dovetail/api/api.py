@@ -171,6 +171,7 @@ def _get_request_args(**kwargs):
                 args[key] = converter(value)
     return args
 
+
 '''
 @app.teardown_appcontext
 def shutdown_session(exception=None):
