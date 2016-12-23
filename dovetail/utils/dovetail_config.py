@@ -19,7 +19,7 @@ class DovetailConfig:
     CMD_NAME_TRANS = {
         'SUT_TYPE': 'INSTALLER_TYPE',
         'SUT_IP': 'INSTALLER_IP',
-        'CON_DEBUG': 'CI_DEBUG',
+        'DEBUG': 'CI_DEBUG',
     }
 
     @classmethod
