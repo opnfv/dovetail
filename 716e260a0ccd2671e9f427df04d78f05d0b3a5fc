@@ -52,6 +52,24 @@
       "revId": "716e260a0ccd2671e9f427df04d78f05d0b3a5fc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_872f0ca1",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-24T09:21:15Z",
+      "side": 1,
+      "message": "Here we just catch the KeyError exception.\nThe exception happened in function parse_cmd should be handled in its own \nfunction, here we just get the return of it which is True or False.\nYour express is okay but will have some redundancy. It will be:\nif test_type.lower() \u003d\u003d \u0027shell\u0027:\n    try:\n       statement A\n       statement B\n       return\n    except:\n       statement E\nelse\n    try:\n       self.testcase[\u0027validate\u0027][\u0027cmds\u0027]:\n           statement A\n           statement B\n           return\n       except:\n           try:\n               self.testcase[test_type][\u0027cmds\u0027]:\n               statement A\n               statement B\n               return\n           except:\n               statement E",
+      "parentUuid": "5ac10518_47c84422",
+      "revId": "716e260a0ccd2671e9f427df04d78f05d0b3a5fc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
