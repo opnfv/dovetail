@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_47bda467",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-12-24T07:14:31Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "5ac10518_dca3ab9c",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 16
+      },
+      "revId": "b497ffa881fff2c56705b030a027a03d74e91e08",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_fc9ea753",
         "filename": "dovetail/report.py",
         "patchSetId": 2
@@ -72,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_87938cf9",
+        "filename": "dovetail/report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-12-24T07:14:31Z",
+      "side": 1,
+      "message": "done.",
+      "parentUuid": "5ac10518_dccacb4e",
+      "range": {
+        "startLine": 50,
+        "startChar": 8,
+        "endLine": 50,
+        "endChar": 40
+      },
+      "revId": "b497ffa881fff2c56705b030a027a03d74e91e08",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_9cad238b",
         "filename": "setup.py",
         "patchSetId": 2
@@ -83,6 +131,30 @@
       "writtenOn": "2016-12-23T02:23:55Z",
       "side": 1,
       "message": "this version info should be in one place, not everywhere",
+      "range": {
+        "startLine": 14,
+        "startChar": 4,
+        "endLine": 14,
+        "endChar": 16
+      },
+      "revId": "b497ffa881fff2c56705b030a027a03d74e91e08",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_a78ec8ce",
+        "filename": "setup.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2016-12-24T07:14:31Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "5ac10518_9cad238b",
       "range": {
         "startLine": 14,
         "startChar": 4,
