@@ -34,6 +34,24 @@
       "revId": "716e260a0ccd2671e9f427df04d78f05d0b3a5fc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_47c84422",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 6365
+      },
+      "writtenOn": "2016-12-24T05:39:34Z",
+      "side": 1,
+      "message": "1)try:\n2)            cmds_list \u003d self.testcase[\u0027validate\u0027][\u0027cmds\u0027]\n3)            if not cmds_list:\n4)                if test_type.lower() \u003d\u003d \u0027shell\u0027:\n5)                    self.logger.error(\u0027testcase %s has no cmds\u0027, self.name())\n6)                    return False\n7)            else:\n8)                return self.parse_cmd(cmds_list)\n9)except KeyError:\n10)            if test_type.lower() \u003d\u003d \u0027shell\u0027:\n-----\nOkay, In your opinion, at 8)line \nyou just try parse_cmd, no matter it\u0027s test_type.lower() \u003d\u003d \u0027shell\u0027 or not.\nSo,\n(1) if some exceptions happened and the type is \u0027shell\u0027.\n     OK, you will handle it in 10)line, it\u0027s lucky ^_^!\n(2) if some exception happeded and the type is not \u0027shell\u0027\n     you thought don\u0027t care about it, we will go ahead in next \"try excpetion\" expression(we discard the exception here).\n     But the same exception will happened again(2nd happened) in the same function self.parse_cmd(cmds_list) and maybe caused by the same reasons.\n    i think that not necessary!\n    Besides, it is mustn\u0027t discard any exceptions in many cases normally, because the exception may show some abnormal flow that we didn\u0027t take it into consideration.\n-----\nAt the end.\nI think you can express it clearly as below:\n\nif test_type.lower() \u003d\u003d \u0027shell\u0027:\n    try\n       return\n    except:\nelse\n    try\n    except",
+      "parentUuid": "5ac10518_677d40e7",
+      "revId": "716e260a0ccd2671e9f427df04d78f05d0b3a5fc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
