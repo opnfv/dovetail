@@ -88,6 +88,24 @@
       "revId": "716e260a0ccd2671e9f427df04d78f05d0b3a5fc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_42def212",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 6365
+      },
+      "writtenOn": "2016-12-26T02:16:22Z",
+      "side": 1,
+      "message": "Sorry, i forgot test_type.\nMabe it could be added here:\n\n if cmds_list:\n  \t\t\t    return self.parse_cmd(cmds_list)\n\t\t\telse:\n                              xxx test_type",
+      "parentUuid": "5ac10518_02b1cae0",
+      "revId": "716e260a0ccd2671e9f427df04d78f05d0b3a5fc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
