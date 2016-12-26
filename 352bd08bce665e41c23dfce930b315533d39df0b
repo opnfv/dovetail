@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_4d9ce3c0",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 6365
+      },
+      "writtenOn": "2016-12-26T09:53:22Z",
+      "side": 1,
+      "message": "i\u0027m appeared again^_^!\nFor your old version\ntestcase_cmds \u003d self.testcase[\u0027validate\u0027][\u0027cmds\u0027]\nif (not testcase_cmds) and (test_type \u003d\u003d shell)\n    return false\n--\nbut at new version.\nif not testcase_cmds:\n    it will run continue. no matter test_type equal \u0027shell\u0027 or not\n---\nDoes something lost or the old code logical here is incorrect?",
+      "revId": "352bd08bce665e41c23dfce930b315533d39df0b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
