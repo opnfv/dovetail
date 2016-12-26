@@ -106,6 +106,24 @@
       "revId": "716e260a0ccd2671e9f427df04d78f05d0b3a5fc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_225e4677",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-26T03:54:26Z",
+      "side": 1,
+      "message": "thanks for your comments. And I will update it soon.\nI think you have missed one of my comments:\none key point is that if self.testcase[\u0027validate\u0027][\u0027cmds\u0027] causes a KeyError exception for non-shell type, it will be okay because we can go to parse the cmds in functest_config.yml rather than return False. \nThat\u0027s the reason why we need two (try,except) pairs here.",
+      "parentUuid": "5ac10518_02b1cae0",
+      "revId": "716e260a0ccd2671e9f427df04d78f05d0b3a5fc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
