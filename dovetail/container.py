@@ -7,6 +7,7 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 
+import os
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
@@ -46,8 +47,13 @@ class Container:
         docker_image = cls.get_docker_image(type)
         envs = dovetail_config[type]['envs']
         opts = dovetail_config[type]['opts']
-        creds = ' -v %s:%s ' % (dovetail_config['creds'],
-                                dovetail_config[type]['creds'])
+
+        # if file openstack.creds doesn't exist, creds need to be empty
+        if os.path.isfile(dovetail_config['creds']):
+            creds = ' -v %s:%s ' % (dovetail_config['creds'],
+                                    dovetail_config[type]['creds'])
+        else:
+            creds = ''
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
         cmd = 'sudo docker run %s %s %s %s %s %s /bin/bash' % \
