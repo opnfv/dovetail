@@ -16,6 +16,24 @@
       "revId": "352bd08bce665e41c23dfce930b315533d39df0b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_edaa6fd1",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2016-12-27T00:08:42Z",
+      "side": 1,
+      "message": "Welcome!\nNow if test_type is shell, it will always raise KeyError for config_cmds \u003d dt_cfg.dovetail_config[test_type][\u0027cmds\u0027], so the config_cmds is always None.\nSo now we don\u0027t need to judge the test_type now.",
+      "parentUuid": "5ac10518_4d9ce3c0",
+      "revId": "352bd08bce665e41c23dfce930b315533d39df0b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
