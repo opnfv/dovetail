@@ -32,21 +32,31 @@ class Testcase(object):
     def create_log(cls):
         cls.logger = dt_logger.Logger(__name__ + '.Testcase').getLogger()
 
-    def prepare_cmd(self):
-        try:
-            for cmd in self.testcase['validate']['cmds']:
-                cmd_lines = Parser.parse_cmd(cmd, self)
-                if not cmd_lines:
-                    return False
-                # self.logger.debug('cmd_lines:%s', cmd_lines)
-                self.cmds.append(cmd_lines)
-            self.logger.debug('cmds:%s', self.cmds)
-            if len(self.cmds) > 0:
-                return True
-            else:
+    def parse_cmd(self, cmds_list):
+        for cmd in cmds_list:
+            cmd_lines = Parser.parse_cmd(cmd, self)
+            if not cmd_lines:
                 return False
+            # self.logger.debug('cmd_lines:%s', cmd_lines)
+            self.cmds.append(cmd_lines)
+        self.logger.debug('cmds:%s', self.cmds)
+        return True
+
+    def prepare_cmd(self, test_type):
+        try:
+            testcase_cmds = self.testcase['validate']['cmds']
         except KeyError:
-            return False
+            testcase_cmds = None
+        try:
+            config_cmds = dt_cfg.dovetail_config[test_type]['cmds']
+        except KeyError:
+            config_cmds = None
+        if testcase_cmds:
+            return self.parse_cmd(testcase_cmds)
+        if config_cmds:
+            return self.parse_cmd(config_cmds)
+        self.logger.error('testcase %s has no cmds', self.name())
+        return False
 
     def __str__(self):
         return self.testcase
@@ -204,18 +214,6 @@ class FunctestTestcase(Testcase):
     def __init__(self, testcase_yaml):
         super(FunctestTestcase, self).__init__(testcase_yaml)
         self.type = 'functest'
-
-    def prepare_cmd(self):
-        ret = super(FunctestTestcase, self).prepare_cmd()
-        if not ret:
-            for cmd in \
-                dt_cfg.dovetail_config[self.name]['cmds']:
-                cmd_lines = Parser.parse_cmd(cmd, self)
-                if not cmd_lines:
-                    return False
-                self.logger.debug('cmd_lines:%s', cmd_lines)
-                self.cmds.append(cmd_lines)
-        return True
 
 
 class YardstickTestcase(Testcase):
