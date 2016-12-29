@@ -69,14 +69,33 @@ class Container:
     def pull_image(cls, type):
         docker_image = cls.get_docker_image(type)
         if cls.has_pull_latest_image[type] is True:
-            cls.logger.debug('%s is already the newest version.' %
-                             (docker_image))
+            cls.logger.debug('%s is already the newest version.', docker_image)
+            return
+        cmd_get_id = 'sudo docker images -q %s' % (docker_image)
+        ret, old_image_id = dt_utils.exec_cmd(cmd_get_id, cls.logger)
+        cmd = 'sudo docker pull %s' % (docker_image)
+        ret, msg = dt_utils.exec_cmd(cmd, cls.logger)
+        if not ret == 0:
+            cls.logger.debug('docker pull %s failed!', docker_image)
+            return
+        cls.logger.debug('docker pull %s success!', docker_image)
+        cls.has_pull_latest_image[type] = True
+        if not old_image_id:
+            return
+        ret, new_image_id = dt_utils.exec_cmd(cmd_get_id, cls.logger)
+        if new_image_id == old_image_id:
+            cls.logger.debug('image %s has no changes, no need to remove.',
+                             docker_image)
+            return
+        cls.logger.debug('remove the old image %s, id %s',
+                         docker_image, old_image_id)
+        cmd_rm = 'sudo docker rmi %s' % (old_image_id)
+        ret, msg = dt_utils.exec_cmd(cmd_rm, cls.logger)
+        if not ret == 0:
+            cls.logger.debug('image %s has containers, cannot be removed.',
+                             old_image_id)
         else:
-            cmd = 'sudo docker pull %s' % (docker_image)
-            ret, msg = dt_utils.exec_cmd(cmd, cls.logger)
-            if ret == 0:
-                cls.logger.debug('docker pull %s success!', docker_image)
-                cls.has_pull_latest_image[type] = True
+            cls.logger.debug('remove image %s successfully', old_image_id)
 
     @classmethod
     def clean(cls, container_id):
