@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "5ac10518_df4958b8",
+        "filename": "dovetail/container.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1469
+      },
+      "writtenOn": "2016-12-30T03:54:52Z",
+      "side": 1,
+      "message": "I suggest to break this function to some small functions.\npull_image(tag\u003d\"latest\") is just charge to pull docker image, and it returns (True or False, image_id).\nis_latest_image(image_id) is just charge to check whether it is the latest one, and it return True or False.\ndef remove_image(image_id) just remove docker image, and it returns True or False.\n\nAnd logical processing is another function.",
+      "revId": "7a1066e5f8dbf956157445979a1ac9c43f84ea75",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_7f1384b8",
         "filename": "dovetail/container.py",
         "patchSetId": 1
