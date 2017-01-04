@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_b06cbb9d",
+        "filename": "dovetail/container.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 6365
+      },
+      "writtenOn": "2017-01-04T01:34:23Z",
+      "side": 1,
+      "message": "The program flow very clear this times.\n-------\nDoes the pull_image function should return a return-code to show its result?",
+      "revId": "9bb38200a417549a73633e79bb89b8fd5942ba62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_d06707b6",
+        "filename": "dovetail/container.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 6365
+      },
+      "writtenOn": "2017-01-04T01:34:23Z",
+      "side": 1,
+      "message": "if enter this branch, does something wrong? should we add a error log here?",
+      "revId": "9bb38200a417549a73633e79bb89b8fd5942ba62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
