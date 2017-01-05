@@ -206,6 +206,10 @@ class Testcase(object):
             return cls.testcase_list[testcase_name]
         return None
 
+    @classmethod
+    def get_all(cls):
+        return cls.testsuite_list
+
 
 class FunctestTestcase(Testcase):
 
