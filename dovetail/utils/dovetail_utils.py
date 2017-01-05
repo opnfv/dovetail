@@ -35,11 +35,12 @@ def exec_log(verbose, logger, msg, level, flush=False):
 
 
 def exec_cmd(cmd, logger=None, exit_on_error=False, info=False,
-             err_msg="", verbose=True):
+             exec_msg_on=True, err_msg="", verbose=True):
     msg_err = ("The command '%s' failed." % cmd) if not err_msg else err_msg
     msg_exec = ("Executing command: '%s'" % cmd)
     level = 'info' if info else 'debug'
-    exec_log(verbose, logger, msg_exec, level)
+    if exec_msg_on:
+        exec_log(verbose, logger, msg_exec, level)
 
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
                          stderr=subprocess.PIPE)

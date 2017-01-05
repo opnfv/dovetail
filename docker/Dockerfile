@@ -18,7 +18,8 @@ RUN \
     pip install pbr \
         pyyaml \
         click \
-        jinja2
+        jinja2 \
+        six
 
 ENV HOME /home/opnfv
 ENV REPOS_DIR ${HOME}/dovetail
@@ -29,6 +30,10 @@ RUN \
 && \
     git clone --depth 1 -b $BRANCH https://gerrit.opnfv.org/gerrit/dovetail.git ${REPOS_DIR} \
 && \
-    mkdir -p ${REPOS_DIR}/results
+    mkdir -p ${REPOS_DIR}/results \
+&& \
+    cd ${REPOS_DIR} \
+&& \
+    pip install .
 
 WORKDIR ${REPOS_DIR}/dovetail
