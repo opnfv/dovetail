@@ -286,3 +286,7 @@ class Testsuite:
         if testsuite_name in cls.testsuite_list:
             return cls.testsuite_list[testsuite_name]
         return None
+
+    @classmethod
+    def get_all(cls):
+        return cls.testsuite_list
