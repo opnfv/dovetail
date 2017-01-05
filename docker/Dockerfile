@@ -18,7 +18,8 @@ RUN \
     pip install pbr \
         pyyaml \
         click \
-        jinja2
+        jinja2 \
+        six
 
 ENV HOME /home/opnfv
 ENV REPOS_DIR ${HOME}/dovetail
