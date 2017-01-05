@@ -15,8 +15,6 @@ import os
 import datetime
 import uuid
 
-from pbr import version
-
 import utils.dovetail_logger as dt_logger
 
 from utils.dovetail_config import DovetailConfig as dt_cfg
@@ -49,8 +47,8 @@ class Report:
     @classmethod
     def generate_json(cls, testsuite_yaml, testarea, duration):
         report_obj = {}
-        report_obj['version'] = \
-            version.VersionInfo('dovetail').version_string()
+        # TO DO: once version scheme settled, adjust accordingly
+        report_obj['version'] = '1.0'
         report_obj['testsuite'] = testsuite_yaml['name']
         # TO DO: once dashboard url settled, adjust accordingly
         report_obj['dashboard'] = None
@@ -114,15 +112,13 @@ class Report:
             testcase_num[area] = 0
             testcase_passnum[area] = 0
 
-        repo_link = dt_cfg.dovetail_config['repo']['path'] + \
-            dt_cfg.dovetail_config['repo']['tag']
-
+        # TO DO: once version scheme settled, adjust accordingly
+        spec_link = dt_cfg.dovetail_config['repo'] + 'dovetail/testcase'
         for testcase in report_data['testcases_list']:
             pattern = re.compile(
                 '|'.join(dt_cfg.dovetail_config['testarea_supported']))
             area = pattern.findall(testcase['name'])[0]
             result_dir = dt_cfg.dovetail_config['result_dir']
-            spec_link = repo_link + '/dovetail/testcase'
             sub_report[area] += '- <%s> %s result: <%s>\n' %\
                 (spec_link, testcase['name'], result_dir)
             testcase_num[area] += 1
@@ -139,7 +135,9 @@ class Report:
         for key in sub_report:
             if testcase_num[key] != 0:
                 pass_rate = testcase_passnum[key] / testcase_num[key]
-                doc_link = repo_link + ('/docs/testsuites/%s' % key)
+                # TO DO: once version scheme settled, adjust accordingly
+                doc_link = dt_cfg.dovetail_config['repo'] +\
+                    ('docs/testsuites/%s' % key)
                 report_txt += '- %s results: <%s> pass %.2f%%\n' %\
                     (key, doc_link, pass_rate * 100)
         for key in sub_report:

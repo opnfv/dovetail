@@ -279,10 +279,12 @@ class Testsuite:
                     testsuite_yaml = yaml.safe_load(f)
                     cls.testsuite_list.update(testsuite_yaml)
 
-        cls.logger.debug(cls.testsuite_list)
-
     @classmethod
     def get(cls, testsuite_name):
         if testsuite_name in cls.testsuite_list:
             return cls.testsuite_list[testsuite_name]
         return None
+
+    @classmethod
+    def get_all(cls):
+        return cls.testsuite_list
