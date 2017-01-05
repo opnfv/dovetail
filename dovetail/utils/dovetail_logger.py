@@ -23,6 +23,7 @@
 
 import logging
 import os
+import sys
 
 from dovetail_config import DovetailConfig as dt_cfg
 
@@ -36,7 +37,7 @@ class Logger:
         self.logger.propagate = 0
         self.logger.setLevel(logging.DEBUG)
 
-        ch = logging.StreamHandler()
+        ch = logging.StreamHandler(sys.stdout)
         formatter = logging.Formatter('%(asctime)s - %(name)s - '
                                       '%(levelname)s - %(message)s')
         ch.setFormatter(formatter)
