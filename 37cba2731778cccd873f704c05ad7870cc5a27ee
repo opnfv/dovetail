@@ -22,6 +22,46 @@
       "revId": "37cba2731778cccd873f704c05ad7870cc5a27ee",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_c1d657f1",
+        "filename": "dovetail/cli/commands/cli_testcase.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 6365
+      },
+      "writtenOn": "2017-01-06T07:03:30Z",
+      "side": 1,
+      "message": "why this expression located in cycle, that\u0027s not necessary.",
+      "revId": "37cba2731778cccd873f704c05ad7870cc5a27ee",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_01cd3f5d",
+        "filename": "dovetail/cli/commands/cli_testcase.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 6365
+      },
+      "writtenOn": "2017-01-06T07:03:30Z",
+      "side": 1,
+      "message": "why this expression located in cycle, that\u0027s not necessary.",
+      "range": {
+        "startLine": 73,
+        "startChar": 12,
+        "endLine": 73,
+        "endChar": 44
+      },
+      "revId": "37cba2731778cccd873f704c05ad7870cc5a27ee",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
