@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_81628fab",
+        "filename": "dovetail/container.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-01-06T01:18:23Z",
+      "side": 1,
+      "message": "Yes, it\u0027s better to give a returncode. Will amend with the next submit.",
+      "parentUuid": "5ac10518_b06cbb9d",
+      "revId": "9bb38200a417549a73633e79bb89b8fd5942ba62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_d06707b6",
         "filename": "dovetail/container.py",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2017-01-04T01:34:23Z",
       "side": 1,
       "message": "if enter this branch, does something wrong? should we add a error log here?",
+      "revId": "9bb38200a417549a73633e79bb89b8fd5942ba62",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_21595bfe",
+        "filename": "dovetail/container.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-01-06T01:18:23Z",
+      "side": 1,
+      "message": "will add error log here.",
+      "parentUuid": "5ac10518_d06707b6",
       "revId": "9bb38200a417549a73633e79bb89b8fd5942ba62",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
