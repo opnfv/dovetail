@@ -15,7 +15,8 @@ RUN \
 && \
     apt-get update &&  apt-get -y install docker.io \
 && \
-    pip install pyyaml \
+    pip install pbr \
+        pyyaml \
         click \
         jinja2
 
