@@ -66,17 +66,61 @@ class Container:
         return container_id
 
     @classmethod
-    def pull_image(cls, type):
-        docker_image = cls.get_docker_image(type)
-        if cls.has_pull_latest_image[type] is True:
-            cls.logger.debug('%s is already the newest version.' %
-                             (docker_image))
+    def get_image_id(cls, image_name):
+        cmd = 'sudo docker images -q %s' % (image_name)
+        ret, image_id = dt_utils.exec_cmd(cmd, cls.logger)
+        if ret == 0:
+            return image_id
         else:
-            cmd = 'sudo docker pull %s' % (docker_image)
-            ret, msg = dt_utils.exec_cmd(cmd, cls.logger)
-            if ret == 0:
-                cls.logger.debug('docker pull %s success!', docker_image)
-                cls.has_pull_latest_image[type] = True
+            return False
+
+    @classmethod
+    def remove_image(cls, image_id):
+        cmd = 'sudo docker rmi %s' % (image_id)
+        ret, msg = dt_utils.exec_cmd(cmd, cls.logger)
+        if ret == 0:
+            cls.logger.debug('remove image %s successfully', image_id)
+            return True
+        cls.logger.error('image %s has containers, fail to remove.', image_id)
+        return False
+
+    @classmethod
+    def pull_image_only(cls, image_name):
+        cmd = 'sudo docker pull %s' % (image_name)
+        ret, msg = dt_utils.exec_cmd(cmd, cls.logger)
+        if ret != 0:
+            cls.logger.error('fail to pull docker image %s!', image_name)
+            return False
+        cls.logger.debug('success to pull docker image %s!', image_name)
+        return True
+
+    # returncode 0: succeed to pull new image and remove the old one
+    # returncode 1: fail to pull the image
+    # returncode 2: succeed to pull but fail to get the new image id
+    # returncode 3: fail to remove the old image
+    @classmethod
+    def pull_image(cls, validate_type):
+        docker_image = cls.get_docker_image(validate_type)
+        if cls.has_pull_latest_image[validate_type] is True:
+            cls.logger.debug('%s is already the newest version.', docker_image)
+            return 0
+        old_image_id = cls.get_image_id(docker_image)
+        if not cls.pull_image_only(docker_image):
+            return 1
+        cls.has_pull_latest_image[validate_type] = True
+        new_image_id = cls.get_image_id(docker_image)
+        if not new_image_id:
+            cls.logger.error("fail to get the new image's id %s", docker_image)
+            return 2
+        if new_image_id == old_image_id:
+            cls.logger.debug('image %s has no changes, no need to remove.',
+                             docker_image)
+        else:
+            if old_image_id:
+                cls.logger.debug('remove the old image %s', old_image_id)
+                if not cls.remove_image(old_image_id):
+                    return 3
+        return 0
 
     @classmethod
     def clean(cls, container_id):
