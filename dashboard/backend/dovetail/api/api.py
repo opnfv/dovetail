@@ -104,7 +104,7 @@ def add_result():
     data = _get_request_data()
     ret_code = 200
     json_object = json.loads(data)
-    logging.debug('json_object:%s' % (json_object))
+    logging.debug('json_object:%s', (json_object))
     if not db_api.store_result(**json_object):
         ret_code = 500
     resp = utils.make_json_response(
@@ -116,7 +116,7 @@ def add_result():
 @app.route("/results/<test_id>", methods=['DELETE'])
 def remove_results(test_id):
     data = _get_request_data()
-    logging.debug('data:%s' % data)
+    logging.debug('data:%s', data)
     response = db_api.del_result(
         test_id, **data
     )
