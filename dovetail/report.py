@@ -21,6 +21,7 @@ import utils.dovetail_logger as dt_logger
 
 from utils.dovetail_config import DovetailConfig as dt_cfg
 from testcase import Testcase
+from encrypt import AESCipher, RSACipher, Signature
 
 
 def get_pass_str(passed):
@@ -86,11 +87,10 @@ class Report:
                             testcase.sub_testcase_passed(sub_test))
                     })
             report_obj['testcases_list'].append(testcase_inreport)
-        cls.logger.info(json.dumps(report_obj))
         return report_obj
 
     @classmethod
-    def generate(cls, testsuite_yaml, testarea, duration):
+    def generate(cls, testsuite_yaml, testarea, duration, encrypt):
         report_data = cls.generate_json(testsuite_yaml, testarea, duration)
         report_txt = ''
         report_txt += '\n\nDovetail Report\n'
@@ -148,9 +148,43 @@ class Report:
                 report_txt += '%s: pass rate %.2f%%\n' % (key, pass_rate * 100)
                 report_txt += sub_report[key]
 
-        cls.logger.info(report_txt)
-        cls.save(report_txt)
-        return report_txt
+        if not encrypt:
+            cls.logger.info(json.dumps(report_data))
+            cls.logger.info(report_txt)
+            cls.save(report_txt)
+            return True
+        else:
+            try:
+                enc_cfg = dt_cfg.dovetail_config['encrypt']
+                aeskey = AESCipher.gen_AES_key()
+                aesenc = AESCipher.encrypt(aeskey, report_txt,
+                                           enc_cfg['encrypt_report_file'])
+                if not aesenc:
+                    cls.logger.error('AES encrypt failed.')
+                    return False
+                cls.logger.info('Report file has been encrypted into file %s.',
+                                enc_cfg['encrypt_report_file'])
+
+                rsaenc = RSACipher.encrypt(enc_cfg['user_pub_rsa_key'], aeskey,
+                                           enc_cfg['encrypt_aes_key'])
+                if not rsaenc:
+                    cls.logger.error('RSA encrypt failed.')
+                    return False
+                cls.logger.info('AES key has been encrypted into file %s.',
+                                enc_cfg['encrypt_aes_key'])
+
+                sign_digest = Signature.sign(enc_cfg['vendor_pri_rsa_key'],
+                                             report_txt,
+                                             enc_cfg['encrypt_digest'])
+                if not sign_digest:
+                    cls.logger.error('RSA encrypt the digest failed.')
+                    return False
+                cls.logger.info('Digest has been encrypted into file %s.',
+                                enc_cfg['encrypt_digest'])
+                return True
+            except KeyError, e:
+                cls.logger.exception('Config file lacks key, except: %s.', e)
+                return False
 
     # save to disk as default
     @classmethod

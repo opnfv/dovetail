@@ -2,3 +2,4 @@ pbr>=1.8
 Jinja2>=2.6
 PyYAML>=3.10
 Click
+pycrypto>=2.6.1
