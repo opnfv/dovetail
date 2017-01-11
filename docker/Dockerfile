@@ -20,6 +20,7 @@ RUN \
         click \
         jinja2 \
         six
+        pycrypto
 
 ENV HOME /home/opnfv
 ENV REPOS_DIR ${HOME}/dovetail
