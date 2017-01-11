@@ -25,6 +25,7 @@ from report import FunctestCrawler, YardstickCrawler
 from report import FunctestChecker, YardstickChecker
 from utils.dovetail_config import DovetailConfig as dt_cfg
 from test_runner import DockerRunner, ShellRunner
+from encrypt import AESCipher, RSACipher, Signature
 
 
 def load_testsuite(testsuite):
@@ -134,6 +135,9 @@ def create_logs():
     Testsuite.create_log()
     DockerRunner.create_log()
     ShellRunner.create_log()
+    AESCipher.create_log()
+    RSACipher.create_log()
+    Signature.create_log()
 
 
 def clean_results_dir():
@@ -179,7 +183,7 @@ def main(*args, **kwargs):
         testsuite_yaml = load_testsuite(kwargs['testsuite'])
         load_testcase()
         duration = run_test(testsuite_yaml, testarea, logger)
-        Report.generate(testsuite_yaml, testarea, duration)
+        Report.generate(testsuite_yaml, testarea, duration, kwargs['encrypt'])
     else:
         logger.error('invalid input commands, testsuite %s testarea %s' %
                      (kwargs['testsuite'], testarea))
