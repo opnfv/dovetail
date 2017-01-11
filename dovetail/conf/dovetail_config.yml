@@ -73,3 +73,13 @@ validate_input:
     - 'danube.1.0'
     - 'danube.2.0'
     - 'danube.3.0'
+
+encrypt:
+  encrypt_report_file: '/home/opnfv/dovetail/results/encrypt_dovetail_report.txt'
+  encrypt_aes_key: '/home/opnfv/dovetail/results/encrypt_rsa_key.txt'
+
+  # RSA public key needed to encrypt the report file
+  user_pub_rsa_key: '/home/opnfv/dovetail/pub_key.pem'
+
+signature:
+  sign_digest: '/home/opnfv/dovetail/results/signature.txt'
