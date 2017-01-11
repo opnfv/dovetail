@@ -32,15 +32,15 @@ class Parser:
             kwargs = {}
             for arg in dt_cfg.dovetail_config['parameters']:
                 path = eval(arg['path'])
-                cls.logger.debug('name: %s, eval path: %s ' %
-                                 (arg['name'], path))
+                cls.logger.debug('name: %s, eval path: %s ',
+                                 arg['name'], path)
                 kwargs[arg['name']] = \
                     dt_utils.get_obj_by_path(testcase.testcase, path)
 
-            cls.logger.debug('kwargs: %s' % kwargs)
+            cls.logger.debug('kwargs: %s', kwargs)
             cmd_lines = template.render(**kwargs)
         except Exception as e:
-            cls.logger.error('failed to parse cmd %s, exception:%s' % (cmd, e))
+            cls.logger.error('failed to parse cmd %s, exception:%s', cmd, e)
             return None
 
         return cmd_lines

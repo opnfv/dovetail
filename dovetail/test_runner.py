@@ -35,7 +35,7 @@ class DockerRunner(object):
             self.logger.error('failed to create container')
             return
 
-        self.logger.debug('container id:%s' % container_id)
+        self.logger.debug('container id:%s', container_id)
 
         if not self.testcase.prepared():
             failed = False
