@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "5ac10518_fd59b3fe",
+        "filename": "dovetail/cli/commands/cli_testcase.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1469
+      },
+      "writtenOn": "2017-01-11T07:26:14Z",
+      "side": 1,
+      "message": "In python, None is False. So use \"if value\" instead of \"if value is not None\".",
+      "revId": "41ab69d61627dd056bb3fe5a0ec69e493ece2049",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_f2ac82a2",
         "filename": "dovetail/cli/commands/cli_testcase.py",
         "patchSetId": 7
@@ -19,6 +36,23 @@
         "endLine": 76,
         "endChar": 56
       },
+      "revId": "41ab69d61627dd056bb3fe5a0ec69e493ece2049",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_bd732b7f",
+        "filename": "dovetail/cli/commands/cli_testcase.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1469
+      },
+      "writtenOn": "2017-01-11T07:26:14Z",
+      "side": 1,
+      "message": "same with line 48.",
       "revId": "41ab69d61627dd056bb3fe5a0ec69e493ece2049",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
