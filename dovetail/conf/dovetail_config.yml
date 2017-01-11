@@ -53,3 +53,10 @@ validate_input:
   valid_docker_tag:
     - 'stable'
     - 'latest'
+
+encrypt:
+  encrypt_report_file: '/home/opnfv/dovetail/results/encrypt_dovetail_report.txt'
+  encrypt_aes_key: '/home/opnfv/dovetail/results/encrypt_rsa_key.txt'
+  encrypt_digest: '/home/opnfv/dovetail/results/encrypt_digest.txt'
+  user_pub_rsa_key: '/home/opnfv/dovetail/pub_key.pem'
+  vendor_pri_rsa_key: '/home/opnfv/dovetail/pri_key.pem'
