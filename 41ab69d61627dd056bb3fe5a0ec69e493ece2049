@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_fdb533ee",
+        "filename": "dovetail/cli/commands/cli_testcase.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-01-11T09:08:53Z",
+      "side": 1,
+      "message": "will amend.",
+      "parentUuid": "5ac10518_fd59b3fe",
+      "revId": "41ab69d61627dd056bb3fe5a0ec69e493ece2049",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_f2ac82a2",
         "filename": "dovetail/cli/commands/cli_testcase.py",
         "patchSetId": 7
@@ -30,6 +48,30 @@
       "writtenOn": "2017-01-10T11:49:14Z",
       "side": 1,
       "message": "The code of these initial config seems too much the same as in list_testsuite, can you reuse some code?",
+      "range": {
+        "startLine": 65,
+        "startChar": 8,
+        "endLine": 76,
+        "endChar": 56
+      },
+      "revId": "41ab69d61627dd056bb3fe5a0ec69e493ece2049",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_1db91fe9",
+        "filename": "dovetail/cli/commands/cli_testcase.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-01-11T09:08:53Z",
+      "side": 1,
+      "message": "see patch set 9",
+      "parentUuid": "5ac10518_f2ac82a2",
       "range": {
         "startLine": 65,
         "startChar": 8,
