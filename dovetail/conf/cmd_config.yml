@@ -70,3 +70,15 @@ cli:
           - '--testarea'
         default: 'full'
         help: 'compliance testarea within testsuite'
+      encrypt:
+        flags:
+          - '--encrypt'
+          - '-e'
+        is_flag: True
+        help: 'Encrypt the report file.'
+      sign:
+        flags:
+          - '--sign'
+          - '-s'
+        is_flag: True
+        help: 'Sign the report file.'
