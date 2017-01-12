@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_83912e9b",
+        "filename": "dovetail/cli/commands/cli_testcase.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-01-12T06:35:51Z",
+      "side": 1,
+      "message": "1)already avoid this in line 43, so not need to to if/else once more.\n2)yep. however, this not included in this patch. DOVETAIL-146 will do this and change this when it\u0027s ready.",
+      "parentUuid": "5ac10518_d885e5ad",
+      "range": {
+        "startLine": 41,
+        "startChar": 12,
+        "endLine": 49,
+        "endChar": 55
+      },
+      "revId": "60c8ef70b4d73ff26af1d6a5370e85b6d94733a1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_7894f1e1",
         "filename": "dovetail/cli/commands/cli_testcase.py",
         "patchSetId": 9
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_03f53eed",
+        "filename": "dovetail/cli/commands/cli_testcase.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-01-12T06:35:51Z",
+      "side": 1,
+      "message": "will amend",
+      "parentUuid": "5ac10518_7894f1e1",
+      "range": {
+        "startLine": 66,
+        "startChar": 12,
+        "endLine": 66,
+        "endChar": 52
+      },
+      "revId": "60c8ef70b4d73ff26af1d6a5370e85b6d94733a1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_b8b1f990",
         "filename": "dovetail/cli/commands/cli_testcase.py",
         "patchSetId": 9
@@ -59,6 +107,30 @@
       "writtenOn": "2017-01-12T03:48:57Z",
       "side": 1,
       "message": "Since the list msg is like:\n- example\n    dovetail.example.tc002\n- ipv6\n    dovetail.ipv6.tc001\n- nfvi\n    dovetail.nfvi.tc001\n    dovetail.nfvi.tc002\n\nBut the show command just accepts testcase name as ipv6.tc001. I think both \u0027ipv6.tc001\u0027 and \u0027dovetail.ipv6.tc001\u0027 should be right.",
+      "range": {
+        "startLine": 78,
+        "startChar": 8,
+        "endLine": 78,
+        "endChar": 40
+      },
+      "revId": "60c8ef70b4d73ff26af1d6a5370e85b6d94733a1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_23f87ae4",
+        "filename": "dovetail/cli/commands/cli_testcase.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-01-12T06:35:51Z",
+      "side": 1,
+      "message": "yep, we can achieve this.",
+      "parentUuid": "5ac10518_b8b1f990",
       "range": {
         "startLine": 78,
         "startChar": 8,
