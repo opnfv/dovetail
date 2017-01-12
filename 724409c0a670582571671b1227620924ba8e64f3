@@ -22,6 +22,30 @@
       "revId": "724409c0a670582571671b1227620924ba8e64f3",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_a3ff8aa9",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-01-12T07:42:14Z",
+      "side": 1,
+      "message": "will add in the next patch set.",
+      "parentUuid": "5ac10518_f86ea100",
+      "range": {
+        "startLine": 61,
+        "startChar": 2,
+        "endLine": 62,
+        "endChar": 55
+      },
+      "revId": "724409c0a670582571671b1227620924ba8e64f3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
