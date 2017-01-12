@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_d885e5ad",
+        "filename": "dovetail/cli/commands/cli_testcase.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-01-12T03:48:57Z",
+      "side": 1,
+      "message": "Since you have used Testsuite.load(), I think all these could be instead of:\nTestsuite.load()\ntestcase_list \u003d Testsuite.get(testsuite)\nif not testcase_list:\n    click.echo(\u0027testsuite %s does not exist or not supported\u0027...)\nelse:\n    ...\n\nIf you don\u0027t want to load all the testsuite like show_testcase does, you need just read the certain .yml file and avoid using Testsuite.load().",
+      "range": {
+        "startLine": 41,
+        "startChar": 12,
+        "endLine": 49,
+        "endChar": 55
+      },
+      "revId": "60c8ef70b4d73ff26af1d6a5370e85b6d94733a1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_7894f1e1",
+        "filename": "dovetail/cli/commands/cli_testcase.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-01-12T03:48:57Z",
+      "side": 1,
+      "message": "it will have error \u0027AttributeError: \u0027NoneType\u0027 object has no attribute \u0027items\u0027\u0027 if testsuite_json is None.",
+      "range": {
+        "startLine": 66,
+        "startChar": 12,
+        "endLine": 66,
+        "endChar": 52
+      },
+      "revId": "60c8ef70b4d73ff26af1d6a5370e85b6d94733a1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_b8b1f990",
+        "filename": "dovetail/cli/commands/cli_testcase.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-01-12T03:48:57Z",
+      "side": 1,
+      "message": "Since the list msg is like:\n- example\n    dovetail.example.tc002\n- ipv6\n    dovetail.ipv6.tc001\n- nfvi\n    dovetail.nfvi.tc001\n    dovetail.nfvi.tc002\n\nBut the show command just accepts testcase name as ipv6.tc001. I think both \u0027ipv6.tc001\u0027 and \u0027dovetail.ipv6.tc001\u0027 should be right.",
+      "range": {
+        "startLine": 78,
+        "startChar": 8,
+        "endLine": 78,
+        "endChar": 40
+      },
+      "revId": "60c8ef70b4d73ff26af1d6a5370e85b6d94733a1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
