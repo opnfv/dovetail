@@ -12,6 +12,5 @@ Dovetail Overview
 
    dovetail.tool.overview.rst
    dovetail.tool.installation.rst
-   dovetail.tool.configuration.rst
-   dovetail.tool.configtemplate.rst
+   dovetail.tool.template.rst
    dovetail.tool.cli.rst
