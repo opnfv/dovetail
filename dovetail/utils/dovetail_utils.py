@@ -10,7 +10,6 @@
 #
 
 import sys
-import time
 import subprocess
 from collections import Mapping, Set, Sequence
 
@@ -42,25 +41,21 @@ def exec_cmd(cmd, logger=None, exit_on_error=False, info=False,
     exec_log(verbose, logger, msg_exec, level)
 
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
-                         stderr=subprocess.PIPE)
-    seconds = 0
-    while p.poll() is None:
-        seconds += 1
-        if seconds > 3:
-            show_progress_bar(seconds)
-        time.sleep(1)
+                         stderr=subprocess.STDOUT)
+    stdout = ''
+    for line in iter(p.stdout.readline, b''):
+        exec_log(verbose, logger, line.strip(), level, True)
+        stdout += line
+    stdout = stdout.strip()
+    p.stdout.close()
+    returncode = p.wait()
 
-    (stdout, stderr) = p.communicate()
-    if p.returncode == 0:
-        for line in stdout.strip().splitlines():
-            exec_log(verbose, logger, line, level, True)
-    else:
-        exec_log(verbose, logger, stderr, 'error')
+    if returncode != 0:
         exec_log(verbose, logger, msg_err, 'error')
         if exit_on_error:
             sys.exit(1)
 
-    return p.returncode, stdout.strip()
+    return p.returncode, stdout
 
 
 # walkthrough the object, yield path and value
