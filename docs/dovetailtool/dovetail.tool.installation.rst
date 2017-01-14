@@ -19,13 +19,28 @@ running on the SUT (System Under Test):
 
 ::
 
-  SUT_TYPE, SUT type, e.g., apex, compass, fuel, joid, etc
-  SUT_IP, SUT external network IP, e.g., 192.168.200.2
-  NODE_NAME, this can be shown in the test result for users to see which pod the dovetail tool runs
-  DEPLOY_SCENARIO, deployment scenario, e.g., os-nosdn-nofeature-ha
-  BUILD_TAG, this can be shown in the test result for users to identify logs
-  CI_DEBUG, true for debug information printed and false for not printed
-  DEPLOY_TYPE, baremetal or virtual
+  SUT_TYPE
+      SUT type, e.g., apex, compass, fuel, joid, etc
+  SUT_IP
+      SUT external network IP, e.g., 192.168.200.2
+  NODE_NAME
+      this can be shown in the test result for users to see which pod the dovetail tool runs
+  DEPLOY_SCENARIO
+      deployment scenario, e.g., os-nosdn-nofeature-ha
+  BUILD_TAG
+      this can be shown in the test result for users to identify logs
+  CI_DEBUG
+      true for debug information printed and false for not printed
+  DEPLOY_TYPE
+      baremetal or virtual
+
+The above configuration can be achieved by
+
+- modify the environment variables in files which live under ``/dovetail/conf/`` directory
+- set and use Linux environment variables using ``export`` command
+- set and use these variables when using ``dovetail run`` command line, for details see the
+  `Dovetail Command-line Interface`_ section
+
 
 Dovetail tool installation on local Linux host environment
 ##########################################################
@@ -114,7 +129,7 @@ After environment preparation is complete and test cases added, the Dovetail too
 
 ::
 
-  python run.py --testsuite compliance_set
+  dovetail run --testsuite compliance_set
 
 The value ``compliance_set`` passed to the ``testsuite`` flag can be replaced with the test cases yaml file.
 If not argument is given, the compliance_set testsuite will be run as the default.
@@ -124,23 +139,22 @@ testarea ``ipv6`` in ``compliance_set``
 
 ::
 
-  python run.py --testsuite compliance_set --testarea ipv6
+  dovetail run --testsuite compliance_set --testarea ipv6
 
 Dovetail provides some sets, ``debug``, ``proposed_tests`` and ``compliance_set``,
 ``debug`` is used for locally and Continuous Integration(CI) developing purpose,
 which provides typical testcase examples, feel free to edit it when develops locally, such as
 only to run a testcase which only takes minutes. ``proposed_tests`` is the testcase
-candidate which mainly comes from the wiki link
-https://wiki.opnfv.org/display/dovetail/Dovetail+Test+Areas+and+Test+Cases.
+candidate which mainly comes from the wiki link [1]_.
 ``compliance_set`` is used for compliance. Moreover, dovetail tool can be easily
 extended to support more complicated compliance requirements,
 such as feature set based or scenario based compliance.
 
-If you want to run ``debug``, just run with
+If you want to run ``debug`` testsuite, just run with
 
 ::
 
-  python run.py --testsuite debug
+  dovetail run --testsuite debug
 
 Running Dovetail in a Docker container
 ########################################
@@ -165,7 +179,8 @@ Docker image.
 
 ::
 
-  sudo docker build -t <your_new_image_name> -f <your_Dockerfile> .
+  cd {dovetail_path}/dovetail/docker
+  docker build --no-cache -t opnfv/dovetail:<Tag> --build-arg BRANCH=master .
 
 Dovetail Docker container creation
 ----------------------------------
@@ -200,8 +215,17 @@ Attach to the container by starting it and obtaining a bash prompt with ::
 
 Inside the container the following commands can be executed to trigger the testcases ::
 
-   cd /home/opnfv/dovetail/dovetail
-   python run.py --testsuite compliance_set
+   dovetail run --testsuite compliance_set
+
+Offline Support
+################
+
+There are some SUTs that are isolated from the public internet,
+so offline support is needed. The idea is to provide all of the packages of dovetail
+release in http://artifacts.opnfv.org, then the user can download and transfer to their inner
+development environment.
+
+The packages are shown in [2]_
 
 Results Output
 ###############
@@ -212,11 +236,9 @@ The compliance report is stored in ``/home/opnfv/dovetail/results/dovetail_repor
 Dovetail Version and Release
 ############################
 
-Dovetail version tag is shown in ``setup.cfg``, which will also shown in the
-``dovetail report``. At the time of version release, just to set the version value in
-``setup.cfg``.
+Dovetail version information is defined in ``setup.cfg``.
+At the time of release, just set the ``version`` value in ``setup.cfg``.
 
-# TO DO: (which should be discussed)
-1)how to pubish version, such as both the online and offline package in some website
-or somewhere.
-2)provide version download address, userguide, etc.
+
+.. [1] https://wiki.opnfv.org/display/dovetail/Dovetail+Test+Areas+and+Test+Cases.
+.. [2] http://artifacts.opnfv.org/dovetail.html.
