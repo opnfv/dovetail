@@ -3,21 +3,78 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) OPNFV, Huawei Technologies Co.,Ltd and others.
 
-Command Line Interface
-======================
+================================
+Dovetail Command-line Interface
+================================
 
-Dovetail supports modifying some parameters at the run-time by using the command
-line interface (CLI). The parameters can be defined through a config file by
-developers easily and then be used at the run-time.
 
-The CLI now fits all three kinds of running: directly running the python script,
-running after setup and running within Docker containers.
+Command Line Introduction
+==========================
 
-Define CLI with config file
----------------------------
+Dovetail command-line interface is supported, for help on the **dovetail** command, enter:
 
-For easy to be modified, Dovetail provides ``dovetail/dovetail/conf/cmd_config.yml``
-to define CLI automatically.
+::
+
+  dovetail --help
+
+**dovetail** optional arguments:
+
+::
+
+  --version
+      show program's version number and exit
+  list <testsuite_name>
+      list the testsuite details
+  show <testcase_name>
+      show the testsuite details
+  run <arguments>
+      run the testcases
+
+For **dovetail list**, if the <testsuite_name> ommitted,
+all the testsuites defined under /dovetail/compliance directory
+and related testcases will be listed, otherwise,
+the testsuite's testarea and testcases are listed.
+
+For **dovetail show**, the <testcase_name> is required, the contents defined
+in <testcase_name>.yml is shown.
+
+For **dovetail run**, by running ``dovetail run --help``, the ``dovetail run``
+usage is shown as
+
++------------------------+-----------------------------------------------------+
+|Options                 |                                                     |
++========================+=====================================================+
+| -t, --SUT_TYPE TEXT    |Installer type of the system under test (SUT).       |
++------------------------+-----------------------------------------------------+
+| --creds TEXT           |Openstack Credential file location                   |
++------------------------+-----------------------------------------------------+
+| -i, --SUT_IP TEXT      |IP of the system under test (SUT).                   |
++------------------------+-----------------------------------------------------+
+| -d, --debug TEXT       |True for showing debug log on screen.                |
++------------------------+-----------------------------------------------------+
+| -f, --func_tag TEXT    |Overwrite tag for functest docker container (e.g.    |
+|                        |stable or latest)                                    |
++------------------------+-----------------------------------------------------+
+| -y, --yard_tag TEXT    |Overwrite tag for yardstick docker container (e.g.   |
+|                        |stable or latest)                                    |
++------------------------+-----------------------------------------------------+
+| --testarea TEXT        |compliance testarea within testsuite                 |
++------------------------+-----------------------------------------------------+
+| --testsuite TEXT       |compliance testsuite.                                |
++------------------------+-----------------------------------------------------+
+|  -h, --help            |Show this message and exit.                          |
++------------------------+-----------------------------------------------------+
+
+if no arguments is given, the default testsuite will be performed, i.e., the ``compliance_set``
+testsuite with default configurations.
+
+For more information about **dovetail** command line, please refer to the wiki page [1]_
+
+Parameters defination with config file
+======================================
+
+The default **dovetail run** parameters can be modified in
+``dovetail/dovetail/conf/cmd_config.yml``, which is shown as:
 
 ::
 
@@ -71,40 +128,14 @@ to define CLI automatically.
           default: 'full'
           help: 'compliance testarea within testsuite'
 
-Dovetail uses click module in python to parse parameters defined in the above
-config file. The basic config file shown above contains two subsections:
-**arguments** and **options** corresponding to two types of parameters in click.
+Click module is used to parse parameters defined in the above
+config file, two subsections are included in this file,
+**arguments** and **options**, which corresponds to two types of parameters in click.
 
-Add options
-+++++++++++
-
-Just as the name suggested, option parameters can either be given or not by users
-after adding into CLI.
-
-Then how to add an option for developers?
-
-For each option, it at least needs a key **flags** to give its name. Customarily,
-each option has two names, full name and short name, and they are begin with '--'
-and '-' respectively. All other keys should be consistent with click's keys.
-
-Take option **scenario** as the example. Its full name is '--scenario', and its
-short name is '-s'. Actually full name is necessary but short name is optional.
-The full name '--scenario' should be the same with the block's name **scenario**.
-**default** section gives the default value of this option if it doesn't given
-by users. Without the **default** section, it will be set None. **help** section
-offers its help message that will be shown when excute -h/--help command. For
-more information about click, please refer to: http://click.pocoo.org/5/
-
-Add arguments
-+++++++++++++
-
-Arguments must given orderly by users once they are defined in the config file.
-The Dovetail tool doesn't need any argument parameters currently. However, here
-just give a simple example for its format.
-
-Arguments also need subsection **flags** to give its name. Each argument can just
-have one name, and the name should be the same with the key of this section. Other
-keys should also be consistent with the click module.
+Arguments and Options
++++++++++++++++++++++
+Only **options** is used now, which means parameters can be given or not without
+sequence restriction.
 
 Config and control
 ++++++++++++++++++
@@ -131,50 +162,10 @@ the configs will be changed into
          -e NODE_NAME=dovetail-pod -e DEPLOY_SCENARIO=ha_nosdn
          -e BUILD_TAG=dovetail -e CI_DEBUG=true -e DEPLOY_TYPE=baremetal'
 
-The config options/arguments can be added or deleted just by modifying
+The config options/arguments can be added or deleted by modifying
 ``cmd_config.yml`` rather than changing the source code. However, for control
 command, besides adding it into ``cmd_config.yml``, some other operations about
 the source code are also needed.
 
-Run with CLI
-------------
 
-For users, they can use CLI to input their own envs at the run-time instead of
-modifying the config files of functest or yardstick. So Dovetail can supports
-different environments more flexible with CLI. Dovetail now can be run with three
-methods, directly running ``run.py`` script, running after setup and running
-in Docker containers. The uses of CLI are almost the same for these three methods
-and here take the first one as the example.
-
-All parameters offered by Dovetail can be listed by using help option ``--help``.
-
-::
-
-  root@90256c4efd05:~/dovetail/dovetail$ python run.py --help
-  Usage: run.py [OPTIONS]
-
-  Dovetail compliance test entry!
-
-  Options:
-    -t, --SUT_TYPE TEXT  Installer type of the system under test (SUT).
-    -f, --func_tag TEXT  Overwrite tag for functest docker container (e.g.
-                       stable or latest)
-    -i, --SUT_IP TEXT    IP of the system under test (SUT).
-    -y, --yard_tag TEXT  Overwrite tag for yardstick docker container (e.g.
-                       stable or latest)
-    -d, --DEBUG TEXT     DEBUG for showing debug log.
-    --testarea TEXT      compliance testarea within testsuite
-    --testsuite TEXT     compliance testsuite.
-    -h, --help           Show this message and exit.
-
-All options listed can be used to input special environment values at the run-time.
-For example:
-
-::
-
-  python run.py --SUT_TYPE compass -y stable
-
-There is no need to give all these options. If it is not given by CLI, it will
-be set with the system's environment value. If it is not included in system's
-environment variables, it will be set with the default value in functest/yardstick
-config file.
+. [1] https://wiki.opnfv.org/display/dovetail/Dovetail+Command+Line
