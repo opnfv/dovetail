@@ -3,9 +3,58 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) OPNFV, Huawei Technologies Co.,Ltd and others.
 
-======================
+==================
+Template Syntax
+==================
+
+Testcase Template Syntax
+=========================
+
+The testcases used for compliance and certification are defined in the
+``dovetail/testcase`` directory, which are written in yaml format.
+Take the testcase ``ipv6.tc001.yml`` as an example. It is shown as:
+
+::
+
+  ---
+  dovetail.ipv6.tc001:
+    name: dovetail.ipv6.tc001
+    objective: Bulk creation and deletion of IPv6 networks, ports and subnets
+    validate:
+      type: functest
+      testcase: tempest_smoke_serial
+      pre_condition:
+        - 'echo test for precondition in testcase'
+      cmds:
+        - 'functest env prepare'
+        - 'functest testcase run {{validate_testcase}}'
+      post_condition:
+        - 'echo test for precondition in testcase'
+    report:
+      sub_testcase_list:
+        - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_network
+        - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_port
+        - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_subnet
+
+
+- At least three sections named ``name``, ``objective``, ``validate``,
+  ``report`` must be included
+- Section ``name`` distinguishes different test cases used for compliance,
+  it is composed of 3 parts, ``dovetail.``, belongs to which test area,
+  and the serial number
+- Section ``objective`` briefly describes what this testcase does
+- Section ``validate`` defines the scripts and configurations for the
+  validation of the test case. ``type`` defines which method is used to validate,
+  3 ways, i.e., functest, yardstick and shell is supported currently.
+  ``testcase`` represents the testcases in slicing/tier.
+- Section ``report`` defines the sub_testcases to be run.
+  For ``yardstick``, since it is not sliced by now,
+  ``sub_testcase_list`` is not needed, only to edit the ``testcase`` part in
+  section ``validate``, such as ``yardstick_tc027``
+
+
 Config Template Syntax
-======================
+=======================
 
 For Dovetail tool, the config files are located in ``dovetail/dovetail/conf``, which are written
 in yaml format. As both functest and yardstick are utilized by Dovetail, their configuration files
@@ -15,7 +64,7 @@ respectively.
 Functest config template syntax
 -------------------------------
 
-An example functest configuration is shown as follows:
+An example of ``functest`` configuration is shown as follows:
 
 ::
 
