@@ -44,11 +44,11 @@ def run_test(testsuite, testarea, logger):
 
     duration = 0
     for testcase_name in testarea_list:
-        logger.info('>>[testcase]: %s' % (testcase_name))
+        logger.info('>>[testcase]: %s', testcase_name)
         testcase = Testcase.get(testcase_name)
         if testcase is None:
             logger.error('test case %s is not defined in testcase folder, \
-                         skipping' % (testcase_name))
+                         skipping', testcase_name)
             continue
         run_testcase = True
 
@@ -155,16 +155,16 @@ def main(*args, **kwargs):
     create_logs()
     logger = dt_logger.Logger('run').getLogger()
     logger.info('================================================')
-    logger.info('Dovetail compliance: %s!' % (kwargs['testsuite']))
+    logger.info('Dovetail compliance: %s!', (kwargs['testsuite']))
     logger.info('================================================')
     validate_input(kwargs, dt_cfg.dovetail_config['validate_input'], logger)
     configs = filter_config(kwargs, logger)
 
     if configs is not None:
         dt_cfg.update_config(configs)
-    logger.info('Your new envs for functest: %s' %
+    logger.info('Your new envs for functest: %s',
                 dt_cfg.dovetail_config['functest']['envs'])
-    logger.info('Your new envs for yardstick: %s' %
+    logger.info('Your new envs for yardstick: %s',
                 dt_cfg.dovetail_config['yardstick']['envs'])
 
     testarea = kwargs['testarea']
@@ -181,8 +181,8 @@ def main(*args, **kwargs):
         duration = run_test(testsuite_yaml, testarea, logger)
         Report.generate(testsuite_yaml, testarea, duration)
     else:
-        logger.error('invalid input commands, testsuite %s testarea %s' %
-                     (kwargs['testsuite'], testarea))
+        logger.error('invalid input commands, testsuite %s testarea %s',
+                     kwargs['testsuite'], testarea)
 
 
 dt_cfg.load_config_files()

@@ -25,7 +25,7 @@ def store_result(exception_when_existing=True,
 
     :param data: Dict describes test results.
     """
-    logging.debug('store_result:%s' % kwargs)
+    logging.debug('store_result:%s', kwargs)
     result = utils.add_db_object(
         session, models.Result, exception_when_existing,
         **kwargs)
@@ -38,7 +38,7 @@ def store_result(exception_when_existing=True,
 def list_results(session=None, **filters):
     """Get all results
     """
-    logging.debug('session:%s' % session)
+    logging.debug('session:%s', session)
     results = utils.list_db_objects(
         session, models.Result, **filters
     )

@@ -47,7 +47,7 @@ def add_db_object(session, table, exception_when_existing=True,
                     arg_names, args)
             )
         db_keys = dict(zip(arg_names, args))
-        logging.debug('db_keys:%s' % db_keys)
+        logging.debug('db_keys:%s', db_keys)
         if db_keys:
             db_object = session.query(table).filter_by(**db_keys).first()
         else:
@@ -70,7 +70,7 @@ def add_db_object(session, table, exception_when_existing=True,
         for key, value in kwargs.items():
             setattr(db_object, key, value)
 
-        logging.debug('db_object:%s' % db_object)
+        logging.debug('db_object:%s', db_object)
         if new_object:
             session.add(db_object)
         session.flush()
