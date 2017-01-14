@@ -56,33 +56,40 @@ Dovetail configuration:
 To modify the ``envs`` parameters, e.g., SUT_TYPE, SUT_IP, NODE_NAME,
 DEPLOY_SCENARIO, BUILD_TAG, CI_DEBUG, DEPLOY_TYPE, in the yml files.
 
-System dependencies are installed via the ``prepare_env.py`` file, and you will need ``sudo``
-access to complete the installation.
+System dependencies and project configuration information are listed in
+``requirements.txt``, ``setup.py`` and ``setup.cfg``, in Ubuntu environment,
+to run
 
 ::
 
-  cd {dovetail_path}/dovetail/dovetail
-  python prepare_env.py
+  apt-get -y install python-pip
+  pip install .
 
-At this point the environment is now ready for Dovetail execution.
-
-The tool ``tox`` is used, environment preparation progress is included in tox
-until completely replaced, the configuration information is set in:
+in ``centos`` and ``redhat`` environment, to run
 
 ::
 
-  setup.py
-  setup.cfg
-  requirements.txt
-  test-requirements.txt
+  yum -y install python-pip
+  pip install .
 
+in ``fedora`` environment, to run
+
+
+::
+
+  dnf -y install python-pip
+  pip install .
+
+then the setup requirements are installed and **dovetail** commmand-line can be used,
+by using ``dovetail --help``, **dovetail** command-line details are shown.
+
+The tool ``tox`` is used, which configuration information is defined in
+``tox.ini``, unitttest, flake8-checking, coverage check, etc, can be done
 by running:
 
 ::
 
   tox
-
-the environment prepartion is completed.
 
 Compliance and certification test cases
 ----------------------------------------
