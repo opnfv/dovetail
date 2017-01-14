@@ -13,13 +13,7 @@ RUN \
         apt-transport-https \
         --no-install-recommends \
 && \
-    apt-get update &&  apt-get -y install docker.io \
-&& \
-    pip install pbr \
-        pyyaml \
-        click \
-        jinja2 \
-        six
+    apt-get update &&  apt-get -y install docker.io 
 
 ENV HOME /home/opnfv
 ENV REPOS_DIR ${HOME}/dovetail
@@ -30,8 +24,12 @@ RUN \
 && \
     git clone --depth 1 -b $BRANCH https://gerrit.opnfv.org/gerrit/dovetail.git ${REPOS_DIR} \
 && \
-    mkdir -p ${REPOS_DIR}/results \
-&& \
+    mkdir -p ${REPOS_DIR}/results 
+
+RUN pip install -U pip
+RUN pip install -r ${REPOS_DIR}/requirements.txt
+
+RUN \
     cd ${REPOS_DIR} \
 && \
     pip install .
