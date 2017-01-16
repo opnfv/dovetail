@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_cbcbc8a3",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 1469
+      },
+      "writtenOn": "2017-01-16T12:26:42Z",
+      "side": 1,
+      "message": "The correct format is \n.. [1].\n.. [2]",
+      "range": {
+        "startLine": 243,
+        "startChar": 0,
+        "endLine": 245,
+        "endChar": 46
+      },
+      "revId": "834281f4926909b53c86e2c6390e717551f2049e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
