@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_48f27ed3",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-16T02:46:14Z",
+      "side": 1,
+      "message": "maybe you need to install pip first",
+      "range": {
+        "startLine": 60,
+        "startChar": 54,
+        "endLine": 60,
+        "endChar": 82
+      },
+      "revId": "4a8b8ca27675c1918b60712d2c007f46350df3d3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
