@@ -1,0 +1,64 @@
+./dovetail/tests/unit/test_testcase.yaml
+  4:81      error    line too long (93 > 80 characters)  (line-length)
+
+./dovetail/compliance/proposed_tests.yml
+  14:4      warning  comment not indented like content  (comments-indentation)
+
+./dovetail/testcase/ipv6.tc023.yml
+  4:81      error    line too long (83 > 80 characters)  (line-length)
+
+./dovetail/testcase/ipv6.tc012.yml
+  4:81      error    line too long (89 > 80 characters)  (line-length)
+
+./dovetail/testcase/ipv6.tc019.yml
+  4:81      error    line too long (94 > 80 characters)  (line-length)
+
+./dovetail/testcase/ipv6.tc005.yml
+  4:81      error    line too long (83 > 80 characters)  (line-length)
+
+./dovetail/testcase/ipv6.tc021.yml
+  4:81      error    line too long (113 > 80 characters)  (line-length)
+
+./dovetail/testcase/ipv6.tc016.yml
+  4:81      error    line too long (81 > 80 characters)  (line-length)
+
+./dovetail/testcase/ipv6.tc025.yml
+  4:81      error    line too long (102 > 80 characters)  (line-length)
+
+./dovetail/testcase/ipv6.tc013.yml
+  4:81      error    line too long (91 > 80 characters)  (line-length)
+
+./dovetail/testcase/ipv6.tc006.yml
+  4:81      error    line too long (84 > 80 characters)  (line-length)
+
+./dovetail/testcase/example.tc003.yml
+  15:1      error    too many blank lines (1 > 0)  (empty-lines)
+
+./dovetail/testcase/ipv6.tc002.yml
+  4:81      error    line too long (84 > 80 characters)  (line-length)
+  12:1      error    too many blank lines (1 > 0)  (empty-lines)
+
+./dovetail/testcase/ipv6.tc024.yml
+  4:81      error    line too long (90 > 80 characters)  (line-length)
+
+./dovetail/testcase/ipv6.tc015.yml
+  4:81      error    line too long (97 > 80 characters)  (line-length)
+
+./dovetail/testcase/ipv6.tc020.yml
+  4:81      error    line too long (101 > 80 characters)  (line-length)
+
+./dovetail/testcase/example.tc002.yml
+  4:81      error    line too long (84 > 80 characters)  (line-length)
+  17:1      error    too many blank lines (1 > 0)  (empty-lines)
+
+./dovetail/testcase/ipv6.tc014.yml
+  4:81      error    line too long (89 > 80 characters)  (line-length)
+
+./dovetail/conf/cmd_config.yml
+  5:7       warning  comment not indented like content  (comments-indentation)
+  48:81     error    line too long (84 > 80 characters)  (line-length)
+  55:81     error    line too long (83 > 80 characters)  (line-length)
+
+./dovetail/conf/yardstick_config.yml
+  19:81     error    line too long (81 > 80 characters)  (line-length)
+

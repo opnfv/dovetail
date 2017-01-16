@@ -1,4 +1,4 @@
-
+---
 work_dir: /home/opnfv/dovetail
 result_dir: /home/opnfv/dovetail/results
 report_file: 'dovetail_report.txt'
