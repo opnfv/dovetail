@@ -63,14 +63,14 @@ to run
 ::
 
   apt-get -y install python-pip
-  pip install .
+  pip install -e .
 
 in ``centos`` and ``redhat`` environment, to run
 
 ::
 
   yum -y install python-pip
-  pip install .
+  pip install -e .
 
 in ``fedora`` environment, to run
 
@@ -78,7 +78,7 @@ in ``fedora`` environment, to run
 ::
 
   dnf -y install python-pip
-  pip install .
+  pip install -e .
 
 then the setup requirements are installed and **dovetail** commmand-line can be used,
 by using ``dovetail --help``, **dovetail** command-line details are shown.

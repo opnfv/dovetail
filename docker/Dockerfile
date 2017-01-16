@@ -10,6 +10,7 @@ RUN \
     apt-get install -y \
         python-pip \
         git \
+        vim \
         apt-transport-https \
         --no-install-recommends \
 && \
@@ -32,6 +33,6 @@ RUN \
 && \
     cd ${REPOS_DIR} \
 && \
-    pip install .
+    pip install -e .
 
 WORKDIR ${REPOS_DIR}/dovetail
