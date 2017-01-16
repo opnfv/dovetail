@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_a8c0c27c",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-01-16T00:59:26Z",
+      "side": 0,
+      "message": "then we don\u0027t have the progressbar, can we keep it at the same time?",
+      "range": {
+        "startLine": 51,
+        "startChar": 11,
+        "endLine": 51,
+        "endChar": 38
+      },
+      "revId": "0559cd7924467392659716115936c4ae1312a513",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
