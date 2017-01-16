@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_8b4ce043",
+        "filename": "dovetail/encrypt.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1469
+      },
+      "writtenOn": "2017-01-16T12:42:52Z",
+      "side": 1,
+      "message": "miss license header.",
+      "revId": "e154392efe036cd5e7f5b0ce125bf29c6408bd2a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_cb42e80f",
+        "filename": "dovetail/encrypt.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1469
+      },
+      "writtenOn": "2017-01-16T12:42:52Z",
+      "side": 1,
+      "message": "It is recommended to use python new-style classes which inherit from object, e.g. class AESCipher(object).\nThe class object is fundamental class in python and provides lot of functionality like double-underscore methods, descriptors, super() method, property() method etc.",
+      "revId": "e154392efe036cd5e7f5b0ce125bf29c6408bd2a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_eb456417",
+        "filename": "dovetail/encrypt.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1469
+      },
+      "writtenOn": "2017-01-16T12:42:52Z",
+      "side": 1,
+      "message": "same with line 14",
+      "revId": "e154392efe036cd5e7f5b0ce125bf29c6408bd2a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_ab475c1c",
+        "filename": "dovetail/encrypt.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1469
+      },
+      "writtenOn": "2017-01-16T12:42:52Z",
+      "side": 1,
+      "message": "same with line 14",
+      "revId": "e154392efe036cd5e7f5b0ce125bf29c6408bd2a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
