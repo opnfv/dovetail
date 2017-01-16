@@ -22,6 +22,30 @@
       "revId": "0559cd7924467392659716115936c4ae1312a513",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_c8598eff",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-01-16T01:36:24Z",
+      "side": 0,
+      "message": "Of course we should keep the progress bar. However, this show_progress_bar function is not fit this new exec_cmd, and it will be ugly if we use the new CLI as our entrance. I will reopen that JIRA and find a better way to realize it.",
+      "parentUuid": "5ac10518_a8c0c27c",
+      "range": {
+        "startLine": 51,
+        "startChar": 11,
+        "endLine": 51,
+        "endChar": 38
+      },
+      "revId": "0559cd7924467392659716115936c4ae1312a513",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
