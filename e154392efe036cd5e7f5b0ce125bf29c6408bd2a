@@ -72,6 +72,23 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_613515d9",
+        "filename": "dovetail/encrypt.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 6365
+      },
+      "writtenOn": "2017-01-17T12:33:22Z",
+      "side": 1,
+      "message": "here maybe need a return value",
+      "revId": "e154392efe036cd5e7f5b0ce125bf29c6408bd2a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_eb456417",
         "filename": "dovetail/encrypt.py",
         "patchSetId": 6
@@ -100,6 +117,29 @@
       "writtenOn": "2017-01-16T12:42:52Z",
       "side": 1,
       "message": "same with line 14",
+      "revId": "e154392efe036cd5e7f5b0ce125bf29c6408bd2a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_a13bfdcf",
+        "filename": "dovetail/report.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 6365
+      },
+      "writtenOn": "2017-01-17T12:33:22Z",
+      "side": 1,
+      "message": "here is duplicate with the 152 line, maybe it not necessary",
+      "range": {
+        "startLine": 158,
+        "startChar": 15,
+        "endLine": 158,
+        "endChar": 59
+      },
       "revId": "e154392efe036cd5e7f5b0ce125bf29c6408bd2a",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
