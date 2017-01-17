@@ -40,7 +40,7 @@ Source code downloading:
 
 ::
 
-  git clone https://gerrit.opnfv.org/gerrit/dovetail
+  git clone https://git.opnfv.org/dovetail
 
 Environment preparation
 -----------------------
