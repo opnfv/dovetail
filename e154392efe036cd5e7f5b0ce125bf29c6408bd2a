@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_cb3c28e5",
+        "filename": "dovetail/encrypt.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-01-17T01:59:12Z",
+      "side": 1,
+      "message": "thx. will add in the next patch set.",
+      "parentUuid": "5ac10518_8b4ce043",
+      "revId": "e154392efe036cd5e7f5b0ce125bf29c6408bd2a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_cb42e80f",
         "filename": "dovetail/encrypt.py",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2017-01-16T12:42:52Z",
       "side": 1,
       "message": "It is recommended to use python new-style classes which inherit from object, e.g. class AESCipher(object).\nThe class object is fundamental class in python and provides lot of functionality like double-underscore methods, descriptors, super() method, property() method etc.",
+      "revId": "e154392efe036cd5e7f5b0ce125bf29c6408bd2a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_eb3fa4d4",
+        "filename": "dovetail/encrypt.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-01-17T01:59:12Z",
+      "side": 1,
+      "message": "sure, thanks for your good suggestions. and will create a new JIRA to change all the other classes in the whole dovetail.",
+      "parentUuid": "5ac10518_cb42e80f",
       "revId": "e154392efe036cd5e7f5b0ce125bf29c6408bd2a",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
