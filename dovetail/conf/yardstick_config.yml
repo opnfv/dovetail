@@ -1,3 +1,4 @@
+---
 yardstick:
   image_name: opnfv/yardstick
   docker_tag: latest
