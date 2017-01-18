@@ -1,0 +1,878 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_378d0f32",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "The Dovetail command-line interface provides a method for interacting with Dovetail from the console. For help on the ``dovetail`` command, enter:",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 90
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_d7836b02",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``dovetail``",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 12
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_f786a712",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``dovetail list``",
+      "range": {
+        "startLine": 33,
+        "startChar": 4,
+        "endLine": 33,
+        "endChar": 21
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_977de31e",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``\u003ctestsuite_name\u003e``",
+      "range": {
+        "startLine": 33,
+        "startChar": 30,
+        "endLine": 33,
+        "endChar": 46
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_b7781f2c",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "testsuites",
+      "range": {
+        "startLine": 36,
+        "startChar": 4,
+        "endLine": 36,
+        "endChar": 15
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_57777b3a",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``dovetail show``",
+      "range": {
+        "startLine": 38,
+        "startChar": 4,
+        "endLine": 38,
+        "endChar": 21
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_7772b74a",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``\u003ctestcase_name\u003e``",
+      "range": {
+        "startLine": 38,
+        "startChar": 27,
+        "endLine": 38,
+        "endChar": 42
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_17b813c7",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``dovetail run``",
+      "range": {
+        "startLine": 41,
+        "startChar": 4,
+        "endLine": 41,
+        "endChar": 20
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_37bbcfc5",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "as:",
+      "range": {
+        "startLine": 42,
+        "startChar": 15,
+        "endLine": 42,
+        "endChar": 17
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_d7b12be2",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "the ``dovetail``",
+      "range": {
+        "startLine": 72,
+        "startChar": 27,
+        "endLine": 72,
+        "endChar": 38
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_f7b467d2",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "line interface",
+      "range": {
+        "startLine": 72,
+        "startChar": 48,
+        "endLine": 72,
+        "endChar": 52
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_b7c6df47",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "configuration",
+      "range": {
+        "startLine": 74,
+        "startChar": 27,
+        "endLine": 74,
+        "endChar": 33
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_57c53b3a",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``dovetail run``",
+      "range": {
+        "startLine": 77,
+        "startChar": 12,
+        "endLine": 77,
+        "endChar": 28
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_77c0772a",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``arguments``",
+      "range": {
+        "startLine": 133,
+        "startChar": 43,
+        "endLine": 133,
+        "endChar": 56
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_17dfb30e",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``options``",
+      "range": {
+        "startLine": 133,
+        "startChar": 61,
+        "endLine": 133,
+        "endChar": 72
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_37e2efd5",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "Click",
+      "range": {
+        "startLine": 134,
+        "startChar": 48,
+        "endLine": 134,
+        "endChar": 53
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_b7cd7f5f",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "(or not)",
+      "range": {
+        "startLine": 138,
+        "startChar": 73,
+        "endLine": 138,
+        "endChar": 79
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_d7e84bb6",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``options``",
+      "range": {
+        "startLine": 138,
+        "startChar": 5,
+        "endLine": 138,
+        "endChar": 16
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_f7eb07ae",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "is",
+      "range": {
+        "startLine": 138,
+        "startChar": 17,
+        "endLine": 138,
+        "endChar": 20
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_57dc5b12",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "modifying",
+      "range": {
+        "startLine": 39,
+        "startChar": 2,
+        "endLine": 39,
+        "endChar": 8
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_77d717ee",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "run the",
+      "range": {
+        "startLine": 153,
+        "startChar": 15,
+        "endLine": 153,
+        "endChar": 18
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_37098f95",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "written",
+      "range": {
+        "startLine": 14,
+        "startChar": 43,
+        "endLine": 14,
+        "endChar": 50
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_d7ffeb65",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": ". I",
+      "range": {
+        "startLine": 15,
+        "startChar": 50,
+        "endLine": 15,
+        "endChar": 53
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_f702276e",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``name``, ``objective``, and ``scripts``",
+      "range": {
+        "startLine": 30,
+        "startChar": 32,
+        "endLine": 30,
+        "endChar": 62
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_97f96382",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``name``",
+      "range": {
+        "startLine": 31,
+        "startChar": 10,
+        "endLine": 31,
+        "endChar": 16
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_b7f49f87",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``.",
+      "range": {
+        "startLine": 32,
+        "startChar": 49,
+        "endLine": 32,
+        "endChar": 52
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_57f3fb9d",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``objective``",
+      "range": {
+        "startLine": 33,
+        "startChar": 10,
+        "endLine": 33,
+        "endChar": 21
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_974083a6",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``type``, ``testcase``, and ``sub_testcase_list``",
+      "range": {
+        "startLine": 34,
+        "startChar": 44,
+        "endLine": 34,
+        "endChar": 86
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_77ee37b6",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``scripts``",
+      "range": {
+        "startLine": 34,
+        "startChar": 10,
+        "endLine": 34,
+        "endChar": 19
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_b73b3f37",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``type``",
+      "range": {
+        "startLine": 35,
+        "startChar": 15,
+        "endLine": 35,
+        "endChar": 21
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_7745d7b1",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``functest`` and ``yardstick``",
+      "range": {
+        "startLine": 35,
+        "startChar": 47,
+        "endLine": 35,
+        "endChar": 69
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_1714939e",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``functest``",
+      "range": {
+        "startLine": 36,
+        "startChar": 6,
+        "endLine": 36,
+        "endChar": 14
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_37174fa5",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``testcase``",
+      "range": {
+        "startLine": 36,
+        "startChar": 20,
+        "endLine": 36,
+        "endChar": 30
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_f710e7a9",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``sub_testcase_list``",
+      "range": {
+        "startLine": 37,
+        "startChar": 2,
+        "endLine": 37,
+        "endChar": 21
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_97272312",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``yardstick``",
+      "range": {
+        "startLine": 38,
+        "startChar": 30,
+        "endLine": 38,
+        "endChar": 39
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_5721bbf9",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``testcase``",
+      "range": {
+        "startLine": 39,
+        "startChar": 54,
+        "endLine": 39,
+        "endChar": 64
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_b7225fff",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``sub_testcase_list``",
+      "range": {
+        "startLine": 39,
+        "startChar": 2,
+        "endLine": 39,
+        "endChar": 21
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_771cf7c1",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 3299
+      },
+      "writtenOn": "2017-01-18T14:01:40Z",
+      "side": 1,
+      "message": "``functest``",
+      "range": {
+        "startLine": 54,
+        "startChar": 14,
+        "endLine": 54,
+        "endChar": 22
+      },
+      "revId": "ed97678ffabd3e589e67666c728687fee16ad411",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
