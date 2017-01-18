@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_fc5c4cef",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 6365
+      },
+      "writtenOn": "2017-01-18T02:02:39Z",
+      "side": 1,
+      "message": "p.stdout.close() maybe located behind the returncode \u003d p.wait()",
+      "revId": "1ec8f637eaa81ce947ccef184b4a4db1a6270d04",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_5c6d6097",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 6365
+      },
+      "writtenOn": "2017-01-18T02:02:39Z",
+      "side": 1,
+      "message": "why here use p.wait instead of communicate.\nBut according to Python 2.7 Document as below(the warning paragraph):\n\nPopen.wait() \nWait for child process to terminate. Set and return returncode attribute.\n\nWarning\nThis will deadlock when using stdout\u003dPIPE and/or stderr\u003dPIPE and the child process generates enough output to a pipe such that it blocks waiting for the OS pipe buffer to accept more data. Use communicate() to avoid that.",
+      "revId": "1ec8f637eaa81ce947ccef184b4a4db1a6270d04",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
