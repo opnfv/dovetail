@@ -221,31 +221,22 @@ class FunctestCrawler:
             self.logger.info('result file not found: %s', file_path)
             return None
 
-        try:
-            with open(file_path, 'r') as myfile:
-                output = myfile.read()
-            error_logs = ""
+        criteria = 'FAIL'
+        timestart = 0
+        testcase_duration = 0
+        with open(file_path, 'r') as f:
+            for jsonfile in f:
+                data = json.loads(jsonfile)
+                criteria = data['details']['status']
+                timestart = data['details']['timestart']
+                testcase_duration = data['details']['duration']
 
-            for match in re.findall('(.*?)[. ]*FAILED', output):
-                error_logs += match
-
-            criteria = 'PASS'
-            failed_num = int(re.findall(' - Failed: (\d*)', output)[0])
-            if failed_num != 0:
-                criteria = 'FAIL'
-
-            match = re.findall('Ran: (\d*) tests in (\d*)\.\d* sec.', output)
-            num_tests, dur_sec_int = match[0]
-            json_results = {'criteria': criteria, 'details': {"timestart": '',
-                            "duration": int(dur_sec_int),
-                            "tests": int(num_tests), "failures": failed_num,
-                            "errors": error_logs}}
-            self.logger.debug('Results: %s', str(json_results))
-            return json_results
-        except Exception as e:
-            self.logger.error('Cannot read content from the file: %s, '
-                              'exception: %s', file_path, e)
-            return None
+        json_results = {'criteria': criteria,
+                        'details': {"timestart": timestart,
+                                    "duration": testcase_duration,
+                                    "tests": '', "failures": ''}}
+        self.logger.debug('Results: %s', str(json_results))
+        return json_results
 
     def crawl_from_url(self, testcase=None):
         url = \
@@ -289,17 +280,15 @@ class YardstickCrawler:
         if not os.path.exists(file_path):
             self.logger.info('result file not found: %s', file_path)
             return None
-        try:
-            with open(file_path, 'r') as myfile:
-                myfile.read()
-            criteria = 'PASS'
-            json_results = {'criteria': criteria}
-            self.logger.debug('Results: %s', str(json_results))
-            return json_results
-        except Exception as e:
-            self.logger.error('Cannot read content from the file: %s, '
-                              'exception: %s', file_path, e)
-            return None
+        criteria = 'FAIL'
+        with open(file_path, 'r') as f:
+            for jsonfile in f:
+                data = json.loads(jsonfile)
+                if 1 == data['status']:
+                    criteria = 'PASS'
+        json_results = {'criteria': criteria}
+        self.logger.debug('Results: %s', str(json_results))
+        return json_results
 
     def crawl_from_url(self, testcase=None):
         return None
