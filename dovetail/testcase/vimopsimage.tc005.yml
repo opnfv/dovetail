@@ -1,0 +1,18 @@
+---
+dovetail.vimopsimage.tc005:
+  name: dovetail.vimopsimage.tc005
+  objective: Create and delete image tags
+  validate:
+    type: functest
+    testcase: tempest_full_parallel
+    pre_condition:
+      - 'echo test for precondition'
+    cmds:
+      - 'functest env prepare'
+      - 'functest testcase run {{validate_testcase}}'
+    post_condition:
+      - 'echo test for postcondition'
+  report:
+    sub_testcase_list:
+      - tempest.api.image.v2.test_images_tags_negative
+      - tempest.api.image.v2.test_images_tags
