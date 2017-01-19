@@ -117,6 +117,30 @@
     },
     {
       "key": {
+        "uuid": "5ac10518_5a023f0c",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-01-19T08:40:27Z",
+      "side": 1,
+      "message": "this document also can be used for the developers, so this is needed.",
+      "parentUuid": "5ac10518_3af2d3d2",
+      "range": {
+        "startLine": 101,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 11
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac10518_bab563ef",
         "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
         "patchSetId": 7
