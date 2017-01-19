@@ -4,18 +4,21 @@ functest:
   docker_tag: latest
   envs: '-e INSTALLER_TYPE=compass -e INSTALLER_IP=192.168.200.2
          -e NODE_NAME=dovetail-pod -e DEPLOY_SCENARIO=ha_nosdn
-         -e BUILD_TAG=dovetail -e CI_DEBUG=true -e DEPLOY_TYPE=baremetal'
+         -e BUILD_TAG=dovetail -e CI_DEBUG=true
+         -e DEPLOY_TYPE=baremetal
+         -e RESULTS_STORE=file:///home/opnfv/functest/results/functest_result.json'
   opts: '-id --privileged=true'
   pre_condition:
     - 'echo test for precondition in functest'
   cmds:
     - 'functest env prepare'
-    - 'functest testcase run {{validate_testcase}}'
+    - 'functest testcase run {{validate_testcase}} -r'
   post_condition:
     - 'echo test for postcondition in functest'
   result:
     dir: '/home/opnfv/functest/results'
     store_type: 'file'
-    file_path: 'tempest/tempest.log'
+    file_path: 'functest_result.json'
+    tp_path: 'tempest/tempest.log'
     db_url: 'http://testresults.opnfv.org/test/api/v1/results?case=%s&last=1'
   creds: '/home/opnfv/functest/conf/openstack.creds'
