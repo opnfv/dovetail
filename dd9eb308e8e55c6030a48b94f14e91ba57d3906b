@@ -1,0 +1,303 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac10518_da138f0b",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-19T06:59:26Z",
+      "side": 1,
+      "message": "testcase",
+      "range": {
+        "startLine": 30,
+        "startChar": 15,
+        "endLine": 30,
+        "endChar": 24
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_7afa9bbe",
+        "filename": "docs/dovetailtool/dovetail.tool.cli.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-19T06:59:26Z",
+      "side": 1,
+      "message": "credential",
+      "range": {
+        "startLine": 50,
+        "startChar": 36,
+        "endLine": 50,
+        "endChar": 46
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_5aff9faa",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-19T06:59:26Z",
+      "side": 1,
+      "message": "we can provide credential file as a alternative",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 26
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_5a16bff2",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-19T06:59:26Z",
+      "side": 1,
+      "message": "change to git repo",
+      "range": {
+        "startLine": 58,
+        "startChar": 12,
+        "endLine": 58,
+        "endChar": 52
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_3af2d3d2",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-19T06:59:26Z",
+      "side": 1,
+      "message": "as a user, do they need to use this \"tox\"?",
+      "range": {
+        "startLine": 101,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 11
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_bab563ef",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-19T06:59:26Z",
+      "side": 1,
+      "message": "do not understan, put a test case name here?",
+      "range": {
+        "startLine": 134,
+        "startChar": 0,
+        "endLine": 134,
+        "endChar": 108
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_9acae76c",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-19T06:59:26Z",
+      "side": 1,
+      "message": "container name is optional",
+      "range": {
+        "startLine": 202,
+        "startChar": 9,
+        "endLine": 202,
+        "endChar": 41
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_faa20bad",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-19T06:59:26Z",
+      "side": 1,
+      "message": "docker commands need a sudo prefix",
+      "range": {
+        "startLine": 210,
+        "startChar": 3,
+        "endLine": 210,
+        "endChar": 15
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_1aa6f7c1",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-19T06:59:26Z",
+      "side": 1,
+      "message": "user can attach container by container id",
+      "range": {
+        "startLine": 214,
+        "startChar": 19,
+        "endLine": 214,
+        "endChar": 44
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_baac83a1",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-19T06:59:26Z",
+      "side": 1,
+      "message": "trigger the testing",
+      "range": {
+        "startLine": 216,
+        "startChar": 63,
+        "endLine": 216,
+        "endChar": 84
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_daaf0f93",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-19T06:59:26Z",
+      "side": 1,
+      "message": "if it\u0027s not complete,  you can say work in progress",
+      "range": {
+        "startLine": 225,
+        "startChar": 39,
+        "endLine": 226,
+        "endChar": 24
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_7a961b4e",
+        "filename": "docs/dovetailtool/dovetail.tool.installation.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-19T06:59:26Z",
+      "side": 1,
+      "message": "it is dovetail\u0027s responsibility to set the version , not the user",
+      "range": {
+        "startLine": 240,
+        "startChar": 0,
+        "endLine": 240,
+        "endChar": 72
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac10518_9a918754",
+        "filename": "docs/dovetailtool/dovetail.tool.template.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-01-19T06:59:26Z",
+      "side": 1,
+      "message": "it\u0027s out of date, please check this page, https://wiki.opnfv.org/display/dovetail/Dovetail+Test+Tool",
+      "range": {
+        "startLine": 19,
+        "startChar": 2,
+        "endLine": 28,
+        "endChar": 97
+      },
+      "revId": "dd9eb308e8e55c6030a48b94f14e91ba57d3906b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
