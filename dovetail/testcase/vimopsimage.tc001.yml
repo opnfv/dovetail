@@ -1,0 +1,20 @@
+---
+dovetail.vimopsimage.tc001:
+  name: dovetail.vimopsimage.tc001
+  objective: Create, show, delete, update and list images member
+  validate:
+    type: functest
+    testcase: tempest_full_parallel
+    pre_condition:
+      - 'echo test for precondition'
+    cmds:
+      - 'functest env prepare'
+      - 'functest testcase run {{validate_testcase}}'
+    post_condition:
+      - 'echo test for postcondition'
+  report:
+    sub_testcase_list:
+      - tempest.api.image.v2.test_images_member_nagative
+      - tempest.api.image.v2.test_images_member
+      - tempest.api.image.v1.test_image_members_nagative
+      - tempest.api.iamge.v1.test_image_members
