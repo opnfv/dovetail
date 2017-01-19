@@ -1,0 +1,21 @@
+---
+dovetail.vimopsimage.tc004:
+  name: dovetail.vimopsimage.tc004
+  objective: Register, show , delete, update and list images; Upload and show the image file
+  validate:
+    type: functest
+    testcase: tempest_full_parallel
+    pre_condition:
+      - 'echo test for precondition'
+    cmds:
+      - 'functest env prepare'
+      - 'functest testcase run {{validate_testcase}}'
+    post_condition:
+      - 'echo test for postcondition'
+  report:
+    sub_testcase_list:
+      - tempest.api.image.v2.test_images_negative
+      - tempest.api.image.v2.test_images
+      - tempest.api.image.v1.test_images_negative
+      - tempest.api.image.v1.test_images
+      - tempest.api.image.admin.v2.test_images
