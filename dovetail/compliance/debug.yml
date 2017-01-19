@@ -9,3 +9,4 @@ debug:
     - dovetail.ipv6.tc001
     - dovetail.nfvi.tc001
     - dovetail.nfvi.tc002
+    - dovetail.nfvi.tc101
