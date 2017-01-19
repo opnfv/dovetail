@@ -1,0 +1,8 @@
+dovetail.nfvi.tc102:
+  name: dovetail.nfvi.tc102
+  objective: measure number of cores and threads, available memory size and cache size
+  validate:
+    type: yardstick
+    testcase: opnfv_yardstick_tc002
+  report:
+    sub_testcase_list:

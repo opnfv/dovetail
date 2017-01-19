@@ -9,7 +9,7 @@ dovetail.ipv6.tc001:
       - 'echo test for precondition in testcase'
     cmds:
       - 'functest env prepare'
-      - 'functest testcase run {{validate_testcase}}'
+      - 'functest testcase run {{validate_testcase}} -r'
     post_condition:
       - 'echo test for precondition in testcase'
   report:

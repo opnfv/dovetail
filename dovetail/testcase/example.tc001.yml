@@ -9,7 +9,7 @@ dovetail.example.tc001:
       - 'echo test for precondition'
     cmds:
       - 'functest env prepare'
-      - 'functest testcase run {{validate_testcase}}'
+      - 'functest testcase run {{validate_testcase}} -r'
     post_condition:
       - 'echo test for precondition'
   report:
