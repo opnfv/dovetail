@@ -6,3 +6,8 @@ compliance_set:
     # for use of software development/debug
     # TO DO: will amend when compliance set is settled
     - dovetail.ipv6.tc001
+    - dovetail.vimopsimage.tc001
+    - dovetail.vimopsimage.tc002
+    - dovetail.vimopsimage.tc003
+    - dovetail.vimopsimage.tc004
+    - dovetail.vimopsimage.tc005
