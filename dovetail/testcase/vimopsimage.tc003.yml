@@ -1,0 +1,10 @@
+---
+dovetail.vimopsimage.tc003:
+  name: dovetail.vimopsimage.tc003
+  objective: Create, show, update, delete and list metadata definition resource types
+  validate:
+    type: functest
+    testcase: tempest_full_parallel
+  report:
+    sub_testcase_list:
+      - tempest.api.image.v2.test_images_metadefs_resource_types
