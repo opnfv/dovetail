@@ -1,0 +1,10 @@
+---
+dovetail.vimopsimage.tc002:
+  name: dovetail.vimopsimage.tc002
+  objective: Create, show, update, delete and list metadata definition namespace
+  validate:
+    type: functest
+    testcase: tempest_full_parallel
+  report:
+    sub_testcase_list:
+      - tempest.api.image.v2.test_images_metadefs_namespaces
