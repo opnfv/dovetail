@@ -53,3 +53,9 @@ validate_input:
   valid_docker_tag:
     - 'stable'
     - 'latest'
+    - 'colorado.1.0'
+    - 'colorado.2.0'
+    - 'colorado.3.0'
+    - 'danube.1.0'
+    - 'danube.2.0'
+    - 'danube.3.0'
