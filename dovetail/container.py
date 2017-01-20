@@ -14,7 +14,7 @@ import utils.dovetail_utils as dt_utils
 from utils.dovetail_config import DovetailConfig as dt_cfg
 
 
-class Container:
+class Container(object):
 
     container_list = {}
     has_pull_latest_image = {'yardstick': False, 'functest': False}

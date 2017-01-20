@@ -15,7 +15,7 @@ import utils.dovetail_utils as dt_utils
 from utils.dovetail_config import DovetailConfig as dt_cfg
 
 
-class Parser:
+class Parser(object):
     """preprocess configuration files"""
 
     logger = None

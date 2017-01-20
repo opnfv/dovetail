@@ -28,7 +28,7 @@ import sys
 from dovetail_config import DovetailConfig as dt_cfg
 
 
-class Logger:
+class Logger(object):
     def __init__(self, logger_name):
 
         DEBUG = os.getenv('DEBUG')

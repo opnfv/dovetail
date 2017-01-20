@@ -249,7 +249,7 @@ class TestcaseFactory(object):
             return None
 
 
-class Testsuite:
+class Testsuite(object):
 
     logger = None
 
