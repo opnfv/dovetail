@@ -6,3 +6,22 @@ compliance_set:
     # for use of software development/debug
     # TO DO: will amend when compliance set is settled
     - dovetail.ipv6.tc001
+    - dovetail.vimopsnetwork.tc001
+    - dovetail.vimopsnetwork.tc002
+    - dovetail.vimopsnetwork.tc003
+    - dovetail.vimopsnetwork.tc004
+    - dovetail.vimopsnetwork.tc005
+    - dovetail.vimopsnetwork.tc006
+    - dovetail.vimopsnetwork.tc007
+    - dovetail.vimopsnetwork.tc008
+    - dovetail.vimopsnetwork.tc009
+    - dovetail.vimopsnetwork.tc010
+    - dovetail.vimopsnetwork.tc011
+    - dovetail.vimopsnetwork.tc012
+    - dovetail.vimopsnetwork.tc013
+    - dovetail.vimopsnetwork.tc014
+    - dovetail.vimopsnetwork.tc015
+    - dovetail.vimopsnetwork.tc016
+    - dovetail.vimopsnetwork.tc017
+    - dovetail.vimopsnetwork.tc018
+    - dovetail.vimopsnetwork.tc019
