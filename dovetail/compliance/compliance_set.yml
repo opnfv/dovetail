@@ -6,3 +6,21 @@ compliance_set:
     # for use of software development/debug
     # TO DO: will amend when compliance set is settled
     - dovetail.ipv6.tc001
+    - dovetail.vimopsidentity.tc001
+    - dovetail.vimopsidentity.tc002
+    - dovetail.vimopsidentity.tc003
+    - dovetail.vimopsidentity.tc004
+    - dovetail.vimopsidentity.tc005
+    - dovetail.vimopsidentity.tc006
+    - dovetail.vimopsidentity.tc007
+    - dovetail.vimopsidentity.tc008
+    - dovetail.vimopsidentity.tc009
+    - dovetail.vimopsidentity.tc010
+    - dovetail.vimopsidentity.tc011
+    - dovetail.vimopsidentity.tc012
+    - dovetail.vimopsidentity.tc013
+    - dovetail.vimopsidentity.tc014
+    - dovetail.vimopsidentity.tc015
+    - dovetail.vimopsidentity.tc016
+    - dovetail.vimopsidentity.tc017
+    - dovetail.vimopsidentity.tc018
