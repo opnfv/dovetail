@@ -6,3 +6,28 @@ compliance_set:
     # for use of software development/debug
     # TO DO: will amend when compliance set is settled
     - dovetail.ipv6.tc001
+    - dovetail.vimopsvolume.tc001
+    - dovetail.vimopsvolume.tc002
+    - dovetail.vimopsvolume.tc003
+    - dovetail.vimopsvolume.tc004
+    - dovetail.vimopsvolume.tc005
+    - dovetail.vimopsvolume.tc006
+    - dovetail.vimopsvolume.tc007
+    - dovetail.vimopsvolume.tc008
+    - dovetail.vimopsvolume.tc009
+    - dovetail.vimopsvolume.tc010
+    - dovetail.vimopsvolume.tc011
+    - dovetail.vimopsvolume.tc012
+    - dovetail.vimopsvolume.tc013
+    - dovetail.vimopsvolume.tc014
+    - dovetail.vimopsvolume.tc015
+    - dovetail.vimopsvolume.tc016
+    - dovetail.vimopsvolume.tc017
+    - dovetail.vimopsvolume.tc018
+    - dovetail.vimopsvolume.tc019
+    - dovetail.vimopsvolume.tc020
+    - dovetail.vimopsvolume.tc021
+    - dovetail.vimopsvolume.tc022
+    - dovetail.vimopsvolume.tc023
+    - dovetail.vimopsvolume.tc024
+    - dovetail.vimopsvolume.tc025
