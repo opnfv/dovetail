@@ -6,3 +6,11 @@ compliance_set:
     # for use of software development/debug
     # TO DO: will amend when compliance set is settled
     - dovetail.ipv6.tc001
+    - dovetail.vpn.tc001
+    - dovetail.vpn.tc002
+    - dovetail.vpn.tc003
+    - dovetail.vpn.tc004
+    - dovetail.vpn.tc005
+    - dovetail.vpn.tc006
+    - dovetail.vpn.tc007
+    - dovetail.vpn.tc008
