@@ -6,3 +6,6 @@ compliance_set:
     # for use of software development/debug
     # TO DO: will amend when compliance set is settled
     - dovetail.ipv6.tc001
+    - dovetail.promise.tc001
+    - dovetail.promise.tc002
+    - dovetail.promise.tc003
