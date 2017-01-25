@@ -6,3 +6,27 @@ compliance_set:
     # for use of software development/debug
     # TO DO: will amend when compliance set is settled
     - dovetail.ipv6.tc001
+    - dovetail.nfvi.tc001
+    - dovetail.nfvi.tc002
+    - dovetail.nfvi.tc003
+    - dovetail.nfvi.tc004
+    - dovetail.nfvi.tc005
+    - dovetail.nfvi.tc006
+    - dovetail.nfvi.tc007
+    - dovetail.nfvi.tc008
+    - dovetail.nfvi.tc009
+    - dovetail.nfvi.tc010
+    - dovetail.nfvi.tc011
+    - dovetail.nfvi.tc012
+    - dovetail.nfvi.tc013
+    - dovetail.nfvi.tc014
+    - dovetail.nfvi.tc015
+    - dovetail.nfvi.tc016
+    - dovetail.nfvi.tc017
+    - dovetail.nfvi.tc018
+    - dovetail.nfvi.tc019
+    - dovetail.nfvi.tc020
+    - dovetail.nfvi.tc021
+    - dovetail.nfvi.tc022
+    - dovetail.nfvi.tc023
+    - dovetail.nfvi.tc024
