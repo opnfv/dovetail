@@ -6,3 +6,28 @@ compliance_set:
     # for use of software development/debug
     # TO DO: will amend when compliance set is settled
     - dovetail.ipv6.tc001
+    - dovetail.ipv6.tc002
+    - dovetail.ipv6.tc003
+    - dovetail.ipv6.tc004
+    - dovetail.ipv6.tc005
+    - dovetail.ipv6.tc006
+    - dovetail.ipv6.tc007
+    - dovetail.ipv6.tc008
+    - dovetail.ipv6.tc009
+    - dovetail.ipv6.tc010
+    - dovetail.ipv6.tc011
+    - dovetail.ipv6.tc012
+    - dovetail.ipv6.tc013
+    - dovetail.ipv6.tc014
+    - dovetail.ipv6.tc015
+    - dovetail.ipv6.tc016
+    - dovetail.ipv6.tc017
+    - dovetail.ipv6.tc018
+    - dovetail.ipv6.tc019
+    - dovetail.ipv6.tc020
+    - dovetail.ipv6.tc021
+    - dovetail.ipv6.tc022
+    - dovetail.ipv6.tc023
+    - dovetail.ipv6.tc024
+    - dovetail.ipv6.tc025
+    - dovetail.ipv6.tc026
