@@ -6,3 +6,23 @@ compliance_set:
     # for use of software development/debug
     # TO DO: will amend when compliance set is settled
     - dovetail.ipv6.tc001
+    - dovetail.onos.tc001
+    - dovetail.onos.tc002
+    - dovetail.onos.tc003
+    - dovetail.onos.tc004
+    - dovetail.onos.tc005
+    - dovetail.onos.tc006
+    - dovetail.onos.tc007
+    - dovetail.onos.tc008
+    - dovetail.onos.tc009
+    - dovetail.onos.tc010
+    - dovetail.onos.tc011
+    - dovetail.onos.tc012
+    - dovetail.onos.tc013
+    - dovetail.onos.tc014
+    - dovetail.onos.tc015
+    - dovetail.onos.tc016
+    - dovetail.onos.tc017
+    - dovetail.onos.tc018
+    - dovetail.onos.tc019
+    - dovetail.onos.tc020
