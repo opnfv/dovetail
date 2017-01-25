@@ -6,3 +6,11 @@ compliance_set:
     # for use of software development/debug
     # TO DO: will amend when compliance set is settled
     - dovetail.ipv6.tc001
+    - dovetail.odl.tc001
+    - dovetail.odl.tc002
+    - dovetail.odl.tc003
+    - dovetail.odl.tc004
+    - dovetail.odl.tc005
+    - dovetail.odl.tc006
+    - dovetail.odl.tc007
+    - dovetail.odl.tc008
