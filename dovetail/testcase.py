@@ -105,24 +105,28 @@ class Testcase(object):
     def pre_condition(self):
         try:
             pre_condition = self.testcase['validate']['pre_condition']
-            if pre_condition == '':
-                pre_condition = self.pre_condition_cls(self.validate_type())
+        except KeyError:
+            pre_condition = ''
+        if pre_condition:
             return pre_condition
-        except:
+        pre_condition = self.pre_condition_cls(self.validate_type())
+        if not pre_condition:
             self.logger.debug('testcase:%s pre_condition is empty',
                               self.name())
-            return ''
+        return pre_condition
 
     def post_condition(self):
         try:
             post_condition = self.testcase['validate']['post_condition']
-            if post_condition == '':
-                post_condition = self.post_condition_cls(self.validate_type())
+        except KeyError:
+            post_condition = ''
+        if post_condition:
             return post_condition
-        except:
+        post_condition = self.post_condition_cls(self.validate_type())
+        if not post_condition:
             self.logger.debug('testcae:%s post_condition is empty',
                               self.name())
-            return ''
+        return post_condition
 
     def run(self):
         runner = TestRunnerFactory.create(self)
@@ -151,11 +155,17 @@ class Testcase(object):
 
     @staticmethod
     def pre_condition_cls(validate_type):
-        return dt_cfg.dovetail_config[validate_type]['pre_condition']
+        try:
+            return dt_cfg.dovetail_config[validate_type]['pre_condition']
+        except KeyError:
+            return None
 
     @staticmethod
     def post_condition_cls(validate_type):
-        return dt_cfg.dovetail_config[validate_type]['post_condition']
+        try:
+            return dt_cfg.dovetail_config[validate_type]['post_condition']
+        except KeyError:
+            return None
 
     @classmethod
     def update_validate_testcase(cls, testcase_name):
