@@ -214,13 +214,6 @@ class FunctestCrawler:
 
     def crawl_from_file(self, testcase=None):
         dovetail_config = dt_cfg.dovetail_config
-        file_path = \
-            os.path.join(dovetail_config['result_dir'],
-                         dovetail_config[self.type]['result']['file_path'])
-        if not os.path.exists(file_path):
-            self.logger.info('result file not found: %s', file_path)
-            return None
-
         criteria = 'FAIL'
         timestart = 0
         testcase_duration = 0
@@ -256,7 +249,7 @@ class FunctestCrawler:
                 output = myfile.read()
             error_logs = ""
 
-            for match in re.findall('(.*?)[. ]*FAILED', output):
+            for match in re.findall('(.*?)[. ]*fail ', output):
                 error_logs += match
 
             failed_num = int(re.findall(' - Failures: (\d*)', output)[0])
