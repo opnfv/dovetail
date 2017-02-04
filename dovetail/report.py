@@ -214,13 +214,6 @@ class FunctestCrawler:
 
     def crawl_from_file(self, testcase=None):
         dovetail_config = dt_cfg.dovetail_config
-        file_path = \
-            os.path.join(dovetail_config['result_dir'],
-                         dovetail_config[self.type]['result']['file_path'])
-        if not os.path.exists(file_path):
-            self.logger.info('result file not found: %s', file_path)
-            return None
-
         criteria = 'FAIL'
         timestart = 0
         testcase_duration = 0
@@ -254,10 +247,9 @@ class FunctestCrawler:
                 return None
             with open(file_path, 'r') as myfile:
                 output = myfile.read()
-            error_logs = ""
 
-            for match in re.findall('(.*?)[. ]*FAILED', output):
-                error_logs += match
+            error_logs = " ".join(re.findall('(.*?)[. ]*fail ', output))
+            skipped = " ".join(re.findall('(.*?)[. ]*skip:', output))
 
             failed_num = int(re.findall(' - Failures: (\d*)', output)[0])
             if failed_num != 0:
@@ -268,7 +260,8 @@ class FunctestCrawler:
             json_results = {'criteria': criteria, 'details': {"timestart": '',
                             "duration": int(dur_sec_int),
                             "tests": int(num_tests), "failures": failed_num,
-                            "errors": error_logs}}
+                            "errors": error_logs,
+                            "skipped": skipped}}
 
         self.logger.debug('Results: %s', str(json_results))
         return json_results
@@ -402,6 +395,8 @@ class FunctestChecker:
         all_passed = True
         for sub_testcase in sub_testcase_list:
             self.logger.debug('check sub_testcase:%s', sub_testcase)
+            # TO DO: should think the test case when skipped, should think
+            # together with the "dovetail report"
             if sub_testcase in db_result['details']['errors']:
                 testcase.sub_testcase_passed(sub_testcase, False)
                 all_passed = False
