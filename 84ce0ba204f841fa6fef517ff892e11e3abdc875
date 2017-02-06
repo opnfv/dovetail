@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1acb0d3e_aaac9a8d",
+        "filename": "dovetail/report.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1469
+      },
+      "writtenOn": "2017-02-06T03:21:42Z",
+      "side": 1,
+      "message": "Thers is not a separator between these match. And you can try to use function String.join(list) to connect the sequence.\nSee https://docs.python.org/2/library/string.html#string-functions",
+      "revId": "84ce0ba204f841fa6fef517ff892e11e3abdc875",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
