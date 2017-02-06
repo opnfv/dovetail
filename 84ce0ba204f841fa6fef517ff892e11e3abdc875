@@ -16,6 +16,24 @@
       "revId": "84ce0ba204f841fa6fef517ff892e11e3abdc875",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1acb0d3e_4a03b673",
+        "filename": "dovetail/report.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-02-06T06:14:53Z",
+      "side": 1,
+      "message": "do you mean line 254 and line 256? error_logs/skipped separated by what? blank space or?",
+      "parentUuid": "1acb0d3e_aaac9a8d",
+      "revId": "84ce0ba204f841fa6fef517ff892e11e3abdc875",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
