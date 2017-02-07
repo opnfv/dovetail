@@ -106,6 +106,7 @@ by running:
 
 ::
 
+  pip install tox
   tox
 
 Compliance and certification test cases
