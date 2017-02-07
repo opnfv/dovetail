@@ -22,6 +22,30 @@
       "revId": "5b3701ed0d2c651666961aa89dcc3502cfd2a7d1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1acb0d3e_036d9932",
+        "filename": "dovetail/report.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-02-07T08:21:40Z",
+      "side": 1,
+      "message": "how about error_logs \u003d \" \".join(re.findall(\u0027(.*?)[. ]*fail \u0027, output)) and delete line 250?",
+      "parentUuid": "1acb0d3e_23ce955b",
+      "range": {
+        "startLine": 253,
+        "startChar": 0,
+        "endLine": 258,
+        "endChar": 32
+      },
+      "revId": "5b3701ed0d2c651666961aa89dcc3502cfd2a7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
