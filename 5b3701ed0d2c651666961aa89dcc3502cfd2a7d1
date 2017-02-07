@@ -46,6 +46,30 @@
       "revId": "5b3701ed0d2c651666961aa89dcc3502cfd2a7d1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1acb0d3e_63d6ddc7",
+        "filename": "dovetail/report.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 1469
+      },
+      "writtenOn": "2017-02-07T08:45:51Z",
+      "side": 1,
+      "message": "It is ok.",
+      "parentUuid": "1acb0d3e_036d9932",
+      "range": {
+        "startLine": 253,
+        "startChar": 0,
+        "endLine": 258,
+        "endChar": 32
+      },
+      "revId": "5b3701ed0d2c651666961aa89dcc3502cfd2a7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
