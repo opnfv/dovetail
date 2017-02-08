@@ -30,7 +30,7 @@ def get_pass_str(passed):
         return 'FAIL'
 
 
-class Report:
+class Report(object):
 
     results = {'functest': {}, 'yardstick': {}, 'shell': {}}
 
@@ -190,7 +190,7 @@ class Report:
         return result
 
 
-class FunctestCrawler:
+class FunctestCrawler(object):
 
     logger = None
 
@@ -280,7 +280,7 @@ class FunctestCrawler:
             return None
 
 
-class YardstickCrawler:
+class YardstickCrawler(object):
 
     logger = None
 
@@ -322,7 +322,7 @@ class YardstickCrawler:
         return None
 
 
-class ShellCrawler:
+class ShellCrawler(object):
 
     def __init__(self):
         self.type = 'shell'
@@ -343,7 +343,7 @@ class ShellCrawler:
             return None
 
 
-class CrawlerFactory:
+class CrawlerFactory(object):
 
     CRAWLER_MAP = {'functest': FunctestCrawler,
                    'yardstick': YardstickCrawler,
@@ -357,14 +357,14 @@ class CrawlerFactory:
             return None
 
 
-class ResultChecker:
+class ResultChecker(object):
 
     @staticmethod
     def check():
         return 'PASS'
 
 
-class FunctestChecker:
+class FunctestChecker(object):
 
     logger = None
 
@@ -406,7 +406,7 @@ class FunctestChecker:
         testcase.passed(all_passed)
 
 
-class YardstickChecker:
+class YardstickChecker(object):
 
     logger = None
 
@@ -424,7 +424,7 @@ class YardstickChecker:
         return
 
 
-class ShellChecker:
+class ShellChecker(object):
 
     @staticmethod
     def check(testcase, result):
@@ -434,7 +434,7 @@ class ShellChecker:
             testcase.passed(False)
 
 
-class CheckerFactory:
+class CheckerFactory(object):
 
     CHECKER_MAP = {'functest': FunctestChecker,
                    'yardstick': YardstickChecker,

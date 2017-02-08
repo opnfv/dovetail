@@ -12,7 +12,7 @@ import os
 import re
 
 
-class DovetailConfig:
+class DovetailConfig(object):
 
     dovetail_config = {}
 

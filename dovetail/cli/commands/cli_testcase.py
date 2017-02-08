@@ -17,7 +17,7 @@ from dovetail.utils.dovetail_config import DovetailConfig as dt_cfg
 from dovetail.testcase import Testsuite
 
 
-class CliTestcase:
+class CliTestcase(object):
 
     @classmethod
     def testsuite_load(cls):
