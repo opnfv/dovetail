@@ -23,7 +23,7 @@ class Testcase(object):
 
     def __init__(self, testcase_yaml):
         self.testcase = testcase_yaml.values()[0]
-        self.testcase['passed'] = False
+        self.testcase['passed'] = 'FAIL'
         self.cmds = []
         self.sub_testcase_status = {}
         self.update_validate_testcase(self.validate_testcase())
