@@ -23,13 +23,6 @@ from utils.dovetail_config import DovetailConfig as dt_cfg
 from testcase import Testcase
 
 
-def get_pass_str(passed):
-    if passed:
-        return 'PASS'
-    else:
-        return 'FAIL'
-
-
 class Report(object):
 
     results = {'functest': {}, 'yardstick': {}, 'shell': {}}
@@ -75,15 +68,14 @@ class Report(object):
                 report_obj['testcases_list'].append(testcase_inreport)
                 continue
 
-            testcase_inreport['result'] = get_pass_str(testcase.passed())
+            testcase_inreport['result'] = testcase.passed()
             testcase_inreport['objective'] = testcase.objective()
             testcase_inreport['sub_testcase'] = []
             if testcase.sub_testcase() is not None:
                 for sub_test in testcase.sub_testcase():
                     testcase_inreport['sub_testcase'].append({
                         'name': sub_test,
-                        'result': get_pass_str(
-                            testcase.sub_testcase_passed(sub_test))
+                        'result': testcase.sub_testcase_passed(sub_test)
                     })
             report_obj['testcases_list'].append(testcase_inreport)
         cls.logger.info(json.dumps(report_obj))
@@ -123,13 +115,16 @@ class Report(object):
             area = pattern.findall(testcase['name'])[0]
             result_dir = dt_cfg.dovetail_config['result_dir']
             spec_link = repo_link + '/dovetail/testcase'
-            sub_report[area] += '- <%s> %s result: <%s>\n' %\
-                (spec_link, testcase['name'], result_dir)
+            sub_report[area] += '- <%s> %s %s: <%s>\n' %\
+                (spec_link, testcase['name'], testcase['result'], result_dir)
             testcase_num[area] += 1
             total_num += 1
             if testcase['result'] == 'PASS':
                 testcase_passnum[area] += 1
                 pass_num += 1
+            elif testcase['result'] == 'SKIP':
+                testcase_num[area] -= 1
+                total_num -= 1
 
         if total_num != 0:
             pass_rate = pass_num / total_num
@@ -379,29 +374,29 @@ class FunctestChecker(object):
         if not db_result:
             if sub_testcase_list is not None:
                 for sub_testcase in sub_testcase_list:
-                    testcase.sub_testcase_passed(sub_testcase, False)
+                    testcase.sub_testcase_passed(sub_testcase, 'FAIL')
             return
 
-        testcase.passed(db_result['criteria'] == 'PASS')
+        testcase.passed(db_result['criteria'])
 
         if sub_testcase_list is None:
             return
 
-        if testcase.testcase['passed'] is True:
+        if testcase.testcase['passed'] == 'PASS':
             for sub_testcase in sub_testcase_list:
-                testcase.sub_testcase_passed(sub_testcase, True)
+                testcase.sub_testcase_passed(sub_testcase, 'PASS')
             return
 
-        all_passed = True
+        all_passed = 'PASS'
         for sub_testcase in sub_testcase_list:
             self.logger.debug('check sub_testcase:%s', sub_testcase)
-            # TO DO: should think the test case when skipped, should think
-            # together with the "dovetail report"
             if sub_testcase in db_result['details']['errors']:
-                testcase.sub_testcase_passed(sub_testcase, False)
-                all_passed = False
+                testcase.sub_testcase_passed(sub_testcase, 'FAIL')
+                all_passed = 'FAIL'
+            elif sub_testcase in db_result['details']['skipped']:
+                testcase.sub_testcase_passed(sub_testcase, 'SKIP')
             else:
-                testcase.sub_testcase_passed(sub_testcase, True)
+                testcase.sub_testcase_passed(sub_testcase, 'PASS')
 
         testcase.passed(all_passed)
 

@@ -38,15 +38,15 @@ class DockerRunner(object):
         self.logger.debug('container id:%s', container_id)
 
         if not self.testcase.prepared():
-            failed = False
+            prepare_failed = False
             cmds = self.testcase.pre_condition()
             if cmds:
                 for cmd in cmds:
                     ret, msg = Container.exec_cmd(container_id, cmd)
                     if ret != 0:
-                        failed = True
+                        prepare_failed = True
                         break
-            if not failed:
+            if not prepare_failed:
                 self.testcase.prepared(True)
 
         if not self.testcase.prepare_cmd(self.type):
@@ -98,18 +98,18 @@ class ShellRunner(object):
         self.logger.debug('create runner:%s', self.type)
 
     def run(self):
-        passed = True
-        failed = False
-        result = {'pass': True, 'results': []}
+        testcase_passed = 'PASS'
+        prepare_failed = False
+        result = {'pass': 'PASS', 'results': []}
         if not self.testcase.prepared():
             cmds = self.testcase.pre_condition()
             for cmd in cmds:
                 ret, msg = dt_utils.exec_cmd(cmd, self.logger)
                 result['results'].append((cmd, ret, msg))
                 if ret != 0:
-                    failed = True
+                    prepare_failed = True
                     break
-            if not failed:
+            if not prepare_failed:
                 self.testcase.prepared(True)
 
         if not self.testcase.prepare_cmd(self.type):
@@ -120,9 +120,9 @@ class ShellRunner(object):
                 ret, msg = dt_utils.exec_cmd(cmd, self.logger)
                 result['results'].append((cmd, ret, msg))
                 if ret != 0:
-                    passed = False
+                    testcase_passed = 'FAIL'
 
-        result['pass'] = passed
+        result['pass'] = testcase_passed
 
         cmds = self.testcase.post_condition()
         for cmd in cmds:
