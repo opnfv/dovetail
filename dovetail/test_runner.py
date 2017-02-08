@@ -98,9 +98,9 @@ class ShellRunner(object):
         self.logger.debug('create runner:%s', self.type)
 
     def run(self):
-        passed = True
+        passed = 'PASS'
         failed = False
-        result = {'pass': True, 'results': []}
+        result = {'pass': 'PASS', 'results': []}
         if not self.testcase.prepared():
             cmds = self.testcase.pre_condition()
             for cmd in cmds:
@@ -120,7 +120,7 @@ class ShellRunner(object):
                 ret, msg = dt_utils.exec_cmd(cmd, self.logger)
                 result['results'].append((cmd, ret, msg))
                 if ret != 0:
-                    passed = False
+                    passed = 'FAIL'
 
         result['pass'] = passed
 
