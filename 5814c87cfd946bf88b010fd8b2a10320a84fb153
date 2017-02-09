@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1acb0d3e_062cc2aa",
+        "filename": "dovetail/report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-02-09T07:46:06Z",
+      "side": 1,
+      "message": "will reconsider the status calculation and will give the explanation.",
+      "parentUuid": "1acb0d3e_06c1222e",
+      "range": {
+        "startLine": 125,
+        "startChar": 17,
+        "endLine": 125,
+        "endChar": 46
+      },
+      "revId": "5814c87cfd946bf88b010fd8b2a10320a84fb153",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1acb0d3e_e6c3b636",
         "filename": "dovetail/report.py",
         "patchSetId": 3
@@ -59,6 +83,30 @@
       "writtenOn": "2017-02-09T03:00:50Z",
       "side": 1,
       "message": "The testcase[\u0027passed\u0027]\u003d\u003dPASS means there has no \u0027FAIL\u0027 sub_testcase.\nBut there maybe some skipped sub_testcases.\nWe can not set all sub_testcases \u0027PASS\u0027 in this situation.\nAll sub_testcases should be estimated by Line393-399.",
+      "range": {
+        "startLine": 386,
+        "startChar": 12,
+        "endLine": 388,
+        "endChar": 18
+      },
+      "revId": "5814c87cfd946bf88b010fd8b2a10320a84fb153",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1acb0d3e_e62e56a5",
+        "filename": "dovetail/report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-02-09T07:46:06Z",
+      "side": 1,
+      "message": "will amend",
+      "parentUuid": "1acb0d3e_c609da96",
       "range": {
         "startLine": 386,
         "startChar": 12,
