@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1acb0d3e_06c1222e",
+        "filename": "dovetail/report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-02-09T03:00:50Z",
+      "side": 1,
+      "message": "testcase[\u0027result\u0027] can just be \u0027PASS\u0027 or \u0027FAIL\u0027, no need to judge\nif  testcase[\u0027result\u0027] \u003d\u003d \u0027SKIP\u0027 here",
+      "range": {
+        "startLine": 125,
+        "startChar": 17,
+        "endLine": 125,
+        "endChar": 46
+      },
+      "revId": "5814c87cfd946bf88b010fd8b2a10320a84fb153",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1acb0d3e_e6c3b636",
+        "filename": "dovetail/report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-02-09T03:00:50Z",
+      "side": 1,
+      "message": "The criteria is initialized to be \u0027FAIL\u0027(Line 212), and there has\nno statement to set it to \u0027PASS\u0027 if the test case is actually passed.\nSo the criteria will always be \u0027FAIL\u0027.\nMaybe change Line250-251 into:\n    if failed_num \u003d\u003d 0:\n        criteria \u003d \u0027PASS\u0027",
+      "range": {
+        "startLine": 255,
+        "startChar": 28,
+        "endLine": 255,
+        "endChar": 49
+      },
+      "revId": "5814c87cfd946bf88b010fd8b2a10320a84fb153",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1acb0d3e_c609da96",
+        "filename": "dovetail/report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-02-09T03:00:50Z",
+      "side": 1,
+      "message": "The testcase[\u0027passed\u0027]\u003d\u003dPASS means there has no \u0027FAIL\u0027 sub_testcase.\nBut there maybe some skipped sub_testcases.\nWe can not set all sub_testcases \u0027PASS\u0027 in this situation.\nAll sub_testcases should be estimated by Line393-399.",
+      "range": {
+        "startLine": 386,
+        "startChar": 12,
+        "endLine": 388,
+        "endChar": 18
+      },
+      "revId": "5814c87cfd946bf88b010fd8b2a10320a84fb153",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
