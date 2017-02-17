@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dabed58f_c1053d15",
+        "filename": "dovetail/report.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-02-17T06:29:02Z",
+      "side": 1,
+      "message": "This needs to be:\nmatch \u003d re.findall(\u0027 - Failures: (\\d*)\u0027, output)\nif match:\n    failed_num \u003d int(match[0])\nelse:\n    failed_num \u003d 0",
+      "range": {
+        "startLine": 267,
+        "startChar": 12,
+        "endLine": 267,
+        "endChar": 63
+      },
+      "revId": "d2c61da1468e5e8dfc4044631a26156dfe74e2bc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
