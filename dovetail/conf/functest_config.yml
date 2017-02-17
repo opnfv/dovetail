@@ -4,7 +4,7 @@ functest:
   docker_tag: latest
   envs: '-e INSTALLER_TYPE=compass -e INSTALLER_IP=192.168.200.2
          -e NODE_NAME=dovetail-pod -e DEPLOY_SCENARIO=ha_nosdn
-         -e BUILD_TAG=dovetail -e CI_DEBUG=true
+         -e BUILD_TAG=daily-dovetail-001 -e CI_DEBUG=true
          -e DEPLOY_TYPE=baremetal
          -e RESULTS_STORE=file:///home/opnfv/functest/results/functest_result.json'
   opts: '-id --privileged=true'
@@ -12,7 +12,10 @@ functest:
     - 'echo test for precondition in functest'
   cmds:
     - 'functest env prepare'
+    - '[ -f /home/opnfv/functest/results/functest_result.json ] && cp /home/opnfv/functest/results/functest_result.json /home/opnfv/functest/functest_result.json || true'
+    - sed -i 's/http:\/\/testresults.opnfv.org\/test\/api\/v1/file:\/\/\/home\/opnfv\/functest\/results\/functest_result.json/g' /home/opnfv/repos/functest/functest/ci/config_functest.yaml
     - 'functest testcase run {{validate_testcase}} -r'
+    - 'cp /home/opnfv/functest/functest_result.json /home/opnfv/functest/results/functest_result.json'
   post_condition:
     - 'echo test for postcondition in functest'
   result:

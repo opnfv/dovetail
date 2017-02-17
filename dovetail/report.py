@@ -228,11 +228,14 @@ class FunctestCrawler(object):
                 return None
             with open(file_path, 'r') as f:
                 for jsonfile in f:
-                    data = json.loads(jsonfile)
-                    if testcase_name == data['case_name']:
-                        criteria = data['details']['status']
-                        timestart = data['details']['timestart']
-                        testcase_duration = data['details']['duration']
+                    try:
+                        data = json.loads(jsonfile)
+                        if testcase_name == data['case_name']:
+                            criteria = data['details']['status']
+                            timestart = data['details']['timestart']
+                            testcase_duration = data['details']['duration']
+                    except Exception:
+                        continue
 
             json_results = {'criteria': criteria,
                             'details': {"timestart": timestart,
