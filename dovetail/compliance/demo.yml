@@ -1,0 +1,15 @@
+---
+# coverage: tempest_smoke, vPing_ssh, vPing_userdata
+# yardstick_tc001/tc002
+demo:
+  name: demo
+  testcases_list:
+    - dovetail.ipv6.tc008
+    - dovetail.ipv6.tc009
+    - dovetail.ipv6.tc010
+    - dovetail.ipv6.tc011
+    - dovetail.ipv6.tc012
+    - dovetail.nfvi.tc001
+    - dovetail.nfvi.tc002
+    - dovetail.nfvi.tc101
+    - dovetail.nfvi.tc102
