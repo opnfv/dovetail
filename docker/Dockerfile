@@ -2,8 +2,6 @@ FROM ubuntu:14.04
 MAINTAINER Leo Wang <grakiss.wanglei@huawei.com>
 LABEL version="0.1" description="OPNFV Dovetail Docker Container"
 
-ARG BRANCH=master
-
 RUN \
     apt-get update \
 && \
@@ -23,7 +21,7 @@ WORKDIR /home/opnfv
 RUN \
     git config --global http.sslVerify false \
 && \
-    git clone --depth 1 -b $BRANCH https://git.opnfv.org/dovetail ${REPOS_DIR} \
+    git clone https://git.opnfv.org/dovetail ${REPOS_DIR} \
 && \
     mkdir -p ${REPOS_DIR}/results \
 && \
