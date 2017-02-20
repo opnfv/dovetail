@@ -439,9 +439,9 @@ class YardstickChecker(object):
     @staticmethod
     def check(testcase, result):
         if not result:
-            testcase.passed(False)
+            testcase.passed('FAIL')
         else:
-            testcase.passed(result['criteria'] == 'PASS')
+            testcase.passed(result['criteria'])
         return
 
 
