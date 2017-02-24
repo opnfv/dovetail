@@ -1,0 +1,100 @@
+#!/bin/bash
+
+##############################################################################
+# Copyright (c) 2017 Huawei Technologies Co.,Ltd and others.
+#
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Apache License, Version 2.0
+# which accompanies this distribution, and is available at
+# http://www.apache.org/licenses/LICENSE-2.0
+##############################################################################
+
+BRANCH_TAG=$(BRANCH=$(git status -bs| grep "##" | awk '{print $2}'); echo ${BRANCH##*/})
+if [[ "${BRANCH_TAG}" == "master" ]]; then
+    TAG="latest"
+else
+    TAG=${BRANCH_TAG}
+fi
+IMAGE="opnfv/dovetail:${TAG}"
+CONTAINER="dovetail-${TAG}"
+PROJ_DIR=$(git rev-parse --show-toplevel)
+
+function usage () {
+set +x
+echo "Usage: $0 [OPTIONS] [COMMAND]"
+echo ""
+echo "Build '${IMAGE}' image if it is does not exist."
+echo "Run '${CONTAINER}' container and execute COMMAND in it."
+echo "Default COMMAND is 'bash'"
+echo ""
+echo "if running with parameters, shown below"
+echo ""
+echo "  -r    Force delete '${CONTAINER}' container and run it again."
+echo "        Main usecase for it - updating config from templates"
+echo "  -b    Force delete '${IMAGE}' image and build it again"
+echo "        Main usecase for it - force build new python/js env"
+echo "  -h    Print this usage message"
+echo ""
+}
+
+function build_image () {
+sudo docker rm -f ${CONTAINER}
+OLD_ID=$(sudo docker images opnfv/dovetail | grep ${TAG} | awk '{print $3}')
+echo "Try to build ${IMAGE} image"
+sudo docker build --no-cache -t ${IMAGE} -f ${PROJ_DIR}/docker/Dockerfile ${PROJ_DIR} || exit $?
+NEW_ID=$(sudo docker images opnfv/dovetail | grep ${TAG} | awk '{print $3}')
+if [[ ${OLD_ID} ]] && [[ ! ${OLD_ID} == ${NEW_ID} ]]; then
+    sudo docker rmi -f ${OLD_ID} && echo "old image removed"
+fi
+}
+
+function run_container (){
+echo "stop all other dovetail containers"
+for id in $(sudo docker ps -a); do
+    NAME=$(sudo docker inspect --format='{{.Name}}' $id)
+    if [[ ${NAME} == /dovetail-* ]] && [[ ! ${NAME} == "/${CONTAINER}" ]]; then
+        echo "Stop container ${NAME}" && sudo docker stop $id
+    fi
+done
+if [[ $(sudo docker ps -a | grep "${CONTAINER}") ]]; then
+    echo "Container ${CONTAINER} exists and it is reused"
+    sudo docker start ${CONTAINER}
+else
+    echo "Try to run container ${CONTAINER}"
+    sudo docker run --privileged=true -id \
+        --env-file dovetail-docker-env \
+        -v /var/run/docker.sock:/var/run/docker.sock \
+        -v /home/opnfv/dovetail/results:/home/opnfv/dovetail/results \
+        --name ${CONTAINER} \
+        ${IMAGE} /bin/bash
+fi
+}
+
+COMMAND=""
+while [[ $1 ]]
+do
+    case "$1" in
+        -h) usage
+            exit 0;;
+        -r) echo "Try to remove old ${CONTAINER} container"
+            sudo docker rm -f ${CONTAINER}
+            shift;;
+        -b) FORCE_BUILD=true
+            shift;;
+        *) COMMAND="${COMMAND} $1"
+           shift;;
+    esac
+done
+
+#Build proper image if it does not exist of force rebuild
+if [[ ${FORCE_BUILD} ]] || [[ ! $(sudo docker images opnfv/dovetail | grep ${TAG}) ]]; then
+    build_image
+fi
+#Run or start(if exists) container
+[[ ! $(sudo docker ps | grep ${CONTAINER}) ]] && run_container
+
+if [ ! -z "$COMMAND" -a "$COMMAND" != " " ]; then
+    sudo docker exec -it ${CONTAINER} ${COMMAND}
+else
+    sudo docker exec -it ${CONTAINER} bash
+fi
