@@ -1,0 +1,16 @@
+# several ways to set Dovetail Docker container parameters
+# 1.adjust these parameters according to the SUT, here is just an example
+# 2.using openstack creds file
+#   2.1 not transfer envs when creating dovetail container in run-in-container script,
+#   which means delete line 65 in run-in-container, then run "run-in-container -r"
+#   2.2 when want to run dovetail testsuite, using "docker cp" to copy
+#   the creds file on the openstack host to the container, can also using "touch" to create
+#   an openstack "creds" file inside the container, whose path is "</path/creds>",
+#   then on the host to run:
+#   "run-in-container dovetail run --creds </path/creds>"
+
+INSTALLER_TYPE=compass
+INSTALLER_IP=192.168.200.2
+DEPLOY_TYPE=baremetal
+DEPLOY_SCENARIO=ha-nosdn
+CI_DEBUG=true
