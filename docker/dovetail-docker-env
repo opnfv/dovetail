@@ -1,0 +1,9 @@
+# several ways to set Dovetail Docker container parameters
+# 1)adjust these parameters accordingly, here is just an example
+# 2)copy the VIM creds file info here
+# 3)set VIM creds file path directly in run-in-file script after --env-file
+INSTALLER_TYPE=compass
+INSTALLER_IP=192.168.200.2
+DEPLOY_TYPE=baremetal
+DEPLOY_SCENARIO=ha-nosdn
+CI_DEBUG=true
