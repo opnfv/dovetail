@@ -8,10 +8,10 @@ yardstick:
          -e EXTERNAL_NETWORK=ext-net'
   opts: '-id --privileged=true'
   pre_condition:
-    - 'source /home/opnfv/repos/yardstick/tests/ci/prepare_env.sh &&
-         source /home/opnfv/repos/yardstick/tests/ci/clean_images.sh && cleanup'
-    - 'source /home/opnfv/repos/yardstick/tests/ci/prepare_env.sh &&
-         cd /home/opnfv/repos/yardstick && source tests/ci/load_images.sh'
+    - 'cd /home/opnfv/repos/yardstick && source tests/ci/prepare_env.sh &&
+         source tests/ci/clean_images.sh && cleanup'
+    - 'cd /home/opnfv/repos/yardstick && source tests/ci/prepare_env.sh &&
+         source tests/ci/load_images.sh'
   cmds:
     - 'mkdir -p /home/opnfv/yardstick/results/'
     - 'cd /home/opnfv/repos/yardstick && source tests/ci/prepare_env.sh &&
