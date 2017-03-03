@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dabed58f_87abb988",
+        "filename": "docker/dovetail-docker-env",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-03-03T02:09:58Z",
+      "side": 1,
+      "message": "what does it mean? copy a filel here?? where? current directory?",
+      "range": {
+        "startLine": 3,
+        "startChar": 13,
+        "endLine": 3,
+        "endChar": 27
+      },
+      "revId": "d6a8b9fbf42d2ca69c80e31530af453a13155d2b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabed58f_a7b03df5",
+        "filename": "docker/dovetail-docker-env",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-03-03T02:09:58Z",
+      "side": 1,
+      "message": "what is run-in-file script file?",
+      "range": {
+        "startLine": 4,
+        "startChar": 40,
+        "endLine": 4,
+        "endChar": 58
+      },
+      "revId": "d6a8b9fbf42d2ca69c80e31530af453a13155d2b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
