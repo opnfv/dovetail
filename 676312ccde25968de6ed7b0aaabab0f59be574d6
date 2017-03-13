@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_e7f42289",
+        "filename": "docker/run-in-container",
+        "patchSetId": 5
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-03-13T06:58:07Z",
+      "side": 1,
+      "message": "use cmd \"sudo docker ps -aq\" to get all containers\u0027 ID.",
+      "range": {
+        "startLine": 53,
+        "startChar": 12,
+        "endLine": 53,
+        "endChar": 29
+      },
+      "revId": "676312ccde25968de6ed7b0aaabab0f59be574d6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_6717d2a4",
+        "filename": "docker/run-in-container",
+        "patchSetId": 5
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-03-13T06:58:07Z",
+      "side": 1,
+      "message": "If there exists ${CONTAINER}, function run_container will not be called and all other dovetail containers will not be closed.   \nThis need to directly use cmd \"run_container\" even though there exists ${CONTAINER}. Because in function run_container, it will reuse the existing container rather than creating a new one.",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 62
+      },
+      "revId": "676312ccde25968de6ed7b0aaabab0f59be574d6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
