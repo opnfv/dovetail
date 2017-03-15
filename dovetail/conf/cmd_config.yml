@@ -53,11 +53,12 @@ cli:
         path:
           - 'functest/docker_tag'
         help: 'Overwrite tag for functest docker container (e.g. stable or latest)'
-      creds:
+      openrc:
         flags:
-          - '--creds'
+          - '--openrc'
+          - '-o'
         path:
-          - 'creds'
+          - 'openrc'
         help: 'Openstack Credential file location'
     control:
       testsuite:
