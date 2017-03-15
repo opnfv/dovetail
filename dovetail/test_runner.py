@@ -31,7 +31,7 @@ class DockerRunner(object):
     def run(self):
         Container.pull_image(self.testcase.validate_type())
         container_id = Container.create(self.testcase.validate_type())
-        if container_id == '':
+        if not container_id:
             self.logger.error('failed to create container')
             return
 
