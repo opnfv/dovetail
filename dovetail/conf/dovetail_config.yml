@@ -1,11 +1,10 @@
 ---
-work_dir: /home/opnfv/dovetail
 result_dir: /home/opnfv/dovetail/results
 report_file: 'dovetail_report.txt'
 cli_file_name: 'cmd_config.yml'
 
 # OPENSTACK Credential file
-creds: '/home/opnfv/dovetail/openstack.creds'
+openrc: '/home/opnfv/dovetail/openrc.sh'
 
 repo:
   tag: tag_name

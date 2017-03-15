@@ -48,16 +48,19 @@ class Container(object):
         envs = dovetail_config[type]['envs']
         opts = dovetail_config[type]['opts']
 
-        # if file openstack.creds doesn't exist, creds need to be empty
-        if os.path.isfile(dovetail_config['creds']):
-            creds = ' -v %s:%s ' % (dovetail_config['creds'],
-                                    dovetail_config[type]['creds'])
+        # credentials file openrc.sh is neccessary
+        dovetail_config['openrc'] = os.path.abspath(dovetail_config['openrc'])
+        if os.path.isfile(dovetail_config['openrc']):
+            openrc = ' -v %s:%s ' % (dovetail_config['openrc'],
+                                     dovetail_config[type]['openrc'])
         else:
-            creds = ''
+            cls.logger.error("File %s is not exist", dovetail_config['openrc'])
+            return None
+
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
         cmd = 'sudo docker run %s %s %s %s %s %s /bin/bash' % \
-            (opts, envs, sshkey, creds, result_volume, docker_image)
+            (opts, envs, sshkey, openrc, result_volume, docker_image)
         dt_utils.exec_cmd(cmd, cls.logger)
         ret, container_id = \
             dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +
