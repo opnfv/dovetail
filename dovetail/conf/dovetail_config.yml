@@ -58,12 +58,6 @@ test_project:
   - 'functest'
 
 validate_input:
-  valid_sut_type:
-    - 'compass'
-    - 'fuel'
-    - 'joid'
-    - 'apex'
-
   valid_docker_tag:
     - 'stable'
     - 'latest'

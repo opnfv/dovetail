@@ -45,8 +45,28 @@ class Container(object):
         sshkey = "-v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
         dovetail_config = dt_cfg.dovetail_config
         docker_image = cls.get_docker_image(type)
-        envs = dovetail_config[type]['envs']
         opts = dovetail_config[type]['opts']
+
+        # This is used for showing the debug logs of the upstream projects
+        envs = ' -e CI_DEBUG=true'
+
+        # These are all just used by Functest's function push_results_to_db
+        if type.lower() == "functest":
+            ins_type = " -e INSTALLER_TYPE=vendor-specific"
+            scenario = " -e DEPLOY_SCENARIO=default"
+            node = " -e NODE_NAME=default"
+            tag = " -e BUILD_TAG=daily-master-001"
+
+            envs = "%s %s %s %s %s" % (envs, ins_type, scenario, node, tag)
+
+        if type.lower() == "yardstick":
+            ext_net = dt_utils.get_ext_net_name(dovetail_config['creds'],
+                                                cls.logger)
+            if ext_net:
+                envs = "%s%s%s" % (envs, " -e EXTERNAL_NETWORK=", ext_net)
+            else:
+                cls.logger.error("Can't find any external network.")
+                return None
 
         # if file openstack.creds doesn't exist, creds need to be empty
         if os.path.isfile(dovetail_config['creds']):
