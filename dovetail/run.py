@@ -82,13 +82,6 @@ def validate_input(input_dict, check_dict, logger):
         logger.error("yard_tag can't be %s, valid in %s", yard_tag, valid_tag)
         raise SystemExit(1)
 
-    # for 'SUT_TYPE' option
-    sut_type = input_dict['sut_type']
-    valid_type = check_dict['valid_sut_type']
-    if sut_type is not None and sut_type not in valid_type:
-        logger.error("SUT_TYPE can't be %s, valid in %s", sut_type, valid_type)
-        raise SystemExit(1)
-
 
 def filter_config(input_dict, logger):
     cli_dict = dt_cfg.dovetail_config['cli']
@@ -151,7 +144,7 @@ def main(*args, **kwargs):
     """Dovetail compliance test entry!"""
     clean_results_dir()
     if kwargs['debug']:
-        os.environ['DEBUG'] = kwargs['debug']
+        os.environ['DEBUG'] = 'true'
     create_logs()
     logger = dt_logger.Logger('run').getLogger()
     logger.info('================================================')
@@ -162,10 +155,6 @@ def main(*args, **kwargs):
 
     if configs is not None:
         dt_cfg.update_config(configs)
-    logger.info('Your new envs for functest: %s',
-                dt_cfg.dovetail_config['functest']['envs'])
-    logger.info('Your new envs for yardstick: %s',
-                dt_cfg.dovetail_config['yardstick']['envs'])
 
     testarea = kwargs['testarea']
     testsuite_validation = False
