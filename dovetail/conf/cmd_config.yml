@@ -15,30 +15,6 @@ cli:
 
   options:
     config:
-      SUT_TYPE:
-        flags:
-          - '--SUT_TYPE'
-          - '-t'
-        path:
-          - 'functest/envs'
-          - 'yardstick/envs'
-        help: 'Installer type of the system under test (SUT).'
-      SUT_IP:
-        flags:
-          - '--SUT_IP'
-          - '-i'
-        path:
-          - 'functest/envs'
-          - 'yardstick/envs'
-        help: 'IP of the system under test (SUT).'
-      debug:
-        flags:
-          - '--debug'
-          - '-d'
-        path:
-          - 'functest/envs'
-          - 'yardstick/envs'
-        help: 'True for showing debug log on screen.'
       yard_tag:
         flags:
           - '--yard_tag'
@@ -71,3 +47,9 @@ cli:
           - '--testarea'
         default: 'full'
         help: 'compliance testarea within testsuite'
+      debug:
+        flags:
+          - '--debug'
+          - '-d'
+        is_flag: 'True'
+        help: 'Flag for showing debug log on screen.'

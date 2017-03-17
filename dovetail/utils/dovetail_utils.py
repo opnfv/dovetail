@@ -10,6 +10,8 @@
 #
 
 import sys
+import os
+import re
 import subprocess
 from collections import Mapping, Set, Sequence
 
@@ -94,6 +96,31 @@ def get_obj_by_path(obj, dst_path):
     for path, obj in objwalk(obj):
         if path == dst_path:
             return obj
+
+
+def source_env(env_file):
+    with open(env_file, 'r') as f:
+        lines = f.readlines()
+    for line in lines:
+        for match in re.findall(r"export (.*)=(.*)", line):
+            match = (match[0].strip('\"'), match[1].strip('\"'))
+            match = (match[0].strip('\''), match[1].strip('\''))
+            os.environ.update({match[0]: match[1]})
+
+
+def get_ext_net_name(env_file, logger=None):
+    source_env(env_file)
+    cmd_check = "openstack network list"
+    ret, msg = exec_cmd(cmd_check, logger)
+    if ret:
+        logger.error("The credentials info in %s is invalid." % env_file)
+        return None
+    cmd = "openstack network list --long | grep 'External' | head -1 | \
+           awk '{print $4}'"
+    ret, msg = exec_cmd(cmd, logger)
+    if not ret:
+        return msg
+    return None
 
 
 def show_progress_bar(length):
