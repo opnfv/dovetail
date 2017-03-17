@@ -3,3 +3,5 @@ Jinja2>=2.6
 PyYAML>=3.10
 six>=1.9.0
 Click
+python-openstackclient==3.7.0
+python-neutronclient==6.0.0
