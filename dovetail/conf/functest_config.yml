@@ -7,16 +7,11 @@ functest:
     - 'echo test for precondition in functest'
   cmds:
     - 'functest env prepare'
-    - '[ -f /home/opnfv/functest/results/functest_result.json ] && cp /home/opnfv/functest/results/functest_result.json /home/opnfv/functest/functest_result.json || true'
-    - sed -i 's/http:\/\/testresults.opnfv.org\/test\/api\/v1/file:\/\/\/home\/opnfv\/functest\/results\/functest_result.json/g' /home/opnfv/repos/functest/functest/ci/config_functest.yaml
     - 'functest testcase run {{validate_testcase}} -r'
-    - 'cp /home/opnfv/functest/functest_result.json /home/opnfv/functest/results/functest_result.json'
-  post_condition:
     - 'echo test for postcondition in functest'
   result:
     dir: '/home/opnfv/functest/results'
     store_type: 'file'
-    file_path: 'functest_result.json'
+    file_path: 'dump.txt'
     tp_path: 'tempest/tempest.log'
-    db_url: 'http://testresults.opnfv.org/test/api/v1/results?case=%s&last=1'
   openrc: '/home/opnfv/functest/conf/openstack.creds'
