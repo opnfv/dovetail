@@ -17,6 +17,5 @@ functest:
     dir: '/home/opnfv/functest/results'
     store_type: 'file'
     file_path: 'functest_result.json'
-    tp_path: 'tempest/tempest.log'
     db_url: 'http://testresults.opnfv.org/test/api/v1/results?case=%s&last=1'
   openrc: '/home/opnfv/functest/conf/openstack.creds'
