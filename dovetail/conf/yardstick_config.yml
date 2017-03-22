@@ -20,5 +20,4 @@ yardstick:
     log: '/tmp/yardstick'
     store_type: 'file'
     file_path: 'yardstick.log'
-    db_url: 'http://testresults.opnfv.org/test/api/v1/results?case=%s&last=1'
   openrc: '/home/opnfv/openrc'

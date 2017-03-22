@@ -40,6 +40,61 @@ class Container(object):
         return '%s:%s' % (dt_cfg.dovetail_config[type]['image_name'],
                           dt_cfg.dovetail_config[type]['docker_tag'])
 
+    # get the openrc_volume for creating the container
+    @classmethod
+    def openrc_volume(cls, type):
+        dovetail_config = dt_cfg.dovetail_config
+        dovetail_config['openrc'] = os.path.abspath(dovetail_config['openrc'])
+        if os.path.isfile(dovetail_config['openrc']):
+            openrc = ' -v %s:%s ' % (dovetail_config['openrc'],
+                                     dovetail_config[type]['openrc'])
+            return openrc
+        else:
+            cls.logger.error("File %s is not exist", dovetail_config['openrc'])
+            return None
+
+    # set functest envs and TEST_DB_URL for creating functest container
+    @staticmethod
+    def set_functest_config():
+
+        # These are all just used by Functest's function push_results_to_db.
+        # And has nothing to do with DoveTail running test cases.
+        ins_type = " -e INSTALLER_TYPE=vendor-specific"
+        scenario = " -e DEPLOY_SCENARIO=default"
+        node = " -e NODE_NAME=master"
+        tag = " -e BUILD_TAG=daily-master-001"
+        envs = "%s %s %s %s" % (ins_type, scenario, node, tag)
+
+        dovetail_config = dt_cfg.dovetail_config
+        if dovetail_config['report_dest'].startswith("http"):
+            report = " -e TEST_DB_URL=%s " % dovetail_config['report_dest']
+        if dovetail_config['report_dest'] == "file":
+            file_path = dovetail_config["functest"]['result']['dir']
+            file_path = file_path[0:file_path.rfind('/results')]
+            report = " -e TEST_DB_URL=file://%s " % file_path
+        return "%s %s" % (envs, report)
+
+    # set yardstick external network name and log volume for its container.
+    # external network is necessary for yardstick.
+    @classmethod
+    def set_yardstick_config(cls):
+        dovetail_config = dt_cfg.dovetail_config
+        ext_net = dt_utils.get_ext_net_name(dovetail_config['openrc'],
+                                            cls.logger)
+        if ext_net:
+            envs = "%s%s" % (" -e EXTERNAL_NETWORK=", ext_net)
+        else:
+            cls.logger.error("Can't find any external network.")
+            return None
+
+        if dovetail_config['report_dest'].startswith("http"):
+            cls.logger.info("Yardstick can't push results to DB.")
+            cls.logger.info("Results will be stored with files.")
+
+        log_vol = '-v %s:%s ' % (dovetail_config['result_dir'],
+                                 dovetail_config["yardstick"]['result']['log'])
+        return "%s %s" % (envs, log_vol)
+
     @classmethod
     def create(cls, type):
         sshkey = "-v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
@@ -48,42 +103,25 @@ class Container(object):
         opts = dovetail_config[type]['opts']
 
         # credentials file openrc.sh is neccessary
-        dovetail_config['openrc'] = os.path.abspath(dovetail_config['openrc'])
-        if os.path.isfile(dovetail_config['openrc']):
-            openrc = ' -v %s:%s ' % (dovetail_config['openrc'],
-                                     dovetail_config[type]['openrc'])
-        else:
-            cls.logger.error("File %s is not exist", dovetail_config['openrc'])
+        openrc = cls.openrc_volume(type)
+        if not openrc:
             return None
 
         # This is used for showing the debug logs of the upstream projects
         envs = ' -e CI_DEBUG=true'
 
-        # These are all just used by Functest's function push_results_to_db
+        config = ""
         if type.lower() == "functest":
-            ins_type = " -e INSTALLER_TYPE=vendor-specific"
-            scenario = " -e DEPLOY_SCENARIO=default"
-            node = " -e NODE_NAME=default"
-            tag = " -e BUILD_TAG=daily-master-001"
-
-            envs = "%s %s %s %s %s" % (envs, ins_type, scenario, node, tag)
-
+            config = cls.set_functest_config()
         if type.lower() == "yardstick":
-            ext_net = dt_utils.get_ext_net_name(dovetail_config['openrc'],
-                                                cls.logger)
-            if ext_net:
-                envs = "%s%s%s" % (envs, " -e EXTERNAL_NETWORK=", ext_net)
-            else:
-                cls.logger.error("Can't find any external network.")
-                return None
+            config = cls.set_yardstick_config()
+        if not config:
+            return None
 
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
-        log_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
-                                     dovetail_config[type]['result']['log'])
         cmd = 'sudo docker run %s %s %s %s %s %s %s /bin/bash' % \
-            (opts, envs, sshkey, openrc, result_volume,
-             log_volume, docker_image)
+            (opts, envs, config, sshkey, openrc, result_volume, docker_image)
         dt_utils.exec_cmd(cmd, cls.logger)
         ret, container_id = \
             dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +

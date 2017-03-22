@@ -64,8 +64,12 @@ def run_test(testsuite, testarea, logger):
             end_time = time.time()
             duration = end_time - start_time
 
-        result = Report.get_result(testcase)
-        Report.check_result(testcase, result)
+        if dt_cfg.dovetail_config['report_dest'].startswith("http"):
+            logger.info("Results has been pushed to database.")
+        if dt_cfg.dovetail_config['report_dest'] == "file":
+            logger.info("Results has been stored with files.")
+            result = Report.get_result(testcase)
+            Report.check_result(testcase, result)
 
     return duration
 
@@ -81,6 +85,14 @@ def validate_input(input_dict, check_dict, logger):
     if yard_tag is not None and yard_tag not in valid_tag:
         logger.error("yard_tag can't be %s, valid in %s", yard_tag, valid_tag)
         raise SystemExit(1)
+
+    # for 'report' option
+    report = input_dict['report']
+    if report:
+        if not (report.startswith("http") or report == "file"):
+            logger.error("report can't be %s", input_dict['report'])
+            logger.info("valid report types are 'file' and 'http'")
+            raise SystemExit(1)
 
 
 def filter_config(input_dict, logger):
@@ -156,6 +168,9 @@ def main(*args, **kwargs):
     if configs is not None:
         dt_cfg.update_config(configs)
 
+    if kwargs['report']:
+        dt_cfg.dovetail_config['report_dest'] = kwargs['report']
+
     testarea = kwargs['testarea']
     testsuite_validation = False
     testarea_validation = False
@@ -168,7 +183,8 @@ def main(*args, **kwargs):
         testsuite_yaml = load_testsuite(kwargs['testsuite'])
         load_testcase()
         duration = run_test(testsuite_yaml, testarea, logger)
-        Report.generate(testsuite_yaml, testarea, duration)
+        if dt_cfg.dovetail_config['report_dest'] == "file":
+            Report.generate(testsuite_yaml, testarea, duration)
     else:
         logger.error('invalid input commands, testsuite %s testarea %s',
                      kwargs['testsuite'], testarea)
