@@ -20,12 +20,14 @@ testsuite_supported:
   - debug
 # testarea supported, should adjust accordingly
 testarea_supported:
-  - vimops
-  - nfvi
-  - ipv6
+  - defcore
   - example
+  - ipv6
+  - nfvi
+  - vimops
 
 functest_testsuite:
+  - refstack_defcore
   - tempest_smoke_serial
   - tempest_full_parallel
   - rally_sanity
