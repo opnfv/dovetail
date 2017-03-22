@@ -245,42 +245,39 @@ class FunctestCrawler(object):
                             'details': {"timestart": timestart,
                                         "duration": testcase_duration,
                                         "tests": '', "failures": ''}}
-        elif 'tempest' in testcase_name:
+        elif testcase_name in dt_cfg.dovetail_config['functest_testsuite']:
             file_path = \
                 os.path.join(dovetail_config['result_dir'],
-                             dovetail_config[self.type]['result']['tp_path'])
+                             dovetail_config[self.type]['result']['file_path'])
             if not os.path.exists(file_path):
                 self.logger.info('result file not found: %s', file_path)
                 return None
-            with open(file_path, 'r') as myfile:
-                output = myfile.read()
+            tests = 0
+            failed_num = 0
+            error_case = ''
+            skipped_case = ''
+            with open(file_path, 'r') as f:
+                for jsonfile in f:
+                    try:
+                        data = json.loads(jsonfile)
+                        if testcase_name == data['case_name']:
+                            criteria = data['details']['status']
+                            timestart = data['details']['timestart']
+                            testcase_duration = data['details']['duration']
+                            tests = data['details']['tests']
+                            failed_num = data['details']['failures']
+                            error_case = data['details']['errors']
+                            skipped_case = data['details']['skipped']
+                    except Exception:
+                        continue
 
-            match = re.findall('(.*?)[. ]*fail ', output)
-            if match:
-                error_logs = " ".join(match)
-            else:
-                error_logs = ""
-            match = re.findall('(.*?)[. ]*skip:', output)
-            if match:
-                skipped = " ".join(match)
-            else:
-                skipped = ""
-
-            match = re.findall(' - Failures: (\d*)', output)
-            if match:
-                failed_num = int(match[0])
-            else:
-                failed_num = 0
-            if failed_num == 0:
-                criteria = 'PASS'
-
-            match = re.findall('Ran: (\d*) tests in (\d*)\.\d* sec.', output)
-            num_tests, dur_sec_int = match[0]
-            json_results = {'criteria': criteria, 'details': {"timestart": '',
-                            "duration": int(dur_sec_int),
-                            "tests": int(num_tests), "failures": failed_num,
-                            "errors": error_logs,
-                            "skipped": skipped}}
+            json_results = {'criteria': criteria,
+                            'details': {"timestart": timestart,
+                                        "duration": testcase_duration,
+                                        "tests": int(tests),
+                                        "failures": int(failed_num),
+                                        "errors": error_case,
+                                        "skipped": skipped_case}}
 
         self.logger.debug('Results: %s', str(json_results))
         return json_results
