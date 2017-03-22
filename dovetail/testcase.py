@@ -115,6 +115,14 @@ class Testcase(object):
                               self.name())
         return pre_condition
 
+    def pre_copy_dest_path(self):
+        try:
+            pre_copy_dest_path = \
+                self.testcase['validate']['pre_copy']['dest_path']
+        except KeyError:
+            pre_copy_dest_path = ''
+        return pre_copy_dest_path
+
     def post_condition(self):
         try:
             post_condition = self.testcase['validate']['post_condition']
@@ -127,6 +135,23 @@ class Testcase(object):
             self.logger.debug('testcae:%s post_condition is empty',
                               self.name())
         return post_condition
+
+    def mk_src_file(self):
+        testcase_src_file = self.testcase['validate']['pre_copy']['src_file']
+        try:
+            with open(os.path.join(dt_cfg.dovetail_config['result_dir'],
+                      testcase_src_file), 'w+') as src_file:
+                if self.sub_testcase() is not None:
+                    for sub_test in self.sub_testcase():
+                        self.logger.info('save testcases %s', sub_test)
+                        src_file.write(sub_test + '\n')
+            self.logger.info('save testcases to %s', src_file)
+        except Exception:
+            self.logger.error('Failed to save: %s', src_file)
+
+        src_file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
+                                     testcase_src_file)
+        return src_file_path
 
     def run(self):
         runner = TestRunnerFactory.create(self)
