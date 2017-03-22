@@ -115,6 +115,18 @@ class Testcase(object):
                               self.name())
         return pre_condition
 
+    def pre_copy_src_path(self, test_type):
+        try:
+            pre_copy_src_file = \
+                self.testcase['validate']['pre_copy']['src_file']
+        except KeyError:
+            self.logger.error('src file Key error')
+            return None
+        src_path = \
+            os.path.join(dt_cfg.dovetail_config[test_type]['result']['dir'],
+                         pre_copy_src_file)
+        return src_path
+
     def pre_copy_dest_path(self):
         try:
             pre_copy_dest_path = \
