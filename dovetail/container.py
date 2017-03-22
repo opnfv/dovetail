@@ -199,3 +199,11 @@ class Container(object):
             return (1, 'sub_cmd is empty')
         cmd = 'sudo docker exec %s /bin/bash -c "%s"' % (container_id, sub_cmd)
         return dt_utils.exec_cmd(cmd, cls.logger, exit_on_error)
+
+    @classmethod
+    def pre_copy(cls, container_id, src_path, dest_path, exit_on_error=False):
+        if src_path == "" or dest_path == "":
+            return (1, 'src_path or dest_path is empty')
+        cmd = 'sudo docker cp %s %s:%s' % (src_path, container_id, dest_path)
+        cls.logger.debug('execute cmd %s', cmd)
+        return dt_utils.exec_cmd(cmd, cls.logger, exit_on_error)
