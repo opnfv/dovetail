@@ -79,8 +79,11 @@ class Container(object):
 
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
-        cmd = 'sudo docker run %s %s %s %s %s %s /bin/bash' % \
-            (opts, envs, sshkey, openrc, result_volume, docker_image)
+        log_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
+                                     dovetail_config[type]['result']['log'])
+        cmd = 'sudo docker run %s %s %s %s %s %s %s /bin/bash' % \
+            (opts, envs, sshkey, openrc, result_volume,
+             log_volume, docker_image)
         dt_utils.exec_cmd(cmd, cls.logger)
         ret, container_id = \
             dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +
