@@ -96,6 +96,19 @@ def get_obj_by_path(obj, dst_path):
             return obj
 
 
+# get the type of report_dest
+# 0: others is not supported
+# 1: push to db
+# 2: store with files
+def report_type(report_dest):
+    if report_dest.startswith('http'):
+        return 1
+    elif report_dest == 'file':
+        return 2
+    else:
+        return 0
+
+
 def show_progress_bar(length):
     max_len = 50
     length %= max_len

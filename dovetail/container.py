@@ -47,6 +47,21 @@ class Container(object):
         docker_image = cls.get_docker_image(type)
         envs = dovetail_config[type]['envs']
         opts = dovetail_config[type]['opts']
+        report = ""
+
+        if type.lower() == "functest":
+            if dt_utils.report_type(dovetail_config['report_dest']) == 1:
+                report = " -e TEST_DB_URL=%s " % dovetail_config['report_dest']
+            if dt_utils.report_type(dovetail_config['report_dest']) == 2:
+                file_path = dovetail_config['functest']['result']['dir']
+                file_name = dovetail_config['functest']['result']['file_path']
+                file_path = os.path.join(file_path, file_name)
+                report = " -e TEST_DB_URL=file://%s " % file_path
+
+        if type.lower() == "yardstick":
+            if dt_utils.report_type(dovetail_config['report_dest']) == 1:
+                cls.logger.info("Yardstick can't push results to DB.")
+                cls.logger.info("Results will be stored with files.")
 
         # credentials file openrc.sh is neccessary
         dovetail_config['openrc'] = os.path.abspath(dovetail_config['openrc'])
@@ -59,8 +74,8 @@ class Container(object):
 
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
-        cmd = 'sudo docker run %s %s %s %s %s %s /bin/bash' % \
-            (opts, envs, sshkey, openrc, result_volume, docker_image)
+        cmd = 'sudo docker run %s %s %s %s %s %s %s /bin/bash' % \
+            (opts, envs, report, sshkey, openrc, result_volume, docker_image)
         dt_utils.exec_cmd(cmd, cls.logger)
         ret, container_id = \
             dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +

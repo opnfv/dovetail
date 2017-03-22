@@ -64,8 +64,12 @@ def run_test(testsuite, testarea, logger):
             end_time = time.time()
             duration = end_time - start_time
 
-        result = Report.get_result(testcase)
-        Report.check_result(testcase, result)
+        if dt_utils.report_type(dt_cfg.dovetail_config['report_dest']) == 1:
+            logger.info("Results has been pushed to database.")
+        if dt_utils.report_type(dt_cfg.dovetail_config['report_dest']) == 2:
+            logger.info("Results has been stored with files.")
+            result = Report.get_result(testcase)
+            Report.check_result(testcase, result)
 
     return duration
 
@@ -88,6 +92,14 @@ def validate_input(input_dict, check_dict, logger):
     if sut_type is not None and sut_type not in valid_type:
         logger.error("SUT_TYPE can't be %s, valid in %s", sut_type, valid_type)
         raise SystemExit(1)
+
+    # for 'report' option
+    if input_dict['report']:
+        report_type = dt_utils.report_type(input_dict['report'])
+        if not report_type:
+            logger.error("report can't be %s", input_dict['report'])
+            logger.info("valid report is 'file' and 'http'")
+            raise SystemExit(1)
 
 
 def filter_config(input_dict, logger):
@@ -167,6 +179,9 @@ def main(*args, **kwargs):
     logger.info('Your new envs for yardstick: %s',
                 dt_cfg.dovetail_config['yardstick']['envs'])
 
+    if kwargs['report']:
+        dt_cfg.dovetail_config['report_dest'] = kwargs['report']
+
     testarea = kwargs['testarea']
     testsuite_validation = False
     testarea_validation = False
@@ -179,7 +194,8 @@ def main(*args, **kwargs):
         testsuite_yaml = load_testsuite(kwargs['testsuite'])
         load_testcase()
         duration = run_test(testsuite_yaml, testarea, logger)
-        Report.generate(testsuite_yaml, testarea, duration)
+        if dt_utils.report_type(dt_cfg.dovetail_config['report_dest']) == 2:
+            Report.generate(testsuite_yaml, testarea, duration)
     else:
         logger.error('invalid input commands, testsuite %s testarea %s',
                      kwargs['testsuite'], testarea)
