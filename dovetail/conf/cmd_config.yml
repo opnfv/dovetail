@@ -53,3 +53,8 @@ cli:
           - '-d'
         is_flag: 'True'
         help: 'Flag for showing debug log on screen.'
+      report:
+        flags:
+          - '--report'
+          - '-r'
+        help: 'push results to DB (e.g. --report http://192.168.135.2:8000/api/v1)'

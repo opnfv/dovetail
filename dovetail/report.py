@@ -287,9 +287,9 @@ class FunctestCrawler(object):
         return json_results
 
     def crawl_from_url(self, testcase=None):
-        url = \
-            dt_cfg.dovetail_config[self.type]['result']['db_url'] % \
-            testcase.validate_testcase()
+        url = "%s/results?case=%s&last=1" % \
+            (dt_cfg.dovetail_config['report_dest'],
+             testcase.validate_testcase())
         self.logger.debug("Query to rest api: %s", url)
         try:
             data = json.load(urllib2.urlopen(url))
