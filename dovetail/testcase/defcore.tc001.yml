@@ -12,7 +12,7 @@ dovetail.defcore.tc001:
       - 'echo test for precondition in testcase'
     pre_copy:
       src_file: defcore.txt
-      dest_path: /home/opnfv/repos/functest/functest/opnfv_tests/openstack/refstack_client
+      dest_path: /home/opnfv/repos/functest/functest/opnfv_tests/openstack/refstack_client/defcore.txt
     cmds:
       - 'functest env prepare'
       - 'functest testcase run refstack_defcore -r'

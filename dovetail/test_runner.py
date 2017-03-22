@@ -48,9 +48,10 @@ class DockerRunner(object):
 
         dest_path = self.testcase.pre_copy_dest_path()
         if dest_path:
-            src_path = self.testcase.mk_src_file()
-            ret, msg = Container.pre_copy(container_id, src_path, dest_path)
-
+            self.testcase.mk_src_file()
+            src_path = self.testcase.pre_copy_src_path(self.type)
+            ret, msg = Container.pre_copy(container_id, src_path,
+                                          dest_path)
         if not self.testcase.prepared():
             prepare_failed = False
             cmds = self.testcase.pre_condition()
