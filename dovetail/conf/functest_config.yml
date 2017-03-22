@@ -14,5 +14,4 @@ functest:
     dir: '/home/opnfv/functest/results'
     store_type: 'file'
     file_path: 'dump.txt'
-    tp_path: 'tempest/tempest.log'
   openrc: '/home/opnfv/functest/conf/openstack.creds'
