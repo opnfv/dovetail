@@ -123,6 +123,19 @@ def get_ext_net_name(env_file, logger=None):
     return None
 
 
+# get the type of report_dest
+# 0: any other type is not supported
+# 1: push to db
+# 2: store with files
+def report_type(report_dest):
+    if report_dest.startswith('http'):
+        return 1
+    elif report_dest == 'file':
+        return 2
+    else:
+        return 0
+
+
 def show_progress_bar(length):
     max_len = 50
     length %= max_len

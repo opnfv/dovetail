@@ -58,15 +58,24 @@ class Container(object):
 
         # This is used for showing the debug logs of the upstream projects
         envs = ' -e CI_DEBUG=true'
+        report = ""
+        log_vol = ""
 
-        # These are all just used by Functest's function push_results_to_db
         if type.lower() == "functest":
+
+            # These are all just used by Functest's function push_results_to_db
             ins_type = " -e INSTALLER_TYPE=vendor-specific"
             scenario = " -e DEPLOY_SCENARIO=default"
-            node = " -e NODE_NAME=default"
+            node = " -e NODE_NAME=master"
             tag = " -e BUILD_TAG=daily-master-001"
-
             envs = "%s %s %s %s %s" % (envs, ins_type, scenario, node, tag)
+
+            if dt_utils.report_type(dovetail_config['report_dest']) == 1:
+                report = " -e TEST_DB_URL=%s " % dovetail_config['report_dest']
+            if dt_utils.report_type(dovetail_config['report_dest']) == 2:
+                file_path = dovetail_config[type]['result']['dir']
+                file_path = file_path[0:file_path.rfind('/results')]
+                report = " -e TEST_DB_URL=file://%s " % file_path
 
         if type.lower() == "yardstick":
             ext_net = dt_utils.get_ext_net_name(dovetail_config['openrc'],
@@ -77,13 +86,18 @@ class Container(object):
                 cls.logger.error("Can't find any external network.")
                 return None
 
+            if dt_utils.report_type(dovetail_config['report_dest']) == 1:
+                cls.logger.info("Yardstick can't push results to DB.")
+                cls.logger.info("Results will be stored with files.")
+
+            log_vol = ' -v %s:%s ' % (dovetail_config['result_dir'],
+                                      dovetail_config[type]['result']['log'])
+
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
-        log_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
-                                     dovetail_config[type]['result']['log'])
-        cmd = 'sudo docker run %s %s %s %s %s %s %s /bin/bash' % \
-            (opts, envs, sshkey, openrc, result_volume,
-             log_volume, docker_image)
+        cmd = 'sudo docker run %s %s %s %s %s %s %s %s /bin/bash' % \
+            (opts, envs, report, sshkey, openrc, result_volume, log_vol,
+             docker_image)
         dt_utils.exec_cmd(cmd, cls.logger)
         ret, container_id = \
             dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +
