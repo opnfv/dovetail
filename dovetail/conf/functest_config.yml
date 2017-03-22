@@ -6,7 +6,7 @@ functest:
          -e NODE_NAME=dovetail-pod -e DEPLOY_SCENARIO=ha_nosdn
          -e BUILD_TAG=daily-dovetail-001 -e CI_DEBUG=true
          -e DEPLOY_TYPE=baremetal
-         -e RESULTS_STORE=file:///home/opnfv/functest/results/functest_result.json'
+         -e TEST_DB_URL=file:///home/opnfv/functest/results/functest_result.json'
   opts: '-id --privileged=true'
   pre_condition:
     - 'echo test for precondition in functest'
