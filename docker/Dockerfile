@@ -6,9 +6,12 @@ RUN \
     apt-get update \
 && \
     apt-get install -y \
-        python-pip \
+        gcc \
         git \
         vim \
+        python-dev \
+        python-mock \
+        python-pip \
         apt-transport-https \
         --no-install-recommends \
 && \
@@ -26,6 +29,8 @@ RUN \
     mkdir -p ${REPOS_DIR}/results \
 && \
     pip install -U pip \
+&& \
+    pip install -U pytz \
 && \
     pip install -r ${REPOS_DIR}/requirements.txt \
 && \
