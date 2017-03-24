@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_e9829551",
+        "filename": "utils/launch_db.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-03-24T08:32:41Z",
+      "side": 1,
+      "message": "This is the testapi port in container. It can not be any one except 8000.",
+      "range": {
+        "startLine": 75,
+        "startChar": 45,
+        "endLine": 75,
+        "endChar": 60
+      },
+      "revId": "dd9e6300bf0ab7706828c5dc4e17a3a484010696",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_c981d14b",
+        "filename": "utils/restart_db.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-03-24T08:32:41Z",
+      "side": 1,
+      "message": "here it can only be 8000",
+      "range": {
+        "startLine": 28,
+        "startChar": 37,
+        "endLine": 28,
+        "endChar": 51
+      },
+      "revId": "dd9e6300bf0ab7706828c5dc4e17a3a484010696",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
