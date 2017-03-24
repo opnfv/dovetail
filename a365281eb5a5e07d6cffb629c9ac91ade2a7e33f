@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_a9b6dd88",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 459
+      },
+      "writtenOn": "2017-03-24T11:30:54Z",
+      "side": 1,
+      "message": "I\u0027d like to avoid \"\\\" in the code.",
+      "revId": "a365281eb5a5e07d6cffb629c9ac91ade2a7e33f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_c9bb1171",
+        "filename": "dovetail/testcase/defcore.tc001.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 459
+      },
+      "writtenOn": "2017-03-24T11:30:54Z",
+      "side": 1,
+      "message": "is this list a duplicate of the one in functest? Does it make sense to have the same information twice?",
+      "revId": "a365281eb5a5e07d6cffb629c9ac91ade2a7e33f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
