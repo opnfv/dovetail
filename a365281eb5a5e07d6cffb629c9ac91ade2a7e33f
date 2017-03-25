@@ -33,6 +33,24 @@
       "revId": "a365281eb5a5e07d6cffb629c9ac91ade2a7e33f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_579018ec",
+        "filename": "dovetail/testcase/defcore.tc001.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-03-25T02:41:09Z",
+      "side": 1,
+      "message": "yes, there is a list in the functest. all the lists in this derectroy can be considered as the summary of the lists of dovetail . it will be easer for users to find the test cases list.",
+      "parentUuid": "9ab8dda7_c9bb1171",
+      "revId": "a365281eb5a5e07d6cffb629c9ac91ade2a7e33f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
