@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_97ce9059",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-03-25T01:01:47Z",
+      "side": 1,
+      "message": "what does security mean here? the Seurity features of the SUT? such as Identity and security communication? Can I add these following this patch?",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 9
+      },
+      "revId": "78b438881f7d39c6528d2b734f0cdddf827a9999",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
