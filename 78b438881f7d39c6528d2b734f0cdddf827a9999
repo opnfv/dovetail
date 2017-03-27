@@ -22,6 +22,47 @@
       "revId": "78b438881f7d39c6528d2b734f0cdddf827a9999",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_0c585255",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-03-27T14:11:36Z",
+      "side": 1,
+      "message": "This should cover the security items covered in the test cases and what is expected to be validated on the SUT.  (either explicitly tested or assumed)\nHappy to have some contribution here.  Should be introduction level text, with more details later in the document.",
+      "parentUuid": "9ab8dda7_97ce9059",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 9
+      },
+      "revId": "78b438881f7d39c6528d2b734f0cdddf827a9999",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_2c55161d",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-03-27T14:11:36Z",
+      "side": 1,
+      "message": "Security would potentialy be a test area addressed.  But if we lack explicit testing, we may need to address security in other ways.",
+      "revId": "78b438881f7d39c6528d2b734f0cdddf827a9999",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
