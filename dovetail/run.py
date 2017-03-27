@@ -36,7 +36,7 @@ def load_testcase():
     Testcase.load()
 
 
-def run_test(testsuite, testarea, logger):
+def run_test(testsuite, testarea, logger, offline):
     testarea_list = []
     for value in testsuite['testcases_list']:
         if value is not None and (testarea == 'full' or testarea in value):
@@ -60,7 +60,7 @@ def run_test(testsuite, testarea, logger):
 
         if run_testcase:
             start_time = time.time()
-            testcase.run()
+            testcase.run(offline)
             end_time = time.time()
             duration = end_time - start_time
 
@@ -171,6 +171,11 @@ def main(*args, **kwargs):
     if kwargs['report']:
         dt_cfg.dovetail_config['report_dest'] = kwargs['report']
 
+    if kwargs['offline']:
+        offline = True
+    else:
+        offline = False
+
     testarea = kwargs['testarea']
     testsuite_validation = False
     testarea_validation = False
@@ -182,7 +187,7 @@ def main(*args, **kwargs):
     if testsuite_validation and testarea_validation:
         testsuite_yaml = load_testsuite(kwargs['testsuite'])
         load_testcase()
-        duration = run_test(testsuite_yaml, testarea, logger)
+        duration = run_test(testsuite_yaml, testarea, logger, offline)
         if dt_cfg.dovetail_config['report_dest'] == "file":
             Report.generate(testsuite_yaml, testarea, duration)
     else:

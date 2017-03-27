@@ -128,10 +128,10 @@ class Testcase(object):
                               self.name())
         return post_condition
 
-    def run(self):
+    def run(self, offline=False):
         runner = TestRunnerFactory.create(self)
         try:
-            runner.run()
+            runner.run(offline)
         except AttributeError as e:
             self.logger.exception('testcase:%s except:%s', self.name, e)
 
