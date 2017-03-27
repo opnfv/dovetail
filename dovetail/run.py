@@ -171,6 +171,11 @@ def main(*args, **kwargs):
     if kwargs['report']:
         dt_cfg.dovetail_config['report_dest'] = kwargs['report']
 
+    if kwargs['offline']:
+        dt_cfg.dovetail_config['offline'] = True
+    else:
+        dt_cfg.dovetail_config['offline'] = False
+
     testarea = kwargs['testarea']
     testsuite_validation = False
     testarea_validation = False
