@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_f8e9f91a",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2017-03-27T06:46:22Z",
+      "side": 1,
+      "message": "is tempest_smoke_serial needed assuming that refstack is integrated\ntoo short for Danube for Functest, but I can imagine that Tempest tests will be refstack based in the future",
+      "revId": "268b8d4b14ea161afba493f1297755151dea152a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_18ef2d20",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2017-03-27T06:46:22Z",
+      "side": 1,
+      "message": "why promise here and doctor in the next section?",
+      "revId": "268b8d4b14ea161afba493f1297755151dea152a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_b8f38109",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2017-03-27T06:46:22Z",
+      "side": 1,
+      "message": "does not exist anymore \nhealthcheck corresponds to a tier integrating\n- api_check\n- connection_check\n- snaps_health_check",
+      "revId": "268b8d4b14ea161afba493f1297755151dea152a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_d8f8b5e7",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2017-03-27T06:46:22Z",
+      "side": 1,
+      "message": "dovetail only checks nosdn scenario?\nif odl I would expect to see odl tests here?",
+      "revId": "268b8d4b14ea161afba493f1297755151dea152a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
