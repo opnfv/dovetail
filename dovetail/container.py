@@ -187,6 +187,12 @@ class Container(object):
         return 0
 
     @classmethod
+    def check_image_exist(cls, validate_type):
+        docker_image = cls.get_docker_image(validate_type)
+        image_id = cls.get_image_id(docker_image)
+        return image_id
+
+    @classmethod
     def clean(cls, container_id):
         cmd1 = 'sudo docker stop %s' % (container_id)
         dt_utils.exec_cmd(cmd1, cls.logger)

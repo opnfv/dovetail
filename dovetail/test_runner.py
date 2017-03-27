@@ -28,9 +28,17 @@ class DockerRunner(object):
     def create_log(cls):
         cls.logger = dt_logger.Logger(__name__ + '.DockerRunner').getLogger()
 
-    def run(self):
-        Container.pull_image(self.testcase.validate_type())
-        container_id = Container.create(self.testcase.validate_type())
+    def run(self, offline=False):
+        if offline:
+            exist = Container.check_image_exist(self.testcase.validate_type())
+            if not exist:
+                self.logger.error('%s image not exist offline running',
+                                  self.testcase.validate_type())
+                return
+            container_id = Container.create(self.testcase.validate_type())
+        else:
+            Container.pull_image(self.testcase.validate_type())
+            container_id = Container.create(self.testcase.validate_type())
         if not container_id:
             self.logger.error('failed to create container')
             return
@@ -97,7 +105,7 @@ class ShellRunner(object):
         self.type = 'shell'
         self.logger.debug('create runner:%s', self.type)
 
-    def run(self):
+    def run(self, offline=False):
         testcase_passed = 'PASS'
         prepare_failed = False
         result = {'pass': 'PASS', 'results': []}

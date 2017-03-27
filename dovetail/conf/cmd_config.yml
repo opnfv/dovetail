@@ -58,3 +58,8 @@ cli:
           - '--report'
           - '-r'
         help: 'push results to DB (e.g. --report http://192.168.135.2:8000/api/v1)'
+      offline:
+        flags:
+          - '--offline'
+        is_flag: 'True'
+        help: 'run in offline method'
