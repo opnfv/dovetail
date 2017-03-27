@@ -29,7 +29,9 @@ class DockerRunner(object):
         cls.logger = dt_logger.Logger(__name__ + '.DockerRunner').getLogger()
 
     def run(self):
-        Container.pull_image(self.testcase.validate_type())
+        if not Container.pull_image(self.testcase.validate_type()):
+            self.logger.error("Failed to pull the image.")
+            return
         container_id = Container.create(self.testcase.validate_type())
         if not container_id:
             self.logger.error('failed to create container')
