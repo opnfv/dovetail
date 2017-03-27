@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_d8ed158d",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-03-27T08:15:19Z",
+      "side": 1,
+      "message": "yep. that\u0027s why to keep both of them here. besides, there maybe more testcase requirements beside defcore testcases, such as ipv6 lead by Bin Hu, so should think use refstack-client or tempest_smoke/serial.",
+      "parentUuid": "9ab8dda7_f8e9f91a",
+      "revId": "268b8d4b14ea161afba493f1297755151dea152a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_18ef2d20",
         "filename": "dovetail/conf/dovetail_config.yml",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2017-03-27T06:46:22Z",
       "side": 1,
       "message": "why promise here and doctor in the next section?",
+      "revId": "268b8d4b14ea161afba493f1297755151dea152a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_58f9254c",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-03-27T08:15:19Z",
+      "side": 1,
+      "message": "actually, functest_testsuite/testcase here is origianlly used for functest result parsing, since in functest result.json have different format, then may not reflect if they are suite or testcase, will change accordingly :)",
+      "parentUuid": "9ab8dda7_18ef2d20",
       "revId": "268b8d4b14ea161afba493f1297755151dea152a",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_7802e93f",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-03-27T08:15:19Z",
+      "side": 1,
+      "message": "thanks for reminding, will amend",
+      "parentUuid": "9ab8dda7_b8f38109",
+      "revId": "268b8d4b14ea161afba493f1297755151dea152a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_d8f8b5e7",
         "filename": "dovetail/conf/dovetail_config.yml",
         "patchSetId": 4
@@ -64,6 +118,24 @@
       "writtenOn": "2017-03-27T06:46:22Z",
       "side": 1,
       "message": "dovetail only checks nosdn scenario?\nif odl I would expect to see odl tests here?",
+      "revId": "268b8d4b14ea161afba493f1297755151dea152a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_38fc713e",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-03-27T08:15:19Z",
+      "side": 1,
+      "message": "good suggestion, will add more.",
+      "parentUuid": "9ab8dda7_d8f8b5e7",
       "revId": "268b8d4b14ea161afba493f1297755151dea152a",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
