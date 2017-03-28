@@ -20,8 +20,9 @@ class DockerRunner(object):
 
     logger = None
 
-    def __init__(self, testcase):
+    def __init__(self, testcase, build_tag):
         self.testcase = testcase
+        self.build_tag = build_tag
         self.logger.debug('create runner: %s', self.type)
 
     @classmethod
@@ -30,7 +31,8 @@ class DockerRunner(object):
 
     def run(self):
         Container.pull_image(self.testcase.validate_type())
-        container_id = Container.create(self.testcase.validate_type())
+        container_id = Container.create(self.testcase.validate_type(),
+                                        self.build_tag)
         if not container_id:
             self.logger.error('failed to create container')
             return
@@ -71,16 +73,16 @@ class DockerRunner(object):
 
 class FunctestRunner(DockerRunner):
 
-    def __init__(self, testcase):
+    def __init__(self, testcase, build_tag):
         self.type = 'functest'
-        super(FunctestRunner, self).__init__(testcase)
+        super(FunctestRunner, self).__init__(testcase, build_tag)
 
 
 class YardstickRunner(DockerRunner):
 
-    def __init__(self, testcase):
+    def __init__(self, testcase, build_tag):
         self.type = 'yardstick'
-        super(YardstickRunner, self).__init__(testcase)
+        super(YardstickRunner, self).__init__(testcase, build_tag)
 
 
 class ShellRunner(object):
@@ -91,10 +93,11 @@ class ShellRunner(object):
     def create_log(cls):
         cls.logger = dt_logger.Logger(__name__ + '.ShellRunner').getLogger()
 
-    def __init__(self, testcase):
+    def __init__(self, testcase, build_tag):
         super(ShellRunner, self).__init__()
         self.testcase = testcase
         self.type = 'shell'
+        self.build_tag = build_tag
         self.logger.debug('create runner:%s', self.type)
 
     def run(self):
@@ -149,8 +152,9 @@ class TestRunnerFactory(object):
     }
 
     @classmethod
-    def create(cls, testcase):
+    def create(cls, testcase, build_tag):
         try:
-            return cls.TEST_RUNNER_MAP[testcase.validate_type()](testcase)
+            return cls.TEST_RUNNER_MAP[testcase.validate_type()](testcase,
+                                                                 build_tag)
         except KeyError:
             return None

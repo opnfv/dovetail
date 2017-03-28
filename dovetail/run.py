@@ -12,6 +12,7 @@ import click
 import os
 import copy
 import time
+import uuid
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
@@ -32,8 +33,8 @@ def load_testsuite(testsuite):
     return Testsuite.get(testsuite)
 
 
-def load_testcase():
-    Testcase.load()
+def load_testcase(build_tag):
+    Testcase.load(build_tag)
 
 
 def run_test(testsuite, testarea, logger):
@@ -154,6 +155,7 @@ def clean_results_dir():
 
 def main(*args, **kwargs):
     """Dovetail compliance test entry!"""
+    build_tag = "daily-master-%s" % str(uuid.uuid4())
     clean_results_dir()
     if kwargs['debug']:
         os.environ['DEBUG'] = 'true'
@@ -162,6 +164,7 @@ def main(*args, **kwargs):
     logger.info('================================================')
     logger.info('Dovetail compliance: %s!', (kwargs['testsuite']))
     logger.info('================================================')
+    logger.info('Build tag: %s', build_tag)
     validate_input(kwargs, dt_cfg.dovetail_config['validate_input'], logger)
     configs = filter_config(kwargs, logger)
 
@@ -181,10 +184,10 @@ def main(*args, **kwargs):
         testsuite_validation = True
     if testsuite_validation and testarea_validation:
         testsuite_yaml = load_testsuite(kwargs['testsuite'])
-        load_testcase()
+        load_testcase(build_tag)
         duration = run_test(testsuite_yaml, testarea, logger)
         if dt_cfg.dovetail_config['report_dest'] == "file":
-            Report.generate(testsuite_yaml, testarea, duration)
+            Report.generate(testsuite_yaml, testarea, duration, build_tag)
     else:
         logger.error('invalid input commands, testsuite %s testarea %s',
                      kwargs['testsuite'], testarea)
