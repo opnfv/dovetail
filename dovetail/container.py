@@ -62,8 +62,7 @@ class Container(object):
         ins_type = " -e INSTALLER_TYPE=vendor-specific"
         scenario = " -e DEPLOY_SCENARIO=default"
         node = " -e NODE_NAME=master"
-        tag = " -e BUILD_TAG=daily-master-001"
-        envs = "%s %s %s %s" % (ins_type, scenario, node, tag)
+        envs = "%s %s %s" % (ins_type, scenario, node)
 
         dovetail_config = dt_cfg.dovetail_config
         if dovetail_config['report_dest'].startswith("http"):
@@ -107,8 +106,10 @@ class Container(object):
         if not openrc:
             return None
 
-        # This is used for showing the debug logs of the upstream projects
+        # CI_DEBUG is used for showing the debug logs of the upstream projects
+        # BUILD_TAG is the unique id for this test
         envs = ' -e CI_DEBUG=true'
+        envs = envs + ' -e BUILD_TAG=%s' % dovetail_config['build_tag']
 
         config = ""
         if type.lower() == "functest":
