@@ -21,12 +21,13 @@ class Testcase(object):
 
     logger = None
 
-    def __init__(self, testcase_yaml):
+    def __init__(self, testcase_yaml, build_tag):
         self.testcase = testcase_yaml.values()[0]
         self.testcase['passed'] = 'FAIL'
         self.cmds = []
         self.sub_testcase_status = {}
         self.update_validate_testcase(self.validate_testcase())
+        self.build_tag = build_tag
 
     @classmethod
     def create_log(cls):
@@ -129,7 +130,7 @@ class Testcase(object):
         return post_condition
 
     def run(self):
-        runner = TestRunnerFactory.create(self)
+        runner = TestRunnerFactory.create(self, self.build_tag)
         try:
             runner.run()
         except AttributeError as e:
@@ -193,7 +194,7 @@ class Testcase(object):
         return cls.validate_testcase_list[testcase]['acquired']
 
     @classmethod
-    def load(cls):
+    def load(cls, build_tag):
         testcase_dir = os.path.dirname(os.path.abspath(__file__))
         testcase_path = dt_cfg.dovetail_config['TESTCASE_PATH']
         abs_testcase_path = os.path.join(testcase_dir, testcase_path)
@@ -202,7 +203,8 @@ class Testcase(object):
                 with open(os.path.join(root, testcase_file)) as f:
                     testcase_yaml = yaml.safe_load(f)
                     case_type = testcase_yaml.values()[0]['validate']['type']
-                    testcase = TestcaseFactory.create(case_type, testcase_yaml)
+                    testcase = TestcaseFactory.create(case_type, testcase_yaml,
+                                                      build_tag)
                     if testcase is not None:
                         cls.testcase_list[next(testcase_yaml.iterkeys())] = \
                             testcase
@@ -221,8 +223,8 @@ class FunctestTestcase(Testcase):
 
     validate_testcase_list = {}
 
-    def __init__(self, testcase_yaml):
-        super(FunctestTestcase, self).__init__(testcase_yaml)
+    def __init__(self, testcase_yaml, build_tag):
+        super(FunctestTestcase, self).__init__(testcase_yaml, build_tag)
         self.type = 'functest'
 
 
@@ -230,8 +232,8 @@ class YardstickTestcase(Testcase):
 
     validate_testcae_list = {}
 
-    def __init__(self, testcase_yaml):
-        super(YardstickTestcase, self).__init__(testcase_yaml)
+    def __init__(self, testcase_yaml, build_tag):
+        super(YardstickTestcase, self).__init__(testcase_yaml, build_tag)
         self.type = 'yardstick'
 
 
@@ -239,8 +241,8 @@ class ShellTestcase(Testcase):
 
     validate_testcase_list = {}
 
-    def __init__(self, testcase_yaml):
-        super(ShellTestcase, self).__init__(testcase_yaml)
+    def __init__(self, testcase_yaml, build_tag):
+        super(ShellTestcase, self).__init__(testcase_yaml, build_tag)
         self.type = 'shell'
 
 
@@ -252,9 +254,10 @@ class TestcaseFactory(object):
     }
 
     @classmethod
-    def create(cls, testcase_type, testcase_yaml):
+    def create(cls, testcase_type, testcase_yaml, build_tag):
         try:
-            return cls.TESTCASE_TYPE_MAP[testcase_type](testcase_yaml)
+            return cls.TESTCASE_TYPE_MAP[testcase_type](testcase_yaml,
+                                                        build_tag)
         except KeyError:
             return None
 

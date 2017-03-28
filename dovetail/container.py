@@ -55,14 +55,14 @@ class Container(object):
 
     # set functest envs and TEST_DB_URL for creating functest container
     @staticmethod
-    def set_functest_config():
+    def set_functest_config(build_tag):
 
         # These are all just used by Functest's function push_results_to_db.
         # And has nothing to do with DoveTail running test cases.
         ins_type = " -e INSTALLER_TYPE=vendor-specific"
         scenario = " -e DEPLOY_SCENARIO=default"
         node = " -e NODE_NAME=master"
-        tag = " -e BUILD_TAG=daily-master-001"
+        tag = " -e BUILD_TAG=%s" % build_tag
         envs = "%s %s %s %s" % (ins_type, scenario, node, tag)
 
         dovetail_config = dt_cfg.dovetail_config
@@ -96,7 +96,7 @@ class Container(object):
         return "%s %s" % (envs, log_vol)
 
     @classmethod
-    def create(cls, type):
+    def create(cls, type, build_tag):
         sshkey = "-v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
         dovetail_config = dt_cfg.dovetail_config
         docker_image = cls.get_docker_image(type)
@@ -112,7 +112,7 @@ class Container(object):
 
         config = ""
         if type.lower() == "functest":
-            config = cls.set_functest_config()
+            config = cls.set_functest_config(build_tag)
         if type.lower() == "yardstick":
             config = cls.set_yardstick_config()
         if not config:
