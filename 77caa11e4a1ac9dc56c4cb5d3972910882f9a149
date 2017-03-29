@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_96dd2945",
+        "filename": "docs/testsuites/worksheet/worksheet.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-03-29T07:04:52Z",
+      "side": 1,
+      "message": "Please review http://docs.opnfv.org/en/latest/how-to-use-docs/index.html for guidelines on line lengths and structure.",
+      "revId": "77caa11e4a1ac9dc56c4cb5d3972910882f9a149",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_b6e2ad01",
+        "filename": "docs/testsuites/worksheet/worksheet.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-03-29T07:04:52Z",
+      "side": 1,
+      "message": "I suggest splitting this into a simple purpose statement with a background subheading.  The purpose of the document is not clear due to the discourse on the Board Approval of the CVP document.",
+      "revId": "77caa11e4a1ac9dc56c4cb5d3972910882f9a149",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_56e7b112",
+        "filename": "docs/testsuites/worksheet/worksheet.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-03-29T07:04:52Z",
+      "side": 1,
+      "message": "I feel we need to a process for submitting, do we have a template, who should be listed as reviewer, what to expect as a submitter etc etc...",
+      "revId": "77caa11e4a1ac9dc56c4cb5d3972910882f9a149",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_16f139cd",
+        "filename": "docs/testsuites/worksheet/worksheet.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-03-29T07:04:52Z",
+      "side": 1,
+      "message": "There should be no \"if any\" here.  According to the next section there should be results for a number of scenarios available.  This point should outline how the list of test case requirements are presented in the submission.",
+      "revId": "77caa11e4a1ac9dc56c4cb5d3972910882f9a149",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_76e4350d",
+        "filename": "docs/testsuites/worksheet/worksheet.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-03-29T07:04:52Z",
+      "side": 1,
+      "message": "I think we may have revisited and discussed being a little more strict on the mapping to scenario\u0027s.  In any case I don\u0027t believe \"at least some\" is a sufficiently concise reference to our requirement on scenario applicability.",
+      "revId": "77caa11e4a1ac9dc56c4cb5d3972910882f9a149",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
