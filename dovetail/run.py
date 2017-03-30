@@ -44,6 +44,7 @@ def run_test(testsuite, testarea, logger):
             testarea_list.append(value)
 
     duration = 0
+    start_time = time.time()
     for testcase_name in testarea_list:
         logger.info('>>[testcase]: %s', testcase_name)
         testcase = Testcase.get(testcase_name)
@@ -60,19 +61,31 @@ def run_test(testsuite, testarea, logger):
             run_testcase = False
 
         if run_testcase:
-            start_time = time.time()
             testcase.run()
-            end_time = time.time()
-            duration = end_time - start_time
 
-        if dt_cfg.dovetail_config['report_dest'].startswith("http"):
-            logger.info("Results has been pushed to database.")
-        if dt_cfg.dovetail_config['report_dest'] == "file":
-            logger.info("Results has been stored with files.")
-            result = Report.get_result(testcase)
-            Report.check_result(testcase, result)
+        check_tc_result(testcase, logger)
 
+    end_time = time.time()
+    duration = end_time - start_time
     return duration
+
+
+def check_tc_result(testcase, logger):
+    if dt_cfg.dovetail_config['report_dest'].startswith("http"):
+        if testcase.validate_type() == 'yardstick':
+            logger.info("Results have been stored with files.")
+        else:
+            if dt_utils.check_db_results(dt_cfg.dovetail_config['report_dest'],
+                                         dt_cfg.dovetail_config['build_tag'],
+                                         testcase.validate_testcase(),
+                                         logger):
+                logger.info("Results have been pushed to database.")
+            else:
+                logger.error("Fail to push results to database.")
+    if dt_cfg.dovetail_config['report_dest'] == "file":
+        logger.info("Results have been stored with files.")
+        result = Report.get_result(testcase)
+        Report.check_result(testcase, result)
 
 
 def validate_input(input_dict, check_dict, logger):
