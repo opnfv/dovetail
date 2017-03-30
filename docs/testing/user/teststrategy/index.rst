@@ -217,19 +217,45 @@ Feature test scope
 Included test areas
 -------------------
 
-This section should identify all the features areas and combinations of features that are to be tested.
-This should reference sections of test descriptions and test tooling documents to enable cross checking.
-A clear an concise description of the test areas and the purposes and content should be captured here, a
-little like an executive summary of the test case documentation.
+CVP testing for the Danube release focuses on evaluating the ability of a platform to host basic carrier
+networking related workloads.  The testing focuses on establishing the ability of the SUT to perform
+basic NFVi operations such as managing images, instatiating workload & networking these workloads in a
+secure and resiliant manner.
+
+Many OPNFV features are derived from our target upstream communities resulting in the tests focusing
+on exposing behaviour present through those development efforts.  This approach to OPNFV development
+is reflected in our CVP testing where upstream validation procedures are leveraged to validate the
+composite platform.  The OpenStack `RefStack <https://refstack.openstack.org/#/>`_ test suites are
+leveraged in OPNFV for performing VIM validation according to expected behaviour in OPNFV.
+
+OPNFV CVP testing has explicit requirements on hardware, control plane and compute topologies which
+are assumed to be in place, these are covered in the `Preparing the virtualisation infrastructure`_
+section of this document.  Tests may fail if the system is not prepared and configured in accordance
+the prpeparation guidelines.
 
 Excluded test areas
 -------------------
 
-Describe what is not tested here.  At a similar level to the above, not making excuses just being concise
-as to what is out of scope.
+The CVP testing procedure in Danube do not cover all aspects of the available OPNFV system, nor feature
+suites.  To ensure the highest quality of evaluation that provides a trustworthy foundation for industry
+compliance toward a common OPNFV standard tests and test areas are selected based on three key principals;
+maturity of the test area and framework, availability of features and capabilities across OPNFV compositions,
+relevance and value to the industry for evaluation.
+
+In the Danube release of the CVP we have elected to esbalish an evaluation suite for only the common base
+features of the platform.  Features areas that are optional or not yet mature in the platform are expluded.
+This includes a number of optinal networking features such as BGP VPN networking and Service Chaining which
+are intended to be included as optional evaluation areas in future CVP releases.
+
+The Danube release of the OPNFV CVP testing suite in addition does not attempt to provide an evaluation criteria
+for hardware.  Any hardware used in the evaluation testing must comply to the pre-resuities outlined in the
+`Preparing the virtualisation infrastructure`_ section of this document.  Although the hardware is not tested
+itself and no qualification metric has been established for the hardware in the Danube release.
 
 Test criteria and reporting
 ---------------------------
+
+https://jira.opnfv.org/browse/DOVETAIL-389
 
 This section should specify the criteria to be used to decide whether a test item has passed or failed.
 As each area may have differences it is important to ensure the user can react to a failure in accordance
@@ -243,6 +269,8 @@ tester to know if they should submit, resolve an item in their stack, or try aga
 ---------------------
 Test design and tools
 ---------------------
+
+This section needs to be done once we know the tools and areas covered by the CVP testing suites.  Parked for now.
 
 VIM NBI testing
 ---------------
@@ -277,10 +305,21 @@ This section should identify the test procedure being executed. Include all peop
 roles involved in the execution of a CVP test.  Include procedures, mailing lists, escalation, support
 and periods of waiting for results.
 
-Test reports
-============
+The general workflow I assume should be something like this:
 
-Describe the process of producing and accessing the test report.
+* Log into the CVP test case staging computer
+* Open a Browser and Log into the CVP tool.
+* Select the CVP suite to run, agree to the questions (there should be only 1 for now)
+* Run the tests (we should be able to launch this from the Web UI if they are on the hosting machine)
+* Wait for the tool to report completed.
+* Review your results, refer to trouble shooting or support as needed
+* Submit your results for CVP evaluation
+
+------------
+Test reports
+------------
+
+Describe the process of producing and accessing the test report.  This shoudl be a sub-section of CVP test execution I think.
 
 how do I connect a test suite to my account to get a report?  How do I access the report when it is ready,
 how do I identify one report from another in the toolchain?  We should go into all the details here and point
@@ -292,5 +331,4 @@ References
 
 .. _`"Pharos specification"`: https://opnfv.org/
 .. _`OPNFV Glossary`: http://docs.opnfv.org/en/latest/glossary/index.html
-
 
