@@ -14,6 +14,8 @@ import os
 import re
 import subprocess
 from collections import Mapping, Set, Sequence
+import json
+import urllib2
 
 
 def exec_log(verbose, logger, msg, level, flush=False):
@@ -121,6 +123,20 @@ def get_ext_net_name(env_file, logger=None):
     if not ret:
         return msg
     return None
+
+
+def check_db_results(db_url, build_tag, testcase, logger):
+    url = "%s/results?build_tag=%s&case=%s" % (db_url, build_tag, testcase)
+    logger.debug("Query to rest api: %s", url)
+    try:
+        data = json.load(urllib2.urlopen(url))
+        if data['results']:
+            return True
+        else:
+            return False
+    except Exception as e:
+        logger.error("Cannot read content from %s, exception: %s", url, e)
+        return False
 
 
 def show_progress_bar(length):
