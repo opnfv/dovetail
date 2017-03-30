@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_64347ade",
+        "filename": "dovetail/testcase/vimopsimage.tc001.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2017-03-30T09:39:58Z",
+      "side": 1,
+      "message": "it will take long to consider onlu 4 cases....\nwill it not be better to use tempest custom and run only the cases you need?",
+      "revId": "71a9155a5d4f3718cf23dc9012f12dca0ecc34ad",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
