@@ -13,7 +13,6 @@ import urllib2
 import re
 import os
 import datetime
-import uuid
 
 from pbr import version
 
@@ -47,7 +46,7 @@ class Report(object):
         report_obj['testsuite'] = testsuite_yaml['name']
         # TO DO: once dashboard url settled, adjust accordingly
         report_obj['dashboard'] = None
-        report_obj['validation_ID'] = str(uuid.uuid4())
+        report_obj['build_tag'] = dt_cfg.dovetail_config['build_tag']
         report_obj['upload_date'] =\
             datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
         report_obj['duration'] = duration
@@ -89,7 +88,7 @@ class Report(object):
         report_txt += 'Version: %s\n' % report_data['version']
         report_txt += 'TestSuite: %s\n' % report_data['testsuite']
         report_txt += 'Result Dashboard: %s\n' % report_data['dashboard']
-        report_txt += 'Validation ID: %s\n' % report_data['validation_ID']
+        report_txt += 'Build Tag: %s\n' % report_data['build_tag']
         report_txt += 'Upload Date: %s\n' % report_data['upload_date']
         if report_data['duration'] == 0:
             report_txt += 'Duration: %s\n\n' % 'N/A'

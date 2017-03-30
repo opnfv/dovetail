@@ -12,6 +12,7 @@ import click
 import os
 import copy
 import time
+import uuid
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
@@ -154,6 +155,8 @@ def clean_results_dir():
 
 def main(*args, **kwargs):
     """Dovetail compliance test entry!"""
+    build_tag = "daily-master-%s" % str(uuid.uuid4())
+    dt_cfg.dovetail_config['build_tag'] = build_tag
     clean_results_dir()
     if kwargs['debug']:
         os.environ['DEBUG'] = 'true'
@@ -162,6 +165,7 @@ def main(*args, **kwargs):
     logger.info('================================================')
     logger.info('Dovetail compliance: %s!', (kwargs['testsuite']))
     logger.info('================================================')
+    logger.info('Build tag: %s', dt_cfg.dovetail_config['build_tag'])
     validate_input(kwargs, dt_cfg.dovetail_config['validate_input'], logger)
     configs = filter_config(kwargs, logger)
 
