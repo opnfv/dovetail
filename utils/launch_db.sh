@@ -82,9 +82,20 @@ echo "================================="
 echo "Upload default project info to DB"
 echo "================================="
 
-# install python packages
-sudo apt-get update > /dev/null
-sudo apt-get install -y python-pip > /dev/null
+# For Ubuntu, there is file /etc/lsb-release
+# For Centos and redhat, there is file /etc/redhat-release
+if [ -f /etc/lsb-release ]; then
+    sudo apt-get update > /dev/null
+    sudo apt-get install -y python-pip > /dev/null
+elif [ -f /etc/redhat-release ]; then
+    sudo yum -y update > /dev/null
+    sudo yum -y install epel-release > /dev/null
+    sudo yum -y install python-pip > /dev/null
+else
+    echo "This operating system is not currently supported."
+    exit 1
+fi
+
 pip install requests > /dev/null
 
 echo "Init DB info..."
