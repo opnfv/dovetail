@@ -153,10 +153,17 @@ def clean_results_dir():
             raise SystemExit(1)
 
 
+def get_result_path():
+    dovetail_home = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    result_path = os.path.join(dovetail_home, 'results')
+    dt_cfg.dovetail_config['result_dir'] = result_path
+
+
 def main(*args, **kwargs):
     """Dovetail compliance test entry!"""
     build_tag = "daily-master-%s" % str(uuid.uuid4())
     dt_cfg.dovetail_config['build_tag'] = build_tag
+    get_result_path()
     clean_results_dir()
     if kwargs['debug']:
         os.environ['DEBUG'] = 'true'
