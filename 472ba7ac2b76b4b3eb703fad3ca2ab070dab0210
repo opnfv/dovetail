@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_212c2f02",
+        "filename": "dovetail/report.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-03-31T01:21:21Z",
+      "side": 1,
+      "message": "Since there may be more than one line json data in the result file, this will just get the last one.\nMaybe you can use the testcase_name as the key to choose the exact results.",
+      "range": {
+        "startLine": 274,
+        "startChar": 12,
+        "endLine": 280,
+        "endChar": 65
+      },
+      "revId": "472ba7ac2b76b4b3eb703fad3ca2ab070dab0210",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
