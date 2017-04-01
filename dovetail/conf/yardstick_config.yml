@@ -20,4 +20,4 @@ yardstick:
     log: '/tmp/yardstick'
     store_type: 'file'
     file_path: 'yardstick.log'
-  openrc: '/home/opnfv/openrc'
+  openrc: '/etc/yardstick/openstack.creds'
