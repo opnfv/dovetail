@@ -6,10 +6,6 @@ report_dest: 'file'
 # OPENSTACK Credential file
 openrc: '/home/opnfv/dovetail/openrc.sh'
 
-repo:
-  tag: tag_name
-  path: https://github.com/opnfv/dovetail/tree/
-
 COMPLIANCE_PATH: compliance/
 TESTCASE_PATH: testcase/
 # testsuite supported, should adjust accordingly
