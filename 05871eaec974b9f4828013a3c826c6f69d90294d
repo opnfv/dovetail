@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_cd8302cb",
+        "filename": "dovetail/container.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-04-01T02:45:34Z",
+      "side": 1,
+      "message": "This needs to be\n    if not src_path or not dest_path:\nBecause the src_path may be None except the empty \"\".",
+      "range": {
+        "startLine": 222,
+        "startChar": 11,
+        "endLine": 222,
+        "endChar": 45
+      },
+      "revId": "05871eaec974b9f4828013a3c826c6f69d90294d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_2d7f3ee2",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-04-01T02:45:34Z",
+      "side": 1,
+      "message": "Suggest to put this into the try...except KeyError also.",
+      "range": {
+        "startLine": 126,
+        "startChar": 25,
+        "endLine": 126,
+        "endChar": 75
+      },
+      "revId": "05871eaec974b9f4828013a3c826c6f69d90294d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
