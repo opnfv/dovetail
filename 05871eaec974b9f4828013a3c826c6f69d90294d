@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_8ddbcaec",
+        "filename": "dovetail/container.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-04-01T03:11:08Z",
+      "side": 1,
+      "message": "thx, done",
+      "parentUuid": "9ab8dda7_cd8302cb",
+      "range": {
+        "startLine": 222,
+        "startChar": 11,
+        "endLine": 222,
+        "endChar": 45
+      },
+      "revId": "05871eaec974b9f4828013a3c826c6f69d90294d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_2d7f3ee2",
         "filename": "dovetail/testcase.py",
         "patchSetId": 8
@@ -36,6 +60,30 @@
       "writtenOn": "2017-04-01T02:45:34Z",
       "side": 1,
       "message": "Suggest to put this into the try...except KeyError also.",
+      "range": {
+        "startLine": 126,
+        "startChar": 25,
+        "endLine": 126,
+        "endChar": 75
+      },
+      "revId": "05871eaec974b9f4828013a3c826c6f69d90294d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_add80ef0",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-04-01T03:11:08Z",
+      "side": 1,
+      "message": "thx , done",
+      "parentUuid": "9ab8dda7_2d7f3ee2",
       "range": {
         "startLine": 126,
         "startChar": 25,
