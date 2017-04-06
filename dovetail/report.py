@@ -19,6 +19,7 @@ from pbr import version
 import utils.dovetail_logger as dt_logger
 
 from utils.dovetail_config import DovetailConfig as dt_cfg
+import utils.dovetail_utils as dt_utils
 from testcase import Testcase
 
 
@@ -208,76 +209,62 @@ class FunctestCrawler(object):
             dt_logger.Logger(__name__ + '.FunctestCrawler').getLogger()
 
     def crawl(self, testcase=None):
-        store_type = \
-            dt_cfg.dovetail_config[self.type]['result']['store_type']
-        if store_type == 'file':
+        report_dest = dt_cfg.dovetail_config['report_dest']
+        if report_dest.lower() == 'file':
             return self.crawl_from_file(testcase)
 
-        if store_type == 'url':
+        if report_dest.lower().startswith('http'):
             return self.crawl_from_url(testcase)
 
     def crawl_from_file(self, testcase=None):
         dovetail_config = dt_cfg.dovetail_config
         criteria = 'FAIL'
+        details = {}
         timestart = 0
-        testcase_duration = 0
+        timestop = 0
+        duration = 0
         testcase_name = testcase.validate_testcase()
-        json_results = {}
+        file_path = \
+            os.path.join(dovetail_config['result_dir'],
+                         dovetail_config[self.type]['result']['file_path'])
+        if not os.path.exists(file_path):
+            self.logger.info('result file not found: %s', file_path)
+            return None
         if testcase_name in dt_cfg.dovetail_config['functest_testcase']:
-            file_path = \
-                os.path.join(dovetail_config['result_dir'],
-                             dovetail_config[self.type]['result']['file_path'])
-            if not os.path.exists(file_path):
-                self.logger.info('result file not found: %s', file_path)
-                return None
-            with open(file_path, 'r') as f:
-                for jsonfile in f:
-                    try:
-                        data = json.loads(jsonfile)
-                        if testcase_name == data['case_name']:
-                            criteria = data['details']['status']
-                            timestart = data['details']['timestart']
-                            testcase_duration = data['details']['duration']
-                    except Exception:
-                        continue
-
-            json_results = {'criteria': criteria,
-                            'details': {"timestart": timestart,
-                                        "duration": testcase_duration,
-                                        "tests": '', "failures": ''}}
+            complex_testcase = False
         elif testcase_name in dt_cfg.dovetail_config['functest_testsuite']:
-            file_path = \
-                os.path.join(dovetail_config['result_dir'],
-                             dovetail_config[self.type]['result']['file_path'])
-            if not os.path.exists(file_path):
-                self.logger.info('result file not found: %s', file_path)
-                return None
-            tests = 0
-            failed_num = 0
-            error_case = ''
-            skipped_case = ''
-            with open(file_path, 'r') as f:
-                for jsonfile in f:
-                    try:
-                        data = json.loads(jsonfile)
-                        if testcase_name == data['case_name']:
-                            criteria = data['details']['status']
-                            timestart = data['details']['timestart']
-                            testcase_duration = data['details']['duration']
+            complex_testcase = True
+        else:
+            self.logger.error("Wrong Functest test case %s.", testcase_name)
+            return None
+        with open(file_path, 'r') as f:
+            for jsonfile in f:
+                try:
+                    data = json.loads(jsonfile)
+                    if testcase_name == data['case_name']:
+                        criteria = data['criteria']
+                        timestart = data['start_date']
+                        timestop = data['stop_date']
+                        duration = dt_utils.get_duration(timestart, timestop,
+                                                         self.logger)
+                        if complex_testcase:
                             tests = data['details']['tests']
                             failed_num = data['details']['failures']
                             error_case = data['details']['errors']
                             skipped_case = data['details']['skipped']
-                    except Exception:
-                        continue
+                            details = {"tests": tests,
+                                       "failures": failed_num,
+                                       "errors": error_case,
+                                       "skipped": skipped_case}
+                except KeyError as e:
+                    self.logger.error("Key error, exception: %s", e)
+                    return None
+                except ValueError:
+                    continue
 
-            json_results = {'criteria': criteria,
-                            'details': {"timestart": timestart,
-                                        "duration": testcase_duration,
-                                        "tests": tests,
-                                        "failures": failed_num,
-                                        "errors": error_case,
-                                        "skipped": skipped_case}}
+        json_results = {'criteria': criteria, 'timestart': timestart,
+                        'timestop': timestop, 'duration': duration,
+                        'details': details}
 
         self.logger.debug('Results: %s', str(json_results))
         return json_results
@@ -310,12 +297,11 @@ class YardstickCrawler(object):
             dt_logger.Logger(__name__ + '.YardstickCrawler').getLogger()
 
     def crawl(self, testcase=None):
-        store_type = \
-            dt_cfg.dovetail_config[self.type]['result']['store_type']
-        if store_type == 'file':
+        report_dest = dt_cfg.dovetail_config['report_dest']
+        if report_dest.lower() == 'file':
             return self.crawl_from_file(testcase)
 
-        if store_type == 'url':
+        if report_dest.lower().startswith('http'):
             return self.crawl_from_url(testcase)
 
     def crawl_from_file(self, testcase=None):
@@ -389,6 +375,15 @@ class FunctestChecker(object):
         cls.logger = \
             dt_logger.Logger(__name__ + '.FunctestChecker').getLogger()
 
+    @staticmethod
+    def get_sub_testcase(sub_testcase, result):
+        reg = sub_testcase + '[\s+\d+]'
+        find_reg = re.compile(reg)
+        match = find_reg.findall(result)
+        if match:
+            return True
+        return False
+
     def check(self, testcase, db_result):
         sub_testcase_list = testcase.sub_testcase()
 
@@ -406,10 +401,13 @@ class FunctestChecker(object):
         testcase_passed = 'SKIP'
         for sub_testcase in sub_testcase_list:
             self.logger.debug('check sub_testcase:%s', sub_testcase)
-            if sub_testcase in db_result['details']['errors']:
+            if self.get_sub_testcase(sub_testcase,
+                                     db_result['details']['errors']):
                 testcase.sub_testcase_passed(sub_testcase, 'FAIL')
                 testcase_passed = 'FAIL'
-            elif sub_testcase in db_result['details']['skipped']:
+                continue
+            if self.get_sub_testcase(sub_testcase,
+                                     db_result['details']['skipped']):
                 testcase.sub_testcase_passed(sub_testcase, 'SKIP')
             else:
                 testcase.sub_testcase_passed(sub_testcase, 'PASS')

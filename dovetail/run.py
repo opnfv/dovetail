@@ -71,9 +71,14 @@ def run_test(testsuite, testarea, logger):
 
 
 def check_tc_result(testcase, logger):
+    result_dir = dt_cfg.dovetail_config['result_dir']
+    validate_type = testcase.validate_type()
+    functest_result = dt_cfg.dovetail_config['functest']['result']['file_path']
     if dt_cfg.dovetail_config['report_dest'].startswith("http"):
-        if testcase.validate_type() == 'yardstick':
-            logger.info("Results have been stored with files.")
+        if validate_type.lower() == 'yardstick':
+            logger.info("Results have been stored with file %s.",
+                        os.path.join(result_dir,
+                                     testcase.validate_testcase() + '.out'))
         else:
             if dt_utils.check_db_results(dt_cfg.dovetail_config['report_dest'],
                                          dt_cfg.dovetail_config['build_tag'],
@@ -83,9 +88,15 @@ def check_tc_result(testcase, logger):
             else:
                 logger.error("Fail to push results to database.")
     if dt_cfg.dovetail_config['report_dest'] == "file":
-        logger.info("Results have been stored with files.")
-        result = Report.get_result(testcase)
-        Report.check_result(testcase, result)
+        if validate_type.lower() == 'yardstick':
+            logger.info("Results have been stored with file %s.",
+                        os.path.join(result_dir,
+                                     testcase.validate_testcase() + '.out'))
+        if validate_type.lower() == 'functest':
+            logger.info("Results have been stored with file %s.",
+                        os.path.join(result_dir, functest_result))
+        # result = Report.get_result(testcase)
+        # Report.check_result(testcase, result)
 
 
 def validate_input(input_dict, check_dict, logger):
@@ -211,9 +222,9 @@ def main(*args, **kwargs):
     if testsuite_validation and testarea_validation:
         testsuite_yaml = load_testsuite(kwargs['testsuite'])
         load_testcase()
-        duration = run_test(testsuite_yaml, testarea, logger)
-        if dt_cfg.dovetail_config['report_dest'] == "file":
-            Report.generate(testsuite_yaml, testarea, duration)
+        run_test(testsuite_yaml, testarea, logger)
+        # if dt_cfg.dovetail_config['report_dest'] == "file":
+        #    Report.generate(testsuite_yaml, testarea, duration)
     else:
         logger.error('invalid input commands, testsuite %s testarea %s',
                      kwargs['testsuite'], testarea)
