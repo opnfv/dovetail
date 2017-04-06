@@ -18,6 +18,5 @@ yardstick:
   result:
     dir: '/home/opnfv/yardstick/results'
     log: '/tmp/yardstick'
-    store_type: 'file'
     file_path: 'yardstick.log'
   openrc: '/home/opnfv/openrc'
