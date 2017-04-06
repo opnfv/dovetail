@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_e3b9322f",
+        "filename": "dovetail/report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-04-06T09:22:44Z",
+      "side": 1,
+      "message": "can move this judgement to line 246 without introducing complex_testcase.",
+      "range": {
+        "startLine": 231,
+        "startChar": 7,
+        "endLine": 234,
+        "endChar": 35
+      },
+      "revId": "8a17d123991fddd7b5186e8d61f8ef1f60e67553",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_c3866e65",
+        "filename": "dovetail/report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-04-06T09:22:44Z",
+      "side": 1,
+      "message": "duration can be added, we need that.",
+      "range": {
+        "startLine": 243,
+        "startChar": 23,
+        "endLine": 245,
+        "endChar": 52
+      },
+      "revId": "8a17d123991fddd7b5186e8d61f8ef1f60e67553",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_a3833a55",
+        "filename": "dovetail/report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-04-06T09:22:44Z",
+      "side": 1,
+      "message": "see line 231-234.",
+      "range": {
+        "startLine": 246,
+        "startChar": 24,
+        "endLine": 246,
+        "endChar": 44
+      },
+      "revId": "8a17d123991fddd7b5186e8d61f8ef1f60e67553",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_637d426e",
+        "filename": "dovetail/report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-04-06T09:22:44Z",
+      "side": 1,
+      "message": "suggest rename to get_sub_testcase",
+      "range": {
+        "startLine": 374,
+        "startChar": 8,
+        "endLine": 374,
+        "endChar": 19
+      },
+      "revId": "8a17d123991fddd7b5186e8d61f8ef1f60e67553",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_c3ed0e27",
+        "filename": "dovetail/report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 414,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-04-06T09:22:44Z",
+      "side": 1,
+      "message": "for functest suite this is enough except refstack, in refstack there is special circumstances, see refstack.openstack.org. besides, success/skip/fail, there are aliases, should handle this.",
+      "range": {
+        "startLine": 382,
+        "startChar": 3,
+        "endLine": 414,
+        "endChar": 40
+      },
+      "revId": "8a17d123991fddd7b5186e8d61f8ef1f60e67553",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
