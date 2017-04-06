@@ -150,13 +150,14 @@ class Testcase(object):
     def mk_src_file(self):
         testcase_src_file = self.testcase['validate']['pre_copy']['src_file']
         try:
-            with open(os.path.join(dt_cfg.dovetail_config['result_dir'],
-                      testcase_src_file), 'w+') as src_file:
+            file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
+                                     testcase_src_file)
+            with open(file_path, 'w+') as src_file:
                 if self.sub_testcase() is not None:
                     for sub_test in self.sub_testcase():
-                        self.logger.info('save testcases %s', sub_test)
+                        self.logger.debug('save testcases %s', sub_test)
                         src_file.write(sub_test + '\n')
-            self.logger.info('save testcases to %s', src_file)
+            self.logger.debug('save testcases to %s', file_path)
         except Exception:
             self.logger.error('Failed to save: %s', src_file)
 
