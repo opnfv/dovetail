@@ -16,6 +16,7 @@ import subprocess
 from collections import Mapping, Set, Sequence
 import json
 import urllib2
+from datetime import datetime
 
 
 def exec_log(verbose, logger, msg, level, flush=False):
@@ -137,6 +138,18 @@ def check_db_results(db_url, build_tag, testcase, logger):
     except Exception as e:
         logger.error("Cannot read content from %s, exception: %s", url, e)
         return False
+
+
+def get_duration(start_date, stop_date):
+    fmt = '%Y-%m-%d %H:%M:%S'
+    try:
+        datetime_start = datetime.strptime(start_date, fmt)
+        datetime_stop = datetime.strptime(stop_date, fmt)
+        delta = (datetime_stop - datetime_start).seconds
+        res = "%sm%ss" % (delta / 60, delta % 60)
+        return res
+    except ValueError:
+        return None
 
 
 def show_progress_bar(length):

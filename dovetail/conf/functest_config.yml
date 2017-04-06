@@ -12,6 +12,5 @@ functest:
     - 'echo test for postcondition in functest'
   result:
     dir: '/home/opnfv/functest/results'
-    store_type: 'file'
     file_path: 'dump.txt'
   openrc: '/home/opnfv/functest/conf/openstack.creds'
