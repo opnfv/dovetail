@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_e9c83176",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-04-07T12:58:48Z",
+      "side": 1,
+      "message": "What does this \"report\" mean? A certification for the SUT or just a \"feedback\" from CVP for each test results?",
+      "range": {
+        "startLine": 322,
+        "startChar": 0,
+        "endLine": 322,
+        "endChar": 63
+      },
+      "revId": "24d83b91131f902e4114a21ecad9a3c26ca4b9db",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
