@@ -48,9 +48,14 @@ def exec_cmd(cmd, logger=None, exit_on_error=False, info=False,
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
                          stderr=subprocess.STDOUT)
     stdout = ''
+    count = 1
+    DEBUG = os.getenv('DEBUG')
     for line in iter(p.stdout.readline, b''):
         exec_log(verbose, logger, line.strip(), level, True)
         stdout += line
+        if DEBUG is None or DEBUG.lower() != "true":
+            show_progress_bar(count)
+            count += 1
     stdout = stdout.strip()
     returncode = p.wait()
     p.stdout.close()
@@ -144,5 +149,5 @@ def show_progress_bar(length):
     length %= max_len
     sys.stdout.write('Running ' + ' ' * max_len + '\r')
     sys.stdout.flush()
-    sys.stdout.write('Running ' + '=' * length + '>' + '\r')
+    sys.stdout.write('Running ' + '.' * length + '\r')
     sys.stdout.flush()
