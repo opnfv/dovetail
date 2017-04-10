@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_442124b3",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-04-10T03:37:51Z",
+      "side": 1,
+      "message": "can we write as\nas e:\nlogger.error()",
+      "range": {
+        "startLine": 151,
+        "startChar": 7,
+        "endLine": 151,
+        "endChar": 22
+      },
+      "revId": "c6cc9b3e241f3decfeb5f889e00c15cbe6a698d2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
