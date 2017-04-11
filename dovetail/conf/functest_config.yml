@@ -3,6 +3,8 @@ functest:
   image_name: opnfv/functest
   docker_tag: latest
   opts: '-id --privileged=true'
+  config:
+    dir: '/home/opnfv/userconfig'
   pre_condition:
     - 'echo test for precondition in functest'
   cmds:
