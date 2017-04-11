@@ -1,0 +1,18 @@
+---
+dovetail.defcore.tc002:
+  name: dovetail.defcore.tc002
+  objective: > # Set of DefCore tempest test cases not flagged and required. It only contains OpenStack core (no object storage)
+    # The approved guidelines (2016.08) are valid for Kilo, Liberty, Mitaka and Newton releases of OpenStack
+    # The list can be generated using the Rest API from RefStack project:
+    # https://refstack.openstack.org/api/v1/guidelines/2016.08/tests?target=compute&type=required&alias=true&flag=false
+  validate:
+    type: functest
+    testcase: refstack_defcore
+    pre_condition:
+      - 'echo test for precondition in testcase'
+    cmds:
+      - 'cd /home/opnfv/repos/refstack-client; source .venv/bin/activate; ./refstack-client test -c /home/opnfv/userconfig/tempest.conf  -v --test-list /home/opnfv/userconfig/defcore.txt'
+    post_condition:
+      - 'echo test for postcondition in testcase'
+  report:
+    sub_testcase_list:

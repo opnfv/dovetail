@@ -1,0 +1,1 @@
+{"results": [["echo pre_condition", 0, "pre_condition"], ["echo test2", 0, "test2"], ["mkdir xxx", 1, "mkdir: cannot create directory \u2018xxx\u2019: File exists"], ["echo post_condition", 0, "post_condition"]], "pass": "FAIL"}

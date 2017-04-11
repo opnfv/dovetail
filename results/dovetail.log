@@ -1,0 +1,121 @@
+2017-04-10 18:50:00,339 - run - INFO - ================================================
+2017-04-10 18:50:00,340 - run - INFO - Dovetail compliance: debug!
+2017-04-10 18:50:00,340 - run - INFO - ================================================
+2017-04-10 18:50:00,340 - run - INFO - Build tag: daily-master-6efa68ab-7fee-43f7-b128-2468f9c20d68
+2017-04-10 18:50:00,477 - run - INFO - >>[testcase]: dovetail.example.tc002
+2017-04-10 18:50:00,477 - test_runner.ShellRunner - DEBUG - create runner:shell
+2017-04-10 18:50:00,477 - test_runner.ShellRunner - DEBUG - Executing command: 'echo pre_condition'
+2017-04-10 18:50:00,480 - test_runner.ShellRunner - DEBUG - pre_condition
+2017-04-10 18:50:00,483 - parser.Parser - DEBUG - name: testcase, eval path: ('name',) 
+2017-04-10 18:50:00,484 - parser.Parser - DEBUG - name: validate_testcase, eval path: ('validate', 'testcase') 
+2017-04-10 18:50:00,484 - parser.Parser - DEBUG - kwargs: {'testcase': 'dovetail.example.tc002', 'validate_testcase': 'run shell'}
+2017-04-10 18:50:00,485 - parser.Parser - DEBUG - name: testcase, eval path: ('name',) 
+2017-04-10 18:50:00,485 - parser.Parser - DEBUG - name: validate_testcase, eval path: ('validate', 'testcase') 
+2017-04-10 18:50:00,485 - parser.Parser - DEBUG - kwargs: {'testcase': 'dovetail.example.tc002', 'validate_testcase': 'run shell'}
+2017-04-10 18:50:00,485 - testcase.Testcase - DEBUG - cmds:[u'echo test2', u'mkdir xxx']
+2017-04-10 18:50:00,485 - test_runner.ShellRunner - DEBUG - Executing command: 'echo test2'
+2017-04-10 18:50:00,489 - test_runner.ShellRunner - DEBUG - test2
+2017-04-10 18:50:00,489 - test_runner.ShellRunner - DEBUG - Executing command: 'mkdir xxx'
+2017-04-10 18:50:00,494 - test_runner.ShellRunner - DEBUG - mkdir: cannot create directory ‘xxx’: File exists
+2017-04-10 18:50:00,494 - test_runner.ShellRunner - ERROR - The command 'mkdir xxx' failed.
+2017-04-10 18:50:00,494 - test_runner.ShellRunner - DEBUG - Executing command: 'echo post_condition'
+2017-04-10 18:50:00,497 - test_runner.ShellRunner - DEBUG - post_condition
+2017-04-10 18:50:00,497 - test_runner.ShellRunner - DEBUG - save result:/root/lijun_develop/userconfig/dovetail/results/dovetail.example.tc002.out
+2017-04-10 18:50:00,497 - run - INFO - Results have been stored with files.
+2017-04-10 18:50:00,498 - report.Report - DEBUG - testcase: run shell -> result acquired
+2017-04-10 18:50:00,498 - run - INFO - >>[testcase]: dovetail.defcore.tc002
+2017-04-10 18:50:00,498 - test_runner.DockerRunner - DEBUG - create runner: functest
+2017-04-10 18:50:00,498 - container.Container - DEBUG - Executing command: 'sudo docker images -q opnfv/functest:latest'
+2017-04-10 18:50:00,700 - container.Container - DEBUG - 00cc38f4a7a3
+2017-04-10 18:50:00,704 - container.Container - DEBUG - Executing command: 'sudo docker pull opnfv/functest:latest'
+2017-04-10 18:50:04,344 - container.Container - DEBUG - latest: Pulling from opnfv/functest
+2017-04-10 18:50:04,349 - container.Container - DEBUG - Digest: sha256:3b527e09b9a7012a8f12bd6b1942da23ee80a90fd52832a9ed25bad17a24187d
+2017-04-10 18:50:04,350 - container.Container - DEBUG - Status: Image is up to date for opnfv/functest:latest
+2017-04-10 18:50:04,358 - container.Container - DEBUG - success to pull docker image opnfv/functest:latest!
+2017-04-10 18:50:04,359 - container.Container - DEBUG - Executing command: 'sudo docker images -q opnfv/functest:latest'
+2017-04-10 18:50:04,561 - container.Container - DEBUG - 00cc38f4a7a3
+2017-04-10 18:50:04,564 - container.Container - DEBUG - image opnfv/functest:latest has no changes, no need to remove.
+2017-04-10 18:50:04,565 - container.Container - DEBUG - Executing command: 'sudo docker run -id --privileged=true  -e CI_DEBUG=true -e BUILD_TAG=daily-master-6efa68ab-7fee-43f7-b128-2468f9c20d68  -e INSTALLER_TYPE=vendor-specific  -e DEPLOY_SCENARIO=default  -e NODE_NAME=master  -e TEST_DB_URL=file:///home/opnfv/functest  -v /root/.ssh/id_rsa:/root/.ssh/id_rsa   -v /root/admin-openrc.sh:/home/opnfv/functest/conf/openstack.creds   -v /root/lijun_develop/userconfig/dovetail/userconfig:/home/opnfv/userconfig   -v /root/lijun_develop/userconfig/dovetail/results:/home/opnfv/functest/results  opnfv/functest:latest /bin/bash'
+2017-04-10 18:50:04,678 - container.Container - DEBUG - 4e1115cab02d3d27ef9e318368f44534250e2d277ed03b60c856e861dc8b8e51
+2017-04-10 18:50:04,883 - container.Container - DEBUG - Executing command: 'sudo docker ps | grep opnfv/functest:latest | awk '{print $1}' | head -1'
+2017-04-10 18:50:04,918 - container.Container - DEBUG - 4e1115cab02d
+2017-04-10 18:50:04,919 - test_runner.DockerRunner - DEBUG - container id:4e1115cab02d
+2017-04-10 18:50:04,919 - container.Container - DEBUG - Executing command: 'sudo docker exec 4e1115cab02d /bin/bash -c "echo test for precondition in testcase"'
+2017-04-10 18:50:04,985 - container.Container - DEBUG - test for precondition in testcase
+2017-04-10 18:50:04,991 - parser.Parser - DEBUG - name: testcase, eval path: ('name',) 
+2017-04-10 18:50:04,991 - parser.Parser - DEBUG - name: validate_testcase, eval path: ('validate', 'testcase') 
+2017-04-10 18:50:04,992 - parser.Parser - DEBUG - kwargs: {'testcase': 'dovetail.defcore.tc002', 'validate_testcase': 'refstack_defcore'}
+2017-04-10 18:50:04,992 - testcase.Testcase - DEBUG - cmds:[u'cd /home/opnfv/repos/refstack-client; source .venv/bin/activate; ./refstack-client test -c /home/opnfv/userconfig/tempest.conf  -v --test-list /home/opnfv/userconfig/defcore.txt']
+2017-04-10 18:50:04,992 - container.Container - DEBUG - Executing command: 'sudo docker exec 4e1115cab02d /bin/bash -c "cd /home/opnfv/repos/refstack-client; source .venv/bin/activate; ./refstack-client test -c /home/opnfv/userconfig/tempest.conf  -v --test-list /home/opnfv/userconfig/defcore.txt"'
+2017-04-10 18:50:05,560 - container.Container - DEBUG - 2017-04-10 10:50:05,559 refstack_client:128 DEBUG The .testrepository/next-stream file was not found. Assuming subunit results will be stored in file 0.
+2017-04-10 18:50:05,560 - container.Container - DEBUG - 2017-04-10 10:50:05,559 refstack_client:184 WARNING Using identity section of tempest config file to specify user credentials is deprecated and won't be supported soon. User credentials should be defined in the accounts file as described in the Tempest configuration guide (http://docs.openstack.org/developer/tempest/configuration.html).
+2017-04-10 18:50:05,676 - container.Container - DEBUG - 2017-04-10 10:50:05,675 refstack_client:404 INFO Starting Tempest test...
+2017-04-10 18:50:05,676 - container.Container - DEBUG - 2017-04-10 10:50:05,676 refstack_client:414 INFO Normalizing test list...
+2017-04-10 18:50:08,082 - container.Container - DEBUG - 2017-04-10 10:50:08,081 refstack_client.list_parser:142 DEBUG Number of tests: 11
+2017-04-10 18:50:12,532 - container.Container - DEBUG - running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+2017-04-10 18:50:12,532 - container.Container - DEBUG - OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+2017-04-10 18:50:12,532 - container.Container - DEBUG - OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-500} \
+2017-04-10 18:50:12,533 - container.Container - DEBUG - OS_TEST_LOCK_PATH=${OS_TEST_LOCK_PATH:-${TMPDIR:-'/tmp'}} \
+2017-04-10 18:50:12,533 - container.Container - DEBUG - ${PYTHON:-python} -m subunit.run discover -t ${OS_TOP_LEVEL:-./} ${OS_TEST_PATH:-./tempest/test_discover}  --load-list /tmp/tmpcUpycS
+2017-04-10 18:50:45,879 - container.Container - DEBUG - {0} tempest.api.compute.images.test_images_oneserver.ImagesOneServerTestJSON.test_create_delete_image [32.953490s] ... ok
+2017-04-10 18:50:56,699 - container.Container - DEBUG - {0} tempest.api.compute.images.test_images_oneserver.ImagesOneServerTestJSON.test_create_image_specify_multibyte_character_image_name [10.819546s] ... ok
+2017-04-10 18:51:18,812 - container.Container - DEBUG - {0} tempest.api.compute.servers.test_create_server.ServersTestJSON.test_host_name_is_same_as_server_name [3.367367s] ... ok
+2017-04-10 18:51:18,878 - container.Container - DEBUG - {0} tempest.api.compute.servers.test_create_server.ServersTestJSON.test_list_servers [0.065385s] ... ok
+2017-04-10 18:51:19,068 - container.Container - DEBUG - {0} tempest.api.compute.servers.test_create_server.ServersTestJSON.test_list_servers_with_detail [0.188759s] ... ok
+2017-04-10 18:51:19,221 - container.Container - DEBUG - {0} tempest.api.compute.servers.test_create_server.ServersTestJSON.test_verify_created_server_vcpus [0.151462s] ... ok
+2017-04-10 18:51:19,223 - container.Container - DEBUG - {0} tempest.api.compute.servers.test_create_server.ServersTestJSON.test_verify_server_details [0.001587s] ... ok
+2017-04-10 18:51:43,076 - container.Container - DEBUG - {0} tempest.api.compute.servers.test_create_server.ServersTestManualDisk.test_host_name_is_same_as_server_name [3.563082s] ... ok
+2017-04-10 18:51:43,153 - container.Container - DEBUG - {0} tempest.api.compute.servers.test_create_server.ServersTestManualDisk.test_list_servers [0.076815s] ... ok
+2017-04-10 18:51:43,349 - container.Container - DEBUG - {0} tempest.api.compute.servers.test_create_server.ServersTestManualDisk.test_list_servers_with_detail [0.195840s] ... ok
+2017-04-10 18:51:43,539 - container.Container - DEBUG - {0} tempest.api.compute.servers.test_create_server.ServersTestManualDisk.test_verify_created_server_vcpus [0.189062s] ... ok
+2017-04-10 18:51:49,341 - container.Container - DEBUG - 
+2017-04-10 18:51:49,341 - container.Container - DEBUG - ======
+2017-04-10 18:51:49,342 - container.Container - DEBUG - Totals
+2017-04-10 18:51:49,342 - container.Container - DEBUG - ======
+2017-04-10 18:51:49,342 - container.Container - DEBUG - Ran: 11 tests in 98.0000 sec.
+2017-04-10 18:51:49,342 - container.Container - DEBUG - - Passed: 11
+2017-04-10 18:51:49,342 - container.Container - DEBUG - - Skipped: 0
+2017-04-10 18:51:49,343 - container.Container - DEBUG - - Expected Fail: 0
+2017-04-10 18:51:49,343 - container.Container - DEBUG - - Unexpected Success: 0
+2017-04-10 18:51:49,343 - container.Container - DEBUG - - Failed: 0
+2017-04-10 18:51:49,343 - container.Container - DEBUG - Sum of execute time for each test: 51.5724 sec.
+2017-04-10 18:51:49,343 - container.Container - DEBUG - 
+2017-04-10 18:51:49,344 - container.Container - DEBUG - ==============
+2017-04-10 18:51:49,344 - container.Container - DEBUG - Worker Balance
+2017-04-10 18:51:49,344 - container.Container - DEBUG - ==============
+2017-04-10 18:51:49,344 - container.Container - DEBUG - - Worker 0 (11 tests) => 0:01:30.626084
+2017-04-10 18:51:49,387 - container.Container - DEBUG - 2017-04-10 10:51:49,386 refstack_client:456 INFO Tempest test complete.
+2017-04-10 18:51:49,387 - container.Container - DEBUG - 2017-04-10 10:51:49,386 refstack_client:457 INFO Subunit results located in: /home/opnfv/repos/refstack-client/.tempest/.testrepository/0
+2017-04-10 18:51:49,400 - container.Container - DEBUG - 2017-04-10 10:51:49,399 refstack_client:460 INFO Number of passed tests: 11
+2017-04-10 18:51:49,401 - container.Container - DEBUG - 2017-04-10 10:51:49,400 refstack_client:472 INFO JSON results saved in: /home/opnfv/repos/refstack-client/.tempest/.testrepository/0.json
+2017-04-10 18:51:49,438 - container.Container - DEBUG - Executing command: 'sudo docker exec 4e1115cab02d /bin/bash -c "echo test for postcondition in testcase"'
+2017-04-10 18:51:49,535 - container.Container - DEBUG - test for postcondition in testcase
+2017-04-10 18:51:49,539 - container.Container - DEBUG - Executing command: 'sudo docker stop 4e1115cab02d'
+2017-04-10 18:51:59,794 - container.Container - DEBUG - 4e1115cab02d
+2017-04-10 18:51:59,798 - container.Container - DEBUG - Executing command: 'sudo docker rm 4e1115cab02d'
+2017-04-10 18:51:59,873 - container.Container - DEBUG - 4e1115cab02d
+2017-04-10 18:51:59,875 - run - INFO - Results have been stored with files.
+2017-04-10 18:51:59,876 - report.FunctestCrawler - DEBUG - create crawler:functest
+2017-04-10 18:51:59,876 - report.FunctestCrawler - INFO - result file not found: /root/lijun_develop/userconfig/dovetail/results/dump.txt
+2017-04-10 18:51:59,876 - report.Report - DEBUG - testcase: refstack_defcore -> result acquired retry:1
+2017-04-10 18:51:59,883 - report.Report - INFO - {"testsuite": "debug", "upload_date": "2017-04-10 10:51:59 UTC", "build_tag": "daily-master-6efa68ab-7fee-43f7-b128-2468f9c20d68", "version": "0.1.0", "dashboard": null, "duration": 119.40005207061768, "testcases_list": [{"objective": "VIM ipv6 operations, to create/update/delete an IPv6 network and subnet", "sub_testcase": [], "name": "dovetail.example.tc002", "result": "FAIL"}, {"objective": "# The approved guidelines (2016.08) are valid for Kilo, Liberty, Mitaka and Newton releases of OpenStack # The list can be generated using the Rest API from RefStack project: # https://refstack.openstack.org/api/v1/guidelines/2016.08/tests?target=compute&type=required&alias=true&flag=false\n", "sub_testcase": [], "name": "dovetail.defcore.tc002", "result": "FAIL"}]}
+2017-04-10 18:51:59,884 - report.Report - INFO - 
+
+Dovetail Report
+Version: 0.1.0
+TestSuite: debug
+Result Dashboard: None
+Build Tag: daily-master-6efa68ab-7fee-43f7-b128-2468f9c20d68
+Upload Date: 2017-04-10 10:51:59 UTC
+Duration: 119.40 s
+
+Pass Rate: 0.00% (0/2)
+Assessed test areas:
+-defcore results:          pass 0.00%
+-example results:          pass 0.00%
+defcore:                   pass rate 0.00%
+-dovetail.defcore.tc002    FAIL
+example:                   pass rate 0.00%
+-dovetail.example.tc002    FAIL
+
+2017-04-10 18:51:59,884 - report.Report - INFO - save report to dovetail_report.txt

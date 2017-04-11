@@ -1,0 +1,18 @@
+
+
+Dovetail Report
+Version: 0.1.0
+TestSuite: debug
+Result Dashboard: None
+Build Tag: daily-master-6efa68ab-7fee-43f7-b128-2468f9c20d68
+Upload Date: 2017-04-10 10:51:59 UTC
+Duration: 119.40 s
+
+Pass Rate: 0.00% (0/2)
+Assessed test areas:
+-defcore results:          pass 0.00%
+-example results:          pass 0.00%
+defcore:                   pass rate 0.00%
+-dovetail.defcore.tc002    FAIL
+example:                   pass rate 0.00%
+-dovetail.example.tc002    FAIL

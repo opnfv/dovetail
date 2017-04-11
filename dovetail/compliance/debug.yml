@@ -7,6 +7,7 @@ debug:
   testcases_list:
     - dovetail.example.tc002
     - dovetail.defcore.tc001
+#    - dovetail.defcore.tc002
 #    - dovetail.ipv6.tc008
 #    - dovetail.ipv6.tc009
 #    - dovetail.ipv6.tc018
