@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_0ce6eeb4",
+        "filename": "docs/testsuites/worksheet/worksheet.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-12T23:40:56Z",
+      "side": 1,
+      "message": "Done\ndirectory structure will wait for the others to clean up together.",
+      "parentUuid": "9ab8dda7_96dd2945",
+      "revId": "77caa11e4a1ac9dc56c4cb5d3972910882f9a149",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_b6e2ad01",
         "filename": "docs/testsuites/worksheet/worksheet.rst",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2017-03-29T07:04:52Z",
       "side": 1,
       "message": "I suggest splitting this into a simple purpose statement with a background subheading.  The purpose of the document is not clear due to the discourse on the Board Approval of the CVP document.",
+      "revId": "77caa11e4a1ac9dc56c4cb5d3972910882f9a149",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_2ce1729a",
+        "filename": "docs/testsuites/worksheet/worksheet.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-12T23:40:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_b6e2ad01",
       "revId": "77caa11e4a1ac9dc56c4cb5d3972910882f9a149",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_ccef7686",
+        "filename": "docs/testsuites/worksheet/worksheet.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-12T23:40:56Z",
+      "side": 1,
+      "message": "provided a process proposal, will socialize in the next few days",
+      "parentUuid": "9ab8dda7_56e7b112",
+      "revId": "77caa11e4a1ac9dc56c4cb5d3972910882f9a149",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_16f139cd",
         "filename": "docs/testsuites/worksheet/worksheet.rst",
         "patchSetId": 1
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_acec8290",
+        "filename": "docs/testsuites/worksheet/worksheet.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-12T23:40:56Z",
+      "side": 1,
+      "message": "not fully addressed yet, but i see the point. Maybe fix it once we know for sure the scenario question.",
+      "parentUuid": "9ab8dda7_16f139cd",
+      "revId": "77caa11e4a1ac9dc56c4cb5d3972910882f9a149",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_76e4350d",
         "filename": "docs/testsuites/worksheet/worksheet.rst",
         "patchSetId": 1
@@ -81,6 +153,24 @@
       "writtenOn": "2017-03-29T07:04:52Z",
       "side": 1,
       "message": "I think we may have revisited and discussed being a little more strict on the mapping to scenario\u0027s.  In any case I don\u0027t believe \"at least some\" is a sufficiently concise reference to our requirement on scenario applicability.",
+      "revId": "77caa11e4a1ac9dc56c4cb5d3972910882f9a149",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_4c038642",
+        "filename": "docs/testsuites/worksheet/worksheet.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-12T23:40:56Z",
+      "side": 1,
+      "message": "not fully addressed, but i changed the text to \"one or more\", and we can revisit the question if one or two... I personally would prefer a low bar for two reasons. First, the scenarios are not well defined yet themselves so forcing people to support more scenarios may not be reasonable in some cases. Two is, well, let\u0027s start a low bar, that (to quote some famous people) wiser people can raise it in the future.",
+      "parentUuid": "9ab8dda7_76e4350d",
       "revId": "77caa11e4a1ac9dc56c4cb5d3972910882f9a149",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
