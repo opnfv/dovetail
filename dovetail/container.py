@@ -123,10 +123,18 @@ class Container(object):
         if not config:
             return None
 
+        # for refstack, support user self_defined configuration
+        config_volume = ""
+        if type.lower() == "functest":
+            config_volume = \
+                ' -v %s:%s ' % (dovetail_config['userconfig_dir'],
+                                dovetail_config["functest"]['config']['dir'])
+
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
-        cmd = 'sudo docker run %s %s %s %s %s %s %s /bin/bash' % \
-            (opts, envs, config, sshkey, openrc, result_volume, docker_image)
+        cmd = 'sudo docker run %s %s %s %s %s %s %s %s /bin/bash' % \
+            (opts, envs, config, sshkey, openrc, config_volume,
+             result_volume, docker_image)
         dt_utils.exec_cmd(cmd, cls.logger)
         ret, container_id = \
             dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +
