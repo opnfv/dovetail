@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_d162afac",
+        "filename": "dovetail/report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-04-12T07:05:41Z",
+      "side": 1,
+      "message": "it\u0027s not appropriate to hard-code these fields which makes dovetail has strong-couple with upstream projects in code, suggest just let user check the original log of upstream projects",
+      "range": {
+        "startLine": 251,
+        "startChar": 28,
+        "endLine": 258,
+        "endChar": 63
+      },
+      "revId": "428b382aec008e6fa2bbf5b1b914162e1c6018b0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
