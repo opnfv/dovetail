@@ -16,10 +16,10 @@ In order for new test areas or new test cases in existing test areas be accepted
 Dovetail compliance test suite for CVP, they must be in scope as defined by CVP governance
 document [1], and meet requirements
 (including quality requirements) documented in the Dovetail wiki page [2].
- 
+
 In addition, the features being tested by the proposed test
-cases must be in the referenced OPNFV release (the corresponding release). 
-E.g. the current Dovetail plan is for Danube release, and in this release, Dovetail also excludes 
+cases must be in the referenced OPNFV release (the corresponding release).
+E.g. the current Dovetail plan is for Danube release, and in this release, Dovetail also excludes
 hardware-only testing due to the lack of test framework aimed at
 hardware testing at the Danube time frame.
 
@@ -35,13 +35,13 @@ This worksheet is intended as a general guide to the project contributors of the
 test cases in their researching and documenting such
 information in a questionarie format. Normally, the PTLs and committers of the
 originating OPNFV feature projects, on behalf of these projects, and in
-cooperation with the testing projects that may have helped in 
+cooperation with the testing projects that may have helped in
 developing the test cases, should be responsible for the completion of
 this worksheet to ensure the information's accuracy. The Dovetail project will
 work with the submitters to review the submitted worksheet in its weekly calls to ensure that the
 information contained in the worksheet is complete, the proposed test area
 falls in scope and in general meets test case requirement criteria in [2].
-Dovetail project may also suggest remediation steps to help ensure quality. 
+Dovetail project may also suggest remediation steps to help ensure quality.
 Once completed, the worksheet will then be
 announced in the tech-discussion mailing list as a submission to be
 incorporated into the compliance test suite and open for community inputs. The
@@ -82,7 +82,7 @@ General Test Case Information
 
 - Any other important information or comments
 
-========================================= 
+=========================================
 Specific Test Case Requirement / Criteria
 =========================================
 
@@ -98,8 +98,8 @@ All test cases must meet these criteria.
 - If a compliance test suite exists for the upstream component being tested,
   the upstream test suite should be used as a baseline. Please describe the
   baseline upstream suite.
-	- If this is not followed, or a subset is excluded or modified from the
-	  upstream, please provide justifications. An exception is required.
+        - If this is not followed, or a subset is excluded or modified from the
+          upstream, please provide justifications. An exception is required.
 
 - Test cases must be able to pass one or more OPNFV reference deployment or
   deployments, as deployed according to one or more scenarios that are in scope
@@ -117,7 +117,7 @@ All test cases must meet these criteria.
 
 - Any other important information or comments.
 
-============= 
+=============
 JIRA Tickets
 =============
 
