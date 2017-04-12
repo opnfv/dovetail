@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "9ab8dda7_0caeee85",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-12T19:02:24Z",
+      "side": 1,
+      "message": "\"Compliance Verification Program (CVP) Test Specification\".",
+      "revId": "24d83b91131f902e4114a21ecad9a3c26ca4b9db",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_a906b9cc",
         "filename": "docs/testing/user/teststrategy/index.rst",
         "patchSetId": 1
@@ -189,6 +206,57 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_ccb776d7",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-12T19:02:24Z",
+      "side": 1,
+      "message": "Maybe move this section before \"Scope\" so that these terms are defined when they are used in the scope section.",
+      "revId": "24d83b91131f902e4114a21ecad9a3c26ca4b9db",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_ecba7abf",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-12T19:02:24Z",
+      "side": 1,
+      "message": "This \"Overview\" section hangs here odd. It should be removed.",
+      "revId": "24d83b91131f902e4114a21ecad9a3c26ca4b9db",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_8cb17ee3",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-12T19:02:24Z",
+      "side": 1,
+      "message": "This entire section feels out of place - because it is sandwiched between two hands-on guides \"preparing the SUT\" and \"conducting the tests\". It can either be its own standalone document of test cases, or a separation section moved to end of the document or even appendix that documents test cases in Danube CVP 1.0.",
+      "revId": "24d83b91131f902e4114a21ecad9a3c26ca4b9db",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_69b1a1e0",
         "filename": "docs/testing/user/teststrategy/index.rst",
         "patchSetId": 1
@@ -206,6 +274,57 @@
         "endLine": 250,
         "endChar": 66
       },
+      "revId": "24d83b91131f902e4114a21ecad9a3c26ca4b9db",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_0cc58e3b",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-12T19:02:24Z",
+      "side": 1,
+      "message": "A separate section is not very convenient. The criteria can be described as each test area or test case is described.",
+      "revId": "24d83b91131f902e4114a21ecad9a3c26ca4b9db",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_6cc68a4b",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 270,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-12T19:02:24Z",
+      "side": 1,
+      "message": "This section should be together with the user guide of conducting tests. It will be more naturally to introduce the tool then guide the reader to use the tool for testing.",
+      "revId": "24d83b91131f902e4114a21ecad9a3c26ca4b9db",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_4ccb8653",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-12T19:02:24Z",
+      "side": 1,
+      "message": "I would put this section and the test preparation section together so that the procedures are logic and easy to follow.",
       "revId": "24d83b91131f902e4114a21ecad9a3c26ca4b9db",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
