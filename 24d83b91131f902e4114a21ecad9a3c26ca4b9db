@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_b1329b0e",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-04-12T11:07:41Z",
+      "side": 1,
+      "message": "In my view this is a relatively holistic view of what we are setting out to achieve within a given scope.  Later in the document we should be concise on what the user is expected to be validating.",
+      "parentUuid": "9ab8dda7_29fac9bd",
+      "range": {
+        "startLine": 76,
+        "startChar": 4,
+        "endLine": 76,
+        "endChar": 12
+      },
+      "revId": "24d83b91131f902e4114a21ecad9a3c26ca4b9db",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_c9be8dd4",
         "filename": "docs/testing/user/teststrategy/index.rst",
         "patchSetId": 1
@@ -59,6 +83,30 @@
       "writtenOn": "2017-04-07T13:54:44Z",
       "side": 1,
       "message": "Is this covered by the currently available tests? To my knowledge not...",
+      "range": {
+        "startLine": 97,
+        "startChar": 91,
+        "endLine": 98,
+        "endChar": 59
+      },
+      "revId": "24d83b91131f902e4114a21ecad9a3c26ca4b9db",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_d135cff7",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-04-12T11:07:41Z",
+      "side": 1,
+      "message": "No precicely.  As mentioned we do not validate scale as a metric rather don\u0027t expect the test cases to pass unless you have a multi-node (pharos compliant) set-up which is capable of some level of scale.  (at least 1+1)\nThe idea here is to state this is an area of interest but we don\u0027t judge you on it for Danube compliance.",
+      "parentUuid": "9ab8dda7_c9be8dd4",
       "range": {
         "startLine": 97,
         "startChar": 91,
@@ -117,6 +165,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_713c23e3",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-04-12T11:07:41Z",
+      "side": 1,
+      "message": "Referred to as the.  Both work but I think the is a little more precise than that in this context.",
+      "parentUuid": "9ab8dda7_89b895e6",
+      "range": {
+        "startLine": 109,
+        "startChar": 48,
+        "endLine": 109,
+        "endChar": 51
+      },
+      "revId": "24d83b91131f902e4114a21ecad9a3c26ca4b9db",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_69b1a1e0",
         "filename": "docs/testing/user/teststrategy/index.rst",
         "patchSetId": 1
@@ -151,6 +223,30 @@
       "writtenOn": "2017-04-07T12:58:48Z",
       "side": 1,
       "message": "What does this \"report\" mean? A certification for the SUT or just a \"feedback\" from CVP for each test results?",
+      "range": {
+        "startLine": 322,
+        "startChar": 0,
+        "endLine": 322,
+        "endChar": 63
+      },
+      "revId": "24d83b91131f902e4114a21ecad9a3c26ca4b9db",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_913f57d6",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-04-12T11:07:41Z",
+      "side": 1,
+      "message": "The test report should be a pdf document that is OPNFV branded and can potentially be used as an external reference for the results of the test run.  I expect this would be generated from the results stored in the database.",
+      "parentUuid": "9ab8dda7_e9c83176",
       "range": {
         "startLine": 322,
         "startChar": 0,
