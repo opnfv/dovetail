@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_4cb1468e",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-04-13T01:14:55Z",
+      "side": 1,
+      "message": "There is no discussion about running the test from a web UI, i wonder if this is a expectation in future?",
+      "range": {
+        "startLine": 308,
+        "startChar": 0,
+        "endLine": 316,
+        "endChar": 40
+      },
+      "revId": "b03eb89aa6bcc835d704b94e175e84031189a605",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
