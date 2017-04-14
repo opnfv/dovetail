@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_fd90e296",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-04-14T18:52:51Z",
+      "side": 1,
+      "message": "insert: c. All values measured values/data that are used to determine the pass/fail results, i.e. ping response times, network address, route table, etc.",
+      "range": {
+        "startLine": 98,
+        "startChar": 2,
+        "endLine": 98,
+        "endChar": 4
+      },
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
