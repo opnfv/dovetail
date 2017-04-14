@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_9d80c647",
+        "filename": "docs/testsuites/worksheet/worksheet.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-04-14T18:48:18Z",
+      "side": 1,
+      "message": "Change this to \"in scope for the upcoming or future Dovetail release.\"",
+      "range": {
+        "startLine": 64,
+        "startChar": 53,
+        "endLine": 64,
+        "endChar": 59
+      },
+      "revId": "84ba19dca80c4705ef4b7327170e03c5ca13e44c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3d975a92",
+        "filename": "docs/testsuites/worksheet/worksheet.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-04-14T18:48:18Z",
+      "side": 1,
+      "message": "insert, test data, results, and pass/fail criteria.",
+      "range": {
+        "startLine": 75,
+        "startChar": 16,
+        "endLine": 75,
+        "endChar": 23
+      },
+      "revId": "84ba19dca80c4705ef4b7327170e03c5ca13e44c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
