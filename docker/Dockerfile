@@ -30,8 +30,6 @@ RUN \
 && \
     pip install -U pip \
 && \
-    pip install -U pytz \
-&& \
     pip install -r ${REPOS_DIR}/requirements.txt \
 && \
     cd ${REPOS_DIR} \

@@ -1,6 +1,7 @@
-Click
+click==6.6
 Jinja2==2.8
 pbr==2.0.0
+pytz==2016.7
 PyYAML==3.11
 python-openstackclient==3.9.0
 requests==2.10.0
