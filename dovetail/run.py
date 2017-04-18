@@ -95,8 +95,8 @@ def check_tc_result(testcase, logger):
         if validate_type.lower() == 'functest':
             logger.info("Results have been stored with file %s.",
                         os.path.join(result_dir, functest_result))
-        # result = Report.get_result(testcase)
-        # Report.check_result(testcase, result)
+        result = Report.get_result(testcase)
+        Report.check_result(testcase, result)
 
 
 def validate_input(input_dict, check_dict, logger):
@@ -229,9 +229,9 @@ def main(*args, **kwargs):
     if testsuite_validation and testarea_validation:
         testsuite_yaml = load_testsuite(kwargs['testsuite'])
         load_testcase()
-        run_test(testsuite_yaml, testarea, logger)
-        # if dt_cfg.dovetail_config['report_dest'] == "file":
-        #    Report.generate(testsuite_yaml, testarea, duration)
+        duration = run_test(testsuite_yaml, testarea, logger)
+        if dt_cfg.dovetail_config['report_dest'] == "file":
+           Report.generate(testsuite_yaml, testarea, duration)
     else:
         logger.error('invalid input commands, testsuite %s testarea %s',
                      kwargs['testsuite'], testarea)
