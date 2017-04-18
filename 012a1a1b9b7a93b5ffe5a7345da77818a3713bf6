@@ -1,0 +1,8 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Dan Xu <xudan16@huawei.com>
+Code-Review+2: hongbo tian <hongbo.tianhongbo@huawei.com>
+Submitted-by: hongbo tian <hongbo.tianhongbo@huawei.com>
+Submitted-at: Tue, 18 Apr 2017 01:48:27 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/33405
+Project: dovetail
+Branch: refs/heads/master
