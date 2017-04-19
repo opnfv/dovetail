@@ -1,0 +1,10 @@
+dovetail.ha.tc012:
+  name: dovetail.ha.tc012
+  objective: > # This test case will verify the high availability for virtual ip in the environment.
+    # When master node of virtual ip is abnormally shutdown, connection to virtual ip and the
+    # services binded to the virtual IP it should be OK.
+  validate:
+    type: yardstick
+    testcase: opnfv_yardstick_tc054
+  report:
+    sub_testcase_list:

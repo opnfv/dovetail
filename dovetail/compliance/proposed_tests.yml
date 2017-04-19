@@ -2,16 +2,10 @@
 proposed_tests:
   name: proposed_tests
   testcases_list:
-    # TO DO: will adjust the dovetail tool to support in later patches
-    # run.py --name1 {**/proposed/compliance} --name2 {**/vim/ipv6,etc}
-    # vim operations
-    - dovetail.vimops.tc001
-    - dovetail.vimops.tc002
-    - dovetail.vimops.tc003
-    - dovetail.vimops.tc004
-    - dovetail.vimops.tc005
-    - dovetail.vimops.tc006
-   # ipv6
+    # defcore,defcore.tc001 used for auto-method, defcore.tc002 used for manually method
+    - dovetail.defcore.tc001
+    # - dovetail.defcore.tc002
+    # ipv6
     - dovetail.ipv6.tc001
     - dovetail.ipv6.tc002
     - dovetail.ipv6.tc003
@@ -30,7 +24,6 @@ proposed_tests:
     - dovetail.ipv6.tc016
     - dovetail.ipv6.tc017
     - dovetail.ipv6.tc018
-    - dovetail.ipv6.tc010
     - dovetail.ipv6.tc019
     - dovetail.ipv6.tc020
     - dovetail.ipv6.tc021
@@ -38,6 +31,19 @@ proposed_tests:
     - dovetail.ipv6.tc023
     - dovetail.ipv6.tc024
     - dovetail.ipv6.tc025
-    # nfvi compute/network/storage
+    # nfvi, vping_ssh, vping_userdata
     - dovetail.nfvi.tc001
     - dovetail.nfvi.tc002
+    # HA
+    - dovetail.ha.tc001
+    - dovetail.ha.tc002
+    - dovetail.ha.tc003
+    - dovetail.ha.tc004
+    - dovetail.ha.tc005
+    - dovetail.ha.tc006
+    - dovetail.ha.tc007
+    - dovetail.ha.tc008
+    - dovetail.ha.tc009
+    - dovetail.ha.tc010
+    - dovetail.ha.tc011
+    - dovetail.ha.tc012
