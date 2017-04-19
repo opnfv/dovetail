@@ -211,6 +211,8 @@ def main(*args, **kwargs):
         dt_cfg.update_config(configs)
 
     if kwargs['report']:
+        if(kwargs['report'].endswith('/')):
+            kwargs['report'] = kwargs['report'][0:kwargs['report'].rfind('/')]
         dt_cfg.dovetail_config['report_dest'] = kwargs['report']
 
     if kwargs['offline']:

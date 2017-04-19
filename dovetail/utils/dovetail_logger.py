@@ -37,22 +37,23 @@ class Logger(object):
         self.logger.propagate = 0
         self.logger.setLevel(logging.DEBUG)
 
+        result_path = dt_cfg.dovetail_config['result_dir']
+        if not os.path.exists(result_path):
+            os.makedirs(result_path)
+
         ch = logging.StreamHandler(sys.stdout)
         formatter = logging.Formatter('%(asctime)s - %(name)s - '
                                       '%(levelname)s - %(message)s')
         ch.setFormatter(formatter)
-        if DEBUG is not None and DEBUG.lower() == "true":
-            ch.setLevel(logging.DEBUG)
-        else:
-            ch.setLevel(logging.INFO)
-        self.logger.addHandler(ch)
-
-        result_path = dt_cfg.dovetail_config['result_dir']
-        if not os.path.exists(result_path):
-            os.makedirs(result_path)
         hdlr = logging.FileHandler(os.path.join(result_path, 'dovetail.log'))
         hdlr.setFormatter(formatter)
-        hdlr.setLevel(logging.DEBUG)
+        if DEBUG is not None and DEBUG.lower() == "true":
+            ch.setLevel(logging.DEBUG)
+            hdlr.setLevel(logging.DEBUG)
+        else:
+            ch.setLevel(logging.INFO)
+            hdlr.setLevel(logging.INFO)
+        self.logger.addHandler(ch)
         self.logger.addHandler(hdlr)
 
     def getLogger(self):
