@@ -22,6 +22,30 @@
       "revId": "5f3f5f347f9a8ad8c0856c3a17ecb4d2b5414ab9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_6a00a501",
+        "filename": "dovetail/compliance/proposed_tests.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-04-19T08:54:12Z",
+      "side": 1,
+      "message": "thx, will amend",
+      "parentUuid": "9ab8dda7_4716fc56",
+      "range": {
+        "startLine": 27,
+        "startChar": 6,
+        "endLine": 27,
+        "endChar": 25
+      },
+      "revId": "5f3f5f347f9a8ad8c0856c3a17ecb4d2b5414ab9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
