@@ -1,0 +1,10 @@
+---
+dovetail.ha.tc003:
+  name: dovetail.ha.tc003
+  objective: > # This test case will verify the high availability of the
+    # network service provided by OpenStack (neutro-server) on control node. 
+  validate:
+    type: yardstick
+    testcase: opnfv_yardstick_tc045
+  report:
+    sub_testcase_list:
