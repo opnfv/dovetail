@@ -1,6 +1,6 @@
-FROM ubuntu:14.04
-MAINTAINER Leo Wang <grakiss.wanglei@huawei.com>
-LABEL version="0.1" description="OPNFV Dovetail Docker Container"
+FROM aarch64/ubuntu:16.04
+MAINTAINER Armband team <armband@enea.com>
+LABEL version="0.1" description="OPNFV Dovetail AArch64 Docker Container"
 
 RUN \
     apt-get update \
@@ -27,6 +27,8 @@ RUN \
     git clone https://git.opnfv.org/dovetail ${REPOS_DIR} \
 && \
     mkdir -p ${REPOS_DIR}/results \
+&& \
+    pip install -U setuptools \
 && \
     pip install -U pip \
 && \
