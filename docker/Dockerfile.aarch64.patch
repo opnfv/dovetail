@@ -1,0 +1,23 @@
+From: Alexandru Nemes <alexandru.nemes@enea.com>
+Date: Thu, 20 Apr 2017 15:48:50 +0300
+Subject: [PATCH] Add AArch64 support for Dovetail docker file
+
+Signed-off-by: Alexandru Nemes <alexandru.nemes@enea.com>
+---
+ docker/Dockerfile | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/docker/Dockerfile b/docker/Dockerfile
+index 8cc15e0..bcc756b 100644
+--- a/docker/Dockerfile
++++ b/docker/Dockerfile
+@@ -1,6 +1,6 @@
+-FROM ubuntu:14.04
+-MAINTAINER Leo Wang <grakiss.wanglei@huawei.com>
+-LABEL version="0.1" description="OPNFV Dovetail Docker Container"
++FROM aarch64/ubuntu:14.04
++MAINTAINER Armband team <armband@enea.com>
++LABEL version="0.1" description="OPNFV Dovetail AArch64 Docker Container"
+
+ RUN \
+     apt-get update \
