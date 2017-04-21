@@ -4,7 +4,10 @@ dovetail.ipv6.tc017:
   objective: VIM ipv6 operations, to list all security groups
   validate:
     type: functest
-    testcase: tempest_smoke_serial
+    testcase: tempest_custom
+    pre_copy:
+      src_file: tempest_custom.txt
+      dest_path: /home/opnfv/repos/functest/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
     sub_testcase_list:
-      - tempest.api.network.test_security_groups.SecGroupIPv6Test.test_list_security_groups
+      - tempest.api.network.test_security_groups.SecGroupIPv6Test.test_list_security_groups[id-e30abd17-fef9-4739-8617-dc26da88e686,smoke]

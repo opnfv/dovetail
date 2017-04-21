@@ -4,7 +4,10 @@ dovetail.ipv6.tc025:
   objective: VIM ipv6 operations, to do IPv6 address assignment - dual stack, multiple prefixes, SLAAC
   validate:
     type: functest
-    testcase: tempest_full_parallel
+    testcase: tempest_custom
+    pre_copy:
+      src_file: tempest_custom.txt
+      dest_path: /home/opnfv/repos/functest/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
     sub_testcase_list:
-      - tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_multi_prefix_slaac
+      - tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_multi_prefix_slaac[compute,id-9178ad42-10e4-47e9-8987-e02b170cc5cd,network]

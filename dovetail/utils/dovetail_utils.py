@@ -49,14 +49,14 @@ def exec_cmd(cmd, logger=None, exit_on_error=False, info=False,
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
                          stderr=subprocess.STDOUT)
     stdout = ''
-    count = 1
-    DEBUG = os.getenv('DEBUG')
+    # count = 1
+    # DEBUG = os.getenv('DEBUG')
     for line in iter(p.stdout.readline, b''):
         exec_log(verbose, logger, line.strip(), level, True)
         stdout += line
-        if DEBUG is None or DEBUG.lower() != "true":
-            show_progress_bar(count)
-            count += 1
+        # if DEBUG is None or DEBUG.lower() != "true":
+        #    show_progress_bar(count)
+        #    count += 1
     stdout = stdout.strip()
     returncode = p.wait()
     p.stdout.close()
@@ -132,7 +132,7 @@ def get_ext_net_name(env_file, logger=None):
 
 
 def check_db_results(db_url, build_tag, testcase, logger):
-    url = "%s/results?build_tag=%s&case=%s" % (db_url, build_tag, testcase)
+    url = "%s/results?build_tag=%s-%s" % (db_url, build_tag, testcase)
     logger.debug("Query to rest api: %s", url)
     try:
         data = json.load(urllib2.urlopen(url))

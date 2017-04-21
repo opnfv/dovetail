@@ -39,7 +39,8 @@ class DockerRunner(object):
             if not Container.pull_image(self.testcase.validate_type()):
                 self.logger.error("Failed to pull the image.")
                 return
-        container_id = Container.create(self.testcase.validate_type())
+        container_id = Container.create(self.testcase.validate_type(),
+                                        self.testcase.name())
         if not container_id:
             self.logger.error('failed to create container')
             return

@@ -4,7 +4,10 @@ dovetail.ipv6.tc018:
   objective: VIM ipv6 operations, to show information of an IPv6 port
   validate:
     type: functest
-    testcase: tempest_full_parallel
+    testcase: tempest_custom
+    pre_copy:
+      src_file: tempest_custom.txt
+      dest_path: /home/opnfv/repos/functest/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
     sub_testcase_list:
-      - tempest.scenario.test_network_v6.TestGettingAddress.test_dhcp6_stateless_from_os
+      - tempest.scenario.test_network_v6.TestGettingAddress.test_dhcp6_stateless_from_os[compute,id-d7e1f858-187c-45a6-89c9-bdafde619a9f,network,slow]

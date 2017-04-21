@@ -4,7 +4,10 @@ dovetail.ipv6.tc019:
   objective: VIM ipv6 operations, to do IPv6 address assignment - dual stack, DHCPv6 stateless
   validate:
     type: functest
-    testcase: tempest_full_parallel
+    testcase: tempest_custom
+    pre_copy:
+      src_file: tempest_custom.txt
+      dest_path: /home/opnfv/repos/functest/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
     sub_testcase_list:
-      - tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_dhcp6_stateless_from_os
+      - tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_dhcp6_stateless_from_os[compute,id-76f26acd-9688-42b4-bc3e-cd134c4cb09e,network,slow]

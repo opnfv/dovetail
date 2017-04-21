@@ -4,7 +4,10 @@ dovetail.ipv6.tc022:
   objective: VIM ipv6 operations, to do IPv6 Address Assignment - SLAAC
   validate:
     type: functest
-    testcase: tempest_full_parallel
+    testcase: tempest_custom
+    pre_copy:
+      src_file: tempest_custom.txt
+      dest_path: /home/opnfv/repos/functest/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
     sub_testcase_list:
-      - tempest.scenario.test_network_v6.TestGettingAddress.test_slaac_from_os
+      - tempest.scenario.test_network_v6.TestGettingAddress.test_slaac_from_os[compute,id-2c92df61-29f0-4eaa-bee3-7c65bef62a43,network,slow]
