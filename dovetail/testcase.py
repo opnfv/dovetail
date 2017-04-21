@@ -159,7 +159,7 @@ class Testcase(object):
                         src_file.write(sub_test + '\n')
             self.logger.debug('save testcases to %s', file_path)
         except Exception:
-            self.logger.error('Failed to save: %s', src_file)
+            self.logger.error('Failed to save: %s', file_path)
 
         src_file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
                                      testcase_src_file)

@@ -25,6 +25,7 @@ functest_testsuite:
   - refstack_defcore
   - tempest_smoke_serial
   - tempest_full_parallel
+  - tempest_custom
   - rally_sanity
   - promise
 

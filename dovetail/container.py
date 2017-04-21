@@ -63,8 +63,8 @@ class Container(object):
 
         # These are all just used by Functest's function push_results_to_db.
         # And has nothing to do with DoveTail running test cases.
-        ins_type = " -e INSTALLER_TYPE=vendor-specific"
-        scenario = " -e DEPLOY_SCENARIO=default"
+        ins_type = " -e INSTALLER_TYPE=unknown"
+        scenario = " -e DEPLOY_SCENARIO=unknown"
         node = " -e NODE_NAME=master"
         envs = "%s %s %s" % (ins_type, scenario, node)
 
@@ -99,7 +99,7 @@ class Container(object):
         return "%s %s" % (envs, log_vol)
 
     @classmethod
-    def create(cls, type):
+    def create(cls, type, testcase_name):
         sshkey = "-v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
         dovetail_config = dt_cfg.dovetail_config
         docker_image = cls.get_docker_image(type)
@@ -113,7 +113,8 @@ class Container(object):
         # CI_DEBUG is used for showing the debug logs of the upstream projects
         # BUILD_TAG is the unique id for this test
         envs = ' -e CI_DEBUG=true'
-        envs = envs + ' -e BUILD_TAG=%s' % dovetail_config['build_tag']
+        envs = envs + ' -e BUILD_TAG=%s-%s' % (dovetail_config['build_tag'],
+                                               testcase_name)
 
         config = ""
         if type.lower() == "functest":

@@ -57,8 +57,8 @@ def run_test(testsuite, testarea, logger):
         if testcase.exceed_max_retry_times():
             run_testcase = False
 
-        if testcase.script_result_acquired():
-            run_testcase = False
+        # if testcase.script_result_acquired():
+        #    run_testcase = False
 
         if run_testcase:
             testcase.run()
@@ -82,7 +82,7 @@ def check_tc_result(testcase, logger):
         else:
             if dt_utils.check_db_results(dt_cfg.dovetail_config['report_dest'],
                                          dt_cfg.dovetail_config['build_tag'],
-                                         testcase.validate_testcase(),
+                                         testcase.name(),
                                          logger):
                 logger.info("Results have been pushed to database.")
             else:

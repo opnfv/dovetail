@@ -4,7 +4,10 @@ dovetail.ipv6.tc016:
   objective: VIM ipv6 operations, to create, delete and show security group rules
   validate:
     type: functest
-    testcase: tempest_smoke_serial
+    testcase: tempest_custom
+    pre_copy:
+      src_file: tempest_custom.txt
+      dest_path: /home/opnfv/repos/functest/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
     sub_testcase_list:
-      - tempest.api.network.test_security_groups.SecGroupIPv6Test.test_create_show_delete_security_group_rule
+      - tempest.api.network.test_security_groups.SecGroupIPv6Test.test_create_show_delete_security_group_rule[id-cfb99e0e-7410-4a3d-8a0c-959a63ee77e9,smoke]
