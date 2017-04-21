@@ -110,7 +110,12 @@ class Report(object):
         for testcase in report_data['testcases_list']:
             pattern = re.compile(
                 '|'.join(dt_cfg.dovetail_config['testarea_supported']))
-            area = pattern.findall(testcase['name'])[0]
+            area = pattern.findall(testcase['name'])
+            if not area:
+                cls.logger.error("testcase %s not in supported testarea",
+                                 testcase['name'])
+                return None
+            area = area[0]
             testarea_scope.append(area)
             sub_report[area] += '-%-25s %s\n' %\
                 (testcase['name'], testcase['result'])
@@ -178,14 +183,14 @@ class Report(object):
             cls.logger.error('crawler is None:%s', testcase.name())
             return None
 
-        if validate_testcase in cls.results[type]:
-            return cls.results[type][validate_testcase]
+        # if validate_testcase in cls.results[type]:
+        #    return cls.results[type][validate_testcase]
 
         result = crawler.crawl(testcase)
 
         if result is not None:
             cls.results[type][validate_testcase] = result
-            testcase.script_result_acquired(True)
+            # testcase.script_result_acquired(True)
             cls.logger.debug('testcase: %s -> result acquired',
                              validate_testcase)
         else:
@@ -224,6 +229,7 @@ class FunctestCrawler(object):
         timestop = 0
         duration = 0
         testcase_name = testcase.validate_testcase()
+        build_tag = '%s-%s' % (dovetail_config['build_tag'], testcase.name())
         file_path = \
             os.path.join(dovetail_config['result_dir'],
                          dovetail_config[self.type]['result']['file_path'])
@@ -241,7 +247,8 @@ class FunctestCrawler(object):
             for jsonfile in f:
                 try:
                     data = json.loads(jsonfile)
-                    if testcase_name == data['case_name']:
+                    if testcase_name == data['case_name'] and \
+                        build_tag == data['build_tag']:
                         criteria = data['criteria']
                         timestart = data['start_date']
                         timestop = data['stop_date']
@@ -270,7 +277,7 @@ class FunctestCrawler(object):
         return json_results
 
     def crawl_from_url(self, testcase=None):
-        url = "%s/results?case=%s&last=1" % \
+        url = "%s?case=%s&last=1" % \
             (dt_cfg.dovetail_config['report_dest'],
              testcase.validate_testcase())
         self.logger.debug("Query to rest api: %s", url)
@@ -377,6 +384,8 @@ class FunctestChecker(object):
 
     @staticmethod
     def get_sub_testcase(sub_testcase, result):
+        if not result:
+            return False
         reg = sub_testcase + '[\s+\d+]'
         find_reg = re.compile(reg)
         match = find_reg.findall(result)
