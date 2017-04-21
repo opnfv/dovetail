@@ -17,6 +17,7 @@ testsuite_supported:
 testarea_supported:
   - defcore
   - example
+  - ha
   - ipv6
   - nfvi
   - vimops

@@ -1,0 +1,10 @@
+---
+dovetail.ha.tc004:
+  name: dovetail.ha.tc004
+  objective: > # This test case will verify the high availability of the
+    # user service provided by OpenStack (keystone) on control node.
+  validate:
+    type: yardstick
+    testcase: opnfv_yardstick_tc046
+  report:
+    sub_testcase_list:
