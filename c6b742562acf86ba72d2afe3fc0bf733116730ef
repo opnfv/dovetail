@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_50055078",
+        "filename": "dovetail/compliance/proposed_tests.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-04-21T03:46:27Z",
+      "side": 1,
+      "message": "suggest to comment out tc002, tc003, tc004, tc005 since they are not ready now.",
+      "range": {
+        "startLine": 10,
+        "startChar": 6,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "c6b742562acf86ba72d2afe3fc0bf733116730ef",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
