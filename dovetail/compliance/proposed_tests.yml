@@ -35,15 +35,15 @@ proposed_tests:
     - dovetail.nfvi.tc001
     - dovetail.nfvi.tc002
     # HA
-    - dovetail.ha.tc001
-    - dovetail.ha.tc002
-    - dovetail.ha.tc003
-    - dovetail.ha.tc004
-    - dovetail.ha.tc005
-    - dovetail.ha.tc006
-    - dovetail.ha.tc007
-    - dovetail.ha.tc008
-    - dovetail.ha.tc009
-    - dovetail.ha.tc010
-    - dovetail.ha.tc011
-    - dovetail.ha.tc012
+    # - dovetail.ha.tc001
+    # - dovetail.ha.tc002
+    # - dovetail.ha.tc003
+    # - dovetail.ha.tc004
+    # - dovetail.ha.tc005
+    # - dovetail.ha.tc006
+    # - dovetail.ha.tc007
+    # - dovetail.ha.tc008
+    # - dovetail.ha.tc009
+    # - dovetail.ha.tc010
+    # - dovetail.ha.tc011
+    # - dovetail.ha.tc012
