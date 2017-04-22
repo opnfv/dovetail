@@ -386,7 +386,16 @@ class FunctestChecker(object):
     def get_sub_testcase(sub_testcase, result):
         if not result:
             return False
+        start = sub_testcase.find('[')
+        end = sub_testcase.find(']')
+        if start != -1 and end != -1:
+            sub_testcase = sub_testcase[0:start]
         reg = sub_testcase + '[\s+\d+]'
+        find_reg = re.compile(reg)
+        match = find_reg.findall(result)
+        if match:
+            return True
+        reg = sub_testcase + '$'
         find_reg = re.compile(reg)
         match = find_reg.findall(result)
         if match:
