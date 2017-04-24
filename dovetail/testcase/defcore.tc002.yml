@@ -11,7 +11,7 @@ dovetail.defcore.tc002:
     pre_condition:
       - 'echo test for precondition in testcase'
     cmds:
-      - 'cd /home/opnfv/repos/refstack-client; source .venv/bin/activate; ./refstack-client test -c /home/opnfv/userconfig/tempest.conf  -v --test-list /home/opnfv/userconfig/defcore.txt'
+      - 'cd /home/opnfv/repos/refstack-client; source .venv/bin/activate; ./refstack-client test -c /home/opnfv/userconfig/refstack_tempest.conf  -v --test-list /home/opnfv/userconfig/defcore.txt'
     post_condition:
       - 'echo test for postcondition in testcase'
   report:
