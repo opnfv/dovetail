@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_4de9367f",
+        "filename": "docs/testing/developer/testcaserequirements/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-04-25T13:30:50Z",
+      "side": 1,
+      "message": "Is this repetition with the later requirement that \"Tests must not require a specific NFVi platform composition or installation tool\"? This level of detail could be OK - perhaps we should add these two requirements as sub-points to the requirement below rathe than as top-level requirements here.",
+      "range": {
+        "startLine": 48,
+        "startChar": 1,
+        "endLine": 48,
+        "endChar": 78
+      },
+      "revId": "b17c15160219aaf6df2ae97dc459541b0a740ef7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_adf2326d",
+        "filename": "docs/testing/developer/testcaserequirements/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-04-25T13:30:50Z",
+      "side": 1,
+      "message": "I prefer removing mentions to specific releases from the test case requirements doc. If we need to evolve the requirements later, we can evolve them.",
+      "range": {
+        "startLine": 51,
+        "startChar": 1,
+        "endLine": 51,
+        "endChar": 22
+      },
+      "revId": "b17c15160219aaf6df2ae97dc459541b0a740ef7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
