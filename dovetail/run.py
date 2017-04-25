@@ -54,8 +54,8 @@ def run_test(testsuite, testarea, logger):
             continue
         run_testcase = True
 
-        if testcase.exceed_max_retry_times():
-            run_testcase = False
+        # if testcase.exceed_max_retry_times():
+        #    run_testcase = False
 
         # if testcase.script_result_acquired():
         #    run_testcase = False

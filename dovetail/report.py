@@ -416,16 +416,20 @@ class FunctestChecker(object):
         testcase_passed = 'SKIP'
         for sub_testcase in sub_testcase_list:
             self.logger.debug('check sub_testcase:%s', sub_testcase)
-            if self.get_sub_testcase(sub_testcase,
-                                     db_result['details']['errors']):
+            try:
+                if self.get_sub_testcase(sub_testcase,
+                                         db_result['details']['errors']):
+                    testcase.sub_testcase_passed(sub_testcase, 'FAIL')
+                    testcase_passed = 'FAIL'
+                    continue
+                if self.get_sub_testcase(sub_testcase,
+                                         db_result['details']['skipped']):
+                    testcase.sub_testcase_passed(sub_testcase, 'SKIP')
+                else:
+                    testcase.sub_testcase_passed(sub_testcase, 'PASS')
+            except KeyError:
                 testcase.sub_testcase_passed(sub_testcase, 'FAIL')
                 testcase_passed = 'FAIL'
-                continue
-            if self.get_sub_testcase(sub_testcase,
-                                     db_result['details']['skipped']):
-                testcase.sub_testcase_passed(sub_testcase, 'SKIP')
-            else:
-                testcase.sub_testcase_passed(sub_testcase, 'PASS')
 
         if testcase_passed == 'SKIP':
             for sub_testcase in sub_testcase_list:
