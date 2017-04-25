@@ -126,11 +126,14 @@ class Container(object):
             return None
 
         # for refstack, support user self_defined configuration
-        config_volume = ""
-        if type.lower() == "functest":
-            config_volume = \
-                ' -v %s:%s ' % (dovetail_config['userconfig_dir'],
-                                dovetail_config["functest"]['config']['dir'])
+        # for yardstick, support pod.yaml configuration
+        pod_file = os.path.join(dovetail_config['userconfig_dir'], 'pod.yaml')
+        if type.lower() == "yardstick" and not os.path.exists(pod_file):
+            cls.logger.error("File %s doesn't exist.", pod_file)
+            return None
+        config_volume = \
+            ' -v %s:%s ' % (dovetail_config['userconfig_dir'],
+                            dovetail_config["functest"]['config']['dir'])
 
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])

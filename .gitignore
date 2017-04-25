@@ -33,4 +33,5 @@ unittest_results.log
 *.sw?
 docs_build/
 docs_output/
-dovetail/results
+results/
+userconfig/
