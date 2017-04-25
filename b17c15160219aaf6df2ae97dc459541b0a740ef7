@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "9ab8dda7_cdfc4641",
+        "filename": "docs/testing/developer/testcaserequirements/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-04-25T13:42:40Z",
+      "side": 1,
+      "message": "Is there a particular reason to have so many empty lines when changing indent level in the list? Only the empty line before and after the list are required, empty lines in the middle ends up creating new lists.",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 0
+      },
+      "revId": "b17c15160219aaf6df2ae97dc459541b0a740ef7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_4de9367f",
         "filename": "docs/testing/developer/testcaserequirements/index.rst",
         "patchSetId": 3
