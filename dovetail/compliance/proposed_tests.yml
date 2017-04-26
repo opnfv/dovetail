@@ -34,9 +34,8 @@ proposed_tests:
     # nfvi, vping_ssh, vping_userdata
     - dovetail.nfvi.tc001
     - dovetail.nfvi.tc002
-    # HA
+    # HA, ha.tc002, ha.tc012, will kill the host and can't restart, not ready yet, skip.
     # - dovetail.ha.tc001
-    # - dovetail.ha.tc002
     # - dovetail.ha.tc003
     # - dovetail.ha.tc004
     # - dovetail.ha.tc005
@@ -46,4 +45,3 @@ proposed_tests:
     # - dovetail.ha.tc009
     # - dovetail.ha.tc010
     # - dovetail.ha.tc011
-    # - dovetail.ha.tc012
