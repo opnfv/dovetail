@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_be901696",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-04-26T15:47:51Z",
+      "side": 1,
+      "message": "Are there guidelines on versioning, copyright notices, etc for documentation?",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 15
+      },
+      "revId": "88cd09a09a73aeea082f766f9e8cd1bf1c42efcd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
