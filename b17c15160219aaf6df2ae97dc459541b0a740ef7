@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "9ab8dda7_c0496dd1",
+        "filename": "docs/testing/developer/testcaserequirements/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-26T07:47:48Z",
+      "side": 1,
+      "message": "There are some scoping language in this paragraph that may make sense for Danube release but may no longer be suitable for later iterations. I think the requirements should be more stable than a single release, so we should rewrite this section to be more general.",
+      "revId": "b17c15160219aaf6df2ae97dc459541b0a740ef7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_cdfc4641",
         "filename": "docs/testing/developer/testcaserequirements/index.rst",
         "patchSetId": 3
@@ -19,6 +36,40 @@
         "endLine": 39,
         "endChar": 0
       },
+      "revId": "b17c15160219aaf6df2ae97dc459541b0a740ef7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_a0647949",
+        "filename": "docs/testing/developer/testcaserequirements/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-26T07:47:48Z",
+      "side": 1,
+      "message": "this language is again different from what\u0027s in the wiki - i prefer we do not individually name installers except that we do not depend on how the SUT is installed or configured.",
+      "revId": "b17c15160219aaf6df2ae97dc459541b0a740ef7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_405b3d87",
+        "filename": "docs/testing/developer/testcaserequirements/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-26T07:47:48Z",
+      "side": 1,
+      "message": "unclear what components mean",
       "revId": "b17c15160219aaf6df2ae97dc459541b0a740ef7",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -65,6 +116,40 @@
         "endLine": 51,
         "endChar": 22
       },
+      "revId": "b17c15160219aaf6df2ae97dc459541b0a740ef7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_605e8178",
+        "filename": "docs/testing/developer/testcaserequirements/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-26T07:47:48Z",
+      "side": 1,
+      "message": "this is scope again, and should be in test requirement. scope can change based on iteration of cvp, the requirements should try to be more general.",
+      "revId": "b17c15160219aaf6df2ae97dc459541b0a740ef7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_c04e4dc1",
+        "filename": "docs/testing/developer/testcaserequirements/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-04-26T07:47:48Z",
+      "side": 1,
+      "message": "isn\u0027t this repeating again ?",
       "revId": "b17c15160219aaf6df2ae97dc459541b0a740ef7",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
