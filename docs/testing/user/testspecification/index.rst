@@ -9,20 +9,24 @@ Compliance and Verification program test specification
 .. toctree::
    :maxdepth: 2
 
-Version history
-===============
-
-+------------+----------+------------------+----------------------------------+
-| **Date**   | **Ver.** | **Author**       | **Comment**                      |
-|            |          |                  |                                  |
-+------------+----------+------------------+----------------------------------+
-| 2017-03-15 | 0.0.0    |                  | Blank                            |
-|            |          |                  |                                  |
-+------------+----------+------------------+----------------------------------+
-
-
 Introduction
 ============
 
-Write useful things about the test cases here.  Break each section/area out into a seperate
-RST file for manageablity and tracking.
+The OPNFV CVP provides a series or test areas aimed to evaluate the operation of an
+NFV system in accordance with carrier networking needs.  Each test area conatins a number
+of associated test cases which are descrobed in detail in the associated test specification.
+
+All tests in the CVP are required to fulfill a specific set of criteria in order that the
+CVP is able to provide a fair assesment of the system under test.  Test requierements are
+described in the 'Test Case Requierements'_ document.
+
+All tests areas addressed in the CVP are covered in the following test specification documents.
+
+  ./faultmanagement/index.rst
+  ./highavailability/index.rst
+  ./vimoperationscompute/index.rst
+  ./vimoperationsidentity/index.rst
+  ./vimoperationsimage/index.rst
+  ./vimoperationsnetwork/index.rst
+  ./vimoperationsvolume/index.rst
+
