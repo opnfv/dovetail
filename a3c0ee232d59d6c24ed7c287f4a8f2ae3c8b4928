@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "9ab8dda7_fedd2e71",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-04-26T16:01:29Z",
+      "side": 1,
+      "message": "Given that this document was written by Trevor Cooper, shouldn\u0027t this be Intel? Or, better, \"The OPNFV project\"?",
+      "range": {
+        "startLine": 3,
+        "startChar": 3,
+        "endLine": 3,
+        "endChar": 18
+      },
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_9dba066d",
         "filename": "docs/testing/developer/index.rst",
         "patchSetId": 1
@@ -18,6 +41,75 @@
         "startChar": 0,
         "endLine": 11,
         "endChar": 12
+      },
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_dee2aa2e",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-04-26T16:01:29Z",
+      "side": 1,
+      "message": "Isn\u0027t this an objective of Dovetail? Or, are you saying that this is the job of the tests, not the test tool?",
+      "range": {
+        "startLine": 57,
+        "startChar": 3,
+        "endLine": 57,
+        "endChar": 23
+      },
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_1ed92283",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-04-26T16:01:29Z",
+      "side": 1,
+      "message": "What does this mean?",
+      "range": {
+        "startLine": 59,
+        "startChar": 20,
+        "endLine": 59,
+        "endChar": 43
+      },
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_7ed13e56",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-04-26T16:01:29Z",
+      "side": 1,
+      "message": "Is there a document to refer to for people running tests to know what this means? Does the footnote link describe this? If so, can in be cross-referenced or linked here?",
+      "range": {
+        "startLine": 68,
+        "startChar": 37,
+        "endLine": 68,
+        "endChar": 61
       },
       "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
