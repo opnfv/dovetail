@@ -1,0 +1,81 @@
+.. This work is licensed under a Creative Commons Attribution 4.0 International License.
+.. http://creativecommons.org/licenses/by/4.0
+.. (c) Ericsson AB
+
+=========================================
+VIM network operations test specification
+=========================================
+
+.. toctree::
+   :maxdepth: 2
+
+Each test case requires documentation according to:
+* Use case specification
+* Test preconditions
+* Basic test flow execution descriptor
+* Post conditions and pass fail criteria
+
+tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_all_attributes
+tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_allocation_pools
+tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_dhcp_enabled
+tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_gw
+tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_gw_and_allocation_pools
+tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_host_routes_and_dns_nameservers
+tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_without_gateway
+tempest.api.network.test_networks.NetworksTest.test_create_update_delete_network_subnet
+tempest.api.network.test_networks.NetworksTest.test_delete_network_with_subnet
+tempest.api.network.test_networks.NetworksTest.test_list_networks
+tempest.api.network.test_networks.NetworksTest.test_list_networks_fields
+tempest.api.network.test_networks.NetworksTest.test_list_subnets
+tempest.api.network.test_networks.NetworksTest.test_list_subnets_fields
+tempest.api.network.test_networks.NetworksTest.test_show_network
+tempest.api.network.test_networks.NetworksTest.test_show_network_fields
+tempest.api.network.test_networks.NetworksTest.test_show_subnet
+tempest.api.network.test_networks.NetworksTest.test_show_subnet_fields
+tempest.api.network.test_networks.NetworksTest.test_update_subnet_gw_dns_host_routes_dhcp
+tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_all_attributes
+tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_allocation_pools
+tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_dhcp_enabled
+tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_gw
+tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_gw_and_allocation_pools
+tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_host_routes_and_dns_nameservers
+tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_without_gateway
+tempest.api.network.test_networks.NetworksTestJSON.test_create_update_delete_network_subnet
+tempest.api.network.test_networks.NetworksTestJSON.test_delete_network_with_subnet
+tempest.api.network.test_networks.NetworksTestJSON.test_list_networks
+tempest.api.network.test_networks.NetworksTestJSON.test_list_networks_fields
+tempest.api.network.test_networks.NetworksTestJSON.test_list_subnets
+tempest.api.network.test_networks.NetworksTestJSON.test_list_subnets_fields
+tempest.api.network.test_networks.NetworksTestJSON.test_show_network
+tempest.api.network.test_networks.NetworksTestJSON.test_show_network_fields
+tempest.api.network.test_networks.NetworksTestJSON.test_show_subnet
+tempest.api.network.test_networks.NetworksTestJSON.test_show_subnet_fields
+tempest.api.network.test_networks.NetworksTestJSON.test_update_subnet_gw_dns_host_routes_dhcp
+tempest.api.network.test_ports.PortsTestJSON.test_create_bulk_port
+tempest.api.network.test_ports.PortsTestJSON.test_create_port_in_allowed_allocation_pools
+tempest.api.network.test_ports.PortsTestJSON.test_create_update_delete_port
+tempest.api.network.test_ports.PortsTestJSON.test_list_ports
+tempest.api.network.test_ports.PortsTestJSON.test_list_ports_fields
+tempest.api.network.test_ports.PortsTestJSON.test_show_port
+tempest.api.network.test_ports.PortsTestJSON.test_show_port_fields
+tempest.api.network.test_ports.PortsTestJSON.test_update_port_with_security_group_and_extra_attributes
+tempest.api.network.test_ports.PortsTestJSON.test_update_port_with_two_security_groups_and_extra_attributes
+tempest.api.network.test_security_groups.SecGroupTest.test_create_list_update_show_delete_security_group
+tempest.api.network.test_security_groups.SecGroupTest.test_create_security_group_rule_with_additional_args
+tempest.api.network.test_security_groups.SecGroupTest.test_create_security_group_rule_with_icmp_type_code
+tempest.api.network.test_security_groups.SecGroupTest.test_create_security_group_rule_with_protocol_integer_value
+tempest.api.network.test_security_groups.SecGroupTest.test_create_security_group_rule_with_remote_group_id
+tempest.api.network.test_security_groups.SecGroupTest.test_create_security_group_rule_with_remote_ip_prefix
+tempest.api.network.test_security_groups.SecGroupTest.test_create_show_delete_security_group_rule
+tempest.api.network.test_security_groups.SecGroupTest.test_list_security_groups
+tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_additional_default_security_group_fails
+tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_duplicate_security_group_rule_fails
+tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_security_group_rule_with_bad_ethertype
+tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_security_group_rule_with_bad_protocol
+tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_security_group_rule_with_bad_remote_ip_prefix
+tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_security_group_rule_with_invalid_ports
+tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_security_group_rule_with_non_existent_remote_groupid
+tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_security_group_rule_with_non_existent_security_group
+tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_delete_non_existent_security_group
+tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_show_non_existent_security_group
+tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_show_non_existent_security_group_rule
