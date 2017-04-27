@@ -23,4 +23,5 @@ yardstick:
     dir: '/home/opnfv/yardstick/results'
     log: '/tmp/yardstick'
     file_path: 'yardstick.log'
+    key_path: '/root/.ssh/id_rsa'
   openrc: '/etc/yardstick/openstack.creds'

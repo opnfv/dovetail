@@ -76,7 +76,8 @@ class Container(object):
             file_path = os.path.join(func_res_conf['dir'],
                                      func_res_conf['file_path'])
             report = " -e TEST_DB_URL=file://%s " % file_path
-        return "%s %s" % (envs, report)
+        key_vol = " -v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
+        return "%s %s %s" % (envs, report, key_vol)
 
     # set yardstick external network name and log volume for its container.
     # external network is necessary for yardstick.
@@ -97,11 +98,13 @@ class Container(object):
 
         log_vol = '-v %s:%s ' % (dovetail_config['result_dir'],
                                  dovetail_config["yardstick"]['result']['log'])
-        return "%s %s" % (envs, log_vol)
+        key_path = os.path.join(dovetail_config['userconfig_dir'], 'id_rsa')
+        key_con_path = dovetail_config["yardstick"]['result']['key_path']
+        key_vol = '-v %s:%s ' % (key_path, key_con_path)
+        return "%s %s %s" % (envs, log_vol, key_vol)
 
     @classmethod
     def create(cls, type, testcase_name):
-        sshkey = "-v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
         dovetail_config = dt_cfg.dovetail_config
         docker_image = cls.get_docker_image(type)
         opts = dovetail_config[type]['opts']
@@ -131,14 +134,18 @@ class Container(object):
         if type.lower() == "yardstick" and not os.path.exists(pod_file):
             cls.logger.error("File %s doesn't exist.", pod_file)
             return None
+        key_file = os.path.join(dovetail_config['userconfig_dir'], 'id_rsa')
+        if type.lower() == "yardstick" and not os.path.exists(key_file):
+            cls.logger.debug("File %s doesn't exist.", key_file)
+            cls.logger.debug("Can just use password in %s.", pod_file)
         config_volume = \
             ' -v %s:%s ' % (dovetail_config['userconfig_dir'],
                             dovetail_config["functest"]['config']['dir'])
 
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
-        cmd = 'sudo docker run %s %s %s %s %s %s %s %s /bin/bash' % \
-            (opts, envs, config, sshkey, openrc, config_volume,
+        cmd = 'sudo docker run %s %s %s %s %s %s %s /bin/bash' % \
+            (opts, envs, config, openrc, config_volume,
              result_volume, docker_image)
         dt_utils.exec_cmd(cmd, cls.logger)
         ret, container_id = \
