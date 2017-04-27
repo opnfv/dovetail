@@ -9,11 +9,31 @@ VIM compute operations test specification
 .. toctree::
    :maxdepth: 2
 
-Each test case requires documentation according to:
-* Use case specification
-* Test preconditions
-* Basic test flow execution descriptor
-* Post conditions and pass fail criteria
+Scope
+=====
+
+References
+================
+
+
+Definitions and abbreviations
+=============================
+
+
+Use case description
+====================
+
+
+System Under Test (SUT)
+=======================
+
+
+Test Suite Structure
+====================
+
+
+Test Descriptions
+=================
 
 tempest.api.compute.servers.test_create_server.ServersTestJSON.test_host_name_is_same_as_server_name
 tempest.api.compute.servers.test_create_server.ServersTestJSON.test_list_servers
