@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_4f804646",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-04-28T07:14:42Z",
+      "side": 1,
+      "message": "1. should point out is based on what, such as https://refstack.openstack.org/api/v1/guidelines/2016.08/tests?type\u003drequired\u0026alias\u003dtrue\u0026flag\u003dfalse , as you know, 2016.08 and 2017.01 is different, also the other limitations.\n\n2. testcases written in .rst files, cannot be acquired from code, so have to keep another copy in codes, maybe can transfer the format to json or sth.",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 24
+      },
+      "revId": "f7526beb09370846ec8ab8500353e66b21020361",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_2f7dd26e",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-04-28T07:14:42Z",
+      "side": 1,
+      "message": "these is not run functest yet. see https://git.opnfv.org/functest/tree/functest/opnfv_tests/openstack/refstack_client/defcore.txt . I guess these are according to https://refstack.openstack.org/api/v1/guidelines/2016.08/tests?type\u003drequired\u0026alias\u003dtrue\u0026flag\u003dfalse without limitation of \"target\u003dcompute\"",
+      "range": {
+        "startLine": 303,
+        "startChar": 0,
+        "endLine": 315,
+        "endChar": 85
+      },
+      "revId": "f7526beb09370846ec8ab8500353e66b21020361",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
