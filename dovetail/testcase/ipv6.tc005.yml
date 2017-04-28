@@ -12,5 +12,5 @@ dovetail.ipv6.tc005:
     sub_testcase_list:
       - tempest.api.network.test_networks.NetworksIpV6Test.test_show_network[id-2bf13842-c93f-4a69-83ed-717d2ec3b44e,smoke]
       - tempest.api.network.test_networks.NetworksIpV6Test.test_show_subnet[id-bd635d81-6030-4dd1-b3b9-31ba0cfdf6cc,smoke]
-      - tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_show_network
-      - tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_show_subnet
+      - tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_show_network[id-2bf13842-c93f-4a69-83ed-717d2ec3b44e,smoke]
+      - tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_show_subnet[id-bd635d81-6030-4dd1-b3b9-31ba0cfdf6cc,smoke]

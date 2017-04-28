@@ -11,5 +11,5 @@ dovetail.ipv6.tc002:
   report:
     sub_testcase_list:
       - tempest.api.network.test_networks.NetworksIpV6Test.test_create_update_delete_network_subnet[id-0e269138-0da6-4efc-a46d-578161e7b221,smoke]
-      - tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_create_update_delete_network_subnet
+      - tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_create_update_delete_network_subnet[id-0e269138-0da6-4efc-a46d-578161e7b221,smoke]
 
