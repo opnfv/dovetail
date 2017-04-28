@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_6f050a79",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-04-28T11:57:06Z",
+      "side": 1,
+      "message": "1. good point. This is currently a draft. I will include additional information.\n\n2. You have a good point here. The purpose of this document is to establish a process for defining an approved scope of the test suite: The community shall review and comment on these test cases and select an appropriate set for the OPNFV certification test suite. The committers shall approve the selected set of test cases by voting on this patchset.\n\nWe could have also voted on the yamls which are already in the repo, but they did undergo a detailed review process to my knowledge. Having said that, I think it makes a lot of sense to align both.",
+      "parentUuid": "9ab8dda7_4f804646",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 24
+      },
+      "revId": "f7526beb09370846ec8ab8500353e66b21020361",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_2f7dd26e",
         "filename": "docs/testing/developer/testscope/index.rst",
         "patchSetId": 2
