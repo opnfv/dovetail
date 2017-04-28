@@ -22,6 +22,30 @@
       "revId": "040cc2d507d09e6672be96b89795652222ea980c",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_efd1fafb",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-04-28T11:36:22Z",
+      "side": 1,
+      "message": "Resolved in the next pach - import and export route targets",
+      "parentUuid": "9ab8dda7_34a0c742",
+      "range": {
+        "startLine": 85,
+        "startChar": 19,
+        "endLine": 85,
+        "endChar": 27
+      },
+      "revId": "040cc2d507d09e6672be96b89795652222ea980c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
