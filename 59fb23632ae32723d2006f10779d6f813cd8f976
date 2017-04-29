@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_cf8e76d0",
+        "filename": "dovetail/testcase/ipv6.tc002.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-04-29T01:55:17Z",
+      "side": 1,
+      "message": "a little confused. these two test cases id is the same? for tempest test case the id should be unique. searched in https://github.com/openstack/tempest/blob/15.0.0/tempest/api/network/test_networks.py, it seems not have .NetworksIpV6TestAttrs.test_create_update_delete_network_subnet, can look at line 586 .NetworksIpV6TestAttrs.test_create_update_delete_network_subnet\n\nalso the next 3 files. tc003, tc004, tc005.",
+      "range": {
+        "startLine": 13,
+        "startChar": 42,
+        "endLine": 14,
+        "endChar": 151
+      },
+      "revId": "59fb23632ae32723d2006f10779d6f813cd8f976",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
