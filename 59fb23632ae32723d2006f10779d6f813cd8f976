@@ -22,6 +22,30 @@
       "revId": "59fb23632ae32723d2006f10779d6f813cd8f976",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_2b014505",
+        "filename": "dovetail/testcase/ipv6.tc002.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 404
+      },
+      "writtenOn": "2017-04-30T07:48:21Z",
+      "side": 1,
+      "message": "Agree with Jun Li, following are the list [*] of tests in this file.\nSo, @Jun Li, the fix is to remove the line 14 from this file and similarly other lines from files (tc003, tc004, tc005) right?\n\n\n[*] https://paste.fedoraproject.org/paste/LGz3Ih5tpksT74d-P2C1g15M1UNdIGYhyRLivL9gydE\u003d",
+      "parentUuid": "9ab8dda7_cf8e76d0",
+      "range": {
+        "startLine": 13,
+        "startChar": 42,
+        "endLine": 14,
+        "endChar": 151
+      },
+      "revId": "59fb23632ae32723d2006f10779d6f813cd8f976",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
