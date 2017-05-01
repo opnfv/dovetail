@@ -17,6 +17,7 @@ from collections import Mapping, Set, Sequence
 import json
 import urllib2
 from datetime import datetime
+from distutils.version import LooseVersion
 
 
 def exec_log(verbose, logger, msg, level, flush=False):
@@ -165,3 +166,27 @@ def show_progress_bar(length):
     sys.stdout.flush()
     sys.stdout.write('Running ' + '.' * length + '\r')
     sys.stdout.flush()
+
+
+def check_docker_version(logger=None):
+    ret, server_ver = exec_cmd("docker version -f'{{.Server.Version}}'",
+                               logger=logger)
+    ret, client_ver = exec_cmd("docker version -f'{{.Client.Version}}'",
+                               logger=logger)
+    logger.info("\ndocker version: \nclient:%s\nservr:%s", client_ver,
+                server_ver)
+    if(LooseVersion(client_ver) <= LooseVersion('1.8.0') or
+       LooseVersion(server_ver) <= LooseVersion('1.8.0')):
+        logger.warn("\n\nDocker version is too old, may cause unpredictable "
+                    "errors, you can update or install the lastest docker "
+                    "for both host and container as below:\nwget -qO- "
+                    "https://get.docker.com/ | sh\n\nClient:%s\nServer:%s",
+                    client_ver, server_ver)
+        exit(-1)
+
+    if(client_ver != server_ver):
+        logger.warn("\n\nVersion mismatch, may cause unpredictable "
+                    "errors, you can update or install the lastest "
+                    "docker for both host and container as below:\nwget "
+                    "-qO- https://get.docker.com/ | "
+                    "sh\n\nClient:%s\nServer:%s", client_ver, server_ver)
