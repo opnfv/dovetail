@@ -204,6 +204,7 @@ def main(*args, **kwargs):
     logger.info('Dovetail compliance: %s!', (kwargs['testsuite']))
     logger.info('================================================')
     logger.info('Build tag: %s', dt_cfg.dovetail_config['build_tag'])
+    dt_utils.check_docker_version(logger)
     validate_input(kwargs, dt_cfg.dovetail_config['validate_input'], logger)
     configs = filter_config(kwargs, logger)
 

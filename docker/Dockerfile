@@ -13,9 +13,12 @@ RUN \
         python-mock \
         python-pip \
         apt-transport-https \
+        wget \
         --no-install-recommends \
 && \
-    apt-get update &&  apt-get -y install docker.io
+    apt-get update
+
+RUN wget -qO- https://get.docker.com/ | sh
 
 ENV HOME /home/opnfv
 ENV REPOS_DIR ${HOME}/dovetail
