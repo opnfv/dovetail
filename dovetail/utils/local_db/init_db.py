@@ -14,7 +14,6 @@ import sys
 db_host_ip = sys.argv[1]
 testapi_port = sys.argv[2]
 
-source_url = 'http://testresults.opnfv.org/test/api/v1'
 target_url = 'http://{}:{}/api/v1'.format(db_host_ip, testapi_port)
 print(target_url)
 
@@ -30,10 +29,10 @@ def post(url, data):
 
 
 def pod():
-    source = '{}/pods'.format(source_url)
     target = '{}/pods'.format(target_url)
 
-    pods = get(source)['pods']
+    with open('/home/opnfv/pods.json', 'r') as f:
+        pods = json.load(f)
     for p in pods:
         post(target, p)
 
@@ -42,24 +41,25 @@ def pod():
 
 
 def project():
-    source = '{}/projects'.format(source_url)
     target = '{}/projects'.format(target_url)
-
-    projects = get(source)['projects']
+    with open('/home/opnfv/projects.json', 'r') as f:
+        projects = json.load(f)
     for p in projects:
         post(target, p)
 
 
 def cases():
-    project_list = ['yardstick', 'functest', 'dovetail']
-
-    for p in project_list:
-        source = '{}/projects/{}/cases'.format(source_url, p)
-        target = '{}/projects/{}/cases'.format(target_url, p)
-
-        cases = get(source)['testcases']
-        for c in cases:
-            post(target, c)
+    with open('/home/opnfv/cases.json', 'r') as f:
+        for line in f:
+            try:
+                cases = json.loads(line)
+                for c in cases["testcases"]:
+                    target = '{}/projects/{}/cases'.format(target_url,
+                                                           c['project_name'])
+                    print(target)
+                    post(target, c)
+            except:
+                print("useless data")
 
 
 def add_pod(name, mode):

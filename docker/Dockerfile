@@ -24,6 +24,11 @@ ENV HOME /home/opnfv
 ENV REPOS_DIR ${HOME}/dovetail
 WORKDIR /home/opnfv
 
+
+# get db schema from opnfv sites
+ADD get_db_schema.py ${WORKDIR}
+RUN python get_db_schema.py
+
 RUN \
     git config --global http.sslVerify false \
 && \
@@ -40,3 +45,4 @@ RUN \
     pip install -e .
 
 WORKDIR ${REPOS_DIR}/dovetail
+
