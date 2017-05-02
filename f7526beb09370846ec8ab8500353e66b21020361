@@ -49,6 +49,54 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_0e81ef49",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-02T10:39:05Z",
+      "side": 1,
+      "message": "As a point of note, I don\u0027t recall having reviewed the yaml files.  Nonce of which have been added or updated after the scope document was approved for use.\nThe yaml files in this context need to align with this document.  For the most part however I think the detailed yaml files should be in the test project repositories rather than in dovetail.",
+      "parentUuid": "9ab8dda7_6f050a79",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 24
+      },
+      "revId": "f7526beb09370846ec8ab8500353e66b21020361",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_ce92f79e",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-02T10:39:05Z",
+      "side": 1,
+      "message": "1) We should be using the refstack associated with the version of openstack that is agreed and documented for the release.  While we may be able to choose another based on technical need we would be best to align with our source and work with them to improve iteratively. \n2) This document is a scope document, it is intended to be procedural.  The test cases should refer to test cases managed by the test projects running as part of the regular test execution.  (see the test case requirements doc)",
+      "parentUuid": "9ab8dda7_4f804646",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 24
+      },
+      "revId": "f7526beb09370846ec8ab8500353e66b21020361",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_2f7dd26e",
         "filename": "docs/testing/developer/testscope/index.rst",
         "patchSetId": 2
@@ -96,6 +144,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_6e918b98",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-02T10:39:05Z",
+      "side": 1,
+      "message": "Please indicate which test cases should be in scope and which should be out of scope.  As mentioned in the commit message this list needs to be agreed prior to merging.",
+      "parentUuid": "9ab8dda7_2f7dd26e",
+      "range": {
+        "startLine": 303,
+        "startChar": 0,
+        "endLine": 315,
+        "endChar": 85
+      },
+      "revId": "f7526beb09370846ec8ab8500353e66b21020361",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_0f3b2e39",
         "filename": "docs/testing/developer/testscope/index.rst",
         "patchSetId": 2
@@ -130,6 +202,30 @@
       "writtenOn": "2017-04-28T23:07:24Z",
       "side": 1,
       "message": "Yes, this should be stated elsewhere, such as the strategy document and/or the reviewer guide.\n\nMy take on this: optional test cases do not need to pass in order to get the badge - hence the term \"optional\". However, the pass/fail results of _all_ test cases are part of the test logs and the overall certification report. Hence, this report indicates which of the optional test cases passed and which failed.",
+      "parentUuid": "9ab8dda7_0f3b2e39",
+      "range": {
+        "startLine": 317,
+        "startChar": 0,
+        "endLine": 317,
+        "endChar": 23
+      },
+      "revId": "f7526beb09370846ec8ab8500353e66b21020361",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_8e8cff80",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-02T10:39:05Z",
+      "side": 1,
+      "message": "This has been discussed and I believe when I asked, Wenjing stated this was agreed at a meeting I was not present at during the plugfest.  I have not seen notes of who was present or which committers agreed.\nThis has been added based on my understanding of \"the agreement\".",
       "parentUuid": "9ab8dda7_0f3b2e39",
       "range": {
         "startLine": 317,
