@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_8ee39f32",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-02T10:55:59Z",
+      "side": 1,
+      "message": "agree. we faced a technical problem when executing, one testcase in defcore 2016.08 can\u0027t be run with auto-method, details see https://gerrit.opnfv.org/gerrit/#/c/30767/, that\u0027s one reason keep the testcase list in repo codes by now.",
+      "parentUuid": "9ab8dda7_ce92f79e",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 24
+      },
+      "revId": "f7526beb09370846ec8ab8500353e66b21020361",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_2f7dd26e",
         "filename": "docs/testing/developer/testscope/index.rst",
         "patchSetId": 2
@@ -156,6 +180,30 @@
       "side": 1,
       "message": "Please indicate which test cases should be in scope and which should be out of scope.  As mentioned in the commit message this list needs to be agreed prior to merging.",
       "parentUuid": "9ab8dda7_2f7dd26e",
+      "range": {
+        "startLine": 303,
+        "startChar": 0,
+        "endLine": 315,
+        "endChar": 85
+      },
+      "revId": "f7526beb09370846ec8ab8500353e66b21020361",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_eecb3ba3",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-02T10:55:59Z",
+      "side": 1,
+      "message": "suggest to remove those object_storage testcases at this time, since dovetail based on danube and those not included in functest danube.",
+      "parentUuid": "9ab8dda7_6e918b98",
       "range": {
         "startLine": 303,
         "startChar": 0,
