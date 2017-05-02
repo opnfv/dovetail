@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_4e528714",
+        "filename": "docs/testing/user/testspecification/old_files/ipv6/testspecification.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 404
+      },
+      "writtenOn": "2017-05-02T09:27:10Z",
+      "side": 1,
+      "message": "nit: Can you please add Opendaylight (Boron release).\n\nNotes: The feature is under development and could be available in the later versions.",
+      "range": {
+        "startLine": 26,
+        "startChar": 5,
+        "endLine": 26,
+        "endChar": 20
+      },
+      "revId": "0ea1e0a194159ef849ffe9e090048dff7c24cb81",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
