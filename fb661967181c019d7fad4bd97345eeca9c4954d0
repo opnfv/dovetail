@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_2ed2b35c",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-02T10:54:41Z",
+      "side": 1,
+      "message": "This section is not in the intended scope of this patch.  Please review the commit message.",
+      "revId": "fb661967181c019d7fad4bd97345eeca9c4954d0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
