@@ -169,11 +169,11 @@ def show_progress_bar(length):
 
 
 def check_docker_version(logger=None):
-    ret, server_ver = exec_cmd("docker version -f'{{.Server.Version}}'",
+    ret, server_ver = exec_cmd("sudo docker version -f'{{.Server.Version}}'",
                                logger=logger)
-    ret, client_ver = exec_cmd("docker version -f'{{.Client.Version}}'",
+    ret, client_ver = exec_cmd("sudo docker version -f'{{.Client.Version}}'",
                                logger=logger)
-    logger.info("\ndocker version: \nclient:%s\nservr:%s", client_ver,
+    logger.info("\ndocker version: \nclient:%s\nserver:%s", client_ver,
                 server_ver)
     if(LooseVersion(client_ver) <= LooseVersion('1.8.0') or
        LooseVersion(server_ver) <= LooseVersion('1.8.0')):
