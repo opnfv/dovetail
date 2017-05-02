@@ -1,7 +1,7 @@
 ---
 dovetail.ipv6.tc020:
   name: dovetail.ipv6.tc020
-  objective: VIM ipv6 operations, to do IPv6 Address Assignment - Multiple Prefixes, DHCPv6 Stateless
+  objective: VIM ipv6 operations, to do IPv6 Address Assignment - Multiple Prefixes, DHCPv6 Stateless, scenario os-nosdn-nofeature dependent
   validate:
     type: functest
     testcase: tempest_custom

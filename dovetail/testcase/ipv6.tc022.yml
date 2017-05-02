@@ -1,7 +1,7 @@
 ---
 dovetail.ipv6.tc022:
   name: dovetail.ipv6.tc022
-  objective: VIM ipv6 operations, to do IPv6 Address Assignment - SLAAC
+  objective: VIM ipv6 operations, to do IPv6 Address Assignment - SLAAC, scenario os-nosdn-nofeature dependent
   validate:
     type: functest
     testcase: tempest_custom
