@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "9ab8dda7_aec5438f",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-05-02T12:03:22Z",
+      "side": 1,
+      "message": "This may just set the docker client version in Dovetail container to the newest one, but the server version is also the same as the host.\nI met an error:\n2017-05-02 10:53:40,344 - run - DEBUG - Executing command: \u0027docker version -f\u0027{{.Server.Version}}\u0027\u0027\n2017-05-02 10:53:40,408 - run - DEBUG - \n2017-05-02 10:53:40,408 - run - DEBUG - Error response from daemon: client is newer than server (client API version: 1.24, server API version: 1.22)\n\n2017-05-02 10:53:40,597 - container.Container - DEBUG - Executing command: \u0027sudo docker images -q opnfv/functest:latest\u0027\n2017-05-02 10:53:40,615 - container.Container - DEBUG - Error response from daemon: client is newer than server (client API version: 1.24, server API version: 1.22)\n2017-05-02 10:53:40,618 - container.Container - ERROR - The command \u0027sudo docker images -q opnfv/functest:latest\u0027 failed.\n2017-05-02 10:53:40,618 - test_runner.DockerRunner - ERROR - functest image not exist offline running",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 42
+      },
+      "revId": "3aeab49bb64c6c89da37f3d03f781aec85f39015",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_0bec81c6",
         "filename": "dovetail/utils/dovetail_utils.py",
         "patchSetId": 1
