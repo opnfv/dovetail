@@ -46,6 +46,29 @@
       "revId": "0ea1e0a194159ef849ffe9e090048dff7c24cb81",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_ced757be",
+        "filename": "docs/testing/user/testspecification/old_files/ipv6/testspecification.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-02T15:23:43Z",
+      "side": 1,
+      "message": "are we saying that currently only os-nosdn-nofeature supports ping6 and vRouter? if yes, then maybe rewrite the last phrase to make it clearer. Tx.",
+      "range": {
+        "startLine": 26,
+        "startChar": 60,
+        "endLine": 26,
+        "endChar": 79
+      },
+      "revId": "0ea1e0a194159ef849ffe9e090048dff7c24cb81",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
