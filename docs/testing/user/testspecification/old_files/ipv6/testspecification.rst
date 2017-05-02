@@ -21,7 +21,9 @@ test case specification. It may be a good idea to reference the source documents
 Environmental requirements
 ==========================
 
-TBD
+For ipv6 Test Case 18-25, those test cases are scenario tests, they need to boot virtual
+machines and ping6 in addition to test APIs, ping6 to vRouter is not supported by SDN controller,
+such as opendaylight, so they are scenario dependent, i.e., os-nosdn-nofeature.
 
 Preconditions and procedural requirements
 =========================================
