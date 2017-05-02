@@ -29,10 +29,12 @@ echo "==================="
 echo "Create the mongodb."
 echo "==================="
 
+set +e
 # pull image kkltcjk/mongodb:reporting
 mongodb_img="kkltcjk/mongodb:reporting"
 echo "Step1: pull the image $mongodb_img."
-sudo docker pull $mongodb_img > /dev/null
+sudo docker pull $mongodb_img
+set -e
 
 container_name='mongodb'
 
@@ -56,10 +58,12 @@ echo "=========================="
 echo "Create the testapi service."
 echo "=========================="
 
+set +e
 # pull image kkltcjk/testapi:reporting
 testapi_img="kkltcjk/testapi:reporting"
 echo "Step1: pull the image $testapi_img."
-sudo docker pull $testapi_img > /dev/null
+sudo docker pull $testapi_img 
+set -e
 
 container_name='testapi'
 
@@ -76,32 +80,17 @@ cmd="sudo docker run -itd -p ${testapi_port}:8000 --name ${container_name} -e mo
 echo $cmd
 ${cmd}
 
-echo "Successfully create the testapi service."
+echo "Wait for testapi to work..."
+sleep 10
 
 echo "================================="
 echo "Upload default project info to DB"
 echo "================================="
 
-# For Ubuntu, there is file /etc/lsb-release
-# For Centos and redhat, there is file /etc/redhat-release
-if [ -f /etc/lsb-release ]; then
-    sudo apt-get update > /dev/null
-    sudo apt-get install -y python-pip > /dev/null
-elif [ -f /etc/redhat-release ]; then
-    sudo yum -y update > /dev/null
-    sudo yum -y install epel-release > /dev/null
-    sudo yum -y install python-pip > /dev/null
-else
-    echo "This operating system is not currently supported."
-    exit 1
-fi
-
-pip install requests > /dev/null
-
 echo "Init DB info..."
 cmd="python ./init_db.py ${db_host_ip} ${testapi_port}"
 echo ${cmd}
-${cmd} > /dev/null
+${cmd}
 
 echo "Successfully load DB info."
 
