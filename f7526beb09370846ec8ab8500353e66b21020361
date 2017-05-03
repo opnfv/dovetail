@@ -121,6 +121,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_2e3953a4",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-03T09:33:49Z",
+      "side": 1,
+      "message": "oh, just to make that clear: there is a \"not\" missing in my previous comment. We could have reviewed the YAMLs, but they did NOT undergo a detailed review.",
+      "parentUuid": "9ab8dda7_8ee39f32",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 24
+      },
+      "revId": "f7526beb09370846ec8ab8500353e66b21020361",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_2f7dd26e",
         "filename": "docs/testing/developer/testscope/index.rst",
         "patchSetId": 2
@@ -204,6 +228,30 @@
       "side": 1,
       "message": "suggest to remove those object_storage testcases at this time, since dovetail based on danube and those not included in functest danube.",
       "parentUuid": "9ab8dda7_6e918b98",
+      "range": {
+        "startLine": 303,
+        "startChar": 0,
+        "endLine": 315,
+        "endChar": 85
+      },
+      "revId": "f7526beb09370846ec8ab8500353e66b21020361",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_ce22f700",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-03T09:33:49Z",
+      "side": 1,
+      "message": "In line with the recommendation of the RefStack PTL and the test cases currently integrated in Functest, I have limited the test cases to the \"OpenStack Compute\" target and hence removed these object storage tests.\n\nHowever, I\u0027d like to hear the opinion of others on this as well.",
+      "parentUuid": "9ab8dda7_eecb3ba3",
       "range": {
         "startLine": 303,
         "startChar": 0,
