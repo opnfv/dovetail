@@ -1,7 +1,7 @@
 ---
 dovetail.ipv6.tc019:
   name: dovetail.ipv6.tc019
-  objective: VIM ipv6 operations, to do IPv6 address assignment - dual stack, DHCPv6 stateless
+  objective: VIM ipv6 operations, to do IPv6 address assignment - dual stack, DHCPv6 stateless, scenario os-nosdn-nofeature dependent
   validate:
     type: functest
     testcase: tempest_custom

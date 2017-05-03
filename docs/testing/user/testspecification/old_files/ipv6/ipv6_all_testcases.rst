@@ -31,7 +31,6 @@ Test Case 2: Create, Update and Delete an IPv6 Network and Subnet
 .. code-block:: bash
 
     tempest.api.network.test_networks.NetworksIpV6Test.test_create_update_delete_network_subnet
-    tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_create_update_delete_network_subnet
 
 ----------------------------------------------
 Test Case 3: Check External Network Visibility
@@ -40,7 +39,6 @@ Test Case 3: Check External Network Visibility
 .. code-block:: bash
 
     tempest.api.network.test_networks.NetworksIpV6Test.test_external_network_visibility
-    tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_external_network_visibility
 
 -------------------------------------------------------
 Test Case 4: List IPv6 Networks and Subnets of a Tenant
@@ -50,8 +48,6 @@ Test Case 4: List IPv6 Networks and Subnets of a Tenant
 
     tempest.api.network.test_networks.NetworksIpV6Test.test_list_networks
     tempest.api.network.test_networks.NetworksIpV6Test.test_list_subnets
-    tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_list_networks
-    tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_list_subnets
 
 -----------------------------------------------------------
 Test Case 5: Show Information of an IPv6 Network and Subnet
@@ -61,8 +57,6 @@ Test Case 5: Show Information of an IPv6 Network and Subnet
 
     tempest.api.network.test_networks.NetworksIpV6Test.test_show_network
     tempest.api.network.test_networks.NetworksIpV6Test.test_show_subnet
-    tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_show_network
-    tempest.api.network.test_networks.NetworksIpV6TestAttrs.test_show_subnet
 
 ------------------------------------------------------------
 Test Case 6: Create an IPv6 Port in Allowed Allocation Pools
