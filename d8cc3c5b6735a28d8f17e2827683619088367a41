@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_9f7d07b4",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-03T16:58:41Z",
+      "side": 1,
+      "message": "Would it be preferable to use the same name \u0027bgpvpn\u0027 as in openstack networking-bgpvpn?",
+      "revId": "d8cc3c5b6735a28d8f17e2827683619088367a41",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_7f593359",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-03T16:58:41Z",
+      "side": 1,
+      "message": "Avoid use of \u0027I\u0027.\nAlso, I\u0027m not sure what we are supposed to say here. If we can think of anything to say, maybe we should remove it?",
+      "revId": "d8cc3c5b6735a28d8f17e2827683619088367a41",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_bf5fab40",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-03T16:58:41Z",
+      "side": 1,
+      "message": "The test procedure below uses 10.10.10.0/24 and 10.10.11.0/24 address blocks. Does this test case insists that these two blocks are free to use ?",
+      "revId": "d8cc3c5b6735a28d8f17e2827683619088367a41",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
