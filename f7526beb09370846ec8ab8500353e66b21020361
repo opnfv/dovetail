@@ -145,6 +145,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_34c9a226",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-03T10:44:55Z",
+      "side": 1,
+      "message": "you mean this one https://gerrit.opnfv.org/gerrit/#/c/31313/ ? it has been reviewed for more than one week.",
+      "parentUuid": "9ab8dda7_2e3953a4",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 24
+      },
+      "revId": "f7526beb09370846ec8ab8500353e66b21020361",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_2f7dd26e",
         "filename": "docs/testing/developer/testscope/index.rst",
         "patchSetId": 2
