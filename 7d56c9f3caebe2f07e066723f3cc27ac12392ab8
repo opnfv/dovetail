@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_f136bc51",
+        "filename": "dovetail/utils/local_db/launch_db.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-03T03:29:56Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 65,
+        "startChar": 27,
+        "endLine": 65,
+        "endChar": 30
+      },
+      "revId": "7d56c9f3caebe2f07e066723f3cc27ac12392ab8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
