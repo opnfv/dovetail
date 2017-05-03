@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_bf0d6b40",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-05-03T17:26:39Z",
+      "side": 1,
+      "message": "do not use \"dovetail\" as part of filename, you may just call it \"results.json\", these results are from upstream testing projects, not from dovetail",
+      "range": {
+        "startLine": 5,
+        "startChar": 14,
+        "endLine": 5,
+        "endChar": 30
+      },
+      "revId": "0b500b87387cadb7f651400b1e48b09f322b97e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
