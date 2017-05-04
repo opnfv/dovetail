@@ -45,3 +45,9 @@ proposed_tests:
     - dovetail.ha.tc009
     # - dovetail.ha.tc010
     # - dovetail.ha.tc011
+    # sdnvpn
+    - dovetail.sdnvpn.tc001
+    - dovetail.sdnvpn.tc002
+    - dovetail.sdnvpn.tc003
+    - dovetail.sdnvpn.tc004
+    - dovetail.sdnvpn.tc008

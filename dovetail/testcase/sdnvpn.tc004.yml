@@ -1,0 +1,12 @@
+---
+dovetail.sdnvpn.tc004:
+  name: dovetail.sdnvpn.tc004
+  objective: VPN provides connectivity between subnets using association of Neutron Router to VPNs
+  validate:
+    type: functest
+    testcase: bgpvpn
+    pre_copy:
+      src_file: sdnvpn_config_testcase4.yaml
+      dest_path: /home/opnfv/repos/sdnvpn/sdnvpn/test/functest/config.yaml
+  report:
+    sub_testcase_list:
