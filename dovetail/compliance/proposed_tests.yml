@@ -45,3 +45,9 @@ proposed_tests:
     - dovetail.ha.tc009
     # - dovetail.ha.tc010
     # - dovetail.ha.tc011
+    # vpn
+    - dovetail.vpn.tc001
+    - dovetail.vpn.tc002
+    - dovetail.vpn.tc003
+    - dovetail.vpn.tc004
+    - dovetail.vpn.tc008

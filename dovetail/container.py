@@ -59,12 +59,19 @@ class Container(object):
 
     # set functest envs and TEST_DB_URL for creating functest container
     @staticmethod
-    def set_functest_config():
+    def set_functest_config(testcase_name):
 
         # These are all just used by Functest's function push_results_to_db.
         # And has nothing to do with DoveTail running test cases.
-        ins_type = " -e INSTALLER_TYPE=unknown"
-        scenario = " -e DEPLOY_SCENARIO=unknown"
+        ins_type = os.getenv('INSTALLER_TYPE', "unknown")
+        scenario = os.getenv('DEPLOY_SCENARIO', "unknown")
+        ins_type = ''.join([" -e INSTALLER_TYPE=", ins_type])
+        scenario = ''.join([" -e DEPLOY_SCENARIO=", scenario])
+        # vpn testcase only runs when scenario name includes bgpvpn
+        # functest requirements
+        if 'vpn' in testcase_name:
+            ins_type = "-e INSTALLER_TYPE=netvirt"
+            scenario = " -e DEPLOY_SCENARIO=bgpvpn"
         node = " -e NODE_NAME=master"
         envs = "%s %s %s" % (ins_type, scenario, node)
 
@@ -122,7 +129,7 @@ class Container(object):
 
         config = ""
         if type.lower() == "functest":
-            config = cls.set_functest_config()
+            config = cls.set_functest_config(testcase_name)
         if type.lower() == "yardstick":
             config = cls.set_yardstick_config()
         if not config:
