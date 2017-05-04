@@ -1,0 +1,29 @@
+defaults:
+  flavor: m1.tiny # adapt to your environment
+
+testcases:
+  tempest:
+      enabled: true
+      description: Neutron BGPVPN tests in tempest
+      testname_db: functest_tempest # declared name in the test api
+      # http://testresults.opnfv.org/test/api/v1/projects/sdnvpn/cases
+
+  testcase_8:
+      enabled: true
+      description: Test floating IP and router assoc coexistence
+      testname_db: functest_testcase_8
+      image_name: sdnvpn-image
+      instance_1_name: sdnvpn-8-1
+      instance_2_name: sdnvpn-8-2
+      net_1_name: sdnvpn-8-1
+      subnet_1_name: sdnvpn-8-1-subnet
+      subnet_1_cidr: 10.10.10.0/24
+      router_1_name: sdnvpn-8-1-router
+      net_2_name: sdnvpn-8-2
+      subnet_2_name: sdnvpn-8-2-subnet
+      subnet_2_cidr: 10.10.20.0/24
+      router_2_name: sdnvpn-8-2-router
+      secgroup_name: sdnvpn-sg
+      secgroup_descr: Security group for SDNVPN test cases
+      targets: '88:88'
+      route_distinguishers: '18:18'

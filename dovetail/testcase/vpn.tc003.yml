@@ -1,0 +1,12 @@
+---
+dovetail.vpn.tc003:
+  name: dovetail.vpn.tc003
+  objective: Data center gateway integration through BGP peering
+  validate:
+    type: functest
+    testcase: bgpvpn
+    pre_copy:
+      src_file: vpn_config_testcase3.yaml
+      dest_path: /home/opnfv/repos/sdnvpn/sdnvpn/test/functest/config.yaml
+  report:
+    sub_testcase_list:
