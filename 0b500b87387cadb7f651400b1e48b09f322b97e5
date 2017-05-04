@@ -22,6 +22,30 @@
       "revId": "0b500b87387cadb7f651400b1e48b09f322b97e5",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3a62e93e",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-05-04T01:12:36Z",
+      "side": 1,
+      "message": "OK, I see.\nThe report file name is \"dovetail_report.txt\". Do we need to change it into report.txt?",
+      "parentUuid": "9ab8dda7_bf0d6b40",
+      "range": {
+        "startLine": 5,
+        "startChar": 14,
+        "endLine": 5,
+        "endChar": 30
+      },
+      "revId": "0b500b87387cadb7f651400b1e48b09f322b97e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
