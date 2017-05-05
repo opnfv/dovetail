@@ -357,7 +357,14 @@ tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_update_volum
 tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_update_volume_with_nonexistent_volume_id
 
 
-
 Optional CVP Test Areas
 ========================
 
+
+-----------------
+Test Area BGP VPN
+-----------------
+
+opnfv.sdnvpn.subnet_connectivity
+opnfv.sdnvpn.tenant separation
+opnfv.sdnvpn.router_association
