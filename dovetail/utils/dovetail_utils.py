@@ -132,12 +132,14 @@ def get_ext_net_name(env_file, logger=None):
     return None
 
 
-def check_db_results(db_url, build_tag, testcase, logger):
+def store_db_results(db_url, build_tag, testcase, dest_file, logger):
     url = "%s?build_tag=%s-%s" % (db_url, build_tag, testcase)
     logger.debug("Query to rest api: %s", url)
     try:
         data = json.load(urllib2.urlopen(url))
         if data['results']:
+            with open(dest_file, 'a') as f:
+                f.write(json.dumps(data['results'][0]) + '\n')
             return True
         else:
             return False
