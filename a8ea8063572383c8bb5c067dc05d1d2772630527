@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_6aff2eab",
+        "filename": "userconfig/vpn_config_testcase1.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 459
+      },
+      "writtenOn": "2017-05-05T12:55:51Z",
+      "side": 1,
+      "message": "why are we duplicating this info here? It\u0027s already in the sdnvpn test case",
+      "revId": "a8ea8063572383c8bb5c067dc05d1d2772630527",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
