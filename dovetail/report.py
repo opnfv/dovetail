@@ -322,7 +322,8 @@ class YardstickCrawler(object):
             for jsonfile in f:
                 data = json.loads(jsonfile)
                 if 1 == data['status']:
-                    criteria = 'PASS'
+                    if 1 == data['results']['benchmark']['data']['sla_pass']:
+                        criteria = 'PASS'
         json_results = {'criteria': criteria}
         self.logger.debug('Results: %s', str(json_results))
         return json_results
