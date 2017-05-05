@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_aa0f662d",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-05T09:56:36Z",
+      "side": 1,
+      "message": "Is this actually the start of the second test case?",
+      "revId": "144498225f2c1d21f5e273f7679e718f49726be7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_6a196e78",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-05T09:56:36Z",
+      "side": 1,
+      "message": "Is this actually the start of the third test case?",
+      "revId": "144498225f2c1d21f5e273f7679e718f49726be7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_2a2b7683",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-05T09:56:36Z",
+      "side": 1,
+      "message": "Is there any clean up done by the test suite that is missed in the instruction?  Is this part of the pass/fail criteria?",
+      "revId": "144498225f2c1d21f5e273f7679e718f49726be7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_0a28f284",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-05T09:56:36Z",
+      "side": 1,
+      "message": "I assume the post condition is that the SUT is returned to the same ready state as it was before the tests were run?",
+      "revId": "144498225f2c1d21f5e273f7679e718f49726be7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
