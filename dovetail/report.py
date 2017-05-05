@@ -322,7 +322,12 @@ class YardstickCrawler(object):
             for jsonfile in f:
                 data = json.loads(jsonfile)
                 if 1 == data['status']:
-                    criteria = 'PASS'
+                    try:
+                        pa = data['result'][1]['benchmark']['data']['sla_pass']
+                        if 1 == pa
+                            criteria = 'PASS'
+                    except KeyError:
+                        self.logger.info('pass flag not found')
         json_results = {'criteria': criteria}
         self.logger.debug('Results: %s', str(json_results))
         return json_results
