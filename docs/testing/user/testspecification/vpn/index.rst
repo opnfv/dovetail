@@ -13,7 +13,7 @@ Scope
 =====
 
 The VPN test area evaluates the ability of the system under test to support VPN networking
-for virtual workdloads.  The tests in this suite will evaluate establishing VPN networks,
+for virtual workloads.  The tests in this suite will evaluate establishing VPN networks,
 publishing and communication between endpoints using BGP and tear down of the networks.
 
 References
@@ -36,14 +36,14 @@ This test suite assumes support for the following specifications:
 Definitions and abbreviations
 =============================
 
-The following terms and abreviations are used in conunction with this test suite
+The following terms and abbreviations are used in conjunction with this test suite
 
 - BGP - Border gateway protocol
 - eRT - Export route target
 - IETF - Internet Engineering Task Force
 - iRT - Import route target
-- NFVi - Network functions virtualization infrastructure
-- Tenant - An isolated set of virtualized infrastructures
+- NFVi - Network functions virtualisation infrastructure
+- Tenant - An isolated set of virtualised infrastructures
 - VM - Virtual machine
 - VPN - Virtual private network
 - VLAN - Virtual local area network
@@ -56,7 +56,10 @@ The system under test is assumed to be the NFVi in operation on an Pharos compli
 Test Suite Structure
 ====================
 
-The test suite is structured in some way that I am unable to articulate at this time.
+The test suite is structured as three sequential tests with inherent dependencies between
+each test in the suite.  The suite will evaluate the ability of the SUT to establish
+connectivity between Virtual Machines (nodes) using route targets, reconfigure the routing
+tables to disassociate the nodes, then reestablish connectivity by re-association.
 
 Test Descriptions
 =================
