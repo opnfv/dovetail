@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_6a164ef3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-05T13:00:48Z",
+      "side": 1,
+      "message": "please rephrase to a descriptive heading",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "bd9872f6f37fdab59999e08358236158ecb2cabc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_0ad5521b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-05T13:00:48Z",
+      "side": 1,
+      "message": "please use line breaks",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 117
+      },
+      "revId": "bd9872f6f37fdab59999e08358236158ecb2cabc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_cade5a3f",
+        "filename": "docs/testing/developer/worksheet/worksheet.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-05T13:00:48Z",
+      "side": 1,
+      "message": "please remove whitespace",
+      "range": {
+        "startLine": 42,
+        "startChar": 78,
+        "endLine": 42,
+        "endChar": 79
+      },
+      "revId": "bd9872f6f37fdab59999e08358236158ecb2cabc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
