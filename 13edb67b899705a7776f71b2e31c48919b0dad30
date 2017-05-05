@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_4a04aabf",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-05T12:56:52Z",
+      "side": 1,
+      "message": "Marking the sections as code blocks makes the long test names rather difficult to read in the generated docs because it requires horizontal scrolling.",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 2
+      },
+      "revId": "13edb67b899705a7776f71b2e31c48919b0dad30",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
