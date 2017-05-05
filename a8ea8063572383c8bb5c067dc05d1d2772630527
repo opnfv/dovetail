@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_aa9f664f",
+        "filename": "dovetail/container.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 459
+      },
+      "writtenOn": "2017-05-05T14:08:24Z",
+      "side": 1,
+      "message": "first, I would rename the tests from \u0027vpn.tc.xx\u0027 to \u0027sdnvpn.tc.xx\u0027 and here you can replace \u0027vpn\u0027 by \u0027sdnvpn\u0027",
+      "parentUuid": "9ab8dda7_ea86be12",
+      "range": {
+        "startLine": 72,
+        "startChar": 12,
+        "endLine": 72,
+        "endChar": 15
+      },
+      "revId": "a8ea8063572383c8bb5c067dc05d1d2772630527",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_6aff2eab",
         "filename": "userconfig/vpn_config_testcase1.yaml",
         "patchSetId": 2
