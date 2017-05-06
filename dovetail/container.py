@@ -61,7 +61,7 @@ class Container(object):
     @staticmethod
     def set_functest_config(testcase_name):
 
-        # These are all just used by Functest's function push_results_to_db.
+        # These are all just used to push_results_to_db.
         # And has nothing to do with DoveTail running test cases.
         ins_type = os.getenv('INSTALLER_TYPE', "unknown")
         scenario = os.getenv('DEPLOY_SCENARIO', "unknown")
@@ -100,9 +100,10 @@ class Container(object):
             return None
 
         if dovetail_config['report_dest'].startswith("http"):
-            cls.logger.info("Yardstick can't push results to DB.")
-            cls.logger.info("Results will be stored with files.")
+            envs = envs + " -e DISPATCHER=http"
+            envs = envs + " -e TARGET=%s" % dovetail_config['report_dest']
 
+        envs = envs + " -e NODE_NAME=master"
         log_vol = '-v %s:%s ' % (dovetail_config['result_dir'],
                                  dovetail_config["yardstick"]['result']['log'])
         key_path = os.path.join(dovetail_config['userconfig_dir'], 'id_rsa')

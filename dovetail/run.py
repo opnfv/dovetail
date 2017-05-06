@@ -77,19 +77,14 @@ def check_tc_result(testcase, logger):
     dovetail_result = os.path.join(result_dir,
                                    dt_cfg.dovetail_config['result_file'])
     if dt_cfg.dovetail_config['report_dest'].startswith("http"):
-        if validate_type.lower() == 'yardstick':
-            logger.info("Results have been stored with file %s.",
-                        os.path.join(result_dir,
-                                     testcase.validate_testcase() + '.out'))
+        if dt_utils.store_db_results(dt_cfg.dovetail_config['report_dest'],
+                                     dt_cfg.dovetail_config['build_tag'],
+                                     testcase.name(), dovetail_result,
+                                     logger):
+            logger.info("Results have been pushed to database and stored "
+                        "with local file %s.", dovetail_result)
         else:
-            if dt_utils.store_db_results(dt_cfg.dovetail_config['report_dest'],
-                                         dt_cfg.dovetail_config['build_tag'],
-                                         testcase.name(), dovetail_result,
-                                         logger):
-                logger.info("Results have been pushed to database and stored "
-                            "with local file %s.", dovetail_result)
-            else:
-                logger.error("Fail to push results to database.")
+            logger.error("Fail to push results to database.")
     if dt_cfg.dovetail_config['report_dest'] == "file":
         if validate_type.lower() == 'yardstick':
             logger.info("Results have been stored with file %s.",
