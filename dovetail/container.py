@@ -60,14 +60,6 @@ class Container(object):
     # set functest envs and TEST_DB_URL for creating functest container
     @staticmethod
     def set_functest_config():
-
-        # These are all just used by Functest's function push_results_to_db.
-        # And has nothing to do with DoveTail running test cases.
-        ins_type = " -e INSTALLER_TYPE=unknown"
-        scenario = " -e DEPLOY_SCENARIO=unknown"
-        node = " -e NODE_NAME=master"
-        envs = "%s %s %s" % (ins_type, scenario, node)
-
         dovetail_config = dt_cfg.dovetail_config
         if dovetail_config['report_dest'].startswith("http"):
             report = " -e TEST_DB_URL=%s " % dovetail_config['report_dest']
@@ -77,7 +69,7 @@ class Container(object):
                                      func_res_conf['file_path'])
             report = " -e TEST_DB_URL=file://%s " % file_path
         key_vol = " -v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
-        return "%s %s %s" % (envs, report, key_vol)
+        return "%s %s" % (report, key_vol)
 
     # set yardstick external network name and log volume for its container.
     # external network is necessary for yardstick.
@@ -93,8 +85,8 @@ class Container(object):
             return None
 
         if dovetail_config['report_dest'].startswith("http"):
-            cls.logger.info("Yardstick can't push results to DB.")
-            cls.logger.info("Results will be stored with files.")
+            envs = envs + " -e DISPATCHER=http"
+            envs = envs + " -e TARGET=%s" % dovetail_config['report_dest']
 
         log_vol = '-v %s:%s ' % (dovetail_config['result_dir'],
                                  dovetail_config["yardstick"]['result']['log'])
@@ -114,9 +106,16 @@ class Container(object):
         if not openrc:
             return None
 
+        # These are all just used to push_results_to_db.
+        # And has nothing to do with DoveTail running test cases.
+        ins_type = " -e INSTALLER_TYPE=unknown"
+        scenario = " -e DEPLOY_SCENARIO=unknown"
+        node = " -e NODE_NAME=master"
+        envs = "%s %s %s" % (ins_type, scenario, node)
+
         # CI_DEBUG is used for showing the debug logs of the upstream projects
         # BUILD_TAG is the unique id for this test
-        envs = ' -e CI_DEBUG=true'
+        envs = envs + ' -e CI_DEBUG=true'
         envs = envs + ' -e BUILD_TAG=%s-%s' % (dovetail_config['build_tag'],
                                                testcase_name)
 
