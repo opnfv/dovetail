@@ -100,8 +100,9 @@ class Container(object):
             return None
 
         if dovetail_config['report_dest'].startswith("http"):
-            cls.logger.info("Yardstick can't push results to DB.")
-            cls.logger.info("Results will be stored with files.")
+            envs = envs + " -e DISPATCHER=http"
+            envs = envs + " -e TARGET=%s" % dovetail_config['report_dest']
+            envs = envs + " -e NODE_NAME=master"
 
         log_vol = '-v %s:%s ' % (dovetail_config['result_dir'],
                                  dovetail_config["yardstick"]['result']['log'])
