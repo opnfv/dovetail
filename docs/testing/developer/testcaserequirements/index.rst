@@ -9,17 +9,6 @@ Compliance and Verification program test case requirements
 .. toctree::
    :maxdepth: 2
 
-Version history
-===============
-
-+------------+----------+------------------+----------------------------------+
-| **Date**   | **Ver.** | **Author**       | **Comment**                      |
-|            |          |                  |                                  |
-+------------+----------+------------------+----------------------------------+
-| 2017-03-15 | 0.0.1    | Chris Price      | Draft version                    |
-|            |          |                  |                                  |
-+------------+----------+------------------+----------------------------------+
-
 CVP Test Suite Purpose and Goals
 ================================
 
@@ -69,12 +58,13 @@ The following requirements are mandatory for test to be submitted for considerat
   - Use case specification
   - Test preconditions
   - Basic test flow execution descriptor
-  - Post conditions and pass fail criteria
+  - Pass fail criteria
 
 - The following things may be documented for the test case:
 
   - Parameter border test cases descriptions
   - Fault/Error test case descriptions
+  - Post conditions where the system state may be left changed after completion
 
 New test case proposals should complete a CVP test case worksheet to ensure that all
 of these considerations are met before the test case is approved for inclusion in the
