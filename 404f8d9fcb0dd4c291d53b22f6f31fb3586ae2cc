@@ -1,0 +1,276 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_8df95c82",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "Please check the opnfv developer guide pages for the correct format for copywright headers.",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_ed02586e",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "\"using dovetail\" should be removed.  Is there another way?",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_6da9887a",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "Should this be CVP testing overview, of Dovetail test tool overview?",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_4dae0487",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "Spelling \"Dovetail\"\nI would in any case refer to this as the CVP testing framework, of which the Dovetail script is a part.  It may be worth ensuring the context of the dovetail scripts is more cleanly described here.  (Possibly a previous chapter, or move this text down)",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_0db80cc7",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "I\u0027m not sure the host needs to be seperated, maybe clarify this language and present the needed network accesses for the host running the tool suite.  I don\u0027t think we can dictate architecture, and the use of a \"jumphost\" may not be consistent across labs.  Better to refer to the \"host\" or \"dovetail host\" and describe the needed network access and system characteristics.",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_cdb194e2",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "ping may not be available from a lab host whereas https may be.  Better to have the check evaluate https availability.",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_8dcb9c52",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "Edit the configuration file to correctly describe the configuration of the SUT.  A readme or equivalent will be needed to accompany the file to describe the meaning of these parameters in more detail (in case the SUT does not use the term project to describe a tenant for instance.)",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_adc6a047",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "Be explicit, \"The CVP suite for the Danube release\" rather than putting it in ()",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_0ddfac0e",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "As tolls like Python do not provide backward comaptibility and behaviours can change across versions this should be explicit on which version of Python (and Docker) should be used.  We should not have an \"or later\" as we don\u0027t know how they will behave in 12 months time.",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_4dc5a43a",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "Good to show the expected printed result of the command.",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_2de2b0d5",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "again show the expected printout.",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_edeb38ae",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "Again we should provide scripts to instal the specific versions of these tools we used in our system preparation.",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_4ddcc412",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "why not use pip/apt/yum for these steps?  Can we be sure we have all dependencies on the system for this process to work?",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_6dd748ee",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "Again I don\u0027t think \"jumphost\" is the right term to use.  It is overloaded in this context and may be confusing.",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_0d06cc86",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "debug and proposed tests should not be visible in the released version of the tool.  It\u0027s fine to have that in the development tree but when we publish we need to be concise on what is in scope of out.  This will lead to confusion and should b removed.",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_cdff5466",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-07T11:39:08Z",
+      "side": 1,
+      "message": "This should be documented elsewhere.  More any \"exprimental\" or \"debug\" instructions to an appendix or other document.  Let\u0027s make this simple and clean with regard to how to run the CVP as released.",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
