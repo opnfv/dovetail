@@ -361,3 +361,19 @@ tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_update_volum
 Optional CVP Test Areas
 ========================
 
+
+---------------------------
+Test Area High Availability
+---------------------------
+
+Verify high availability of OpenStack controller services
+------------------------------------------------------
+
+| opnfv.ha.tc001.nova-api_service_down
+| opnfv.ha.tc003.neutron-server_service_down
+| opnfv.ha.tc004.keystone_service_down
+| opnfv.ha.tc005.glance-api_service_down
+| opnfv.ha.tc006.cinder-api_service_down
+| opnfv.ha.tc009.cpu_overload
+| opnfv.ha.tc010.disk_I/O_block
+| opnfv.ha.tc011.load_balance_service_down
