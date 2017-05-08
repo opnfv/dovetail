@@ -1,14 +1,15 @@
 From: Alexandru Nemes <alexandru.nemes@enea.com>
-Date: Mon, 24 Apr 2017 11:53:42 +0300
-Subject: [PATCH] Add AArch64 support for Dovetail docker file
+Date: Mon, 8 May 2017 19:04:37 +0300
+Subject: [PATCH] Dovetail aarch64 patch
 
+Change-Id: I0f986a33208844e049b5e1da2af17d6af5c2b34c
 Signed-off-by: Alexandru Nemes <alexandru.nemes@enea.com>
 ---
- docker/Dockerfile | 8 +++++---
- 1 file changed, 5 insertions(+), 3 deletions(-)
+ docker/Dockerfile | 18 ++++++------------
+ 1 file changed, 6 insertions(+), 12 deletions(-)
 
 diff --git a/docker/Dockerfile b/docker/Dockerfile
-index 8cc15e0..bbab012 100644
+index 499624f..bbab012 100644
 --- a/docker/Dockerfile
 +++ b/docker/Dockerfile
 @@ -1,6 +1,6 @@
@@ -18,10 +19,24 @@ index 8cc15e0..bbab012 100644
 +FROM aarch64/ubuntu:16.04
 +MAINTAINER Armband team <armband@enea.com>
 +LABEL version="0.1" description="OPNFV Dovetail AArch64 Docker Container"
-
+ 
  RUN \
      apt-get update \
-@@ -28,6 +28,8 @@ RUN \
+@@ -13,12 +13,9 @@ RUN \
+         python-mock \
+         python-pip \
+         apt-transport-https \
+-        wget \
+         --no-install-recommends \
+ && \
+-    apt-get update
+-
+-RUN wget -qO- https://get.docker.com/ | sh
++    apt-get update &&  apt-get -y install docker.io
+ 
+ ENV HOME /home/opnfv
+ ENV REPOS_DIR ${HOME}/dovetail
+@@ -31,6 +28,8 @@ RUN \
  && \
      mkdir -p ${REPOS_DIR}/results \
  && \
@@ -30,3 +45,14 @@ index 8cc15e0..bbab012 100644
      pip install -U pip \
  && \
      pip install -r ${REPOS_DIR}/requirements.txt \
+@@ -40,8 +39,3 @@ RUN \
+     pip install -e .
+ 
+ WORKDIR ${REPOS_DIR}/dovetail
+-
+-# get db schema from opnfv sites
+-RUN mkdir -p ${REPOS_DIR}/dovetail/utils/local_db
+-ADD get_db_schema.py ${REPOS_DIR}/dovetail/utils/local_db
+-RUN cd ${REPOS_DIR}/dovetail/utils/local_db && python get_db_schema.py
+
+
