@@ -1,0 +1,22 @@
+---
+docker_images:
+  dovetail:
+    domain: opnfv
+    tag: latest
+    store_name: image_dovetail.docker
+  functest:
+    domain: opnfv
+    tag: latest
+    store_name: image_functest.docker
+  yardstick:
+    domain: opnfv
+    tag: latest
+    store_name: image_yardstick.docker
+  testapi:
+    domain: opnfv
+    tag: latest
+    store_name: image_testapi.docker
+  mongo:
+    tag: 3.5
+    store_name: image_mongo.docker
+docker_save_path: /home/opnfv/dovetail/results/
