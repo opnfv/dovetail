@@ -1,6 +1,6 @@
-FROM ubuntu:14.04
-MAINTAINER Leo Wang <grakiss.wanglei@huawei.com>
-LABEL version="0.1" description="OPNFV Dovetail Docker Container"
+FROM aarch64/ubuntu:16.04
+MAINTAINER Armband team <armband@enea.com>
+LABEL version="0.1" description="OPNFV Dovetail AArch64 Docker Container"
 
 RUN \
     apt-get update \
@@ -13,12 +13,9 @@ RUN \
         python-mock \
         python-pip \
         apt-transport-https \
-        wget \
         --no-install-recommends \
 && \
-    apt-get update
-
-RUN wget -qO- https://get.docker.com/ | sh
+    apt-get update &&  apt-get -y install docker.io
 
 ENV HOME /home/opnfv
 ENV REPOS_DIR ${HOME}/dovetail
@@ -31,6 +28,8 @@ RUN \
 && \
     mkdir -p ${REPOS_DIR}/results \
 && \
+    pip install -U setuptools \
+&& \
     pip install -U pip \
 && \
     pip install -r ${REPOS_DIR}/requirements.txt \
@@ -40,8 +39,3 @@ RUN \
     pip install -e .
 
 WORKDIR ${REPOS_DIR}/dovetail
-
-# get db schema from opnfv sites
-RUN mkdir -p ${REPOS_DIR}/dovetail/utils/local_db
-ADD get_db_schema.py ${REPOS_DIR}/dovetail/utils/local_db
-RUN cd ${REPOS_DIR}/dovetail/utils/local_db && python get_db_schema.py
