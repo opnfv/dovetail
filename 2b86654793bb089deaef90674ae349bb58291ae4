@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_c81c2216",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 400,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-05-08T08:35:43Z",
+      "side": 1,
+      "message": "what are these names? are there three testcases? for five?",
+      "range": {
+        "startLine": 398,
+        "startChar": 0,
+        "endLine": 400,
+        "endChar": 33
+      },
+      "revId": "2b86654793bb089deaef90674ae349bb58291ae4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
