@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_edba586d",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-05-08T03:59:59Z",
+      "side": 1,
+      "message": "To my knowledge, this is consistent with the developer guidelines. https://wiki.opnfv.org/display/DEV/Contribution+Guidelines#ContributionGuidelines-Documentation\nDo you mean the copywriters name shouldn\u0027t be OPNFV or something else?",
+      "parentUuid": "9ab8dda7_8df95c82",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_ed02586e",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 3
