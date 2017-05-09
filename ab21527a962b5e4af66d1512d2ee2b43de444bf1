@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_5ec5483a",
+        "filename": "dovetail/testcase/sdnvpn.tc003.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-09T11:56:30Z",
+      "side": 1,
+      "message": "this test case should be removed from the test case suite because it is too closely tied to ODL.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "ab21527a962b5e4af66d1512d2ee2b43de444bf1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
