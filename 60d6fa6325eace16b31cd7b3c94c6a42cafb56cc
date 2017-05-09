@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_be8564ae",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2997
+      },
+      "writtenOn": "2017-05-09T13:45:07Z",
+      "side": 1,
+      "message": "We already have AArch64 Dockerfile, I propose something along the lines of \"Fix AArch64 nested Docker install\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 44
+      },
+      "revId": "60d6fa6325eace16b31cd7b3c94c6a42cafb56cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_7e8feccc",
+        "filename": "docker/Dockerfile.aarch64.patch",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2997
+      },
+      "writtenOn": "2017-05-09T13:45:07Z",
+      "side": 1,
+      "message": "I think we should keep the old commit message here.",
+      "range": {
+        "startLine": 3,
+        "startChar": 17,
+        "endLine": 3,
+        "endChar": 39
+      },
+      "revId": "60d6fa6325eace16b31cd7b3c94c6a42cafb56cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_5e9468e1",
+        "filename": "docker/Dockerfile.aarch64.patch",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2997
+      },
+      "writtenOn": "2017-05-09T13:45:07Z",
+      "side": 1,
+      "message": "This was automatically injeected by git-review, it should be removed.",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 52
+      },
+      "revId": "60d6fa6325eace16b31cd7b3c94c6a42cafb56cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_1ebef065",
+        "filename": "docker/Dockerfile.aarch64.patch",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2997
+      },
+      "writtenOn": "2017-05-09T13:45:07Z",
+      "side": 1,
+      "message": "Let\u0027s not remove wget, even though we don\u0027t use it now in AArch64 context, maybe it will be used later.",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 15
+      },
+      "revId": "60d6fa6325eace16b31cd7b3c94c6a42cafb56cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3ec174e4",
+        "filename": "docker/Dockerfile.aarch64.patch",
+        "patchSetId": 7
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 2997
+      },
+      "writtenOn": "2017-05-09T13:45:07Z",
+      "side": 1,
+      "message": "please remove extra lines",
+      "revId": "60d6fa6325eace16b31cd7b3c94c6a42cafb56cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
