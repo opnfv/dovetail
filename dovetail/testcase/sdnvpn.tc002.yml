@@ -1,0 +1,12 @@
+---
+dovetail.sdnvpn.tc002:
+  name: dovetail.sdnvpn.tc002
+  objective: Separation of tenant networks through association to different VPNs
+  validate:
+    type: functest
+    testcase: bgpvpn
+    pre_copy:
+      src_file: sdnvpn_config_testcase2.yaml
+      dest_path: /home/opnfv/repos/sdnvpn/sdnvpn/test/functest/config.yaml
+  report:
+    sub_testcase_list:

@@ -21,6 +21,7 @@ testarea_supported:
   - ha
   - ipv6
   - nfvi
+  - sdnvpn
   - vimops
 
 functest_testsuite:
@@ -32,6 +33,7 @@ functest_testsuite:
   - promise
 
 functest_testcase:
+  - bgpvpn
   - connection_check
   - api_check
   - snaps_health_check
