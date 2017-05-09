@@ -22,6 +22,30 @@
       "revId": "2b86654793bb089deaef90674ae349bb58291ae4",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_feb43cd2",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 400,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-09T11:53:33Z",
+      "side": 1,
+      "message": "One note regarding progress: this patchset defines the scope the SDNVPN test cases. Hence, patchset https://gerrit.opnfv.org/gerrit/#/c/34193 should have only been merged AFTER this one here has been approved.\n\nMoreover, one comment regarding the selected test cases: this list is missing test case 8 (should be added). However, in my opinion, test case 3 (as merged in the other patchset) should NOT be included as it is too closely tied to ODL.",
+      "parentUuid": "9ab8dda7_c81c2216",
+      "range": {
+        "startLine": 398,
+        "startChar": 0,
+        "endLine": 400,
+        "endChar": 33
+      },
+      "revId": "2b86654793bb089deaef90674ae349bb58291ae4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
