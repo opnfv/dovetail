@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_1deef522",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-10T04:03:08Z",
+      "side": 1,
+      "message": "1, this has missed 18 testcases, please refer to https://refstack.openstack.org/api/v1/guidelines/2016.08/tests?target\u003dcompute\u0026type\u003drequired\u0026alias\u003dtrue\u0026flag\u003dfalse and search  \"NetworksTestJSON\"  also u can find in https://git.opnfv.org/dovetail/tree/docs/testing/user/testspecification/vimoperationsnetwork/index.rst , although these 18 testcases are alias\n2,refstack team told that when run with refstack alias should \u003dtrue, otherwise, there will be errors.",
+      "range": {
+        "startLine": 199,
+        "startChar": 1,
+        "endLine": 200,
+        "endChar": 34
+      },
+      "revId": "56487201706c492d0faa8c9235244a04e6535e2e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
