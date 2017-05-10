@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_191a8a7d",
+        "filename": "docker/Dockerfile.aarch64.patch",
+        "patchSetId": 9
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-05-10T02:11:35Z",
+      "side": 1,
+      "message": "white space?",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 1
+      },
+      "revId": "deb78401c7bcfc4940c1bcc8782b295d0b586c7e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
