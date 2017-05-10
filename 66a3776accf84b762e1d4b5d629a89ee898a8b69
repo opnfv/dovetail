@@ -1,0 +1,225 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_401b261b",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-10T16:58:40Z",
+      "side": 1,
+      "message": "...will evaluate high availability by killing...",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_60166af3",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-10T16:58:40Z",
+      "side": 1,
+      "message": "...then checking whether requests to the affected Openstack service are processed successfully, and ...",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_00d52e1b",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-10T16:58:40Z",
+      "side": 1,
+      "message": "This test area references the following ...\nI think \u0027support\u0027 is too strong - more like an informative reference??",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_20d87252",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-10T16:58:40Z",
+      "side": 1,
+      "message": "test area",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_c0de363f",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-10T16:58:40Z",
+      "side": 1,
+      "message": "Attackers - same comment to all terms below",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_e0e1fafe",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-10T16:58:40Z",
+      "side": 1,
+      "message": "Should we specify the actual value?",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_00bc4edb",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-10T16:58:40Z",
+      "side": 1,
+      "message": "Is it NFVi and VIM?",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_20bf12d2",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-10T16:58:40Z",
+      "side": 1,
+      "message": "Test Area?",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_c0b5d6ee",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-10T16:58:40Z",
+      "side": 1,
+      "message": "test area ... sequential manner.\nCan a subsequent test continue/succeed after a case failed? ie are test cases have some dependencies? if they have, a brief intro may be useful here.",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_20a632c2",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-10T16:58:40Z",
+      "side": 1,
+      "message": "check that target ...",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_e0b81ae7",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-10T16:58:40Z",
+      "side": 1,
+      "message": "... run as an independent process.",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_80cfde7e",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-10T16:58:40Z",
+      "side": 1,
+      "message": "It seems SLA parameters are specific in this test case. In that case, should we define the specific parameters here with definitive values?",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_40c9e676",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-10T16:58:40Z",
+      "side": 1,
+      "message": "Some of the previous comments all apply to all the remaining test cases, I\u0027m skipping them.",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
