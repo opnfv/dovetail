@@ -19,6 +19,98 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_6672024b",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "IPv6",
+      "range": {
+        "startLine": 21,
+        "startChar": 8,
+        "endLine": 21,
+        "endChar": 12
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_0691c646",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "+Home is part of hyperlink",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 23,
+        "endChar": 49
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_26940a36",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "I",
+      "range": {
+        "startLine": 37,
+        "startChar": 9,
+        "endLine": 37,
+        "endChar": 10
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_c69ace62",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "NFVI",
+      "range": {
+        "startLine": 38,
+        "startChar": 2,
+        "endLine": 38,
+        "endChar": 6
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_26316aa2",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -30,6 +122,24 @@
       "writtenOn": "2017-05-11T18:09:19Z",
       "side": 1,
       "message": "NFVi and VIM\nan -\u003e a Pharos ...",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_86a4d6a6",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "NFVI and VIM deployed with a Pharos compliant infrastructure.",
+      "parentUuid": "9ab8dda7_26316aa2",
       "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -53,6 +163,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_46aede86",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "The test suite is structures based on network, port and subnet operations? Is there any specific order that IPv6 tests have to be run?",
+      "parentUuid": "9ab8dda7_461b3e1b",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_06d5461b",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -70,6 +198,52 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_c6b16ee2",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "To be Pharos compliant deployments must be on bare-metal",
+      "range": {
+        "startLine": 74,
+        "startChar": 31,
+        "endLine": 74,
+        "endChar": 41
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_26bbaac5",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "Why isn\u0027t controller HA compulsory?",
+      "range": {
+        "startLine": 75,
+        "startChar": 18,
+        "endLine": 75,
+        "endChar": 30
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_26d88a52",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -81,6 +255,167 @@
       "writtenOn": "2017-05-11T18:09:19Z",
       "side": 1,
       "message": "Upper case \"Create\" etc. to match other parts of this document.",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_46c57e3a",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "Does it mean all nodes shall have Internet (public) connectivity ... or what is the functionality required to be an external network?",
+      "range": {
+        "startLine": 128,
+        "startChar": 14,
+        "endLine": 128,
+        "endChar": 47
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_66c0c22a",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "What information must be shown?",
+      "range": {
+        "startLine": 188,
+        "startChar": 14,
+        "endLine": 188,
+        "endChar": 30
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_06df860e",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "Does the test pass if API returns \"success\" or do we test the port was actually created by passing packets?",
+      "range": {
+        "startLine": 298,
+        "startChar": 17,
+        "endLine": 298,
+        "endChar": 37
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_86d296fe",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "Information ref?",
+      "range": {
+        "startLine": 341,
+        "startChar": 20,
+        "endLine": 341,
+        "endChar": 31
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_0606a686",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 352,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "\"or\" ... as mentioned earlier what is justification for virtualized?",
+      "range": {
+        "startLine": 352,
+        "startChar": 42,
+        "endLine": 352,
+        "endChar": 44
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_062d46fe",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 514,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "Doesn\u0027t test any function of the security group. For future will we test that it is functional?",
+      "range": {
+        "startLine": 514,
+        "startChar": 17,
+        "endLine": 514,
+        "endChar": 71
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_26308a55",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 548,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-11T20:29:58Z",
+      "side": 1,
+      "message": "Will we test rules in future?",
+      "range": {
+        "startLine": 548,
+        "startChar": 17,
+        "endLine": 548,
+        "endChar": 66
+      },
       "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
