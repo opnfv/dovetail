@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_260acad2",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-11T18:09:19Z",
+      "side": 1,
+      "message": "delete \"provided by OPNFV platform\".",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_26316aa2",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-11T18:09:19Z",
+      "side": 1,
+      "message": "NFVi and VIM\nan -\u003e a Pharos ...",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_461b3e1b",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-11T18:09:19Z",
+      "side": 1,
+      "message": "Maybe describe if the test cases are dependent or related to each other? If they are entirely independent, then we may say so here too.",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_06d5461b",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-11T18:09:19Z",
+      "side": 1,
+      "message": "The description below is not too clear - consider revising it to make it more clear.",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_26d88a52",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-11T18:09:19Z",
+      "side": 1,
+      "message": "Upper case \"Create\" etc. to match other parts of this document.",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_a6ca3a6c",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 860,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-11T18:09:19Z",
+      "side": 1,
+      "message": "Can we rewrite this language to remove the notion of \"scenario\" because it means nothing to a commercial product (SUT). For example, we may say something like \"This test case requires additional software component support such as ping6 and vRouter that are not found in the community distribution of the Opendaylight project\u0027s Boron or earlier releases... This may or may not apply to a given SUT\" - And any other technical details applicable to a SUT.  If additional pre-configuration is required for the tester, please let us know so that we can put it into the user guide for the testers.",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
