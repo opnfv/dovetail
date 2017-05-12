@@ -155,6 +155,75 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_31f3e29f",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "the control nodes",
+      "range": {
+        "startLine": 68,
+        "startChar": 10,
+        "endLine": 68,
+        "endChar": 26
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_51ee96b5",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "then checks whether requests to the affected Openstack service are still processed successfully",
+      "range": {
+        "startLine": 69,
+        "startChar": 77,
+        "endLine": 70,
+        "endChar": 74
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_71407aa5",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "At least one controller node?",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 32
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_20a632c2",
         "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
         "patchSetId": 2
@@ -166,6 +235,52 @@
       "writtenOn": "2017-05-10T16:58:40Z",
       "side": 1,
       "message": "check that target ...",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_11301e55",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "connect to",
+      "range": {
+        "startLine": 80,
+        "startChar": 17,
+        "endLine": 80,
+        "endChar": 28
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_511c56c1",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "can you specify in a bit more detail what a monitor does? For instance, for the SDN VPN test cases, I added a \"methodology for verifying the connectivity\" section which explains this a bit.",
+      "range": {
+        "startLine": 81,
+        "startChar": 17,
+        "endLine": 81,
+        "endChar": 35
+      },
       "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -189,6 +304,29 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_b136f250",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "connect to",
+      "range": {
+        "startLine": 83,
+        "startChar": 17,
+        "endLine": 83,
+        "endChar": 28
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_80cfde7e",
         "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
         "patchSetId": 2
@@ -206,6 +344,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_d1392642",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "yes, I think the values should be in this document",
+      "parentUuid": "9ab8dda7_80cfde7e",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_40c9e676",
         "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
         "patchSetId": 2
@@ -217,6 +373,208 @@
       "writtenOn": "2017-05-10T16:58:40Z",
       "side": 1,
       "message": "Some of the previous comments all apply to all the remaining test cases, I\u0027m skipping them.",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_913bae37",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "9ab8dda7_40c9e676",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3121a2fb",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "at least one",
+      "range": {
+        "startLine": 290,
+        "startChar": 0,
+        "endLine": 290,
+        "endChar": 31
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_f1130ab6",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "can you add one more sentence about what this means? E.g., does the script create load on all CPUs? How does it do that (busy loop?)?",
+      "range": {
+        "startLine": 298,
+        "startChar": 69,
+        "endLine": 298,
+        "endChar": 95
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_514536b1",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "can you specify which tool or mechanism is used for blocking and unblocking I/O? I am just courious is that is something special which might not be available on all cloud controllers",
+      "range": {
+        "startLine": 340,
+        "startChar": 69,
+        "endLine": 340,
+        "endChar": 99
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_1117bea4",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "add blank",
+      "range": {
+        "startLine": 368,
+        "startChar": 67,
+        "endLine": 368,
+        "endChar": 70
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_b10d9292",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "can we name this more specifically (there might be differerent load balancers in a NFVi): OpenStack control traffic load balancer (or something like this)",
+      "range": {
+        "startLine": 368,
+        "startChar": 48,
+        "endLine": 368,
+        "endChar": 68
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_d11046aa",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "at least one",
+      "range": {
+        "startLine": 380,
+        "startChar": 0,
+        "endLine": 380,
+        "endChar": 22
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_71271a13",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 385,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "connect to",
+      "range": {
+        "startLine": 385,
+        "startChar": 16,
+        "endLine": 385,
+        "endChar": 28
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_9122ceff",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-12T12:43:34Z",
+      "side": 1,
+      "message": "connect to",
+      "range": {
+        "startLine": 388,
+        "startChar": 17,
+        "endLine": 388,
+        "endChar": 28
+      },
       "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
