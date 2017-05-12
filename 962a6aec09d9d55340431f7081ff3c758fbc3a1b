@@ -244,6 +244,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_f15f8ae3",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-05-12T09:25:06Z",
+      "side": 1,
+      "message": "the IPv6 test cases are included in the tempest testcases. so,they have no relatioship with the HA or non-HA controllers.in my opinion.",
+      "parentUuid": "9ab8dda7_26bbaac5",
+      "range": {
+        "startLine": 75,
+        "startChar": 18,
+        "endLine": 75,
+        "endChar": 30
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_26d88a52",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
