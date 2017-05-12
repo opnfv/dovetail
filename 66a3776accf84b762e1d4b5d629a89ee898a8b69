@@ -25,6 +25,23 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_3159a25a",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases outline.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-12T18:02:07Z",
+      "side": 1,
+      "message": "opnfv.ha.tc019.control_node_openstack_service_nova ??",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_11657e44",
         "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
         "patchSetId": 2
