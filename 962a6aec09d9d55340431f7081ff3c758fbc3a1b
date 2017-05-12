@@ -65,6 +65,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_11d57e42",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 404
+      },
+      "writtenOn": "2017-05-12T10:47:15Z",
+      "side": 1,
+      "message": "Agree with Trevor. \"+Home\" should be part of hyperlink.",
+      "parentUuid": "9ab8dda7_0691c646",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 23,
+        "endChar": 49
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_26940a36",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -104,6 +128,29 @@
         "startChar": 2,
         "endLine": 38,
         "endChar": 6
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_d1ce06b4",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 404
+      },
+      "writtenOn": "2017-05-12T10:47:15Z",
+      "side": 1,
+      "message": "I hope it is \"Card\" and not \"Controller\".",
+      "range": {
+        "startLine": 45,
+        "startChar": 35,
+        "endLine": 45,
+        "endChar": 45
       },
       "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -221,6 +268,29 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_11d81e52",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 404
+      },
+      "writtenOn": "2017-05-12T10:47:15Z",
+      "side": 1,
+      "message": "It should be \"or\" right?",
+      "range": {
+        "startLine": 74,
+        "startChar": 42,
+        "endLine": 74,
+        "endChar": 44
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_26bbaac5",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -308,6 +378,52 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_b1def23d",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 404
+      },
+      "writtenOn": "2017-05-12T10:47:15Z",
+      "side": 1,
+      "message": "or",
+      "range": {
+        "startLine": 139,
+        "startChar": 42,
+        "endLine": 139,
+        "endChar": 44
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_d1e126ff",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 404
+      },
+      "writtenOn": "2017-05-12T10:47:15Z",
+      "side": 1,
+      "message": "or",
+      "range": {
+        "startLine": 170,
+        "startChar": 41,
+        "endLine": 170,
+        "endChar": 44
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_66c0c22a",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -319,6 +435,30 @@
       "writtenOn": "2017-05-11T20:29:58Z",
       "side": 1,
       "message": "What information must be shown?",
+      "range": {
+        "startLine": 188,
+        "startChar": 14,
+        "endLine": 188,
+        "endChar": 30
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_71e87ae2",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 404
+      },
+      "writtenOn": "2017-05-12T10:47:15Z",
+      "side": 1,
+      "message": "IMO, information includes the details associated with a resource in picture. For example \"test_show_network\" would display the network info, whereas test_show_subnet would display the subnet info.",
+      "parentUuid": "9ab8dda7_66c0c22a",
       "range": {
         "startLine": 188,
         "startChar": 14,
@@ -347,6 +487,53 @@
         "startChar": 17,
         "endLine": 298,
         "endChar": 37
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_b1b592ef",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 404
+      },
+      "writtenOn": "2017-05-12T10:47:15Z",
+      "side": 1,
+      "message": "All these tests are \"api\" tests which mainly validate the Neutron REST API. So, they will not send any traffic on the port.",
+      "parentUuid": "9ab8dda7_06df860e",
+      "range": {
+        "startLine": 298,
+        "startChar": 17,
+        "endLine": 298,
+        "endChar": 37
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_71cf1a80",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 404
+      },
+      "writtenOn": "2017-05-12T10:47:15Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 323,
+        "startChar": 42,
+        "endLine": 323,
+        "endChar": 44
       },
       "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -423,6 +610,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_91cace6c",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 514,
+      "author": {
+        "id": 404
+      },
+      "writtenOn": "2017-05-12T10:47:15Z",
+      "side": 1,
+      "message": "Tempest scenario tests would actually validate the use-cases (like ping6 to the router interface, east-west routing support, IPAM etc). In the API tests, we mainly validate if the Neutron API supports the REST interface.",
+      "parentUuid": "9ab8dda7_062d46fe",
+      "range": {
+        "startLine": 514,
+        "startChar": 17,
+        "endLine": 514,
+        "endChar": 71
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_26308a55",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -457,6 +668,30 @@
       "writtenOn": "2017-05-12T03:11:04Z",
       "side": 1,
       "message": "@Sridhar can u double check this and give more details if needed?",
+      "range": {
+        "startLine": 603,
+        "startChar": 0,
+        "endLine": 605,
+        "endChar": 80
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_31c9a278",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 605,
+      "author": {
+        "id": 404
+      },
+      "writtenOn": "2017-05-12T10:47:15Z",
+      "side": 1,
+      "message": "Yes @Jun, thats correct. All the tempest IPv6 scenario tests in test_network_v6 file validate one common use-case where they try to ping6 to the router internal interface (along with other validations that are specific to the test-case).\n\nIn ODL Boron release, we support IPv6 IPAM (IPAddress Assignment), IPv6 Security Groups, IPv6 east-west routing.\n\nSupport for IPv6 north-south communication and ping6 support for neutron router-interface is currently under progress.",
+      "parentUuid": "9ab8dda7_c66e4e01",
       "range": {
         "startLine": 603,
         "startChar": 0,
