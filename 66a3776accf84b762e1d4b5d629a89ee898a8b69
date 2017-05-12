@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "9ab8dda7_d15e0676",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases outline.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-12T13:44:53Z",
+      "side": 1,
+      "message": "Place test cases in \"Optional\" first, please (as per other comments)",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 9
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_11657e44",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-12T13:44:53Z",
+      "side": 1,
+      "message": "Should be more specific: \"of OpenStack control services\", I think.\n\nWhat is in scope for HA tests:\n- HA for control services, SDN controller, storage\n- HA instances (supported by hypervisor)\n- Application resiliency (fault detection, mitigation)?\n\nIt seems that the 2nd and 3rd are out of scope for Dovetail for now, which is why I suggest the added detail.",
+      "range": {
+        "startLine": 16,
+        "startChar": 75,
+        "endLine": 17,
+        "endChar": 12
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_401b261b",
         "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
         "patchSetId": 2
@@ -30,6 +76,29 @@
       "writtenOn": "2017-05-10T16:58:40Z",
       "side": 1,
       "message": "...then checking whether requests to the affected Openstack service are processed successfully, and ...",
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_b15b5286",
+        "filename": "docs/testing/developer/testscope/HA Testcases/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-12T13:44:53Z",
+      "side": 1,
+      "message": "Should also require bringing down a control node completely to verify control service integrity, eventually.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 77
+      },
       "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -574,6 +643,52 @@
         "startChar": 17,
         "endLine": 388,
         "endChar": 28
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3178c2f1",
+        "filename": "docs/testing/developer/testscope/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-12T13:44:53Z",
+      "side": 1,
+      "message": "We really need to consider test areas in 3 steps:\n1. Propose addition of a test area for addition, and ensure that the test area is in scope for the CVP\n2. Propose individual test cases as optional tests, and ensure that they satisfy test case requirements, both from the CVP and the Dovetail test case and documentation requirements\n3. Propose individual test cases to be moved from optional to mandatory, once they have been accepted into the tree\n\nWith this procedure, these tests should initially all be listed as optional, until we ensure that they are all documented to the level expected by the Dovetail committers.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 24
+      },
+      "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_f161ca39",
+        "filename": "docs/testing/developer/testscope/HA testcases.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-12T13:44:53Z",
+      "side": 1,
+      "message": "Where can I find documentation for these test cases? Do I need to look in the Yardstick repo? I am happy to have test cases referred to or pulled in from Functest and Yardstick, but we should have a description for each test case here.",
+      "range": {
+        "startLine": 28,
+        "startChar": 1,
+        "endLine": 28,
+        "endChar": 37
       },
       "revId": "66a3776accf84b762e1d4b5d629a89ee898a8b69",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
