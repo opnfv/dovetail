@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_0ca005f3",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-12T20:52:31Z",
+      "side": 1,
+      "message": "Sorry I didn\u0027t realize this is how it is in refstack too. Well, we can ignore it then, i guess it\u0027s another way of being consistent.",
+      "parentUuid": "9ab8dda7_91088e2e",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_4c191d78",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
