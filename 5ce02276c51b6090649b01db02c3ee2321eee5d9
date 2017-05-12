@@ -16,6 +16,40 @@
       "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_4c191d78",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-12T19:51:27Z",
+      "side": 1,
+      "message": "I assume this post condition matches very well the pre-condition for the next test case.  Where tests are sequential it is good practice for these pre/post condition texts to match accordingly.",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_2c1e2964",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-12T19:51:27Z",
+      "side": 1,
+      "message": "not sure what the purpose of \"tc2\" is in this context.  Is it the second test case that evaluates tenant separation?  Can we not find a canonical name for the test cases?  Using any form of sequence number generally only works for one iteration.",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
