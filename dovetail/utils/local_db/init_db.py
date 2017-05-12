@@ -60,6 +60,7 @@ def cases():
                     post(target, c)
             except:
                 print("useless data")
+    add_case("functest", "tempest_custom")
 
 
 def add_pod(name, mode):
@@ -72,6 +73,15 @@ def add_pod(name, mode):
     }
     pod_url = '{}/pods'.format(target_url)
     post(pod_url, data)
+
+
+def add_case(project, case):
+    data = {
+        "project_name": project,
+        "name": case,
+    }
+    case_url = '{}/projects/{}/cases'.format(target_url, project)
+    post(case_url, data)
 
 
 if __name__ == '__main__':
