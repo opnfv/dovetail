@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_512bf693",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-12T18:23:35Z",
+      "side": 1,
+      "message": "NFVI and VIM",
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_111d7e73",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-12T18:23:35Z",
+      "side": 1,
+      "message": "Rewrite to have complete sentence and clarify meaning.",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 31
+      },
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_f119ca88",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-12T18:23:35Z",
+      "side": 1,
+      "message": "rewrite and fix grammar - the meaning of this text is not clear without a complete sentence.\n\nSame for all these test actions.",
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_b1135265",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-12T18:23:35Z",
+      "side": 1,
+      "message": "I feel this vanilla text is inappropriate here - we should be able to write down simpler and straight-forward text on pass/fail criteria in this case?",
+      "range": {
+        "startLine": 100,
+        "startChar": 0,
+        "endLine": 102,
+        "endChar": 74
+      },
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_d1160655",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-12T18:23:35Z",
+      "side": 1,
+      "message": "We really should do more than this, starting with a complete sentence and describing what it does, and what it checks.",
+      "range": {
+        "startLine": 127,
+        "startChar": 17,
+        "endLine": 127,
+        "endChar": 38
+      },
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
