@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_91088e2e",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-12T19:45:36Z",
+      "side": 1,
+      "message": "1) should we be consistent with \"Glance v2 API\" ? 2) CRUD is spread out elsewhere already. Why is this single case called CRUD? maybe better to be in the next group below \"Image list\"?",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
