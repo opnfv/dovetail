@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_973ddebd",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_260acad2",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_6672024b",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -30,6 +48,30 @@
       "writtenOn": "2017-05-11T20:29:58Z",
       "side": 1,
       "message": "IPv6",
+      "range": {
+        "startLine": 21,
+        "startChar": 8,
+        "endLine": 21,
+        "endChar": 12
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_374c3270",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_6672024b",
       "range": {
         "startLine": 21,
         "startChar": 8,
@@ -89,6 +131,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_5747664b",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_11d57e42",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 23,
+        "endChar": 49
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_26940a36",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -100,6 +166,30 @@
       "writtenOn": "2017-05-11T20:29:58Z",
       "side": 1,
       "message": "I",
+      "range": {
+        "startLine": 37,
+        "startChar": 9,
+        "endLine": 37,
+        "endChar": 10
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_f7753a98",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_26940a36",
       "range": {
         "startLine": 37,
         "startChar": 9,
@@ -135,6 +225,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_1779ee92",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_c69ace62",
+      "range": {
+        "startLine": 38,
+        "startChar": 2,
+        "endLine": 38,
+        "endChar": 6
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_d1ce06b4",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -146,6 +260,30 @@
       "writtenOn": "2017-05-12T10:47:15Z",
       "side": 1,
       "message": "I hope it is \"Card\" and not \"Controller\".",
+      "range": {
+        "startLine": 45,
+        "startChar": 35,
+        "endLine": 45,
+        "endChar": 45
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_b76fc2c4",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_d1ce06b4",
       "range": {
         "startLine": 45,
         "startChar": 35,
@@ -193,6 +331,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_d77276ac",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_86a4d6a6",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_461b3e1b",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -222,6 +378,24 @@
       "side": 1,
       "message": "The test suite is structures based on network, port and subnet operations? Is there any specific order that IPv6 tests have to be run?",
       "parentUuid": "9ab8dda7_461b3e1b",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_77694abd",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done.\n\nThe test suite is structured based on network, port and subnet operations. Each test case\nis able to run independently, i.e. irrelevant of the state created by a previous test.",
+      "parentUuid": "9ab8dda7_46aede86",
       "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -279,6 +453,54 @@
       "writtenOn": "2017-05-12T10:47:15Z",
       "side": 1,
       "message": "It should be \"or\" right?",
+      "range": {
+        "startLine": 74,
+        "startChar": 42,
+        "endLine": 74,
+        "endChar": 44
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3763d2dd",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Here we meant it can support bare metal (Pharos-compliant), but we can support more than it (i.e. virtual).",
+      "parentUuid": "9ab8dda7_c6b16ee2",
+      "range": {
+        "startLine": 74,
+        "startChar": 31,
+        "endLine": 74,
+        "endChar": 41
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_9764fee5",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done \"or\".",
+      "parentUuid": "9ab8dda7_11d81e52",
       "range": {
         "startLine": 74,
         "startChar": 42,
@@ -355,6 +577,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_575e8613",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_26d88a52",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_46c57e3a",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -366,6 +606,30 @@
       "writtenOn": "2017-05-11T20:29:58Z",
       "side": 1,
       "message": "Does it mean all nodes shall have Internet (public) connectivity ... or what is the functionality required to be an external network?",
+      "range": {
+        "startLine": 128,
+        "startChar": 14,
+        "endLine": 128,
+        "endChar": 47
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_f79c5ac2",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "In Tempest, it verifies user can see external networks but not subnets",
+      "parentUuid": "9ab8dda7_46c57e3a",
       "range": {
         "startLine": 128,
         "startChar": 14,
@@ -401,6 +665,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_17a00ef3",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_b1def23d",
+      "range": {
+        "startLine": 139,
+        "startChar": 42,
+        "endLine": 139,
+        "endChar": 44
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_d1e126ff",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -412,6 +700,30 @@
       "writtenOn": "2017-05-12T10:47:15Z",
       "side": 1,
       "message": "or",
+      "range": {
+        "startLine": 170,
+        "startChar": 41,
+        "endLine": 170,
+        "endChar": 44
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_b7a6e20e",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_d1e126ff",
       "range": {
         "startLine": 170,
         "startChar": 41,
@@ -541,6 +853,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_d7a916e0",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_71cf1a80",
+      "range": {
+        "startLine": 323,
+        "startChar": 42,
+        "endLine": 323,
+        "endChar": 44
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_86d296fe",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -564,6 +900,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_77b06a43",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Information of a Neutron port, such as id, created_at, updated_at etc.",
+      "parentUuid": "9ab8dda7_86d296fe",
+      "range": {
+        "startLine": 341,
+        "startChar": 20,
+        "endLine": 341,
+        "endChar": 31
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_0606a686",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -575,6 +935,30 @@
       "writtenOn": "2017-05-11T20:29:58Z",
       "side": 1,
       "message": "\"or\" ... as mentioned earlier what is justification for virtualized?",
+      "range": {
+        "startLine": 352,
+        "startChar": 42,
+        "endLine": 352,
+        "endChar": 44
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_97ab9ed5",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 352,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Done \"or\".\n\nWe support bare-metal (Pharos compliant). And we support virtual environment so that environment will not be restricted by hardware availability. And everything can be done in a more flexible and economical way",
+      "parentUuid": "9ab8dda7_0606a686",
       "range": {
         "startLine": 352,
         "startChar": 42,
@@ -657,6 +1041,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_37baf223",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 548,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "Maybe, depending on if it is needed and if resources are available to do it.",
+      "parentUuid": "9ab8dda7_26308a55",
+      "range": {
+        "startLine": 548,
+        "startChar": 17,
+        "endLine": 548,
+        "endChar": 66
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_c66e4e01",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -715,6 +1123,24 @@
       "writtenOn": "2017-05-11T18:09:19Z",
       "side": 1,
       "message": "Can we rewrite this language to remove the notion of \"scenario\" because it means nothing to a commercial product (SUT). For example, we may say something like \"This test case requires additional software component support such as ping6 and vRouter that are not found in the community distribution of the Opendaylight project\u0027s Boron or earlier releases... This may or may not apply to a given SUT\" - And any other technical details applicable to a SUT.  If additional pre-configuration is required for the tester, please let us know so that we can put it into the user guide for the testers.",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_57b5262f",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 860,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2017-05-14T17:00:50Z",
+      "side": 1,
+      "message": "It is Tempest terminology. We reuse Tempest Scenario Testing and hence its terminology.",
+      "parentUuid": "9ab8dda7_a6ca3a6c",
       "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
