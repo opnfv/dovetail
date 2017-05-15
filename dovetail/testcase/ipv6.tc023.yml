@@ -10,4 +10,4 @@ dovetail.ipv6.tc023:
       dest_path: /home/opnfv/repos/functest/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
     sub_testcase_list:
-      - tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_dhcp6_stateless_from_os[compute,id-76f26acd-9688-42b4-bc3e-cd134c4cb09e,network,slow]
+      - tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_slaac_from_os[compute,id-b6399d76-4438-4658-bcf5-0d6c8584fde2,network,slow]
