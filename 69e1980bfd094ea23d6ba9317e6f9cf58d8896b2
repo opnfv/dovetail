@@ -45,6 +45,29 @@
       "revId": "69e1980bfd094ea23d6ba9317e6f9cf58d8896b2",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_69140e44",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2017-05-16T11:01:24Z",
+      "side": 1,
+      "message": "Is there a particular reason why these three test areas are grouped together as one line? does it mean they are following the same test specification other than VIM operations or Fault Management?",
+      "range": {
+        "startLine": 53,
+        "startChar": 5,
+        "endLine": 53,
+        "endChar": 33
+      },
+      "revId": "69e1980bfd094ea23d6ba9317e6f9cf58d8896b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
