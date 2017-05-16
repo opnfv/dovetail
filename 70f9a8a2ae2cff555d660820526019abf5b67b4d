@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "9ab8dda7_fc62faab",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-16T23:12:47Z",
+      "side": 1,
+      "message": "rewrite definition so that it can apply to both service outage and process outage.",
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_9ca65e0f",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-16T23:12:47Z",
+      "side": 1,
+      "message": "to be in a high availability configuration.",
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_7c928aa0",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 4
@@ -19,6 +53,40 @@
         "endLine": 57,
         "endChar": 27
       },
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_bca9e2e0",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-16T23:12:47Z",
+      "side": 1,
+      "message": "...and whether the killed processes...",
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_9c597e00",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-16T23:12:47Z",
+      "side": 1,
+      "message": "not always 3 controllers",
       "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -71,6 +139,23 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_bc5c82ee",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-16T23:12:47Z",
+      "side": 1,
+      "message": "The service list requests are issued periodically every X seconds.",
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_fcd43a48",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 4
@@ -111,6 +196,23 @@
         "endLine": 132,
         "endChar": 31
       },
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_7c6e0a98",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-16T23:12:47Z",
+      "side": 1,
+      "message": "what about any service down time?",
       "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
