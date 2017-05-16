@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_3cbad20a",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-16T21:40:31Z",
+      "side": 1,
+      "message": "Please expand on this. What exactly is being tested: IPv6-only connectivity for guests? IPv6 for underlay? Security groups? IPAM with IPv6 (SLAAC, DHCPv6 stateless, stateful)? IPv6 routing between tenant networks? NAT?",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 42
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_dc3856a2",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-16T21:40:31Z",
+      "side": 1,
+      "message": "Can you elaborate on this? The same comment applies for the following test cases. How is the IPv6 network created, and how can you tell if the instructions have been carried out? Ideally, this will consist of a series of OpenStack API calls, with examples of successful and unsuccessful results.",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 96,
+        "endChar": 74
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
