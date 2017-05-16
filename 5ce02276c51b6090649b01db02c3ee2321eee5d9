@@ -54,6 +54,23 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_897382e6",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-16T18:12:13Z",
+      "side": 1,
+      "message": "I am not a fan of including all the test cases in one file. This was something that changed in patch set 6 here, which also changed the scope of the change in the middle of review.",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_2c1e2964",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -65,6 +82,121 @@
       "writtenOn": "2017-05-12T19:51:27Z",
       "side": 1,
       "message": "not sure what the purpose of \"tc2\" is in this context.  Is it the second test case that evaluates tenant separation?  Can we not find a canonical name for the test cases?  Using any form of sequence number generally only works for one iteration.",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_094f9293",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-16T18:12:13Z",
+      "side": 1,
+      "message": "How do you retrieve a hostname for the purposes of this tes? Run \"hostname\" command and return the value?",
+      "range": {
+        "startLine": 206,
+        "startChar": 75,
+        "endLine": 206,
+        "endChar": 98
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_29829694",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-16T18:12:13Z",
+      "side": 1,
+      "message": "VM2 or VM3?",
+      "range": {
+        "startLine": 207,
+        "startChar": 102,
+        "endLine": 207,
+        "endChar": 105
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_a9452671",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-16T18:12:13Z",
+      "side": 1,
+      "message": "The test area description says that the tests are related - in which case, the post-conditions for this test could be the pre-conditions of the next test. Is that not the intention?",
+      "range": {
+        "startLine": 226,
+        "startChar": 0,
+        "endLine": 229,
+        "endChar": 87
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_c9489a89",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-16T18:12:13Z",
+      "side": 1,
+      "message": "same comment as above",
+      "range": {
+        "startLine": 308,
+        "startChar": 0,
+        "endLine": 311,
+        "endChar": 84
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_2959365a",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 386,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-16T18:12:13Z",
+      "side": 1,
+      "message": "Should be \"restore system to original state\" for the last test, at least",
+      "range": {
+        "startLine": 386,
+        "startChar": 0,
+        "endLine": 386,
+        "endChar": 87
+      },
       "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
