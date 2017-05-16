@@ -88,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_dc9cd6c2",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-16T20:52:50Z",
+      "side": 1,
+      "message": "My rational for this is that including a number can help us to more easily find unique identifiers for test cases, i.e., a combination of a short name and an ID instead of a more length name which has to be meaningful and unique enough (see refstack and the alias problem). See the test scope document for the list of proposed names.\n\nI agree that any kind of numbering will always be inconsistent, i.e., there will not be a consecutive numbering from 1 to n per test area due to test cases being added and removed over time. Still, I believe that a number can be beneficial. Let me know what you think.",
+      "parentUuid": "9ab8dda7_2c1e2964",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_094f9293",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
