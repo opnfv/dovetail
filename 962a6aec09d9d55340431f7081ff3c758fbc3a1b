@@ -584,6 +584,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_c602c96e",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-16T07:02:02Z",
+      "side": 1,
+      "message": "my understanding is these ipv6 testcase not depend on HA or not, the whole test cases(inculde HA test cases) should be HA dependent.  in our pharos https://build.opnfv.org/ci/view/All/ there are none-HA deployments. such as fuel-os-nosdn-kvm-noha-baremetal-daily-danube.",
+      "parentUuid": "9ab8dda7_d2ba846d",
+      "range": {
+        "startLine": 75,
+        "startChar": 18,
+        "endLine": 75,
+        "endChar": 30
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_26d88a52",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
