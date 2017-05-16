@@ -71,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_7cab6ad6",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-16T21:12:34Z",
+      "side": 1,
+      "message": "ok, this may have been perceived as a change in scope while in fact the goal of patch set 6 was to complete the description of all test cases we (SDNVPN project) identified as beneficial and wanted to propose here.\n\nIn general, I don\u0027t oppose splitting up this file into multiple files. A drawback of this approach is that the general introduction to the test area needs to be placed in yet another file.",
+      "parentUuid": "9ab8dda7_897382e6",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_2c1e2964",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -129,6 +147,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_1cba6e23",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-16T21:12:34Z",
+      "side": 1,
+      "message": "yes.",
+      "parentUuid": "9ab8dda7_094f9293",
+      "range": {
+        "startLine": 206,
+        "startChar": 75,
+        "endLine": 206,
+        "endChar": 98
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_29829694",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -152,6 +194,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_3cb5f230",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-16T21:12:34Z",
+      "side": 1,
+      "message": "VM3. copy and paste mistake. Good catch.",
+      "parentUuid": "9ab8dda7_29829694",
+      "range": {
+        "startLine": 207,
+        "startChar": 102,
+        "endLine": 207,
+        "endChar": 105
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_a9452671",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -163,6 +229,30 @@
       "writtenOn": "2017-05-16T18:12:13Z",
       "side": 1,
       "message": "The test area description says that the tests are related - in which case, the post-conditions for this test could be the pre-conditions of the next test. Is that not the intention?",
+      "range": {
+        "startLine": 226,
+        "startChar": 0,
+        "endLine": 229,
+        "endChar": 87
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_dc837654",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-16T21:12:34Z",
+      "side": 1,
+      "message": "The tests do not explicitly build upon each other, but they are independent. Hence, no test by design creates a precondition for a subsequent test. That would be a bad design. However, the current test case implementation performs the clean up only after all tests have run - hence creating an implicit dependency. This needs to be clearly documented.",
+      "parentUuid": "9ab8dda7_a9452671",
       "range": {
         "startLine": 226,
         "startChar": 0,
@@ -209,6 +299,30 @@
       "writtenOn": "2017-05-16T18:12:13Z",
       "side": 1,
       "message": "Should be \"restore system to original state\" for the last test, at least",
+      "range": {
+        "startLine": 386,
+        "startChar": 0,
+        "endLine": 386,
+        "endChar": 87
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_fc867a64",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 386,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-16T21:12:34Z",
+      "side": 1,
+      "message": "agreed",
+      "parentUuid": "9ab8dda7_2959365a",
       "range": {
         "startLine": 386,
         "startChar": 0,
