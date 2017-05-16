@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_91696e27",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-16T20:52:50Z",
+      "side": 1,
+      "message": "test area",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 62,
+        "endChar": 20
+      },
+      "revId": "ea2131c1335d3c300176007c8e9046e367ab8ab6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_716e3a31",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-16T20:52:50Z",
+      "side": 1,
+      "message": "four",
+      "range": {
+        "startLine": 65,
+        "startChar": 32,
+        "endLine": 65,
+        "endChar": 37
+      },
+      "revId": "ea2131c1335d3c300176007c8e9046e367ab8ab6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
