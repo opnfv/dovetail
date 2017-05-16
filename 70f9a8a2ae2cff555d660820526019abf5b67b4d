@@ -19,6 +19,29 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_dc0616ce",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-05-16T23:33:27Z",
+      "side": 1,
+      "message": "this word is not used only for process recovery, so you may remove this, and explain in a general way",
+      "range": {
+        "startLine": 45,
+        "startChar": 44,
+        "endLine": 46,
+        "endChar": 11
+      },
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_9ca65e0f",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 4
@@ -59,6 +82,29 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_fc099add",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-05-16T23:33:27Z",
+      "side": 1,
+      "message": "vendors may have variety means to implement this HA feature, so you may just describe the feature of HA, not the implementation.",
+      "range": {
+        "startLine": 56,
+        "startChar": 69,
+        "endLine": 57,
+        "endChar": 27
+      },
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_bca9e2e0",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 4
@@ -87,6 +133,29 @@
       "writtenOn": "2017-05-16T23:12:47Z",
       "side": 1,
       "message": "not always 3 controllers",
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_9c273e64",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-05-16T23:33:27Z",
+      "side": 1,
+      "message": "Make sure the HA is working, and select two nodes for test",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 36
+      },
       "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -132,6 +201,29 @@
         "startChar": 0,
         "endLine": 100,
         "endChar": 39
+      },
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_9cde5e3e",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-05-16T23:33:27Z",
+      "side": 1,
+      "message": "what\u0027s the period time? send request per X seconds?",
+      "range": {
+        "startLine": 111,
+        "startChar": 34,
+        "endLine": 111,
+        "endChar": 44
       },
       "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -195,6 +287,29 @@
         "startChar": 28,
         "endLine": 132,
         "endChar": 31
+      },
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_bce1e2ff",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-05-16T23:33:27Z",
+      "side": 1,
+      "message": "how about the service outage_time?",
+      "range": {
+        "startLine": 132,
+        "startChar": 33,
+        "endLine": 132,
+        "endChar": 64
       },
       "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
