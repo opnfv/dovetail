@@ -560,6 +560,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_d2ba846d",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-16T06:07:32Z",
+      "side": 1,
+      "message": "My point here is that we say the deployment has to be based on the Pharos specification ... this means there are at least 2 contollers and HA is therefore implied. So then how can we say HA is optional? There are many levels of HA however in any commercial deployment I think we would assume there is some HA function present.",
+      "parentUuid": "9ab8dda7_f15f8ae3",
+      "range": {
+        "startLine": 75,
+        "startChar": 18,
+        "endLine": 75,
+        "endChar": 30
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_26d88a52",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -630,6 +654,30 @@
       "side": 1,
       "message": "In Tempest, it verifies user can see external networks but not subnets",
       "parentUuid": "9ab8dda7_46c57e3a",
+      "range": {
+        "startLine": 128,
+        "startChar": 14,
+        "endLine": 128,
+        "endChar": 47
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_72b1588e",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-16T06:07:32Z",
+      "side": 1,
+      "message": "Our test cases need to be clear about what Telco NFV capability or function is being tested. While Tempest tests are useful for our purpose we are not using them as originally designed so we have to understand why they are meaningful and appropriate for compliance. I still don\u0027t understand the meaning of this test case.",
+      "parentUuid": "9ab8dda7_f79c5ac2",
       "range": {
         "startLine": 128,
         "startChar": 14,
@@ -783,6 +831,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_92ac0c37",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-16T06:07:32Z",
+      "side": 1,
+      "message": "This should be specified in our test case otherwise how will tester know if it passes?",
+      "parentUuid": "9ab8dda7_71e87ae2",
+      "range": {
+        "startLine": 188,
+        "startChar": 14,
+        "endLine": 188,
+        "endChar": 30
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_06df860e",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -818,6 +890,30 @@
       "side": 1,
       "message": "All these tests are \"api\" tests which mainly validate the Neutron REST API. So, they will not send any traffic on the port.",
       "parentUuid": "9ab8dda7_06df860e",
+      "range": {
+        "startLine": 298,
+        "startChar": 17,
+        "endLine": 298,
+        "endChar": 37
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_32abe01e",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-16T06:07:32Z",
+      "side": 1,
+      "message": "Agreed but validating the API is not the same as testing a capability of the platform. Propose we start documenting how test cases should evolve (lets discuss this).",
+      "parentUuid": "9ab8dda7_b1b592ef",
       "range": {
         "startLine": 298,
         "startChar": 17,
@@ -924,6 +1020,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_52a69454",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-16T06:07:32Z",
+      "side": 1,
+      "message": "What is the pass/fail criteria?",
+      "parentUuid": "9ab8dda7_77b06a43",
+      "range": {
+        "startLine": 341,
+        "startChar": 20,
+        "endLine": 341,
+        "endChar": 31
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_0606a686",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -1018,6 +1138,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_26a0859e",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 514,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-16T06:07:32Z",
+      "side": 1,
+      "message": "Same as earlier comment ... we need to be clear about what the test actually does for compliance verification.",
+      "parentUuid": "9ab8dda7_91cace6c",
+      "range": {
+        "startLine": 514,
+        "startChar": 17,
+        "endLine": 514,
+        "endChar": 71
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_26308a55",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 2
@@ -1053,6 +1197,30 @@
       "side": 1,
       "message": "Maybe, depending on if it is needed and if resources are available to do it.",
       "parentUuid": "9ab8dda7_26308a55",
+      "range": {
+        "startLine": 548,
+        "startChar": 17,
+        "endLine": 548,
+        "endChar": 66
+      },
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_c6864913",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 548,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-16T06:07:32Z",
+      "side": 1,
+      "message": "I think its ok for now if its clear what is being tested and should also start to document what is needed for comprehensive testing.",
+      "parentUuid": "9ab8dda7_37baf223",
       "range": {
         "startLine": 548,
         "startChar": 17,
@@ -1141,6 +1309,24 @@
       "side": 1,
       "message": "It is Tempest terminology. We reuse Tempest Scenario Testing and hence its terminology.",
       "parentUuid": "9ab8dda7_a6ca3a6c",
+      "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_66a43da6",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 860,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-16T06:07:32Z",
+      "side": 1,
+      "message": "Whether its Tempest terminology or not we need to be specific in our test case descriptions about what the tests mean for compliance.",
+      "parentUuid": "9ab8dda7_57b5262f",
       "revId": "962a6aec09d9d55340431f7081ff3c758fbc3a1b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
