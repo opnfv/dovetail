@@ -1,0 +1,211 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_5c55464e",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-17T05:39:34Z",
+      "side": 1,
+      "message": "I suppose for neutrality the CVP backend server should be hosted by the LF? Perhaps we should say something like ... \"a server hosted by LF that stores and maintains test results and other information related to the CVP\"",
+      "range": {
+        "startLine": 14,
+        "startChar": 8,
+        "endLine": 14,
+        "endChar": 62
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_7c504a5e",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-17T05:39:34Z",
+      "side": 1,
+      "message": "View by OPNFV CVP reviewers?",
+      "range": {
+        "startLine": 15,
+        "startChar": 1,
+        "endLine": 15,
+        "endChar": 36
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_1c4fcebe",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-17T05:39:34Z",
+      "side": 1,
+      "message": "above called it the \"testing client\"",
+      "range": {
+        "startLine": 22,
+        "startChar": 29,
+        "endLine": 22,
+        "endChar": 38
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3c4ad2ac",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-17T05:39:34Z",
+      "side": 1,
+      "message": "per the Pharos Specification",
+      "range": {
+        "startLine": 25,
+        "startChar": 20,
+        "endLine": 25,
+        "endChar": 31
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_bcd562ba",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-17T05:39:34Z",
+      "side": 1,
+      "message": "VIM management API?",
+      "range": {
+        "startLine": 38,
+        "startChar": 68,
+        "endLine": 39,
+        "endChar": 3
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_7cd7eabf",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-17T05:39:34Z",
+      "side": 1,
+      "message": "with the Pharos specification",
+      "range": {
+        "startLine": 65,
+        "startChar": 76,
+        "endLine": 65,
+        "endChar": 89
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_1ce6eeb4",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-17T05:39:34Z",
+      "side": 1,
+      "message": "management API?",
+      "range": {
+        "startLine": 68,
+        "startChar": 4,
+        "endLine": 68,
+        "endChar": 40
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3ce1729a",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-17T05:39:34Z",
+      "side": 1,
+      "message": "are",
+      "range": {
+        "startLine": 84,
+        "startChar": 4,
+        "endLine": 84,
+        "endChar": 6
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_bcec8290",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-17T05:39:34Z",
+      "side": 1,
+      "message": "Python",
+      "range": {
+        "startLine": 184,
+        "startChar": 76,
+        "endLine": 184,
+        "endChar": 83
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
