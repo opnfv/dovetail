@@ -83,6 +83,29 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_9fe890b5",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-05-17T12:29:35Z",
+      "side": 1,
+      "message": "nit: a",
+      "range": {
+        "startLine": 58,
+        "startChar": 64,
+        "endLine": 58,
+        "endChar": 66
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_1f3580d9",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -106,6 +129,121 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_bf10f4a8",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-05-17T12:29:35Z",
+      "side": 1,
+      "message": "Remove",
+      "range": {
+        "startLine": 67,
+        "startChar": 70,
+        "endLine": 67,
+        "endChar": 77
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3f1c04c1",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-05-17T12:29:35Z",
+      "side": 1,
+      "message": "change to \"route targets to remove connectivity between\"",
+      "range": {
+        "startLine": 68,
+        "startChar": 37,
+        "endLine": 68,
+        "endChar": 67
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_df7a88f0",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-05-17T12:29:35Z",
+      "side": 1,
+      "message": "change to \"VMs\"",
+      "range": {
+        "startLine": 68,
+        "startChar": 72,
+        "endLine": 68,
+        "endChar": 77
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_7fcd9c5c",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-05-17T12:29:35Z",
+      "side": 1,
+      "message": "change to \"an appropriate route target configuration\"",
+      "range": {
+        "startLine": 68,
+        "startChar": 6,
+        "endLine": 68,
+        "endChar": 18
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_bfeb14af",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-05-17T12:29:35Z",
+      "side": 1,
+      "message": "change to \"use case\"",
+      "range": {
+        "startLine": 88,
+        "startChar": 24,
+        "endLine": 88,
+        "endChar": 32
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_4c191d78",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -117,6 +255,29 @@
       "writtenOn": "2017-05-12T19:51:27Z",
       "side": 1,
       "message": "I assume this post condition matches very well the pre-condition for the next test case.  Where tests are sequential it is good practice for these pre/post condition texts to match accordingly.",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_df1368b6",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-05-17T12:29:35Z",
+      "side": 1,
+      "message": "Replace with \"Neutron networks, Subnets and VPNs created during the test shall be deleted and VMs shall be shut down.\"\n\nWould be good to describe this as a sequence of commands to avoid errors upon manual execution.",
+      "range": {
+        "startLine": 149,
+        "startChar": 0,
+        "endLine": 149,
+        "endChar": 87
+      },
       "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -152,6 +313,24 @@
       "side": 1,
       "message": "ok, this may have been perceived as a change in scope while in fact the goal of patch set 6 was to complete the description of all test cases we (SDNVPN project) identified as beneficial and wanted to propose here.\n\nIn general, I don\u0027t oppose splitting up this file into multiple files. A drawback of this approach is that the general introduction to the test area needs to be placed in yet another file.",
       "parentUuid": "9ab8dda7_897382e6",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_ff642c4a",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-05-17T12:29:35Z",
+      "side": 1,
+      "message": "In my reading the scope (cf. commit message) is to add all VPN test cases. In the long run it may be beneficial to split into multiple files but that would increase the number of reviews significantly so let\u0027s keep it like this for now.",
+      "parentUuid": "9ab8dda7_7cab6ad6",
       "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -258,6 +437,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_9fd2d0d0",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-05-17T12:29:35Z",
+      "side": 1,
+      "message": "Is the pass condition that the hostname command returns a 0 or that stdout matches an expected value (i.e. the expected host name)?",
+      "parentUuid": "9ab8dda7_1cba6e23",
+      "range": {
+        "startLine": 206,
+        "startChar": 75,
+        "endLine": 206,
+        "endChar": 98
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_29829694",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -316,6 +519,30 @@
       "writtenOn": "2017-05-17T08:11:52Z",
       "side": 1,
       "message": "Is this because it can not connect to VM4 or because it actually connects to VM2 and gets VM2 as the host name.",
+      "range": {
+        "startLine": 209,
+        "startChar": 21,
+        "endLine": 209,
+        "endChar": 88
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_9fe97082",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-05-17T12:29:35Z",
+      "side": 1,
+      "message": "Yes, that is exactly the reason. We needed an easy way to verify if we connect to the right VM since there\u0027s two VMs with the same IP here.",
+      "parentUuid": "9ab8dda7_bf7234ab",
       "range": {
         "startLine": 209,
         "startChar": 21,
@@ -464,6 +691,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_1ffd803a",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-05-17T12:29:35Z",
+      "side": 1,
+      "message": "It is not intended to test if network deletion works, so successful teardown of the API objects created during the test should not be a pass/fail criterion.",
+      "parentUuid": "9ab8dda7_5f96984d",
+      "range": {
+        "startLine": 226,
+        "startChar": 0,
+        "endLine": 229,
+        "endChar": 87
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_c9489a89",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -510,6 +761,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_7f859cab",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-05-17T12:29:35Z",
+      "side": 1,
+      "message": "Good catch - yes it does. In the OPNFV scenarios we have solved this through deployment configuration (was a bit tricky for Apex since it requires routes on the jumphost). We should document that - but where?",
+      "parentUuid": "9ab8dda7_ffd42c48",
+      "range": {
+        "startLine": 372,
+        "startChar": 58,
+        "endLine": 372,
+        "endChar": 89
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_3fbac40a",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -539,6 +814,24 @@
       "side": 1,
       "message": "Be careful calling that a pass/fail required, because that implies we need to specifically check the VM is not there anymore, etc.",
       "parentUuid": "9ab8dda7_3fbac40a",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3f8f24ce",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-05-17T12:29:35Z",
+      "side": 1,
+      "message": "I do not think successful teardown should be a pass/fail criterion. There is a reason this gets distinguished in common practice.",
+      "parentUuid": "9ab8dda7_bfaf9493",
       "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
