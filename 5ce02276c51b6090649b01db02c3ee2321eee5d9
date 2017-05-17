@@ -60,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_7ad7eabf",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-17T22:43:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_bf2474af",
+      "range": {
+        "startLine": 48,
+        "startChar": 35,
+        "endLine": 48,
+        "endChar": 36
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_5f3bf8d0",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -83,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_1ae6eeb4",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-17T22:43:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_5f3bf8d0",
+      "range": {
+        "startLine": 49,
+        "startChar": 38,
+        "endLine": 49,
+        "endChar": 39
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_9fe890b5",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -94,6 +142,30 @@
       "writtenOn": "2017-05-17T12:29:35Z",
       "side": 1,
       "message": "nit: a",
+      "range": {
+        "startLine": 58,
+        "startChar": 64,
+        "endLine": 58,
+        "endChar": 66
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3ae1729a",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-17T22:43:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_9fe890b5",
       "range": {
         "startLine": 58,
         "startChar": 64,
@@ -140,6 +212,30 @@
       "writtenOn": "2017-05-17T12:29:35Z",
       "side": 1,
       "message": "Remove",
+      "range": {
+        "startLine": 67,
+        "startChar": 70,
+        "endLine": 67,
+        "endChar": 77
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_daeff685",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-17T22:43:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_bf10f4a8",
       "range": {
         "startLine": 67,
         "startChar": 70,
@@ -221,6 +317,78 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_9aa09e44",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-17T22:43:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_7fcd9c5c",
+      "range": {
+        "startLine": 68,
+        "startChar": 6,
+        "endLine": 68,
+        "endChar": 18
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_fa999a1f",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-17T22:43:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_3f1c04c1",
+      "range": {
+        "startLine": 68,
+        "startChar": 37,
+        "endLine": 68,
+        "endChar": 67
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_baa3224e",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-17T22:43:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_df7a88f0",
+      "range": {
+        "startLine": 68,
+        "startChar": 72,
+        "endLine": 68,
+        "endChar": 77
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_bfeb14af",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -232,6 +400,30 @@
       "writtenOn": "2017-05-17T12:29:35Z",
       "side": 1,
       "message": "change to \"use case\"",
+      "range": {
+        "startLine": 88,
+        "startChar": 24,
+        "endLine": 88,
+        "endChar": 32
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_5a8a26c0",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-17T22:43:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_bfeb14af",
       "range": {
         "startLine": 88,
         "startChar": 24,
@@ -272,6 +464,30 @@
       "writtenOn": "2017-05-17T12:29:35Z",
       "side": 1,
       "message": "Replace with \"Neutron networks, Subnets and VPNs created during the test shall be deleted and VMs shall be shut down.\"\n\nWould be good to describe this as a sequence of commands to avoid errors upon manual execution.",
+      "range": {
+        "startLine": 149,
+        "startChar": 0,
+        "endLine": 149,
+        "endChar": 87
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_da64d623",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-17T22:43:26Z",
+      "side": 1,
+      "message": "Up to Danube 2.0, the SDNVPN test cases do not clean up after themselves. So, the post-condition here would be something like \"the state as created during the test case execution: these VMs, these networks, ...\". There is a Jira ticket to add clean-up functionality after every test for Danube 3.0. It would be great if that could still be included in D3.0.",
+      "parentUuid": "9ab8dda7_df1368b6",
       "range": {
         "startLine": 149,
         "startChar": 0,
@@ -461,6 +677,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_5a78e6c3",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-17T22:43:26Z",
+      "side": 1,
+      "message": "ok, a more detailed description is needed here. The pass condition is in fact that the retreived hostname matches an expected value. This is used to verify tenant traffic separation, i.e. despite overlapping IPs, the connection is made to the correct VM as determined by means of the hostname.\n\nI rephrased this. Moreover, there are actually only four explicit pass criteria checked for in the code. Hence, I modified the test actions accordingly.",
+      "parentUuid": "9ab8dda7_9fd2d0d0",
+      "range": {
+        "startLine": 206,
+        "startChar": 75,
+        "endLine": 206,
+        "endChar": 98
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_29829694",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -496,6 +736,30 @@
       "side": 1,
       "message": "VM3. copy and paste mistake. Good catch.",
       "parentUuid": "9ab8dda7_29829694",
+      "range": {
+        "startLine": 207,
+        "startChar": 102,
+        "endLine": 207,
+        "endChar": 105
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_9a13be65",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-17T22:43:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_3cb5f230",
       "range": {
         "startLine": 207,
         "startChar": 102,
@@ -566,6 +830,24 @@
       "writtenOn": "2017-05-17T08:18:09Z",
       "side": 1,
       "message": "Maybe replace the generic text with something like:\nThis test evaluates the virtual machines ability to connect effectively with each other using only the described IP address schema.  \n- Adjusting the ingress and egress route targets should prohibit and allow routing as described in the test actions.  \n- The tests will fail unless overlapping IP addresses are able to be used in different VPN\u0027s.\n- The tests will fail unless the correct hostname be returned by the target virtual machine. \n- These tests will fail if for any reason IP routing is not able to be achieved between the virtual machines.\n\nSame level of detail should be applied to all test cases.  Maybe it can be simplified, but this should really talk about the requirements to pass or fail rather than just pointing at the sequence of commands.",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_1a07ce1d",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-17T22:43:26Z",
+      "side": 1,
+      "message": "Done for this test. To be done for the remaining ones.",
+      "parentUuid": "9ab8dda7_7fc03c7c",
       "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -703,6 +985,30 @@
       "side": 1,
       "message": "It is not intended to test if network deletion works, so successful teardown of the API objects created during the test should not be a pass/fail criterion.",
       "parentUuid": "9ab8dda7_5f96984d",
+      "range": {
+        "startLine": 226,
+        "startChar": 0,
+        "endLine": 229,
+        "endChar": 87
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_950ab11f",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-17T22:43:26Z",
+      "side": 1,
+      "message": "same comment as above. I would like to see if cleanup after every test case get included in time for Danube 3.0. If that is the case, all post-conditions are basically a clean system.",
+      "parentUuid": "9ab8dda7_1ffd803a",
       "range": {
         "startLine": 226,
         "startChar": 0,
