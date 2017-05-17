@@ -440,6 +440,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_5f96984d",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-17T09:52:04Z",
+      "side": 1,
+      "message": "Clean up is different from a pass/fail metric.  Because if it\u0027s a requirement, we have to actually delete the network, and then check that it was deleted.",
+      "parentUuid": "9ab8dda7_1fbfc0fc",
+      "range": {
+        "startLine": 226,
+        "startChar": 0,
+        "endLine": 229,
+        "endChar": 87
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_c9489a89",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -497,6 +521,24 @@
       "writtenOn": "2017-05-17T08:18:09Z",
       "side": 1,
       "message": "Removal of previous configurations need to be captured here, this should also be described as a pass/fail criteria.  If it is not a pass/ fail criteria then I think houston... we have a problem.",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_bfaf9493",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-17T09:52:04Z",
+      "side": 1,
+      "message": "Be careful calling that a pass/fail required, because that implies we need to specifically check the VM is not there anymore, etc.",
+      "parentUuid": "9ab8dda7_3fbac40a",
       "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
