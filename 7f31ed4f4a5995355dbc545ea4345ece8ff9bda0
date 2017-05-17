@@ -117,6 +117,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_9f2170a1",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:26:11Z",
+      "side": 1,
+      "message": "Is this accurate?  Are the HA and SDNVPN tests able to be run according to description based on the tool accessing the \"API\"?  This implies the API provides mechanisms to kill processes etc, I\u0027m not sure this is the case.  Maybe a more concise description of the exact access requirements of the host is needed for a user to run the tests.",
+      "parentUuid": "9ab8dda7_bcd562ba",
+      "range": {
+        "startLine": 38,
+        "startChar": 68,
+        "endLine": 39,
+        "endChar": 3
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_7cd7eabf",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 4
@@ -186,6 +210,23 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_7f36fce8",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:26:11Z",
+      "side": 1,
+      "message": "It is worth being explicit here, make it clear to the user what is actually required to run the tool when they might need to configure their firewalls.",
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_bcec8290",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 4
@@ -203,6 +244,91 @@
         "endLine": 184,
         "endChar": 83
       },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3f3084e7",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:26:11Z",
+      "side": 1,
+      "message": "This description should be removed.  If someone runs this in 12 moths they will get the wrong version of docker.  Suggest putting instructions in that describe the version used for danube rather than a version that we cannot guarantee is supported.",
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_df4e086f",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:26:11Z",
+      "side": 1,
+      "message": "We should not be pulling latest.  This should be based on a label or specific maintained container that provide the correct release version.\nThis cannot be the process for the installation.\n\nIf it is still unclear on what labels we will be using then raise the topic on a weekly meeting.",
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_ff518c0e",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:26:11Z",
+      "side": 1,
+      "message": "I assume these are stable versions of functest and yardstick.  We can likely be accurate with the pull commands already now.",
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_bf5b142d",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 367,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:26:11Z",
+      "side": 1,
+      "message": "I think this needs to be a closed topic before we can have approval of the process at the TSC.  We need to know how the tests will be run for a compliance run before we can agree that the system will work as a technical implementation of the CVP.",
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_5f42183f",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:26:11Z",
+      "side": 1,
+      "message": "Is this not a part of the developers guide rather than the user guide?  I suggest to move this to a developer document.  I don\u0027t think we would intend to allow people to run the CVP from an own sourced build right?",
       "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
