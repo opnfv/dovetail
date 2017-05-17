@@ -715,6 +715,29 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_da1376b6",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T20:46:00Z",
+      "side": 1,
+      "message": "There seems to have a pattern for a lot of test cases where we go by a list of test steps, and some of the steps are validations (a boolean evaluation), and the pass criteria is that all test steps are executed successfully (otherwise we won\u0027t be able to evaluate the boolean condition), AND the validations are ALL affirmative. Otherwise (all other cases) the test case fails. In this test case, e.g., the create/associate/change procedures are execution steps and the ping checks are boolean evaluations. We can draft some clear language such that this pattern can be copied/reused when appropriate.",
+      "range": {
+        "startLine": 303,
+        "startChar": 0,
+        "endLine": 305,
+        "endChar": 63
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_c9489a89",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -773,6 +796,30 @@
       "side": 1,
       "message": "Good catch - yes it does. In the OPNFV scenarios we have solved this through deployment configuration (was a bit tricky for Apex since it requires routes on the jumphost). We should document that - but where?",
       "parentUuid": "9ab8dda7_ffd42c48",
+      "range": {
+        "startLine": 372,
+        "startChar": 58,
+        "endLine": 372,
+        "endChar": 89
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_ba87a2d6",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T20:46:00Z",
+      "side": 1,
+      "message": "There are several such examples - if the test case implementation relies on external components, such as the installer, to fulfill this pre-condition, then we need to document it in the user guide - specifically the preparation of SUT section, so that the tester can satisfy this condition by manual or other means. I would also suggest that we mention it in the pre-condition section of the test case spec here.",
+      "parentUuid": "9ab8dda7_7f859cab",
       "range": {
         "startLine": 372,
         "startChar": 58,
@@ -873,6 +920,30 @@
       "side": 1,
       "message": "agreed",
       "parentUuid": "9ab8dda7_2959365a",
+      "range": {
+        "startLine": 386,
+        "startChar": 0,
+        "endLine": 386,
+        "endChar": 87
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3a73b216",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 386,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T20:46:00Z",
+      "side": 1,
+      "message": "I think it\u0027ll be a good goal for test cases to be \"idempotent\" in the success case. But maybe not necessarily in the failure case. If a test case isn\u0027t idempotent, then we should note as such in pre- and post-conditions.",
+      "parentUuid": "9ab8dda7_fc867a64",
       "range": {
         "startLine": 386,
         "startChar": 0,
