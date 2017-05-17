@@ -42,6 +42,23 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_ba02426d",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T20:19:05Z",
+      "side": 1,
+      "message": "Wouldn\u0027t you delete the network, subnet, port, after the asserts are done, so that the test case clean up after itself?",
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_3c2bb295",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 4
@@ -82,6 +99,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_fa08ba92",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T20:19:05Z",
+      "side": 1,
+      "message": "A suggestion on the text may be: \"This test case passes if all test action steps execute successfully and all three assertions in the three actions are affirmed. If any test steps fails to execute successfully or any of the three assertions is not met, the test case fails.\"",
+      "parentUuid": "9ab8dda7_dc3856a2",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 96,
+        "endChar": 74
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_dc193689",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 4
@@ -93,6 +134,40 @@
       "writtenOn": "2017-05-17T06:56:29Z",
       "side": 1,
       "message": "Are there any specific requirements on this network?  Is it sufficient for \"any\" type of network to be created in action?",
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_5af9c67e",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T20:19:05Z",
+      "side": 1,
+      "message": "updated",
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_7af4ca86",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T20:19:05Z",
+      "side": 1,
+      "message": "Again, another sample text may be: \"This test case passes if each of the test action steps are successfully executed and validations are all affirmed. If any of these fails, the test case fails.\"",
       "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
