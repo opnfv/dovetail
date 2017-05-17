@@ -42,6 +42,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_5ccb0653",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-05-17T04:08:08Z",
+      "side": 1,
+      "message": "this outage_time only refers to the process outage for this whole file. the outage time for the servcie is not uesed in this file.",
+      "parentUuid": "9ab8dda7_fc62faab",
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_9ca65e0f",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 4
@@ -96,6 +114,30 @@
       "range": {
         "startLine": 56,
         "startChar": 69,
+        "endLine": 57,
+        "endChar": 27
+      },
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3cc09229",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-05-17T04:08:08Z",
+      "side": 1,
+      "message": "The system under test is assumed to be the NFVi and VIM in operation on a\nPharos compliant infrastructure. Controller nodes high availability is working.\nThat means more than one controller node are available.The tests in this test area are running against the active controller node,\nwhich is providing the following service for rest-api, including ",
+      "parentUuid": "9ab8dda7_7c928aa0",
+      "range": {
+        "startLine": 56,
+        "startChar": 32,
         "endLine": 57,
         "endChar": 27
       },
@@ -231,6 +273,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_fce19ad0",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-05-17T04:08:08Z",
+      "side": 1,
+      "message": "repeately \u003e\u003e continually",
+      "parentUuid": "9ab8dda7_9cde5e3e",
+      "range": {
+        "startLine": 111,
+        "startChar": 34,
+        "endLine": 111,
+        "endChar": 44
+      },
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_bc5c82ee",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 4
@@ -259,6 +325,30 @@
       "writtenOn": "2017-05-16T21:32:44Z",
       "side": 1,
       "message": "What is \"the kill_process attacker\"? Is it better to allow the vendor to specify the means by which the nova-api service is killed, and say only \"kill the nova-api service\"? Or is the means by which this happens included in the test case?",
+      "range": {
+        "startLine": 129,
+        "startChar": 56,
+        "endLine": 130,
+        "endChar": 39
+      },
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_7ccdaa5c",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-05-17T04:08:08Z",
+      "side": 1,
+      "message": "Connect to Node1 through SSH, and then kill \"nova-api\" processes by linux command \"killall\". it is commom for killing the processes in linux.",
+      "parentUuid": "9ab8dda7_fcd43a48",
       "range": {
         "startLine": 129,
         "startChar": 56,
@@ -317,6 +407,54 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_7cf4ca86",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-05-17T04:08:08Z",
+      "side": 1,
+      "message": "there is no servie outage_time due to the HA of controller nodes.",
+      "parentUuid": "9ab8dda7_bce1e2ff",
+      "range": {
+        "startLine": 132,
+        "startChar": 33,
+        "endLine": 132,
+        "endChar": 64
+      },
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_1cdcae11",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-05-17T04:08:08Z",
+      "side": 1,
+      "message": "agree.suggest to delet the SLA. This max_outage_time (20s) gives the SUT enough time to\nrecover.",
+      "parentUuid": "9ab8dda7_dcd13658",
+      "range": {
+        "startLine": 132,
+        "startChar": 28,
+        "endLine": 132,
+        "endChar": 31
+      },
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_7c6e0a98",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 4
@@ -328,6 +466,24 @@
       "writtenOn": "2017-05-16T23:12:47Z",
       "side": 1,
       "message": "what about any service down time?",
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_1cf34e9f",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-05-17T04:08:08Z",
+      "side": 1,
+      "message": "the service will not be down due to controller nodes HA even if the processes in one of the controller nodes are killed.",
+      "parentUuid": "9ab8dda7_7c6e0a98",
       "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
