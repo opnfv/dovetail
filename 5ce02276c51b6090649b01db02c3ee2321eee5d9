@@ -37,6 +37,75 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_bf2474af",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-17T08:11:52Z",
+      "side": 1,
+      "message": "should be \"virtualization\"",
+      "range": {
+        "startLine": 48,
+        "startChar": 35,
+        "endLine": 48,
+        "endChar": 36
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_5f3bf8d0",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-17T08:11:52Z",
+      "side": 1,
+      "message": "virtualization",
+      "range": {
+        "startLine": 49,
+        "startChar": 38,
+        "endLine": 49,
+        "endChar": 39
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_1f3580d9",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-17T08:11:52Z",
+      "side": 1,
+      "message": "Below \"Nodes\" seem to refer to the compute notes, which would not be a VM.  Is this correct in this context?",
+      "range": {
+        "startLine": 67,
+        "startChar": 71,
+        "endLine": 67,
+        "endChar": 76
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_4c191d78",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -118,6 +187,24 @@
       "side": 1,
       "message": "My rational for this is that including a number can help us to more easily find unique identifiers for test cases, i.e., a combination of a short name and an ID instead of a more length name which has to be meaningful and unique enough (see refstack and the alias problem). See the test scope document for the list of proposed names.\n\nI agree that any kind of numbering will always be inconsistent, i.e., there will not be a consecutive numbering from 1 to n per test area due to test cases being added and removed over time. Still, I believe that a number can be beneficial. Let me know what you think.",
       "parentUuid": "9ab8dda7_2c1e2964",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_9f589033",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-17T08:11:52Z",
+      "side": 1,
+      "message": "I do like having a test number, since it\u0027s an easy index into the test plan.  And might imply an order, if that were to become important in other places / test plans.",
+      "parentUuid": "9ab8dda7_dc9cd6c2",
       "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -218,6 +305,29 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_bf7234ab",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-17T08:11:52Z",
+      "side": 1,
+      "message": "Is this because it can not connect to VM4 or because it actually connects to VM2 and gets VM2 as the host name.",
+      "range": {
+        "startLine": 209,
+        "startChar": 21,
+        "endLine": 209,
+        "endChar": 88
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_a9452671",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -265,6 +375,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_5f69b8bc",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-17T08:11:52Z",
+      "side": 1,
+      "message": "For completeness, should the test execution specify that the VMs and subnets are deleted / destroyed at the end of the test?",
+      "parentUuid": "9ab8dda7_dc837654",
+      "range": {
+        "startLine": 226,
+        "startChar": 0,
+        "endLine": 229,
+        "endChar": 87
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_c9489a89",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -281,6 +415,29 @@
         "startChar": 0,
         "endLine": 311,
         "endChar": 84
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_ffd42c48",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-17T08:11:52Z",
+      "side": 1,
+      "message": "Are we sure in all cases the \"test host\" will be able to reach the Floating IP network.  Does this imply a constraint on the setup of the \"Pod\"?",
+      "range": {
+        "startLine": 372,
+        "startChar": 58,
+        "endLine": 372,
+        "endChar": 89
       },
       "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
