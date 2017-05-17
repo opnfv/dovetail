@@ -328,6 +328,23 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_7fc03c7c",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T08:18:09Z",
+      "side": 1,
+      "message": "Maybe replace the generic text with something like:\nThis test evaluates the virtual machines ability to connect effectively with each other using only the described IP address schema.  \n- Adjusting the ingress and egress route targets should prohibit and allow routing as described in the test actions.  \n- The tests will fail unless overlapping IP addresses are able to be used in different VPN\u0027s.\n- The tests will fail unless the correct hostname be returned by the target virtual machine. \n- These tests will fail if for any reason IP routing is not able to be achieved between the virtual machines.\n\nSame level of detail should be applied to all test cases.  Maybe it can be simplified, but this should really talk about the requirements to pass or fail rather than just pointing at the sequence of commands.",
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_a9452671",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -399,6 +416,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_1fbfc0fc",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T08:18:09Z",
+      "side": 1,
+      "message": "Yes, let\u0027s make sure we capture these dependencies (either explicit or implicit).  If the config it not cleaned up it is a post condition (regardless of dependency) that should be documented.\nIt should also be clear in the final test case that the clean-up is part of that test case.  (I assume if we cannot remove all the hanging networks we fail the test right?)",
+      "parentUuid": "9ab8dda7_dc837654",
+      "range": {
+        "startLine": 226,
+        "startChar": 0,
+        "endLine": 229,
+        "endChar": 87
+      },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_c9489a89",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 8
@@ -439,6 +480,23 @@
         "endLine": 372,
         "endChar": 89
       },
+      "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3fbac40a",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T08:18:09Z",
+      "side": 1,
+      "message": "Removal of previous configurations need to be captured here, this should also be described as a pass/fail criteria.  If it is not a pass/ fail criteria then I think houston... we have a problem.",
       "revId": "5ce02276c51b6090649b01db02c3ee2321eee5d9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
