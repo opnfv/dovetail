@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "9ab8dda7_df27e8b4",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:09:06Z",
+      "side": 1,
+      "message": "In my opinion at least HA is a mandatory function of the OPNFV Danube release.  It i not clear to me exactly as to how many of these specific tests would be mandatory as there are some components tested here that may not be in all deployment types.  Could we try to structure this as a set of mandatory HA tests and optional HA tests accordingly?",
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_fc62faab",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 4
@@ -198,6 +215,24 @@
         "endLine": 94,
         "endChar": 36
       },
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_1c07ce1d",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:09:06Z",
+      "side": 1,
+      "message": "I am very unncomfortable with the CVP deviating from the described Danube HA structure in our release. I would suggest we keep it as described in the release and if we need to improve do so by fixing any limitations in our release projects rather than ignoring them.\n\nI fundamentally disagree with this comment as it does not apply to Danube.",
+      "parentUuid": "9ab8dda7_9c597e00",
       "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -484,6 +519,23 @@
       "side": 1,
       "message": "the service will not be down due to controller nodes HA even if the processes in one of the controller nodes are killed.",
       "parentUuid": "9ab8dda7_7c6e0a98",
+      "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_ff03cc0a",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:09:06Z",
+      "side": 1,
+      "message": "Should this test target neutron specifically?  How does this apply to an OPNFV scenario that is not using Neutron?  This test should be made generic or made optional for deployments leveraging neutron.",
       "revId": "70f9a8a2ae2cff555d660820526019abf5b67b4d",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
