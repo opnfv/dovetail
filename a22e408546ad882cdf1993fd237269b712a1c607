@@ -1,0 +1,152 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_ba16c253",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T22:46:37Z",
+      "side": 1,
+      "message": "Since it\u0027s under the heading \"SUT\", this may say \"The processes that are to tested for recovery from failure are X, Y, Z...\". List all of them, not with a \"such as\".",
+      "revId": "a22e408546ad882cdf1993fd237269b712a1c607",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_5a0d463d",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T22:46:37Z",
+      "side": 1,
+      "message": "I think the test case needs to be able to run on load balancers other than \u0027haproxy\u0027. If that is true, then this doc should replace \u0027haproxy\u0027 with \u0027load balancer\u0027 and probably explain what the tester needs to do, in the pre-condition section, if the SUT uses a load balancer other than \u0027haproxy\u0027.",
+      "revId": "a22e408546ad882cdf1993fd237269b712a1c607",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_7a084a2d",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T22:46:37Z",
+      "side": 1,
+      "message": "the",
+      "revId": "a22e408546ad882cdf1993fd237269b712a1c607",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_b50d7539",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 471,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T22:46:37Z",
+      "side": 1,
+      "message": "...verifies the availability of services when one of the controller node suffers from heavy CPU overload.\"",
+      "revId": "a22e408546ad882cdf1993fd237269b712a1c607",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_55143943",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 472,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T22:46:37Z",
+      "side": 1,
+      "message": "the",
+      "revId": "a22e408546ad882cdf1993fd237269b712a1c607",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_35198579",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 474,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T22:46:37Z",
+      "side": 1,
+      "message": "...on this node, the Openstack services should continue to be available.",
+      "range": {
+        "startLine": 473,
+        "startChar": 14,
+        "endLine": 474,
+        "endChar": 54
+      },
+      "revId": "a22e408546ad882cdf1993fd237269b712a1c607",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_75361de9",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 476,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T22:46:37Z",
+      "side": 1,
+      "message": "SUT",
+      "range": {
+        "startLine": 476,
+        "startChar": 25,
+        "endLine": 476,
+        "endChar": 36
+      },
+      "revId": "a22e408546ad882cdf1993fd237269b712a1c607",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3530a5e7",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 627,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-17T22:46:37Z",
+      "side": 1,
+      "message": "See above comment on \u0027haproxy\u0027.",
+      "revId": "a22e408546ad882cdf1993fd237269b712a1c607",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
