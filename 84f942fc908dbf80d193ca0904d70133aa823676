@@ -25,6 +25,40 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_1c302e00",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T06:56:29Z",
+      "side": 1,
+      "message": "I don\u0027t believe we are performing certification of nested virtual deployments in the CVP.  I would suggest a clearer statement of the expected state of the system for using these tests as compliance tests for the CVP be added here.",
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3c2bb295",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T06:56:29Z",
+      "side": 1,
+      "message": "This seems to be acopy of the text I used in the SDNVPN description.  That text was jokingly used as a placeholder as part of the initial draft.  The intention of this section should be to describe the criteria in some detail so that a tester is completely aware of the expected criteria of evaluation for the tests.",
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_dc3856a2",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 4
@@ -42,6 +76,57 @@
         "endLine": 96,
         "endChar": 74
       },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_dc193689",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T06:56:29Z",
+      "side": 1,
+      "message": "Are there any specific requirements on this network?  Is it sufficient for \"any\" type of network to be created in action?",
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_fc1c3a79",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T06:56:29Z",
+      "side": 1,
+      "message": "If the first action of this test case is to list network, it would seem there would be a set s test preconditions required around there being networks available to list.  Can this be clarified, what is expected in this list of networks that will make the test pass or fail?",
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_9c13be65",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T06:56:29Z",
+      "side": 1,
+      "message": "It is unclear what would make this test pass or fail, needs to be explicit.  If there are no clear pass/fail criteria for this tes it should be removed as per the test selection guidelines.",
       "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
