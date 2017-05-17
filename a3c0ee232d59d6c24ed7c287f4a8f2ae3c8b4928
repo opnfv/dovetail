@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_7f64bce4",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:57:08Z",
+      "side": 1,
+      "message": "Yes, replace this.  The template was copy paste and empty there was nothing that needed to actually be protected under copywrite (and the Ericsson AB should likely have been left out in the copy paste apologies)",
+      "parentUuid": "9ab8dda7_fedd2e71",
+      "range": {
+        "startLine": 3,
+        "startChar": 3,
+        "endLine": 3,
+        "endChar": 18
+      },
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_de670ab6",
         "filename": "docs/testing/developer/index.rst",
         "patchSetId": 1
@@ -59,6 +83,40 @@
         "endLine": 11,
         "endChar": 12
       },
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_1f6340dd",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:57:08Z",
+      "side": 1,
+      "message": "his version history is superfluous and should probably be dropped.",
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_5fb0d842",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:57:08Z",
+      "side": 1,
+      "message": "Maybe a generic statement here indicating \"the tool doe not intend to test anything rather provide a common launch platform for test cases developed in the testing projects\". This bullet list is maybe mis-directional in the context of this document.",
       "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -111,6 +169,23 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_1fba6023",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:57:08Z",
+      "side": 1,
+      "message": "Not 100%, could we be a little more open in this description.  Maybe - \"The SUT is based on an OPNFV integrated platform\".",
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_7ed13e56",
         "filename": "docs/testing/developer/index.rst",
         "patchSetId": 1
@@ -151,6 +226,75 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_3fb5e430",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:57:08Z",
+      "side": 1,
+      "message": "No, this is not a equivalence.  Release scenario\u0027s are not and cannot be equated to a CVP entity.  There is a significant difference between composition and functionality especially in the context of a behavioral compliance activity.",
+      "parentUuid": "9ab8dda7_9e0992df",
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_df836854",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:57:08Z",
+      "side": 1,
+      "message": "Again not the scenario.  The feature or capability.",
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_ff866c64",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:57:08Z",
+      "side": 1,
+      "message": "Not necessarily, at least I don\u0027t think this is necessary.  Why?",
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_9f7df070",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:57:08Z",
+      "side": 1,
+      "message": "We should have requiremtns on the security of this information based on the fact that we expect hosted groups to run the tests.  Can we ensure they will be deleted when the tests are cancelled or have been submitted.  There needs to be a \"chain of control\" as these are potentially corporate secrets.",
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_fd90e296",
         "filename": "docs/testing/developer/index.rst",
         "patchSetId": 1
@@ -168,6 +312,40 @@
         "endLine": 98,
         "endChar": 4
       },
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_5f977890",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:57:08Z",
+      "side": 1,
+      "message": "Should this not be logs rather than config?  (We have the config)",
+      "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_7f927ca0",
+        "filename": "docs/testing/developer/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-17T07:57:08Z",
+      "side": 1,
+      "message": "Rather than scenario\u0027s and projects could we focus on \"configurations\" and \"behaviors\" required to run tests?",
       "revId": "a3c0ee232d59d6c24ed7c287f4a8f2ae3c8b4928",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
