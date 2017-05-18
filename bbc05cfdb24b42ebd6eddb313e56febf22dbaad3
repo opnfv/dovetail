@@ -1,0 +1,124 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_10a00f9e",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T12:26:55Z",
+      "side": 1,
+      "message": "Actually does it?  In what areas does it?  Might I suggest:\n\"This test area evaluates the ability of the system to perform actions defined in the following specifications.  Details of specific features evaluated are described in the test descriptions.\" or something like that.  The way it is written implies all aspects of the specs are evaluated in some way.",
+      "revId": "bbc05cfdb24b42ebd6eddb313e56febf22dbaad3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_309bd373",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T12:26:55Z",
+      "side": 1,
+      "message": "\u0026 VIM",
+      "range": {
+        "startLine": 58,
+        "startChar": 43,
+        "endLine": 58,
+        "endChar": 47
+      },
+      "revId": "bbc05cfdb24b42ebd6eddb313e56febf22dbaad3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_d0891727",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T12:26:55Z",
+      "side": 1,
+      "message": "can we ditch the numbers?  (like a broken record I know)",
+      "range": {
+        "startLine": 82,
+        "startChar": 13,
+        "endLine": 82,
+        "endChar": 18
+      },
+      "revId": "bbc05cfdb24b42ebd6eddb313e56febf22dbaad3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_f08c5b37",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T12:26:55Z",
+      "side": 1,
+      "message": "uses",
+      "range": {
+        "startLine": 88,
+        "startChar": 54,
+        "endLine": 88,
+        "endChar": 66
+      },
+      "revId": "bbc05cfdb24b42ebd6eddb313e56febf22dbaad3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_90839f03",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T12:26:55Z",
+      "side": 1,
+      "message": "This needs to be explicit as to what is actually validated to generate fail or pass.",
+      "revId": "bbc05cfdb24b42ebd6eddb313e56febf22dbaad3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_b086e311",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T12:26:55Z",
+      "side": 1,
+      "message": "One might assume the post condition is that there are a bunch of networks and VM\u0027s on the system at this time.\n(or the removal needs to be described as part of the test case and pass/fail evaluation)",
+      "revId": "bbc05cfdb24b42ebd6eddb313e56febf22dbaad3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
