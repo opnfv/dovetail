@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_eba54eb5",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-18T22:33:05Z",
+      "side": 1,
+      "message": "Updated ... will add whoever contributes content",
+      "parentUuid": "9ab8dda7_30ff53ac",
+      "revId": "8a93a82f2374ae649e9ef00a4d6495ece91d20bf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_b02a632a",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_cba2caad",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-18T22:33:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_b02a632a",
+      "revId": "8a93a82f2374ae649e9ef00a4d6495ece91d20bf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_5021a74b",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 2
@@ -47,6 +83,30 @@
       "writtenOn": "2017-05-18T12:13:31Z",
       "side": 1,
       "message": "Do we have a a draft of this, it should probably be in the repo somewhere and linkable.  (even an empty link here would at least show there is a need for it to be done.)",
+      "range": {
+        "startLine": 28,
+        "startChar": 3,
+        "endLine": 28,
+        "endChar": 19
+      },
+      "revId": "8a93a82f2374ae649e9ef00a4d6495ece91d20bf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_8bacd2a1",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-18T22:33:05Z",
+      "side": 1,
+      "message": "Created a label in the application form document (currently blank) and put a reference here. Thinking that we want the form to be fillable ... either a pdf to email or a web page that submits the application. Ideas for this?",
+      "parentUuid": "9ab8dda7_5021a74b",
       "range": {
         "startLine": 28,
         "startChar": 3,
@@ -82,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_4b96da4d",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-18T22:33:05Z",
+      "side": 1,
+      "message": "Process needs to be agreed. Is email the best option? What address?",
+      "parentUuid": "9ab8dda7_101b2f1c",
+      "range": {
+        "startLine": 32,
+        "startChar": 24,
+        "endLine": 32,
+        "endChar": 48
+      },
+      "revId": "8a93a82f2374ae649e9ef00a4d6495ece91d20bf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_90de3f3e",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 2
@@ -93,6 +177,24 @@
       "writtenOn": "2017-05-18T12:13:31Z",
       "side": 1,
       "message": "Maybe system prep first.  Then the test overview, then the tool instruction.",
+      "revId": "8a93a82f2374ae649e9ef00a4d6495ece91d20bf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_6b915e51",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-18T22:33:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_90de3f3e",
       "revId": "8a93a82f2374ae649e9ef00a4d6495ece91d20bf",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -116,6 +218,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_0ba0e29d",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-18T22:33:05Z",
+      "side": 1,
+      "message": "Removed specific references since this document should be generic workflow.",
+      "parentUuid": "9ab8dda7_10f24fd2",
+      "revId": "8a93a82f2374ae649e9ef00a4d6495ece91d20bf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_30ed13f0",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 2
@@ -127,6 +247,24 @@
       "writtenOn": "2017-05-18T12:13:31Z",
       "side": 1,
       "message": "How about the \"reviewing your own results?\" first?  If I was to submit I would want to be able to see how this is presented to the reviewer prior to submitting my results.",
+      "revId": "8a93a82f2374ae649e9ef00a4d6495ece91d20bf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_eb8c6e37",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-18T22:33:05Z",
+      "side": 1,
+      "message": "Added a placeholder for self-review",
+      "parentUuid": "9ab8dda7_30ed13f0",
       "revId": "8a93a82f2374ae649e9ef00a4d6495ece91d20bf",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
