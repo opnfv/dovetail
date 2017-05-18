@@ -284,6 +284,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_4ba49aa5",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-18T23:21:17Z",
+      "side": 1,
+      "message": "Its still unclear and one of the topics I proposed for weekly agenda. A label for a release is ok but then need to make any release fixes available immediately while continuing to develop on master.",
+      "parentUuid": "9ab8dda7_df4e086f",
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_ff518c0e",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 4
