@@ -25,6 +25,52 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_35ed05f0",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "Use case should provide \"human consumable\" description of the purpose / cause / need for the test.",
+      "range": {
+        "startLine": 65,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 22
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_d5bb49e3",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "Do need to include the API references, or should these be a short name, etc.?",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 70,
+        "endChar": 87
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_1c302e00",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 4
@@ -36,6 +82,24 @@
       "writtenOn": "2017-05-17T06:56:29Z",
       "side": 1,
       "message": "I don\u0027t believe we are performing certification of nested virtual deployments in the CVP.  I would suggest a clearer statement of the expected state of the system for using these tests as compliance tests for the CVP be added here.",
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_b5e1f5ff",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "I agree with this.",
+      "parentUuid": "9ab8dda7_1c302e00",
       "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -59,6 +123,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_55e8b9e1",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "I think this procedure should be cleaned up to make it clear for order of operations, networks being created, the check, and the delete.  Also, are we testing only the create or the create and delete?  If testing delete, you need to verify the network is no longer listed after it is deleted.",
+      "parentUuid": "9ab8dda7_ba02426d",
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_3c2bb295",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 4
@@ -70,6 +152,24 @@
       "writtenOn": "2017-05-17T06:56:29Z",
       "side": 1,
       "message": "This seems to be acopy of the text I used in the SDNVPN description.  That text was jokingly used as a placeholder as part of the initial draft.  The intention of this section should be to describe the criteria in some detail so that a tester is completely aware of the expected criteria of evaluation for the tests.",
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_75e37d05",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "Agreed, recommend the procedure above include the same format of **Test Action #** for each metric being verified by the test case.",
+      "parentUuid": "9ab8dda7_3c2bb295",
       "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -116,6 +216,29 @@
         "startChar": 0,
         "endLine": 96,
         "endChar": 74
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_95b5d1ef",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "State \"None\" instead of \"not applicable.\"",
+      "range": {
+        "startLine": 101,
+        "startChar": 0,
+        "endLine": 101,
+        "endChar": 2
       },
       "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -191,6 +314,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_b5b815e6",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "Agree, whole procedure seems to require preconditions exist.",
+      "parentUuid": "9ab8dda7_fc1c3a79",
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_9c13be65",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 4
@@ -202,6 +343,259 @@
       "writtenOn": "2017-05-17T06:56:29Z",
       "side": 1,
       "message": "It is unclear what would make this test pass or fail, needs to be explicit.  If there are no clear pass/fail criteria for this tes it should be removed as per the test selection guidelines.",
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_55cf597f",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "What is meant by this?  Does this imply the network created is at least a specific size, as IPv6 only allows subnets down to /64, so step 1 would require a network above that size.",
+      "range": {
+        "startLine": 208,
+        "startChar": 58,
+        "endLine": 208,
+        "endChar": 75
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_75ca9d6f",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 367,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "What is the expectation, are newly created ports created as \"admin up\"?",
+      "range": {
+        "startLine": 367,
+        "startChar": 17,
+        "endLine": 367,
+        "endChar": 59
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_15c9e177",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "What is the expectation, if the port was previously \"admin up\", why is it now \"admin down.\"",
+      "range": {
+        "startLine": 370,
+        "startChar": 17,
+        "endLine": 370,
+        "endChar": 60
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_b5afb593",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 745,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "This test also includes IPv4, so it should be Dual Stack",
+      "range": {
+        "startLine": 745,
+        "startChar": 15,
+        "endLine": 745,
+        "endChar": 57
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_35c4255e",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 764,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "What does this mean in the context of certification testing?  Where some releases / version will not support the test.",
+      "range": {
+        "startLine": 758,
+        "startChar": 0,
+        "endLine": 764,
+        "endChar": 45
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_95acf1a1",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 777,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "Does this require pinging all IPv6 addresses, i.e. link local and global scope addresses?",
+      "range": {
+        "startLine": 777,
+        "startChar": 45,
+        "endLine": 777,
+        "endChar": 76
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_75913d51",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 822,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "What is the relationship between NIC2 and the networks?  What Network is NIC2 assigned to?",
+      "range": {
+        "startLine": 821,
+        "startChar": 17,
+        "endLine": 822,
+        "endChar": 43
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_d5890927",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 823,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "If this is floating IPv4, what is it\u0027s purpose in this test?  It\u0027s not referenced in the rest of the test, and I don\u0027t believe floating IP addresses would be from the private address network, which is being used for the ping below.",
+      "range": {
+        "startLine": 823,
+        "startChar": 41,
+        "endLine": 823,
+        "endChar": 45
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_b586d511",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 890,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "From the procedures, it\u0027s not clear how this test case is different from Test Case 20.",
+      "range": {
+        "startLine": 890,
+        "startChar": 0,
+        "endLine": 890,
+        "endChar": 88
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_75785d2b",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 939,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "All previous tests for \"DHCPv6 Stateless\" would have required SLAAC, because Stateless DHCPv6 can not be used to perform address assignment.  Given that, what is the benefit here, unless SLAAC is being used to provide DNS or other information.",
+      "range": {
+        "startLine": 939,
+        "startChar": 0,
+        "endLine": 939,
+        "endChar": 46
+      },
+      "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_1577a13b",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 1064,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:07:31Z",
+      "side": 1,
+      "message": "Is there an assumption each VM would have 1 NIC and that NIC would have a prefix on each network, meaning it was connected to \"two\" networks at the same time.  I\u0027m guessing at this from the name of the test case.",
+      "range": {
+        "startLine": 1064,
+        "startChar": 17,
+        "endLine": 1064,
+        "endChar": 45
+      },
       "revId": "84f942fc908dbf80d193ca0904d70133aa823676",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
