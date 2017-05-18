@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "9ab8dda7_b5b495d1",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:15:30Z",
+      "side": 1,
+      "message": "In general, all tests are about services HA within an OpenStack Node.  This will likely not meet operator / user expectations, where HA is typically more about an entire node / network / interface \"going\" down.  We should rename this to \"OpenStack Services HA Test Specification\".",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 21
+      },
+      "revId": "a22e408546ad882cdf1993fd237269b712a1c607",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_ba16c253",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 5
@@ -144,6 +167,24 @@
       "writtenOn": "2017-05-17T22:46:37Z",
       "side": 1,
       "message": "See above comment on \u0027haproxy\u0027.",
+      "revId": "a22e408546ad882cdf1993fd237269b712a1c607",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_35a9857b",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 627,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-05-18T07:15:30Z",
+      "side": 1,
+      "message": "Seems to be a \"hanging\" comment, didn\u0027t see the reference above.",
+      "parentUuid": "9ab8dda7_3530a5e7",
       "revId": "a22e408546ad882cdf1993fd237269b712a1c607",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
