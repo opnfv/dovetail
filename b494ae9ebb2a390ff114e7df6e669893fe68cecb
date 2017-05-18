@@ -161,6 +161,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_d027d7b4",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-18T10:16:04Z",
+      "side": 1,
+      "message": "Accoding to refstack PTL, no. since alias can be used for different version, such as A is newly adopted in Newton and A_alias can be used for Mitaka(have no A in M), if remove, there will be error when running against different Openstack version.",
+      "parentUuid": "9ab8dda7_358f45ce",
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_d5bd8969",
         "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
         "patchSetId": 1
