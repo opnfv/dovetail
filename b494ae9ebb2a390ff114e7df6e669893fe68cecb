@@ -2,6 +2,74 @@
   "comments": [
     {
       "key": {
+        "uuid": "9ab8dda7_b516d553",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T09:15:16Z",
+      "side": 1,
+      "message": "Fix the header which is broken in this version.",
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_95139165",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T09:15:16Z",
+      "side": 1,
+      "message": "You can remove Ericsson from this.  It was a copy paste of a file template there was no content to be copyrighted.",
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_550d193d",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T09:15:16Z",
+      "side": 1,
+      "message": "this list requires spacing to establish indents, it not rendering properly..  Check the RST guide on indent line spacing.",
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_75085d2d",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T09:15:16Z",
+      "side": 1,
+      "message": "needs a space for the list",
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_512bf693",
         "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
         "patchSetId": 1
@@ -13,6 +81,97 @@
       "writtenOn": "2017-05-12T18:23:35Z",
       "side": 1,
       "message": "NFVI and VIM",
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_35f8a548",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T09:15:16Z",
+      "side": 1,
+      "message": "This comment doesn\u0027t really make sense in the document.  If you want to refer to refstack first introduce refstack, don\u0027t assume anyone knows what that means.  I suggest simply describing the tests directly for a user.\n\nThis section needs to be re-done.  This is about bugs in tempest and does not talk about the structure of the tests in the context of the target system.  If we want to discuss limitations/dependencies let\u0027s add a section about that.  This section should focus on the structure of the test cases.",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 31
+      },
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_7585bdab",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T09:15:16Z",
+      "side": 1,
+      "message": "Refer only to the tests and versions we are targetting for Danube.  This information does not relate to the CVP.",
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_159481e0",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T09:15:16Z",
+      "side": 1,
+      "message": "This does not have any relevance in the context of running these tests as part of the CVP, suggest removing.",
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_358f45ce",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T09:15:16Z",
+      "side": 1,
+      "message": "Should we not remove duplicates?",
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_d5bd8969",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T09:15:16Z",
+      "side": 1,
+      "message": "This is not accurate.  The CVP will test a Danube release running in HA mode.  Why would we state a non HA deployment is OK to use as part of the CVP?  Is that a new decision taken by DoveTail?",
       "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -59,6 +218,23 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_352bc595",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T09:15:16Z",
+      "side": 1,
+      "message": "This text should be made test case specific.  The text from the sdnvpn test cases was not intended to be used.",
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_b1135265",
         "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
         "patchSetId": 1
@@ -76,6 +252,40 @@
         "endLine": 102,
         "endChar": 74
       },
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_d5190989",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T09:15:16Z",
+      "side": 1,
+      "message": "Are these identities removed as part of the test cases?  It is not described in the test flow, if it is part of the test flow I assume it is also part of the pass/fail criteria.  This should be clarified.\nIf they are not removed they should be captured in post conditions.",
+      "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_f51c4d79",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-18T09:15:16Z",
+      "side": 1,
+      "message": "At the very least a \"token\" needs to be defined in this section as it is used elsewhere in the context of the test case, preferably what is being done with the token should also be covered.",
       "revId": "b494ae9ebb2a390ff114e7df6e669893fe68cecb",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
