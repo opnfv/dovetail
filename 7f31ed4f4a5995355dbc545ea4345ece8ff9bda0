@@ -210,6 +210,29 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_c9241ab1",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2017-05-19T07:59:39Z",
+      "side": 1,
+      "message": "delete blanks, the same below.",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 3
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_7f36fce8",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 4
@@ -261,6 +284,52 @@
       "writtenOn": "2017-05-17T07:26:11Z",
       "side": 1,
       "message": "This description should be removed.  If someone runs this in 12 moths they will get the wrong version of docker.  Suggest putting instructions in that describe the version used for danube rather than a version that we cannot guarantee is supported.",
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_092b1283",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2017-05-19T07:59:39Z",
+      "side": 1,
+      "message": "version",
+      "range": {
+        "startLine": 213,
+        "startChar": 32,
+        "endLine": 213,
+        "endChar": 40
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_e94ebe6e",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2017-05-19T07:59:39Z",
+      "side": 1,
+      "message": "maybe put a link here for reference.",
+      "range": {
+        "startLine": 258,
+        "startChar": 0,
+        "endLine": 258,
+        "endChar": 26
+      },
       "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -336,6 +405,29 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_f7a210fc",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2017-05-19T07:59:39Z",
+      "side": 1,
+      "message": "individual",
+      "range": {
+        "startLine": 371,
+        "startChar": 0,
+        "endLine": 371,
+        "endChar": 8
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_5f42183f",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 4
@@ -347,6 +439,24 @@
       "writtenOn": "2017-05-17T07:26:11Z",
       "side": 1,
       "message": "Is this not a part of the developers guide rather than the user guide?  I suggest to move this to a developer document.  I don\u0027t think we would intend to allow people to run the CVP from an own sourced build right?",
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_d784ac5f",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2017-05-19T07:59:39Z",
+      "side": 1,
+      "message": "maybe this should be described as the second method of installation; since in the overview section, it mentions that \"This guide will describe both methods of installation\", but only docker installation method is described in detail.",
+      "parentUuid": "9ab8dda7_5f42183f",
       "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
