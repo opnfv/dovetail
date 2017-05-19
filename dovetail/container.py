@@ -8,6 +8,7 @@
 #
 
 import os
+import yaml
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
@@ -149,10 +150,26 @@ class Container(object):
             ' -v %s:%s ' % (dovetail_config['userconfig_dir'],
                             dovetail_config["functest"]['config']['dir'])
 
+        hosts_config = ""
+        hosts_config_path = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), os.pardir, 'userconfig'))
+        try:
+            with open(os.path.join(hosts_config_path, 'hosts.yaml')) as f:
+                hosts_info = yaml.safe_load(f)
+            if hosts_info['hosts_info']:
+                for host in hosts_info['hosts_info']:
+                    hosts_config += " --add-host "
+                    hosts_config += str(host)
+            cls.logger.info('get hosts info %s', hosts_config)
+        except Exception:
+            cls.logger.warn('get hosts info in %s/hosts.yaml fail,
+                            maybe some issue when domain name resolution',
+                            hosts_config_path)
+
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
-        cmd = 'sudo docker run %s %s %s %s %s %s %s /bin/bash' % \
-            (opts, envs, config, openrc, config_volume,
+        cmd = 'sudo docker run %s %s %s %s %s %s %s %s /bin/bash' % \
+            (opts, envs, config, hosts_config, openrc, config_volume,
              result_volume, docker_image)
         dt_utils.exec_cmd(cmd, cls.logger)
         ret, container_id = \
