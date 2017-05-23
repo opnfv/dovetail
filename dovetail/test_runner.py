@@ -47,12 +47,30 @@ class DockerRunner(object):
 
         self.logger.debug('container id:%s', container_id)
 
-        dest_path = self.testcase.pre_copy_dest_path()
+        dest_path = self.testcase.pre_copy_dest_path("dest_path")
         if dest_path:
             self.testcase.mk_src_file()
             src_path = self.testcase.pre_copy_src_path(self.type)
             ret, msg = Container.pre_copy(container_id, src_path,
                                           dest_path)
+
+        sdnvpn_path = self.testcase.pre_copy_dest_path("sdnvpn_path")
+        if sdnvpn_path:
+            sdnvpn_file_name = self.testcase.pre_copy_dest_path("src_file")
+            if not sdnvpn_file_name:
+                self.logger.error("KerError, no key src_file in testcase %s",
+                                  self.testcase.name())
+                return
+            try:
+                src_path = os.path.join(
+                    dt_cfg.dovetail_config[self.type]['config']['dir'],
+                    sdnvpn_file_name)
+            except KeyError, e:
+                self.logger.error("KeyError, no key %s in %s config file.",
+                                  e, self.type)
+                return
+            Container.pre_copy(container_id, src_path, sdnvpn_path)
+
         if not self.testcase.prepared():
             prepare_failed = False
             cmds = self.testcase.pre_condition()

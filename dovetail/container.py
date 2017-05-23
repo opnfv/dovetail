@@ -148,7 +148,7 @@ class Container(object):
             cls.logger.debug("Can just use password in %s.", pod_file)
         config_volume = \
             ' -v %s:%s ' % (dovetail_config['userconfig_dir'],
-                            dovetail_config["functest"]['config']['dir'])
+                            dovetail_config[type]['config']['dir'])
 
         hosts_config = ""
         hosts_config_path = os.path.abspath(

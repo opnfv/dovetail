@@ -7,6 +7,6 @@ dovetail.sdnvpn.tc004:
     testcase: bgpvpn
     pre_copy:
       src_file: sdnvpn_config_testcase4.yaml
-      dest_path: /home/opnfv/repos/sdnvpn/sdnvpn/test/functest/config.yaml
+      sdnvpn_path: /home/opnfv/repos/sdnvpn/sdnvpn/test/functest/config.yaml
   report:
     sub_testcase_list:

@@ -126,10 +126,10 @@ class Testcase(object):
         src_path = os.path.join(result_dir, pre_copy_src_file)
         return src_path
 
-    def pre_copy_dest_path(self):
+    def pre_copy_dest_path(self, key_name):
         try:
             pre_copy_dest_path = \
-                self.testcase['validate']['pre_copy']['dest_path']
+                self.testcase['validate']['pre_copy'][key_name]
         except KeyError:
             pre_copy_dest_path = ''
         return pre_copy_dest_path
