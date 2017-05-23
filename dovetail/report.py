@@ -264,7 +264,7 @@ class FunctestCrawler(object):
                                        "errors": error_case,
                                        "skipped": skipped_case}
                 except KeyError as e:
-                    self.logger.error("Key error, exception: %s", e)
+                    self.logger.error("Result data don't have key %s.", e)
                     return None
                 except ValueError:
                     continue
@@ -313,7 +313,7 @@ class YardstickCrawler(object):
 
     def crawl_from_file(self, testcase=None):
         file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
-                                 testcase.validate_testcase() + '.out')
+                                 testcase.name() + '.out')
         if not os.path.exists(file_path):
             self.logger.info('result file not found: %s', file_path)
             return None

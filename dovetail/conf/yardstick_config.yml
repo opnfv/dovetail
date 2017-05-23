@@ -15,7 +15,7 @@ yardstick:
     - 'mkdir -p /home/opnfv/yardstick/results/'
     - "cd /home/opnfv/repos/yardstick && source tests/ci/prepare_env.sh &&
          yardstick -d task start tests/opnfv/test_cases/{{validate_testcase}}.yaml
-         --output-file /home/opnfv/yardstick/results/{{validate_testcase}}.out
+         --output-file /home/opnfv/yardstick/results/{{testcase}}.out
          --task-args '{'file': '/home/opnfv/userconfig/pod.yaml'}'"
   post_condition:
     - ''
