@@ -92,14 +92,15 @@ def check_tc_result(testcase, logger):
                 logger.error("Fail to push results to database.")
     if dt_cfg.dovetail_config['report_dest'] == "file":
         if validate_type.lower() == 'yardstick':
-            logger.info("Results have been stored with file %s.",
-                        os.path.join(result_dir,
-                                     testcase.validate_testcase() + '.out'))
+            result_file = os.path.join(result_dir, testcase.name() + '.out')
         if validate_type.lower() == 'functest':
-            logger.info("Results have been stored with file %s.",
-                        os.path.join(result_dir, functest_result))
-        result = Report.get_result(testcase)
-        Report.check_result(testcase, result)
+            result_file = os.path.join(result_dir, functest_result)
+        if os.path.isfile(result_file):
+            logger.info("Results have been stored with file %s.", result_file)
+            result = Report.get_result(testcase)
+            Report.check_result(testcase, result)
+        else:
+            logger.error("Fail to stored results with file %s.", result_file)
 
 
 def validate_input(input_dict, check_dict, logger):
