@@ -115,24 +115,12 @@ class Testcase(object):
                               self.name())
         return pre_condition
 
-    def pre_copy_src_path(self, test_type):
+    def pre_copy_path(self, key_name):
         try:
-            pre_copy_src_file = \
-                self.testcase['validate']['pre_copy']['src_file']
-            result_dir = dt_cfg.dovetail_config[test_type]['result']['dir']
-        except KeyError as e:
-            self.logger.error('src file Key error %s', e)
-            return None
-        src_path = os.path.join(result_dir, pre_copy_src_file)
-        return src_path
-
-    def pre_copy_dest_path(self):
-        try:
-            pre_copy_dest_path = \
-                self.testcase['validate']['pre_copy']['dest_path']
+            path = self.testcase['validate']['pre_copy'][key_name]
         except KeyError:
-            pre_copy_dest_path = ''
-        return pre_copy_dest_path
+            return None
+        return path
 
     def post_condition(self):
         try:
@@ -148,7 +136,7 @@ class Testcase(object):
         return post_condition
 
     def mk_src_file(self):
-        testcase_src_file = self.testcase['validate']['pre_copy']['src_file']
+        testcase_src_file = self.pre_copy_path('src_file')
         try:
             file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
                                      testcase_src_file)
@@ -158,12 +146,10 @@ class Testcase(object):
                         self.logger.debug('save testcases %s', sub_test)
                         src_file.write(sub_test + '\n')
             self.logger.debug('save testcases to %s', file_path)
+            return file_path
         except Exception:
             self.logger.error('Failed to save: %s', file_path)
-
-        src_file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
-                                     testcase_src_file)
-        return src_file_path
+            return None
 
     def run(self):
         runner = TestRunnerFactory.create(self)

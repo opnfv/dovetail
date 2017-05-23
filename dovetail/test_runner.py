@@ -28,6 +28,23 @@ class DockerRunner(object):
     def create_log(cls):
         cls.logger = dt_logger.Logger(__name__ + '.DockerRunner').getLogger()
 
+    def pre_copy(self, container_id=None, dest_path=None,
+                 src_file=None, exist_file=None):
+        if not dest_path:
+            self.logger.error("There has no dest_path in %s config file.",
+                              self.testcase.name())
+            return None
+        if src_file:
+            self.testcase.mk_src_file()
+            file_path = dt_cfg.dovetail_config[self.type]['result']['dir']
+            src_path = os.path.join(file_path, src_file)
+        if exist_file:
+            file_path = dt_cfg.dovetail_config[self.type]['config']['dir']
+            src_path = os.path.join(file_path, exist_file)
+
+        Container.pre_copy(container_id, src_path, dest_path)
+        return dest_path
+
     def run(self):
         if dt_cfg.dovetail_config['offline']:
             exist = Container.check_image_exist(self.testcase.validate_type())
@@ -47,12 +64,15 @@ class DockerRunner(object):
 
         self.logger.debug('container id:%s', container_id)
 
-        dest_path = self.testcase.pre_copy_dest_path()
-        if dest_path:
-            self.testcase.mk_src_file()
-            src_path = self.testcase.pre_copy_src_path(self.type)
-            ret, msg = Container.pre_copy(container_id, src_path,
-                                          dest_path)
+        dest_path = self.testcase.pre_copy_path("dest_path")
+        src_file_name = self.testcase.pre_copy_path("src_file")
+        exist_file_name = self.testcase.pre_copy_path("exist_src_file")
+
+        if src_file_name or exist_file_name:
+            if not self.pre_copy(container_id, dest_path, src_file_name,
+                                 exist_file_name):
+                return
+
         if not self.testcase.prepared():
             prepare_failed = False
             cmds = self.testcase.pre_condition()
