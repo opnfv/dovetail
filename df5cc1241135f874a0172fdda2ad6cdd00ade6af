@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_8b19b124",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-23T07:53:50Z",
+      "side": 1,
+      "message": "The SUT is fully deployed and operational, the system must be in a ready state to execute all selected tests\n\n(no need to talk about deployment, the first half f the sentence covers that.  The second half is there to indicate that the process does not provide opportunity for reconfiguration between tests.)",
+      "range": {
+        "startLine": 46,
+        "startChar": 4,
+        "endLine": 46,
+        "endChar": 93
+      },
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_4bd3b938",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-23T07:53:50Z",
+      "side": 1,
+      "message": "The hardware point should be covered by Pharos.  Let\u0027s not try to redefine that project or specification here.  We can and should propose updates in pharos for any identified market/cvp needs.",
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_0be8617b",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-23T07:53:50Z",
+      "side": 1,
+      "message": ". Reference components may be used as part ... , these components where used will be described in the test specification.\n\n(It is important that if we are using a derived product as part of the test harness that this is described in the context of the test case itself.  API\u0027s and interfaces may be able to be described in a common way, however their behavior differs by implementation. If we will support one implementation over a \"generic framework or stub\" this should be clearly documented for the tester.\nThis should likely be added to the \"acceptance criteria\" for any tests to be used in the CVP.",
+      "range": {
+        "startLine": 59,
+        "startChar": 29,
+        "endLine": 59,
+        "endChar": 31
+      },
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_2bed1d8c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-23T07:53:50Z",
+      "side": 1,
+      "message": "Let\u0027s align language between the addendum, the test scope document and the test specifications.  I like the language used here actually and would propose patching the dovetail docs to align.  (We may need to add another level of detail here.)",
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_cb01e93a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-23T07:53:50Z",
+      "side": 1,
+      "message": "This can be done as references.",
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_ebfe2538",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-23T07:53:50Z",
+      "side": 1,
+      "message": "Suggest raising the level of this to outline pass/fail criteria that can be used in the dovetail project to evaluate the completeness of the test cases.  So not going into each test case here but discussing the principals we want to apply in each area to the cvp tests to be accepted into the suites.",
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
