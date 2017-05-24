@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_5fd37338",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-24T21:05:43Z",
+      "side": 1,
+      "message": "Perhaps it\u0027s overkill, but should this (and similar lines) include a neutron command line showing how to do it?",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 70
+      },
+      "revId": "3da2aee811138ea9af2687f902e76cfd0bb85647",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_7fd8af53",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 483,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-24T21:05:43Z",
+      "side": 1,
+      "message": "Should say what the expected result is (presumably that the ping succeeds)",
+      "range": {
+        "startLine": 483,
+        "startChar": 0,
+        "endLine": 483,
+        "endChar": 92
+      },
+      "revId": "3da2aee811138ea9af2687f902e76cfd0bb85647",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
