@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_d9af832a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-24T05:39:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5aaae553_8b19b124",
+      "range": {
+        "startLine": 46,
+        "startChar": 4,
+        "endLine": 46,
+        "endChar": 93
+      },
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_4bd3b938",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 1
@@ -36,6 +60,24 @@
       "writtenOn": "2017-05-23T07:53:50Z",
       "side": 1,
       "message": "The hardware point should be covered by Pharos.  Let\u0027s not try to redefine that project or specification here.  We can and should propose updates in pharos for any identified market/cvp needs.",
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_196d1b05",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-24T05:39:12Z",
+      "side": 1,
+      "message": "Agree with this approach ... then do we need Pharos to be expanded to describe 1)recommended and 2) minimum configuration ... or can we update the Pharos spec in a way that makes it clear what the minimum acceptable is for compliance?",
+      "parentUuid": "5aaae553_4bd3b938",
       "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_943312f6",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-24T05:39:12Z",
+      "side": 1,
+      "message": "This is not clear to me. The full test harness includes Dovetail tool but also infrastructure elements to deploy, provision, manage the SUT. These elements are not something we can specify as part of the test specification (only if they are part of the Dovetail tool) ... is this correct?",
+      "parentUuid": "5aaae553_0be8617b",
+      "range": {
+        "startLine": 59,
+        "startChar": 29,
+        "endLine": 59,
+        "endChar": 31
+      },
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_2bed1d8c",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 1
@@ -76,6 +142,24 @@
       "writtenOn": "2017-05-23T07:53:50Z",
       "side": 1,
       "message": "Let\u0027s align language between the addendum, the test scope document and the test specifications.  I like the language used here actually and would propose patching the dovetail docs to align.  (We may need to add another level of detail here.)",
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_14572204",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-24T05:39:12Z",
+      "side": 1,
+      "message": "Yes very important to align terminology ... does it warrant creating a glossary?",
+      "parentUuid": "5aaae553_2bed1d8c",
       "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -99,6 +183,24 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_345c9e25",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-24T05:39:12Z",
+      "side": 1,
+      "message": "You mean a section at the end called \"References\"?",
+      "parentUuid": "5aaae553_cb01e93a",
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_ebfe2538",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 1
@@ -110,6 +212,24 @@
       "writtenOn": "2017-05-23T07:53:50Z",
       "side": 1,
       "message": "Suggest raising the level of this to outline pass/fail criteria that can be used in the dovetail project to evaluate the completeness of the test cases.  So not going into each test case here but discussing the principals we want to apply in each area to the cvp tests to be accepted into the suites.",
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f43da6bc",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-24T05:39:12Z",
+      "side": 1,
+      "message": "Agreed ... we need to dive into this and develop guidelines for each test area ... this will take some trial and error IMO to figure what is an appropriate level.",
+      "parentUuid": "5aaae553_ebfe2538",
       "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
