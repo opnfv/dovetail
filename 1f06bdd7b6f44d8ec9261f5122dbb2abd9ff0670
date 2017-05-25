@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_bf72a747",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-25T01:43:15Z",
+      "side": 1,
+      "message": "no difference. subnets creation with CIDR/maks_bits differ with IPv6 or IPv4(only one way to create, i.e. CIDR/maskbit, so not point it out).",
+      "parentUuid": "5aaae553_ff1c9f15",
+      "range": {
+        "startLine": 107,
+        "startChar": 0,
+        "endLine": 108,
+        "endChar": 55
+      },
+      "revId": "1f06bdd7b6f44d8ec9261f5122dbb2abd9ff0670",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_9f19eb24",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2017-05-24T20:47:19Z",
       "side": 1,
       "message": "Please include instructions on how to create an IPv6 subnet with Neutron (a Neutron command line or API call), and how to detect for their existence/identify an error code during creation",
+      "range": {
+        "startLine": 111,
+        "startChar": 0,
+        "endLine": 112,
+        "endChar": 102
+      },
+      "revId": "1f06bdd7b6f44d8ec9261f5122dbb2abd9ff0670",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_1f997b6e",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-25T01:43:15Z",
+      "side": 1,
+      "message": "1,API \"Create\" then \"List\"(Read), python AssertIn is used to detect(since it\u0027s easy, should write it in document? AssetIn is code language, while \"...found in...\" is natural language).  \n2, subnet client to do API call is used https://github.com/openstack/tempest/blob/15.0.0/tempest/api/network/base.py#L76 (all clients listed in line 70-84), is there a need to list the client name when CRUD operations? these names are openstack specific.",
+      "parentUuid": "5aaae553_9f19eb24",
       "range": {
         "startLine": 111,
         "startChar": 0,
