@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_faf58dcb",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-25T09:30:25Z",
+      "side": 1,
+      "message": "these are required by HA test case, and private_key is only one way to login host(password is used in some SUT), so maybe can to note them in the annotation.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 17
+      },
+      "revId": "31dfbcfff06d9c792e49a77298e5bfab47e82aab",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_1a266969",
+        "filename": "dovetail/container.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-25T09:30:25Z",
+      "side": 1,
+      "message": "isfile",
+      "range": {
+        "startLine": 114,
+        "startChar": 23,
+        "endLine": 114,
+        "endChar": 29
+      },
+      "revId": "31dfbcfff06d9c792e49a77298e5bfab47e82aab",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_7a319da1",
+        "filename": "dovetail/container.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-25T09:30:25Z",
+      "side": 1,
+      "message": "isfile maybe",
+      "range": {
+        "startLine": 120,
+        "startChar": 22,
+        "endLine": 120,
+        "endChar": 29
+      },
+      "revId": "31dfbcfff06d9c792e49a77298e5bfab47e82aab",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_5ad38138",
+        "filename": "dovetail/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-25T09:30:25Z",
+      "side": 1,
+      "message": "isdir",
+      "range": {
+        "startLine": 199,
+        "startChar": 18,
+        "endLine": 199,
+        "endChar": 26
+      },
+      "revId": "31dfbcfff06d9c792e49a77298e5bfab47e82aab",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_1add0943",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-25T09:30:25Z",
+      "side": 1,
+      "message": "\u0027config\u0027 seems better",
+      "range": {
+        "startLine": 43,
+        "startChar": 47,
+        "endLine": 43,
+        "endChar": 55
+      },
+      "revId": "31dfbcfff06d9c792e49a77298e5bfab47e82aab",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
