@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_8e7e9ae3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-25T18:17:04Z",
+      "side": 1,
+      "message": "\"NFVI and VIM\"\n\nSuggest:\n\"...such as managing VNF images, creating identities, instantiating workloads, managing storage, creating secure networks with service provider oriented features, and ensuring system resiliency.\"",
+      "range": {
+        "startLine": 20,
+        "startChar": 76,
+        "endLine": 20,
+        "endChar": 80
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_349ede57",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -42,6 +65,69 @@
         "endLine": 26,
         "endChar": 35
       },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_2e83e6cd",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-25T18:17:04Z",
+      "side": 1,
+      "message": "Suggest: remove \u0027Telco\u0027. it\u0027s not necessary, and it has a kind of narrower meaning / connotation.",
+      "range": {
+        "startLine": 26,
+        "startChar": 36,
+        "endLine": 26,
+        "endChar": 41
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_4e88a2e7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-25T18:17:04Z",
+      "side": 1,
+      "message": "Replace with \u0027service provider\u0027?",
+      "range": {
+        "startLine": 28,
+        "startChar": 11,
+        "endLine": 28,
+        "endChar": 16
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_2ee8c67b",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-25T18:17:04Z",
+      "side": 1,
+      "message": "\"and industry adoption\".",
       "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -117,6 +203,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_4eed028b",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-25T18:17:04Z",
+      "side": 1,
+      "message": "I would caution to explicitly support that the hosts can be virtual. In theory, yes, but OPNFV has not yet been able to fully test that. So I think for the moment, we at least should say we assume it is physical hosts. Let\u0027s also gauge in future if the need is high for covering virtual hosts.",
+      "parentUuid": "5aaae553_5f05b3c0",
+      "range": {
+        "startLine": 43,
+        "startChar": 19,
+        "endLine": 43,
+        "endChar": 49
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_7f0aefd3",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -156,6 +266,29 @@
         "startChar": 3,
         "endLine": 46,
         "endChar": 93
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_ee014e3a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-25T18:17:04Z",
+      "side": 1,
+      "message": "The user facing guide is to cover this topic in detail.",
+      "range": {
+        "startLine": 48,
+        "startChar": 41,
+        "endLine": 48,
+        "endChar": 77
       },
       "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -226,6 +359,57 @@
         "endLine": 80,
         "endChar": 42
       },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_8e9a1a13",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-25T18:17:04Z",
+      "side": 1,
+      "message": "Unclear what relationship exists between this spec and the test cases in this category? Same comment for the next one too. The individual test spec docs for IPv6, HA and VPN all have citations of references - maybe use that as source?",
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_6e955ee3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-25T18:17:04Z",
+      "side": 1,
+      "message": "HA is not a \"network capability\". Maybe under a separate caption like \"Resiliency\".",
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_2e9f6605",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-05-25T18:17:04Z",
+      "side": 1,
+      "message": "Should we say the criteria here? Like \"pass all the compulsory test cases\", in addition to listing.",
       "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
