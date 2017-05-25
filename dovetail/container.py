@@ -49,7 +49,8 @@ class Container(object):
     @classmethod
     def openrc_volume(cls, type):
         dovetail_config = dt_cfg.dovetail_config
-        dovetail_config['openrc'] = os.path.abspath(dovetail_config['openrc'])
+        dovetail_config['openrc'] = os.path.join(os.getenv('DOVETAIL_HOME'),
+                                                 dovetail_config['env_file'])
         if os.path.isfile(dovetail_config['openrc']):
             openrc = ' -v %s:%s ' % (dovetail_config['openrc'],
                                      dovetail_config[type]['openrc'])
@@ -106,9 +107,22 @@ class Container(object):
 
         log_vol = '-v %s:%s ' % (dovetail_config['result_dir'],
                                  dovetail_config["yardstick"]['result']['log'])
-        key_path = os.path.join(dovetail_config['userconfig_dir'], 'id_rsa')
+
+        # for yardstick, support pod.yaml configuration
+        pod_file = os.path.join(os.getenv("DOVETAIL_HOME"),
+                                dovetail_config['pod_file'])
+        if not os.path.exists(pod_file):
+            cls.logger.error("File %s doesn't exist.", pod_file)
+            return None
+        key_file = os.path.join(os.getenv("DOVETAIL_HOME"),
+                                dovetail_config['pri_key'])
         key_con_path = dovetail_config["yardstick"]['result']['key_path']
-        key_vol = '-v %s:%s ' % (key_path, key_con_path)
+        if not os.path.exists(key_file):
+            cls.logger.debug("File %s doesn't exist.", key_file)
+            cls.logger.debug("Can just use password in %s.", pod_file)
+            key_vol = ''
+        else:
+            key_vol = '-v %s:%s ' % (key_file, key_con_path)
         return "%s %s %s" % (envs, log_vol, key_vol)
 
     @classmethod
@@ -137,17 +151,8 @@ class Container(object):
             return None
 
         # for refstack, support user self_defined configuration
-        # for yardstick, support pod.yaml configuration
-        pod_file = os.path.join(dovetail_config['userconfig_dir'], 'pod.yaml')
-        if type.lower() == "yardstick" and not os.path.exists(pod_file):
-            cls.logger.error("File %s doesn't exist.", pod_file)
-            return None
-        key_file = os.path.join(dovetail_config['userconfig_dir'], 'id_rsa')
-        if type.lower() == "yardstick" and not os.path.exists(key_file):
-            cls.logger.debug("File %s doesn't exist.", key_file)
-            cls.logger.debug("Can just use password in %s.", pod_file)
         config_volume = \
-            ' -v %s:%s ' % (dovetail_config['userconfig_dir'],
+            ' -v %s:%s ' % (os.getenv("DOVETAIL_HOME"),
                             dovetail_config[type]['config']['dir'])
 
         hosts_config = ""

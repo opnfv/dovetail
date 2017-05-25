@@ -181,23 +181,33 @@ def clean_results_dir():
 
 
 def get_result_path():
-    dovetail_home = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    dovetail_home = os.getenv("DOVETAIL_HOME")
+    if not dovetail_home:
+        print("There must have the enviroment variable 'DOVETAIL_HOME'.")
+        return None
     result_path = os.path.join(dovetail_home, 'results')
     dt_cfg.dovetail_config['result_dir'] = result_path
+    data_path = os.path.join(dovetail_home, 'data')
+    dt_cfg.dovetail_config['data_dir'] = data_path
+    return dovetail_home
 
 
-def get_userconfig_path():
+def copy_userconfig_files(logger):
     dovetail_home = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     userconfig_path = os.path.join(dovetail_home, 'userconfig')
-    dt_cfg.dovetail_config['userconfig_dir'] = userconfig_path
+    data_path = dt_cfg.dovetail_config['data_dir']
+    if not os.path.exists(data_path):
+        os.makedirs(data_path)
+    cmd = 'sudo cp -r %s/* %s' % (userconfig_path, data_path)
+    dt_utils.exec_cmd(cmd, logger, exit_on_error=False)
 
 
 def main(*args, **kwargs):
     """Dovetail compliance test entry!"""
     build_tag = "daily-master-%s" % str(uuid.uuid4())
     dt_cfg.dovetail_config['build_tag'] = build_tag
-    get_result_path()
-    get_userconfig_path()
+    if not get_result_path():
+        return
     clean_results_dir()
     if kwargs['debug']:
         os.environ['DEBUG'] = 'true'
@@ -207,6 +217,7 @@ def main(*args, **kwargs):
     logger.info('Dovetail compliance: %s!', (kwargs['testsuite']))
     logger.info('================================================')
     logger.info('Build tag: %s', dt_cfg.dovetail_config['build_tag'])
+    copy_userconfig_files(logger)
     dt_utils.check_docker_version(logger)
     validate_input(kwargs, dt_cfg.dovetail_config['validate_input'], logger)
     configs = filter_config(kwargs, logger)

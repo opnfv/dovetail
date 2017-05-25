@@ -40,7 +40,7 @@ class DockerRunner(object):
             src_path = os.path.join(file_path, src_file)
         if exist_file:
             file_path = dt_cfg.dovetail_config[self.type]['config']['dir']
-            src_path = os.path.join(file_path, exist_file)
+            src_path = os.path.join(file_path, 'data', exist_file)
 
         Container.pre_copy(container_id, src_path, dest_path)
         return dest_path
