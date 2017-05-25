@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_5a95c1e2",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-05-25T11:48:44Z",
+      "side": 1,
+      "message": "Sure",
+      "parentUuid": "5aaae553_faf58dcb",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 17
+      },
+      "revId": "31dfbcfff06d9c792e49a77298e5bfab47e82aab",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_1a266969",
         "filename": "dovetail/container.py",
         "patchSetId": 1
