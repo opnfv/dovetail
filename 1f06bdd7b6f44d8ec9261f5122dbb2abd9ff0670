@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_5f8ff323",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-05-25T01:46:50Z",
+      "side": 1,
+      "message": "by default, the network includes both IPv4 and IPv6. I checked the cli command: openstack network create net1. I found that:two fields of IPv4 and IPv6 exits. i asume there is no difference for creation for IPv4 or IPv6.",
+      "parentUuid": "5aaae553_ff1c9f15",
+      "range": {
+        "startLine": 107,
+        "startChar": 0,
+        "endLine": 108,
+        "endChar": 55
+      },
+      "revId": "1f06bdd7b6f44d8ec9261f5122dbb2abd9ff0670",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_9f19eb24",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 5
