@@ -117,6 +117,30 @@
       "revId": "1f06bdd7b6f44d8ec9261f5122dbb2abd9ff0670",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_dfc9a35b",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-05-25T02:00:45Z",
+      "side": 1,
+      "message": "here is an example for the subnet creation command:openstack subnet create subnet1 --network net1  --subnet-range 192.0.2.0/24.  I am not sure if we need to include this command.",
+      "parentUuid": "5aaae553_9f19eb24",
+      "range": {
+        "startLine": 111,
+        "startChar": 0,
+        "endLine": 112,
+        "endChar": 102
+      },
+      "revId": "1f06bdd7b6f44d8ec9261f5122dbb2abd9ff0670",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
