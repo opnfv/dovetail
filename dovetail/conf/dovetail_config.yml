@@ -5,7 +5,17 @@ report_dest: 'file'
 result_file: 'results.json'
 
 # OPENSTACK Credential file
-openrc: '/home/opnfv/dovetail/openrc.sh'
+env_file: 'env_config.sh'
+
+# POD info file
+pod_file: 'pod.yaml'
+
+# JUMPSERVER private key used in pod_file to login hosts
+# If use password to login hosts, there's no need to provide the private key
+pri_key: 'id_rsa'
+
+# SDNVPN offline image
+sdnvpn_image: 'ubuntu-16.04-server-cloudimg-amd64-disk1.img'
 
 COMPLIANCE_PATH: compliance/
 TESTCASE_PATH: testcase/

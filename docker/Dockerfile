@@ -29,8 +29,6 @@ RUN \
 && \
     git clone https://git.opnfv.org/dovetail ${REPOS_DIR} \
 && \
-    mkdir -p ${REPOS_DIR}/results \
-&& \
     pip install -U pip \
 && \
     pip install -r ${REPOS_DIR}/requirements.txt \
