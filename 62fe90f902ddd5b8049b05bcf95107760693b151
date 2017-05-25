@@ -48,6 +48,54 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_b1e65b43",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok I\u0027ll wordsmith further",
+      "parentUuid": "5aaae553_8e7e9ae3",
+      "range": {
+        "startLine": 20,
+        "startChar": 76,
+        "endLine": 20,
+        "endChar": 80
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_11dacf78",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_1499626e",
+      "range": {
+        "startLine": 20,
+        "startChar": 62,
+        "endLine": 20,
+        "endChar": 69
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_349ede57",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -87,6 +135,54 @@
         "startChar": 36,
         "endLine": 26,
         "endChar": 41
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_71d0e353",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "I think OPNFV is all about Telco NFV vs Enetrprise or Cloud?",
+      "parentUuid": "5aaae553_2e83e6cd",
+      "range": {
+        "startLine": 26,
+        "startChar": 36,
+        "endLine": 26,
+        "endChar": 41
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d1e3d731",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_349ede57",
+      "range": {
+        "startLine": 26,
+        "startChar": 27,
+        "endLine": 26,
+        "endChar": 35
       },
       "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -134,6 +230,24 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_91d55f45",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "I think industry adoption is a stretch here ... we mean maturity of the OPNFV platform features specifically.",
+      "parentUuid": "5aaae553_2ee8c67b",
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_d4a2ea99",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -157,6 +271,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_51cfe7b0",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_d4a2ea99",
+      "range": {
+        "startLine": 34,
+        "startChar": 21,
+        "endLine": 34,
+        "endChar": 53
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_bf686788",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -168,6 +306,30 @@
       "writtenOn": "2017-05-24T19:20:56Z",
       "side": 1,
       "message": "replace with: SUT implements the functions and complies with the APIs of the various Virtual Infrastructure Manager (VIM) services included in the current OPNFV release",
+      "range": {
+        "startLine": 42,
+        "startChar": 7,
+        "endLine": 42,
+        "endChar": 85
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_11c16f80",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_bf686788",
       "range": {
         "startLine": 42,
         "startChar": 7,
@@ -227,6 +389,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_d1baf709",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "Point for discussion? If we assume Pharos it means the deployment is on bare metal.",
+      "parentUuid": "5aaae553_4eed028b",
+      "range": {
+        "startLine": 43,
+        "startChar": 19,
+        "endLine": 43,
+        "endChar": 49
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_7f0aefd3",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -238,6 +424,30 @@
       "writtenOn": "2017-05-24T19:20:56Z",
       "side": 1,
       "message": "replace with: are recommended to comply",
+      "range": {
+        "startLine": 44,
+        "startChar": 53,
+        "endLine": 44,
+        "endChar": 61
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_913c7f95",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_7f0aefd3",
       "range": {
         "startLine": 44,
         "startChar": 53,
@@ -273,6 +483,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_31410b0c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_1f0f3be3",
+      "range": {
+        "startLine": 46,
+        "startChar": 3,
+        "endLine": 46,
+        "endChar": 93
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_ee014e3a",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -284,6 +518,30 @@
       "writtenOn": "2017-05-25T18:17:04Z",
       "side": 1,
       "message": "The user facing guide is to cover this topic in detail.",
+      "range": {
+        "startLine": 48,
+        "startChar": 41,
+        "endLine": 48,
+        "endChar": 77
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_51460725",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_ee014e3a",
       "range": {
         "startLine": 48,
         "startChar": 41,
@@ -319,6 +577,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_f14a9326",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_3f1477f4",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 98
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_dff8c3c6",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -330,6 +612,30 @@
       "writtenOn": "2017-05-24T19:20:56Z",
       "side": 1,
       "message": "OpenStack (no space)",
+      "range": {
+        "startLine": 78,
+        "startChar": 36,
+        "endLine": 78,
+        "endChar": 46
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_11488f2c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_dff8c3c6",
       "range": {
         "startLine": 78,
         "startChar": 36,
@@ -365,6 +671,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_b1541bcb",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_fff57fcb",
+      "range": {
+        "startLine": 80,
+        "startChar": 36,
+        "endLine": 80,
+        "endChar": 42
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_8e9a1a13",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -376,6 +706,24 @@
       "writtenOn": "2017-05-25T18:17:04Z",
       "side": 1,
       "message": "Unclear what relationship exists between this spec and the test cases in this category? Same comment for the next one too. The individual test spec docs for IPv6, HA and VPN all have citations of references - maybe use that as source?",
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_515da7e8",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "TST007 is about MANO Interop ... for example there are test cases for VNF life-cycle management such as VNF instantiate, terminate, start, stop. These shoudl be relevant? I think we can re-use the test case template.",
+      "parentUuid": "5aaae553_8e9a1a13",
       "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -399,6 +747,24 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_116f2f94",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "Agree",
+      "parentUuid": "5aaae553_6e955ee3",
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_2e9f6605",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -416,6 +782,24 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_910a3fd1",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "Yes! The criteria are still missing and need to be added.",
+      "parentUuid": "5aaae553_2e9f6605",
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_9f024bb3",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -427,6 +811,30 @@
       "writtenOn": "2017-05-24T19:20:56Z",
       "side": 1,
       "message": "replace with: Identity and access management",
+      "range": {
+        "startLine": 116,
+        "startChar": 8,
+        "endLine": 116,
+        "endChar": 22
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_310fcbe3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_9f024bb3",
       "range": {
         "startLine": 116,
         "startChar": 8,
@@ -462,6 +870,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_5114c7f4",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_bfff07aa",
+      "range": {
+        "startLine": 118,
+        "startChar": 8,
+        "endLine": 118,
+        "endChar": 13
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_5f2cd34a",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -473,6 +905,30 @@
       "writtenOn": "2017-05-24T19:20:56Z",
       "side": 1,
       "message": "replace with: API policy",
+      "range": {
+        "startLine": 128,
+        "startChar": 8,
+        "endLine": 128,
+        "endChar": 21
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f1f853c6",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_5f2cd34a",
       "range": {
         "startLine": 128,
         "startChar": 8,
@@ -508,6 +964,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_11f64fd8",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_7f318fa1",
+      "range": {
+        "startLine": 144,
+        "startChar": 8,
+        "endLine": 144,
+        "endChar": 14
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_1f265b69",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -519,6 +999,30 @@
       "writtenOn": "2017-05-24T19:20:56Z",
       "side": 1,
       "message": "replace with: \n4.      Router operations\n\n5.      IP address management\n\n6.      Floating IP operations\n\n7.      Delegation of network functions to SDN Controllers\n\n8.      Etc.",
+      "range": {
+        "startLine": 150,
+        "startChar": 0,
+        "endLine": 150,
+        "endChar": 12
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d1ff57a9",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-25T23:21:40Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5aaae553_1f265b69",
       "range": {
         "startLine": 150,
         "startChar": 0,
