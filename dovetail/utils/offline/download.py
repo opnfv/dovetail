@@ -41,6 +41,14 @@ class download(object):
                     cmd = 'sudo chmod og+rw %s' % image_save_path
                     dt_utils.exec_cmd(cmd)
 
+        if 'wgets' in keys:
+            for key, value in self.config['wgets'].items():
+                if value is not None:
+                    wget_url = self.config['wgets'][key]['source_url']
+                    wget_path = self.config['wgets'][key]['save_path']
+                    cmd = 'sudo wget -nc %s -P %s' % (wget_url, wget_path)
+                    dt_utils.exec_cmd(cmd)
+
 
 if __name__ == '__main__':
     download = download()

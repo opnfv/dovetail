@@ -34,3 +34,4 @@ unittest_results.log
 docs_build/
 docs_output/
 results/
+pre_config/
