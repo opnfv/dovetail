@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_51b047f4",
+        "filename": "dovetail/container.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-26T01:43:12Z",
+      "side": 1,
+      "message": "Keyfile %s not found, maybe can use passwd method in % to do HA test.",
+      "range": {
+        "startLine": 121,
+        "startChar": 11,
+        "endLine": 122,
+        "endChar": 70
+      },
+      "revId": "48883f285eefa08346fb1f9c49c0d790004c4848",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_1192cf57",
+        "filename": "dovetail/run.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-26T01:43:12Z",
+      "side": 1,
+      "message": "try exception  os.environ.get\n\nmandatory env variable \"DOVETAIL_HOME\" is not found, please set before running.",
+      "range": {
+        "startLine": 184,
+        "startChar": 4,
+        "endLine": 187,
+        "endChar": 19
+      },
+      "revId": "48883f285eefa08346fb1f9c49c0d790004c4848",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
