@@ -181,6 +181,13 @@ class Container(object):
             dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +
                               " | awk '{print $1}' | head -1", cls.logger)
         cls.container_list[type] = container_id
+
+        if 'sdnvpn' in str(testcase_name):
+            prefix_path = dt_cfg.dovetail_config[type]['config']['dir']
+            file_name = dt_cfg.dovetail_config['sdnvpn_image']
+            src_path = os.path.join(prefix_path, 'pre_config', file_name)
+            dest_path = '/home/opnfv/functest/images'
+            Container.pre_copy(container_id, src_path, dest_path)
         return container_id
 
     @classmethod
