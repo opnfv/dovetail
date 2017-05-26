@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import sys
 import yaml
 
 import dovetail.utils.dovetail_utils as dt_utils
@@ -28,6 +29,22 @@ class load(object):
                         dt_utils.exec_cmd(cmd)
                     else:
                         print "file %s not exists" % image_save_path
+        if 'wgets' in keys:
+            for key, value in self.config['wgets'].items():
+                if value is not None:
+                    try:
+                        dovetail_home = os.environ["DOVETAIL_HOME"]
+                    except KeyError:
+                        print "please set the env variable DOVETAIL_HOME"
+                        sys.exit(1)
+                    name = self.config['wgets'][key]['file_name']
+                    save_path = self.config['wgets'][key]['save_path']
+                    file_path = ''.join([save_path, name])
+                    if os.path.isfile(image_save_path):
+                        cmd = 'sudo cp %s %s' % (file_path, dovetail_home)
+                        dt_utils.exec_cmd(cmd)
+                    else:
+                        print "file %s not exists" % file_path
 
 
 if __name__ == '__main__':
