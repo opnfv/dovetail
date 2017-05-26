@@ -20,3 +20,9 @@ docker_images:
     tag: 3.5
     store_name: image_mongo.docker
 docker_save_path: /home/opnfv/dovetail/results/
+
+wgets:
+    sdnvpn:
+      source_url: http://artifacts.opnfv.org/sdnvpn/ubuntu-16.04-server-cloudimg-amd64-disk1.img
+      save_path: /home/opnfv/dovetail/results/
+      file_name: ubuntu-16.04-server-cloudimg-amd64-disk1.img

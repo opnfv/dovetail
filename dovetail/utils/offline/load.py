@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import sys
 import yaml
 
 import dovetail.utils.dovetail_utils as dt_utils
@@ -22,12 +23,31 @@ class load(object):
             for key, value in self.config['docker_images'].items():
                 if value is not None:
                     name = self.config['docker_images'][key]['store_name']
-                    image_save_path = ''.join([save_path, name])
+                    image_save_path = os.path.join(save_path, name)
                     if os.path.isfile(image_save_path):
                         cmd = 'sudo docker load -i %s' % (image_save_path)
                         dt_utils.exec_cmd(cmd)
                     else:
                         print "file %s not exists" % image_save_path
+        if 'wgets' in keys:
+            for key, value in self.config['wgets'].items():
+                if value is not None:
+                    try:
+                        dovetail_home = os.environ["DOVETAIL_HOME"]
+                    except KeyError:
+                        print "env variable DOVETAIL_HOME not found"
+                        sys.exit(1)
+                    name = self.config['wgets'][key]['file_name']
+                    save_path = self.config['wgets'][key]['save_path']
+                    file_path = os.path.join(save_path, name)
+                    dest_path = os.path.join(dovetail_home, 'pre_config')
+                    if not os.path.isdir(dest_path):
+                        os.mkdir(dest_path)
+                    if os.path.isfile(file_path):
+                        cmd = 'sudo cp %s %s' % (file_path, dest_path)
+                        dt_utils.exec_cmd(cmd)
+                    else:
+                        print "file %s not exists" % file_path
 
 
 if __name__ == '__main__':

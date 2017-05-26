@@ -49,9 +49,16 @@ class DockerRunner(object):
         if dt_cfg.dovetail_config['offline']:
             exist = Container.check_image_exist(self.testcase.validate_type())
             if not exist:
-                self.logger.error('%s image not exist offline running',
+                self.logger.error('%s image not exist when running offline',
                                   self.testcase.validate_type())
                 return
+            if 'sdnvpn' in str(self.testcase.name()):
+                img_name = dt_cfg.dovetail_config['sdnvpn_image']
+                img_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
+                                        img_name)
+                if not os.path.isfile(img_file):
+                    self.logger.error('image %s not found', img_name)
+                    return
         else:
             if not Container.pull_image(self.testcase.validate_type()):
                 self.logger.error("Failed to pull the image.")
