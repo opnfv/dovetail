@@ -131,6 +131,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_9deece21",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T09:12:48Z",
+      "side": 1,
+      "message": "The dovetail tool is a script in a container it is not a test harness in and of itself.  The test harness needs to be described in the context of the harness itself.  In the case of the CVP test harness has little to do with the dovetail tool.  We need to define the test harness used to exercise the SUT right?",
+      "parentUuid": "5aaae553_943312f6",
+      "range": {
+        "startLine": 59,
+        "startChar": 29,
+        "endLine": 59,
+        "endChar": 31
+      },
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_2bed1d8c",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 1
@@ -195,6 +219,24 @@
       "side": 1,
       "message": "You mean a section at the end called \"References\"?",
       "parentUuid": "5aaae553_cb01e93a",
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_3df31a0c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T09:12:48Z",
+      "side": 1,
+      "message": "Monday brings clarity of thought.  :)  Linking via rtd references is what I was referring to, rather than a canonical link if we use rtd references the versioning will remain consistent across releases.",
+      "parentUuid": "5aaae553_345c9e25",
       "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
