@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_7dd0b253",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T09:28:46Z",
+      "side": 1,
+      "message": "I tend to think perform is the right term. We are not \"enabling\", we are testing the SUT\u0027s ability to perform actions.",
+      "parentUuid": "5aaae553_1499626e",
+      "range": {
+        "startLine": 20,
+        "startChar": 62,
+        "endLine": 20,
+        "endChar": 69
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_349ede57",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -183,6 +207,29 @@
         "startChar": 27,
         "endLine": 26,
         "endChar": 35
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_1ddade78",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T09:28:46Z",
+      "side": 1,
+      "message": "Maybe the right language here would be \"indicates adherence to NFV platform...\".  I think NFV is enough for our target bound without adding language to further qualify what that means.",
+      "range": {
+        "startLine": 26,
+        "startChar": 27,
+        "endLine": 26,
+        "endChar": 41
       },
       "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -295,6 +342,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_9dd56e45",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T09:28:46Z",
+      "side": 1,
+      "message": "maybe \"able to be consistently instatiated and managed.\" ??  Or something, but yeah agree to ditch \"easliy\".",
+      "parentUuid": "5aaae553_d4a2ea99",
+      "range": {
+        "startLine": 34,
+        "startChar": 21,
+        "endLine": 34,
+        "endChar": 53
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_bf686788",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -329,6 +400,30 @@
       "writtenOn": "2017-05-25T23:21:40Z",
       "side": 1,
       "message": "ok",
+      "parentUuid": "5aaae553_bf686788",
+      "range": {
+        "startLine": 42,
+        "startChar": 7,
+        "endLine": 42,
+        "endChar": 85
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_ddba060a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T09:28:46Z",
+      "side": 1,
+      "message": "I tend to think we should be pecific here. If we are going to refer to \"various\" set\u0027s of API\u0027s let\u0027s draw them out.  Preferably let\u0027s point to the OPNFV document which describes the relevant API\u0027s.  This should give the tester an idea what to expect.\nIf we haven\u0027t documented our own idea of which API\u0027s are important then we need to point the tester upstream.",
       "parentUuid": "5aaae553_bf686788",
       "range": {
         "startLine": 42,
@@ -413,6 +508,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_fd4a6226",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T09:28:46Z",
+      "side": 1,
+      "message": "It is a point of record that the CVP will evaluate systems running on bare metal.  Virtually deployed systems are explicitly removed from scope, if this is to be discussed it should be done at the C\u0026C committee.",
+      "parentUuid": "5aaae553_d1baf709",
+      "range": {
+        "startLine": 43,
+        "startChar": 19,
+        "endLine": 43,
+        "endChar": 49
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_7f0aefd3",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -460,6 +579,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_1d489e2c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T09:28:46Z",
+      "side": 1,
+      "message": "I disagree with your comment Bryan.  This is a compliance test suite, not a series of product recommendations.  We need to be explicit.",
+      "parentUuid": "5aaae553_913c7f95",
+      "range": {
+        "startLine": 44,
+        "startChar": 53,
+        "endLine": 44,
+        "endChar": 61
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_1f0f3be3",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -494,6 +637,30 @@
       "writtenOn": "2017-05-25T23:21:40Z",
       "side": 1,
       "message": "ok",
+      "parentUuid": "5aaae553_1f0f3be3",
+      "range": {
+        "startLine": 46,
+        "startChar": 3,
+        "endLine": 46,
+        "endChar": 93
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_bd54eaca",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T09:28:46Z",
+      "side": 1,
+      "message": "Before making such a change I suggest we ensure we have infrastructure lifecycle tests as part of the test suite in Danube.  The way it is written is accurate to my understanding of what we are testing.  Let\u0027s not speculate about the scope for Danube in this document.",
       "parentUuid": "5aaae553_1f0f3be3",
       "range": {
         "startLine": 46,
@@ -929,6 +1096,30 @@
       "side": 1,
       "message": "ok",
       "parentUuid": "5aaae553_5f2cd34a",
+      "range": {
+        "startLine": 128,
+        "startChar": 8,
+        "endLine": 128,
+        "endChar": 21
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_7d5e72eb",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T09:28:46Z",
+      "side": 1,
+      "message": "Can we double check that the language reflects the tests being used.  Authorization feels accurate and consistent in the language used in our upstream communities.",
+      "parentUuid": "5aaae553_f1f853c6",
       "range": {
         "startLine": 128,
         "startChar": 8,
