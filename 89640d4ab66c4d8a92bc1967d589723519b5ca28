@@ -1,0 +1,473 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_bdc70a64",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "\"As it hosts the test harness, \" would be a more accurate description.",
+      "range": {
+        "startLine": 23,
+        "startChar": 22,
+        "endLine": 23,
+        "endChar": 54
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_ddc44661",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "Suggest removing this, it lacks context in the CVP case.  You may choose to simply state:  \"This host may be set up in a similar manner to the \u0027Jumphost\u0027 used in the OPNFV CI/CD system.\" if there is a need to make comparisons.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 72
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_7da192a8",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "Clarify, this implies the SUT is also accessible via the public internet.  I don\u0027t believe that is the case here.",
+      "range": {
+        "startLine": 29,
+        "startChar": 31,
+        "endLine": 29,
+        "endChar": 79
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_9da6cec0",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "Rather than speculate as to the reason, simply state some labs may not have access which is why we support an alternative method.",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 17
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_3dab1a8b",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "This needs to be checked.  I assume (based on the tests selected) the test cases require more than just access to the SUT API\u0027s.  Needs to be clarified here as to what exactly is required as far as SUT access.",
+      "range": {
+        "startLine": 38,
+        "startChar": 25,
+        "endLine": 39,
+        "endChar": 39
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_5d87f60f",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "I suggest to break the next paragraph up into seperate topical paragraphs.  This paragraph covers install, support, processes and test case selection.  Worth simplifying.  (also remove parts that do not help the user run the tests.)",
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_bd9e2a62",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "The",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 1
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_dd9be670",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "Can we not just support one method for our first efforts?  Supporting multiple workflows requires more effort from the community.  I suggest providing only the docker based solution as I don\u0027t see any situations where that would not be supported.  Let\u0027s try to keep this simple.",
+      "range": {
+        "startLine": 45,
+        "startChar": 27,
+        "endLine": 46,
+        "endChar": 9
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_3d823a01",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "simply refer to the developer documentation.  There is no need to explain developer preconditions in the user guide.",
+      "range": {
+        "startLine": 48,
+        "startChar": 63,
+        "endLine": 49,
+        "endChar": 47
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_1d797e2f",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "This \"experimental\" should all be moved to a developer guide.  It complicates and lengthens the user document and is not relevant in this context.",
+      "range": {
+        "startLine": 57,
+        "startChar": 39,
+        "endLine": 60,
+        "endChar": 69
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_3d99da6e",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "Here you should focus on the test host for installation of the dovetail tool.  Keep this guide focused on the user.",
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_5d9e1658",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "As mentioned before, I don\u0027t think this is accurate for the tests we have selected.",
+      "range": {
+        "startLine": 70,
+        "startChar": 4,
+        "endLine": 70,
+        "endChar": 40
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_1da09e8f",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "I suggest we state what we expect first.  Then state deviations may still work, but support will only be offered for specific versions as used in the roll-out of the toolchain.",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 12
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_fdc9025b",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "Is this meant to be a list of needed ports?",
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_1dc73e47",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "Is this file meant to exist?  Is this something the user needs to write?  Based on the last command issued (which was to create this directory) I assume the file does not exist.  As such this may be described in a different manner.",
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_ddc0c62c",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "This line does not make sense.  If this is true, why make the directory home/dovetail ?",
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_7ddd1214",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "superfluous, remove.",
+      "range": {
+        "startLine": 192,
+        "startChar": 75,
+        "endLine": 193,
+        "endChar": 30
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_5decd6c7",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "What is the purpose of this line?",
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_ddd766ec",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "Will we re-test all these versions against the target scenario when we are finally ready to release dovetail?  This would seem to add quite a burden to the infra team as far as resource planning in concerned prior to rolling out the tool-chain.  Why not select one common version to save a lot of time?",
+      "range": {
+        "startLine": 205,
+        "startChar": 0,
+        "endLine": 206,
+        "endChar": 74
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_9d09ee97",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "The following section is complicated, it may be worth simplifying it for users.  Single targets, simple command sequences will help.",
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_3dfeba6c",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "I assume this will be adjusted to refer to the tag this version of the user guide refers to?",
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_bdf14a97",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "Do we intend to use a tag that is different than danube at this time?  keeping latest in here creates a manual edit step close to release that is likely to result in missed lines and faulty behavior.",
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_ddee86b4",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 422,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-29T11:26:56Z",
+      "side": 1,
+      "message": "Suggest removing this and having it in the developer section.  No point adding unneeded lines to this document that should be elsewhere.",
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
