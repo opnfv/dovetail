@@ -323,6 +323,29 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_bd05ca15",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T15:36:07Z",
+      "side": 1,
+      "message": "change to \"create\" to avoid confusion (see Chris\u0027 comment).",
+      "range": {
+        "startLine": 139,
+        "startChar": 24,
+        "endLine": 139,
+        "endChar": 27
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_ddc0c62c",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 5
@@ -334,6 +357,70 @@
       "writtenOn": "2017-05-29T11:26:56Z",
       "side": 1,
       "message": "This line does not make sense.  If this is true, why make the directory home/dovetail ?",
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_580e2436",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T15:36:07Z",
+      "side": 1,
+      "message": "I understand this like this:\n- $HOME \u003d /home/opnfv\n- full path of the previously created directory: $HOME/dovetail \u003d /home/opnfv/dovetail\n\nRemove from command listing. This is not an instruction a user would ever run.\nIf this bug is planned to eliminated -\u003e simply remove\nIf not, state further above that a user \"opnfv\" shall be created.",
+      "parentUuid": "5aaae553_ddc0c62c",
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f8127057",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T15:36:07Z",
+      "side": 1,
+      "message": "remove this and instead state above that the following lines are supposed to be the content of the newly created config file.",
+      "range": {
+        "startLine": 145,
+        "startChar": 3,
+        "endLine": 145,
+        "endChar": 33
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_1810ac4d",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T15:36:07Z",
+      "side": 1,
+      "message": "this doesn\u0027t work. \"source\" is a built-in command of bash. You cannot use sudo with it. You should source the config file directly using the user who is used to run the dovetail tool.",
+      "range": {
+        "startLine": 178,
+        "startChar": 5,
+        "endLine": 178,
+        "endChar": 9
+      },
       "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -380,6 +467,29 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_d819b47a",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T15:36:07Z",
+      "side": 1,
+      "message": "remove from command listing. This is not an instruction a user would ever run.",
+      "range": {
+        "startLine": 203,
+        "startChar": 2,
+        "endLine": 203,
+        "endChar": 59
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_ddd766ec",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 5
@@ -420,6 +530,52 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_b81cf86b",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T15:36:07Z",
+      "side": 1,
+      "message": "remove from command listing. This is not an instruction a user would ever run.",
+      "range": {
+        "startLine": 225,
+        "startChar": 3,
+        "endLine": 226,
+        "endChar": 10
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_782680bc",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T15:36:07Z",
+      "side": 1,
+      "message": "Do not format as command listing. This is not an instruction a user would ever run.",
+      "range": {
+        "startLine": 241,
+        "startChar": 3,
+        "endLine": 241,
+        "endChar": 61
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_3dfeba6c",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 5
@@ -437,6 +593,29 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_982b3c82",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T15:36:07Z",
+      "side": 1,
+      "message": "Do not format as command listing. This is not an instruction a user would ever run, but a descriptive part of this guide.",
+      "range": {
+        "startLine": 290,
+        "startChar": 3,
+        "endLine": 290,
+        "endChar": 72
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_bdf14a97",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 5
@@ -448,6 +627,75 @@
       "writtenOn": "2017-05-29T11:26:56Z",
       "side": 1,
       "message": "Do we intend to use a tag that is different than danube at this time?  keeping latest in here creates a manual edit step close to release that is likely to result in missed lines and faulty behavior.",
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_3820089b",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T15:36:07Z",
+      "side": 1,
+      "message": "Do not format as command listing. This is not an instruction a user would ever run, but a descriptive part of this guide.",
+      "range": {
+        "startLine": 296,
+        "startChar": 2,
+        "endLine": 296,
+        "endChar": 85
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_5825c4a9",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T15:36:07Z",
+      "side": 1,
+      "message": "Do not format as command listing. This is not an instruction a user would ever run, but a descriptive part of this guide.",
+      "range": {
+        "startLine": 340,
+        "startChar": 0,
+        "endLine": 340,
+        "endChar": 77
+      },
+      "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f83910d9",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T15:36:07Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 397,
+        "startChar": 3,
+        "endLine": 407,
+        "endChar": 20
+      },
       "revId": "89640d4ab66c4d8a92bc1967d589723519b5ca28",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
