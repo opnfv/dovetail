@@ -45,6 +45,30 @@
       "revId": "3da2aee811138ea9af2687f902e76cfd0bb85647",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_64181f85",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 483,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T20:35:20Z",
+      "side": 1,
+      "message": "Yes, it should. Added.",
+      "parentUuid": "5aaae553_7fd8af53",
+      "range": {
+        "startLine": 483,
+        "startChar": 0,
+        "endLine": 483,
+        "endChar": 92
+      },
+      "revId": "3da2aee811138ea9af2687f902e76cfd0bb85647",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
