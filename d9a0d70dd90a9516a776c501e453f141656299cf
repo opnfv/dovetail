@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_b854f8ca",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 620,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T20:19:06Z",
+      "side": 1,
+      "message": "We should mention that this command tests only one service; nova, I assume. Other services might behave very differently in case of high I/O load.",
+      "range": {
+        "startLine": 620,
+        "startChar": 1,
+        "endLine": 620,
+        "endChar": 22
+      },
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f84a7026",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 630,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T20:19:06Z",
+      "side": 1,
+      "message": "The term \"blocking disk I/O\" is confusing because it implies that no I/O operation to/from disk can happen (i.e., I/O operation are blocked \u003d\u003d prohibited).\n\nHowever, this test case rather puts the system under high I/O load - similarly to the CPU load test case. Hence, I suggest to align the terminology used in both test cases, for instance by refering to \"stressing disk I/O\".",
+      "range": {
+        "startLine": 625,
+        "startChar": 0,
+        "endLine": 630,
+        "endChar": 47
+      },
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_1848ac2c",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 636,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T20:19:06Z",
+      "side": 1,
+      "message": "can you clarify this a bit further: is that just a large file to which data is written?\n\nIf so, how much free disk space is needed on the SuT to run this test? Some commercial systems might only have limited disk space available.",
+      "range": {
+        "startLine": 636,
+        "startChar": 37,
+        "endLine": 636,
+        "endChar": 46
+      },
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d851b4d9",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 691,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T20:19:06Z",
+      "side": 1,
+      "message": "I assume this is supposed to be a generic term for the actual service which provides load balancing. Is this HAproxy in practice? I am wondering if the test can handle different load-balance service implementations. If not, I would suggest to refer to the concrete service (HAproxy) here.",
+      "range": {
+        "startLine": 691,
+        "startChar": 26,
+        "endLine": 691,
+        "endChar": 39
+      },
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
