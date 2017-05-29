@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_087ce771",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T20:35:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_10a00f9e",
+      "revId": "bbc05cfdb24b42ebd6eddb313e56febf22dbaad3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_309bd373",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 9
@@ -30,6 +48,30 @@
       "writtenOn": "2017-05-18T12:26:55Z",
       "side": 1,
       "message": "\u0026 VIM",
+      "range": {
+        "startLine": 58,
+        "startChar": 43,
+        "endLine": 58,
+        "endChar": 47
+      },
+      "revId": "bbc05cfdb24b42ebd6eddb313e56febf22dbaad3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_2881a34a",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T20:35:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_309bd373",
       "range": {
         "startLine": 58,
         "startChar": 43,
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_c8956f89",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T20:35:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_d0891727",
+      "range": {
+        "startLine": 82,
+        "startChar": 13,
+        "endLine": 82,
+        "endChar": 18
+      },
+      "revId": "bbc05cfdb24b42ebd6eddb313e56febf22dbaad3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_f08c5b37",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 9
@@ -76,6 +142,30 @@
       "writtenOn": "2017-05-18T12:26:55Z",
       "side": 1,
       "message": "uses",
+      "range": {
+        "startLine": 88,
+        "startChar": 54,
+        "endLine": 88,
+        "endChar": 66
+      },
+      "revId": "bbc05cfdb24b42ebd6eddb313e56febf22dbaad3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_e892ab9e",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T20:35:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab8dda7_f08c5b37",
       "range": {
         "startLine": 88,
         "startChar": 54,
@@ -170,6 +260,24 @@
       "side": 1,
       "message": "the removal of all created entities (instances, VMs, networks) is being added to the D3.0 release. Hence, the post-condition after every test is a clean system (or rather, equivalent to the pre-condition). I\u0027ll update the description accordingly.",
       "parentUuid": "9ab8dda7_0baea285",
+      "revId": "bbc05cfdb24b42ebd6eddb313e56febf22dbaad3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_a8e35332",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-29T20:35:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5aaae553_a85ef310",
       "revId": "bbc05cfdb24b42ebd6eddb313e56febf22dbaad3",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
