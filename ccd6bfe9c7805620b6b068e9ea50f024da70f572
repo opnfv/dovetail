@@ -1,0 +1,515 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_386d6805",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "In general for references I would not expect to point to wiki pages for projects as a canonnical reference.  These will change whereas the version of this document needs to remain consistent.  Suggest to remove all references that are not canonical or that do not have versioning.  (RFC\u0027s etc are good references as to what is being tested, a project wiki is irrelevant for a CVP document.",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f876f0d7",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "should be removed",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_5872a4e6",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Needs to be a versioned reference.",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_b880788c",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "which of these is the reference being evaluated?  This is confusing, suggest only using the upstream reference being tested.",
+      "range": {
+        "startLine": 35,
+        "startChar": 1,
+        "endLine": 41,
+        "endChar": 71
+      },
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d87d34b3",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "No RFC\u0027s for IPv6 are relevant?  suggest adding the features and functional descriptions for the protocol being evaluated.",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_984fbc92",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Is this link versioned to the release under question?  If I run the Danube tests on a platform in one year will this link be accurate?",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_185bcc55",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Same comment, versioned links or not?",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_b8571826",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Same comment, versioned links or not?",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d8545423",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Same comment, versioned links or not?",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_7831a00a",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Same comment, versioned links or not?",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_9836dc02",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Same comment, versioned links or not?",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_383b28ed",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Same comment, versioned links or not?",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_b82e38a4",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Is this testing the \"SUT API ability\" or the SUT\u0027s ability?  Is there any validation that the commands are actually performing the action requested in the test cases?",
+      "range": {
+        "startLine": 154,
+        "startChar": 29,
+        "endLine": 154,
+        "endChar": 44
+      },
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_38124863",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Suggest to remove generic text like this.  We should identify the points in the test cases where an evaluation is being done and highlight it.  (I believe this should be done in the test flow description after a recent dovetail call)",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f80b5029",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Is the network expected to be in an active state after this test step is executed?",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_18098c31",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Same comment, remove generic text.",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_73ff8302",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Is this expected to be set-up prior to the tests being run?  Ensure pre-configure actions are specified in the \" SUT  preparation document\".",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_b31c1b6c",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "This seems like a pre-condition to the test case.  What happens if a network exists for some reason?",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d319977a",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Again this seems like a pre-condition.",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_932b1f82",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Same comment, remove generic text",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_33202b9b",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "networks",
+      "range": {
+        "startLine": 308,
+        "startChar": 56,
+        "endLine": 308,
+        "endChar": 64
+      },
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_13372fe5",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 325,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Be explicit on the network being created by the test case.  This helps a tester ensure there are no collisions in naming etc.",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_b333bbf5",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Same comment, remove generic text.  (will stop adding this, but I assume it applies throughout the document.",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d330b7ea",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 375,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Again be explicit on what is being created.",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_3357cb04",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 425,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Again (I will stop commenting on this in this review), be explicit on what is being created for the tester.",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_535cc725",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 557,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "This is an obscure description.  Can this be expanded to describe what is occuring in a little more detail?",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f3405337",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 604,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Same comment as previous test case.  This should outline the purpose of the test in the context of the SUT.",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_9379df95",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 681,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "As a general comment why do we not evaluate if these commands actually result in traffic being able to be passed?  This test in particular would be great if even a simple ping or two were added.  As it stands they prove little other than the HTTP server responses match what is expected from the commands.",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_537367b1",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 694,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:28:25Z",
+      "side": 1,
+      "message": "Stopped reviewing here, previous comments iterate through this document.  Will provide general comments.",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
