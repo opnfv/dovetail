@@ -967,6 +967,23 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_731223b6",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T15:20:51Z",
+      "side": 1,
+      "message": "In this section we should address the action point added by Wenjing on the TSC call to document the criteria for being awarded a CVP mark:  \"add a description on what level of test case passing should be enough to pass the CVP into to the addendum for  Danube.\"",
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_9f024bb3",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
