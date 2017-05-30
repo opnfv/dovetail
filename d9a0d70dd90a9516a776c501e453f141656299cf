@@ -2,6 +2,437 @@
   "comments": [
     {
       "key": {
+        "uuid": "5aaae553_385a4884",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "For HA do we not require more than one node?",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_585f0473",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "How is this handled in the automated test tools?  Is this done as part of the testing or do we expect the system to have a \"cirros\" image available?  This needs to be clarified, as it should be covered in the system preparation guide if required to be done prior to test execution. (If done as part of the testing describe where and when it is done - dependencies need to be clear)",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f853506a",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Again is this part of the test, or a system preparation activity?  Same comment as above.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_98657c47",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Is it applicable to have performance metrics in this test suite. The C\u0026C committee specified the tests in the first iteration of the CVP would only evaluate functionality.\nwhile I realize these may be upper bounds of expected behavior I would have thought if timers were required they would be generous at 30 seconds or above to see the functionality executed.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d84a14ac",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "One node does not seem sufficient for HA:  Same comment as before.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_18518c62",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Shoudl the test restart the process?  If process recovery is not part of the test criteria I think the description of the test case needs to be updated to reflect that.  (\"Does not evaluate process recovery as a pass fail criteria\" should be clearly described.)",
+      "range": {
+        "startLine": 238,
+        "startChar": 76,
+        "endLine": 239,
+        "endChar": 21
+      },
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_b84dd8c6",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Same comment on setting bounds for operations.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_78c76013",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "One node? same comment.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_38d1e8cd",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Is the content of the list evaluated for loss or corruption?  That would seem to be a suitable metric for \"service continuity\".",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f8da70e8",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Same comment on restarting processes.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_58d624c7",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "simmilar comment on timers for performance metrics.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_18d8acee",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Assuming the process recovered, or was restarted effectively.  No checks were described on that, there may be unforeseen impacts, do they constitute a failure of the test?   (comment applies to other test cases)",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_b8e4f8ac",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "More than one?  same comment.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_78ee808d",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "This needs to be captured in the system preparation documentation if not provided in an automated fashion as part of the test suite.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_98f33c73",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 403,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Same comment, is this a pass/fail criteria?",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_58edc48a",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Same comment on metrics.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_38e8087c",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Same comment, assuming no issues.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f801103a",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 445,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Same comment, more than one.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_18ff4c36",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 484,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Same comment, pass/fail",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_b8fb9846",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 490,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Same comment, metrics.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d8f8d44b",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 498,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Same comment on failure cases.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_789520e3",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Same comment more than one.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_b892b8f4",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Is there a service availability component to this test case?  should the processes be evaluated for service continuity, create network etc, or is this test limited only to process availability and recovery.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d88f74cb",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 576,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Same comment on metrics.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_78bc406d",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 578,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Maybe this needs to extrapolate on what is being met as a metric in the tests.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_b854f8ca",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 9
@@ -71,6 +502,74 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_98c1fce6",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 641,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Same comment on metrics.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f8afd029",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 651,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "The actual evaluation criteria needs to be clearer.  I get this feeling for all test cases, the steps are listed including recovery, but there is no specific description of where and when in the steps an evaluation is done to determine success.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_38b6c88b",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 656,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Is there not a hanging flavor \"test-001\" remaining after this test case?",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_18ad0c32",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 682,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "Two?  same comment as previously.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_d851b4d9",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 9
@@ -88,6 +587,64 @@
         "endLine": 691,
         "endChar": 39
       },
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_b8a95826",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 691,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "agree.",
+      "parentUuid": "5aaae553_d851b4d9",
+      "range": {
+        "startLine": 691,
+        "startChar": 26,
+        "endLine": 691,
+        "endChar": 39
+      },
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d8a69453",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 719,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "same comment on the metrics.  \nSecond comment: This test suite should consistently describe the pass/fail conditions either in the test case description or in the pass/fail criteria section.  I beleive on the last call there was an agreement that pass/fail points should be described explicitly in the test step description.  Suggest checking the minutes (or if the minutes are incomplete with the committers) on what the decision actually was.",
+      "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_7863e01a",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 722,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:02:33Z",
+      "side": 1,
+      "message": "same comment, is the recovery part of the pass/fail or a step in the test case?",
       "revId": "d9a0d70dd90a9516a776c501e453f141656299cf",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
