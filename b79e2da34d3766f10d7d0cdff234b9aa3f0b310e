@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_3344ab73",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-30T20:25:37Z",
+      "side": 1,
+      "message": "Yes, there are no dependencies anymore since every test cleans up after itself. This is an old statement. I will re-phrase it to something like \"four independent tests\"",
+      "parentUuid": "5aaae553_1393afa4",
+      "range": {
+        "startLine": 67,
+        "startChar": 58,
+        "endLine": 68,
+        "endChar": 34
+      },
+      "revId": "b79e2da34d3766f10d7d0cdff234b9aa3f0b310e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_13ac0fed",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 11
@@ -53,6 +77,24 @@
       "writtenOn": "2017-05-30T10:37:15Z",
       "side": 1,
       "message": "This is not described in the test execution steps.  Is the removal of the networks evaluated as a pass/fail criteria?\n\nIf the system is in the same state as before the test case was run, I suggest leaving this out or using language like \"The SUT is returned to it\u0027s original state.\" or something...",
+      "revId": "b79e2da34d3766f10d7d0cdff234b9aa3f0b310e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_5349278a",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-05-30T20:25:37Z",
+      "side": 1,
+      "message": "All tests delete all entities which have been created throughout the test. This cleanup is not evaluated as a pass/fail criteria. So, for completeness, I suggest the following:\n* I\u0027ll add the cleanup operations as part of the test execution steps\n* I\u0027ll replace this statement with the one you suggested.",
+      "parentUuid": "5aaae553_d3b51732",
       "revId": "b79e2da34d3766f10d7d0cdff234b9aa3f0b310e",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
