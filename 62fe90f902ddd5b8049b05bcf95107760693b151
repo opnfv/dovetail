@@ -120,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_f325b30a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "Updated as follows ... CVP testing focuses on establishing the ability of the SUT to perform NFVI operations and support Service Provider oriented features that ensure manageable, resilient and secure networks.",
+      "parentUuid": "5aaae553_7dd0b253",
+      "range": {
+        "startLine": 20,
+        "startChar": 62,
+        "endLine": 20,
+        "endChar": 69
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_349ede57",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -237,6 +261,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_7379c3fb",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "Now reads ... indicates adherence to NFV platform behavior ...",
+      "parentUuid": "5aaae553_1ddade78",
+      "range": {
+        "startLine": 26,
+        "startChar": 27,
+        "endLine": 26,
+        "endChar": 41
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_4e88a2e7",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -248,6 +296,30 @@
       "writtenOn": "2017-05-25T18:17:04Z",
       "side": 1,
       "message": "Replace with \u0027service provider\u0027?",
+      "range": {
+        "startLine": 28,
+        "startChar": 11,
+        "endLine": 28,
+        "endChar": 16
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_937ebfe3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5aaae553_4e88a2e7",
       "range": {
         "startLine": 28,
         "startChar": 11,
@@ -289,6 +361,24 @@
       "side": 1,
       "message": "I think industry adoption is a stretch here ... we mean maturity of the OPNFV platform features specifically.",
       "parentUuid": "5aaae553_2ee8c67b",
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f36cd338",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "Updates as follows ... Compliance test cases shall be designated as compulsory or optional based on the maturity of OPNFV capabilities as well as industry expectations. Compulsory test cases may for example include NFVI management capabilities whereas tests for certain high-availability features may be deemed as optional.",
+      "parentUuid": "5aaae553_91d55f45",
       "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -366,6 +456,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_335a6b84",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "In the future the scope of compliance will include platform \"usability\" to ensure that Network Services can be \nconsistently managed.",
+      "parentUuid": "5aaae553_9dd56e45",
+      "range": {
+        "startLine": 34,
+        "startChar": 21,
+        "endLine": 34,
+        "endChar": 53
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_bf686788",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -425,6 +539,30 @@
       "side": 1,
       "message": "I tend to think we should be pecific here. If we are going to refer to \"various\" set\u0027s of API\u0027s let\u0027s draw them out.  Preferably let\u0027s point to the OPNFV document which describes the relevant API\u0027s.  This should give the tester an idea what to expect.\nIf we haven\u0027t documented our own idea of which API\u0027s are important then we need to point the tester upstream.",
       "parentUuid": "5aaae553_bf686788",
+      "range": {
+        "startLine": 42,
+        "startChar": 7,
+        "endLine": 42,
+        "endChar": 85
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_136acf1a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "SUT implements the functions and complies with the APIs of various Virtual Infrastructure Manager (VIM) services included in the current OPNFV release. For the Danube release VIM APIs covered by Refstack are in scope.",
+      "parentUuid": "5aaae553_ddba060a",
       "range": {
         "startLine": 42,
         "startChar": 7,
@@ -532,6 +670,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_b3765b05",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "This is how it now reads (we can discuss further in C\u0026C) ... Tests based on the Danube release of OPNFV assume the SUT is deployed in a bare-metal infrastructure.",
+      "parentUuid": "5aaae553_fd4a6226",
+      "range": {
+        "startLine": 43,
+        "startChar": 19,
+        "endLine": 43,
+        "endChar": 49
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_7f0aefd3",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -603,6 +765,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_13516f62",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "To resolve we need to review and update Pharos spec. Now reads ... The minimal specification of physical infrastructure (controller/compute nodes and network) is defined by \"Pharos\"   https://wiki.opnfv.org/display/pharos/Pharos+Specification",
+      "parentUuid": "5aaae553_1d489e2c",
+      "range": {
+        "startLine": 44,
+        "startChar": 53,
+        "endLine": 44,
+        "endChar": 61
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_1f0f3be3",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -662,6 +848,30 @@
       "side": 1,
       "message": "Before making such a change I suggest we ensure we have infrastructure lifecycle tests as part of the test suite in Danube.  The way it is written is accurate to my understanding of what we are testing.  Let\u0027s not speculate about the scope for Danube in this document.",
       "parentUuid": "5aaae553_1f0f3be3",
+      "range": {
+        "startLine": 46,
+        "startChar": 3,
+        "endLine": 46,
+        "endChar": 93
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d34af7ab",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "The SUT is fully deployed (for Danube release deployment tools are out of scope).",
+      "parentUuid": "5aaae553_bd54eaca",
       "range": {
         "startLine": 46,
         "startChar": 3,
@@ -762,6 +972,47 @@
         "endLine": 59,
         "endChar": 98
       },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_93f31f73",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "While the current scope of compliance includes functional verification of certain performance-enhancing NFVI features,no performance measurements or assessment of performance capabilities are included as of this release.",
+      "parentUuid": "5aaae553_f14a9326",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 98
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d38f57cb",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "This section updated - review again. Also should we include a table with all the features supported in Danube and indicate which of those are covered by this version of Dovetail test cases?",
       "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -984,6 +1235,24 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_73bc636d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "Yes renamed this section to \"Criteria for Awarding Compliance\"",
+      "parentUuid": "5aaae553_731223b6",
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_9f024bb3",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -1031,6 +1300,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_b3a97b26",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5aaae553_9f024bb3",
+      "range": {
+        "startLine": 116,
+        "startChar": 8,
+        "endLine": 116,
+        "endChar": 22
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_bfff07aa",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -1065,6 +1358,30 @@
       "writtenOn": "2017-05-25T23:21:40Z",
       "side": 1,
       "message": "ok",
+      "parentUuid": "5aaae553_bfff07aa",
+      "range": {
+        "startLine": 118,
+        "startChar": 8,
+        "endLine": 118,
+        "endChar": 13
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d3a67753",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "Done",
       "parentUuid": "5aaae553_bfff07aa",
       "range": {
         "startLine": 118,
@@ -1149,6 +1466,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_13740fce",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "Left this as \"authorization management\" ... all of these need need checking against Dovetail test cases.",
+      "parentUuid": "5aaae553_7d5e72eb",
+      "range": {
+        "startLine": 128,
+        "startChar": 8,
+        "endLine": 128,
+        "endChar": 21
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_7f318fa1",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -1196,6 +1537,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_b3809b8c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5aaae553_7f318fa1",
+      "range": {
+        "startLine": 144,
+        "startChar": 8,
+        "endLine": 144,
+        "endChar": 14
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_1f265b69",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 3
@@ -1230,6 +1595,30 @@
       "writtenOn": "2017-05-25T23:21:40Z",
       "side": 1,
       "message": "ok",
+      "parentUuid": "5aaae553_1f265b69",
+      "range": {
+        "startLine": 150,
+        "startChar": 0,
+        "endLine": 150,
+        "endChar": 12
+      },
+      "revId": "62fe90f902ddd5b8049b05bcf95107760693b151",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d37d17b3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-30T20:28:54Z",
+      "side": 1,
+      "message": "Done",
       "parentUuid": "5aaae553_1f265b69",
       "range": {
         "startLine": 150,
