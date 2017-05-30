@@ -1,0 +1,112 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_1393afa4",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:37:15Z",
+      "side": 1,
+      "message": "This is not described in the post-conditions for the tests.  The post conditions indicate there is no dependancy between the test cases.  This needs to be clarified.",
+      "range": {
+        "startLine": 67,
+        "startChar": 58,
+        "endLine": 68,
+        "endChar": 34
+      },
+      "revId": "b79e2da34d3766f10d7d0cdff234b9aa3f0b310e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_13ac0fed",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:37:15Z",
+      "side": 1,
+      "message": "I like this approach to pass/fail criteria.  I establishes a method for manual verification when the automated tests are unable to execute on the SUT.",
+      "revId": "b79e2da34d3766f10d7d0cdff234b9aa3f0b310e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d3b51732",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:37:15Z",
+      "side": 1,
+      "message": "This is not described in the test execution steps.  Is the removal of the networks evaluated as a pass/fail criteria?\n\nIf the system is in the same state as before the test case was run, I suggest leaving this out or using language like \"The SUT is returned to it\u0027s original state.\" or something...",
+      "revId": "b79e2da34d3766f10d7d0cdff234b9aa3f0b310e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_73822354",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:37:15Z",
+      "side": 1,
+      "message": "Same comment as previously.",
+      "revId": "b79e2da34d3766f10d7d0cdff234b9aa3f0b310e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_53812749",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:37:15Z",
+      "side": 1,
+      "message": "Same comment as the first test case.",
+      "revId": "b79e2da34d3766f10d7d0cdff234b9aa3f0b310e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f395b388",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 509,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-30T10:37:15Z",
+      "side": 1,
+      "message": "Same comment as the first test case.",
+      "revId": "b79e2da34d3766f10d7d0cdff234b9aa3f0b310e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
