@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_33cb4a74",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-31T06:49:05Z",
+      "side": 1,
+      "message": "keystone version 2/3 all included, for network, version 2(since it only has version 2). do u mean mitaka/newton? for API, its function is the same from outside, reference has no L/M/N, etc, links.",
+      "parentUuid": "5aaae553_5872a4e6",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_b880788c",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 6
@@ -104,6 +122,24 @@
       "writtenOn": "2017-05-30T10:28:25Z",
       "side": 1,
       "message": "Is this link versioned to the release under question?  If I run the Danube tests on a platform in one year will this link be accurate?",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d3c75663",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-31T06:49:05Z",
+      "side": 1,
+      "message": "keystone version 2/3 all included, for network, version 2(since it only has version 2). do u mean mitaka/newton? for API, its function is the same from outside(although may some bugs/ new feature added as version moves on), reference has no L/M/N, etc, links. it will always be OK, since it is updated with newest. the testcases list, such as one tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_network is what matters to test Danube, that\u0027s why use 2016.08 defcore(K/L/M/N). the SUT has to be K/L/M/N based(Danube).",
+      "parentUuid": "5aaae553_984fbc92",
       "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -235,6 +271,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_9388fe23",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-31T06:49:05Z",
+      "side": 1,
+      "message": "API ability(CRUD), Create/Delete, here.",
+      "parentUuid": "5aaae553_b82e38a4",
+      "range": {
+        "startLine": 154,
+        "startChar": 29,
+        "endLine": 154,
+        "endChar": 44
+      },
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_38124863",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 6
@@ -263,6 +323,24 @@
       "writtenOn": "2017-05-30T10:28:25Z",
       "side": 1,
       "message": "Is the network expected to be in an active state after this test step is executed?",
+      "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_73878210",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-05-31T06:49:05Z",
+      "side": 1,
+      "message": "not have this check in codes by now. if not ACTIVE, the name update check will fail, so check if name updated successful ensures ACTIVE status, that\u0027s also why ACTIVE is checked of this test case, you can see no this check of some other test cases.",
+      "parentUuid": "5aaae553_f80b5029",
       "revId": "ccd6bfe9c7805620b6b068e9ea50f024da70f572",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
