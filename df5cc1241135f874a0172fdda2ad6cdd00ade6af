@@ -155,6 +155,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_36ad7832",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-31T21:48:00Z",
+      "side": 1,
+      "message": "Ok right ... so test harness(es) will be referenced by appropriate test cases, nothing to say about that here.",
+      "parentUuid": "5aaae553_9deece21",
+      "range": {
+        "startLine": 59,
+        "startChar": 29,
+        "endLine": 59,
+        "endChar": 31
+      },
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_2bed1d8c",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 1
@@ -202,6 +226,24 @@
       "side": 1,
       "message": "Definitely. We need to define what we mean by \"Test area\", \"Test case\", \"Test suite\", \"Test domain\". How is test domain different from test area?",
       "parentUuid": "5aaae553_14572204",
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_16b07c8a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-31T21:48:00Z",
+      "side": 1,
+      "message": "Added Glossary section",
+      "parentUuid": "5aaae553_9476b205",
       "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -261,6 +303,24 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_f6a60053",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-31T21:48:00Z",
+      "side": 1,
+      "message": "Ok. Added a table for reference to Dovetail test spec docs",
+      "parentUuid": "5aaae553_3df31a0c",
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_ebfe2538",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 1
@@ -307,6 +367,30 @@
       "writtenOn": "2017-05-31T18:43:08Z",
       "side": 1,
       "message": "It would be good to have consistent whitespace for this list. This one is tab, others are all spaces, others are \"space-tab\".",
+      "range": {
+        "startLine": 114,
+        "startChar": 2,
+        "endLine": 114,
+        "endChar": 3
+      },
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_76bbf072",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-05-31T21:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5aaae553_74653644",
       "range": {
         "startLine": 114,
         "startChar": 2,
