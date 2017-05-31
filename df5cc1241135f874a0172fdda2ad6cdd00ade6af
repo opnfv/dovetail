@@ -190,6 +190,24 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_9476b205",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-31T18:43:08Z",
+      "side": 1,
+      "message": "Definitely. We need to define what we mean by \"Test area\", \"Test case\", \"Test suite\", \"Test domain\". How is test domain different from test area?",
+      "parentUuid": "5aaae553_14572204",
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_cb01e93a",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 1
@@ -272,6 +290,29 @@
       "side": 1,
       "message": "Agreed ... we need to dive into this and develop guidelines for each test area ... this will take some trial and error IMO to figure what is an appropriate level.",
       "parentUuid": "5aaae553_ebfe2538",
+      "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_74653644",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-31T18:43:08Z",
+      "side": 1,
+      "message": "It would be good to have consistent whitespace for this list. This one is tab, others are all spaces, others are \"space-tab\".",
+      "range": {
+        "startLine": 114,
+        "startChar": 2,
+        "endLine": 114,
+        "endChar": 3
+      },
       "revId": "df5cc1241135f874a0172fdda2ad6cdd00ade6af",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
