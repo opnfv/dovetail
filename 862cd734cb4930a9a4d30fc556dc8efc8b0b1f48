@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_f6f8404b",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 538,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-31T20:01:59Z",
+      "side": 1,
+      "message": "Should the steps for doing this be explicitly listed? It seems like this has been done already in the test sections, so perhaps this is unnecessary.",
+      "range": {
+        "startLine": 538,
+        "startChar": 0,
+        "endLine": 538,
+        "endChar": 43
+      },
+      "revId": "862cd734cb4930a9a4d30fc556dc8efc8b0b1f48",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_d6fbc445",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 538,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-05-31T20:01:59Z",
+      "side": 1,
+      "message": "its",
+      "range": {
+        "startLine": 538,
+        "startChar": 23,
+        "endLine": 538,
+        "endChar": 27
+      },
+      "revId": "862cd734cb4930a9a4d30fc556dc8efc8b0b1f48",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
