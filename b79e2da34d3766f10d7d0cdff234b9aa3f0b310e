@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_f31cd2c3",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-31T08:51:39Z",
+      "side": 1,
+      "message": "Great.  Thanks for the clarification.",
+      "parentUuid": "5aaae553_3344ab73",
+      "range": {
+        "startLine": 67,
+        "startChar": 58,
+        "endLine": 68,
+        "endChar": 34
+      },
+      "revId": "b79e2da34d3766f10d7d0cdff234b9aa3f0b310e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_13ac0fed",
         "filename": "docs/testing/user/testspecification/vpn/index.rst",
         "patchSetId": 11
@@ -95,6 +119,24 @@
       "side": 1,
       "message": "All tests delete all entities which have been created throughout the test. This cleanup is not evaluated as a pass/fail criteria. So, for completeness, I suggest the following:\n* I\u0027ll add the cleanup operations as part of the test execution steps\n* I\u0027ll replace this statement with the one you suggested.",
       "parentUuid": "5aaae553_d3b51732",
+      "revId": "b79e2da34d3766f10d7d0cdff234b9aa3f0b310e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_b37e5ae3",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-05-31T08:51:39Z",
+      "side": 1,
+      "message": "Thanks, it\u0027s important to capture everything the tests do.  \nNot everyone makes the same assumptions we do on how these features should behave, good to be clear on our assumptions and expectations.",
+      "parentUuid": "5aaae553_5349278a",
       "revId": "b79e2da34d3766f10d7d0cdff234b9aa3f0b310e",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
