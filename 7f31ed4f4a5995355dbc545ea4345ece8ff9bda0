@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_c871ef78",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-06-01T07:40:04Z",
+      "side": 1,
+      "message": "will use the phrase \"cvp administrator\", so it\u0027s not necessarily tied to LF.",
+      "parentUuid": "9ab8dda7_5c55464e",
+      "range": {
+        "startLine": 14,
+        "startChar": 8,
+        "endLine": 14,
+        "endChar": 62
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_7c504a5e",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2017-05-17T05:39:34Z",
       "side": 1,
       "message": "View by OPNFV CVP reviewers?",
+      "range": {
+        "startLine": 15,
+        "startChar": 1,
+        "endLine": 15,
+        "endChar": 36
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_e86e2b96",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-06-01T07:40:04Z",
+      "side": 1,
+      "message": "not just reviwers.",
+      "parentUuid": "9ab8dda7_7c504a5e",
       "range": {
         "startLine": 15,
         "startChar": 1,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_886bf784",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-06-01T07:40:04Z",
+      "side": 1,
+      "message": "\u0027client\u0027 is the software, \u0027host\u0027 is the server host.",
+      "parentUuid": "9ab8dda7_1c4fcebe",
+      "range": {
+        "startLine": 22,
+        "startChar": 29,
+        "endLine": 22,
+        "endChar": 38
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_3c4ad2ac",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 4
@@ -82,6 +154,30 @@
       "writtenOn": "2017-05-17T05:39:34Z",
       "side": 1,
       "message": "per the Pharos Specification",
+      "range": {
+        "startLine": 25,
+        "startChar": 20,
+        "endLine": 25,
+        "endChar": 31
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_a8683388",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-06-01T07:40:04Z",
+      "side": 1,
+      "message": "this term is used outside of pharos too.",
+      "parentUuid": "9ab8dda7_3c4ad2ac",
       "range": {
         "startLine": 25,
         "startChar": 20,
@@ -129,6 +225,30 @@
       "side": 1,
       "message": "Is this accurate?  Are the HA and SDNVPN tests able to be run according to description based on the tool accessing the \"API\"?  This implies the API provides mechanisms to kill processes etc, I\u0027m not sure this is the case.  Maybe a more concise description of the exact access requirements of the host is needed for a user to run the tests.",
       "parentUuid": "9ab8dda7_bcd562ba",
+      "range": {
+        "startLine": 38,
+        "startChar": 68,
+        "endLine": 39,
+        "endChar": 3
+      },
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_4805ffc0",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-06-01T07:40:04Z",
+      "side": 1,
+      "message": "we are only differentiating \u0027offline\u0027 from \u0027online\u0027 mode in this paragraph.",
+      "parentUuid": "9ab8dda7_9f2170a1",
       "range": {
         "startLine": 38,
         "startChar": 68,
@@ -290,6 +410,24 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_880217b3",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-06-01T07:40:04Z",
+      "side": 1,
+      "message": "will revise once versions are known.",
+      "parentUuid": "9ab8dda7_3f3084e7",
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_092b1283",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 4
@@ -388,6 +526,24 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_a8ffd3a9",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-06-01T07:40:04Z",
+      "side": 1,
+      "message": "labels will be updated to be accurate once known for sure.",
+      "parentUuid": "9ab8dda7_ff518c0e",
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_bf5b142d",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 4
@@ -457,6 +613,24 @@
       "side": 1,
       "message": "maybe this should be described as the second method of installation; since in the overview section, it mentions that \"This guide will describe both methods of installation\", but only docker installation method is described in detail.",
       "parentUuid": "9ab8dda7_5f42183f",
+      "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_281443f4",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-06-01T07:40:04Z",
+      "side": 1,
+      "message": "this is the second installation method.",
+      "parentUuid": "9ab8dda7_d784ac5f",
       "revId": "7f31ed4f4a5995355dbc545ea4345ece8ff9bda0",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
