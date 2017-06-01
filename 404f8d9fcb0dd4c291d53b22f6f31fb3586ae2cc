@@ -241,6 +241,24 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_00c9ae25",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-06-01T07:40:04Z",
+      "side": 1,
+      "message": "This part is for offline mode.",
+      "parentUuid": "9ab8dda7_4ddcc412",
+      "revId": "404f8d9fcb0dd4c291d53b22f6f31fb3586ae2cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_6dd748ee",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 3
