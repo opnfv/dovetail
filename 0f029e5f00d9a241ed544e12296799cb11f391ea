@@ -1,0 +1,152 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_1cddfb70",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-06-01T11:23:10Z",
+      "side": 1,
+      "message": "This patch update attempts to outline the test steps and assertions for this test case.  Questions remain as to the accuracy and behavior of this test case which I will outline in these comments.  (I\u0027m not an expert of these tests, just trying to help)",
+      "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_fcba5f09",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-06-01T11:23:10Z",
+      "side": 1,
+      "message": "Can we remove the numbering from the names?  It irk\u0027s me as it is clear it will become confusing and irrelevant in many cases after when we move into the second iteration.",
+      "range": {
+        "startLine": 149,
+        "startChar": 11,
+        "endLine": 149,
+        "endChar": 17
+      },
+      "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_dcbd2304",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-06-01T11:23:10Z",
+      "side": 1,
+      "message": "This section needs to be extended with useful references once the test case flow is clearer.  (see further comments)",
+      "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_fce33f31",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-06-01T11:23:10Z",
+      "side": 1,
+      "message": "Are these explicitly IPv6 network being created with the bulk create command?  If so, we should clarify that here.  \nAlso a reference to the use of the bulk create API would be useful to have in the \"Use case specification\" section.",
+      "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_bcd5c744",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-06-01T11:23:10Z",
+      "side": 1,
+      "message": "The order of these events (or if they are two events) in deleting the network and subnets is unclear to me at this time.  I assume this is the wrong order however it is how it was presented in the previous text.\nQ1) Does the removal of the network remove the subnet also?\nQ2) Should the order be changed if not to first remove and validate the subnet deletion before the network?",
+      "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_5cca93a2",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-06-01T11:23:10Z",
+      "side": 1,
+      "message": "Again the order of these events seems incorrect (or if it is two events) which need clarification.  See the previous comment.",
+      "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_1cc41b91",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-06-01T11:23:10Z",
+      "side": 1,
+      "message": "\"create networks\", or \"create IPv6 networks\"?",
+      "range": {
+        "startLine": 204,
+        "startChar": 64,
+        "endLine": 204,
+        "endChar": 78
+      },
+      "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_3cc1d780",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-06-01T11:23:10Z",
+      "side": 1,
+      "message": "I left this as \"None\" it may be better termed \"N/A\" pending input on the current SDNVPN patch for a common approach where all actions are reversed in the test cases.",
+      "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
