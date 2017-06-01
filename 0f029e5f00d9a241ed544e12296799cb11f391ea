@@ -76,6 +76,24 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_5c41330a",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-06-01T11:42:45Z",
+      "side": 1,
+      "message": "yes, u are correct.",
+      "parentUuid": "5aaae553_fce33f31",
+      "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_bcd5c744",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 7
@@ -87,6 +105,24 @@
       "writtenOn": "2017-06-01T11:23:10Z",
       "side": 1,
       "message": "The order of these events (or if they are two events) in deleting the network and subnets is unclear to me at this time.  I assume this is the wrong order however it is how it was presented in the previous text.\nQ1) Does the removal of the network remove the subnet also?\nQ2) Should the order be changed if not to first remove and validate the subnet deletion before the network?",
+      "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_7c466f25",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-06-01T11:42:45Z",
+      "side": 1,
+      "message": "first to delete subnet, then network.",
+      "parentUuid": "5aaae553_bcd5c744",
       "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -110,6 +146,47 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_1c4bbb2c",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-06-01T11:42:45Z",
+      "side": 1,
+      "message": "first delete port, then network. in tempest code, you will not find it, since addcleanup() method is added once they are created, sth like garbage collection.",
+      "parentUuid": "5aaae553_5cca93a2",
+      "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_dc5443cc",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-06-01T11:42:45Z",
+      "side": 1,
+      "message": "17 18",
+      "range": {
+        "startLine": 197,
+        "startChar": 13,
+        "endLine": 198,
+        "endChar": 16
+      },
+      "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_1cc41b91",
         "filename": "docs/testing/user/testspecification/ipv6/index.rst",
         "patchSetId": 7
@@ -121,6 +198,30 @@
       "writtenOn": "2017-06-01T11:23:10Z",
       "side": 1,
       "message": "\"create networks\", or \"create IPv6 networks\"?",
+      "range": {
+        "startLine": 204,
+        "startChar": 64,
+        "endLine": 204,
+        "endChar": 78
+      },
+      "revId": "0f029e5f00d9a241ed544e12296799cb11f391ea",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_3c48f72c",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-06-01T11:42:45Z",
+      "side": 1,
+      "message": "networks. for networks, not have CIDR, subnet has.",
+      "parentUuid": "5aaae553_1cc41b91",
       "range": {
         "startLine": 204,
         "startChar": 64,
