@@ -18,7 +18,7 @@ RUN \
 && \
     apt-get update
 
-RUN wget -qO- https://get.docker.com/ | sh
+RUN wget -qO- https://get.docker.com/ | sed 's/ docker-engine/ docker-engine=1.12.3-0~trusty/' | sh
 
 ENV HOME /home/opnfv
 ENV REPOS_DIR ${HOME}/dovetail
