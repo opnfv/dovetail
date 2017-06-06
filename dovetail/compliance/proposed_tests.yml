@@ -31,9 +31,6 @@ proposed_tests:
     - dovetail.ipv6.tc023
     - dovetail.ipv6.tc024
     - dovetail.ipv6.tc025
-    # nfvi, vping_ssh, vping_userdata
-    - dovetail.nfvi.tc001
-    - dovetail.nfvi.tc002
     # HA
     - dovetail.ha.tc001
     - dovetail.ha.tc002
@@ -46,6 +43,5 @@ proposed_tests:
     # sdnvpn
     - dovetail.sdnvpn.tc001
     - dovetail.sdnvpn.tc002
-    - dovetail.sdnvpn.tc003
     - dovetail.sdnvpn.tc004
     - dovetail.sdnvpn.tc008
