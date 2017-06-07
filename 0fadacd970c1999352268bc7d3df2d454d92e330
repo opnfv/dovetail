@@ -1,0 +1,9 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Wenjing Chu <chu.wenjing@gmail.com>
+Code-Review+2: Dave Neary <dneary@redhat.com>
+Code-Review+1: Georg Kunz <georg.kunz@ericsson.com>
+Submitted-by: Georg Kunz <georg.kunz@ericsson.com>
+Submitted-at: Wed, 07 Jun 2017 06:46:07 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/34343
+Project: dovetail
+Branch: refs/heads/master
