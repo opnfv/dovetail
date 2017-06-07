@@ -141,6 +141,30 @@
       "revId": "1f06bdd7b6f44d8ec9261f5122dbb2abd9ff0670",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_ae80368c",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-06-07T18:12:46Z",
+      "side": 1,
+      "message": "This is an IPv4 subnet. Is anything in particular needed for IPv6?",
+      "parentUuid": "5aaae553_dfc9a35b",
+      "range": {
+        "startLine": 111,
+        "startChar": 0,
+        "endLine": 112,
+        "endChar": 102
+      },
+      "revId": "1f06bdd7b6f44d8ec9261f5122dbb2abd9ff0670",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
