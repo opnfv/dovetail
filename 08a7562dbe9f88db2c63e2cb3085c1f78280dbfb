@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_7fd17ccc",
+        "filename": "docs/testing/user/testspecification/ipv6/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 1167,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-06-07T08:24:12Z",
+      "side": 1,
+      "message": "This applies to all the stateless tests.  Stateless DHCPv6 is used to provide the client with network information (DNS servers, etc.), except for the IPv6 address, which is provided by SLAAC.  If the tests only check that the systems have an IPv6 address and do not use an IPv6 name server or other information provided by Stateless DHCPv6, they don\u0027t really test what is being claimed.  Is it possible to add requirements that the ping operations take place via a name server look up, which could only have been provided via the DHCPv6 operations?",
+      "range": {
+        "startLine": 1167,
+        "startChar": 53,
+        "endLine": 1167,
+        "endChar": 69
+      },
+      "revId": "08a7562dbe9f88db2c63e2cb3085c1f78280dbfb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
