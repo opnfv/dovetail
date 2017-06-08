@@ -22,6 +22,29 @@
       "revId": "c8c00d242f6122e6ffffdbf53c550ef8e5f124e3",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_720c5395",
+        "filename": "dovetail/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2017-06-08T05:46:08Z",
+      "side": 1,
+      "message": "to simplify running steps, shall we put this initialization before get_result_path is executed ? the rational is that DOVETAIL_HOME is a mandatory variable need to be exported before running dovetail, but user already adds it in env_config.sh file and puts it under pre_config directory, it\u0027s convenient to set it once rather than twice(add it in env_config.sh, export it before running)",
+      "range": {
+        "startLine": 233,
+        "startChar": 4,
+        "endLine": 233,
+        "endChar": 20
+      },
+      "revId": "c8c00d242f6122e6ffffdbf53c550ef8e5f124e3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
