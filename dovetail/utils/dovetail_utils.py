@@ -111,21 +111,29 @@ def source_env(env_file):
     with open(env_file, 'r') as f:
         lines = f.readlines()
     for line in lines:
-        for match in re.findall(r"export (.*)=(.*)", line):
-            match = (match[0].strip('\"'), match[1].strip('\"'))
-            match = (match[0].strip('\''), match[1].strip('\''))
-            os.environ.update({match[0]: match[1]})
+        if line.lstrip().startswith('export'):
+            for match in re.findall(r"export (.*)=(.*)", line):
+                match = (match[0].strip('\"'), match[1].strip('\"'))
+                match = (match[0].strip('\''), match[1].strip('\''))
+                os.environ.update({match[0]: match[1]})
 
 
 def get_ext_net_name(env_file, logger=None):
-    source_env(env_file)
-    cmd_check = "openstack network list"
+    insecure_option = ''
+    insecure = os.getenv('OS_INSECURE',)
+    if insecure == "true":
+        insecure_option = ' --insecure '
+    else:
+        print "Warn: env variable OS_INSECUE is %s, if https+no credential \
+               used, it should be set as true" % insecure
+
+    cmd_check = "openstack {} network list".format(insecure_option)
     ret, msg = exec_cmd(cmd_check, logger)
     if ret:
         logger.error("The credentials info in %s is invalid." % env_file)
         return None
-    cmd = "openstack network list --long | grep 'External' | head -1 | \
-           awk '{print $4}'"
+    cmd = "openstack {} network list --long | grep 'External' | head -1 | \
+           awk '{print $4}'".format(insecure_option)
     ret, msg = exec_cmd(cmd, logger)
     if not ret:
         return msg
