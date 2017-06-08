@@ -93,6 +93,30 @@
       "revId": "c8c00d242f6122e6ffffdbf53c550ef8e5f124e3",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_12e2bf9f",
+        "filename": "dovetail/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-06-08T06:28:44Z",
+      "side": 1,
+      "message": "however, can\u0027t achieve this by now, since as you can see in line 211, dt_cfg.dovetail_config[\u0027config_dir\u0027] is used, while it is obtained in get_result_path, that\u0027s why put env_init put here rather than before get_result_path. in env_config.sh, users don\u0027t have to export DOVETAIL_HOME",
+      "parentUuid": "5aaae553_121ddfbd",
+      "range": {
+        "startLine": 233,
+        "startChar": 4,
+        "endLine": 233,
+        "endChar": 20
+      },
+      "revId": "c8c00d242f6122e6ffffdbf53c550ef8e5f124e3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
