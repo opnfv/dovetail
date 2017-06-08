@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_923a2f35",
+        "filename": "dovetail/container.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2017-06-08T05:28:53Z",
+      "side": 1,
+      "message": "where shall this be defined in the first place, if not, it\u0027d fail due to key error.",
+      "range": {
+        "startLine": 175,
+        "startChar": 27,
+        "endLine": 175,
+        "endChar": 40
+      },
+      "revId": "c8c00d242f6122e6ffffdbf53c550ef8e5f124e3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
