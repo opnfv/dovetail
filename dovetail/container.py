@@ -172,11 +172,25 @@ class Container(object):
                             maybe some issue with domain name resolution',
                             hosts_config_path)
 
+        cacert_volume = ""
+        cacert = os.getenv('OS_CACERT',)
+        if cacert is not None:
+            if not os.path.isfile(cacert):
+                cls.logger.error("env variable 'OS_CACERT' is set to %s"
+                                 "but the file does not exist", cacert)
+                return None
+            elif not dovetail_config['config_dir'] in cacert:
+                cls.logger.error("OS_CACERT file has to be put in %s, which"
+                                 "can be mount into container",
+                                 dovetail_config['config_dir'])
+                return None
+            cacert_volume = ' -v %s:%s ' % (cacert, cacert)
+
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
-        cmd = 'sudo docker run %s %s %s %s %s %s %s %s /bin/bash' % \
-            (opts, envs, config, hosts_config, openrc, config_volume,
-             result_volume, docker_image)
+        cmd = 'sudo docker run %s %s %s %s %s %s %s %s %s /bin/bash' % \
+            (opts, envs, config, hosts_config, openrc, cacert_volume,
+             config_volume, result_volume, docker_image)
         dt_utils.exec_cmd(cmd, cls.logger)
         ret, container_id = \
             dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +

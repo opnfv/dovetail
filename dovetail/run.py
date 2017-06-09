@@ -204,6 +204,16 @@ def copy_userconfig_files(logger):
     dt_utils.exec_cmd(cmd, logger, exit_on_error=False)
 
 
+# env_init can source some env variable used in dovetail, such as
+# when https+credential used, OS_CACERT
+def env_init(logger):
+    openrc = os.path.join(dt_cfg.dovetail_config['config_dir'],
+                          dt_cfg.dovetail_config['env_file'])
+    if not os.path.isfile(openrc):
+        logger.error("openrc file %s does not exist", openrc)
+    dt_utils.source_env(openrc)
+
+
 def main(*args, **kwargs):
     """Dovetail compliance test entry!"""
     build_tag = "daily-master-%s" % str(uuid.uuid4())
@@ -219,6 +229,7 @@ def main(*args, **kwargs):
     logger.info('Dovetail compliance: %s!', (kwargs['testsuite']))
     logger.info('================================================')
     logger.info('Build tag: %s', dt_cfg.dovetail_config['build_tag'])
+    env_init(logger)
     copy_userconfig_files(logger)
     dt_utils.check_docker_version(logger)
     validate_input(kwargs, dt_cfg.dovetail_config['validate_input'], logger)
