@@ -95,10 +95,10 @@ def check_tc_result(testcase, logger):
             return
         if os.path.isfile(result_file):
             logger.info("Results have been stored with file %s.", result_file)
-            result = Report.get_result(testcase)
-            Report.check_result(testcase, result)
         else:
             logger.error("Fail to store results with file %s.", result_file)
+        result = Report.get_result(testcase)
+        Report.check_result(testcase, result)
 
 
 def validate_input(input_dict, check_dict, logger):
