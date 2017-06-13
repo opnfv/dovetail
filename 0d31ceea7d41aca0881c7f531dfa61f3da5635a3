@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_0772847c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2017-06-13T00:25:28Z",
+      "side": 1,
+      "message": "strange to have a git link, I would expect something more formal on the docs.opnfv.org or the artifact here",
+      "revId": "0d31ceea7d41aca0881c7f531dfa61f3da5635a3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_2748e02c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2017-06-13T00:25:28Z",
+      "side": 1,
+      "message": "complianace criteia \u003d\u003e compliance criteria",
+      "revId": "0d31ceea7d41aca0881c7f531dfa61f3da5635a3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
