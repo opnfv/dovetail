@@ -12,6 +12,5 @@ debug:
 #    - dovetail.ipv6.tc009
 #    - dovetail.ipv6.tc018
 #    - dovetail.ipv6.tc019
-    - dovetail.nfvi.tc001
-    - dovetail.nfvi.tc002
-    - dovetail.nfvi.tc101
+    - dovetail.vping.tc001
+    - dovetail.vping.tc002
