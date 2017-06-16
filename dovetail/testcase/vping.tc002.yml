@@ -1,6 +1,6 @@
 ---
-dovetail.nfvi.tc002:
-  name: dovetail.nfvi.tc002
+dovetail.vping.tc002:
+  name: dovetail.vping.tc002
   objective: testing for vping using userdata
   validate:
     type: functest
