@@ -384,6 +384,17 @@ Volume update operations with the Cinder v2 API
 | tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_update_volume_with_nonexistent_volume_id
 
 
+
+----------------------------------------
+Test Area vPing - Basic VNF Connectivity
+----------------------------------------
+.. better name for the test area welcome
+
+| opnfv.vping.userdata
+| opnfv.vping.ssh
+
+
+
 Optional CVP Test Areas
 ========================
 
