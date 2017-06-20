@@ -400,6 +400,14 @@ Verify high availability of OpenStack controller services
 | opnfv.ha.tc010.disk_I/O_block
 | opnfv.ha.tc011.load_balance_service_down
 
+----------------------------------------
+Test Area vPing - Basic VNF Connectivity
+----------------------------------------
+
+| opnfv.vping.userdata
+| opnfv.vping.ssh
+
+
 
 Optional CVP Test Areas
 ========================
