@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_d2b659dc",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-06-21T14:17:41Z",
+      "side": 1,
+      "message": "sure, go ahead an push an update. I think you can even edit in Gerrit directly.",
+      "parentUuid": "5aaae553_7e25f1c0",
+      "range": {
+        "startLine": 95,
+        "startChar": 2,
+        "endLine": 111,
+        "endChar": 8
+      },
+      "revId": "7292a039b41bad6630ca66b7d61664cc8917e597",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_de40a558",
         "filename": "docs/testing/user/testspecification/vping/index.rst",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2017-06-21T09:37:29Z",
       "side": 1,
       "message": "why still remain? should do cleanup I think, although I saw the test case in functest remain the VMs.",
+      "range": {
+        "startLine": 132,
+        "startChar": 0,
+        "endLine": 132,
+        "endChar": 72
+      },
+      "revId": "7292a039b41bad6630ca66b7d61664cc8917e597",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_f2bb55c2",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-06-21T14:17:41Z",
+      "side": 1,
+      "message": "The vping test cases in stable/danube I looked at don\u0027t run clean-up code by themselves. I just talked to Jose and he confirmed that starting from Euphrates, these tests do clean up after themselves.\n\nSo, this boils down to a matter of which release of Functest we will use. Considering that features such as offline support are only available in Functest in Euphrates, we will likely go with that one. Up for discussion.",
+      "parentUuid": "5aaae553_de40a558",
       "range": {
         "startLine": 132,
         "startChar": 0,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_92b0e1de",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-06-21T14:17:41Z",
+      "side": 1,
+      "message": "Yeah, right, good point.",
+      "parentUuid": "5aaae553_9e222db8",
+      "range": {
+        "startLine": 156,
+        "startChar": 40,
+        "endLine": 156,
+        "endChar": 76
+      },
+      "revId": "7292a039b41bad6630ca66b7d61664cc8917e597",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_3e2f79a3",
         "filename": "docs/testing/user/testspecification/vping/index.rst",
         "patchSetId": 1
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_b2b5ddce",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-06-21T14:17:41Z",
+      "side": 1,
+      "message": "sure, see comment above.",
+      "parentUuid": "5aaae553_3e2f79a3",
+      "range": {
+        "startLine": 174,
+        "startChar": 2,
+        "endLine": 193,
+        "endChar": 8
+      },
+      "revId": "7292a039b41bad6630ca66b7d61664cc8917e597",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_5e2cb5ab",
         "filename": "docs/testing/user/testspecification/vping/index.rst",
         "patchSetId": 1
@@ -105,6 +201,30 @@
       "writtenOn": "2017-06-21T09:37:29Z",
       "side": 1,
       "message": "why still remain? should do cleanup I think, although I saw the test case in functest remain the VMs.",
+      "range": {
+        "startLine": 219,
+        "startChar": 0,
+        "endLine": 219,
+        "endChar": 74
+      },
+      "revId": "7292a039b41bad6630ca66b7d61664cc8917e597",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_52ca6950",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-06-21T14:17:41Z",
+      "side": 1,
+      "message": "see comment above.",
+      "parentUuid": "5aaae553_5e2cb5ab",
       "range": {
         "startLine": 219,
         "startChar": 0,
