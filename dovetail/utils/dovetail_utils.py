@@ -121,11 +121,11 @@ def source_env(env_file):
 def get_ext_net_name(env_file, logger=None):
     insecure_option = ''
     insecure = os.getenv('OS_INSECURE',)
-    if insecure == "true":
+    if insecure == "true" or insecure == "True":
         insecure_option = ' --insecure '
     else:
         print "Warn: env variable OS_INSECUE is %s, if https+no credential \
-               used, it should be set as true" % insecure
+    used, it should be set as true" % insecure
 
     cmd_check = "openstack %s network list" % insecure_option
     ret, msg = exec_cmd(cmd_check, logger)
