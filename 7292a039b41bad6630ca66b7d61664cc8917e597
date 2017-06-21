@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_7e25f1c0",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-06-21T09:37:29Z",
+      "side": 1,
+      "message": "would like to proposes a patchset to update the details according to the test case code.",
+      "range": {
+        "startLine": 95,
+        "startChar": 2,
+        "endLine": 111,
+        "endChar": 8
+      },
+      "revId": "7292a039b41bad6630ca66b7d61664cc8917e597",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_de40a558",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-06-21T09:37:29Z",
+      "side": 1,
+      "message": "why still remain? should do cleanup I think, although I saw the test case in functest remain the VMs.",
+      "range": {
+        "startLine": 132,
+        "startChar": 0,
+        "endLine": 132,
+        "endChar": 72
+      },
+      "revId": "7292a039b41bad6630ca66b7d61664cc8917e597",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_9e222db8",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-06-21T09:37:29Z",
+      "side": 1,
+      "message": "There should exist an OpenStack external network and can assign floating IP.",
+      "range": {
+        "startLine": 156,
+        "startChar": 40,
+        "endLine": 156,
+        "endChar": 76
+      },
+      "revId": "7292a039b41bad6630ca66b7d61664cc8917e597",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_3e2f79a3",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-06-21T09:37:29Z",
+      "side": 1,
+      "message": "would like to proposes a patchset to update the details according to the test case code.",
+      "range": {
+        "startLine": 174,
+        "startChar": 2,
+        "endLine": 193,
+        "endChar": 8
+      },
+      "revId": "7292a039b41bad6630ca66b7d61664cc8917e597",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_5e2cb5ab",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-06-21T09:37:29Z",
+      "side": 1,
+      "message": "why still remain? should do cleanup I think, although I saw the test case in functest remain the VMs.",
+      "range": {
+        "startLine": 219,
+        "startChar": 0,
+        "endLine": 219,
+        "endChar": 74
+      },
+      "revId": "7292a039b41bad6630ca66b7d61664cc8917e597",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
