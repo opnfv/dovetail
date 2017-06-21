@@ -27,6 +27,8 @@ ENV REPOS_DIR ${HOME}/dovetail
 WORKDIR /home/opnfv
 
 RUN \
+    mkdir -p ${REPOS_DIR} \
+&& \
     git config --global http.sslVerify false \
 && \
     pip install git+https://git.opnfv.org/dovetail@$BRANCH#egg=dovetail \
