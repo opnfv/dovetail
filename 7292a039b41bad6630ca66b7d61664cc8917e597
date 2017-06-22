@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "5aaae553_7548af2d",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-06-22T01:54:31Z",
+      "side": 1,
+      "message": "it seems I don\u0027t have the privilege to update patchset :( (only +2 privilege have maybe), will ask for hongbo for help if u don\u0027t mind.",
+      "parentUuid": "5aaae553_d2b659dc",
+      "range": {
+        "startLine": 95,
+        "startChar": 2,
+        "endLine": 111,
+        "endChar": 8
+      },
+      "revId": "7292a039b41bad6630ca66b7d61664cc8917e597",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_de40a558",
         "filename": "docs/testing/user/testspecification/vping/index.rst",
         "patchSetId": 1
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "The vping test cases in stable/danube I looked at don\u0027t run clean-up code by themselves. I just talked to Jose and he confirmed that starting from Euphrates, these tests do clean up after themselves.\n\nSo, this boils down to a matter of which release of Functest we will use. Considering that features such as offline support are only available in Functest in Euphrates, we will likely go with that one. Up for discussion.",
       "parentUuid": "5aaae553_de40a558",
+      "range": {
+        "startLine": 132,
+        "startChar": 0,
+        "endLine": 132,
+        "endChar": 72
+      },
+      "revId": "7292a039b41bad6630ca66b7d61664cc8917e597",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_b55dc7eb",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-06-22T01:54:31Z",
+      "side": 1,
+      "message": "I checked again the code, in https://git.opnfv.org/functest/tree/functest/ci/testcases.yaml?h\u003dstable/danube#n74 clean_flag\u003dtrue so it does cleanup action, which reflects in functest architecture code, see https://git.opnfv.org/functest/tree/functest/utils/openstack_clean.py?h\u003dstable/danube#n412",
+      "parentUuid": "5aaae553_f2bb55c2",
       "range": {
         "startLine": 132,
         "startChar": 0,
