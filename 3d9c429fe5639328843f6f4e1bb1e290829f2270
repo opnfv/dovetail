@@ -22,6 +22,23 @@
       "revId": "3d9c429fe5639328843f6f4e1bb1e290829f2270",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_c85ea6e9",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-06-22T09:03:16Z",
+      "side": 1,
+      "message": "How about leveraging hyperlink to hide the urls?  when html file is generated, the content will be highlighted, whilst the links will not show, but when you click the highlight, it will redirect to the website. for example:\n\n- `ETSI GS NFV-REL 001`_\n- `OpenStack High Availability Guide`_\n\n\n.. _ETSI GS NFV-REL 001: http://www.etsi.org/deliver/etsi_gs/NFV-REL/001_099/001/01.01.01_60/gs_nfv-rel001v010101p.pdf\n.. _OpenStack High Availability Guide: https://docs.openstack.org/ha-guide/",
+      "revId": "3d9c429fe5639328843f6f4e1bb1e290829f2270",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
