@@ -195,7 +195,7 @@ def get_result_path():
 
 
 def copy_userconfig_files(logger):
-    dovetail_home = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    dovetail_home = os.path.dirname(os.path.abspath(__file__))
     userconfig_path = os.path.join(dovetail_home, 'userconfig')
     pre_config_path = dt_cfg.dovetail_config['config_dir']
     if not os.path.isdir(pre_config_path):

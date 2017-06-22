@@ -158,7 +158,7 @@ class Container(object):
 
         hosts_config = ""
         hosts_config_path = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), os.pardir, 'userconfig'))
+            os.path.join(os.path.dirname(__file__), 'userconfig'))
         try:
             with open(os.path.join(hosts_config_path, 'hosts.yaml')) as f:
                 hosts_info = yaml.safe_load(f)
