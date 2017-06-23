@@ -26,4 +26,4 @@ export db_host_ip=${db_host_ip:-"$1"}
 
 sudo docker rm -f testapi
 sudo docker run -itd -p $testapi_port:8000 --name testapi \
-    -e mongodb_url=mongodb://$db_host_ip:$mongodb_port/ kkltcjk/testapi:reporting
+    -e mongodb_url=mongodb://$db_host_ip:$mongodb_port/ opnfv/testapi:cvp.0.1.0
