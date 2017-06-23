@@ -30,8 +30,8 @@ echo "Create the mongodb."
 echo "==================="
 
 set +e
-# pull image kkltcjk/mongodb:reporting
-mongodb_img="kkltcjk/mongodb:reporting"
+# pull image mongo:3.2.1
+mongodb_img="mongo:3.2.1"
 echo "Step1: pull the image $mongodb_img."
 sudo docker pull $mongodb_img
 set -e
@@ -59,8 +59,8 @@ echo "Create the testapi service."
 echo "=========================="
 
 set +e
-# pull image kkltcjk/testapi:reporting
-testapi_img="kkltcjk/testapi:reporting"
+# pull image opnfv/testapi:cvp.0.1.0
+testapi_img="opnfv/testapi:cvp.0.1.0"
 echo "Step1: pull the image $testapi_img."
 sudo docker pull $testapi_img
 set -e
