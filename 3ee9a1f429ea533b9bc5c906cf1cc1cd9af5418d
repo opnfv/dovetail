@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa4ed85_17aba48a",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-06-26T13:27:00Z",
+      "side": 1,
+      "message": "Are there more ports needed besides HTTP(S)? If not, I suggest to remove the dots and UDP as a whole.",
+      "range": {
+        "startLine": 109,
+        "startChar": 3,
+        "endLine": 110,
+        "endChar": 11
+      },
+      "revId": "3ee9a1f429ea533b9bc5c906cf1cc1cd9af5418d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
