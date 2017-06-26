@@ -46,6 +46,30 @@
       "revId": "b48a554f4534b3b16aedc493b790a6dcba237684",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_f7c0487e",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-06-26T11:15:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5aaae553_28a73a51",
+      "range": {
+        "startLine": 85,
+        "startChar": 63,
+        "endLine": 86,
+        "endChar": 6
+      },
+      "revId": "b48a554f4534b3b16aedc493b790a6dcba237684",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
