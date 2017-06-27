@@ -39,6 +39,75 @@
       "revId": "3ee9a1f429ea533b9bc5c906cf1cc1cd9af5418d",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_3846cd24",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-06-27T12:37:41Z",
+      "side": 1,
+      "message": "What does this imply for pre-req?  No where does it talk about having openstack packages installed on the test host.",
+      "range": {
+        "startLine": 181,
+        "startChar": 5,
+        "endLine": 181,
+        "endChar": 27
+      },
+      "revId": "3ee9a1f429ea533b9bc5c906cf1cc1cd9af5418d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_d84a1927",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-06-27T12:37:41Z",
+      "side": 1,
+      "message": "Can we provide a \"command\" for the Dovetail tools to list their current dependency needs?",
+      "range": {
+        "startLine": 283,
+        "startChar": 69,
+        "endLine": 284,
+        "endChar": 74
+      },
+      "revId": "3ee9a1f429ea533b9bc5c906cf1cc1cd9af5418d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_7863e5b1",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-06-27T12:37:41Z",
+      "side": 1,
+      "message": "Can we provide a command to \"list\" currently available test suites?",
+      "range": {
+        "startLine": 346,
+        "startChar": 5,
+        "endLine": 346,
+        "endChar": 17
+      },
+      "revId": "3ee9a1f429ea533b9bc5c906cf1cc1cd9af5418d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
