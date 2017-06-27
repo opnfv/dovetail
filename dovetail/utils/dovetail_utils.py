@@ -118,14 +118,25 @@ def source_env(env_file):
                 os.environ.update({match[0]: match[1]})
 
 
+def check_https_enabled(logger=None):
+    logger.info("checking if https enabled or not...")
+    cmd = "openstack catalog show identity |awk '/public/ {print $4}'| \
+        grep 'https'"
+    ret, msg = exec_cmd(cmd, logger)
+    return ret
+
+
 def get_ext_net_name(env_file, logger=None):
+    https_enabled = check_https_enabled(logger)
     insecure_option = ''
     insecure = os.getenv('OS_INSECURE',)
-    if insecure == "true" or insecure == "True":
-        insecure_option = ' --insecure '
-    else:
-        print "Warn: env variable OS_INSECUE is %s, if https+no credential \
-    used, it should be set as true" % insecure
+    if https_enabled == 0:
+        logger.info("https enabled...")
+        if insecure.lower() == "true":
+            insecure_option = ' --insecure '
+        else:
+            logger.warn("env variable OS_INSECURE is %s, if https + no"
+                        "credential used, should be set as True" % insecure)
 
     cmd_check = "openstack %s network list" % insecure_option
     ret, msg = exec_cmd(cmd_check, logger)
