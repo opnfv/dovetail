@@ -173,18 +173,24 @@ class Container(object):
                             hosts_config_path)
 
         cacert_volume = ""
+        https_enabled = dt_utils.check_https_enabled(cls.logger)
         cacert = os.getenv('OS_CACERT',)
-        if cacert is not None:
-            if not os.path.isfile(cacert):
-                cls.logger.error("env variable 'OS_CACERT' is set to %s"
-                                 "but the file does not exist", cacert)
-                return None
-            elif not dovetail_config['config_dir'] in cacert:
-                cls.logger.error("OS_CACERT file has to be put in %s, which"
-                                 "can be mount into container",
-                                 dovetail_config['config_dir'])
-                return None
-            cacert_volume = ' -v %s:%s ' % (cacert, cacert)
+        if https_enabled == 0:
+            cls.logger.info("https enabled...")
+            if cacert is not None:
+                if not os.path.isfile(cacert):
+                    cls.logger.error("env variable 'OS_CACERT' is set to %s"
+                                     "but the file does not exist", cacert)
+                    return None
+                elif not dovetail_config['config_dir'] in cacert:
+                    cls.logger.error("credential file has to be put in %s,"
+                                     "which can be mount into container",
+                                     dovetail_config['config_dir'])
+                    return None
+                cacert_volume = ' -v %s:%s ' % (cacert, cacert)
+            else:
+                cls.logger.warn("https enabled, OS_CACERT not set, insecure"
+                                "connection used or OS_CACERT missed")
 
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
