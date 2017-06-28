@@ -65,6 +65,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_2c0f72e3",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-06-28T02:55:44Z",
+      "side": 1,
+      "message": "Line 176 said that \"If OpenStack client is installed...\"",
+      "parentUuid": "1aa4ed85_3846cd24",
+      "range": {
+        "startLine": 181,
+        "startChar": 5,
+        "endLine": 181,
+        "endChar": 27
+      },
+      "revId": "3ee9a1f429ea533b9bc5c906cf1cc1cd9af5418d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_d84a1927",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 7
@@ -88,6 +112,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_4c142ef5",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-06-28T02:55:44Z",
+      "side": 1,
+      "message": "Good suggestion, we will consider to add this.",
+      "parentUuid": "1aa4ed85_d84a1927",
+      "range": {
+        "startLine": 283,
+        "startChar": 69,
+        "endLine": 284,
+        "endChar": 74
+      },
+      "revId": "3ee9a1f429ea533b9bc5c906cf1cc1cd9af5418d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_7863e5b1",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 7
@@ -99,6 +147,30 @@
       "writtenOn": "2017-06-27T12:37:41Z",
       "side": 1,
       "message": "Can we provide a command to \"list\" currently available test suites?",
+      "range": {
+        "startLine": 346,
+        "startChar": 5,
+        "endLine": 346,
+        "endChar": 17
+      },
+      "revId": "3ee9a1f429ea533b9bc5c906cf1cc1cd9af5418d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_ecf87ac6",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-06-28T02:55:44Z",
+      "side": 1,
+      "message": "command \"dovetail list\" will list all the available test suites and the test cases belong to each test suite.\ncommand \"dovetail list \u003ctestsuite_name\u003e\" will list the info of the test suite.",
+      "parentUuid": "1aa4ed85_7863e5b1",
       "range": {
         "startLine": 346,
         "startChar": 5,
