@@ -112,8 +112,8 @@ class Report(object):
                 '|'.join(dt_cfg.dovetail_config['testarea_supported']))
             area = pattern.findall(testcase['name'])
             if not area:
-                cls.logger.error("testcase %s not in supported testarea",
-                                 testcase['name'])
+                cls.logger.error("Test case {} not in supported "
+                                 "testarea.".format(testcase['name']))
                 return None
             area = area[0]
             testarea_scope.append(area)
@@ -170,9 +170,9 @@ class Report(object):
             with open(os.path.join(dt_cfg.dovetail_config['result_dir'],
                       report_file_name), 'w') as report_file:
                 report_file.write(report)
-            cls.logger.info('save report to %s', report_file_name)
+            cls.logger.info('Save report to {}'.format(report_file_name))
         except Exception:
-            cls.logger.error('Failed to save: %s', report_file_name)
+            cls.logger.exception('Failed to save: {}'.format(report_file_name))
 
     @classmethod
     def get_result(cls, testcase):
@@ -180,7 +180,7 @@ class Report(object):
         type = testcase.validate_type()
         crawler = CrawlerFactory.create(type)
         if crawler is None:
-            cls.logger.error('crawler is None:%s', testcase.name())
+            cls.logger.error('Crawler is None: {}'.format(testcase.name()))
             return None
 
         # if validate_testcase in cls.results[type]:
@@ -191,12 +191,12 @@ class Report(object):
         if result is not None:
             cls.results[type][validate_testcase] = result
             # testcase.script_result_acquired(True)
-            cls.logger.debug('testcase: %s -> result acquired',
-                             validate_testcase)
+            cls.logger.debug('Test case: {} -> result acquired'.format(
+                             validate_testcase))
         else:
             retry = testcase.increase_retry()
-            cls.logger.debug('testcase: %s -> result acquired retry:%d',
-                             validate_testcase, retry)
+            cls.logger.debug('Test case: {} -> result acquired '
+                             'retry: {}'.format(validate_testcase, retry))
         return result
 
 
@@ -206,7 +206,7 @@ class FunctestCrawler(object):
 
     def __init__(self):
         self.type = 'functest'
-        self.logger.debug('create crawler:%s', self.type)
+        self.logger.debug('Create crawler: {}'.format(self.type))
 
     @classmethod
     def create_log(cls):
@@ -234,14 +234,15 @@ class FunctestCrawler(object):
             os.path.join(dovetail_config['result_dir'],
                          dovetail_config[self.type]['result']['file_path'])
         if not os.path.exists(file_path):
-            self.logger.info('result file not found: %s', file_path)
+            self.logger.error('Result file not found: {}'.format(file_path))
             return None
         if testcase_name in dt_cfg.dovetail_config['functest_testcase']:
             complex_testcase = False
         elif testcase_name in dt_cfg.dovetail_config['functest_testsuite']:
             complex_testcase = True
         else:
-            self.logger.error("Wrong Functest test case %s.", testcase_name)
+            self.logger.error("Wrong Functest test case {}.".format(
+                testcase_name))
             return None
         with open(file_path, 'r') as f:
             for jsonfile in f:
@@ -264,7 +265,8 @@ class FunctestCrawler(object):
                                        "errors": error_case,
                                        "skipped": skipped_case}
                 except KeyError as e:
-                    self.logger.error("Result data don't have key %s.", e)
+                    self.logger.exception("Result data don't have "
+                                          "key {}.".format(e))
                     return None
                 except ValueError:
                     continue
@@ -273,20 +275,20 @@ class FunctestCrawler(object):
                         'timestop': timestop, 'duration': duration,
                         'details': details}
 
-        self.logger.debug('Results: %s', str(json_results))
+        self.logger.debug('Results: {}'.format(str(json_results)))
         return json_results
 
     def crawl_from_url(self, testcase=None):
         url = "%s?case=%s&last=1" % \
             (dt_cfg.dovetail_config['report_dest'],
              testcase.validate_testcase())
-        self.logger.debug("Query to rest api: %s", url)
+        self.logger.debug("Query to rest api: {}".format(url))
         try:
             data = json.load(urllib2.urlopen(url))
             return data['results'][0]
         except Exception as e:
-            self.logger.error("Cannot read content from the url: %s, "
-                              "exception: %s", url, e)
+            self.logger.exception("Cannot read content from the url: {}, "
+                                  "exception: {}".format(url, e))
             return None
 
 
@@ -296,7 +298,7 @@ class YardstickCrawler(object):
 
     def __init__(self):
         self.type = 'yardstick'
-        self.logger.debug('create crawler:%s', self.type)
+        self.logger.debug('Create crawler: {}'.format(self.type))
 
     @classmethod
     def create_log(cls):
@@ -315,7 +317,7 @@ class YardstickCrawler(object):
         file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
                                  testcase.name() + '.out')
         if not os.path.exists(file_path):
-            self.logger.info('result file not found: %s', file_path)
+            self.logger.error('Result file not found: {}'.format(file_path))
             return None
         criteria = 'FAIL'
         with open(file_path, 'r') as f:
@@ -327,9 +329,10 @@ class YardstickCrawler(object):
                         if 1 == v:
                             criteria = 'PASS'
                     except KeyError as e:
-                        self.logger.error('pass flag not found %s', e)
+                        self.logger.exception('Pass flag not found {}'.format(
+                            e))
         json_results = {'criteria': criteria}
-        self.logger.debug('Results: %s', str(json_results))
+        self.logger.debug('Results: {}'.format(str(json_results)))
         return json_results
 
     def crawl_from_url(self, testcase=None):
@@ -420,7 +423,7 @@ class FunctestChecker(object):
 
         testcase_passed = 'SKIP'
         for sub_testcase in sub_testcase_list:
-            self.logger.debug('check sub_testcase:%s', sub_testcase)
+            self.logger.debug('Check sub_testcase: {}'.format(sub_testcase))
             try:
                 if self.get_sub_testcase(sub_testcase,
                                          db_result['details']['errors']):

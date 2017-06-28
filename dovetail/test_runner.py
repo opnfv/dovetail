@@ -22,7 +22,7 @@ class DockerRunner(object):
 
     def __init__(self, testcase):
         self.testcase = testcase
-        self.logger.debug('create runner: %s', self.type)
+        self.logger.debug('Create runner: {}'.format(self.type))
 
     @classmethod
     def create_log(cls):
@@ -31,8 +31,8 @@ class DockerRunner(object):
     def pre_copy(self, container_id=None, dest_path=None,
                  src_file=None, exist_file=None):
         if not dest_path:
-            self.logger.error("There has no dest_path in %s config file.",
-                              self.testcase.name())
+            self.logger.error("There has no dest_path in {} config "
+                              "file.".format(self.testcase.name()))
             return None
         if src_file:
             self.testcase.mk_src_file()
@@ -49,8 +49,9 @@ class DockerRunner(object):
         if dt_cfg.dovetail_config['offline']:
             exist = Container.check_image_exist(self.testcase.validate_type())
             if not exist:
-                self.logger.error('%s image not exist when running offline',
-                                  self.testcase.validate_type())
+                self.logger.error("{} image doesn't exist, can't run "
+                                  "offline.".format(
+                                      self.testcase.validate_type()))
                 return
         else:
             if not Container.pull_image(self.testcase.validate_type()):
@@ -63,15 +64,15 @@ class DockerRunner(object):
             img_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
                                     img_name)
             if not os.path.isfile(img_file):
-                self.logger.error('image %s not found', img_name)
+                self.logger.error('Image {} not found.'.format(img_name))
                 return
         container_id = Container.create(self.testcase.validate_type(),
                                         self.testcase.name())
         if not container_id:
-            self.logger.error('failed to create container')
+            self.logger.error('Failed to create container.')
             return
 
-        self.logger.debug('container id:%s', container_id)
+        self.logger.debug('container id: {}'.format(container_id))
 
         dest_path = self.testcase.pre_copy_path("dest_path")
         src_file_name = self.testcase.pre_copy_path("src_file")
@@ -95,14 +96,14 @@ class DockerRunner(object):
                 self.testcase.prepared(True)
 
         if not self.testcase.prepare_cmd(self.type):
-            self.logger.error('failed to prepare testcase:%s',
-                              self.testcase.name())
+            self.logger.error('Failed to prepare test case: {}'.format(
+                self.testcase.name()))
         else:
             for cmd in self.testcase.cmds:
                 ret, msg = Container.exec_cmd(container_id, cmd)
                 if ret != 0:
-                    self.logger.error('Failed to exec %s, ret:%d, msg:%s',
-                                      cmd, ret, msg)
+                    self.logger.error('Failed to exec {}, ret: {}, '
+                                      'msg: {}'.format(cmd, ret, msg))
                     break
 
         cmds = self.testcase.post_condition()
@@ -140,7 +141,7 @@ class ShellRunner(object):
         super(ShellRunner, self).__init__()
         self.testcase = testcase
         self.type = 'shell'
-        self.logger.debug('create runner:%s', self.type)
+        self.logger.debug('Create runner: {}'.format(self.type))
 
     def run(self):
         testcase_passed = 'PASS'
@@ -158,8 +159,8 @@ class ShellRunner(object):
                 self.testcase.prepared(True)
 
         if not self.testcase.prepare_cmd(self.type):
-            self.logger.error('failed to prepare cmd:%s',
-                              self.testcase.name())
+            self.logger.error('Failed to prepare cmd: {}'.format(
+                self.testcase.name()))
         else:
             for cmd in self.testcase.cmds:
                 ret, msg = dt_utils.exec_cmd(cmd, self.logger)
@@ -176,13 +177,13 @@ class ShellRunner(object):
 
         result_filename = os.path.join(dt_cfg.dovetail_config['result_dir'],
                                        self.testcase.name()) + '.out'
-        self.logger.debug('save result:%s', result_filename)
+        self.logger.debug('Save result: {}'.format(result_filename))
         try:
             with open(result_filename, 'w') as f:
                 f.write(json.dumps(result))
         except Exception as e:
-            self.logger.exception('Failed to write result into file:%s, \
-                                   except:%s', result_filename, e)
+            self.logger.exception('Failed to write result into file: {}, '
+                                  'exception: {}'.format(result_filename, e))
 
 
 class TestRunnerFactory(object):

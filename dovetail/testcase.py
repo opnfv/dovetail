@@ -39,7 +39,7 @@ class Testcase(object):
                 return False
             # self.logger.debug('cmd_lines:%s', cmd_lines)
             self.cmds.append(cmd_lines)
-        self.logger.debug('cmds:%s', self.cmds)
+        self.logger.debug('cmds: {}'.format(self.cmds))
         return True
 
     def prepare_cmd(self, test_type):
@@ -55,7 +55,7 @@ class Testcase(object):
             return self.parse_cmd(testcase_cmds)
         if config_cmds:
             return self.parse_cmd(config_cmds)
-        self.logger.error('testcase %s has no cmds', self.name())
+        self.logger.error('Test case {} has no cmds.'.format(self.name()))
         return False
 
     def __str__(self):
@@ -75,7 +75,8 @@ class Testcase(object):
 
     def sub_testcase_passed(self, name, passed=None):
         if passed is not None:
-            self.logger.debug('sub_testcase_passed:%s %s', name, passed)
+            self.logger.debug('sub_testcase_passed: {} {}'.format(
+                name, passed))
             self.sub_testcase_status[name] = passed
         return self.sub_testcase_status[name]
 
@@ -111,8 +112,8 @@ class Testcase(object):
             return pre_condition
         pre_condition = self.pre_condition_cls(self.validate_type())
         if not pre_condition:
-            self.logger.debug('testcase:%s pre_condition is empty',
-                              self.name())
+            self.logger.debug('Test case: {} pre_condition is empty.'.format(
+                self.name()))
         return pre_condition
 
     def pre_copy_path(self, key_name):
@@ -131,8 +132,8 @@ class Testcase(object):
             return post_condition
         post_condition = self.post_condition_cls(self.validate_type())
         if not post_condition:
-            self.logger.debug('testcae:%s post_condition is empty',
-                              self.name())
+            self.logger.debug('Test case: {} post_condition is empty.'.format(
+                              self.name()))
         return post_condition
 
     def mk_src_file(self):
@@ -143,12 +144,13 @@ class Testcase(object):
             with open(file_path, 'w+') as src_file:
                 if self.sub_testcase() is not None:
                     for sub_test in self.sub_testcase():
-                        self.logger.debug('save testcases %s', sub_test)
+                        self.logger.debug('Save test cases {}'.format(
+                            sub_test))
                         src_file.write(sub_test + '\n')
-            self.logger.debug('save testcases to %s', file_path)
+            self.logger.debug('Save test cases to {}'.format(file_path))
             return file_path
         except Exception:
-            self.logger.error('Failed to save: %s', file_path)
+            self.logger.exception('Failed to save: {}'.format(file_path))
             return None
 
     def run(self):
@@ -156,7 +158,8 @@ class Testcase(object):
         try:
             runner.run()
         except AttributeError as e:
-            self.logger.exception('testcase:%s except:%s', self.name, e)
+            self.logger.exception('Test case: {} Exception: {}'.format(
+                self.name, e))
 
     # testcase in upstream testing project
     # validate_testcase_list = {'functest': {}, 'yardstick': {}, 'shell': {}}
@@ -230,8 +233,8 @@ class Testcase(object):
                         cls.testcase_list[next(testcase_yaml.iterkeys())] = \
                             testcase
                     else:
-                        cls.logger.error('failed to create testcase: %s',
-                                         testcase_file)
+                        cls.logger.error('Failed to create test '
+                                         'case: {}'.format(testcase_file))
 
     @classmethod
     def get(cls, testcase_name):
