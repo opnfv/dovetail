@@ -46,11 +46,11 @@ def run_test(testsuite, testarea, logger):
     duration = 0
     start_time = time.time()
     for testcase_name in testarea_list:
-        logger.info('>>[testcase]: %s', testcase_name)
+        logger.info('>>[testcase]: {}'.format(testcase_name))
         testcase = Testcase.get(testcase_name)
         if testcase is None:
-            logger.error('test case %s is not defined in testcase folder, \
-                         skipping', testcase_name)
+            logger.error('Test case {} is not defined in testcase folder, '
+                         'skipping.'.format(testcase_name))
             continue
         run_testcase = True
 
@@ -82,21 +82,23 @@ def check_tc_result(testcase, logger):
                                      testcase.name(), dovetail_result,
                                      logger):
             logger.info("Results have been pushed to database and stored "
-                        "with local file %s.", dovetail_result)
+                        "with local file {}.".format(dovetail_result))
         else:
-            logger.error("Fail to push results to database.")
+            logger.error("Failed to push results to database.")
     if dt_cfg.dovetail_config['report_dest'] == "file":
         if validate_type.lower() == 'yardstick':
             result_file = os.path.join(result_dir, testcase.name() + '.out')
         elif validate_type.lower() == 'functest':
             result_file = os.path.join(result_dir, functest_result)
         else:
-            logger.error("Don't support %s now.", validate_type)
+            logger.error("Don't support {} now.".format(validate_type))
             return
         if os.path.isfile(result_file):
-            logger.info("Results have been stored with file %s.", result_file)
+            logger.info(
+                "Results have been stored with file {}.".format(result_file))
         else:
-            logger.error("Fail to store results with file %s.", result_file)
+            logger.error(
+                "Failed to store results with file {}.".format(result_file))
         result = Report.get_result(testcase)
         Report.check_result(testcase, result)
 
@@ -107,18 +109,20 @@ def validate_input(input_dict, check_dict, logger):
     yard_tag = input_dict['yard_tag']
     valid_tag = check_dict['valid_docker_tag']
     if func_tag is not None and func_tag not in valid_tag:
-        logger.error("func_tag can't be %s, valid in %s", func_tag, valid_tag)
+        logger.error("The input option 'func_tag' can't be {}, "
+                     "valid values are {}.".format(func_tag, valid_tag))
         raise SystemExit(1)
     if yard_tag is not None and yard_tag not in valid_tag:
-        logger.error("yard_tag can't be %s, valid in %s", yard_tag, valid_tag)
+        logger.error("The input option 'yard_tag' can't be {}, "
+                     "valid values are {}.".format(yard_tag, valid_tag))
         raise SystemExit(1)
 
     # for 'report' option
     report = input_dict['report']
     if report:
         if not (report.startswith("http") or report == "file"):
-            logger.error("report can't be %s", input_dict['report'])
-            logger.info("valid report types are 'file' and 'http'")
+            logger.error("Report type can't be {}, valid types are 'file' "
+                         "and 'http'.".format(input_dict['report']))
             raise SystemExit(1)
 
 
@@ -147,7 +151,7 @@ def filter_config(input_dict, logger):
                         configs[key.upper()] = value_dict
                         break
                 except KeyError as e:
-                    logger.exception('%s lacks subsection %s', config_key, e)
+                    logger.exception('KeyError {}.'.format(e))
                     raise SystemExit(1)
     if not configs:
         return None
@@ -210,7 +214,7 @@ def env_init(logger):
     openrc = os.path.join(dt_cfg.dovetail_config['config_dir'],
                           dt_cfg.dovetail_config['env_file'])
     if not os.path.isfile(openrc):
-        logger.error("openrc file %s does not exist", openrc)
+        logger.error("File {} does not exist.".format(openrc))
     dt_utils.source_env(openrc)
 
 
@@ -226,9 +230,9 @@ def main(*args, **kwargs):
     create_logs()
     logger = dt_logger.Logger('run').getLogger()
     logger.info('================================================')
-    logger.info('Dovetail compliance: %s!', (kwargs['testsuite']))
+    logger.info('Dovetail compliance: {}!'.format(kwargs['testsuite']))
     logger.info('================================================')
-    logger.info('Build tag: %s', dt_cfg.dovetail_config['build_tag'])
+    logger.info('Build tag: {}'.format(dt_cfg.dovetail_config['build_tag']))
     env_init(logger)
     copy_userconfig_files(logger)
     dt_utils.check_docker_version(logger)
@@ -263,8 +267,8 @@ def main(*args, **kwargs):
         if dt_cfg.dovetail_config['report_dest'] == "file":
             Report.generate(testsuite_yaml, testarea, duration)
     else:
-        logger.error('invalid input commands, testsuite %s testarea %s',
-                     kwargs['testsuite'], testarea)
+        logger.error('Invalid input commands, testsuite {} testarea {}'
+                     .format(kwargs['testsuite'], testarea))
 
 
 dt_cfg.load_config_files()

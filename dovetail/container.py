@@ -42,7 +42,8 @@ class Container(object):
             return '%s:%s' % (dt_cfg.dovetail_config[type]['image_name'],
                               dt_cfg.dovetail_config[type]['docker_tag'])
         except KeyError as e:
-            cls.logger.error('There is no %s in %s config file.', e, type)
+            cls.logger.exception(
+                'There is no key {} in {} config file.'.format(e, type))
             return None
 
     # get the openrc_volume for creating the container
@@ -56,7 +57,8 @@ class Container(object):
                                      dovetail_config[type]['openrc'])
             return openrc
         else:
-            cls.logger.error("File %s is not exist", dovetail_config['openrc'])
+            cls.logger.error(
+                "File {} doesn't exist.".format(dovetail_config['openrc']))
             return None
 
     # set functest envs and TEST_DB_URL for creating functest container
@@ -113,14 +115,14 @@ class Container(object):
         pod_file = os.path.join(dovetail_config['config_dir'],
                                 dovetail_config['pod_file'])
         if not os.path.isfile(pod_file):
-            cls.logger.error("File %s doesn't exist.", pod_file)
+            cls.logger.error("File {} doesn't exist.".format(pod_file))
             return None
         key_file = os.path.join(dovetail_config['config_dir'],
                                 dovetail_config['pri_key'])
         key_container_path = dovetail_config["yardstick"]['result']['key_path']
         if not os.path.isfile(key_file):
-            cls.logger.debug("Key file %s is not found, maybe can use passwd "
-                             "method in %s to do HA test.", key_file, pod_file)
+            cls.logger.debug("Key file {} is not found, must use password in "
+                             "{} to do HA test.".format(key_file, pod_file))
             key_vol = ''
         else:
             key_vol = '-v %s:%s ' % (key_file, key_container_path)
@@ -166,11 +168,11 @@ class Container(object):
                 for host in hosts_info['hosts_info']:
                     hosts_config += " --add-host "
                     hosts_config += str(host)
-            cls.logger.info('get hosts info %s', hosts_config)
+                cls.logger.info('Get hosts info {}.'.format(hosts_config))
         except Exception:
-            cls.logger.warn('fail to get hosts info in %s/hosts.yaml, \
-                            maybe some issue with domain name resolution',
-                            hosts_config_path)
+            cls.logger.warn('Failed to get hosts info in {}/hosts.yaml, '
+                            'maybe some issues with domain name resolution.'
+                            .format(hosts_config_path))
 
         cacert_volume = ""
         https_enabled = dt_utils.check_https_enabled(cls.logger)
@@ -179,13 +181,14 @@ class Container(object):
             cls.logger.info("https enabled...")
             if cacert is not None:
                 if not os.path.isfile(cacert):
-                    cls.logger.error("env variable 'OS_CACERT' is set to %s"
-                                     "but the file does not exist", cacert)
+                    cls.logger.error("Env variable 'OS_CACERT' is set to {}"
+                                     "but the file does not exist."
+                                     .format(cacert))
                     return None
                 elif not dovetail_config['config_dir'] in cacert:
-                    cls.logger.error("credential file has to be put in %s,"
-                                     "which can be mount into container",
-                                     dovetail_config['config_dir'])
+                    cls.logger.error("Credential file has to be put in {},"
+                                     "which can be mount into container."
+                                     .format(dovetail_config['config_dir']))
                     return None
                 cacert_volume = ' -v %s:%s ' % (cacert, cacert)
             else:
@@ -227,15 +230,15 @@ class Container(object):
         cmd = "sudo docker ps -aq -f 'ancestor=%s'" % (image_id)
         ret, msg = dt_utils.exec_cmd(cmd, cls.logger)
         if msg and ret == 0:
-            cls.logger.debug('image %s has containers, skip.', image_id)
+            cls.logger.debug('Image {} has containers, skip.'.format(image_id))
             return True
         cmd = 'sudo docker rmi %s' % (image_id)
-        cls.logger.debug('remove image %s', image_id)
+        cls.logger.debug('Remove image {}.'.format(image_id))
         ret, msg = dt_utils.exec_cmd(cmd, cls.logger)
         if ret == 0:
-            cls.logger.debug('remove image %s successfully', image_id)
+            cls.logger.debug('Remove image {} successfully.'.format(image_id))
             return True
-        cls.logger.error('fail to remove image %s.', image_id)
+        cls.logger.error('Failed to remove image {}.'.format(image_id))
         return False
 
     @classmethod
@@ -243,9 +246,10 @@ class Container(object):
         cmd = 'sudo docker pull %s' % (image_name)
         ret, msg = dt_utils.exec_cmd(cmd, cls.logger)
         if ret != 0:
-            cls.logger.error('fail to pull docker image %s!', image_name)
+            cls.logger.error(
+                'Failed to pull docker image {}!'.format(image_name))
             return False
-        cls.logger.debug('success to pull docker image %s!', image_name)
+        cls.logger.debug('Success to pull docker image {}!'.format(image_name))
         return True
 
     @classmethod
@@ -254,7 +258,8 @@ class Container(object):
         if not docker_image:
             return None
         if cls.has_pull_latest_image[validate_type] is True:
-            cls.logger.debug('%s is already the newest version.', docker_image)
+            cls.logger.debug(
+                '{} is already the newest version.'.format(docker_image))
             return docker_image
         old_image_id = cls.get_image_id(docker_image)
         if not cls.pull_image_only(docker_image):
@@ -262,13 +267,14 @@ class Container(object):
         cls.has_pull_latest_image[validate_type] = True
         new_image_id = cls.get_image_id(docker_image)
         if not new_image_id:
-            cls.logger.error("fail to get the new image's id %s", docker_image)
+            cls.logger.error(
+                "Failed to get the id of image {}.".format(docker_image))
             return None
         if not old_image_id:
             return docker_image
         if new_image_id == old_image_id:
-            cls.logger.debug('image %s has no changes, no need to remove.',
-                             docker_image)
+            cls.logger.debug('Image {} has no changes, no need to remove.'
+                             .format(docker_image))
         else:
             cls.remove_image(old_image_id)
         return docker_image

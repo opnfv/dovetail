@@ -119,7 +119,7 @@ def source_env(env_file):
 
 
 def check_https_enabled(logger=None):
-    logger.info("checking if https enabled or not...")
+    logger.debug("Checking if https enabled or not...")
     cmd = "openstack catalog show identity |awk '/public/ {print $4}'| \
         grep 'https'"
     ret, msg = exec_cmd(cmd, logger)
@@ -135,13 +135,14 @@ def get_ext_net_name(env_file, logger=None):
         if insecure.lower() == "true":
             insecure_option = ' --insecure '
         else:
-            logger.warn("env variable OS_INSECURE is %s, if https + no"
-                        "credential used, should be set as True" % insecure)
+            logger.warn("Env variable OS_INSECURE is {}, if https + no "
+                        "credential used, should be set as True."
+                        .format(insecure))
 
     cmd_check = "openstack %s network list" % insecure_option
     ret, msg = exec_cmd(cmd_check, logger)
     if ret:
-        logger.error("The credentials info in %s is invalid." % env_file)
+        logger.error("The credentials info in {} is invalid.".format(env_file))
         return None
     cmd = "openstack %s network list --long | grep 'External' | head -1 | \
            awk '{print $4}'" % insecure_option
@@ -153,7 +154,7 @@ def get_ext_net_name(env_file, logger=None):
 
 def store_db_results(db_url, build_tag, testcase, dest_file, logger):
     url = "%s?build_tag=%s-%s" % (db_url, build_tag, testcase)
-    logger.debug("Query to rest api: %s", url)
+    logger.debug("Query to rest api: {}".format(url))
     try:
         data = json.load(urllib2.urlopen(url))
         if data['results']:
@@ -163,7 +164,8 @@ def store_db_results(db_url, build_tag, testcase, dest_file, logger):
         else:
             return False
     except Exception as e:
-        logger.error("Cannot read content from %s, exception: %s", url, e)
+        logger.exception(
+            "Cannot read content from {}, exception: {}".format(url, e))
         return False
 
 
@@ -176,7 +178,7 @@ def get_duration(start_date, stop_date, logger):
         res = "%sm%ss" % (delta / 60, delta % 60)
         return res
     except ValueError as e:
-        logger.error("ValueError: %s", e)
+        logger.exception("ValueError: {}".format(e))
         return None
 
 
@@ -195,12 +197,12 @@ def check_docker_version(logger=None):
     client_ret, client_ver = \
         exec_cmd("sudo docker version -f'{{.Client.Version}}'", logger=logger)
     if server_ret == 0:
-        logger.debug("docker server version: %s", server_ver)
+        logger.debug("docker server version: {}".format(server_ver))
     if server_ret != 0 or (LooseVersion(server_ver) < LooseVersion('1.12.3')):
         logger.error("Don't support this Docker server version. "
                      "Docker server should be updated to at least 1.12.3.")
     if client_ret == 0:
-        logger.debug("docker client version: %s", client_ver)
+        logger.debug("docker client version: {}".format(client_ver))
     if client_ret != 0 or (LooseVersion(client_ver) < LooseVersion('1.12.3')):
         logger.error("Don't support this Docker client version. "
                      "Docker client should be updated to at least 1.12.3.")
