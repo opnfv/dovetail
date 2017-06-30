@@ -175,6 +175,29 @@
       "revId": "3d9c429fe5639328843f6f4e1bb1e290829f2270",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_002597c1",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 648,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2017-06-30T01:51:16Z",
+      "side": 1,
+      "message": "this file is not deleted after the execution of tc007 case. reported an issue and submit the fix in yardstick. https://jira.opnfv.org/browse/YARDSTICK-696",
+      "range": {
+        "startLine": 648,
+        "startChar": 47,
+        "endLine": 648,
+        "endChar": 68
+      },
+      "revId": "3d9c429fe5639328843f6f4e1bb1e290829f2270",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
