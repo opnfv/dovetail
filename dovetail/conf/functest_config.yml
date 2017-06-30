@@ -1,7 +1,7 @@
 ---
 functest:
   image_name: opnfv/functest
-  docker_tag: danube.2.0
+  docker_tag: cvp.0.2.0
   opts: '-id --privileged=true'
   config:
     dir: '/home/opnfv/userconfig'
