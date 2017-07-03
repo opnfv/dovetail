@@ -42,6 +42,29 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_7873dbb1",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-07-03T01:15:21Z",
+      "side": 1,
+      "message": "Here cannot use the env $HOME. If $HOME is /root, then\nexport DOVETAIL_HOME\u003d/root/dovetail",
+      "range": {
+        "startLine": 168,
+        "startChar": 24,
+        "endLine": 168,
+        "endChar": 29
+      },
+      "revId": "3ee9a1f429ea533b9bc5c906cf1cc1cd9af5418d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_3846cd24",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 7
