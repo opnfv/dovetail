@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_880e7c33",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-08T02:00:41Z",
+      "side": 1,
+      "message": "Yes agree, link has been removed and para updated.",
+      "parentUuid": "5aaae553_0772847c",
+      "revId": "0d31ceea7d41aca0881c7f531dfa61f3da5635a3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_2748e02c",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2017-06-13T00:25:28Z",
       "side": 1,
       "message": "complianace criteia \u003d\u003e compliance criteria",
+      "revId": "0d31ceea7d41aca0881c7f531dfa61f3da5635a3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_2813c85d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-08T02:00:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5aaae553_2748e02c",
       "revId": "0d31ceea7d41aca0881c7f531dfa61f3da5635a3",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
