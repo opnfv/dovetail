@@ -37,6 +37,52 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_072cba98",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "We might want to briefly mention requirements to run the Dovetail tool (e.g. suitable host/vm with container execution capability, etc.). Can someobe provide a short summary?",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 57
+      },
+      "revId": "0d31ceea7d41aca0881c7f531dfa61f3da5635a3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_471ab26f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "OPNFV-level tests might require APIs not tested in RefStack. Remove?",
+      "range": {
+        "startLine": 45,
+        "startChar": 43,
+        "endLine": 45,
+        "endChar": 108
+      },
+      "revId": "0d31ceea7d41aca0881c7f531dfa61f3da5635a3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aaae553_2748e02c",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 6
