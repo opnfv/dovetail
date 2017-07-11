@@ -2,6 +2,75 @@
   "comments": [
     {
       "key": {
+        "uuid": "1aa4ed85_70f9a2c7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "The Dovetail project is responsible for test-case specifications as well as implementing the CVP tool-chain through collaboration with the OPNFV testing community.",
+      "range": {
+        "startLine": 18,
+        "startChar": 91,
+        "endLine": 19,
+        "endChar": 70
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_b0263a67",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "I think for now this will add confusion, lets remove it.",
+      "range": {
+        "startLine": 34,
+        "startChar": 51,
+        "endLine": 34,
+        "endChar": 71
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_d02bb62e",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "and pass/fail criteria",
+      "range": {
+        "startLine": 35,
+        "startChar": 27,
+        "endLine": 35,
+        "endChar": 35
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_9010de4f",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -13,6 +82,52 @@
       "writtenOn": "2017-07-11T15:29:20Z",
       "side": 1,
       "message": "Link or reference to the release revision of the doc would be good here.",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_901d3e12",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "I think we agreed that the Pharos spec needs revision to be authoritative for CVP testing. Lets review and decide what changes are needed.",
+      "range": {
+        "startLine": 45,
+        "startChar": 22,
+        "endLine": 45,
+        "endChar": 42
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_f0d35236",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "The addendum should focus on scope and acceptance criteria. These are objectives and repeating text from the main document.",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 28
+      },
       "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -42,6 +157,29 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_10a70ebf",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "Compliance verification in the Danube release time-frame is restricted to functional tests related to 1) VIM capabilities for VNF lifecycle management 2) Network capabilities for VPN and IPv6 3) NFVI Availability capabilities. The scope is not a reflection on current OPNFV activities which have a much broader scope, rather it focuses on existing test suites for the initial program launch.",
+      "range": {
+        "startLine": 63,
+        "startChar": 45,
+        "endLine": 67,
+        "endChar": 13
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_102cee98",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -56,6 +194,29 @@
       "range": {
         "startLine": 69,
         "startChar": 47,
+        "endLine": 69,
+        "endChar": 80
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_b0995a70",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "Doesn\u0027t appear we are in fact addressing EUAG pain-points with initial scope of CVP ... either provide clear links/refs or drop this.",
+      "range": {
+        "startLine": 69,
+        "startChar": 69,
         "endLine": 69,
         "endChar": 80
       },
@@ -169,6 +330,24 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_70ca0251",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "Tops down we are focused on VIM and NFVI capabilities to support VNF lifecycle management. Tests for this are described in ETSI NFV as part of MANO interop testing guidelines. Can we start with that as an \"objective\" source for tops down? specifically we are not focused on performance, resilience, security, fault management / failover, multi-VIM environment, load balancing, intelligent placement, ",
+      "parentUuid": "1aa4ed85_703a02cf",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_8aa0af91",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -197,6 +376,30 @@
       "writtenOn": "2017-07-11T15:29:20Z",
       "side": 1,
       "message": "I am not sure this is true.  We certainly run their tests, however they have clear ans strict guidelines that I don\u0027t believe we have adopted.  Maybe limit this claim to the fact that we run a subset of the refstack tests in our CVP.",
+      "range": {
+        "startLine": 88,
+        "startChar": 90,
+        "endLine": 90,
+        "endChar": 38
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_50d8261d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "We use a subset of the test-cases as a reference of VIM capabilities supported by Open Stack.",
+      "parentUuid": "1aa4ed85_90377ee3",
       "range": {
         "startLine": 88,
         "startChar": 90,
@@ -347,6 +550,29 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_b0fe3a6a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "Not sure what this means \"not directly exposed by OPNFV\"?",
+      "range": {
+        "startLine": 105,
+        "startChar": 43,
+        "endLine": 105,
+        "endChar": 72
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_2aadfb88",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -403,6 +629,76 @@
         "startChar": 25,
         "endLine": 115,
         "endChar": 20
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_d003b671",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "How does the suggested \"use-case approach\" apply to defining scope and pass/fail criteria (VOLTE and vCPE)?",
+      "parentUuid": "1aa4ed85_6d41cd38",
+      "range": {
+        "startLine": 113,
+        "startChar": 25,
+        "endLine": 115,
+        "endChar": 20
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_70f8c27c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "delete \"often\"",
+      "range": {
+        "startLine": 117,
+        "startChar": 7,
+        "endLine": 117,
+        "endChar": 12
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_b035da47",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "may be additional requirements beyond cloud computing",
+      "range": {
+        "startLine": 118,
+        "startChar": 59,
+        "endLine": 119,
+        "endChar": 12
       },
       "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -543,6 +839,29 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_10186ed2",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "IMO the issue is not lack of methodology and metrics (and there is ongoing work to develop test specs in ETSI e.g. NFV NW benchmark specification) ... the main issue is there are a multitude of configuration options which impact performance making apples-for-apples comparisons difficult. Not to say CVP should ignore performance, I think it could play a valuable role in helping ensure \"good configurations\".",
+      "range": {
+        "startLine": 144,
+        "startChar": 3,
+        "endLine": 145,
+        "endChar": 50
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_ada58505",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -629,6 +948,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_70268218",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "again, can we start with ETSI NFV test specs?",
+      "parentUuid": "1aa4ed85_8dac49ef",
+      "range": {
+        "startLine": 167,
+        "startChar": 39,
+        "endLine": 167,
+        "endChar": 53
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_0d885970",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -675,6 +1018,29 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_50c1062d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "line length",
+      "range": {
+        "startLine": 193,
+        "startChar": 117,
+        "endLine": 193,
+        "endChar": 125
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_5048265b",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -686,6 +1052,24 @@
       "writtenOn": "2017-07-11T15:29:20Z",
       "side": 1,
       "message": "I would expect some more detail on the criteria for awarding a statement of compliance.  Test results are part of the process, but I am sure other aspects of the process will impact the likelihood of being awarded a statement of compliance.  Capture the process related decision points in this section as well.",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_9023fe04",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-07-11T20:03:18Z",
+      "side": 1,
+      "message": "This is a critical section and each criteria needs justification ... we cannot just say pass this test and that test or pass all tests or pass 90% etc. in order to be awarded certification ... there needs to be an overall rationale for what is \"good enough\".",
+      "parentUuid": "1aa4ed85_5048265b",
       "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
