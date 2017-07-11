@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa4ed85_8aa0af91",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2017-07-11T07:22:55Z",
+      "side": 1,
+      "message": "trailing space",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_2aadfb88",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2017-07-11T07:22:55Z",
+      "side": 1,
+      "message": "particular",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_6aca1351",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2017-07-11T07:22:55Z",
+      "side": 1,
+      "message": "criteria",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
