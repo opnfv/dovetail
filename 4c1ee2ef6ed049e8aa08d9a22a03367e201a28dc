@@ -2,6 +2,46 @@
   "comments": [
     {
       "key": {
+        "uuid": "1aa4ed85_6a2533c1",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "references would be good",
+      "range": {
+        "startLine": 70,
+        "startChar": 68,
+        "endLine": 70,
+        "endChar": 96
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_ea184386",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "We might want to add a comment that we are not focusing on all of the above in the initial release.",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_8aa0af91",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -19,6 +59,98 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_2d3435dd",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "We should come up with an OPNFV view on what \"basic requirements of cloud management functions\" means in more detail and then investigate if the Refstack tests address this need. Just inferring that what OpenStack deems the best set of tests is not enough from an OPNFV perspective. Particularly given the fact the the OpenStack interop WG is considering creating an NFV vertical as well (I take that as an indication that RefStack as it stands today might not cut NFV completely).",
+      "range": {
+        "startLine": 90,
+        "startChar": 40,
+        "endLine": 92,
+        "endChar": 13
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_8d3769e3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "We need tests that directly verify Pharos compliance if we want to argue like this. AFAIK we don\u0027t have any as of now...",
+      "range": {
+        "startLine": 92,
+        "startChar": 15,
+        "endLine": 94,
+        "endChar": 16
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_0d537918",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "Don\u0027t get what these two sentences are trying to say...",
+      "range": {
+        "startLine": 94,
+        "startChar": 17,
+        "endLine": 98,
+        "endChar": 90
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_ad57c501",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "Suggest to move this out of the enumeration, since it describes a methodology aspect and not so much test scope as such.",
+      "range": {
+        "startLine": 100,
+        "startChar": 71,
+        "endLine": 102,
+        "endChar": 23
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_2aadfb88",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -30,6 +162,236 @@
       "writtenOn": "2017-07-11T07:22:55Z",
       "side": 1,
       "message": "particular",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_cd5c8128",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "These are not use cases. Suggest removal.",
+      "range": {
+        "startLine": 109,
+        "startChar": 82,
+        "endLine": 110,
+        "endChar": 74
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_6d41cd38",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "Not clear what this means for the test scope. Please clarify.",
+      "range": {
+        "startLine": 113,
+        "startChar": 25,
+        "endLine": 115,
+        "endChar": 20
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_ed9b7dc7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "add: \"...for making them a mandatory requirement for OPNFV compliance. In the meantime, CVP intends to offer tests in these areas as an optional extension of the test report to be submitted for review, noting that passing these tests will not be required to pass OPNFV compliance verification.\"",
+      "range": {
+        "startLine": 122,
+        "startChar": 11,
+        "endLine": 123,
+        "endChar": 33
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_0da139f8",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "Not clear how resilience distinguishes from High Availability, it could be the same. We should clarify...",
+      "range": {
+        "startLine": 131,
+        "startChar": 3,
+        "endLine": 132,
+        "endChar": 46
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_6d68edba",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "Security groups and LBaaS are readily available and well established features, which are to some extent covered by existing tests in Tempest and even RefStack. Surely not going all the way but a good start.",
+      "range": {
+        "startLine": 136,
+        "startChar": 3,
+        "endLine": 142,
+        "endChar": 25
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_ada58505",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "Doesn\u0027t the main CVP doc state that performance is out of scope for the initial release? If so, we would not have to repeat this here...",
+      "range": {
+        "startLine": 144,
+        "startChar": 3,
+        "endLine": 152,
+        "endChar": 69
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_cdaa41d4",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "tested",
+      "range": {
+        "startLine": 159,
+        "startChar": 6,
+        "endLine": 159,
+        "endChar": 11
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_8dac49ef",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "Does this mean the full Functest scope is mandatory? I think we need to be more specific also on this level what fundamental cloud capabilities means. And I do believe that RefStack alone is not sufficient to address this...",
+      "range": {
+        "startLine": 167,
+        "startChar": 39,
+        "endLine": 167,
+        "endChar": 53
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_0d885970",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "I would like to see workload placement policies like e.g. affinity rules be included here. I would expect this is well covered by available Tempest tests (which are likely not all included in RefStack, need to check).",
+      "range": {
+        "startLine": 169,
+        "startChar": 2,
+        "endLine": 170,
+        "endChar": 12
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_6d96ad96",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-11T10:37:49Z",
+      "side": 1,
+      "message": "We should rather consider VPN (L3VPN, more precisely) and IPv6 as test areas in their own right.",
+      "range": {
+        "startLine": 175,
+        "startChar": 39,
+        "endLine": 176,
+        "endChar": 60
+      },
       "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
