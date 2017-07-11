@@ -2,6 +2,69 @@
   "comments": [
     {
       "key": {
+        "uuid": "1aa4ed85_9010de4f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "Link or reference to the release revision of the doc would be good here.",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_f026f2b9",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "this should likely be a clear statement of the actual scope.  The phrase is misleading, the community has a rather broad scope of activity which is not being addressed in the CVP at this time.",
+      "range": {
+        "startLine": 65,
+        "startChar": 31,
+        "endLine": 67,
+        "endChar": 13
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_102cee98",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "Rephrase this, or remove it.  Addressing pain points is a test activity objective.  The CVP has the objective of establishing an industry norm.  Best to try and stay on message.",
+      "range": {
+        "startLine": 69,
+        "startChar": 47,
+        "endLine": 69,
+        "endChar": 80
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_6a2533c1",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -18,6 +81,52 @@
         "startChar": 68,
         "endLine": 70,
         "endChar": 96
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_d025f6ab",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "\"aim to evaluate the following categories\" or similar.  The CVP is an evaluation program.",
+      "range": {
+        "startLine": 71,
+        "startChar": 26,
+        "endLine": 71,
+        "endChar": 50
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_b0207a9c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "maybe \"the objectives\" is a better way of describing this list?",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 21
       },
       "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -42,6 +151,24 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_703a02cf",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "Agree with this, can we identify and clearly state what parts of this list are addressed in the danube suite of test cases",
+      "parentUuid": "1aa4ed85_ea184386",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_8aa0af91",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -53,6 +180,29 @@
       "writtenOn": "2017-07-11T07:22:55Z",
       "side": 1,
       "message": "trailing space",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_90377ee3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "I am not sure this is true.  We certainly run their tests, however they have clear ans strict guidelines that I don\u0027t believe we have adopted.  Maybe limit this claim to the fact that we run a subset of the refstack tests in our CVP.",
+      "range": {
+        "startLine": 88,
+        "startChar": 90,
+        "endLine": 90,
+        "endChar": 38
+      },
       "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -105,6 +255,29 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_503106eb",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "Not sure what the purpose of this section is.  Does this create issues with the CVP or is the statement intended to identify additional work that is done there?  requires clarification, seems to obfuscate the bullet point.",
+      "range": {
+        "startLine": 94,
+        "startChar": 17,
+        "endLine": 96,
+        "endChar": 91
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_0d537918",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -144,6 +317,29 @@
         "startChar": 71,
         "endLine": 102,
         "endChar": 23
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_f04d9273",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "this is replicated from the previous point.  Remove as it is confusing and the motivation for including it multiple times in this list is unclear.",
+      "range": {
+        "startLine": 103,
+        "startChar": 66,
+        "endLine": 105,
+        "endChar": 73
       },
       "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -237,6 +433,29 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_b0571a02",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "\"we can start with\" seems obtuse.  What is the intention of this sentence?  maybe rephrase to make a point or concisely identify a focus area.",
+      "range": {
+        "startLine": 127,
+        "startChar": 72,
+        "endLine": 128,
+        "endChar": 44
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_0da139f8",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -254,6 +473,47 @@
         "endLine": 132,
         "endChar": 46
       },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_d05c1628",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "Agree remove or clarify the difference between the points and how that is reflected in the test cases.",
+      "parentUuid": "1aa4ed85_0da139f8",
+      "range": {
+        "startLine": 131,
+        "startChar": 3,
+        "endLine": 132,
+        "endChar": 46
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_7041a238",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "Suggest rephrasing this section to describe the security features, interrface security, network configuration etc that have gone into the OPNFV work.  That there is more work to be done is a never ending fact, best to capture the current state and identify gaps.",
       "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -300,6 +560,23 @@
         "endLine": 152,
         "endChar": 69
       },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_903e9eb7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "This is an obscure sentence, clarify it should likely  make a statement of intent or scope.",
       "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -398,6 +675,23 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_5048265b",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "I would expect some more detail on the criteria for awarding a statement of compliance.  Test results are part of the process, but I am sure other aspects of the process will impact the likelihood of being awarded a statement of compliance.  Capture the process related decision points in this section as well.",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_6aca1351",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -409,6 +703,57 @@
       "writtenOn": "2017-07-11T07:22:55Z",
       "side": 1,
       "message": "criteria",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_107aae88",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "I don\u0027t think this is completely true is it?",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_d073b6af",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "Do not impact?  If I pass all optional test cases but fail one mandatory test case do I then fail?  I believe these tests should have an impact on the eventuality.",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_301d6a67",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-07-11T15:29:20Z",
+      "side": 1,
+      "message": "Assume this should be a canonical link referencing the doc published by the bod.",
       "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
