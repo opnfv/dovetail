@@ -597,6 +597,30 @@
       "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_81f972ca",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T13:27:11Z",
+      "side": 1,
+      "message": "My understanding is the results for optional tests would be part of the test report provided to OPNFV for review and, upon successful certification, would get published in some way on OPNFV website (if the company agrees). So it is a way to publicly demonstrate compliance with those optional features.",
+      "parentUuid": "1aa4ed85_81ddf272",
+      "range": {
+        "startLine": 258,
+        "startChar": 3,
+        "endLine": 259,
+        "endChar": 28
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
