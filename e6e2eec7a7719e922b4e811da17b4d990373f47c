@@ -1,0 +1,487 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa4ed85_f6182a86",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "Suggest to rephrase: \"While the OPNFV reference platform provides a broad range of capabilities, ...\".",
+      "range": {
+        "startLine": 79,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 22
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_d6172e50",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "We need to analyze if the current set of tests in Dovetail sufficiently addresses this point. FFS...",
+      "range": {
+        "startLine": 89,
+        "startChar": 4,
+        "endLine": 90,
+        "endChar": 31
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_760c3a43",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "Suggest to remove, it is not up to us to reason about RFP content, and I think we should be driven by EUAG input and our own knowledge rather than analyzing tendering habits.",
+      "range": {
+        "startLine": 91,
+        "startChar": 4,
+        "endLine": 91,
+        "endChar": 36
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_9609b633",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "Can we elaborate a bit on what this means here. I would claim that at least anything covered by Functest today (with the exception of feature-specific tests like bgpvpn or IPv6) addresses basic cloud capabilities. I would also say that basic VNF lifecycle management is a subset of basic cloud capabilities. Let\u0027s sharpen this, it will help our own understanding. Let\u0027s discuss this point in our next call...",
+      "range": {
+        "startLine": 91,
+        "startChar": 46,
+        "endLine": 92,
+        "endChar": 38
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_3606c221",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "Can we qualify this please? Not clear to me...",
+      "range": {
+        "startLine": 95,
+        "startChar": 4,
+        "endLine": 95,
+        "endChar": 48
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_56033e0f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "I think we do have a window of opportunity to implement a limited set of additional tests if we identify needs quickly. Let\u0027s not be too constrained by what is available today and focus on a good quality first release instead.",
+      "range": {
+        "startLine": 104,
+        "startChar": 0,
+        "endLine": 106,
+        "endChar": 4
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_01002200",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "plan to",
+      "range": {
+        "startLine": 111,
+        "startChar": 10,
+        "endLine": 111,
+        "endChar": 13
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_21051e11",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "Add: \"An optional test case will not have to be run or passed in order to obtain the \"OPNFV ready\" label. It provides an opportunity for vendors to demonstrate compliance with specific OPNFV features beyond the mandatory test scope.",
+      "range": {
+        "startLine": 111,
+        "startChar": 44,
+        "endLine": 111,
+        "endChar": 52
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_21a19ef8",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we include the \"basic cloud capabilities\" and \"VNF lifecycle management\" themes in this enumeration?",
+      "range": {
+        "startLine": 119,
+        "startChar": 35,
+        "endLine": 119,
+        "endChar": 54
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_611a3670",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "Don\u0027t we run all refstack tests plus some more? We should probably argue that the specific subgoal of providing VNF portability is the same for interop and CVP, but in an NFV context we think additional test scope is required to ensure that.",
+      "range": {
+        "startLine": 127,
+        "startChar": 26,
+        "endLine": 127,
+        "endChar": 32
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_0127c2b7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "Not clear to me. Does this refer to our intention to document the refstack tests and with that to clarify their relevance for NFV?",
+      "range": {
+        "startLine": 129,
+        "startChar": 61,
+        "endLine": 130,
+        "endChar": 73
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_212c3e99",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "I think we\u0027re taking the easy way out here. Let\u0027s analyze what is required and then see what can be accomplished in reasonable time, leveraging what is available to the largest extent possible but not ruling out adding new tests. If we identify what\u0027s needed it is not going to be hard to get it in place.",
+      "range": {
+        "startLine": 132,
+        "startChar": 0,
+        "endLine": 134,
+        "endChar": 47
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_6131d6eb",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "Further above we state that Pharos compliance is an \"SUT assumption\". Given that we do not have the means to verify it, and the Pharos spec itself needs work, we should not state this as a compliance requirement in my opinion.",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 142,
+        "endChar": 61
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_414b7a59",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "I consider the Functest vPing tests as part of basic cloud capabilities.",
+      "range": {
+        "startLine": 155,
+        "startChar": 16,
+        "endLine": 155,
+        "endChar": 34
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_a1658ee2",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "I would consider VPN and SFC as use cases but given the definition above this doesn\u0027t fit since they do create new functional requirements. Makes me wonder if the current delineation is helpful. We might want to use use cases as a starting point to identify additional functional requirements rather...",
+      "range": {
+        "startLine": 162,
+        "startChar": 58,
+        "endLine": 162,
+        "endChar": 75
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_2188be70",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "Let\u0027s be a bit more specific.",
+      "range": {
+        "startLine": 194,
+        "startChar": 0,
+        "endLine": 195,
+        "endChar": 53
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_c17c4a75",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "I guess this is part of the \"common cloud capabilities\" theme.",
+      "range": {
+        "startLine": 198,
+        "startChar": 11,
+        "endLine": 199,
+        "endChar": 70
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_e181464b",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 205,
+        "startChar": 50,
+        "endLine": 205,
+        "endChar": 67
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_e1aaa6d3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "Which part of RefStack is considered addressing common cloud capabilities?",
+      "range": {
+        "startLine": 211,
+        "startChar": 4,
+        "endLine": 211,
+        "endChar": 33
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_81965293",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "I assume we mean both the userdata and ssh variant of vPing?",
+      "range": {
+        "startLine": 212,
+        "startChar": 19,
+        "endLine": 212,
+        "endChar": 24
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_c1a52a05",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "Which part of refstack addresses VNF lifecycle? We should analyze if we want to include additional Tempest tests which are currently not in RefStack and if we are missing something that we\u0027d have to implement.",
+      "range": {
+        "startLine": 216,
+        "startChar": 4,
+        "endLine": 216,
+        "endChar": 22
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
