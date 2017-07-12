@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_818972cc",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_f6182a86",
+      "range": {
+        "startLine": 79,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 22
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_d6172e50",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 8
@@ -36,6 +60,30 @@
       "writtenOn": "2017-07-12T12:09:51Z",
       "side": 1,
       "message": "We need to analyze if the current set of tests in Dovetail sufficiently addresses this point. FFS...",
+      "range": {
+        "startLine": 89,
+        "startChar": 4,
+        "endLine": 90,
+        "endChar": 31
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_a186eeb7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "I noticed this item is more of ab objective than a category of tests. Not to deflect your question, but it is out of place, so I will remove it from here. But will add a description to address this question later in the enumerations.",
+      "parentUuid": "1aa4ed85_d6172e50",
       "range": {
         "startLine": 89,
         "startChar": 4,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_41937afa",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "agree. I reordered/reworded the categories so that they match with the enumerated points.",
+      "parentUuid": "1aa4ed85_760c3a43",
+      "range": {
+        "startLine": 91,
+        "startChar": 4,
+        "endLine": 91,
+        "endChar": 36
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_9609b633",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 8
@@ -82,6 +154,30 @@
       "writtenOn": "2017-07-12T12:09:51Z",
       "side": 1,
       "message": "Can we elaborate a bit on what this means here. I would claim that at least anything covered by Functest today (with the exception of feature-specific tests like bgpvpn or IPv6) addresses basic cloud capabilities. I would also say that basic VNF lifecycle management is a subset of basic cloud capabilities. Let\u0027s sharpen this, it will help our own understanding. Let\u0027s discuss this point in our next call...",
+      "range": {
+        "startLine": 91,
+        "startChar": 46,
+        "endLine": 92,
+        "endChar": 38
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_6190f6ec",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "I\u0027m not a fan of this phrase that usually means something else than we actually test. So I removed and reworded. The phrase \"lifecycle\" usually indicates MANO to me.",
+      "parentUuid": "1aa4ed85_9609b633",
       "range": {
         "startLine": 91,
         "startChar": 46,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_01bd8268",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "agree it could be misleading. reworded to be more clear of what we actually test.",
+      "parentUuid": "1aa4ed85_618d567b",
+      "range": {
+        "startLine": 94,
+        "startChar": 15,
+        "endLine": 94,
+        "endChar": 27
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_3606c221",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 8
@@ -140,6 +260,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_c1b68a8a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_3606c221",
+      "range": {
+        "startLine": 95,
+        "startChar": 4,
+        "endLine": 95,
+        "endChar": 48
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_56033e0f",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 8
@@ -151,6 +295,30 @@
       "writtenOn": "2017-07-12T12:09:51Z",
       "side": 1,
       "message": "I think we do have a window of opportunity to implement a limited set of additional tests if we identify needs quickly. Let\u0027s not be too constrained by what is available today and focus on a good quality first release instead.",
+      "range": {
+        "startLine": 104,
+        "startChar": 0,
+        "endLine": 106,
+        "endChar": 4
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_e1bb8670",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "agree - i do leave open the possibility of additional test cases that we can either draw from or add. I\u0027ll reword it in some way so this intention comes through.",
+      "parentUuid": "1aa4ed85_56033e0f",
       "range": {
         "startLine": 104,
         "startChar": 0,
@@ -209,6 +377,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_81b0928c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_21051e11",
+      "range": {
+        "startLine": 111,
+        "startChar": 44,
+        "endLine": 111,
+        "endChar": 52
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_21a19ef8",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 8
@@ -220,6 +412,30 @@
       "writtenOn": "2017-07-12T12:09:51Z",
       "side": 1,
       "message": "Shouldn\u0027t we include the \"basic cloud capabilities\" and \"VNF lifecycle management\" themes in this enumeration?",
+      "range": {
+        "startLine": 119,
+        "startChar": 35,
+        "endLine": 119,
+        "endChar": 54
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_a1ad8e33",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "yes - related to earlier comments - I will reorder some of these points to make it clearer. Thanks.",
+      "parentUuid": "1aa4ed85_21a19ef8",
       "range": {
         "startLine": 119,
         "startChar": 35,
@@ -255,6 +471,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_815e5244",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "yes we ran defstack-compute (ie not including refstack-object storage) completely, then some more. i\u0027ve already removed the \"vnf portability\" as a test category, so it\u0027s just a part of basic cloud capabilities test. And you are right, many, if not all, of the test cases contribute to the vnf portability objective.",
+      "parentUuid": "1aa4ed85_611a3670",
+      "range": {
+        "startLine": 127,
+        "startChar": 26,
+        "endLine": 127,
+        "endChar": 32
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_0127c2b7",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 8
@@ -266,6 +506,30 @@
       "writtenOn": "2017-07-12T12:09:51Z",
       "side": 1,
       "message": "Not clear to me. Does this refer to our intention to document the refstack tests and with that to clarify their relevance for NFV?",
+      "range": {
+        "startLine": 129,
+        "startChar": 61,
+        "endLine": 130,
+        "endChar": 73
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_a15b4e53",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "yes, i will reword to make it clear.",
+      "parentUuid": "1aa4ed85_0127c2b7",
       "range": {
         "startLine": 129,
         "startChar": 61,
@@ -301,6 +565,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_dc250dac",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "I hear you - let me propose a different approach in my next revision and see if we come closer to address this question on target.",
+      "parentUuid": "1aa4ed85_212c3e99",
+      "range": {
+        "startLine": 132,
+        "startChar": 0,
+        "endLine": 134,
+        "endChar": 47
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_6131d6eb",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 8
@@ -312,6 +600,30 @@
       "writtenOn": "2017-07-12T12:09:51Z",
       "side": 1,
       "message": "Further above we state that Pharos compliance is an \"SUT assumption\". Given that we do not have the means to verify it, and the Pharos spec itself needs work, we should not state this as a compliance requirement in my opinion.",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 142,
+        "endChar": 61
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_5c1a7d6f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "good point. I will remove this text entirely and stick to the \"SUT Assumption\".",
+      "parentUuid": "1aa4ed85_6131d6eb",
       "range": {
         "startLine": 138,
         "startChar": 0,
@@ -347,6 +659,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_3c6221d9",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "i adopted your terminology, moving vping etc to basic, and use vIMS, vCPE etc as examples here.",
+      "parentUuid": "1aa4ed85_414b7a59",
+      "range": {
+        "startLine": 155,
+        "startChar": 16,
+        "endLine": 155,
+        "endChar": 34
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_a1658ee2",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 8
@@ -358,6 +694,30 @@
       "writtenOn": "2017-07-12T12:09:51Z",
       "side": 1,
       "message": "I would consider VPN and SFC as use cases but given the definition above this doesn\u0027t fit since they do create new functional requirements. Makes me wonder if the current delineation is helpful. We might want to use use cases as a starting point to identify additional functional requirements rather...",
+      "range": {
+        "startLine": 162,
+        "startChar": 58,
+        "endLine": 162,
+        "endChar": 75
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_5c5fdd0e",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "To me, it\u0027s been useful to separate ping, SFC, IMS, and call them basic, new function, and use case. It\u0027s a way to convey the content to the public. But open for better suggestions.",
+      "parentUuid": "1aa4ed85_a1658ee2",
       "range": {
         "startLine": 162,
         "startChar": 58,
@@ -416,6 +776,54 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_1ca165f8",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "yes - that happens when we go top-down. It should be documented of course.",
+      "parentUuid": "1aa4ed85_01ea620f",
+      "range": {
+        "startLine": 194,
+        "startChar": 0,
+        "endLine": 195,
+        "endChar": 53
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_fc9b29c7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_2188be70",
+      "range": {
+        "startLine": 194,
+        "startChar": 0,
+        "endLine": 195,
+        "endChar": 53
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_c17c4a75",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 8
@@ -439,6 +847,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_bca5b105",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "yes",
+      "parentUuid": "1aa4ed85_c17c4a75",
+      "range": {
+        "startLine": 198,
+        "startChar": 11,
+        "endLine": 199,
+        "endChar": 70
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_c1f3ea08",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 8
@@ -450,6 +882,30 @@
       "writtenOn": "2017-07-12T12:32:29Z",
       "side": 1,
       "message": "This section is what is included in this release of the CVP, we should not be talking about \"future\" stuff, or what we would like to be included.",
+      "range": {
+        "startLine": 199,
+        "startChar": 71,
+        "endLine": 202,
+        "endChar": 21
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_dcaaedd3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "this section is just \u0027analysis\u0027",
+      "parentUuid": "1aa4ed85_c1f3ea08",
       "range": {
         "startLine": 199,
         "startChar": 71,
@@ -508,6 +964,54 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_9cac75ef",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_e1f866e7",
+      "range": {
+        "startLine": 205,
+        "startChar": 0,
+        "endLine": 205,
+        "endChar": 10
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_7caf39e4",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_e181464b",
+      "range": {
+        "startLine": 205,
+        "startChar": 50,
+        "endLine": 205,
+        "endChar": 67
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_e1aaa6d3",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 8
@@ -519,6 +1023,30 @@
       "writtenOn": "2017-07-12T12:09:51Z",
       "side": 1,
       "message": "Which part of RefStack is considered addressing common cloud capabilities?",
+      "range": {
+        "startLine": 211,
+        "startChar": 4,
+        "endLine": 211,
+        "endChar": 33
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_3cb9c12e",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "image, compute, storage, netwrk, identity",
+      "parentUuid": "1aa4ed85_e1aaa6d3",
       "range": {
         "startLine": 211,
         "startChar": 4,
@@ -554,6 +1082,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_5cb6fd3e",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "yes",
+      "parentUuid": "1aa4ed85_81965293",
+      "range": {
+        "startLine": 212,
+        "startChar": 19,
+        "endLine": 212,
+        "endChar": 24
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_c1a52a05",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 8
@@ -565,6 +1117,30 @@
       "writtenOn": "2017-07-12T12:09:51Z",
       "side": 1,
       "message": "Which part of refstack addresses VNF lifecycle? We should analyze if we want to include additional Tempest tests which are currently not in RefStack and if we are missing something that we\u0027d have to implement.",
+      "range": {
+        "startLine": 216,
+        "startChar": 4,
+        "endLine": 216,
+        "endChar": 22
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_fc824951",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "removed and moved to basic capabilities area",
+      "parentUuid": "1aa4ed85_c1a52a05",
       "range": {
         "startLine": 216,
         "startChar": 4,
@@ -612,6 +1188,54 @@
       "side": 1,
       "message": "My understanding is the results for optional tests would be part of the test report provided to OPNFV for review and, upon successful certification, would get published in some way on OPNFV website (if the company agrees). So it is a way to publicly demonstrate compliance with those optional features.",
       "parentUuid": "1aa4ed85_81ddf272",
+      "range": {
+        "startLine": 258,
+        "startChar": 3,
+        "endLine": 259,
+        "endChar": 28
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_bc7cd173",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "they can choose to highlight that additional compliance level.",
+      "parentUuid": "1aa4ed85_81ddf272",
+      "range": {
+        "startLine": 258,
+        "startChar": 3,
+        "endLine": 259,
+        "endChar": 28
+      },
+      "revId": "e6e2eec7a7719e922b4e811da17b4d990373f47c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_1c888570",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T22:30:43Z",
+      "side": 1,
+      "message": "agree here. I will add a bit more language to both of these points, but in small baby steps, so we have time to review and think.",
+      "parentUuid": "1aa4ed85_81f972ca",
       "range": {
         "startLine": 258,
         "startChar": 3,
