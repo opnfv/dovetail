@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_f07912fd",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_70f9a2c7",
+      "range": {
+        "startLine": 18,
+        "startChar": 91,
+        "endLine": 19,
+        "endChar": 70
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_b0263a67",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_107f0ee2",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_b0263a67",
+      "range": {
+        "startLine": 34,
+        "startChar": 51,
+        "endLine": 34,
+        "endChar": 71
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_d02bb62e",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -59,6 +107,30 @@
       "writtenOn": "2017-07-11T20:03:18Z",
       "side": 1,
       "message": "and pass/fail criteria",
+      "range": {
+        "startLine": 35,
+        "startChar": 27,
+        "endLine": 35,
+        "endChar": 35
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_b0839acb",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_d02bb62e",
       "range": {
         "startLine": 35,
         "startChar": 27,
@@ -111,6 +183,48 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_d08896e9",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "agreed. will put a reference in.",
+      "parentUuid": "1aa4ed85_9010de4f",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_706d2232",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "agree. will put a reference in here which we can decide how to update/finish.",
+      "parentUuid": "1aa4ed85_901d3e12",
+      "range": {
+        "startLine": 45,
+        "startChar": 22,
+        "endLine": 45,
+        "endChar": 42
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_f0d35236",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -122,6 +236,30 @@
       "writtenOn": "2017-07-11T20:03:18Z",
       "side": 1,
       "message": "The addendum should focus on scope and acceptance criteria. These are objectives and repeating text from the main document.",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 28
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_d05f3671",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "It was my intention to quote this as the source of the \u0027top-down\u0027 criteria to consider in deciding scope. Let me leave this in for the time being, please read again after the revision to see if you feel differently. It\u0027s always easy to remove it should it be unnecessary repetition. I was trying to make the addendum readable stand-alone since most people will not go read the Guidelines document.",
+      "parentUuid": "1aa4ed85_f0d35236",
       "range": {
         "startLine": 52,
         "startChar": 0,
@@ -180,6 +318,54 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_90ff7e34",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "I see the problem. I\u0027ll rephrase to convey the top level scoping that is given to us by the board, e.g. functional testing, but not yet performance, not yet MANO etc. - essentially agreeing that it\u0027s a much narrower scope than the opnfv community\u0027s whole scope of activities.",
+      "parentUuid": "1aa4ed85_f026f2b9",
+      "range": {
+        "startLine": 65,
+        "startChar": 31,
+        "endLine": 67,
+        "endChar": 13
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_50f9064c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "See my other comment. My intent here is to convey the top level of scope communicated to us from the board - as the starting point. it is not meant to say anything otherwise. I will rephrase it and please check again.",
+      "parentUuid": "1aa4ed85_10a70ebf",
+      "range": {
+        "startLine": 63,
+        "startChar": 45,
+        "endLine": 67,
+        "endChar": 13
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_102cee98",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -226,6 +412,54 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_7089a2c9",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "I will take chris\u0027s suggestion to focus on \"the objectives\" as a clear way and remove other reference points that can be confusing. Same apply to other related comments to this point.",
+      "parentUuid": "1aa4ed85_102cee98",
+      "range": {
+        "startLine": 69,
+        "startChar": 47,
+        "endLine": 69,
+        "endChar": 80
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_90869eb8",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "I will take chris\u0027s suggestion to focus on \"the objectives\" as a clear way and remove other reference points that can be confusing. Same apply to other related comments to this point.",
+      "parentUuid": "1aa4ed85_b0995a70",
+      "range": {
+        "startLine": 69,
+        "startChar": 69,
+        "endLine": 69,
+        "endChar": 80
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_6a2533c1",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -237,6 +471,30 @@
       "writtenOn": "2017-07-11T10:37:49Z",
       "side": 1,
       "message": "references would be good",
+      "range": {
+        "startLine": 70,
+        "startChar": 68,
+        "endLine": 70,
+        "endChar": 96
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_30932afc",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "I will take chris\u0027s suggestion to focus on \"the objectives\" as a clear way and remove other reference points that can be confusing. Same apply to other related comments to this point.",
+      "parentUuid": "1aa4ed85_6a2533c1",
       "range": {
         "startLine": 70,
         "startChar": 68,
@@ -283,6 +541,54 @@
       "writtenOn": "2017-07-11T15:29:20Z",
       "side": 1,
       "message": "maybe \"the objectives\" is a better way of describing this list?",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 21
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_b0b63a89",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_d025f6ab",
+      "range": {
+        "startLine": 71,
+        "startChar": 26,
+        "endLine": 71,
+        "endChar": 50
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_509026ec",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "I will take chris\u0027s suggestion to focus on \"the objectives\" as a clear way and remove other reference points that can be confusing. Same apply to other related comments to this point.",
+      "parentUuid": "1aa4ed85_b0207a9c",
       "range": {
         "startLine": 71,
         "startChar": 0,
@@ -412,6 +718,54 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_5b5287de",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_90377ee3",
+      "range": {
+        "startLine": 88,
+        "startChar": 90,
+        "endLine": 90,
+        "endChar": 38
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_fb5ed3e8",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_50d8261d",
+      "range": {
+        "startLine": 88,
+        "startChar": 90,
+        "endLine": 90,
+        "endChar": 38
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_2d3435dd",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -423,6 +777,30 @@
       "writtenOn": "2017-07-11T10:37:49Z",
       "side": 1,
       "message": "We should come up with an OPNFV view on what \"basic requirements of cloud management functions\" means in more detail and then investigate if the Refstack tests address this need. Just inferring that what OpenStack deems the best set of tests is not enough from an OPNFV perspective. Particularly given the fact the the OpenStack interop WG is considering creating an NFV vertical as well (I take that as an indication that RefStack as it stands today might not cut NFV completely).",
+      "range": {
+        "startLine": 90,
+        "startChar": 40,
+        "endLine": 92,
+        "endChar": 13
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_7b72e37d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "-I\u0027ll take Trevor and Chris\u0027s suggestion that more accurately state the we run a subset of refstack.\n-I\u0027ll add text to note that the \"requirements\" are documented (this is still to be completed) to provide the analysis of the requirements from opnfv perspective.\n-I\u0027ll note that extensions are likely to be needed. and it could take the form of a NFV specific extension that could even be collaboratively done between openstack and opnfv.",
+      "parentUuid": "1aa4ed85_2d3435dd",
       "range": {
         "startLine": 90,
         "startChar": 40,
@@ -458,6 +836,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_bbab7b88",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Yes, I\u0027ll note this.",
+      "parentUuid": "1aa4ed85_8d3769e3",
+      "range": {
+        "startLine": 92,
+        "startChar": 15,
+        "endLine": 94,
+        "endChar": 16
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_503106eb",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -469,6 +871,30 @@
       "writtenOn": "2017-07-11T15:29:20Z",
       "side": 1,
       "message": "Not sure what the purpose of this section is.  Does this create issues with the CVP or is the statement intended to identify additional work that is done there?  requires clarification, seems to obfuscate the bullet point.",
+      "range": {
+        "startLine": 94,
+        "startChar": 17,
+        "endLine": 96,
+        "endChar": 91
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_7b95033f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Yes, it appears so. Let me remove it.",
+      "parentUuid": "1aa4ed85_503106eb",
       "range": {
         "startLine": 94,
         "startChar": 17,
@@ -504,6 +930,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_bbe7fbe3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "I moved it to earlier paragraph that may make more sense. I was trying to say something about the NFV specific extensions aka verticals.",
+      "parentUuid": "1aa4ed85_0d537918",
+      "range": {
+        "startLine": 94,
+        "startChar": 17,
+        "endLine": 98,
+        "endChar": 90
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_ad57c501",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -515,6 +965,30 @@
       "writtenOn": "2017-07-11T10:37:49Z",
       "side": 1,
       "message": "Suggest to move this out of the enumeration, since it describes a methodology aspect and not so much test scope as such.",
+      "range": {
+        "startLine": 100,
+        "startChar": 71,
+        "endLine": 102,
+        "endChar": 23
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_9bcebf59",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_ad57c501",
       "range": {
         "startLine": 100,
         "startChar": 71,
@@ -573,6 +1047,54 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_3bdb0b1d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_f04d9273",
+      "range": {
+        "startLine": 103,
+        "startChar": 66,
+        "endLine": 105,
+        "endChar": 73
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_5bd8471d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "yes I\u0027m off topic here. Removed.",
+      "parentUuid": "1aa4ed85_b0fe3a6a",
+      "range": {
+        "startLine": 105,
+        "startChar": 43,
+        "endLine": 105,
+        "endChar": 72
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_2aadfb88",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -601,6 +1123,48 @@
       "writtenOn": "2017-07-11T10:37:49Z",
       "side": 1,
       "message": "These are not use cases. Suggest removal.",
+      "range": {
+        "startLine": 109,
+        "startChar": 82,
+        "endLine": 110,
+        "endChar": 74
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_fb04937f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_2aadfb88",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_1b0acf8a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_cd5c8128",
       "range": {
         "startLine": 109,
         "startChar": 82,
@@ -660,6 +1224,54 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_fb2b33e9",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "not quite understand the question.",
+      "parentUuid": "1aa4ed85_d003b671",
+      "range": {
+        "startLine": 113,
+        "startChar": 25,
+        "endLine": 115,
+        "endChar": 20
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_db03d771",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "I meant to highlight the benefits of use case level testing even when it does not extend the exercised API - use cases add more functional interactions in the SUT. I\u0027ll clarify the text. \n\nI do use the term specifically to mean testing that does not explicitly extend the API being tested, though, as in contrast to Functional extension in the next bullet. Let me know if that is appropriate in your view.",
+      "parentUuid": "1aa4ed85_6d41cd38",
+      "range": {
+        "startLine": 113,
+        "startChar": 25,
+        "endLine": 115,
+        "endChar": 20
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_70f8c27c",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -671,6 +1283,30 @@
       "writtenOn": "2017-07-11T20:03:18Z",
       "side": 1,
       "message": "delete \"often\"",
+      "range": {
+        "startLine": 117,
+        "startChar": 7,
+        "endLine": 117,
+        "endChar": 12
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_1b316f5a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_70f8c27c",
       "range": {
         "startLine": 117,
         "startChar": 7,
@@ -706,6 +1342,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_7b3f4326",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_b035da47",
+      "range": {
+        "startLine": 118,
+        "startChar": 59,
+        "endLine": 119,
+        "endChar": 12
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_ed9b7dc7",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -729,6 +1389,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_db3af735",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_ed9b7dc7",
+      "range": {
+        "startLine": 122,
+        "startChar": 11,
+        "endLine": 123,
+        "endChar": 33
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_b0571a02",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -740,6 +1424,30 @@
       "writtenOn": "2017-07-11T15:29:20Z",
       "side": 1,
       "message": "\"we can start with\" seems obtuse.  What is the intention of this sentence?  maybe rephrase to make a point or concisely identify a focus area.",
+      "range": {
+        "startLine": 127,
+        "startChar": 72,
+        "endLine": 128,
+        "endChar": 44
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_3b49cbd0",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_b0571a02",
       "range": {
         "startLine": 127,
         "startChar": 72,
@@ -799,6 +1507,54 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_fb79f3fc",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_d05c1628",
+      "range": {
+        "startLine": 131,
+        "startChar": 3,
+        "endLine": 132,
+        "endChar": 46
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_5b1da7bc",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_0da139f8",
+      "range": {
+        "startLine": 131,
+        "startChar": 3,
+        "endLine": 132,
+        "endChar": 46
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_7041a238",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -816,6 +1572,24 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_db5f5771",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_7041a238",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_6d68edba",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -827,6 +1601,30 @@
       "writtenOn": "2017-07-11T10:37:49Z",
       "side": 1,
       "message": "Security groups and LBaaS are readily available and well established features, which are to some extent covered by existing tests in Tempest and even RefStack. Surely not going all the way but a good start.",
+      "range": {
+        "startLine": 136,
+        "startChar": 3,
+        "endLine": 142,
+        "endChar": 25
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_7b542354",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_6d68edba",
       "range": {
         "startLine": 136,
         "startChar": 3,
@@ -862,6 +1660,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_9b51df64",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "agree. removed.",
+      "parentUuid": "1aa4ed85_10186ed2",
+      "range": {
+        "startLine": 144,
+        "startChar": 3,
+        "endLine": 145,
+        "endChar": 50
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_ada58505",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -873,6 +1695,30 @@
       "writtenOn": "2017-07-11T10:37:49Z",
       "side": 1,
       "message": "Doesn\u0027t the main CVP doc state that performance is out of scope for the initial release? If so, we would not have to repeat this here...",
+      "range": {
+        "startLine": 144,
+        "startChar": 3,
+        "endLine": 152,
+        "endChar": 69
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_3b4eabc2",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "agree, removed. and noted earlier that it is out of scope.",
+      "parentUuid": "1aa4ed85_ada58505",
       "range": {
         "startLine": 144,
         "startChar": 3,
@@ -902,6 +1748,24 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_5b4b67b0",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_903e9eb7",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_cdaa41d4",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -913,6 +1777,30 @@
       "writtenOn": "2017-07-11T10:37:49Z",
       "side": 1,
       "message": "tested",
+      "range": {
+        "startLine": 159,
+        "startChar": 6,
+        "endLine": 159,
+        "endChar": 11
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_fbc7b310",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_cdaa41d4",
       "range": {
         "startLine": 159,
         "startChar": 6,
@@ -972,6 +1860,54 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_3be54ba8",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "agree. I\u0027ll reformat it and remove all other details that people can find in the test spec docs.",
+      "parentUuid": "1aa4ed85_8dac49ef",
+      "range": {
+        "startLine": 167,
+        "startChar": 39,
+        "endLine": 167,
+        "endChar": 53
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_5be287a0",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "i\u0027ll leave the references out to individual test spec docs which have much more relevant references.",
+      "parentUuid": "1aa4ed85_70268218",
+      "range": {
+        "startLine": 167,
+        "startChar": 39,
+        "endLine": 167,
+        "endChar": 53
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_0d885970",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -983,6 +1919,30 @@
       "writtenOn": "2017-07-11T10:37:49Z",
       "side": 1,
       "message": "I would like to see workload placement policies like e.g. affinity rules be included here. I would expect this is well covered by available Tempest tests (which are likely not all included in RefStack, need to check).",
+      "range": {
+        "startLine": 169,
+        "startChar": 2,
+        "endLine": 170,
+        "endChar": 12
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_dbd677c5",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Good idea, but I will leave that to you for now - can you come back with a more definitive proposal? Thanks.",
+      "parentUuid": "1aa4ed85_0d885970",
       "range": {
         "startLine": 169,
         "startChar": 2,
@@ -1018,6 +1978,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_1bcdef31",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "agree. I\u0027m going to remove the table - too hard to work with in ascii, and simplify.",
+      "parentUuid": "1aa4ed85_6d96ad96",
+      "range": {
+        "startLine": 175,
+        "startChar": 39,
+        "endLine": 176,
+        "endChar": 60
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_50c1062d",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -1029,6 +2013,30 @@
       "writtenOn": "2017-07-11T20:03:18Z",
       "side": 1,
       "message": "line length",
+      "range": {
+        "startLine": 193,
+        "startChar": 117,
+        "endLine": 193,
+        "endChar": 125
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_fbeed38a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_50c1062d",
       "range": {
         "startLine": 193,
         "startChar": 117,
@@ -1076,6 +2084,42 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_dbed178d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "I don\u0027t know yet how to come up with an alternative language, so I start with the simplest one possible. Please suggest if you anyone has a better one. Thanks.",
+      "parentUuid": "1aa4ed85_9023fe04",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_bbe85b7d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "I don\u0027t know yet how to come up with an alternative language, so I start with the simplest one possible. Please suggest if you anyone has a better one. Thanks.",
+      "parentUuid": "1aa4ed85_5048265b",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_6aca1351",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -1087,6 +2131,24 @@
       "writtenOn": "2017-07-11T07:22:55Z",
       "side": 1,
       "message": "criteria",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_1bf40f5a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_6aca1351",
       "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -1110,6 +2172,24 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_7b02e33f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "I don\u0027t know yet how to come up with an alternative language, so I start with the simplest one possible. Please suggest if you anyone has a better one. Thanks.",
+      "parentUuid": "1aa4ed85_107aae88",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_d073b6af",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -1127,6 +2207,24 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_9bff9f34",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "I don\u0027t know yet how to come up with an alternative language, so I start with the simplest one possible. Please suggest if you anyone has a better one. Thanks.",
+      "parentUuid": "1aa4ed85_d073b6af",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_301d6a67",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
@@ -1138,6 +2236,24 @@
       "writtenOn": "2017-07-11T15:29:20Z",
       "side": 1,
       "message": "Assume this should be a canonical link referencing the doc published by the bod.",
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_3bfc6b3e",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-12T03:46:57Z",
+      "side": 1,
+      "message": "yes.",
+      "parentUuid": "1aa4ed85_301d6a67",
       "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
