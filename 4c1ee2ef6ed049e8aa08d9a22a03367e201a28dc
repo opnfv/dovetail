@@ -272,6 +272,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_562c9eab",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-12T12:09:51Z",
+      "side": 1,
+      "message": "I think the intention should not be to make the addendum stand-alone, it is an addendum after all. My two cents...",
+      "parentUuid": "1aa4ed85_d05f3671",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 28
+      },
+      "revId": "4c1ee2ef6ed049e8aa08d9a22a03367e201a28dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_f026f2b9",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 7
