@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa4ed85_50dd816f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-13T05:18:33Z",
+      "side": 1,
+      "message": "As load testing has specified defination which is different to loading testing. To avoid confusion, I suggest to modify the sentence as \"Resilency testing involves stressing the SUT and verifies its ablility to withstand the stress while continuously providing acceptable level of service\"",
+      "range": {
+        "startLine": 229,
+        "startChar": 0,
+        "endLine": 231,
+        "endChar": 33
+      },
+      "revId": "efa057d41e642cd4cca64ac8df46dcf4a8bce2a1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
