@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_a6d6ffc3",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1421
+      },
+      "writtenOn": "2017-07-13T13:35:27Z",
+      "side": 1,
+      "message": "This test uses the bash command that can be found at https://git.opnfv.org/functest/tree/functest/opnfv_tests/openstack/vping/vping_userdata.py#n122 which is setup via the VM\u0027s userdata.",
+      "parentUuid": "1aa4ed85_535eeb46",
+      "range": {
+        "startLine": 73,
+        "startChar": 43,
+        "endLine": 73,
+        "endChar": 55
+      },
+      "revId": "e160715d5f05f86831762634928be982ef29dba8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_735be754",
         "filename": "docs/testing/user/testspecification/vping/index.rst",
         "patchSetId": 4
