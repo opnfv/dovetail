@@ -22,6 +22,30 @@
       "revId": "efa057d41e642cd4cca64ac8df46dcf4a8bce2a1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_10e70942",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-13T05:24:09Z",
+      "side": 1,
+      "message": "For the first sentence of my comment, should be \"Load testing has specific definiation which is different from Resilency testing\". For more details, please refer to \n1) https://wiki.opnfv.org/display/bottlenecks/Stress+Testing+over+OPNFV+Platform and \n2) https://wiki.opnfv.org/pages/viewpage.action?pageId\u003d12386549",
+      "parentUuid": "1aa4ed85_50dd816f",
+      "range": {
+        "startLine": 229,
+        "startChar": 0,
+        "endLine": 231,
+        "endChar": 33
+      },
+      "revId": "efa057d41e642cd4cca64ac8df46dcf4a8bce2a1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
