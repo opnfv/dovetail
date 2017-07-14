@@ -120,17 +120,19 @@ def source_env(env_file):
 
 def check_https_enabled(logger=None):
     logger.debug("Checking if https enabled or not...")
-    cmd = "openstack catalog show identity |awk '/public/ {print $4}'| \
-        grep 'https'"
+    cmd = ("openstack catalog show identity |awk '/public/ {print $4}'| "
+           "grep 'https' || true")
     ret, msg = exec_cmd(cmd, logger)
-    return ret
+    if msg:
+        return True
+    return False
 
 
 def get_ext_net_name(env_file, logger=None):
     https_enabled = check_https_enabled(logger)
     insecure_option = ''
     insecure = os.getenv('OS_INSECURE',)
-    if https_enabled == 0:
+    if https_enabled:
         logger.info("https enabled...")
         if insecure.lower() == "true":
             insecure_option = ' --insecure '
