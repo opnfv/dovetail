@@ -210,6 +210,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_7f772103",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-17T08:07:51Z",
+      "side": 1,
+      "message": "Just refine the sentence as \"Resiliency testing with load involves stressing the SUT and verifying its ability to absorb errors while continuously providing an acceptable level of service\"",
+      "parentUuid": "1aa4ed85_10e70942",
+      "range": {
+        "startLine": 229,
+        "startChar": 0,
+        "endLine": 231,
+        "endChar": 33
+      },
+      "revId": "efa057d41e642cd4cca64ac8df46dcf4a8bce2a1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_358d4f7c",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 9
