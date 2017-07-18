@@ -1,0 +1,464 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa4ed85_c86a1d1a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "Might not be needed here, to be checked.",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 13
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_68776903",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 120,
+        "startChar": 71,
+        "endLine": 120,
+        "endChar": 73
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_48662d53",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "It is also conceivable to include tests for specific features or use cases since they are not generally required for NFV, but an industry consensus about APIs and behaviors is still deemed beneficial. This would have nothing to do with maturity.",
+      "range": {
+        "startLine": 119,
+        "startChar": 45,
+        "endLine": 120,
+        "endChar": 13
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_e85a7982",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "Suggest removal, does not help the main purpose of the section and blurs the message.",
+      "range": {
+        "startLine": 126,
+        "startChar": 0,
+        "endLine": 129,
+        "endChar": 34
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_08603531",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "change to: \"in the following categories\"",
+      "range": {
+        "startLine": 135,
+        "startChar": 49,
+        "endLine": 136,
+        "endChar": 36
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_a8548154",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "I\u0027d rather say: OPNFV certified",
+      "range": {
+        "startLine": 142,
+        "startChar": 57,
+        "endLine": 142,
+        "endChar": 70
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_c851bd63",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "??? Do we mean to say it\u0027s a single VM, as opposed to a set of VMs most real VNFs consist of?",
+      "range": {
+        "startLine": 145,
+        "startChar": 35,
+        "endLine": 145,
+        "endChar": 46
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_684e89c3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "Suggest to change to: \"Running such basic VNF leads to...\"",
+      "range": {
+        "startLine": 147,
+        "startChar": 9,
+        "endLine": 147,
+        "endChar": 26
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_884bc5af",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "Can we provide a one-sentence definition for each of these items in order to disambiguate?",
+      "range": {
+        "startLine": 148,
+        "startChar": 4,
+        "endLine": 148,
+        "endChar": 24
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_3327a2b8",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "please elaborate",
+      "range": {
+        "startLine": 155,
+        "startChar": 4,
+        "endLine": 155,
+        "endChar": 30
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_882c25ad",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "please elaborate/qualify",
+      "range": {
+        "startLine": 169,
+        "startChar": 59,
+        "endLine": 170,
+        "endChar": 16
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_f3202a9d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "We should argue why we include certain use cases as optional in this section. \n\nBGPVPN for example is relevant due to the wide adoption of MPLS/BGP based VPNs in wide area networks, which makes it necessary for data centers hosting VNFs to be able to seamlessly hook into such networks.",
+      "range": {
+        "startLine": 183,
+        "startChar": 44,
+        "endLine": 185,
+        "endChar": 10
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_130f0632",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "may impose",
+      "range": {
+        "startLine": 188,
+        "startChar": 0,
+        "endLine": 188,
+        "endChar": 6
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_b313925b",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "not needed, could be removed",
+      "range": {
+        "startLine": 196,
+        "startChar": 0,
+        "endLine": 199,
+        "endChar": 21
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_d3108e50",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "We should analyze if the current extent of HA testing is sufficient for a first release. FFS...",
+      "range": {
+        "startLine": 213,
+        "startChar": 0,
+        "endLine": 214,
+        "endChar": 9
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_731d1a66",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "+1 for this, exactly what we should be doing",
+      "range": {
+        "startLine": 226,
+        "startChar": 0,
+        "endLine": 227,
+        "endChar": 75
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_931a166d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "better say \"basic cloud capabilities\" to be in line with earlier terminology",
+      "range": {
+        "startLine": 234,
+        "startChar": 12,
+        "endLine": 234,
+        "endChar": 31
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_b341523b",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "this is rather a future item than part of the current scope, same holds for 7. below. Should we break this out and have a \"roadmap\" section to make it easier to understand what is in scope for Danube and what is not?",
+      "range": {
+        "startLine": 247,
+        "startChar": 0,
+        "endLine": 247,
+        "endChar": 19
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_73be7a01",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "HA and Bottlenecks missing from the list below. In or out?",
+      "range": {
+        "startLine": 293,
+        "startChar": 38,
+        "endLine": 293,
+        "endChar": 70
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_33ea4210",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 299,
+        "startChar": 22,
+        "endLine": 299,
+        "endChar": 23
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
