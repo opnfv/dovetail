@@ -553,6 +553,24 @@
       "revId": "efa057d41e642cd4cca64ac8df46dcf4a8bce2a1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_cd3eafb8",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-18T14:16:40Z",
+      "side": 1,
+      "message": "Can I suggest to have these items in a section of its own_ This enumeration is supposed to list the high level scope for the initial CVP release, it feels odd to have items 1.-6. do that and then have 7. talk about things that are not yet included.",
+      "parentUuid": "1aa4ed85_f5eed721",
+      "revId": "efa057d41e642cd4cca64ac8df46dcf4a8bce2a1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
