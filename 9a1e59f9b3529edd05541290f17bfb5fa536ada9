@@ -2,6 +2,190 @@
   "comments": [
     {
       "key": {
+        "uuid": "1aa4ed85_c5920357",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-19T16:14:07Z",
+      "side": 1,
+      "message": "Title does not match the test details",
+      "range": {
+        "startLine": 72,
+        "startChar": 14,
+        "endLine": 72,
+        "endChar": 48
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_05b1fbf7",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-19T16:14:07Z",
+      "side": 1,
+      "message": "Ability of the SUT to setup VMs should not be the test focus. Rather IIUC the main goal is to verify that it\u0027s possible to predict headroom under load, so that the SUT can decide accurately whether it is possible to add additional load without impacting current tenants.",
+      "range": {
+        "startLine": 83,
+        "startChar": 28,
+        "endLine": 83,
+        "endChar": 88
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_458e1330",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-19T16:14:07Z",
+      "side": 1,
+      "message": "Rather than amount of VMs this should be more generic ala \"when load reaches a certain percentage of the max\"",
+      "range": {
+        "startLine": 84,
+        "startChar": 44,
+        "endLine": 84,
+        "endChar": 87
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_659f8f60",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-19T16:14:07Z",
+      "side": 1,
+      "message": "It should not be about providing capacity (that\u0027s simply a NFVI scaling concern based upon usage modeling), but about ensuring that the system can reliably manage load vs available capacity.",
+      "range": {
+        "startLine": 84,
+        "startChar": 4,
+        "endLine": 84,
+        "endChar": 33
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_05881b1e",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-19T16:14:07Z",
+      "side": 1,
+      "message": "We should have a much more concrete/broad set of validation criteria that are matched to the type of stressor. In this case (# of VMs) there are CPU, memory, disk, as well as network resource constraints that should be assessed.",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 86
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_a57ca721",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-19T16:14:07Z",
+      "side": 1,
+      "message": "This should be a set of lifecycle events tailored to the particular types of stressors.",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 87,
+        "endChar": 11
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_c579a330",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-19T16:14:07Z",
+      "side": 1,
+      "message": "replace with \"reliable capacity\"",
+      "range": {
+        "startLine": 101,
+        "startChar": 0,
+        "endLine": 101,
+        "endChar": 46
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_6576af40",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-19T16:14:07Z",
+      "side": 1,
+      "message": "\"at least one\" being considered valid will be a false positive. We should set a realistic expectation, or use some other measure that allows us to.",
+      "range": {
+        "startLine": 105,
+        "startChar": 43,
+        "endLine": 106,
+        "endChar": 48
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_c5e4430f",
         "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
         "patchSetId": 2
