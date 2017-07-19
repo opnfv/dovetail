@@ -71,6 +71,54 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_b3b0728c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_48662d53",
+      "range": {
+        "startLine": 119,
+        "startChar": 45,
+        "endLine": 120,
+        "endChar": 13
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_d3adee32",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_68776903",
+      "range": {
+        "startLine": 120,
+        "startChar": 71,
+        "endLine": 120,
+        "endChar": 73
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_e85a7982",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 10
@@ -82,6 +130,30 @@
       "writtenOn": "2017-07-18T14:16:40Z",
       "side": 1,
       "message": "Suggest removal, does not help the main purpose of the section and blurs the message.",
+      "range": {
+        "startLine": 126,
+        "startChar": 0,
+        "endLine": 129,
+        "endChar": 34
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_73aafa1a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "Yes it is a side point. Will remove.",
+      "parentUuid": "1aa4ed85_e85a7982",
       "range": {
         "startLine": 126,
         "startChar": 0,
@@ -117,6 +189,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_93a7764f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_08603531",
+      "range": {
+        "startLine": 135,
+        "startChar": 49,
+        "endLine": 136,
+        "endChar": 36
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_a8548154",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 10
@@ -128,6 +224,30 @@
       "writtenOn": "2017-07-18T14:16:40Z",
       "side": 1,
       "message": "I\u0027d rather say: OPNFV certified",
+      "range": {
+        "startLine": 142,
+        "startChar": 57,
+        "endLine": 142,
+        "endChar": 70
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_33648221",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_a8548154",
       "range": {
         "startLine": 142,
         "startChar": 57,
@@ -163,6 +283,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_f36d8a05",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "i know it\u0027s vague: how about \"a single VM or a set of VMs connected only by basic network services.\"",
+      "parentUuid": "1aa4ed85_c851bd63",
+      "range": {
+        "startLine": 145,
+        "startChar": 35,
+        "endLine": 145,
+        "endChar": 46
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_684e89c3",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 10
@@ -174,6 +318,30 @@
       "writtenOn": "2017-07-18T14:16:40Z",
       "side": 1,
       "message": "Suggest to change to: \"Running such basic VNF leads to...\"",
+      "range": {
+        "startLine": 147,
+        "startChar": 9,
+        "endLine": 147,
+        "endChar": 26
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_b35e3244",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_684e89c3",
       "range": {
         "startLine": 147,
         "startChar": 9,
@@ -209,6 +377,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_7358ba56",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "added the refstack\u0027s named APIs to be precise on each. other ones seem to have a sentence around it already. \"dynamic network management\" means network life cycle events, such as on/off admin status.",
+      "parentUuid": "1aa4ed85_884bc5af",
+      "range": {
+        "startLine": 148,
+        "startChar": 4,
+        "endLine": 148,
+        "endChar": 24
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_3327a2b8",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 10
@@ -220,6 +412,30 @@
       "writtenOn": "2017-07-18T14:16:40Z",
       "side": 1,
       "message": "please elaborate",
+      "range": {
+        "startLine": 155,
+        "startChar": 4,
+        "endLine": 155,
+        "endChar": 30
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_d35bae52",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "yes it needs some explanation, i meant to say operations at run time or during the life of a network, e.g. disable/enable, mtu, read stats etc.",
+      "parentUuid": "1aa4ed85_3327a2b8",
       "range": {
         "startLine": 155,
         "startChar": 4,
@@ -255,6 +471,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_9355361f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_882c25ad",
+      "range": {
+        "startLine": 169,
+        "startChar": 59,
+        "endLine": 170,
+        "endChar": 16
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_f3202a9d",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 10
@@ -266,6 +506,30 @@
       "writtenOn": "2017-07-18T14:16:40Z",
       "side": 1,
       "message": "We should argue why we include certain use cases as optional in this section. \n\nBGPVPN for example is relevant due to the wide adoption of MPLS/BGP based VPNs in wide area networks, which makes it necessary for data centers hosting VNFs to be able to seamlessly hook into such networks.",
+      "range": {
+        "startLine": 183,
+        "startChar": 44,
+        "endLine": 185,
+        "endChar": 10
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_33324211",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_f3202a9d",
       "range": {
         "startLine": 183,
         "startChar": 44,
@@ -301,6 +565,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_5337beff",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_130f0632",
+      "range": {
+        "startLine": 188,
+        "startChar": 0,
+        "endLine": 188,
+        "endChar": 6
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_b313925b",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 10
@@ -324,6 +612,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_f33b4ae9",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_b313925b",
+      "range": {
+        "startLine": 196,
+        "startChar": 0,
+        "endLine": 199,
+        "endChar": 21
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_d3108e50",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 10
@@ -335,6 +647,30 @@
       "writtenOn": "2017-07-18T14:16:40Z",
       "side": 1,
       "message": "We should analyze if the current extent of HA testing is sufficient for a first release. FFS...",
+      "range": {
+        "startLine": 213,
+        "startChar": 0,
+        "endLine": 214,
+        "endChar": 9
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_1341465a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_d3108e50",
       "range": {
         "startLine": 213,
         "startChar": 0,
@@ -393,6 +729,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_732f5aa2",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_931a166d",
+      "range": {
+        "startLine": 234,
+        "startChar": 12,
+        "endLine": 234,
+        "endChar": 31
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_b341523b",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 10
@@ -404,6 +764,30 @@
       "writtenOn": "2017-07-18T14:16:40Z",
       "side": 1,
       "message": "this is rather a future item than part of the current scope, same holds for 7. below. Should we break this out and have a \"roadmap\" section to make it easier to understand what is in scope for Danube and what is not?",
+      "range": {
+        "startLine": 247,
+        "startChar": 0,
+        "endLine": 247,
+        "endChar": 19
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_73067a22",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "I can see both ways,. The analysis section tries to make some justification of why we are testing some but not others. The summary section below explicitly makes it clear what is in scope. So let me take the \u0027lazy\u0027 approach and leave it as is for now.",
+      "parentUuid": "1aa4ed85_b341523b",
       "range": {
         "startLine": 247,
         "startChar": 0,
@@ -439,6 +823,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_3319e288",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "it\u0027s there.  did you miss?",
+      "parentUuid": "1aa4ed85_73be7a01",
+      "range": {
+        "startLine": 293,
+        "startChar": 38,
+        "endLine": 293,
+        "endChar": 70
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_33ea4210",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 10
@@ -450,6 +858,30 @@
       "writtenOn": "2017-07-18T14:16:40Z",
       "side": 1,
       "message": "remove",
+      "range": {
+        "startLine": 299,
+        "startChar": 22,
+        "endLine": 299,
+        "endChar": 23
+      },
+      "revId": "415442e8088640909314240b32c215b2277a97a9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_531ede71",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-19T01:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_33ea4210",
       "range": {
         "startLine": 299,
         "startChar": 22,
