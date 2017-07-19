@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa4ed85_c5e4430f",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-07-19T15:31:16Z",
+      "side": 1,
+      "message": "This is 10% success rate?  Are we ok with that level of performance for the CVP?  I\u0027m also questioning how many ping packets we send and how many packets must be received.  Given ping is basically small packets with no real bandwidth, why are we allowing any drop / loss?",
+      "range": {
+        "startLine": 135,
+        "startChar": 2,
+        "endLine": 135,
+        "endChar": 51
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
