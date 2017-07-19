@@ -25,3 +25,6 @@ yardstick:
     file_path: 'yardstick.log'
     key_path: '/root/.ssh/id_rsa'
   openrc: '/etc/yardstick/openstack.creds'
+  yard_conf:
+    src_file: '/home/opnfv/repos/yardstick/etc/yardstick/yardstick.conf.sample'
+    dest_file: '/etc/yardstick/yardstick.conf'
