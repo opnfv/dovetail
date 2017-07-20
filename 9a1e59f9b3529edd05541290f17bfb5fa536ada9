@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1aa4ed85_5b1d9065",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-20T08:46:29Z",
+      "side": 1,
+      "message": "Should it not be an objective to avoid this through appropriately defined test pre- and post-conditions?",
+      "range": {
+        "startLine": 63,
+        "startChar": 32,
+        "endLine": 65,
+        "endChar": 62
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_c5920357",
         "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
         "patchSetId": 2
@@ -179,6 +202,29 @@
         "startChar": 43,
         "endLine": 106,
         "endChar": 48
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_db20a09d",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-20T08:46:29Z",
+      "side": 1,
+      "message": "Would this rather be a test post-condition? Would a failure in cleaning up lead to the test being considered failed?",
+      "range": {
+        "startLine": 126,
+        "startChar": 1,
+        "endLine": 126,
+        "endChar": 68
       },
       "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
