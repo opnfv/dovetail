@@ -30,9 +30,8 @@ testarea_supported:
   - example
   - ha
   - ipv6
-  - nfvi
   - sdnvpn
-  - vimops
+  - vping
 
 functest_testsuite:
   - refstack_defcore

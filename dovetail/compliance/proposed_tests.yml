@@ -5,6 +5,9 @@ proposed_tests:
     # defcore,defcore.tc001 used for auto-method, defcore.tc002 used for manually method
     - dovetail.defcore.tc001
     # - dovetail.defcore.tc002
+    # vping
+    - dovetail.vping.tc001
+    - dovetail.vping.tc002
     # ipv6
     - dovetail.ipv6.tc001
     - dovetail.ipv6.tc002
