@@ -220,7 +220,7 @@ def env_init(logger):
 
 def main(*args, **kwargs):
     """Dovetail compliance test entry!"""
-    build_tag = "daily-master-%s" % str(uuid.uuid4())
+    build_tag = "daily-master-%s" % str(uuid.uuid1())
     dt_cfg.dovetail_config['build_tag'] = build_tag
     if not get_result_path():
         return
