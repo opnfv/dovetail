@@ -2,7 +2,7 @@
 docker_images:
   dovetail:
     domain: opnfv
-    tag: cvp.0.2.0
+    tag: cvp.0.3.0
     store_name: image_dovetail.docker
   functest:
     domain: opnfv
@@ -10,11 +10,11 @@ docker_images:
     store_name: image_functest.docker
   yardstick:
     domain: opnfv
-    tag: danube.3.0
+    tag: danube.3.1
     store_name: image_yardstick.docker
   testapi:
     domain: opnfv
-    tag: cvp.0.2.0
+    tag: cvp.0.3.0
     store_name: image_testapi.docker
   mongo:
     tag: 3.2.1

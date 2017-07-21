@@ -10,4 +10,3 @@ Compliance Verification Program Testing User Guide
    :maxdepth: 2
 
    testing_guide.rst
-   cli_reference.rst
