@@ -20,7 +20,13 @@ RUN \
 && \
     apt-get update
 
-RUN wget -qO- https://get.docker.com/ | sed 's/ docker-engine/ docker-engine=1.12.3-0~trusty/' | sh
+RUN wget -qO- https://get.docker.com/ \
+| \
+    sed 's/-q docker-ce/-q docker-ce=17.03.0~ce-0~ubuntu-trusty/' \
+| \
+    sed 's/edge/stable/' \
+| \
+    sh
 
 ENV HOME /home/opnfv
 ENV REPOS_DIR ${HOME}/dovetail
