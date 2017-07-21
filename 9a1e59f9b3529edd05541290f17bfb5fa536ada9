@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_fb81dc4a",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-21T08:48:39Z",
+      "side": 1,
+      "message": "Hi Tim, Thanks for the valuable comment. It is necessary to add post-conditions as you point out. For the test case, the post-condition would be 1?delete the failure instances; 2) restart OpenStack and its related services. I will do that to revise the doc.",
+      "parentUuid": "1aa4ed85_5b1d9065",
+      "range": {
+        "startLine": 63,
+        "startChar": 32,
+        "endLine": 65,
+        "endChar": 62
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_c5920357",
         "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_184b9e88",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-21T08:48:39Z",
+      "side": 1,
+      "message": "Thanks for pointing it out! I guess \"Reliable capacity based on life-cycle ping test\" is more suitable.",
+      "parentUuid": "1aa4ed85_c5920357",
+      "range": {
+        "startLine": 72,
+        "startChar": 14,
+        "endLine": 72,
+        "endChar": 48
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_05b1fbf7",
         "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
         "patchSetId": 2
@@ -59,6 +107,30 @@
       "writtenOn": "2017-07-19T16:14:07Z",
       "side": 1,
       "message": "Ability of the SUT to setup VMs should not be the test focus. Rather IIUC the main goal is to verify that it\u0027s possible to predict headroom under load, so that the SUT can decide accurately whether it is possible to add additional load without impacting current tenants.",
+      "range": {
+        "startLine": 83,
+        "startChar": 28,
+        "endLine": 83,
+        "endChar": 88
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_f8400258",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-21T08:48:39Z",
+      "side": 1,
+      "message": "Hi Bryan,stress tests only test the SUT under some heavy loads to verify that if the SUT could pass some threshold.To find the ultimate limit, we need to do tuning test whose final output could be identified as the maximum ability. The loads chosen in stress tests are only a very small part of the load range in tuning test.",
+      "parentUuid": "1aa4ed85_05b1fbf7",
       "range": {
         "startLine": 83,
         "startChar": 28,
@@ -117,6 +189,54 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_5806f621",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-21T08:48:39Z",
+      "side": 1,
+      "message": "Since stress test do not find the ultimate limit, we are not able to set the percentage here.",
+      "parentUuid": "1aa4ed85_458e1330",
+      "range": {
+        "startLine": 84,
+        "startChar": 44,
+        "endLine": 84,
+        "endChar": 87
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_1b2718b8",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-21T08:48:39Z",
+      "side": 1,
+      "message": "Hi Bryan, I guess the question here is also related to predicting the headroom under load. If so, please refer to my answers above.",
+      "parentUuid": "1aa4ed85_659f8f60",
+      "range": {
+        "startLine": 84,
+        "startChar": 4,
+        "endLine": 84,
+        "endChar": 33
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_05881b1e",
         "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
         "patchSetId": 2
@@ -128,6 +248,30 @@
       "writtenOn": "2017-07-19T16:14:07Z",
       "side": 1,
       "message": "We should have a much more concrete/broad set of validation criteria that are matched to the type of stressor. In this case (# of VMs) there are CPU, memory, disk, as well as network resource constraints that should be assessed.",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 86
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_bb37e4e2",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-21T08:48:39Z",
+      "side": 1,
+      "message": "Hi Bryan, ping test is used to verify the connectivity between VMs. It is a  tiny test that requires very little resources. If you mean we do different tests regarding CPU, memory, etc., We have other tests planned to do those things.",
+      "parentUuid": "1aa4ed85_05881b1e",
       "range": {
         "startLine": 85,
         "startChar": 0,
@@ -163,6 +307,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_b8228ab7",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-21T08:48:39Z",
+      "side": 1,
+      "message": "Yes, lifecycle events here particularly refers to the VM pairs lifecycle with ping tests.",
+      "parentUuid": "1aa4ed85_a57ca721",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 87,
+        "endChar": 11
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_c579a330",
         "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
         "patchSetId": 2
@@ -174,6 +342,30 @@
       "writtenOn": "2017-07-19T16:14:07Z",
       "side": 1,
       "message": "replace with \"reliable capacity\"",
+      "range": {
+        "startLine": 101,
+        "startChar": 0,
+        "endLine": 101,
+        "endChar": 46
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_5b34b0dd",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-21T08:48:39Z",
+      "side": 1,
+      "message": "OK, thanks for pointing it out!",
+      "parentUuid": "1aa4ed85_c579a330",
       "range": {
         "startLine": 101,
         "startChar": 0,
@@ -209,6 +401,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_3b53f418",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-21T08:48:39Z",
+      "side": 1,
+      "message": "Thanks, since ping test is a very simple test that do not correlated with the VM creation procedure. It is reasonable to set no failure as the positive condition for the connectivity test.",
+      "parentUuid": "1aa4ed85_6576af40",
+      "range": {
+        "startLine": 105,
+        "startChar": 43,
+        "endLine": 106,
+        "endChar": 48
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_fbaa3cd3",
         "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
         "patchSetId": 2
@@ -220,6 +436,30 @@
       "writtenOn": "2017-07-20T09:12:01Z",
       "side": 1,
       "message": "the pass/fail criterion below shows that the test will be considered as PASS iff * min(S1,S2)\u003e\u003dN3, which means any failure in subtest1 or subtest2 will fail the whole tests. seems no need to continue the test as soon as any failure occurs.",
+      "range": {
+        "startLine": 109,
+        "startChar": 72,
+        "endLine": 110,
+        "endChar": 90
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_3118f5d2",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-21T08:48:39Z",
+      "side": 1,
+      "message": "Hi zenghui, as the question about the typical set, please refer to my answer to your last question.",
+      "parentUuid": "1aa4ed85_fbaa3cd3",
       "range": {
         "startLine": 109,
         "startChar": 72,
@@ -278,6 +518,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_db7c2075",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-21T08:48:39Z",
+      "side": 1,
+      "message": "Hi Tim, thanks for the comment.The reason that this step is optional is if we want execute multiple stress test cases. We do not need to clean up the dockers. It make sense to put the step in post-condition while this step is also optional.\n\nFailure in cleaning up will not lead to SUT failing the test, since the SUT is only considered FAIL when min(S1, S2)\u003cN3.",
+      "parentUuid": "1aa4ed85_db20a09d",
+      "range": {
+        "startLine": 126,
+        "startChar": 1,
+        "endLine": 126,
+        "endChar": 68
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_c5e4430f",
         "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
         "patchSetId": 2
@@ -301,6 +565,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_1b75d897",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-21T08:48:39Z",
+      "side": 1,
+      "message": "Hi Lincoln, thanks for the valuable comment. I agree that we should not accept any failure in ping tests, since ping test is very simple and tiny. \n\nIn addition, I do not really understand your questions about the number of ping packets sent and received. Do you mean the count of ECHO_REQUEST packages in the ping setting? Thanks.",
+      "parentUuid": "1aa4ed85_c5e4430f",
+      "range": {
+        "startLine": 135,
+        "startChar": 2,
+        "endLine": 135,
+        "endChar": 51
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_9b41c83b",
         "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
         "patchSetId": 2
@@ -312,6 +600,30 @@
       "writtenOn": "2017-07-20T09:12:01Z",
       "side": 1,
       "message": "so based on the typical settings, we are expecting all the VM pairs created successfully and all the ping tests between each of VM pairs get at least one pass out of ten tries, right ? is there any situation that N3 will be decreased ? not clear to me whether our expectation is to have all test pass because N3 can be changed.",
+      "range": {
+        "startLine": 139,
+        "startChar": 2,
+        "endLine": 139,
+        "endChar": 16
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_16efef88",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-21T08:48:39Z",
+      "side": 1,
+      "message": "Hi Zenghui, thanks for the comment. We have done tests over both open source and commercial deployments by utilizing this test case. The typical set given here is a reference value and not the standard value explicitly. We could do update in the later version. If you and others have suggestions we could also discuss it in the patch or meeting channels.",
+      "parentUuid": "1aa4ed85_9b41c83b",
       "range": {
         "startLine": 139,
         "startChar": 2,
