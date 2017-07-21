@@ -48,6 +48,52 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_2c2c1c99",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-21T14:19:34Z",
+      "side": 1,
+      "message": "should be stated more specifically - unclear what this",
+      "range": {
+        "startLine": 152,
+        "startChar": 4,
+        "endLine": 152,
+        "endChar": 38
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_8c3af0cb",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-21T14:19:34Z",
+      "side": 1,
+      "message": "\"correct behavior\": I think you mean recovery / resiliency, but clarify",
+      "range": {
+        "startLine": 153,
+        "startChar": 4,
+        "endLine": 153,
+        "endChar": 67
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_5176d13f",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 11
@@ -64,6 +110,29 @@
         "startChar": 0,
         "endLine": 167,
         "endChar": 61
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_0c27e0b7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-21T14:19:34Z",
+      "side": 1,
+      "message": "functional",
+      "range": {
+        "startLine": 177,
+        "startChar": 16,
+        "endLine": 177,
+        "endChar": 25
       },
       "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -179,6 +248,92 @@
         "startChar": 0,
         "endLine": 236,
         "endChar": 62
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_cca54805",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-21T14:19:34Z",
+      "side": 1,
+      "message": "Don\u0027t need this sentence",
+      "range": {
+        "startLine": 247,
+        "startChar": 0,
+        "endLine": 247,
+        "endChar": 72
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_ccca28a1",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-21T14:19:34Z",
+      "side": 1,
+      "message": "Add section 6. Service Assurance\nService assurance (SA) is a broad area of concern for reliability of the NFVI/VIM and VNFs, and depends upon multiple subsystems of an NFV platform for essential information and control mechanisms. These subsystems include telemetry, fault management (e.g. alarms), audits, and control mechanisms such as localized security/configuration policy. The current CVP scope in this area focuses on these enabling capabilities vs complete SUT-integrated systems (e.g. a complete closed-loop policy system addressing all SA purposes) for the overall purposes. For the current CVP release, the following service assurance support features will be included:\n* telemetry\n* policy (provisioning, information, decision, execution)\n* local automated SA subsystems for specific purposes:\n  * fault management\n  * resiliency\n  * configuration policy",
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_6cb6943f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-21T14:19:34Z",
+      "side": 1,
+      "message": "Change to 7.",
+      "range": {
+        "startLine": 249,
+        "startChar": 7,
+        "endLine": 249,
+        "endChar": 11
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_4cb9582d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-07-21T14:19:34Z",
+      "side": 1,
+      "message": "Change to 8.",
+      "range": {
+        "startLine": 279,
+        "startChar": 0,
+        "endLine": 279,
+        "endChar": 32
       },
       "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
