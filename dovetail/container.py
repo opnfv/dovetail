@@ -76,8 +76,7 @@ class Container(object):
         if 'sdnvpn' in testcase_name:
             ins_type = "-e INSTALLER_TYPE=netvirt"
             scenario = " -e DEPLOY_SCENARIO=bgpvpn"
-        node = " -e NODE_NAME=master"
-        envs = "%s %s %s" % (ins_type, scenario, node)
+        envs = "%s %s" % (ins_type, scenario)
 
         dovetail_config = dt_cfg.dovetail_config
         if dovetail_config['report_dest'].startswith("http"):
@@ -102,11 +101,6 @@ class Container(object):
         else:
             cls.logger.error("Can't find any external network.")
             return None
-
-        if dovetail_config['report_dest'].startswith("http"):
-            envs = envs + " -e DISPATCHER=http"
-            envs = envs + " -e TARGET=%s" % dovetail_config['report_dest']
-            envs = envs + " -e NODE_NAME=master"
 
         log_vol = '-v %s:%s ' % (dovetail_config['result_dir'],
                                  dovetail_config["yardstick"]['result']['log'])
@@ -141,7 +135,7 @@ class Container(object):
 
         # CI_DEBUG is used for showing the debug logs of the upstream projects
         # BUILD_TAG is the unique id for this test
-        envs = ' -e CI_DEBUG=true'
+        envs = ' -e CI_DEBUG=true -e NODE_NAME=master'
         envs = envs + ' -e BUILD_TAG=%s-%s' % (dovetail_config['build_tag'],
                                                testcase_name)
 
@@ -212,6 +206,10 @@ class Container(object):
             src_path = os.path.join(prefix_path, 'pre_config', file_name)
             dest_path = '/home/opnfv/functest/images'
             Container.pre_copy(container_id, src_path, dest_path)
+
+        if type.lower() == 'yardstick':
+            cls.set_yardstick_conf_file(container_id)
+
         return container_id
 
     @classmethod
@@ -306,3 +304,18 @@ class Container(object):
             return (1, 'src_path or dest_path is empty')
         cmd = 'cp %s %s' % (src_path, dest_path)
         return cls.exec_cmd(container_id, cmd, exit_on_error)
+
+    @classmethod
+    def set_yardstick_conf_file(cls, container_id):
+        valid_type = 'yardstick'
+        src = dt_cfg.dovetail_config[valid_type]['yard_conf']['src_file']
+        dest = dt_cfg.dovetail_config[valid_type]['yard_conf']['dest_file']
+        cls.pre_copy(container_id, src, dest)
+        url = dt_cfg.dovetail_config['report_dest']
+        if url.startswith("http"):
+            cmd = ("sed -i '16s#http://127.0.0.1:8000/results#{}#g' {}"
+                   .format(url, dest))
+            cls.exec_cmd(container_id, cmd)
+        if url.lower() == 'file':
+            cmd = ("sed -i '12s/http/file/g' {}".format(dest))
+            cls.exec_cmd(container_id, cmd)

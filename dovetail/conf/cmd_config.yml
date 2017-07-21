@@ -50,7 +50,7 @@ cli:
         flags:
           - '--report'
           - '-r'
-        help: 'push results to DB (e.g. --report http://192.168.135.2:8000/api/v1)'
+        help: 'push results to DB (e.g. --report http://192.168.135.2:8000/api/v1/results)'
       offline:
         flags:
           - '--offline'
