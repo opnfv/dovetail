@@ -171,7 +171,7 @@ class Container(object):
         cacert_volume = ""
         https_enabled = dt_utils.check_https_enabled(cls.logger)
         cacert = os.getenv('OS_CACERT',)
-        if https_enabled == 0:
+        if https_enabled:
             cls.logger.info("https enabled...")
             if cacert is not None:
                 if not os.path.isfile(cacert):
