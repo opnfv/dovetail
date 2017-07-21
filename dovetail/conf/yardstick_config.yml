@@ -1,7 +1,7 @@
 ---
 yardstick:
   image_name: opnfv/yardstick
-  docker_tag: danube.3.0
+  docker_tag: danube.3.1
   opts: '-id --privileged=true'
   config:
     dir: '/home/opnfv/userconfig'
