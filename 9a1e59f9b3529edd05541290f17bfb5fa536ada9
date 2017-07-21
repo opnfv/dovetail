@@ -589,6 +589,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_4c1dd865",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-07-21T13:28:16Z",
+      "side": 1,
+      "message": "It wasn\u0027t clear to me what is meant by lines 121 and 122 above, where it states \"Do P1 pings\" and at least 1 is successful.  Can we clarify what \"Ping Test\" means, i.e. it\u0027s send P1 ping packets, or a test send X ping packets and Y packets must succeed for the test to succeed.",
+      "parentUuid": "1aa4ed85_1b75d897",
+      "range": {
+        "startLine": 135,
+        "startChar": 2,
+        "endLine": 135,
+        "endChar": 51
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_9b41c83b",
         "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
         "patchSetId": 2
