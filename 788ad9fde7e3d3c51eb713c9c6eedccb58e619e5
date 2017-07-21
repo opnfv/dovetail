@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa4ed85_91e76912",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-21T13:18:13Z",
+      "side": 1,
+      "message": "Suggest to rephrase: \"...or features are only needed for specific NFV use cases but still require an industry consensus about...\"",
+      "range": {
+        "startLine": 120,
+        "startChar": 63,
+        "endLine": 121,
+        "endChar": 73
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_51f1f1cb",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-21T13:18:13Z",
+      "side": 1,
+      "message": "I assume this maps to Functest vPing?",
+      "range": {
+        "startLine": 150,
+        "startChar": 4,
+        "endLine": 150,
+        "endChar": 60
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_5176d13f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-21T13:18:13Z",
+      "side": 1,
+      "message": "We do need to consider if the areas Refstack addresses are sufficiently through RefStack. After a quick check (on the images/Glance part) it seems Tempest has additional tests which we should at least investigate if they provide value.",
+      "range": {
+        "startLine": 165,
+        "startChar": 0,
+        "endLine": 167,
+        "endChar": 61
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_711d0dbd",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-21T13:18:13Z",
+      "side": 1,
+      "message": "Is there a way to add (simulated) hardware failures, e.g. taking down a NIC, power-cycling a server, etc.?",
+      "range": {
+        "startLine": 205,
+        "startChar": 16,
+        "endLine": 209,
+        "endChar": 7
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_f1881de9",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-21T13:18:13Z",
+      "side": 1,
+      "message": "This creates a scope overlap with section 4. DO the current HA tests really address overload situations?",
+      "range": {
+        "startLine": 212,
+        "startChar": 64,
+        "endLine": 213,
+        "endChar": 19
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_916d2935",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-21T13:18:13Z",
+      "side": 1,
+      "message": "Mandatory or optional?",
+      "range": {
+        "startLine": 228,
+        "startChar": 0,
+        "endLine": 229,
+        "endChar": 75
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_f1d6ddc4",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-21T13:18:13Z",
+      "side": 1,
+      "message": "Nit: let\u0027s call it just \"Security\"",
+      "range": {
+        "startLine": 231,
+        "startChar": 3,
+        "endLine": 231,
+        "endChar": 13
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_91dbe9ec",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-07-21T13:18:13Z",
+      "side": 1,
+      "message": "this section is a bit weak in analyzing what important security-related OPNFV features are. We need to do some more work here...",
+      "range": {
+        "startLine": 233,
+        "startChar": 0,
+        "endLine": 236,
+        "endChar": 62
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
