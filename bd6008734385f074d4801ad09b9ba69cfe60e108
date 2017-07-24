@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_2b696125",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-07-24T07:41:06Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "1aa4ed85_ec25a4ab",
+      "range": {
+        "startLine": 86,
+        "startChar": 9,
+        "endLine": 86,
+        "endChar": 11
+      },
+      "revId": "bd6008734385f074d4801ad09b9ba69cfe60e108",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_cc20e89d",
         "filename": "docs/testing/user/testspecification/vping/index.rst",
         "patchSetId": 7
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_cb776d01",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-07-24T07:41:06Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "1aa4ed85_cc20e89d",
+      "range": {
+        "startLine": 181,
+        "startChar": 0,
+        "endLine": 181,
+        "endChar": 2
+      },
+      "revId": "bd6008734385f074d4801ad09b9ba69cfe60e108",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_ec7364af",
         "filename": "docs/testing/user/testspecification/vping/index.rst",
         "patchSetId": 7
@@ -59,6 +107,30 @@
       "writtenOn": "2017-07-21T13:37:38Z",
       "side": 1,
       "message": "Missing the test assertion above for this criteria.",
+      "range": {
+        "startLine": 255,
+        "startChar": 2,
+        "endLine": 255,
+        "endChar": 16
+      },
+      "revId": "bd6008734385f074d4801ad09b9ba69cfe60e108",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_8b61753b",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 2069
+      },
+      "writtenOn": "2017-07-24T07:41:06Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "1aa4ed85_ec7364af",
       "range": {
         "startLine": 255,
         "startChar": 2,
