@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_6ba999de",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_91e76912",
+      "range": {
+        "startLine": 120,
+        "startChar": 63,
+        "endLine": 121,
+        "endChar": 73
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_51f1f1cb",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 11
@@ -36,6 +60,30 @@
       "writtenOn": "2017-07-21T13:18:13Z",
       "side": 1,
       "message": "I assume this maps to Functest vPing?",
+      "range": {
+        "startLine": 150,
+        "startChar": 4,
+        "endLine": 150,
+        "endChar": 60
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_0bb02542",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "yes, vPing is one, but it\u0027s not the only one. some of the tempest cases also test data path to validate operations (e.g. security rules).",
+      "parentUuid": "1aa4ed85_51f1f1cb",
       "range": {
         "startLine": 150,
         "startChar": 4,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_cbb9ad2f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "i can add a couple of examples (e.g. enable/disable, read stats/counters), events when the network is in operation.",
+      "parentUuid": "1aa4ed85_2c2c1c99",
+      "range": {
+        "startLine": 152,
+        "startChar": 4,
+        "endLine": 152,
+        "endChar": 38
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_8c3af0cb",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 11
@@ -82,6 +154,30 @@
       "writtenOn": "2017-07-21T14:19:34Z",
       "side": 1,
       "message": "\"correct behavior\": I think you mean recovery / resiliency, but clarify",
+      "range": {
+        "startLine": 153,
+        "startChar": 4,
+        "endLine": 153,
+        "endChar": 67
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_ebb4a936",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "the life cycle events are normal operations, e.g. pause, reboot etc. so the correct behavior is just the expected behavior. \"recovery\" tends to suggest it is triggered by an error condition, which isn\u0027t the case here. maybe adding a couple of examples of the events would help.",
+      "parentUuid": "1aa4ed85_8c3af0cb",
       "range": {
         "startLine": 153,
         "startChar": 4,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_8b83b555",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "agree. I think Mathew and Xu Dan are actively looking into that question.",
+      "parentUuid": "1aa4ed85_5176d13f",
+      "range": {
+        "startLine": 165,
+        "startChar": 0,
+        "endLine": 167,
+        "endChar": 61
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_0c27e0b7",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 11
@@ -128,6 +248,30 @@
       "writtenOn": "2017-07-21T14:19:34Z",
       "side": 1,
       "message": "functional",
+      "range": {
+        "startLine": 177,
+        "startChar": 16,
+        "endLine": 177,
+        "endChar": 25
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_ab86b163",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "thanks.",
+      "parentUuid": "1aa4ed85_0c27e0b7",
       "range": {
         "startLine": 177,
         "startChar": 16,
@@ -163,6 +307,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_4bf4ddf1",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "NIC disable/enable should be possible since we are ssh into servers with admin access, but its behavior is not easy to predict unless we know the network topology. Since we didn\u0027t specify/test topology, it may be more complicated. Power-cycle a server, or a soft-os-reboot, are also possible. In all these cases, we venture slightly into hardware dependencies - may need some more time to do it right.",
+      "parentUuid": "1aa4ed85_711d0dbd",
+      "range": {
+        "startLine": 205,
+        "startChar": 16,
+        "endLine": 209,
+        "endChar": 7
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_f1881de9",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 11
@@ -174,6 +342,30 @@
       "writtenOn": "2017-07-21T13:18:13Z",
       "side": 1,
       "message": "This creates a scope overlap with section 4. DO the current HA tests really address overload situations?",
+      "range": {
+        "startLine": 212,
+        "startChar": 64,
+        "endLine": 213,
+        "endChar": 19
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_2bc0817b",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "Yes - it actually does have a couple of test cases for compute and storage overloads. I agree it is somewhat of conceptual overlap. They test very different things of course, so it\u0027s not like they are redundant. The scope overlap can be easily resolved by labeling the over tests in the HA project as resiliency tests, if we feel that\u0027s necessary.",
+      "parentUuid": "1aa4ed85_f1881de9",
       "range": {
         "startLine": 212,
         "startChar": 64,
@@ -209,6 +401,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_b12aa07c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "This is a relatively new testing methodology that may need time to mature (once they have access to more community resources). My inclination would be putting it in as optional first.\n\nAnyone has different thought?\n\nI tentatively added a sentence to put it in optional category.",
+      "parentUuid": "1aa4ed85_916d2935",
+      "range": {
+        "startLine": 228,
+        "startChar": 0,
+        "endLine": 229,
+        "endChar": 75
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_f1d6ddc4",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 11
@@ -220,6 +436,30 @@
       "writtenOn": "2017-07-21T13:18:13Z",
       "side": 1,
       "message": "Nit: let\u0027s call it just \"Security\"",
+      "range": {
+        "startLine": 231,
+        "startChar": 3,
+        "endLine": 231,
+        "endChar": 13
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_cb03edb6",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_f1d6ddc4",
       "range": {
         "startLine": 231,
         "startChar": 3,
@@ -255,6 +495,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_912764b6",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "I think you meant that we have not done enough to identify what the basic security requirements should be, and I agree. I added some language to say we need understand the requirements better and come to a basic set of testing. At this time, we are not there yet from what I can tell. I hope we can address this in the near future.\n\nBut I may be mis-reading your comment. If, instead, you meant that we missed additional \"features\" that have already been done in Danube, but dovetail is not leveraging them yet, pls help me pointing them out.  We certainly should leverage them as much as we can.",
+      "parentUuid": "1aa4ed85_91dbe9ec",
+      "range": {
+        "startLine": 233,
+        "startChar": 0,
+        "endLine": 236,
+        "endChar": 62
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_cca54805",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 11
@@ -266,6 +530,30 @@
       "writtenOn": "2017-07-21T14:19:34Z",
       "side": 1,
       "message": "Don\u0027t need this sentence",
+      "range": {
+        "startLine": 247,
+        "startChar": 0,
+        "endLine": 247,
+        "endChar": 72
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_2bf5e1ca",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_cca54805",
       "range": {
         "startLine": 247,
         "startChar": 0,
@@ -295,6 +583,24 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_ab93114e",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "Added the description of this new area, and the NFVI/VIM enabling capability focus (vs. MANO area functionalities).\nBut my understanding is that we have not seen wide acceptance in the system components, esp. in scale as in NFV, nor developed sufficient test content in Danube to be able to test compliance at this time.\nSo let me put it in future study for now, rather than in Danube scope. Pls comment if people feel differently.",
+      "parentUuid": "1aa4ed85_ccca28a1",
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_6cb6943f",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 11
@@ -318,6 +624,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_2b9f2152",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_6cb6943f",
+      "range": {
+        "startLine": 249,
+        "startChar": 7,
+        "endLine": 249,
+        "endChar": 11
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_4cb9582d",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 11
@@ -329,6 +659,30 @@
       "writtenOn": "2017-07-21T14:19:34Z",
       "side": 1,
       "message": "Change to 8.",
+      "range": {
+        "startLine": 279,
+        "startChar": 0,
+        "endLine": 279,
+        "endChar": 32
+      },
+      "revId": "788ad9fde7e3d3c51eb713c9c6eedccb58e619e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_cbad2d8a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-24T23:06:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_4cb9582d",
       "range": {
         "startLine": 279,
         "startChar": 0,
