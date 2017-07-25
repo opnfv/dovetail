@@ -463,8 +463,31 @@ When a tester is performing trial runs, Dovetail stores results in a local file 
      * For each test case result in Yardstick, the logs are stored in dovetail_ha_tcXXX.out, respectively.
 
 #. OPNFV web interface
+  CVP will host a web site to collect test results. Users can upload their results to this web site,
+  so they can review these results in the future.
 
-   Wait for the complement of LF, test community, etc.
+    * web site url
+     Wait for the complement of LF, test community, etc.
+
+    * Sign in / Sign up
+      You need to sign in you account, then you can upload results, and check your private results.
+      CVP is now using openstack id as account provider, but will soon support Linux Foundation ID
+      as well.
+      If you already have a openstack id, you can sign in directly with your id.
+      If you do not have a openstack id, you can sign up a new one on the sign up page.
+      If you do not sign in, you can only check the community results.
+
+    * Community results
+      This page lists all results set to public.
+
+    * My results
+      This page lists all results uploaded by you after you signed in,
+      You can also upload your results on this page.
+      There is a *choose file* button, once you click it, you can choose your reuslt file in your harddisk
+      then click the *upload* button, and you will see a results id once your uploading succeed.
+
+    * profile
+      This page shows your account info after you signed in.
 
 Updating Dovetail or a Test Suite
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
