@@ -613,6 +613,30 @@
     },
     {
       "key": {
+        "uuid": "1aa4ed85_babef5d2",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-26T03:36:16Z",
+      "side": 1,
+      "message": "Thanks Lincoln! Lines 121 and 122 do mean that P1 ping packets are sent as you mentioned. I will do the modification today!",
+      "parentUuid": "1aa4ed85_4c1dd865",
+      "range": {
+        "startLine": 135,
+        "startChar": 2,
+        "endLine": 135,
+        "endChar": 51
+      },
+      "revId": "9a1e59f9b3529edd05541290f17bfb5fa536ada9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_9b41c83b",
         "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
         "patchSetId": 2
