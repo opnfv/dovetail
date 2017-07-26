@@ -1,0 +1,423 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa4ed85_d49f05b3",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "I do not see SCP mentioned in either test? is it necessary?",
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_34c5398e",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "is this used?",
+      "range": {
+        "startLine": 50,
+        "startChar": 2,
+        "endLine": 50,
+        "endChar": 5
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_b4836955",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "The target",
+      "range": {
+        "startLine": 87,
+        "startChar": 44,
+        "endLine": 87,
+        "endChar": 50
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_d43b859a",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "that will initiate\n\nsame for several other cases below",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 7
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_f45561c6",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "It does not follow basic English grammar or punctuation rules.\nThis seems to be true for all Test execution descriptions.\nNot following basic rules can cause ambiguous situations and, even short of that, it is not a good/consistent practice. At minimum, it appears unprofessional to some readers. Let\u0027s make an effort here.",
+      "range": {
+        "startLine": 113,
+        "startChar": 17,
+        "endLine": 116,
+        "endChar": 49
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_94a98de1",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "a\n\nnot infinite",
+      "range": {
+        "startLine": 130,
+        "startChar": 97,
+        "endLine": 130,
+        "endChar": 108
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_74a65112",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "booted",
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_14b59d30",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": ". F\n\nend the previous sentence and start a new sentence.",
+      "range": {
+        "startLine": 131,
+        "startChar": 67,
+        "endLine": 131,
+        "endChar": 70
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_34977992",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "returns",
+      "range": {
+        "startLine": 150,
+        "startChar": 72,
+        "endLine": 150,
+        "endChar": 78
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_f4900197",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "returns",
+      "range": {
+        "startLine": 151,
+        "startChar": 54,
+        "endLine": 151,
+        "endChar": 60
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_148cbd7e",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "VM. An",
+      "range": {
+        "startLine": 182,
+        "startChar": 30,
+        "endLine": 182,
+        "endChar": 37
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_d4edc526",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "``ping`` is executed",
+      "range": {
+        "startLine": 183,
+        "startChar": 36,
+        "endLine": 183,
+        "endChar": 53
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_b4ea890d",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "associated with",
+      "range": {
+        "startLine": 183,
+        "startChar": 14,
+        "endLine": 183,
+        "endChar": 27
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_74f411f2",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "associated with",
+      "range": {
+        "startLine": 201,
+        "startChar": 40,
+        "endLine": 201,
+        "endChar": 53
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_34de996e",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "the test host",
+      "range": {
+        "startLine": 228,
+        "startChar": 50,
+        "endLine": 228,
+        "endChar": 54
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_94f74df5",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "delete - we do not use the term \"jumphost\". Use \"test host\" instead. Apply to all cases of jumphost.",
+      "range": {
+        "startLine": 228,
+        "startChar": 55,
+        "endLine": 228,
+        "endChar": 66
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_54d9d581",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 229,
+        "startChar": 47,
+        "endLine": 229,
+        "endChar": 63
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_f4e7a13e",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "a loop",
+      "range": {
+        "startLine": 232,
+        "startChar": 94,
+        "endLine": 233,
+        "endChar": 6
+      },
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_74cbb1a5",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-26T17:44:55Z",
+      "side": 1,
+      "message": "several lines seem to exceed 80 chars",
+      "revId": "2cc5507e9fcf6c9f662fc524d25551acd5134930",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
