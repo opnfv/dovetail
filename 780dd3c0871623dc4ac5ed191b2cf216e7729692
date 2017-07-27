@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa4ed85_683d12bb",
+        "filename": "docs/testing/user/testspecification/vping/index.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-27T20:42:55Z",
+      "side": 1,
+      "message": "How about rewrite as follows: \n\n- Create 1 private tenant network.\n- Create 1 subnet and 1 router in the new tenant network.\n- Add 1 interface between the subnet and the router.\n- Add 1 gateway route to the router.\n- Store the network ID returned in the response.\n\nApply to all cases.",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 49
+      },
+      "revId": "780dd3c0871623dc4ac5ed191b2cf216e7729692",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
