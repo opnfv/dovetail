@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa4ed85_2ade326e",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 314
+      },
+      "writtenOn": "2017-07-27T03:42:00Z",
+      "side": 1,
+      "message": "is it possible to use some sample VNF for this testing. Vping is something that is not enough to validate the stress capability for a NFV scenario.",
+      "revId": "30aefcceb99d88d19a9bb12bea5a95fc9c8d822f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
