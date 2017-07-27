@@ -16,6 +16,24 @@
       "revId": "30aefcceb99d88d19a9bb12bea5a95fc9c8d822f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_cac0bee2",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2017-07-27T08:55:49Z",
+      "side": 1,
+      "message": "Hi Fu Qiao, currently Yardstick and Bottlenecks are working on scale up/out test cases together. In Yardstick, sample VNF using heat are under compiling and testing. In Bottlenecks, we are trying to support sample VNFs as an global argument for the test and to figure out configuration for the test. We might be able to provide a demo for E release.",
+      "parentUuid": "1aa4ed85_2ade326e",
+      "revId": "30aefcceb99d88d19a9bb12bea5a95fc9c8d822f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
