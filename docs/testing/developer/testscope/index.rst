@@ -558,3 +558,71 @@ Test Case 25: IPv6 Address Assignment - Dual Net, Dual Stack, Multiple Prefixes,
 
 | tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_multi_prefix_slaac
 
+--------------------------------------------------------
+Forwarding Packets Through Virtual Networks in Data Path
+--------------------------------------------------------
+
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_mtu_sized_frames
+
+------------------------------------------------------------------------
+Filtering Packets Based on Security Rules and Port Security in Data Path
+------------------------------------------------------------------------
+
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_port_security_macspoofing_port
+| tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_cross_tenant_traffic
+| tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_in_tenant_traffic
+| tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_multiple_security_groups
+| tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_port_security_disable_security_group
+| tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_port_update_new_security_group
+
+------------------------------------------------------------
+Dynamic Network Runtime Operations Through the Life of a VNF
+------------------------------------------------------------
+
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_hotplug_nic
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_network_basic_ops
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_subnet_details
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_update_instance_port_admin_state
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_update_router_admin_state
+
+----------------------------------------------------------------
+Correct Behavior after Common Virtual Machine Life Cycles Events
+----------------------------------------------------------------
+
+| tempest.scenario.test_minimum_basic.TestMinimumBasicScenario.test_minimum_basic_scenario
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_cold_migration
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_cold_migration_revert
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_pause_unpause
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_reboot
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_rebuild
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_resize
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_stop_start
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_suspend_resume
+| tempest.scenario.test_server_advanced_ops.TestServerAdvancedOps.test_server_sequence_suspend_resume
+| tempest.scenario.test_server_advanced_ops.TestServerAdvancedOps.test_resize_volume_backed_server_confirm
+| tempest.scenario.test_shelve_instance.TestShelveInstance.test_shelve_instance
+| tempest.scenario.test_shelve_instance.TestShelveInstance.test_shelve_volume_backed_instance
+| tempest.api.compute.admin.test_live_migration.LiveAutoBlockMigrationV225TestJSON.test_iscsi_volume
+| tempest.api.compute.admin.test_live_migration.LiveAutoBlockMigrationV225TestJSON.test_live_block_migration
+| tempest.api.compute.admin.test_live_migration.LiveAutoBlockMigrationV225TestJSON.test_live_block_migration_paused
+| tempest.api.compute.admin.test_live_migration.LiveBlockMigrationTestJSON.test_iscsi_volume
+| tempest.api.compute.admin.test_live_migration.LiveBlockMigrationTestJSON.test_live_block_migration
+| tempest.api.compute.admin.test_live_migration.LiveBlockMigrationTestJSON.test_live_block_migration_paused
+| tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_cold_migration
+| tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_list_migrations
+| tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_list_migrations_in_flavor_resize_situation
+| tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_resize_server_revert_deleted_flavor
+| tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_revert_cold_migration
+
+------------------------------------------------------------
+Simple Virtual Machine Resource Scheduling on Multiple Nodes
+------------------------------------------------------------
+
+| tempest.scenario.test_server_multinode.TestServerMultinode.test_schedule_to_all_nodes
+
+----------------
+Storage Security
+----------------
+
+| tempest.scenario.test_encrypted_cinder_volumes.TestEncryptedCinderVolumes.test_encrypted_cinder_volumes_cryptsetup
+| tempest.scenario.test_encrypted_cinder_volumes.TestEncryptedCinderVolumes.test_encrypted_cinder_volumes_luks
