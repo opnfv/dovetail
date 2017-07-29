@@ -558,3 +558,12 @@ Test Case 25: IPv6 Address Assignment - Dual Net, Dual Stack, Multiple Prefixes,
 
 | tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_multi_prefix_slaac
 
+------------------------------------------------------------
+Dynamic Network Runtime Operations Through the Life of a VNF
+------------------------------------------------------------
+
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_hotplug_nic
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_network_basic_ops
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_subnet_details
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_update_instance_port_admin_state
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_update_router_admin_state
