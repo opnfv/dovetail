@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_ca12f757",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-07-31T20:47:28Z",
+      "side": 1,
+      "message": "Where does the user obtain the form?  Can we refer them to the C\u0026C section of the OPNFV website, or similar?",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 61
+      },
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_0a1dff66",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-07-31T20:47:28Z",
+      "side": 1,
+      "message": "It seems like there is going to be a very manual process to \"sync\" Test ID, with the above \"Request ID / Form\".  This will get even more complicated if companies are submitting multiple products, software platforms, etc.  Do we have a plan for coordinating this?",
+      "range": {
+        "startLine": 91,
+        "startChar": 0,
+        "endLine": 92,
+        "endChar": 79
+      },
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_ea19bb7a",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-07-31T20:47:28Z",
+      "side": 1,
+      "message": "will not",
+      "range": {
+        "startLine": 99,
+        "startChar": 48,
+        "endLine": 99,
+        "endChar": 58
+      },
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
