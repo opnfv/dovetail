@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "da33351e_2ad8c352",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-31T23:53:07Z",
+      "side": 1,
+      "message": "Should some of the test cases be mandatory ?",
+      "revId": "b47c71818729983178863584eebf0176a123b547",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_ca1f9708",
         "filename": "docs/testing/developer/testscope/index.rst",
         "patchSetId": 2
@@ -88,6 +105,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_4ad38738",
+        "filename": "docs/testing/user/testspecification/securitygroup/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-31T23:53:07Z",
+      "side": 1,
+      "message": "Maybe \"empty (i.e. default)\"?",
+      "parentUuid": "da33351e_eab53b32",
+      "range": {
+        "startLine": 127,
+        "startChar": 27,
+        "endLine": 127,
+        "endChar": 32
+      },
+      "revId": "b47c71818729983178863584eebf0176a123b547",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_0a905f94",
         "filename": "docs/testing/user/testspecification/securitygroup/index.rst",
         "patchSetId": 2
@@ -145,6 +186,24 @@
       "writtenOn": "2017-07-31T23:15:44Z",
       "side": 1,
       "message": "Just my thought, others can comment, should we give here a simplified version of test case steps instead of explaining each and every action and assertion. For ex.\n\n1. Create a server VM1 with security-group SG1, neutron network net1 and floating-ip fip1 (via Router R1).\n2. SG1 has rules for allowing incoming SSH and ICMP traffic\n3. Create a second neutron network net2 and attach VM1 to net2\n4. Get the VM1\u0027s MAC address and ethernet interface NIC2 for net2\n5. Create second server VM2 on the net2\n6. Verify VM1 is able to communicate with VM2 via NIC2\n7. Login to VM1 and spoof the MAC address of NIC2 to \"00:00:00:00:00:01\" and verify it was set\n8. Verify VM1 fails to communicate with VM2 via NIC2\n9. Update \u0027port_security_enable\u0027 to be False for the VM1\u0027s NIC2 port\n10. Verify now VM1 is able to communicate with VM2 via NIC2",
+      "revId": "b47c71818729983178863584eebf0176a123b547",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_8add8f45",
+        "filename": "docs/testing/user/testspecification/securitygroup/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-07-31T23:53:07Z",
+      "side": 1,
+      "message": "I support that we could reduce the workload and improve readability by summarizing some of the details out. We\u0027ve said that all existing openstack test cases may only need a summary.",
+      "parentUuid": "da33351e_8a262f67",
       "revId": "b47c71818729983178863584eebf0176a123b547",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
