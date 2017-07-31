@@ -1,0 +1,176 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_ca1f9708",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 576,
+      "author": {
+        "id": 6701
+      },
+      "writtenOn": "2017-07-31T23:15:44Z",
+      "side": 1,
+      "message": "This particular test case is not really applicable in the DVR (Distributed Virtual Router) deployments and in the deployments with OpenDaylight. So should we include this test case?",
+      "range": {
+        "startLine": 576,
+        "startChar": 62,
+        "endLine": 576,
+        "endChar": 86
+      },
+      "revId": "b47c71818729983178863584eebf0176a123b547",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_aa1cd314",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 577,
+      "author": {
+        "id": 6701
+      },
+      "writtenOn": "2017-07-31T23:15:44Z",
+      "side": 1,
+      "message": "Do we verify any dynamic network operation in this test case? I think this test case verifies that subnet\u0027s extra configuration (like DNS and extra-route) details are passed on to VMs through DHCP/metadta during the boot-time.",
+      "range": {
+        "startLine": 577,
+        "startChar": 62,
+        "endLine": 577,
+        "endChar": 81
+      },
+      "revId": "b47c71818729983178863584eebf0176a123b547",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_0a1a1f17",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 597,
+      "author": {
+        "id": 6701
+      },
+      "writtenOn": "2017-07-31T23:15:44Z",
+      "side": 1,
+      "message": "There are few tests in API category covering this functionality like: compute.admin.test_live_migration.py \u0026 compute.admin.test_migrations.py",
+      "revId": "b47c71818729983178863584eebf0176a123b547",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_eab53b32",
+        "filename": "docs/testing/user/testspecification/securitygroup/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 6701
+      },
+      "writtenOn": "2017-07-31T23:15:44Z",
+      "side": 1,
+      "message": "I think the tempest test case creates a security group with some default ALLOW rules for SSH and ICMP traffic in the _create_security_group() method.\n\nSo it won\u0027t be an empty security group",
+      "range": {
+        "startLine": 127,
+        "startChar": 27,
+        "endLine": 127,
+        "endChar": 32
+      },
+      "revId": "b47c71818729983178863584eebf0176a123b547",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_0a905f94",
+        "filename": "docs/testing/user/testspecification/securitygroup/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 6701
+      },
+      "writtenOn": "2017-07-31T23:15:44Z",
+      "side": 1,
+      "message": "For easier understanding, you can also specify as \"successful\" in parentheses",
+      "range": {
+        "startLine": 150,
+        "startChar": 61,
+        "endLine": 150,
+        "endChar": 65
+      },
+      "revId": "b47c71818729983178863584eebf0176a123b547",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_4ae9c719",
+        "filename": "docs/testing/user/testspecification/securitygroup/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 6701
+      },
+      "writtenOn": "2017-07-31T23:15:44Z",
+      "side": 1,
+      "message": "you can specify as \"Failed\" for easier understanding",
+      "range": {
+        "startLine": 165,
+        "startChar": 61,
+        "endLine": 165,
+        "endChar": 69
+      },
+      "revId": "b47c71818729983178863584eebf0176a123b547",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_8a262f67",
+        "filename": "docs/testing/user/testspecification/securitygroup/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 6701
+      },
+      "writtenOn": "2017-07-31T23:15:44Z",
+      "side": 1,
+      "message": "Just my thought, others can comment, should we give here a simplified version of test case steps instead of explaining each and every action and assertion. For ex.\n\n1. Create a server VM1 with security-group SG1, neutron network net1 and floating-ip fip1 (via Router R1).\n2. SG1 has rules for allowing incoming SSH and ICMP traffic\n3. Create a second neutron network net2 and attach VM1 to net2\n4. Get the VM1\u0027s MAC address and ethernet interface NIC2 for net2\n5. Create second server VM2 on the net2\n6. Verify VM1 is able to communicate with VM2 via NIC2\n7. Login to VM1 and spoof the MAC address of NIC2 to \"00:00:00:00:00:01\" and verify it was set\n8. Verify VM1 fails to communicate with VM2 via NIC2\n9. Update \u0027port_security_enable\u0027 to be False for the VM1\u0027s NIC2 port\n10. Verify now VM1 is able to communicate with VM2 via NIC2",
+      "revId": "b47c71818729983178863584eebf0176a123b547",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_6a2beb30",
+        "filename": "docs/testing/user/testspecification/securitygroup/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 6701
+      },
+      "writtenOn": "2017-07-31T23:15:44Z",
+      "side": 1,
+      "message": "This step consists of two validations:\n\n- With ingress ICMP security group rule enabled only at tenant1, the server in tenant2 can ping server in tenant1 but not the reverse direction\n\n- With ingress ICMP security group rule enabled at tenant2 also, the ping works from both directions",
+      "range": {
+        "startLine": 272,
+        "startChar": 2,
+        "endLine": 273,
+        "endChar": 57
+      },
+      "revId": "b47c71818729983178863584eebf0176a123b547",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
