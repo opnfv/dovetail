@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_9be7a3e4",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-01T23:44:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_14d28200",
+      "range": {
+        "startLine": 228,
+        "startChar": 27,
+        "endLine": 228,
+        "endChar": 37
+      },
+      "revId": "ab0cb43d9d44a4722d3125492de38075e404afac",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa4ed85_34cd3e5e",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 12
@@ -36,6 +60,30 @@
       "writtenOn": "2017-07-25T08:27:54Z",
       "side": 1,
       "message": "Please change to Bottlenecks instead of Bottleneck.",
+      "range": {
+        "startLine": 351,
+        "startChar": 10,
+        "endLine": 351,
+        "endChar": 20
+      },
+      "revId": "ab0cb43d9d44a4722d3125492de38075e404afac",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_7bec5fc8",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-01T23:44:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1aa4ed85_34cd3e5e",
       "range": {
         "startLine": 351,
         "startChar": 10,
