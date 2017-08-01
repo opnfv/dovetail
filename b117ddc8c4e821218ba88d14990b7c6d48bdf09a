@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "da33351e_5bd35b38",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 9
+      },
+      "writtenOn": "2017-08-01T19:56:06Z",
+      "side": 1,
+      "message": "You can remove OPNFV from the copyright list",
+      "range": {
+        "startLine": 3,
+        "startChar": 7,
+        "endLine": 3,
+        "endChar": 12
+      },
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_ca12f757",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 9
