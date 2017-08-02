@@ -1,6 +1,6 @@
 ---
-dovetail.nfvi.tc001:
-  name: dovetail.nfvi.tc001
+dovetail.vping.tc002:
+  name: dovetail.vping.tc002
   objective: testing for vping using ssh
   validate:
     type: functest
