@@ -8,8 +8,11 @@ RUN \
     apt-get update \
 && \
     apt-get install -y \
+        build-essential \
         gcc \
         git \
+        libssl-dev \
+        libffi-dev \
         vim \
         python-dev \
         python-mock \
