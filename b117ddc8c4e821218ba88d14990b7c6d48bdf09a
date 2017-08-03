@@ -94,6 +94,29 @@
     },
     {
       "key": {
+        "uuid": "da33351e_604dc772",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 314
+      },
+      "writtenOn": "2017-08-03T09:12:31Z",
+      "side": 1,
+      "message": "lots of manual work here. Can\u0027t the dovetail tool upload the test result automatically?",
+      "range": {
+        "startLine": 93,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 0
+      },
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_ea19bb7a",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 9
@@ -111,6 +134,40 @@
         "endLine": 99,
         "endChar": 58
       },
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_40524314",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 314
+      },
+      "writtenOn": "2017-08-03T09:12:31Z",
+      "side": 1,
+      "message": "how many reviewers are needed for each test ID? I suppose not everyone have to review each test ID, right?",
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_805c4b27",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 314
+      },
+      "writtenOn": "2017-08-03T09:12:31Z",
+      "side": 1,
+      "message": "I think we talked about whether we should distinct whether the testing is done in third-party lab or its own lab.",
       "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
