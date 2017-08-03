@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_a09fcf02",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-03T22:17:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_5bd35b38",
+      "range": {
+        "startLine": 3,
+        "startChar": 7,
+        "endLine": 3,
+        "endChar": 12
+      },
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_ca12f757",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 9
@@ -36,6 +60,30 @@
       "writtenOn": "2017-07-31T20:47:28Z",
       "side": 1,
       "message": "Where does the user obtain the form?  Can we refer them to the C\u0026C section of the OPNFV website, or similar?",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 61
+      },
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_80a44b58",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-03T22:17:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_ca12f757",
       "range": {
         "startLine": 29,
         "startChar": 0,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_e088b7c8",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-03T22:17:07Z",
+      "side": 1,
+      "message": "There is only one Test ID for each application. But you can submit multiple test results for multiple products. You can also submit multiple results for the same product, then choose one for official review. That\u0027s up to the tester.",
+      "parentUuid": "da33351e_b59f1850",
+      "range": {
+        "startLine": 73,
+        "startChar": 9,
+        "endLine": 73,
+        "endChar": 16
+      },
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_0a1dff66",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 9
@@ -82,6 +154,30 @@
       "writtenOn": "2017-07-31T20:47:28Z",
       "side": 1,
       "message": "It seems like there is going to be a very manual process to \"sync\" Test ID, with the above \"Request ID / Form\".  This will get even more complicated if companies are submitting multiple products, software platforms, etc.  Do we have a plan for coordinating this?",
+      "range": {
+        "startLine": 91,
+        "startChar": 0,
+        "endLine": 92,
+        "endChar": 79
+      },
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_eaed3bf1",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-03T22:17:07Z",
+      "side": 1,
+      "message": "It\u0027s meant for leaving a \"paper trial\" with the contact person. But yes, the email can be auto generated...",
+      "parentUuid": "da33351e_0a1dff66",
       "range": {
         "startLine": 91,
         "startChar": 0,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_00903beb",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-03T22:17:07Z",
+      "side": 1,
+      "message": "Uploading requires the tester to use the web portal manually because the lab may not have Internet access, and we will also have authentication problem that can be complex to deal with. It\u0027s only a couple of minutes of time, out of hours of testing. So I think it\u0027s a sensible tradeoff for now.",
+      "parentUuid": "da33351e_604dc772",
+      "range": {
+        "startLine": 93,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 0
+      },
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_ea19bb7a",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 9
@@ -128,6 +248,30 @@
       "writtenOn": "2017-07-31T20:47:28Z",
       "side": 1,
       "message": "will not",
+      "range": {
+        "startLine": 99,
+        "startChar": 48,
+        "endLine": 99,
+        "endChar": 58
+      },
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_60bca76d",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-03T22:17:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_ea19bb7a",
       "range": {
         "startLine": 99,
         "startChar": 48,
@@ -157,6 +301,24 @@
     },
     {
       "key": {
+        "uuid": "da33351e_40c1a3e3",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-03T22:17:07Z",
+      "side": 1,
+      "message": "I think that\u0027s an internal administrative question for the C\u0026C committee to decide. Last I heard was 3 reviewers. You are right, it does not need to be all eligible reviewers. In any case, I think this doc does not have to make that decision for them. The portal does not deal with that side of process either.",
+      "parentUuid": "da33351e_40524314",
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_805c4b27",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 9
@@ -168,6 +330,24 @@
       "writtenOn": "2017-08-03T09:12:31Z",
       "side": 1,
       "message": "I think we talked about whether we should distinct whether the testing is done in third-party lab or its own lab.",
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_a0b6af88",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-03T22:17:07Z",
+      "side": 1,
+      "message": "that is part of the application form (see step 1) - indicate if it is third party testing, and if it is, who is the third party lab.",
+      "parentUuid": "da33351e_805c4b27",
       "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
