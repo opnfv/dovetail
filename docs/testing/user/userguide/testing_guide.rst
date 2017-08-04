@@ -261,8 +261,8 @@ If the Test Host is online, you can directly pull.
 
 .. code-block:: bash
 
-   $ sudo docker pull opnfv/dovetail:cvp.0.3.0
-   cvp.0.3.0: Pulling from opnfv/dovetail
+   $ sudo docker pull opnfv/dovetail:cvp.0.4.0
+   cvp.0.4.0: Pulling from opnfv/dovetail
    30d541b48fc0: Pull complete
    8ecd7f80d390: Pull complete
    46ec9927bb81: Pull complete
@@ -275,9 +275,9 @@ If the Test Host is online, you can directly pull.
    bf7c644692de: Pull complete
    cdc345e3f363: Pull complete
    Digest: sha256:d571b1073b2fdada79562e8cc67f63018e8d89268ff7faabee3380202c05edee
-   Status: Downloaded newer image for opnfv/dovetail:cvp.0.3.0
+   Status: Downloaded newer image for opnfv/dovetail:cvp.0.4.0
 
-An example of the <tag> is *cvp.0.3.0*.
+An example of the <tag> is *cvp.0.4.0*.
 
 If the Test Host is offline, you will need to first pull the Dovetail Docker image, and all the
 dependent images that Dovetail uses, to a host that is online. The reason that you need
@@ -287,9 +287,10 @@ offline, then all these dependencies will also need to be manually copied.
 
 .. code-block:: bash
 
-   $ sudo docker pull opnfv/dovetail:cvp.0.3.0
+   $ sudo docker pull opnfv/dovetail:cvp.0.4.0
    $ sudo docker pull opnfv/functest:cvp.0.2.0
    $ sudo docker pull opnfv/yardstick:danube.3.1
+   $ sudo docker pull opnfv/bottlenecks:cvp.0.4.0
    $ sudo wget -nc http://artifacts.opnfv.org/sdnvpn/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P {ANY_DIR}
 
 Once all these images are pulled, save the images, copy to the Test Host, and then load
@@ -299,7 +300,8 @@ At the online host, save images.
 
 .. code-block:: bash
 
-   $ sudo docker save -o dovetail.tar opnfv/dovetail:cvp.0.3.0 opnfv/functest:cvp.0.2.0 opnfv/yardstick:danube.3.1
+   $ sudo docker save -o dovetail.tar opnfv/dovetail:cvp.0.4.0 opnfv/functest:cvp.0.2.0 \
+     opnfv/yardstick:danube.3.1 opnfv/bottlenecks:cvp.0.4.0
 
 Copy dovetail.tar file to the Test Host, and then load the images on the Test Host.
 
@@ -316,8 +318,9 @@ Now check to see that the Dovetail image has been pulled or loaded properly.
    $ sudo docker images
    REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
    opnfv/functest      cvp.0.2.0           9eaeaea5f203        8 days ago          1.53GB
-   opnfv/dovetail      cvp.0.3.0           5d25b289451c        8 days ago          516MB
+   opnfv/dovetail      cvp.0.4.0           5d25b289451c        8 days ago          516MB
    opnfv/yardstick     danube.3.1          574596b6ea12        8 days ago          1.2GB
+   opnfv/bottlenecks   cvp.0.4.0           00450688bcae        3 hours ago         622 MB
 
 Regardless of whether you pulled down the Dovetail image directly online, or loaded from
 a static image tar file, you are ready to run Dovetail.
