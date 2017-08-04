@@ -1,9 +1,9 @@
 .. This work is licensed under a Creative Commons Attribution 4.0 International License.
 .. http://creativecommons.org/licenses/by/4.0
-.. (c) Ericsson AB
+.. (c) Ericsson AB, and others
 
 ==========================================================
-Compliance and Verification program test case requirements
+Compliance Verification Program test case requirements
 ==========================================================
 
 .. toctree::
@@ -21,35 +21,51 @@ All CVP tests are available in open source and are executed in open source test 
 Test case requirements
 ======================
 
-The following requirements are mandatory for test to be submitted for consideration in the
+The following requirements are mandatory for a test to be submitted for consideration in the
  CVP test suite:
 
-- All test cases must be fully documented, in a common format
+- All test cases must be fully documented, in a common format (please refer to the test
+  specification directory for examples).
 
-  - Clearly identifying the test procedure and expected results / metrics to determine a “pass” or “fail” result.
+  - Clearly identifying the test procedure and expected results / metrics to determine a “pass”
+    or “fail” result.
 
-- Tests must be validated for purpose, tests should be run with both an expected positive and negative outcome.
-- Tests should focus on functionality, not performance.
+- Tests must be validated for the purpose of CVP, tests should be run with both an expected
+  positive and negative outcome.
+- At the current stage of CVP, only functional tests are eligible, performance testing
+  is out of scope.
 
-  - Performance test output could be built in as “for information only”, but must not carry pass/fail metrics.
+  - Performance test output could be built in as “for information only”, but must not carry
+    pass/fail metrics.
 
 - Test cases should favor implementation of a published standard interface for validation
 
   - Where no standard is available provide API support references
-  - If a standard exists and is not followed, an exemption is required
+  - If a standard exists and is not followed, an exemption is required. Such exemptions
+    can be raised in the project meetings first, and if no consensus can be reached, escalated
+    to the TSC.
 
-- Test cases must pass on OPNFV reference deployments
+- Test cases must pass on applicable OPNFV reference deployments and release versions.
 
   - Tests must not require a specific NFVi platform composition or installation tool
 
-    - Tests and test tools must run independently of the method of platform installation and architecture.
-    - Tests and tool must run independent of specific OPNFV components allowing different components such as storage backends or SDN controllers.
+    - Tests and test tools must run independently of the method of platform installation
+      and architecture.
+    - Tests and tool must run independent of specific OPNFV components allowing different
+      components such as storage backends or SDN controllers.
 
   - Tests must not require un-merged patches to the relevant upstream projects
-  - Tests must not require features or code which are out of scope for the latest release of the OPNFV project
-
+  - Tests must not require features or code which are out of scope for the latest release of
+    the OPNFV project
+  - Tests must have a documented history of recent successful verification in OPNFV testing
+    programs including CI, Functest, Yardstick, Bottlenecks, Dovetail, etc (i.e. all testing
+    programs in OPNFV that regularly validate tests against the release, whether automated or manual)
+  - Tests must be considered optional unless they such have a documented history for ALL OPNFV
+    scenarios that are both
+    - applicable, i.e. support the feature that the test exercises
+    - released, i.e. in the OPNFV release supported by the CVP test suite version
 - Tests must run against a fully deployed and operational system under test.
-- Tests and test tools must support stand alone OPNFV and commercial derived OPNFV based solution
+- Tests and test implementations must support stand alone OPNFV and commercial derived OPNFV based solution
 
   - There can be no dependency on OPNFV resources or infrastructure.
 
@@ -57,7 +73,7 @@ The following requirements are mandatory for test to be submitted for considerat
 
   - Use case specification
   - Test preconditions
-  - Basic test flow execution descriptor
+  - Basic test flow execution description
   - Pass fail criteria
 
 - The following things may be documented for the test case:
