@@ -254,11 +254,28 @@ class FunctestTestcase(Testcase):
 
 class YardstickTestcase(Testcase):
 
-    validate_testcae_list = {}
+    validate_testcase_list = {}
 
     def __init__(self, testcase_yaml):
         super(YardstickTestcase, self).__init__(testcase_yaml)
         self.type = 'yardstick'
+
+
+class BottlenecksTestcase(Testcase):
+
+    validate_testcase_list = {}
+
+    def __init__(self, testcase_yaml):
+        super(BottlenecksTestcase, self).__init__(testcase_yaml)
+        self.type = 'bottlenecks'
+        self._update_cmds()
+
+    def _update_cmds(self):
+        if dt_cfg.dovetail_config['report_dest'].startswith("http"):
+            try:
+                self.testcase['validate']['cmds'][0] += ' --report'
+            except KeyError:
+                return
 
 
 class ShellTestcase(Testcase):
@@ -274,6 +291,7 @@ class TestcaseFactory(object):
     TESTCASE_TYPE_MAP = {
         'functest': FunctestTestcase,
         'yardstick': YardstickTestcase,
+        'bottlenecks': BottlenecksTestcase,
         'shell': ShellTestcase,
     }
 

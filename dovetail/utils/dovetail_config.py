@@ -54,3 +54,8 @@ class DovetailConfig(object):
     def update_non_envs(cls, path, value):
         if value:
             cls.set_leaf_dict(cls.dovetail_config, path, value)
+
+    @classmethod
+    def update_cmds(cls):
+        if cls.dovetail_config['report_dest'].startswith("http"):
+            cls.dovetail_config['bottlenecks']['cmds'][0] += ' --report'

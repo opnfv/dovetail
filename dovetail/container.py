@@ -18,7 +18,8 @@ from utils.dovetail_config import DovetailConfig as dt_cfg
 class Container(object):
 
     container_list = {}
-    has_pull_latest_image = {'yardstick': False, 'functest': False}
+    has_pull_latest_image = {'yardstick': False, 'functest': False,
+                             'bottlenecks': False}
 
     logger = None
 
@@ -123,6 +124,19 @@ class Container(object):
         return "%s %s %s" % (envs, log_vol, key_vol)
 
     @classmethod
+    def set_bottlenecks_config(cls, testcase_name):
+        dovetail_config = dt_cfg.dovetail_config
+        yard_tag = dovetail_config['yardstick']['docker_tag']
+        docker_vol = '-v /var/run/docker.sock:/var/run/docker.sock'
+        env = ('-e Yardstick_TAG={} -e OUTPUT_FILE={}.out'
+               .format(yard_tag, testcase_name))
+        report = ""
+        if dovetail_config['report_dest'].startswith("http"):
+            report = ("-e BOTTLENECKS_DB_TARGET={}"
+                      .format(dovetail_config['report_dest']))
+        return "{} {} {}".format(docker_vol, env, report)
+
+    @classmethod
     def create(cls, type, testcase_name):
         dovetail_config = dt_cfg.dovetail_config
         docker_image = cls.get_docker_image(type)
@@ -144,6 +158,8 @@ class Container(object):
             config = cls.set_functest_config(testcase_name)
         if type.lower() == "yardstick":
             config = cls.set_yardstick_config()
+        if type.lower() == "bottlenecks":
+            config = cls.set_bottlenecks_config(testcase_name)
         if not config:
             return None
 
@@ -284,11 +300,23 @@ class Container(object):
         return image_id
 
     @classmethod
-    def clean(cls, container_id):
-        cmd1 = 'sudo docker stop %s' % (container_id)
-        dt_utils.exec_cmd(cmd1, cls.logger)
-        cmd2 = 'sudo docker rm %s' % (container_id)
-        dt_utils.exec_cmd(cmd2, cls.logger)
+    def check_container_exist(cls, container_name):
+        cmd = ('sudo docker ps -aq -f name={}'.format(container_name))
+        ret, msg = dt_utils.exec_cmd(cmd, cls.logger)
+        if ret == 0 and msg:
+            return True
+        return False
+
+    @classmethod
+    def clean(cls, container_id, valid_type):
+        cmd = ('sudo docker rm -f {}'.format(container_id))
+        dt_utils.exec_cmd(cmd, cls.logger)
+        if valid_type.lower() == 'bottlenecks':
+            containers = dt_cfg.dovetail_config[valid_type]['extra_container']
+            for container in containers:
+                if cls.check_container_exist(container):
+                    cmd = ('sudo docker rm -f {}'.format(container))
+                    dt_utils.exec_cmd(cmd, cls.logger)
 
     @classmethod
     def exec_cmd(cls, container_id, sub_cmd, exit_on_error=False):

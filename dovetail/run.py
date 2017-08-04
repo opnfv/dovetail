@@ -22,8 +22,8 @@ from container import Container
 from testcase import Testcase
 from testcase import Testsuite
 from report import Report
-from report import FunctestCrawler, YardstickCrawler
-from report import FunctestChecker, YardstickChecker
+from report import FunctestCrawler, YardstickCrawler, BottlenecksCrawler
+from report import FunctestChecker, YardstickChecker, BottlenecksChecker
 from utils.dovetail_config import DovetailConfig as dt_cfg
 from test_runner import DockerRunner, ShellRunner
 
@@ -90,6 +90,8 @@ def check_tc_result(testcase, logger):
             result_file = os.path.join(result_dir, testcase.name() + '.out')
         elif validate_type.lower() == 'functest':
             result_file = os.path.join(result_dir, functest_result)
+        elif validate_type.lower() == 'bottlenecks':
+            result_file = os.path.join(result_dir, testcase.name() + '.out')
         else:
             logger.error("Don't support {} now.".format(validate_type))
             return
@@ -107,6 +109,7 @@ def validate_input(input_dict, check_dict, logger):
     # for 'func_tag' and 'yard_tag' options
     func_tag = input_dict['func_tag']
     yard_tag = input_dict['yard_tag']
+    bott_tag = input_dict['bott_tag']
     valid_tag = check_dict['valid_docker_tag']
     if func_tag is not None and func_tag not in valid_tag:
         logger.error("The input option 'func_tag' can't be {}, "
@@ -115,6 +118,10 @@ def validate_input(input_dict, check_dict, logger):
     if yard_tag is not None and yard_tag not in valid_tag:
         logger.error("The input option 'yard_tag' can't be {}, "
                      "valid values are {}.".format(yard_tag, valid_tag))
+        raise SystemExit(1)
+    if bott_tag is not None and bott_tag not in valid_tag:
+        logger.error("The input option 'bott_tag' can't be {}, "
+                     "valid values are {}.".format(bott_tag, valid_tag))
         raise SystemExit(1)
 
     # for 'report' option
@@ -164,8 +171,10 @@ def create_logs():
     Report.create_log()
     FunctestCrawler.create_log()
     YardstickCrawler.create_log()
+    BottlenecksCrawler.create_log()
     FunctestChecker.create_log()
     YardstickChecker.create_log()
+    BottlenecksChecker.create_log()
     Testcase.create_log()
     Testsuite.create_log()
     DockerRunner.create_log()
@@ -246,6 +255,7 @@ def main(*args, **kwargs):
         if(kwargs['report'].endswith('/')):
             kwargs['report'] = kwargs['report'][0:kwargs['report'].rfind('/')]
         dt_cfg.dovetail_config['report_dest'] = kwargs['report']
+        dt_cfg.update_cmds()
 
     if kwargs['offline']:
         dt_cfg.dovetail_config['offline'] = True

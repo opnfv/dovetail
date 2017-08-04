@@ -1,0 +1,20 @@
+---
+bottlenecks:
+  image_name: opnfv/bottlenecks
+  docker_tag: cvp.0.4.0
+  opts: '-id --privileged=true'
+  config:
+    dir: '/home/opnfv/userconfig'
+  pre_condition:
+    - 'echo test for precondition in bottlenecks'
+  cmds:
+    - '/home/opnfv/bottlenecks/run_tests.sh -c {{validate_testcase}}'
+  post_condition:
+    - 'echo test for postcondition in bottlenecks'
+  result:
+    dir: '/tmp'
+    file_path: 'bottlenecks.log'
+  openrc: '/tmp/admin_rc.sh'
+  extra_container:
+    - 'Bottlenecks-Yardstick'
+    - 'Bottlenecks-ELK'
