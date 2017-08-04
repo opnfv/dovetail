@@ -47,6 +47,8 @@ The following requirements are mandatory for test to be submitted for considerat
 
   - Tests must not require un-merged patches to the relevant upstream projects
   - Tests must not require features or code which are out of scope for the latest release of the OPNFV project
+  - Tests must have a documented history of successful use in CI Functest for OPNFV scenarios that are both applicable and released.
+  - Tests must be considered optional unless they have a documented history of successful use in CI Functest for ALL OPNFV scenarios that are both applicable and released.
 
 - Tests must run against a fully deployed and operational system under test.
 - Tests and test tools must support stand alone OPNFV and commercial derived OPNFV based solution
