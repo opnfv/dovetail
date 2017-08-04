@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_5e098494",
+        "filename": "docs/testing/developer/testcaserequirements/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-08-04T13:53:33Z",
+      "side": 1,
+      "message": "tabs are bad :)",
+      "revId": "4b06f2714bf0c86b11cdb4482dd43d67662f22e3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_3ef2c09a",
+        "filename": "docs/testing/developer/testcaserequirements/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 163
+      },
+      "writtenOn": "2017-08-04T13:53:33Z",
+      "side": 1,
+      "message": "This is much clearer, I assume each release the term of \"applicable\" in a release in the context of the CVP is something the TSC will need to make a statement on.  For Danube I assume it\u0027s an \"all released scenario\u0027s\" scope for the pre-requisite.\nThat requires more detail than we should have in this requirements doc, although it needs to be captured somewhere.  Not a straightforward question imho.\n\nBut this amendment is good as a clarification of the requirements.",
+      "revId": "4b06f2714bf0c86b11cdb4482dd43d67662f22e3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
