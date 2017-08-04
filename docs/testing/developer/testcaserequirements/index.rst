@@ -47,7 +47,10 @@ The following requirements are mandatory for test to be submitted for considerat
 
   - Tests must not require un-merged patches to the relevant upstream projects
   - Tests must not require features or code which are out of scope for the latest release of the OPNFV project
-
+  - Tests must have a documented history of recent successful verification in OPNFV testing programs including CI, Functest, Yardstick, Bottlenecks, Dovetail, etc (i.e. all testing programs in OPNFV that regularly validate tests against the release, whether automated or manual)
+  - Tests must be considered optional unless they such a documented history for ALL OPNFV scenarios that are both
+    - applicable, i.e. support the feature that the test exercises
+    - released, i.e. in the OPNFV release supported by the CVP test suite version
 - Tests must run against a fully deployed and operational system under test.
 - Tests and test tools must support stand alone OPNFV and commercial derived OPNFV based solution
 
