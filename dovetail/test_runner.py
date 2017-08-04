@@ -111,7 +111,7 @@ class DockerRunner(object):
                 ret, msg = Container.exec_cmd(container_id, cmd)
         self.testcase.cleaned(True)
 
-        Container.clean(container_id)
+        Container.clean(container_id, self.type)
 
 
 class FunctestRunner(DockerRunner):
@@ -126,6 +126,13 @@ class YardstickRunner(DockerRunner):
     def __init__(self, testcase):
         self.type = 'yardstick'
         super(YardstickRunner, self).__init__(testcase)
+
+
+class BottlenecksRunner(DockerRunner):
+
+    def __init__(self, testcase):
+        self.type = 'bottlenecks'
+        super(BottlenecksRunner, self).__init__(testcase)
 
 
 class ShellRunner(object):
@@ -190,6 +197,7 @@ class TestRunnerFactory(object):
     TEST_RUNNER_MAP = {
         "functest": FunctestRunner,
         "yardstick": YardstickRunner,
+        "bottlenecks": BottlenecksRunner,
         "shell": ShellRunner,
     }
 

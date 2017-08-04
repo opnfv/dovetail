@@ -48,3 +48,5 @@ proposed_tests:
     - dovetail.sdnvpn.tc002
     - dovetail.sdnvpn.tc004
     - dovetail.sdnvpn.tc008
+    # resiliency
+    - dovetail.resiliency.tc001

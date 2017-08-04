@@ -32,6 +32,7 @@ testarea_supported:
   - ipv6
   - sdnvpn
   - vping
+  - resiliency
 
 functest_testsuite:
   - refstack_defcore
@@ -66,10 +67,12 @@ parameters:
 include_config:
   - functest_config.yml
   - yardstick_config.yml
+  - bottlenecks_config.yml
 
 test_project:
   - 'yardstick'
   - 'functest'
+  - 'bottlenecks'
 
 validate_input:
   valid_docker_tag:
@@ -82,3 +85,4 @@ validate_input:
     - 'cvp.0.1.0'
     - 'cvp.0.2.0'
     - 'cvp.0.3.0'
+    - 'cvp.0.4.0'

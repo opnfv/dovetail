@@ -25,7 +25,7 @@ from testcase import Testcase
 
 class Report(object):
 
-    results = {'functest': {}, 'yardstick': {}, 'shell': {}}
+    results = {'functest': {}, 'yardstick': {}, 'bottlenecks': {}, 'shell': {}}
 
     logger = None
 
@@ -339,6 +339,53 @@ class YardstickCrawler(object):
         return None
 
 
+class BottlenecksCrawler(object):
+
+    logger = None
+
+    def __init__(self):
+        self.type = 'bottlenecks'
+        self.logger.debug('Create crawler: {}'.format(self.type))
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.BottlenecksCrawler').getLogger()
+
+    def crawl(self, testcase=None):
+        report_dest = dt_cfg.dovetail_config['report_dest']
+        if report_dest.lower() == 'file':
+            return self.crawl_from_file(testcase)
+
+        if report_dest.lower().startswith('http'):
+            return self.crawl_from_url(testcase)
+
+    def crawl_from_file(self, testcase=None):
+        file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
+                                 testcase.name() + '.out')
+        if not os.path.exists(file_path):
+            self.logger.error('Result file not found: {}'.format(file_path))
+            return None
+        criteria = 'FAIL'
+        with open(file_path, 'r') as f:
+            for jsonfile in f:
+                data = json.loads(jsonfile)
+                try:
+                    if 'PASS' == data["data_body"]["result"]:
+                        criteria = 'PASS'
+                    else:
+                        criteria = 'FAIL'
+                        break
+                except KeyError as e:
+                    self.logger.exception('Pass flag not found {}'.format(e))
+        json_results = {'criteria': criteria}
+        self.logger.debug('Results: {}'.format(str(json_results)))
+        return json_results
+
+    def crawl_from_url(self, testcase=None):
+        return None
+
+
 class ShellCrawler(object):
 
     def __init__(self):
@@ -364,6 +411,7 @@ class CrawlerFactory(object):
 
     CRAWLER_MAP = {'functest': FunctestCrawler,
                    'yardstick': YardstickCrawler,
+                   'bottlenecks': BottlenecksCrawler,
                    'shell': ShellCrawler}
 
     @classmethod
@@ -466,6 +514,24 @@ class YardstickChecker(object):
         return
 
 
+class BottlenecksChecker(object):
+
+    logger = None
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.BottlenecksChecker').getLogger()
+
+    @staticmethod
+    def check(testcase, result):
+        if not result:
+            testcase.passed('FAIL')
+        else:
+            testcase.passed(result['criteria'])
+        return
+
+
 class ShellChecker(object):
 
     @staticmethod
@@ -480,6 +546,7 @@ class CheckerFactory(object):
 
     CHECKER_MAP = {'functest': FunctestChecker,
                    'yardstick': YardstickChecker,
+                   'bottlenecks': BottlenecksChecker,
                    'shell': ShellChecker}
 
     @classmethod
