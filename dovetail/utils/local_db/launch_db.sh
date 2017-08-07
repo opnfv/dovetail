@@ -8,13 +8,14 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 ##############################################################################
 
-if [ "$#" -ne 1 ]; then
+if [ "$#" -ne 2 ]; then
     echo "Error: missing parameter! try again like this:"
     echo ""
-    echo "./launch_db.sh 192.168.115.2"
+    echo "./launch_db.sh 192.168.115.2 http://116.66.187.136:9999"
     echo ""
     echo "parameters:"
     echo "  db_host_ip: your localhost ip address "
+    echo "  base_url: your public url for website"
     echo ""
     exit 1
 fi
@@ -22,6 +23,8 @@ fi
 export mongodb_port=${mongodb_port:-"27017"}
 export testapi_port=${testapi_port:-"8000"}
 export db_host_ip=${db_host_ip:-"$1"}
+export base_url=${base_url:-"$2"}
+
 
 set -e
 
@@ -76,7 +79,7 @@ fi
 
 # run testapi container
 echo "Step3: run ${container_name} container."
-cmd="sudo docker run -itd -p ${testapi_port}:8000 --name ${container_name} -e mongodb_url=mongodb://${db_host_ip}:${mongodb_port}/ ${testapi_img}"
+cmd="sudo docker run -itd -p ${testapi_port}:8000 --name ${container_name} -e mongodb_url=mongodb://${db_host_ip}:${mongodb_port}/ -e base_url=${base_url} ${testapi_img}"
 echo $cmd
 ${cmd}
 
