@@ -16,6 +16,190 @@
       "revId": "63e4685fad28287fcee601a126ecc890c884fd9f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_4f626bd9",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 251
+      },
+      "writtenOn": "2017-08-08T10:25:46Z",
+      "side": 1,
+      "message": "change to \"for the OPNFV Danube release\".",
+      "range": {
+        "startLine": 21,
+        "startChar": 16,
+        "endLine": 21,
+        "endChar": 22
+      },
+      "revId": "63e4685fad28287fcee601a126ecc890c884fd9f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_2f5f2710",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 251
+      },
+      "writtenOn": "2017-08-08T10:25:46Z",
+      "side": 1,
+      "message": "It is the TSC that is responsible for the test cases. The Dovetail project may recommend test-cases to the TSC.",
+      "range": {
+        "startLine": 21,
+        "startChar": 64,
+        "endLine": 22,
+        "endChar": 14
+      },
+      "revId": "63e4685fad28287fcee601a126ecc890c884fd9f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_8f9bd3c8",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 251
+      },
+      "writtenOn": "2017-08-08T10:25:46Z",
+      "side": 1,
+      "message": "expand abbreviations - or even better, have a section that lists all abbreviations used in the document.",
+      "range": {
+        "startLine": 24,
+        "startChar": 15,
+        "endLine": 24,
+        "endChar": 18
+      },
+      "revId": "63e4685fad28287fcee601a126ecc890c884fd9f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_6fee4f24",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 251
+      },
+      "writtenOn": "2017-08-08T10:25:46Z",
+      "side": 1,
+      "message": "Isn\u0027t OPNFV\u0027s focus - develop, deploy, test? I.e. by excluding \"deploy\", we take out a key value/asset of what OPNFV does. IMHO deploy should be part of the test suite, so that we don\u0027t devalue OPNFV as an overall program.",
+      "range": {
+        "startLine": 55,
+        "startChar": 1,
+        "endLine": 56,
+        "endChar": 28
+      },
+      "revId": "63e4685fad28287fcee601a126ecc890c884fd9f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_cfa5db05",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 251
+      },
+      "writtenOn": "2017-08-08T10:25:46Z",
+      "side": 1,
+      "message": "guidelines",
+      "range": {
+        "startLine": 72,
+        "startChar": 4,
+        "endLine": 72,
+        "endChar": 5
+      },
+      "revId": "63e4685fad28287fcee601a126ecc890c884fd9f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_0fafc3e4",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 251
+      },
+      "writtenOn": "2017-08-08T10:25:46Z",
+      "side": 1,
+      "message": "This section lacks a paragraph which discusses that the CVP is to be understood as a program which is a natural part of OPNFV, in that the CVP allows customers to qualify OPNFV related development. This implicitly means, that the OPNFV CVP is to also portray the values that OPNFV creates in a particular release.\nThis ability should also serve as a check-point for being able to launch an OPNFV CVP publically. As long as we cannot test OPNFV specific values, but simply test functionality which was created elsewhere, we should not launch the program as OPNFV CVP.",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 16
+      },
+      "revId": "63e4685fad28287fcee601a126ecc890c884fd9f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_cf7cbb75",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 251
+      },
+      "writtenOn": "2017-08-08T10:25:46Z",
+      "side": 1,
+      "message": "This sounds like \"we haven\u0027t identified any NFV specific functionality in Danube which is worthwhile to be part of OPNFV CVP\" - so all we\u0027d do is OpenStack testing, which partially goes beyond refstack. If this is really the case, do we really want to launch an \"OPNFV CVP program\" (which carries the NFV word in it) - or would be better off waiting, until the mentioned areas are mature enough - and for now call it \"OPNFV OpenStack qualification program\".",
+      "range": {
+        "startLine": 189,
+        "startChar": 58,
+        "endLine": 190,
+        "endChar": 71
+      },
+      "revId": "63e4685fad28287fcee601a126ecc890c884fd9f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_8fe9131d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 251
+      },
+      "writtenOn": "2017-08-08T10:25:46Z",
+      "side": 1,
+      "message": "Looking at the above, we only seem to be testing VIM. Where do we test NFVI?",
+      "range": {
+        "startLine": 360,
+        "startChar": 30,
+        "endLine": 360,
+        "endChar": 34
+      },
+      "revId": "63e4685fad28287fcee601a126ecc890c884fd9f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
