@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_efaf002a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2017-08-08T09:15:26Z",
+      "side": 1,
+      "message": "usually I put the main author and others (for the review/comments)\n(c) Intel and others",
+      "revId": "63e4685fad28287fcee601a126ecc890c884fd9f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
