@@ -13,6 +13,7 @@ import urllib2
 import re
 import os
 import datetime
+import tarfile
 
 from pbr import version
 
@@ -159,8 +160,20 @@ class Report(object):
                 report_txt += sub_report[key]
 
         cls.logger.info(report_txt)
+        cls.save_logs()
         # cls.save(report_txt)
         return report_txt
+
+    @classmethod
+    def save_logs(cls):
+        logs_gz = "logs.tar.gz"
+        result_dir = dt_cfg.dovetail_config['result_dir']
+
+        with tarfile.open(os.path.join(result_dir, logs_gz), "w:gz") as f_out:
+            files = os.listdir(result_dir)
+            for f in files:
+                if f not in ['workspace']:
+                    f_out.add(os.path.join(result_dir, f))
 
     # save to disk as default
     @classmethod
