@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_125ecc45",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-08-09T01:39:24Z",
+      "side": 1,
+      "message": "I see, thanks for the explanation!",
+      "parentUuid": "da33351e_e088b7c8",
+      "range": {
+        "startLine": 73,
+        "startChar": 9,
+        "endLine": 73,
+        "endChar": 16
+      },
+      "revId": "b117ddc8c4e821218ba88d14990b7c6d48bdf09a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_0a1dff66",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 9
