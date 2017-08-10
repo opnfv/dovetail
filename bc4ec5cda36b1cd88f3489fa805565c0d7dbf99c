@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_44036ab8",
+        "filename": "docker/Dockerfile.aarch64.patch",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2997
+      },
+      "writtenOn": "2017-08-10T15:26:33Z",
+      "side": 1,
+      "message": "can be removed",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 70
+      },
+      "revId": "bc4ec5cda36b1cd88f3489fa805565c0d7dbf99c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_2400e6a9",
+        "filename": "docker/Dockerfile.aarch64.patch",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2997
+      },
+      "writtenOn": "2017-08-10T15:26:33Z",
+      "side": 1,
+      "message": "please add a comment justifying this being moved here",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 43
+      },
+      "revId": "bc4ec5cda36b1cd88f3489fa805565c0d7dbf99c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_64314ea2",
+        "filename": "docker/Dockerfile.aarch64.patch",
+        "patchSetId": 4
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2997
+      },
+      "writtenOn": "2017-08-10T15:26:33Z",
+      "side": 1,
+      "message": "why are we dropping the results dir?",
+      "range": {
+        "startLine": 58,
+        "startChar": 5,
+        "endLine": 58,
+        "endChar": 26
+      },
+      "revId": "bc4ec5cda36b1cd88f3489fa805565c0d7dbf99c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_842c524c",
+        "filename": "docker/Dockerfile.aarch64.patch",
+        "patchSetId": 4
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 2997
+      },
+      "writtenOn": "2017-08-10T15:26:33Z",
+      "side": 1,
+      "message": "is this still needed if we use \"git+http://\" instead of \"git+https://\" below? either way, a comment would be nice",
+      "range": {
+        "startLine": 64,
+        "startChar": 5,
+        "endLine": 64,
+        "endChar": 47
+      },
+      "revId": "bc4ec5cda36b1cd88f3489fa805565c0d7dbf99c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
