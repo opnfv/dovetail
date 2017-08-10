@@ -160,7 +160,6 @@ class Report(object):
                 report_txt += sub_report[key]
 
         cls.logger.info(report_txt)
-        cls.save_logs()
         # cls.save(report_txt)
         return report_txt
 
