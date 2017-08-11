@@ -1,0 +1,36 @@
+---
+dovetail.tempest.tc004:
+  name: dovetail.tempest.tc004
+  objective: correct behavior after common virtual machine life cycles events
+  validate:
+    type: functest
+    testcase: tempest_custom
+    pre_copy:
+      src_file: tempest_custom.txt
+      dest_path: /home/opnfv/repos/functest/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
+  report:
+    sub_testcase_list:
+      - tempest.scenario.test_minimum_basic.TestMinimumBasicScenario.test_minimum_basic_scenario[compute,id-bdbb5441-9204-419d-a225-b4fdbfb1a1a8,image,network,volume]
+      - tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_cold_migration[compute,id-a4858f6c-401e-4155-9a49-d5cd053d1a2f,network]
+      - tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_cold_migration_revert[compute,id-25b188d7-0183-4b1e-a11d-15840c8e2fd6,network]
+      - tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_pause_unpause[compute,id-2b2642db-6568-4b35-b812-eceed3fa20ce,network]
+      - tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_reboot[compute,id-7b6860c2-afa3-4846-9522-adeb38dfbe08,network]
+      - tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_rebuild[compute,id-88a529c2-1daa-4c85-9aec-d541ba3eb699,network]
+      - tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_resize[compute,id-719eb59d-2f42-4b66-b8b1-bb1254473967,network]
+      - tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_stop_start[compute,id-61f1aa9a-1573-410e-9054-afa557cab021,network]
+      - tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_suspend_resume[compute,id-5cdf9499-541d-4923-804e-b9a60620a7f0,network]
+      - tempest.scenario.test_server_advanced_ops.TestServerAdvancedOps.test_resize_volume_backed_server_confirm[compute,id-e6c28180-7454-4b59-b188-0257af08a63b,volume]
+      - tempest.scenario.test_server_advanced_ops.TestServerAdvancedOps.test_server_sequence_suspend_resume[compute,id-949da7d5-72c8-4808-8802-e3d70df98e2c]
+      - tempest.scenario.test_shelve_instance.TestShelveInstance.test_shelve_instance[compute,id-1164e700-0af0-4a4c-8792-35909a88743c,image,network]
+      - tempest.scenario.test_shelve_instance.TestShelveInstance.test_shelve_volume_backed_instance[compute,id-c1b6318c-b9da-490b-9c67-9339b627271f,image,network,volume]
+      - tempest.api.compute.admin.test_live_migration.LiveAutoBlockMigrationV225TestJSON.test_iscsi_volume[id-e19c0cc6-6720-4ed8-be83-b6603ed5c812]
+      - tempest.api.compute.admin.test_live_migration.LiveAutoBlockMigrationV225TestJSON.test_live_block_migration[id-1dce86b8-eb04-4c03-a9d8-9c1dc3ee0c7b]
+      - tempest.api.compute.admin.test_live_migration.LiveAutoBlockMigrationV225TestJSON.test_live_block_migration_paused[id-1e107f21-61b2-4988-8f22-b196e938ab88]
+      - tempest.api.compute.admin.test_live_migration.LiveBlockMigrationTestJSON.test_iscsi_volume[id-e19c0cc6-6720-4ed8-be83-b6603ed5c812]
+      - tempest.api.compute.admin.test_live_migration.LiveBlockMigrationTestJSON.test_live_block_migration[id-1dce86b8-eb04-4c03-a9d8-9c1dc3ee0c7b]
+      - tempest.api.compute.admin.test_live_migration.LiveBlockMigrationTestJSON.test_live_block_migration_paused[id-1e107f21-61b2-4988-8f22-b196e938ab88]
+      - tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_cold_migration[id-4bf0be52-3b6f-4746-9a27-3143636fe30d]
+      - tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_list_migrations[id-75c0b83d-72a0-4cf8-a153-631e83e7d53f]
+      - tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_list_migrations_in_flavor_resize_situation[id-1b512062-8093-438e-b47a-37d2f597cd64]
+      - tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_resize_server_revert_deleted_flavor[id-33f1fec3-ba18-4470-8e4e-1d888e7c3593]
+      - tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_revert_cold_migration[id-caa1aa8b-f4ef-4374-be0d-95f001c2ac2d]

@@ -50,3 +50,10 @@ proposed_tests:
     - dovetail.sdnvpn.tc008
     # resiliency
     - dovetail.resiliency.tc001
+    # tempest
+    - dovetail.tempest.tc001
+    - dovetail.tempest.tc002
+    - dovetail.tempest.tc003
+    - dovetail.tempest.tc004
+    - dovetail.tempest.tc005
+    - dovetail.tempest.tc006
