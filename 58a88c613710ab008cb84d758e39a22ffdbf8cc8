@@ -1,0 +1,993 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_58b6ae3e",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "that",
+      "range": {
+        "startLine": 24,
+        "startChar": 74,
+        "endLine": 24,
+        "endChar": 77
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_d8b59ece",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": ", operate",
+      "range": {
+        "startLine": 33,
+        "startChar": 65,
+        "endLine": 33,
+        "endChar": 66
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_38caca4f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "valid variations in platform behavior due to specific implementations.",
+      "range": {
+        "startLine": 44,
+        "startChar": 17,
+        "endLine": 44,
+        "endChar": 65
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_18c70647",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "implementation of the SUT.",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 77,
+        "endChar": 28
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_78b9f22d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "I think this wording can be improved that address Frank\u0027s comment in the previous version.\n\nOPNFV provides a broad range of capabilities which includes the platform itself as well as tool-chains and infrastructure for integration, deployment and testing of the platform. In this initial version of CVP not all OPNFV capabilities or components are tested. For example deployment tools, performance related testing and MANO (other than APIs in the NFVI and VIM) are all out of scope. Furthermore only a subset of CVP test-cases are deemed compulsory at this stage. A more comprehensive suite of test-cases will be developed for subsequent releases.",
+      "range": {
+        "startLine": 79,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 60
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_58c18e2d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "an initial working scope for CVP, and to recommend",
+      "range": {
+        "startLine": 92,
+        "startChar": 20,
+        "endLine": 92,
+        "endChar": 78
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_b8dd3a17",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "categorized by (delete simply)",
+      "range": {
+        "startLine": 95,
+        "startChar": 40,
+        "endLine": 95,
+        "endChar": 57
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_98e2f6d3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "Why basic ... what does that mean?",
+      "range": {
+        "startLine": 96,
+        "startChar": 54,
+        "endLine": 96,
+        "endChar": 59
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_f8e7c2e2",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "VNFs",
+      "range": {
+        "startLine": 97,
+        "startChar": 17,
+        "endLine": 97,
+        "endChar": 20
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_d8ec7eca",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "CVP is not yet ready to support requirements such as hardware portability, carrier grade performance, fault management and other operational features, security, MANO and VNF verification. These areas are being studied for future consideration.",
+      "range": {
+        "startLine": 106,
+        "startChar": 0,
+        "endLine": 110,
+        "endChar": 42
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_58d86e1d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "by",
+      "range": {
+        "startLine": 113,
+        "startChar": 23,
+        "endLine": 113,
+        "endChar": 25
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_d803de71",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "important",
+      "range": {
+        "startLine": 120,
+        "startChar": 30,
+        "endLine": 120,
+        "endChar": 41
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_78f2929b",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "achieve compliance.",
+      "range": {
+        "startLine": 124,
+        "startChar": 51,
+        "endLine": 124,
+        "endChar": 81
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_58efceb0",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "Optional tests provide",
+      "range": {
+        "startLine": 125,
+        "startChar": 0,
+        "endLine": 125,
+        "endChar": 11
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_b82b7aea",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "are",
+      "range": {
+        "startLine": 137,
+        "startChar": 26,
+        "endLine": 137,
+        "endChar": 28
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_f8350247",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "delete compliant",
+      "range": {
+        "startLine": 139,
+        "startChar": 3,
+        "endLine": 139,
+        "endChar": 14
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_981796a3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "compliant deployment",
+      "range": {
+        "startLine": 139,
+        "startChar": 67,
+        "endLine": 140,
+        "endChar": 7
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_f88342ca",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "delete VNF for consistency",
+      "range": {
+        "startLine": 146,
+        "startChar": 4,
+        "endLine": 146,
+        "endChar": 7
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_386daa33",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "only?",
+      "range": {
+        "startLine": 159,
+        "startChar": 6,
+        "endLine": 159,
+        "endChar": 12
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_5874eefc",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "is this commonly understood?",
+      "range": {
+        "startLine": 174,
+        "startChar": 10,
+        "endLine": 174,
+        "endChar": 23
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_b8609a36",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "compliant",
+      "range": {
+        "startLine": 178,
+        "startChar": 53,
+        "endLine": 178,
+        "endChar": 62
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_9865d647",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "Do we need a glossary?",
+      "range": {
+        "startLine": 183,
+        "startChar": 71,
+        "endLine": 183,
+        "endChar": 74
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_f85a2282",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "NFV requirements",
+      "range": {
+        "startLine": 184,
+        "startChar": 25,
+        "endLine": 184,
+        "endChar": 48
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_d85f5e71",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "is a",
+      "range": {
+        "startLine": 188,
+        "startChar": 59,
+        "endLine": 188,
+        "endChar": 66
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_38548a53",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "in future?",
+      "range": {
+        "startLine": 213,
+        "startChar": 37,
+        "endLine": 213,
+        "endChar": 38
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_58e22ea0",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "\"Resiliency\" is the general category (delete with load)",
+      "range": {
+        "startLine": 221,
+        "startChar": 14,
+        "endLine": 221,
+        "endChar": 23
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_b8c7fa11",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "Testing resiliency with load",
+      "range": {
+        "startLine": 223,
+        "startChar": 0,
+        "endLine": 223,
+        "endChar": 28
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_f8d182ce",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "while verifying its ability to provide",
+      "range": {
+        "startLine": 223,
+        "startChar": 56,
+        "endLine": 224,
+        "endChar": 45
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_38dbeaee",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "Resiliency is an important requirement for end-users.",
+      "range": {
+        "startLine": 225,
+        "startChar": 0,
+        "endLine": 226,
+        "endChar": 41
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_18ff0636",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "Specific project names should be omitted. The stress tests currently implemented are experimental and do not measure any stress related to the data path, they are more like capacity tests. Pass/fail criteria have also not been established. IMO this is premature to include in CVP and not in the agreed scope for Danube.",
+      "range": {
+        "startLine": 228,
+        "startChar": 0,
+        "endLine": 232,
+        "endChar": 20
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_d8bbde70",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "In general I think this section should be rewritten to be clearer on roadmap of security priorities",
+      "range": {
+        "startLine": 236,
+        "startChar": 3,
+        "endLine": 236,
+        "endChar": 11
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_38892acb",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "What are end-users in this context? Carriers?",
+      "range": {
+        "startLine": 238,
+        "startChar": 68,
+        "endLine": 239,
+        "endChar": 9
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_58906eec",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "security",
+      "range": {
+        "startLine": 239,
+        "startChar": 29,
+        "endLine": 239,
+        "endChar": 35
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_7893b2fa",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "What is and end-user deployment?",
+      "range": {
+        "startLine": 242,
+        "startChar": 81,
+        "endLine": 243,
+        "endChar": 10
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_b8bc1a6e",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "This is an area that should be addressed as a priority.",
+      "range": {
+        "startLine": 243,
+        "startChar": 12,
+        "endLine": 245,
+        "endChar": 13
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_f8b6a289",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "common requirement",
+      "range": {
+        "startLine": 247,
+        "startChar": 8,
+        "endLine": 247,
+        "endChar": 23
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_98c156e7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "Again ... need to be clear on what is meant by \"end-user\"",
+      "range": {
+        "startLine": 251,
+        "startChar": 57,
+        "endLine": 251,
+        "endChar": 65
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_38b00a8b",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "Delete",
+      "range": {
+        "startLine": 254,
+        "startChar": 0,
+        "endLine": 254,
+        "endChar": 73
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_78aa921a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "There is one sampleVNF project",
+      "range": {
+        "startLine": 278,
+        "startChar": 12,
+        "endLine": 279,
+        "endChar": 15
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_b8637a19",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "refers to?",
+      "range": {
+        "startLine": 282,
+        "startChar": 8,
+        "endLine": 282,
+        "endChar": 24
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_986836f7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "remove project names",
+      "range": {
+        "startLine": 288,
+        "startChar": 23,
+        "endLine": 288,
+        "endChar": 39
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_587eaeaf",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "Coverage should be made clear",
+      "range": {
+        "startLine": 315,
+        "startChar": 0,
+        "endLine": 315,
+        "endChar": 57
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_d8491e8d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-11T06:23:48Z",
+      "side": 1,
+      "message": "Out of scope for this release",
+      "range": {
+        "startLine": 350,
+        "startChar": 0,
+        "endLine": 354,
+        "endChar": 12
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
