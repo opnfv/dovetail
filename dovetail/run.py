@@ -276,6 +276,7 @@ def main(*args, **kwargs):
         duration = run_test(testsuite_yaml, testarea, logger)
         if dt_cfg.dovetail_config['report_dest'] == "file":
             Report.generate(testsuite_yaml, testarea, duration)
+        Report.save_logs()
     else:
         logger.error('Invalid input commands, testsuite {} testarea {}'
                      .format(kwargs['testsuite'], testarea))
