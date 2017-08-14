@@ -558,3 +558,9 @@ Test Case 25: IPv6 Address Assignment - Dual Net, Dual Stack, Multiple Prefixes,
 
 | tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_multi_prefix_slaac
 
+----------------
+Storage Security
+----------------
+
+| tempest.scenario.test_encrypted_cinder_volumes.TestEncryptedCinderVolumes.test_encrypted_cinder_volumes_cryptsetup
+| tempest.scenario.test_encrypted_cinder_volumes.TestEncryptedCinderVolumes.test_encrypted_cinder_volumes_luks
