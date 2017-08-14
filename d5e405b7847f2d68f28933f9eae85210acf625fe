@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_a237c1af",
+        "filename": "docs/testing/user/testspecification/dynamicnetwork/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 6701
+      },
+      "writtenOn": "2017-08-14T17:37:42Z",
+      "side": 1,
+      "message": "Just for additional clarity, you can specify that \"After triggering the DHCP renew from the VM manually, retrieve the VM1\u0027s configured dns and verify it has been successfully updated\". Because the updated subnet details will be available only when VM sends a new DHCP message.",
+      "revId": "d5e405b7847f2d68f28933f9eae85210acf625fe",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
