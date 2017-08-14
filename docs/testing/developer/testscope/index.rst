@@ -558,3 +558,14 @@ Test Case 25: IPv6 Address Assignment - Dual Net, Dual Stack, Multiple Prefixes,
 
 | tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_multi_prefix_slaac
 
+------------------------------------------------------------------------
+Filtering Packets Based on Security Rules and Port Security in Data Path
+------------------------------------------------------------------------
+
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_port_security_macspoofing_port
+| tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_cross_tenant_traffic
+| tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_in_tenant_traffic
+| tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_multiple_security_groups
+| tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_port_security_disable_security_group
+| tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_port_update_new_security_group
+
