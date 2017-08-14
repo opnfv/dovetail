@@ -558,3 +558,13 @@ Test Case 25: IPv6 Address Assignment - Dual Net, Dual Stack, Multiple Prefixes,
 
 | tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_multi_prefix_slaac
 
+------------------------------------------------------------
+Simple Virtual Machine Resource Scheduling on Multiple Nodes
+------------------------------------------------------------
+
+| tempest.scenario.test_server_multinode.TestServerMultinode.test_schedule_to_all_nodes
+| tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_create_delete_multiple_server_groups_with_same_name_policy
+| tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_create_delete_server_group_with_affinity_policy
+| tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_create_delete_server_group_with_anti_affinity_policy
+| tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_list_server_groups
+| tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_show_server_group
