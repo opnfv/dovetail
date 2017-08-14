@@ -672,3 +672,14 @@ Correct Behavior after Common Virtual Machine Life Cycles Events
 | tempest.scenario.test_server_advanced_ops.TestServerAdvancedOps.test_resize_volume_backed_server_confirm
 | tempest.scenario.test_shelve_instance.TestShelveInstance.test_shelve_instance
 | tempest.scenario.test_shelve_instance.TestShelveInstance.test_shelve_volume_backed_instance
+
+------------------------------------------------------------
+Simple Virtual Machine Resource Scheduling on Multiple Nodes
+------------------------------------------------------------
+
+| tempest.scenario.test_server_multinode.TestServerMultinode.test_schedule_to_all_nodes
+| tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_create_delete_multiple_server_groups_with_same_name_policy
+| tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_create_delete_server_group_with_affinity_policy
+| tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_create_delete_server_group_with_anti_affinity_policy
+| tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_list_server_groups
+| tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_show_server_group
