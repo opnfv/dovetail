@@ -683,3 +683,9 @@ Simple Virtual Machine Resource Scheduling on Multiple Nodes
 | tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_create_delete_server_group_with_anti_affinity_policy
 | tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_list_server_groups
 | tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_show_server_group
+
+--------------------------------------------------------
+Forwarding Packets Through Virtual Networks in Data Path
+--------------------------------------------------------
+
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_mtu_sized_frames
