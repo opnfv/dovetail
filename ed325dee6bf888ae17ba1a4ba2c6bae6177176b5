@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_2272917c",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 687,
+      "author": {
+        "id": 6701
+      },
+      "writtenOn": "2017-08-14T18:09:11Z",
+      "side": 1,
+      "message": "In the step 4, a time stamp will be created and stored in a file inside the VM. rt? Its mentioned as \"Get a timestamp\", which is confusing.\n\nIn step 8, the same file content will be read and compare if the previously written value and the read values or same or not.",
+      "range": {
+        "startLine": 687,
+        "startChar": 17,
+        "endLine": 687,
+        "endChar": 22
+      },
+      "revId": "ed325dee6bf888ae17ba1a4ba2c6bae6177176b5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_026f8d93",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 735,
+      "author": {
+        "id": 6701
+      },
+      "writtenOn": "2017-08-14T18:09:11Z",
+      "side": 1,
+      "message": "Same comment as previous",
+      "range": {
+        "startLine": 735,
+        "startChar": 17,
+        "endLine": 735,
+        "endChar": 22
+      },
+      "revId": "ed325dee6bf888ae17ba1a4ba2c6bae6177176b5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
