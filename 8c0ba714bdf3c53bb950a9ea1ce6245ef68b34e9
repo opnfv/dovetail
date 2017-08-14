@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_82639db0",
+        "filename": "docs/testing/user/testspecification/multiplenodes/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 6701
+      },
+      "writtenOn": "2017-08-14T17:54:37Z",
+      "side": 1,
+      "message": "In addition to this test_schedule_to_all_nodes scenario, I was thinking more of the affinity/anti-affinity related test cases under this category like the following API test case. \n\ntempest.api.compute.servers.test_server_group\n\nI am not sure if there are some affinity/anti-affinity based tempest scenario test cases, but if there are, we should include them also here.",
+      "range": {
+        "startLine": 109,
+        "startChar": 0,
+        "endLine": 109,
+        "endChar": 85
+      },
+      "revId": "8c0ba714bdf3c53bb950a9ea1ce6245ef68b34e9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
