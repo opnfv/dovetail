@@ -7,7 +7,8 @@ dovetail.tempest.tc004:
     testcase: tempest_custom
     pre_copy:
       src_file: tempest_custom.txt
-      dest_path: /home/opnfv/repos/functest/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
+      dest_path: /usr/local/lib/python2.7/dist-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
+      tempest_config_path: /usr/local/lib/python2.7/dist-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml
   report:
     sub_testcase_list:
       - tempest.scenario.test_minimum_basic.TestMinimumBasicScenario.test_minimum_basic_scenario[compute,id-bdbb5441-9204-419d-a225-b4fdbfb1a1a8,image,network,volume]

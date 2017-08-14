@@ -7,7 +7,8 @@ dovetail.ipv6.tc013:
     testcase: tempest_custom
     pre_copy:
       src_file: tempest_custom.txt
-      dest_path: /home/opnfv/repos/functest/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
+      dest_path: /usr/local/lib/python2.7/dist-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
+      tempest_config_path: /usr/local/lib/python2.7/dist-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml
   report:
     sub_testcase_list:
       - tempest.api.network.test_routers.RoutersIpV6Test.test_add_remove_router_interface_with_subnet_id[id-b42e6e39-2e37-49cc-a6f4-8467e940900a,smoke]

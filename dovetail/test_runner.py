@@ -29,7 +29,7 @@ class DockerRunner(object):
         cls.logger = dt_logger.Logger(__name__ + '.DockerRunner').getLogger()
 
     def pre_copy(self, container_id=None, dest_path=None,
-                 src_file=None, exist_file=None):
+                 src_file=None, exist_file=None, tempest_dest_path=None):
         if not dest_path:
             self.logger.error("There has no dest_path in {} config file."
                               .format(self.testcase.name()))
@@ -41,8 +41,14 @@ class DockerRunner(object):
         if exist_file:
             file_path = dt_cfg.dovetail_config[self.type]['config']['dir']
             src_path = os.path.join(file_path, 'pre_config', exist_file)
-
         Container.pre_copy(container_id, src_path, dest_path)
+
+        if tempest_dest_path:
+            file_path = dt_cfg.dovetail_config[self.type]['config']['dir']
+            file_name = dt_cfg.dovetail_config['tempest_conf']
+            src_path = os.path.join(file_path, 'pre_config', file_name)
+            Container.pre_copy(container_id, src_path, tempest_dest_path)
+
         return dest_path
 
     def run(self):
@@ -76,10 +82,11 @@ class DockerRunner(object):
         dest_path = self.testcase.pre_copy_path("dest_path")
         src_file_name = self.testcase.pre_copy_path("src_file")
         exist_file_name = self.testcase.pre_copy_path("exist_src_file")
+        tempest_dest_path = self.testcase.pre_copy_path("tempest_config_path")
 
-        if src_file_name or exist_file_name:
+        if src_file_name or exist_file_name or tempest_dest_path:
             if not self.pre_copy(container_id, dest_path, src_file_name,
-                                 exist_file_name):
+                                 exist_file_name, tempest_dest_path):
                 return
 
         if not self.testcase.prepared():
