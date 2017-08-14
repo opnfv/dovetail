@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_6c1ad018",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-08-14T01:27:47Z",
+      "side": 1,
+      "message": "How about use VM directly to keep consistent? VM is widely used while virtual machine is barely used",
+      "range": {
+        "startLine": 6,
+        "startChar": 7,
+        "endLine": 6,
+        "endChar": 22
+      },
+      "revId": "c796847fa25a39386370da575091ac185a548505",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
