@@ -457,14 +457,16 @@ class FunctestChecker(object):
         sub_testcase = re.sub("\[.*?\]", "", sub_testcase)
         reg = sub_testcase + '[\s+\d+]'
         find_reg = re.compile(reg)
-        match = find_reg.findall(result)
-        if match:
-            return True
+        for tc in result:
+            match = find_reg.findall(tc)
+            if match:
+                return True
         reg = sub_testcase + '$'
         find_reg = re.compile(reg)
-        match = find_reg.findall(result)
-        if match:
-            return True
+        for tc in result:
+            match = find_reg.findall(tc)
+            if match:
+                return True
         return False
 
     def check(self, testcase, db_result):

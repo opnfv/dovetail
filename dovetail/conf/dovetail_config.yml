@@ -17,6 +17,9 @@ pri_key: 'id_rsa'
 # SDNVPN offline image
 sdnvpn_image: 'ubuntu-16.04-server-cloudimg-amd64-disk1.img'
 
+# Tempest image
+cirros_image: 'cirros-0.3.5-x86_64-disk.img'
+
 COMPLIANCE_PATH: compliance/
 TESTCASE_PATH: testcase/
 # testsuite supported, should adjust accordingly
@@ -87,3 +90,4 @@ validate_input:
     - 'cvp.0.2.0'
     - 'cvp.0.3.0'
     - 'cvp.0.4.0'
+    - 'cvp.0.5.0'
