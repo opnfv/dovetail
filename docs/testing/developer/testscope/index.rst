@@ -558,3 +558,8 @@ Test Case 25: IPv6 Address Assignment - Dual Net, Dual Stack, Multiple Prefixes,
 
 | tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_multi_prefix_slaac
 
+--------------------------------------------------------
+Forwarding Packets Through Virtual Networks in Data Path
+--------------------------------------------------------
+
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_mtu_sized_frames
