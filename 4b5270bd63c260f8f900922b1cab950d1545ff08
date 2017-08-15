@@ -22,6 +22,30 @@
       "revId": "4b5270bd63c260f8f900922b1cab950d1545ff08",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_7d871c62",
+        "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-08-15T01:21:50Z",
+      "side": 1,
+      "message": "About this test case, I noticed that it is skipped due to a bug. Refer to https://github.com/openstack/tempest/blob/15.0.0/tempest/scenario/test_network_basic_ops.py#L422",
+      "parentUuid": "da33351e_4269958a",
+      "range": {
+        "startLine": 104,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 81
+      },
+      "revId": "4b5270bd63c260f8f900922b1cab950d1545ff08",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
