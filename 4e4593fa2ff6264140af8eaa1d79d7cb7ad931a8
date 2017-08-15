@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_03baeedd",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-15T17:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_32ef90b2",
+      "range": {
+        "startLine": 3,
+        "startChar": 3,
+        "endLine": 3,
+        "endChar": 45
+      },
+      "revId": "4e4593fa2ff6264140af8eaa1d79d7cb7ad931a8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_43cc0d36",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 10
@@ -36,6 +60,30 @@
       "writtenOn": "2017-08-04T06:27:36Z",
       "side": 1,
       "message": "This email address should be used for all communication with the CVP.",
+      "range": {
+        "startLine": 21,
+        "startChar": 45,
+        "endLine": 22,
+        "endChar": 52
+      },
+      "revId": "4e4593fa2ff6264140af8eaa1d79d7cb7ad931a8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_63ce5a85",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-15T17:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_43cc0d36",
       "range": {
         "startLine": 21,
         "startChar": 45,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_43cb5672",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-15T17:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_03f9654d",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 39
+      },
+      "revId": "4e4593fa2ff6264140af8eaa1d79d7cb7ad931a8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_6395d1e3",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 10
@@ -82,6 +154,30 @@
       "writtenOn": "2017-08-04T06:27:36Z",
       "side": 1,
       "message": "Product name and/or identifier\nProduct specifications",
+      "range": {
+        "startLine": 37,
+        "startChar": 21,
+        "endLine": 37,
+        "endChar": 31
+      },
+      "revId": "4e4593fa2ff6264140af8eaa1d79d7cb7ad931a8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_a3c86275",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-15T17:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_6395d1e3",
       "range": {
         "startLine": 37,
         "startChar": 21,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_83c55e5d",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-15T17:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_439a4d15",
+      "range": {
+        "startLine": 59,
+        "startChar": 50,
+        "endLine": 59,
+        "endChar": 71
+      },
+      "revId": "4e4593fa2ff6264140af8eaa1d79d7cb7ad931a8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_83bbb571",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 10
@@ -128,6 +248,30 @@
       "writtenOn": "2017-08-04T06:27:36Z",
       "side": 1,
       "message": "recommend compliance or non-compliance",
+      "range": {
+        "startLine": 107,
+        "startChar": 78,
+        "endLine": 107,
+        "endChar": 87
+      },
+      "revId": "4e4593fa2ff6264140af8eaa1d79d7cb7ad931a8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_e3a1caaa",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-15T17:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_83bbb571",
       "range": {
         "startLine": 107,
         "startChar": 78,
