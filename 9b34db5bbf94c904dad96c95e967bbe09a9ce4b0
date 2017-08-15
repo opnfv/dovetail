@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_3dc1142f",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-08-15T03:59:56Z",
+      "side": 1,
+      "message": "use pre_condition to do operations in container, no need to add more parameter",
+      "range": {
+        "startLine": 46,
+        "startChar": 8,
+        "endLine": 46,
+        "endChar": 28
+      },
+      "revId": "9b34db5bbf94c904dad96c95e967bbe09a9ce4b0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_5dc4d83f",
+        "filename": "dovetail/testcase/defcore.tc001.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-08-15T03:59:56Z",
+      "side": 1,
+      "message": "use pre_condition to do operations in container, no need to add more parameter",
+      "range": {
+        "startLine": 16,
+        "startChar": 6,
+        "endLine": 16,
+        "endChar": 135
+      },
+      "revId": "9b34db5bbf94c904dad96c95e967bbe09a9ce4b0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
