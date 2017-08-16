@@ -62,8 +62,8 @@ echo "Create the testapi service."
 echo "=========================="
 
 set +e
-# pull image opnfv/testapi:cvp.0.4.0
-testapi_img="opnfv/testapi:cvp.0.4.0"
+# pull image opnfv/testapi:cvp.0.5.0
+testapi_img="opnfv/testapi:cvp.0.5.0"
 echo "Step1: pull the image $testapi_img."
 sudo docker pull $testapi_img
 set -e

@@ -21,14 +21,14 @@ cli:
           - '-y'
         path:
           - 'yardstick/docker_tag'
-        help: 'Overwrite tag for yardstick docker container (e.g. danube.3.1)'
+        help: 'Overwrite tag for yardstick docker container (e.g. danube.3.2)'
       func_tag:
         flags:
           - '--func_tag'
           - '-f'
         path:
           - 'functest/docker_tag'
-        help: 'Overwrite tag for functest docker container (e.g. cvp.0.2.0)'
+        help: 'Overwrite tag for functest docker container (e.g. cvp.0.5.0)'
       bott_tag:
         flags:
           - '--bott_tag'

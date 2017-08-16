@@ -86,6 +86,7 @@ validate_input:
     - 'danube.2.0'
     - 'danube.3.0'
     - 'danube.3.1'
+    - 'danube.3.2'
     - 'cvp.0.1.0'
     - 'cvp.0.2.0'
     - 'cvp.0.3.0'
