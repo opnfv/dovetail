@@ -120,10 +120,11 @@ def source_env(env_file):
 
 def check_https_enabled(logger=None):
     logger.debug("Checking if https enabled or not...")
-    cmd = ("openstack catalog show identity |awk '/public/ {print $4}'")
-    ret, msg = exec_cmd(cmd, logger)
-    if ret == 0 and "https://" in msg:
+    os_auth_url = os.getenv('OS_AUTH_URL')
+    if os_auth_url.startswith('https'):
+        logger.debug("https is enabled")
         return True
+    logger.debug("https is not enabled")
     return False
 
 
