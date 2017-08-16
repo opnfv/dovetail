@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_579310a3",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-08-16T17:37:04Z",
+      "side": 1,
+      "message": "Add clarifications on the terms:\nStress is a generic term for a stimulus to the system beyond the normal idle state. This can include traffic, instability, security threats, etc. Stress tests need to be designed for the particular stressor, although combinations of stressors is also good to consider.\n\nResiliency is the ability to continue to provide service under stress, with minimal disruption. We can measure the resiliency in tests in terms of service failures (e.g. failed app transactions), duration of service disruption, scope of the disruption beyond the initial stress (which may spread but should tail off as the system restabilizes), ability of the system to be less disrupted under future similar stress (this gets into machine learning), etc.",
+      "revId": "003a9338ad016ecc01dd0a9fc8cc082642c3db70",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_b7909c96",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-08-16T17:37:04Z",
+      "side": 1,
+      "message": "stressors",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 8
+      },
+      "revId": "003a9338ad016ecc01dd0a9fc8cc082642c3db70",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_57daf078",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-08-16T17:37:04Z",
+      "side": 1,
+      "message": "Add:\nTest Areas\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\nStressors\n* traffic\n  * different types per the resiliency measurements\n* instability\n  * physical infra failure (host, NIC, disk, ...)\n  * virtual infra failure (cloud control plane components, SDNC components, NFVI components)\n* security threats\n\nResiliency\n* service failure rate\n  * link failure, e.g. loss ping failures\n  * transaction failure, e.g. failed web/API requests\n* service failure duration\n* scope of disruption\n* immunity to future stressors of the same type",
+      "revId": "003a9338ad016ecc01dd0a9fc8cc082642c3db70",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
