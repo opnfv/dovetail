@@ -14,14 +14,14 @@ if [ "$#" -ne 2 ]; then
     echo "./launch_db.sh 192.168.115.2 http://116.66.187.136:9999"
     echo ""
     echo "parameters:"
-    echo "  db_host_ip: your localhost ip address "
+    echo "  host_ip: your localhost ip address "
     echo "  base_url: your public url for website"
     echo ""
     exit 1
 fi
 
 export mongodb_port=${mongodb_port:-"27017"}
-export testapi_port=${testapi_port:-"8000"}
+export testapi_port=${testapi_port:-"8010"}
 export db_host_ip=${db_host_ip:-"$1"}
 export base_url=${base_url:-"$2"}
 
@@ -62,7 +62,6 @@ echo "Create the testapi service."
 echo "=========================="
 
 set +e
-# pull image opnfv/testapi:cvp.0.5.0
 testapi_img="opnfv/testapi:cvp.0.5.0"
 echo "Step1: pull the image $testapi_img."
 sudo docker pull $testapi_img
@@ -79,20 +78,46 @@ fi
 
 # run testapi container
 echo "Step3: run ${container_name} container."
-cmd="sudo docker run -itd -p ${testapi_port}:8000 --name ${container_name} -e mongodb_url=mongodb://${db_host_ip}:${mongodb_port}/ -e base_url=${base_url} ${testapi_img}"
+cmd="sudo docker run -itd -p 8010:8010 --name ${container_name} -v /home/testapi/logs:/home/testapi/logs -e mongodb_url=mongodb://${db_host_ip}:${mongodb_port}/ -e base_url=${base_url} ${testapi_img}"
 echo $cmd
 ${cmd}
 
 echo "Wait for testapi to work..."
 sleep 10
 
+set +e
+nginx_img="opnfv/dovetail:nginx.cvp.0.5.0"
+echo "Step1: pull the image $nginx_img."
+sudo docker pull $nginx_img
+set -e
+
+container_name='nginx_cvp'
+
+echo "Step2: remove the exist container with the same name '$container_name' if exists."
+sudo docker ps -a -f "name=${container_name}"
+
+if [[ ! -z $(sudo docker ps -aq -f "name=${container_name}") ]]; then
+    sudo docker ps -aq -f "name=${container_name}" | xargs sudo docker rm -f
+fi
+
+# run nginx container
+echo "Step3: run ${container_name} container."
+cmd="sudo docker run -itd -p 8000:8000 -v /home/testapi/logs:/home/testapi/logs --name ${container_name} -e testapi_url=${db_host_ip}:8010 ${nginx_img}"
+echo $cmd
+${cmd}
+
 echo "================================="
 echo "Upload default project info to DB"
 echo "================================="
 
 echo "Init DB info..."
-cmd="python ./init_db.py ${db_host_ip} ${testapi_port}"
-echo ${cmd}
+cmd="python ./init_db.py ${db_host_ip} 8010"
+echo $cmd
+${cmd}
+
+echo "Init dovetail testcase"
+cmd="python ./init_dovetail.py ${base_url}/api/v1"
+echo $cmd
 ${cmd}
 
 echo "Successfully load DB info."
