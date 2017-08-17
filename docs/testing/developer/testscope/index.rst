@@ -118,6 +118,8 @@ Basic server operations in the Compute API
 | tempest.api.compute.servers.test_create_server.ServersTestJSON.test_verify_server_details
 | tempest.api.compute.servers.test_create_server.ServersTestManualDisk.test_verify_created_server_vcpus
 | tempest.api.compute.servers.test_create_server.ServersTestManualDisk.test_verify_server_details
+| tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_server_status
+| tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_rebuild_deleted_server
 
 
 Retrieve volume information through the Compute API
