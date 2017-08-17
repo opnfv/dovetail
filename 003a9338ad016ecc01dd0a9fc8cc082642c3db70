@@ -74,6 +74,24 @@
       "revId": "003a9338ad016ecc01dd0a9fc8cc082642c3db70",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_1cf6c8d7",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-08-17T14:01:00Z",
+      "side": 1,
+      "message": "None of these \"areas\" are addressed in the single test case below, which only sets up sets of VMs and runs ping.  I would not expand the description here until tests are added to address those casess",
+      "parentUuid": "da33351e_57daf078",
+      "revId": "003a9338ad016ecc01dd0a9fc8cc082642c3db70",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
