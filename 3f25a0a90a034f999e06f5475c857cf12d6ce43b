@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_bcba3cdf",
+        "filename": "docs/testing/user/testspecification/vimoperationsnetwork/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-08-17T14:17:54Z",
+      "side": 0,
+      "message": "this is the same group that was just created and above and hasn\u0027t been deleted.  This also applies to all the actions/assertions below that reference create SG1.",
+      "revId": "3f25a0a90a034f999e06f5475c857cf12d6ce43b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
