@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "da33351e_1c924857",
+        "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-08-17T14:45:25Z",
+      "side": 1,
+      "message": "Is this for testing IPv4 or IPv6, or both.  Should there be two separate test cases, one for each?",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 44
+      },
+      "revId": "4b5270bd63c260f8f900922b1cab950d1545ff08",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_4269958a",
         "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
         "patchSetId": 4
@@ -42,6 +65,29 @@
         "startChar": 0,
         "endLine": 104,
         "endChar": 81
+      },
+      "revId": "4b5270bd63c260f8f900922b1cab950d1545ff08",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_5c9cd069",
+        "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-08-17T14:45:25Z",
+      "side": 1,
+      "message": "I suggest we set MTU above 1500 bytes, as there are more and more cases using large frames and that needs to be tested.  Suggestions for size?  1700-bytes, 1900-bytes?",
+      "range": {
+        "startLine": 126,
+        "startChar": 40,
+        "endLine": 126,
+        "endChar": 44
       },
       "revId": "4b5270bd63c260f8f900922b1cab950d1545ff08",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
