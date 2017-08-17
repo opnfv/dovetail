@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_92aac66e",
+        "filename": "docs/testing/user/testspecification/vimoperationsnetwork/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-08-17T02:20:18Z",
+      "side": 1,
+      "message": "network (internal, external)",
+      "range": {
+        "startLine": 67,
+        "startChar": 9,
+        "endLine": 67,
+        "endChar": 16
+      },
+      "revId": "8291f36aa6b1ac165278a71bcdf66e95f33fe492",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_f2b6b2db",
+        "filename": "docs/testing/user/testspecification/vimoperationsnetwork/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-08-17T02:20:18Z",
+      "side": 1,
+      "message": "Add:\n- create router\n- add router gateway\n- add router interface \n- show router\n- list router ports\n- delete router interface \n- delete router gateway\n- delete router",
+      "revId": "8291f36aa6b1ac165278a71bcdf66e95f33fe492",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_b2ad4a8b",
+        "filename": "docs/testing/user/testspecification/vimoperationsnetwork/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 232
+      },
+      "writtenOn": "2017-08-17T02:20:18Z",
+      "side": 1,
+      "message": "Add:\n- create floating IP\n- associate floating IP\n- list floating IPs\n- disassociate floating IP\n- delete floating IP",
+      "revId": "8291f36aa6b1ac165278a71bcdf66e95f33fe492",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
