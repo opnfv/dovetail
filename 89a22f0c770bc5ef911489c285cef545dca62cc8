@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_dc9e2056",
+        "filename": "docs/testing/user/testspecification/dynamicnetwork/index.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-08-17T14:55:23Z",
+      "side": 1,
+      "message": "From the test descriptions, these seem to all apply to IPv4 only.  Should we state that here, or extend these to also support IPv6.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 75
+      },
+      "revId": "89a22f0c770bc5ef911489c285cef545dca62cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
