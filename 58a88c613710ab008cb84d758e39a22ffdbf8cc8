@@ -324,6 +324,29 @@
     },
     {
       "key": {
+        "uuid": "da33351e_7f770603",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-17T21:57:15Z",
+      "side": 1,
+      "message": "Analysis of Scope",
+      "range": {
+        "startLine": 128,
+        "startChar": 0,
+        "endLine": 128,
+        "endChar": 12
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_b82b7aea",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -547,6 +570,29 @@
         "startChar": 59,
         "endLine": 188,
         "endChar": 66
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_ff5af681",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-17T21:57:15Z",
+      "side": 1,
+      "message": "HA should also be under heading of NFV specific requirement",
+      "range": {
+        "startLine": 203,
+        "startChar": 3,
+        "endLine": 203,
+        "endChar": 20
       },
       "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
