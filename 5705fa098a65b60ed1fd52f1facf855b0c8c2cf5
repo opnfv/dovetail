@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_30376de5",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T17:41:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_ffab1687",
+      "range": {
+        "startLine": 20,
+        "startChar": 45,
+        "endLine": 20,
+        "endChar": 50
+      },
+      "revId": "5705fa098a65b60ed1fd52f1facf855b0c8c2cf5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_dfb0d2f6",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 11
@@ -36,6 +60,30 @@
       "writtenOn": "2017-08-17T20:16:38Z",
       "side": 1,
       "message": "address",
+      "range": {
+        "startLine": 21,
+        "startChar": 27,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "5705fa098a65b60ed1fd52f1facf855b0c8c2cf5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_903479df",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T17:41:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_dfb0d2f6",
       "range": {
         "startLine": 21,
         "startChar": 27,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_7031f5eb",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T17:41:55Z",
+      "side": 1,
+      "message": "this email is critical in establishing identity. I think it\u0027s useful to explicitly pointing it out.",
+      "parentUuid": "da33351e_3f957e40",
+      "range": {
+        "startLine": 57,
+        "startChar": 8,
+        "endLine": 57,
+        "endChar": 38
+      },
+      "revId": "5705fa098a65b60ed1fd52f1facf855b0c8c2cf5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_1f799a2f",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 11
@@ -82,6 +154,30 @@
       "writtenOn": "2017-08-17T20:16:38Z",
       "side": 1,
       "message": "\"System preparation guide\" needs work! https://gerrit.opnfv.org/gerrit/#/c/32499/6",
+      "range": {
+        "startLine": 71,
+        "startChar": 4,
+        "endLine": 71,
+        "endChar": 59
+      },
+      "revId": "5705fa098a65b60ed1fd52f1facf855b0c8c2cf5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_d04d6174",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T17:41:55Z",
+      "side": 1,
+      "message": "Ack.",
+      "parentUuid": "da33351e_1f799a2f",
       "range": {
         "startLine": 71,
         "startChar": 4,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_b0525d11",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T17:41:55Z",
+      "side": 1,
+      "message": "The latter. Will revise with plural. We probably will compile all into one PDF when publishing for easier reference though.",
+      "parentUuid": "da33351e_1fceba5a",
+      "range": {
+        "startLine": 72,
+        "startChar": 4,
+        "endLine": 72,
+        "endChar": 37
+      },
+      "revId": "5705fa098a65b60ed1fd52f1facf855b0c8c2cf5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_7fdb861b",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 11
@@ -128,6 +248,30 @@
       "writtenOn": "2017-08-17T20:16:38Z",
       "side": 1,
       "message": "CLI reference doc is blank. Testing guide in shape? https://gerrit.opnfv.org/gerrit/#/c/34285",
+      "range": {
+        "startLine": 73,
+        "startChar": 4,
+        "endLine": 73,
+        "endChar": 33
+      },
+      "revId": "5705fa098a65b60ed1fd52f1facf855b0c8c2cf5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_f05ce527",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T17:41:55Z",
+      "side": 1,
+      "message": "There are some areas that need additional content and revisions. But in general, it\u0027s mostly there. The CLI reference may be moved to a different doc.",
+      "parentUuid": "da33351e_7fdb861b",
       "range": {
         "startLine": 73,
         "startChar": 4,
@@ -163,6 +307,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_50415138",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T17:41:55Z",
+      "side": 1,
+      "message": "yes. A tester may still want to take a note of the circumstance of the test to avoid confusion down the road if a lot of test results are showing up (e.g. for a lab).",
+      "parentUuid": "da33351e_5fd8421d",
+      "range": {
+        "startLine": 78,
+        "startChar": 70,
+        "endLine": 79,
+        "endChar": 31
+      },
+      "revId": "5705fa098a65b60ed1fd52f1facf855b0c8c2cf5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_bf04ee7e",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 11
@@ -186,6 +354,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_303e4db9",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T17:41:55Z",
+      "side": 1,
+      "message": "yes.",
+      "parentUuid": "da33351e_bf04ee7e",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 10
+      },
+      "revId": "5705fa098a65b60ed1fd52f1facf855b0c8c2cf5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_fffe766a",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 11
@@ -197,6 +389,30 @@
       "writtenOn": "2017-08-17T20:16:38Z",
       "side": 1,
       "message": "Perhaps rather say \"Use of compliance\" ... thinking certification means more than using a logo? This has not been determined yet by marketing committee AFAIK.",
+      "range": {
+        "startLine": 116,
+        "startChar": 17,
+        "endLine": 116,
+        "endChar": 28
+      },
+      "revId": "5705fa098a65b60ed1fd52f1facf855b0c8c2cf5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_7048d55b",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T17:41:55Z",
+      "side": 1,
+      "message": "I\u0027m not too worried about word smithing, it\u0027s a common way, but yes, the c\u0026c and marketing committee will determine what this step means. Added a phrase in the description to clarify.",
+      "parentUuid": "da33351e_fffe766a",
       "range": {
         "startLine": 116,
         "startChar": 17,
