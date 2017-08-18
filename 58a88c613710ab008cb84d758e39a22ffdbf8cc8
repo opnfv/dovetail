@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_10f4e9f0",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "it\u0027s \u0027and\u0027",
+      "parentUuid": "da33351e_58b6ae3e",
+      "range": {
+        "startLine": 24,
+        "startChar": 74,
+        "endLine": 24,
+        "endChar": 77
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_d8b59ece",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -36,6 +60,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": ", operate",
+      "range": {
+        "startLine": 33,
+        "startChar": 65,
+        "endLine": 33,
+        "endChar": 66
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_f0f865e7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_d8b59ece",
       "range": {
         "startLine": 33,
         "startChar": 65,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_50ddd16f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "added \u0027implementations\u0027",
+      "parentUuid": "da33351e_38caca4f",
+      "range": {
+        "startLine": 44,
+        "startChar": 17,
+        "endLine": 44,
+        "endChar": 65
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_18c70647",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -82,6 +154,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "implementation of the SUT.",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 77,
+        "endChar": 28
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_30dacd78",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_18c70647",
       "range": {
         "startLine": 77,
         "startChar": 0,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_b0c1bde6",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Some wording revised/improved.\n\nWe need to be clear however, the notion that CVP should test ALL of OPNFV community does is fundamentally misguided. As a *compliance* test program, over-prescriptive to compliance is also a danger to avoid. CVP, by definition, will test a subset of all the features in the OPNFV releases. See also lines 42-44, and the governance doc.",
+      "parentUuid": "da33351e_78b9f22d",
+      "range": {
+        "startLine": 79,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 60
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_58c18e2d",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -128,6 +248,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "an initial working scope for CVP, and to recommend",
+      "range": {
+        "startLine": 92,
+        "startChar": 20,
+        "endLine": 92,
+        "endChar": 78
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_d063a118",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_58c18e2d",
       "range": {
         "startLine": 92,
         "startChar": 20,
@@ -163,6 +307,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_b0689df6",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_b8dd3a17",
+      "range": {
+        "startLine": 95,
+        "startChar": 40,
+        "endLine": 95,
+        "endChar": 57
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_98e2f6d3",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -174,6 +342,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "Why basic ... what does that mean?",
+      "range": {
+        "startLine": 96,
+        "startChar": 54,
+        "endLine": 96,
+        "endChar": 59
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_106ea901",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "comes later",
+      "parentUuid": "da33351e_98e2f6d3",
       "range": {
         "startLine": 96,
         "startChar": 54,
@@ -209,6 +401,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_f07225e4",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_f8e7c2e2",
+      "range": {
+        "startLine": 97,
+        "startChar": 17,
+        "endLine": 97,
+        "endChar": 20
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_d8ec7eca",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -220,6 +436,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "CVP is not yet ready to support requirements such as hardware portability, carrier grade performance, fault management and other operational features, security, MANO and VNF verification. These areas are being studied for future consideration.",
+      "range": {
+        "startLine": 106,
+        "startChar": 0,
+        "endLine": 110,
+        "endChar": 42
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_507791d4",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_d8ec7eca",
       "range": {
         "startLine": 106,
         "startChar": 0,
@@ -255,6 +495,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_30748dce",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_58d86e1d",
+      "range": {
+        "startLine": 113,
+        "startChar": 23,
+        "endLine": 113,
+        "endChar": 25
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_d803de71",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -266,6 +530,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "important",
+      "range": {
+        "startLine": 120,
+        "startChar": 30,
+        "endLine": 120,
+        "endChar": 41
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_90811992",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_d803de71",
       "range": {
         "startLine": 120,
         "startChar": 30,
@@ -301,6 +589,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_707e15b0",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_78f2929b",
+      "range": {
+        "startLine": 124,
+        "startChar": 51,
+        "endLine": 124,
+        "endChar": 81
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_58efceb0",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -312,6 +624,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "Optional tests provide",
+      "range": {
+        "startLine": 125,
+        "startChar": 0,
+        "endLine": 125,
+        "endChar": 11
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_d04a8182",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_58efceb0",
       "range": {
         "startLine": 125,
         "startChar": 0,
@@ -347,6 +683,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_b04ffd91",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_7f770603",
+      "range": {
+        "startLine": 128,
+        "startChar": 0,
+        "endLine": 128,
+        "endChar": 12
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_b82b7aea",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -358,6 +718,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "are",
+      "range": {
+        "startLine": 137,
+        "startChar": 26,
+        "endLine": 137,
+        "endChar": 28
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_10450970",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "the intent ... is",
+      "parentUuid": "da33351e_b82b7aea",
       "range": {
         "startLine": 137,
         "startChar": 26,
@@ -393,6 +777,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_f049858c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_f8350247",
+      "range": {
+        "startLine": 139,
+        "startChar": 3,
+        "endLine": 139,
+        "endChar": 14
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_981796a3",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -404,6 +812,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "compliant deployment",
+      "range": {
+        "startLine": 139,
+        "startChar": 67,
+        "endLine": 140,
+        "endChar": 7
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_305bed55",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_981796a3",
       "range": {
         "startLine": 139,
         "startChar": 67,
@@ -439,6 +871,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_9058f957",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_f88342ca",
+      "range": {
+        "startLine": 146,
+        "startChar": 4,
+        "endLine": 146,
+        "endChar": 7
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_386daa33",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -450,6 +906,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "only?",
+      "range": {
+        "startLine": 159,
+        "startChar": 6,
+        "endLine": 159,
+        "endChar": 12
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_7055751c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "we support k8s too.",
+      "parentUuid": "da33351e_386daa33",
       "range": {
         "startLine": 159,
         "startChar": 6,
@@ -485,6 +965,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_d031e10c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "yes, for the basic rules of spreading to more than one servers.",
+      "parentUuid": "da33351e_5874eefc",
+      "range": {
+        "startLine": 174,
+        "startChar": 10,
+        "endLine": 174,
+        "endChar": 23
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_b8609a36",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -496,6 +1000,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "compliant",
+      "range": {
+        "startLine": 178,
+        "startChar": 53,
+        "endLine": 178,
+        "endChar": 62
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_b036dd01",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_b8609a36",
       "range": {
         "startLine": 178,
         "startChar": 53,
@@ -531,6 +1059,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_103ce9e1",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "A glossary may be useful as a stand-alone doc somewhere to avoid huge repetitions.",
+      "parentUuid": "da33351e_9865d647",
+      "range": {
+        "startLine": 183,
+        "startChar": 71,
+        "endLine": 183,
+        "endChar": 74
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_f85a2282",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -542,6 +1094,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "NFV requirements",
+      "range": {
+        "startLine": 184,
+        "startChar": 25,
+        "endLine": 184,
+        "endChar": 48
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_f0406558",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_f85a2282",
       "range": {
         "startLine": 184,
         "startChar": 25,
@@ -577,6 +1153,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_d018c186",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_d85f5e71",
+      "range": {
+        "startLine": 188,
+        "startChar": 59,
+        "endLine": 188,
+        "endChar": 66
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_ff5af681",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -588,6 +1188,30 @@
       "writtenOn": "2017-08-17T21:57:15Z",
       "side": 1,
       "message": "HA should also be under heading of NFV specific requirement",
+      "range": {
+        "startLine": 203,
+        "startChar": 3,
+        "endLine": 203,
+        "endChar": 20
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_500cb142",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "HA is actually a requirement for all deployments, in enterprise or cloud.",
+      "parentUuid": "da33351e_ff5af681",
       "range": {
         "startLine": 203,
         "startChar": 3,
@@ -623,6 +1247,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_4b13605c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "present.",
+      "parentUuid": "da33351e_38548a53",
+      "range": {
+        "startLine": 213,
+        "startChar": 37,
+        "endLine": 213,
+        "endChar": 38
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_58e22ea0",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -634,6 +1282,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "\"Resiliency\" is the general category (delete with load)",
+      "range": {
+        "startLine": 221,
+        "startChar": 14,
+        "endLine": 221,
+        "endChar": 23
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_2b109c4d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "postponing this section\u0027s revision to later after the discussion.",
+      "parentUuid": "da33351e_58e22ea0",
       "range": {
         "startLine": 221,
         "startChar": 14,
@@ -807,6 +1479,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_8b1d6869",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "end-user used the same way as in e.g. \"end user advisory group\".",
+      "parentUuid": "da33351e_38892acb",
+      "range": {
+        "startLine": 238,
+        "startChar": 68,
+        "endLine": 239,
+        "endChar": 9
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_7893b2fa",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -818,6 +1514,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "What is and end-user deployment?",
+      "range": {
+        "startLine": 242,
+        "startChar": 81,
+        "endLine": 243,
+        "endChar": 10
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_6b1aa46f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "customer, not just lab",
+      "parentUuid": "da33351e_7893b2fa",
       "range": {
         "startLine": 242,
         "startChar": 81,
@@ -853,6 +1573,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_cb2650ba",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "yes",
+      "parentUuid": "da33351e_b8bc1a6e",
+      "range": {
+        "startLine": 243,
+        "startChar": 12,
+        "endLine": 245,
+        "endChar": 13
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_f8b6a289",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -864,6 +1608,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "common requirement",
+      "range": {
+        "startLine": 247,
+        "startChar": 8,
+        "endLine": 247,
+        "endChar": 23
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_ab2b0c81",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_f8b6a289",
       "range": {
         "startLine": 247,
         "startChar": 8,
@@ -922,6 +1690,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_0b21589f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_38b00a8b",
+      "range": {
+        "startLine": 254,
+        "startChar": 0,
+        "endLine": 254,
+        "endChar": 73
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_78aa921a",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -933,6 +1725,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "There is one sampleVNF project",
+      "range": {
+        "startLine": 278,
+        "startChar": 12,
+        "endLine": 279,
+        "endChar": 15
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_eb2514ac",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "more VNFs though",
+      "parentUuid": "da33351e_78aa921a",
       "range": {
         "startLine": 278,
         "startChar": 12,
@@ -968,6 +1784,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_4b3a40ce",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_b8637a19",
+      "range": {
+        "startLine": 282,
+        "startChar": 8,
+        "endLine": 282,
+        "endChar": 24
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_986836f7",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -979,6 +1819,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "remove project names",
+      "range": {
+        "startLine": 288,
+        "startChar": 23,
+        "endLine": 288,
+        "endChar": 39
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_4b41a038",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "good suggestion - i can see this can be problematic.",
+      "parentUuid": "da33351e_986836f7",
       "range": {
         "startLine": 288,
         "startChar": 23,
@@ -1025,6 +1889,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "Out of scope for this release",
+      "range": {
+        "startLine": 350,
+        "startChar": 0,
+        "endLine": 354,
+        "endChar": 12
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_2b3edcb8",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-18T22:51:32Z",
+      "side": 1,
+      "message": "postponing... as noted above",
+      "parentUuid": "da33351e_d8491e8d",
       "range": {
         "startLine": 350,
         "startChar": 0,
