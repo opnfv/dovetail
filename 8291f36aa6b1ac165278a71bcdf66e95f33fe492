@@ -116,6 +116,29 @@
       "revId": "8291f36aa6b1ac165278a71bcdf66e95f33fe492",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_fa315ba3",
+        "filename": "docs/testing/user/testspecification/vimoperationsnetwork/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-08-22T03:52:45Z",
+      "side": 1,
+      "message": "Are the numbers correspond with the exact order the test cases listed above?\nIt is very hard to find the link, how about number them specifically or name them explicitly?",
+      "range": {
+        "startLine": 166,
+        "startChar": 14,
+        "endLine": 166,
+        "endChar": 15
+      },
+      "revId": "8291f36aa6b1ac165278a71bcdf66e95f33fe492",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
