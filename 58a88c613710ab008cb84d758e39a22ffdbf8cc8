@@ -1318,6 +1318,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_80ad3e34",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-22T16:16:07Z",
+      "side": 1,
+      "message": "Removing \"with load\", and broadening the resiliency testing scope, and moving this to E or later release.",
+      "parentUuid": "da33351e_2b109c4d",
+      "range": {
+        "startLine": 221,
+        "startChar": 14,
+        "endLine": 221,
+        "endChar": 23
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_b8c7fa11",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -1329,6 +1353,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "Testing resiliency with load",
+      "range": {
+        "startLine": 223,
+        "startChar": 0,
+        "endLine": 223,
+        "endChar": 28
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_e0aa4a18",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-22T16:16:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_b8c7fa11",
       "range": {
         "startLine": 223,
         "startChar": 0,
@@ -1364,6 +1412,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_606e3a03",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-22T16:16:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_f8d182ce",
+      "range": {
+        "startLine": 223,
+        "startChar": 56,
+        "endLine": 224,
+        "endChar": 45
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_38dbeaee",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 14
@@ -1375,6 +1447,30 @@
       "writtenOn": "2017-08-11T06:23:48Z",
       "side": 1,
       "message": "Resiliency is an important requirement for end-users.",
+      "range": {
+        "startLine": 225,
+        "startChar": 0,
+        "endLine": 226,
+        "endChar": 41
+      },
+      "revId": "58a88c613710ab008cb84d758e39a22ffdbf8cc8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_407336e9",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-22T16:16:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_38dbeaee",
       "range": {
         "startLine": 225,
         "startChar": 0,
