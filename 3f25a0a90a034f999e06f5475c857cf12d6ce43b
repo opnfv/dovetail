@@ -16,6 +16,24 @@
       "revId": "3f25a0a90a034f999e06f5475c857cf12d6ce43b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_7ac1cb7f",
+        "filename": "docs/testing/user/testspecification/vimoperationsnetwork/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-08-22T03:26:47Z",
+      "side": 0,
+      "message": "Sorry, I am afraid I\u0027ll misunderstand your comment.\nSo do you mean it just delete SG1 in test action 1 and check in test assertion 1. In the following actions/assertions, it doesn\u0027t delete the created security groups.\nIf so, I will add the deletion operations in all test actions.\nIf I missed something, please let me know.",
+      "parentUuid": "da33351e_bcba3cdf",
+      "revId": "3f25a0a90a034f999e06f5475c857cf12d6ce43b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
