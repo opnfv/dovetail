@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "da33351e_9af92fcb",
+        "filename": "docs/testing/user/testspecification/multiplenodes/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-08-22T03:42:42Z",
+      "side": 1,
+      "message": "how about all using VM. sometimes virtual machine, some places VM, looks a little bit strange.",
+      "range": {
+        "startLine": 16,
+        "startChar": 16,
+        "endLine": 16,
+        "endChar": 32
+      },
+      "revId": "8c0ba714bdf3c53bb950a9ea1ce6245ef68b34e9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_82639db0",
         "filename": "docs/testing/user/testspecification/multiplenodes/index.rst",
         "patchSetId": 1
