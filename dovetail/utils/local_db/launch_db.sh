@@ -50,7 +50,7 @@ fi
 
 # run mongodb container
 echo "Step3: run ${container_name} container."
-cmd="sudo docker run -itd -p ${mongodb_port}:27017 --name ${container_name} ${mongodb_img}"
+cmd="sudo docker run -itd -p ${mongodb_port}:27017 -v /home/testapi/mongo:/data/db --name ${container_name} ${mongodb_img}"
 echo $cmd
 ${cmd}
 
