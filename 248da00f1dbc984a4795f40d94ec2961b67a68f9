@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_f41def74",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-08-23T19:56:03Z",
+      "side": 1,
+      "message": "change to \"are\"",
+      "range": {
+        "startLine": 139,
+        "startChar": 26,
+        "endLine": 139,
+        "endChar": 28
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_3e58ce31",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-08-23T19:56:03Z",
+      "side": 1,
+      "message": "This may be a dumb question, but I don\u0027t believe I\u0027ve seen any test case where the VNF actually forwards the traffic.  There are test cases where the Nova/Neutron router forwards traffic between subnets, but never the VM.  Just a thought.",
+      "range": {
+        "startLine": 145,
+        "startChar": 61,
+        "endLine": 146,
+        "endChar": 7
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_7e41b638",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-08-23T19:56:03Z",
+      "side": 1,
+      "message": "Should add service function chaining (SFC) to this list.",
+      "range": {
+        "startLine": 300,
+        "startChar": 0,
+        "endLine": 300,
+        "endChar": 84
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_be4b3e58",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-08-23T19:56:03Z",
+      "side": 1,
+      "message": "Can we move this to be after the higher bullet point, like this.  \"Test Area: common cloud capabilities (Mandatory)\"  Do the same for the other.  It\u0027s getting lost as these lists grow in length.",
+      "range": {
+        "startLine": 331,
+        "startChar": 3,
+        "endLine": 331,
+        "endChar": 13
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
