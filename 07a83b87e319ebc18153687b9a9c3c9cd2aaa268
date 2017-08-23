@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_be34dede",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-08-23T19:47:45Z",
+      "side": 1,
+      "message": "Should we provide any examples of why an application could be denied, i.e. incomplete, technically inaccurate, etc.",
+      "range": {
+        "startLine": 106,
+        "startChar": 0,
+        "endLine": 106,
+        "endChar": 28
+      },
+      "revId": "07a83b87e319ebc18153687b9a9c3c9cd2aaa268",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
