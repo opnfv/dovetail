@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "da33351e_1ef98ae9",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "As written could be interpreted that that OPNFV does not support these requirements in any way. We do have some capability in certain of these areas. Perhaps better to say  ... \"to set compliance requirements for capabilities such as ...\"?",
+      "range": {
+        "startLine": 109,
+        "startChar": 24,
+        "endLine": 109,
+        "endChar": 31
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_7edd3670",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "for further consideration in the CVP.",
+      "range": {
+        "startLine": 112,
+        "startChar": 30,
+        "endLine": 112,
+        "endChar": 55
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_f41def74",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 16
@@ -48,6 +94,260 @@
     },
     {
       "key": {
+        "uuid": "da33351e_7e4b762b",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "Yes there is no VNF forwarding test case however as I read it this just gives an example of \"the simplest network function\" .... the list below has \"forwarding packets through virtual networks in data path\" ... no VNF forwarding. Not sure if that helps? Otherwise we could remove the example to avoid others asking the same question :)",
+      "parentUuid": "da33351e_3e58ce31",
+      "range": {
+        "startLine": 145,
+        "startChar": 61,
+        "endLine": 146,
+        "endChar": 7
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_de63a2af",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "Service Function Chaining (SFC)",
+      "range": {
+        "startLine": 185,
+        "startChar": 71,
+        "endLine": 185,
+        "endChar": 74
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_3e10ce00",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "OPNFV testing projects have started introducing tests in\nthe Danube release that can be used ...",
+      "range": {
+        "startLine": 229,
+        "startChar": 0,
+        "endLine": 231,
+        "endChar": 36
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_1e150af1",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "rather say \" ... development of test cases are ...\"",
+      "range": {
+        "startLine": 233,
+        "startChar": 4,
+        "endLine": 233,
+        "endChar": 33
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_7ef9b6c7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "Resiliency testing has been deferred to future CVP releases.",
+      "range": {
+        "startLine": 233,
+        "startChar": 42,
+        "endLine": 234,
+        "endChar": 19
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_be033eb7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "delete \"by the end-users\". I think its just as important to operators.",
+      "range": {
+        "startLine": 238,
+        "startChar": 68,
+        "endLine": 239,
+        "endChar": 9
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_9e00faab",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "Rather say \"a commercial deployment\"?",
+      "range": {
+        "startLine": 242,
+        "startChar": 78,
+        "endLine": 243,
+        "endChar": 10
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_3e272e66",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "This seems like the summing up sentence ... move to end of the security paragraph?",
+      "range": {
+        "startLine": 243,
+        "startChar": 12,
+        "endLine": 245,
+        "endChar": 13
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_fe2ca64c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "has",
+      "range": {
+        "startLine": 248,
+        "startChar": 32,
+        "endLine": 248,
+        "endChar": 33
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_de31e2a3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "are",
+      "range": {
+        "startLine": 252,
+        "startChar": 34,
+        "endLine": 252,
+        "endChar": 36
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_5e1dd20e",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "Move this sentence to under 8 below?",
+      "range": {
+        "startLine": 295,
+        "startChar": 0,
+        "endLine": 296,
+        "endChar": 51
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_7e41b638",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 16
@@ -71,6 +371,76 @@
     },
     {
       "key": {
+        "uuid": "da33351e_1e5eaae6",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "SFC is included under NFV specific functional requirements above",
+      "parentUuid": "da33351e_7e41b638",
+      "range": {
+        "startLine": 300,
+        "startChar": 0,
+        "endLine": 300,
+        "endChar": 84
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_be1a1e15",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "Enhancements may also be made to the test areas that are included in this release, particularly those with limited coverage.",
+      "range": {
+        "startLine": 312,
+        "startChar": 0,
+        "endLine": 313,
+        "endChar": 56
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_ded8c255",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "The above analysis concludes with the scope summarized below. These test areas represent significant advancement towards the CVP\u0027s objectives and is used as the basis for the initial scope.",
+      "range": {
+        "startLine": 318,
+        "startChar": 0,
+        "endLine": 321,
+        "endChar": 40
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_be4b3e58",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 16
@@ -87,6 +457,98 @@
         "startChar": 3,
         "endLine": 331,
         "endChar": 13
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_1ee34a08",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "Remove specific project names",
+      "range": {
+        "startLine": 344,
+        "startChar": 4,
+        "endLine": 344,
+        "endChar": 19
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_3ede0e40",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 352,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "Per above remove Resiliency for this release.",
+      "range": {
+        "startLine": 348,
+        "startChar": 0,
+        "endLine": 352,
+        "endChar": 12
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_7ee7f612",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": "test tool limitations ... sounds better",
+      "range": {
+        "startLine": 373,
+        "startChar": 55,
+        "endLine": 373,
+        "endChar": 64
+      },
+      "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_5ee4b20c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 377,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:20:51Z",
+      "side": 1,
+      "message": ", hence",
+      "range": {
+        "startLine": 377,
+        "startChar": 42,
+        "endLine": 377,
+        "endChar": 47
       },
       "revId": "248da00f1dbc984a4795f40d94ec2961b67a68f9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
