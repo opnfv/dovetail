@@ -82,17 +82,13 @@ class DockerRunner(object):
                                  exist_file_name):
                 return
 
-        if not self.testcase.prepared():
-            prepare_failed = False
-            cmds = self.testcase.pre_condition()
-            if cmds:
-                for cmd in cmds:
-                    ret, msg = Container.exec_cmd(container_id, cmd)
-                    if ret != 0:
-                        prepare_failed = True
-                        break
-            if not prepare_failed:
-                self.testcase.prepared(True)
+        cmds = self.testcase.pre_condition()
+        if cmds:
+            for cmd in cmds:
+                ret, msg = Container.exec_cmd(container_id, cmd)
+                if ret != 0:
+                    self.logger.error("Failed to exec all pre_condition cmds.")
+                    break
 
         if not self.testcase.prepare_cmd(self.type):
             self.logger.error(
