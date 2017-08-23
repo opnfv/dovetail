@@ -22,6 +22,75 @@
       "revId": "07a83b87e319ebc18153687b9a9c3c9cd2aaa268",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_9ec59a5d",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:53:03Z",
+      "side": 1,
+      "message": "Current doc title is ... \"Compliance and Verification program system preparation guide\"",
+      "range": {
+        "startLine": 119,
+        "startChar": 4,
+        "endLine": 119,
+        "endChar": 59
+      },
+      "revId": "07a83b87e319ebc18153687b9a9c3c9cd2aaa268",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_bec85e75",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:53:03Z",
+      "side": 1,
+      "message": "The only common test spec doc is the Test scope document ... actual title is \"Compliance and Verification program accepted test cases\". It is a list of test cases organized into test areas. There are also the individual test specification documents which would be good to list (I don\u0027t think that we list these anywhere else.",
+      "range": {
+        "startLine": 120,
+        "startChar": 4,
+        "endLine": 120,
+        "endChar": 39
+      },
+      "revId": "07a83b87e319ebc18153687b9a9c3c9cd2aaa268",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_fea146aa",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-08-23T22:53:03Z",
+      "side": 1,
+      "message": "Current doc title is \"Compliance Verification Program Testing User Guide\"",
+      "range": {
+        "startLine": 121,
+        "startChar": 5,
+        "endLine": 121,
+        "endChar": 38
+      },
+      "revId": "07a83b87e319ebc18153687b9a9c3c9cd2aaa268",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
