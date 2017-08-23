@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_0d0682ce",
+        "filename": "docs/testing/user/testspecification/multiplenodes/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-08-23T08:49:47Z",
+      "side": 1,
+      "message": "I think it\u0027s better to use the short name after giving its definition.\nThe definition of VM is given in Line 37, so we can use \u0027VM\u0027 after Line 37, and use \u0027virtual machine\u0027 before Line 37.\nIs that ok?",
+      "parentUuid": "da33351e_9af92fcb",
+      "range": {
+        "startLine": 16,
+        "startChar": 16,
+        "endLine": 16,
+        "endChar": 32
+      },
+      "revId": "8c0ba714bdf3c53bb950a9ea1ce6245ef68b34e9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_82639db0",
         "filename": "docs/testing/user/testspecification/multiplenodes/index.rst",
         "patchSetId": 1
