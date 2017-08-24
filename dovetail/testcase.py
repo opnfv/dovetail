@@ -157,6 +157,7 @@ class Testcase(object):
         runner = TestRunnerFactory.create(self)
         try:
             runner.run()
+            runner.save_logs()
         except AttributeError as e:
             self.logger.exception(
                 'Test case: {} Exception: {}'.format(self.name, e))
