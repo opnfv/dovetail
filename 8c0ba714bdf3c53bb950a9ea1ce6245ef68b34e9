@@ -117,6 +117,30 @@
       "revId": "8c0ba714bdf3c53bb950a9ea1ce6245ef68b34e9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_28c40b5e",
+        "filename": "docs/testing/user/testspecification/multiplenodes/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-08-25T06:59:31Z",
+      "side": 1,
+      "message": "There are 5 test cases under this category:\n1. test_create_delete_multiple_server_groups_with_same_name_policy (affinity)\n2. test_create_delete_server_group_with_affinity_policy (affinity)\n3. test_create_delete_server_group_with_anti_affinity_policy (anti-affinity)\n4. test_list_server_groups (affinity)\n5. test_show_server_group (affinity)\nI will add these 5 test cases here.",
+      "parentUuid": "da33351e_82639db0",
+      "range": {
+        "startLine": 109,
+        "startChar": 0,
+        "endLine": 109,
+        "endChar": 85
+      },
+      "revId": "8c0ba714bdf3c53bb950a9ea1ce6245ef68b34e9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
