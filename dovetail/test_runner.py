@@ -109,12 +109,36 @@ class DockerRunner(object):
 
         Container.clean(container_id, self.type)
 
+    def save_logs(self):
+        pass
+
 
 class FunctestRunner(DockerRunner):
 
     def __init__(self, testcase):
         self.type = 'functest'
         super(FunctestRunner, self).__init__(testcase)
+
+    def save_logs(self):
+        validate_testcase = self.testcase.validate_testcase()
+        test_area = self.testcase.name().split(".")[1]
+        result_path = os.path.join(os.environ["DOVETAIL_HOME"], 'results')
+        dest_path = os.path.join(result_path, test_area + '_logs')
+        dest_file = os.path.join(dest_path, self.testcase.name() + '.log')
+        if validate_testcase == 'tempest_custom':
+            source_file = os.path.join(result_path, 'tempest', 'tempest.log')
+        elif validate_testcase == 'refstack_defcore':
+            source_file = os.path.join(result_path, 'refstack', 'refstack.log')
+        elif validate_testcase == 'bgpvpn':
+            source_file = os.path.join(result_path, 'bgpvpn.log')
+        else:
+            source_file = None
+        if source_file:
+            if os.path.isfile(source_file):
+                os.renames(source_file, dest_file)
+            else:
+                self.logger.error("Tempest log file for test case {} is not "
+                                  "found.".format(self.testcase.name()))
 
 
 class YardstickRunner(DockerRunner):
