@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_fbe2eaff",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-08-28T03:47:22Z",
+      "side": 1,
+      "message": "why not put this into parent class?",
+      "range": {
+        "startLine": 151,
+        "startChar": 4,
+        "endLine": 151,
+        "endChar": 17
+      },
+      "revId": "20c1dfa76cb82615588299ca89c8b5bfc4af9f16",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
