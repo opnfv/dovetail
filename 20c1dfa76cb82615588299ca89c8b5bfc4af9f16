@@ -22,6 +22,30 @@
       "revId": "20c1dfa76cb82615588299ca89c8b5bfc4af9f16",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_db360652",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-08-28T06:56:37Z",
+      "side": 1,
+      "message": "Will move it into parent.",
+      "parentUuid": "da33351e_fbe2eaff",
+      "range": {
+        "startLine": 151,
+        "startChar": 4,
+        "endLine": 151,
+        "endChar": 17
+      },
+      "revId": "20c1dfa76cb82615588299ca89c8b5bfc4af9f16",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
