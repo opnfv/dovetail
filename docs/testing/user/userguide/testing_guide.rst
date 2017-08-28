@@ -131,8 +131,8 @@ credentials and privileges to execute all test operations. If the SUT uses terms
 somewhat differently from the standard Openstack naming, you will need to adjust
 this file accordingly.
 
-In our example, we will use the file '${DOVETAIL_HOME}/pre_config/env_config.sh'. Create and edit
-the file so that all parameters are set correctly to match your SUT. Here is an example of what
+Create and edit the file ``${DOVETAIL_HOME}/pre_config/env_config.sh`` so that
+all parameters are set correctly to match your SUT. Here is an example of what
 this file should contain.
 
 .. code-block:: bash
@@ -169,6 +169,15 @@ this file should contain.
    # Home directory for dovetail that you have created before.
    export DOVETAIL_HOME=/home/dovetail
 
+   # Special environment parameters for https.
+   # If using https + cacert, the path of cacert file should be provided.
+   # The cacert file should be put at $DOVETAIL_HOME/pre_config.
+   export OS_CACERT=$DOVETAIL_HOME/pre_config
+
+   # If using https + no cacert, should add OS_INSECURE environment parameter.
+   export OS_INSECURE=True
+
+
 Export all these variables into environment by,
 
 .. code-block:: bash
@@ -182,6 +191,21 @@ settings are correct by,
 
    $ openstack service list
 
+If your SUT uses hosts file to translate hostnames into the IP
+of OS_AUTH_URL, then you need to provide these hosts info in file
+``$DOVETAIL_HOME/pre_config/hosts.yaml``.
+
+Create and edit file ``$DOVETAIL_HOME/pre_config/hosts.yaml``. Here is an example of
+what this file should contain.
+
+.. code-block:: bash
+
+   $ cat ${DOVETAIL_HOME}/pre_config/hosts.yaml
+
+   ---
+   hosts_info:
+     - 172.xxx.xxx.xxx image.xx.xx.xx.com
+     - 172.xxx.xxx.xxx compute.xx.xx.xx.com
 
 Installing Prerequisite on the Test Host
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -257,9 +281,13 @@ The Dovetail project maintains a Docker image that has Dovetail test tools prein
 This Docker image is tagged with versions. Before pulling the Dovetail image, check the
 OPNFV's CVP web page first to determine the right tag for CVP testing.
 
-If the Test Host is online, you can directly pull.
+If the Test Host is online, you can directly pull Dovetail Docker image and download ubuntu
+and cirros images.
 
 .. code-block:: bash
+
+   $ sudo wget -nc http://artifacts.opnfv.org/sdnvpn/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/pre_config
+   $ sudo wget -nc http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img -P ${DOVETAIL_HOME}/pre_config
 
    $ sudo docker pull opnfv/dovetail:cvp.0.5.0
    cvp.0.5.0: Pulling from opnfv/dovetail
@@ -292,6 +320,7 @@ offline, then all these dependencies will also need to be manually copied.
    $ sudo docker pull opnfv/yardstick:danube.3.2
    $ sudo docker pull opnfv/bottlenecks:cvp.0.4.0
    $ sudo wget -nc http://artifacts.opnfv.org/sdnvpn/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P {ANY_DIR}
+   $ sudo wget -nc http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img -P {ANY_DIR}
 
 Once all these images are pulled, save the images, copy to the Test Host, and then load
 the Dovetail and all dependent images at the Test Host.
@@ -309,9 +338,10 @@ Copy dovetail.tar file to the Test Host, and then load the images on the Test Ho
 
    $ sudo docker load --input dovetail.tar
 
-Copy sdnvpn test area image ubuntu-16.04-server-cloudimg-amd64-disk1.img to ${DOVETAIL_HOME}/pre_config/.
+Copy sdnvpn test area image ubuntu-16.04-server-cloudimg-amd64-disk1.img to ``${DOVETAIL_HOME}/pre_config/``.
+Copy cirros image cirros-0.3.5-x86_64-disk.img to ``${DOVETAIL_HOME}/pre_config/``.
 
-Now check to see that the Dovetail image has been pulled or loaded properly.
+Now check to see that all Docker images have been pulled or loaded properly.
 
 .. code-block:: bash
 
@@ -343,12 +373,24 @@ Now you should be in the Dovetail container's prompt and ready to execute
 test suites.
 
 The Dovetail client CLI allows the tester to specify which test suite to run.
-By default the results are stored in a local file
-``$DOVETAIL_HOME/results``.
+By default the results are stored in a local file ``$DOVETAIL_HOME/results``.
 
 .. code-block:: bash
 
    $ dovetail run --testsuite <test-suite-name>
+
+If you want to see more DEBUG logs, ``--debug`` should be added.
+
+.. code-block:: bash
+
+   $ dovetail run --testsuite <test-suite-name> --debug
+
+If the Test Host is offline, ``--offline`` should be added to support running with
+local resources.
+
+.. code-block:: bash
+
+   $ dovetail run --testsuite <test-suite-name> --offline
 
 Multiple test suites may be available. For the purpose of running
 CVP test suite, the test suite name follows the following format,
@@ -387,8 +429,8 @@ Special Configuration for Running HA Test Cases
 
 HA test cases need to know the info of a controller node of the OpenStack.
 It should include the node's name, role, ip, as well as the user and key_filename
-or password to login the node. Users should create file ${DOVETAIL_HOME}/pre_config/pod.yaml
-to store the info.
+or password to login the node. Users should create file
+``${DOVETAIL_HOME}/pre_config/pod.yaml`` to store the info.
 
 There is a sample file for users.
 
@@ -412,7 +454,7 @@ There is a sample file for users.
        password: root
 
 Besides the 'password', user could also provide 'key_filename' to login the node.
-Users need to create file $DOVETAIL_HOME/pre_config/id_rsa to store the private key.
+Users need to create file ``$DOVETAIL_HOME/pre_config/id_rsa`` to store the private key.
 
 .. code-block:: bash
 
@@ -425,6 +467,53 @@ Users need to create file $DOVETAIL_HOME/pre_config/id_rsa to store the private 
        # Dovetail will move the key file from $DOVETAIL_HOME/pre_config/id_rsa
        # to /root/.ssh/id_rsa of Yardstick container
        key_filename: /root/.ssh/id_rsa
+
+
+Special Configuration for Running defcore, IPv6 and tempest Test Cases
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All test cases in test area defcore, ipv6 and tempest are picked up from Tempest.
+For all these test cases, they need some configurations. Most of them
+are done by Dovetail. However, there are still some configurations needed to be
+given by users who know the SUT better. All these additional configurations should
+be in file ``$DOVETAIL_HOME/pre_config/tempest_conf.yaml``. If this file is not given,
+some test cases will be skipped or failed.
+
+Create and edit file ``$DOVETAIL_HOME/pre_config/tempest_conf.yaml``.
+Here is an example of what this file should contain.
+
+.. code-block:: bash
+
+   compute:
+     # The minimum number of compute nodes expected.
+     # This should be no less than 2 and no larger than the compute nodes the SUT actually has.
+     min_compute_nodes: 2
+
+     # Expected device name when a volume is attached to an instance.
+     volume_device_name: vdb
+
+     # Lower version of the test target microversion range.
+     min_microversion: 2.2
+
+     # Upper version of the test target microversion range.
+     max_microversion: latest
+
+   compute-feature-enabled:
+     # Set to be true if the SUT supports live migration.
+     # Set to be False if the SUT doesn't support that.
+     live_migration: True
+
+     # Set to be True if the SUT uses block devices for live migration
+     # Set to be False if the SUT doesn't support that.
+     block_migration_for_live_migration: True
+
+     # Set to be True if the SUT block migration supports cinder iSCSI volumes.
+     # Set to be False if the SUT doesn't support that.
+     block_migrate_cinder_iscsi: True
+
+     # Set to be True if the SUT supports attaching an encrypted volume to a running server instance.
+     # Set to be False if the SUT doesn't support that.
+     attach_encrypted_volume: True
 
 
 Making Sense of CVP Test Results
@@ -447,23 +536,32 @@ When a tester is performing trial runs, Dovetail stores results in a local file 
 
      * Additional log files may be of interests: refstack.log, dovetail_ha_tcXXX.out ...
 
-   * Example: Openstack refstack test case example
+   * Example: defcore test case example
 
-     * Can see the log details in refstack.log, which has the passed/skipped/failed
-       test cases result, the failed test cases have rich debug information for the
-       users to see why this test case fails.
+     * Can see the log details in ``defcore_logs/dovetail.defcore.tc001.log``,
+       which has the passed, skipped and failed test cases results.
 
-   * Example: OPNFV Functest test case example
+     * The skipped test cases have the reason for the users to see why these test cases skipped.
 
-     * For Functest tool, its log is stored in functest.log
+     * The failed test cases have rich debug information for the users to see why these test cases fail.
 
-     * For each test case result in Functest, the logs are stored in functest_results.txt.
+   * Example: vping test case example
 
-   * Example: OPNFV Yardstick test case example
+     * Its log is stored in dovetail.log.
 
-     * For Yardstick tool, its log is stored in yardstick.log
+     * Its result is stored in functest_results.txt.
 
-     * For each test case result in Yardstick, the logs are stored in dovetail_ha_tcXXX.out, respectively.
+   * Example: ha test case example
+
+     * Its log is stored in dovetail.log.
+
+     * Its result is stored in dovetail_ha_tcXXX.out.
+
+   * Example: ipv6, sdnvpn and tempest test cases examples
+
+     * Can see the log details in ``ipv6_logs/dovetail.ipv6.tcXXX.log``,
+       ``sdnvpn_logs/dovetail.sdnvpn.tcXXX.log`` and ``tempest_logs/dovetail.tempest.tcXXX.log``,
+       respectively. They all have the passed, skipped and failed test cases results.
 
 #. OPNFV web interface
   CVP will host a web site to collect test results. Users can upload their results to this web site,
