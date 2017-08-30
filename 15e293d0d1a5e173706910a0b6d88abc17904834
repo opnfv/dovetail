@@ -25,6 +25,23 @@
     },
     {
       "key": {
+        "uuid": "da33351e_d68ed4cf",
+        "filename": "docs/testing/user/testspecification/multiplenodes/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-30T18:38:47Z",
+      "side": 1,
+      "message": "evaluate capabilities to schedule ...",
+      "revId": "15e293d0d1a5e173706910a0b6d88abc17904834",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_168cbc34",
         "filename": "docs/testing/user/testspecification/multiplenodes/index.rst",
         "patchSetId": 3
@@ -41,6 +58,52 @@
         "startChar": 0,
         "endLine": 51,
         "endChar": 60
+      },
+      "revId": "15e293d0d1a5e173706910a0b6d88abc17904834",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_36bd8069",
+        "filename": "docs/testing/user/testspecification/multiplenodes/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-30T18:38:47Z",
+      "side": 1,
+      "message": "a short explanation of this threshold will be helpful.",
+      "range": {
+        "startLine": 134,
+        "startChar": 20,
+        "endLine": 134,
+        "endChar": 37
+      },
+      "revId": "15e293d0d1a5e173706910a0b6d88abc17904834",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_56bac46e",
+        "filename": "docs/testing/user/testspecification/multiplenodes/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-08-30T18:38:47Z",
+      "side": 1,
+      "message": "suggest to clarify the text of this assertion to make it more precise.",
+      "range": {
+        "startLine": 138,
+        "startChar": 24,
+        "endLine": 138,
+        "endChar": 80
       },
       "revId": "15e293d0d1a5e173706910a0b6d88abc17904834",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
