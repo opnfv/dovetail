@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_96772c3b",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-08-30T15:26:30Z",
+      "side": 1,
+      "message": "These tests are by design limited to creating and deleting server groups with certain policies. They do not verify if the policy actually applies, i.e., it does not schedule VMs and checks the placement. If such \"scenario\"-like tests do not exist yet, we could add them to our backlog of tests which need to be implemented.",
+      "range": {
+        "startLine": 566,
+        "startChar": 2,
+        "endLine": 570,
+        "endChar": 90
+      },
+      "revId": "15e293d0d1a5e173706910a0b6d88abc17904834",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_168cbc34",
+        "filename": "docs/testing/user/testspecification/multiplenodes/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-08-30T15:26:30Z",
+      "side": 1,
+      "message": "I think we can just remove that sentence. It does not apply to the first test case which is from server_multinode and doesn\u0027t add a lot of information.",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 60
+      },
+      "revId": "15e293d0d1a5e173706910a0b6d88abc17904834",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
