@@ -94,6 +94,29 @@
     },
     {
       "key": {
+        "uuid": "da33351e_301bc31c",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 742,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-08-31T13:47:38Z",
+      "side": 1,
+      "message": "This is the fist reference to T_STAMP1 / 2.  I would recommend referring to the earlier as, \"Create a timestamp T_STAMP1 and store it in a file F1, etc.",
+      "range": {
+        "startLine": 742,
+        "startChar": 31,
+        "endLine": 742,
+        "endChar": 58
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_dc49d3b8",
         "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
         "patchSetId": 2
@@ -105,6 +128,30 @@
       "writtenOn": "2017-08-31T09:53:53Z",
       "side": 1,
       "message": "This test seems to be specific to iSCSI. Hence, it is too specific for inclusion in our certification test suite. Not all cloud deployment use iSCSI for block storage.",
+      "range": {
+        "startLine": 761,
+        "startChar": 15,
+        "endLine": 761,
+        "endChar": 20
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_70d42b20",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 761,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-08-31T13:47:38Z",
+      "side": 1,
+      "message": "Could we list this test case (and the other iSCSI one) as optional?",
+      "parentUuid": "da33351e_dc49d3b8",
       "range": {
         "startLine": 761,
         "startChar": 15,
