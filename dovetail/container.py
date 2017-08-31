@@ -153,6 +153,23 @@ class Container(object):
         envs = envs + ' -e BUILD_TAG=%s-%s' % (dovetail_config['build_tag'],
                                                testcase_name)
 
+        hosts_config = ""
+        hosts_config_file = os.path.join(dovetail_config['config_dir'],
+                                         'hosts.yaml')
+        try:
+            with open(hosts_config_file) as f:
+                hosts_info = yaml.safe_load(f)
+            if hosts_info['hosts_info']:
+                for host in hosts_info['hosts_info']:
+                    dt_utils.add_hosts_info(host)
+                    hosts_config += " --add-host "
+                    hosts_config += str(host)
+                cls.logger.info('Get hosts info {}.'.format(hosts_config))
+        except Exception:
+            cls.logger.warn('Failed to get hosts info in {}, '
+                            'maybe some issues with domain name resolution.'
+                            .format(hosts_config_file))
+
         config = ""
         if type.lower() == "functest":
             config = cls.set_functest_config(testcase_name)
@@ -167,22 +184,6 @@ class Container(object):
         config_volume = \
             ' -v %s:%s ' % (os.getenv("DOVETAIL_HOME"),
                             dovetail_config[type]['config']['dir'])
-
-        hosts_config = ""
-        hosts_config_path = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), 'userconfig'))
-        try:
-            with open(os.path.join(hosts_config_path, 'hosts.yaml')) as f:
-                hosts_info = yaml.safe_load(f)
-            if hosts_info['hosts_info']:
-                for host in hosts_info['hosts_info']:
-                    hosts_config += " --add-host "
-                    hosts_config += str(host)
-                cls.logger.info('Get hosts info {}.'.format(hosts_config))
-        except Exception:
-            cls.logger.warn('Failed to get hosts info in {}/hosts.yaml, '
-                            'maybe some issues with domain name resolution.'
-                            .format(hosts_config_path))
 
         cacert_volume = ""
         https_enabled = dt_utils.check_https_enabled(cls.logger)
