@@ -1,0 +1,211 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_fce5b7a8",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 578,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-08-31T09:53:53Z",
+      "side": 1,
+      "message": "I propose to remove this test because I consider its focus on iSCSI too specific for a certification test suite.",
+      "range": {
+        "startLine": 578,
+        "startChar": 0,
+        "endLine": 578,
+        "endChar": 100
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_dc8ef3cf",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 581,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-08-31T09:53:53Z",
+      "side": 1,
+      "message": "same as above: iSCSI is too specific",
+      "range": {
+        "startLine": 581,
+        "startChar": 0,
+        "endLine": 581,
+        "endChar": 92
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_fcfc9740",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-08-31T09:53:53Z",
+      "side": 1,
+      "message": "I am skeptical if live migration tests are a good choice for the certification test suite due to limited support in commercial products.",
+      "range": {
+        "startLine": 579,
+        "startChar": 2,
+        "endLine": 583,
+        "endChar": 107
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_dcf71358",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 588,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-08-31T09:53:53Z",
+      "side": 1,
+      "message": "these and others are admin API tests. The OpenStack Interop WG has explicitly excluded admin API test cases - clearly having public clouds in mind here. Have we discussed this in Dovetail?",
+      "range": {
+        "startLine": 584,
+        "startChar": 0,
+        "endLine": 588,
+        "endChar": 90
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_dc49d3b8",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 761,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-08-31T09:53:53Z",
+      "side": 1,
+      "message": "This test seems to be specific to iSCSI. Hence, it is too specific for inclusion in our certification test suite. Not all cloud deployment use iSCSI for block storage.",
+      "range": {
+        "startLine": 761,
+        "startChar": 15,
+        "endLine": 761,
+        "endChar": 20
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_3cef1f89",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 831,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-08-31T09:53:53Z",
+      "side": 1,
+      "message": "Does the test also create and attache a volume?",
+      "range": {
+        "startLine": 831,
+        "startChar": 0,
+        "endLine": 831,
+        "endChar": 79
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_7ce9a77f",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 877,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-08-31T09:53:53Z",
+      "side": 1,
+      "message": "Does the test also create and attache a volume?",
+      "range": {
+        "startLine": 877,
+        "startChar": 0,
+        "endLine": 877,
+        "endChar": 82
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_1cf21b6f",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 903,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-08-31T09:53:53Z",
+      "side": 1,
+      "message": "Same as above. we cannot assume all SUTs use iSCSI block storage.",
+      "range": {
+        "startLine": 903,
+        "startChar": 0,
+        "endLine": 903,
+        "endChar": 41
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_5ceca38f",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 973,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-08-31T09:53:53Z",
+      "side": 1,
+      "message": "Does the test also create and attache a volume?",
+      "range": {
+        "startLine": 973,
+        "startChar": 0,
+        "endLine": 973,
+        "endChar": 80
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
