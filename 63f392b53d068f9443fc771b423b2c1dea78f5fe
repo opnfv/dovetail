@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_0107541d",
+        "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-08-31T06:42:41Z",
+      "side": 1,
+      "message": "Don",
+      "parentUuid": "da33351e_4a3859a0",
+      "range": {
+        "startLine": 15,
+        "startChar": 79,
+        "endLine": 15,
+        "endChar": 97
+      },
+      "revId": "63f392b53d068f9443fc771b423b2c1dea78f5fe",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_2a3b559d",
         "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
         "patchSetId": 5
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_e1019007",
+        "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-08-31T06:42:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_2a3b559d",
+      "range": {
+        "startLine": 16,
+        "startChar": 47,
+        "endLine": 16,
+        "endChar": 65
+      },
+      "revId": "63f392b53d068f9443fc771b423b2c1dea78f5fe",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_eab96d16",
         "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
         "patchSetId": 5
@@ -59,6 +107,30 @@
       "writtenOn": "2017-08-29T14:19:25Z",
       "side": 1,
       "message": "nitpicking: I suggest rephrasing this paragraph. The meaning of the first sentence is a bit confusing and the remainder of the paragraph refers to multiple tests although this test area only contains a single test.",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 81
+      },
+      "revId": "63f392b53d068f9443fc771b423b2c1dea78f5fe",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_3c00bf00",
+        "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-08-31T06:42:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_eab96d16",
       "range": {
         "startLine": 48,
         "startChar": 0,
@@ -117,6 +189,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_1c033b0e",
+        "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-08-31T06:42:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_6a139d0d",
+      "range": {
+        "startLine": 120,
+        "startChar": 2,
+        "endLine": 120,
+        "endChar": 10
+      },
+      "revId": "63f392b53d068f9443fc771b423b2c1dea78f5fe",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_2ad4f545",
         "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
         "patchSetId": 5
@@ -128,6 +224,30 @@
       "writtenOn": "2017-08-29T14:19:25Z",
       "side": 1,
       "message": "if I am not mistaken, these pings are sent from the host running the test suite. Maybe add this here for clarity.",
+      "range": {
+        "startLine": 126,
+        "startChar": 24,
+        "endLine": 126,
+        "endChar": 33
+      },
+      "revId": "63f392b53d068f9443fc771b423b2c1dea78f5fe",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_5c0dc336",
+        "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-08-31T06:42:41Z",
+      "side": 1,
+      "message": "Yes, has added test action 6 to specify that it\u0027s ping from Host.",
+      "parentUuid": "da33351e_2ad4f545",
       "range": {
         "startLine": 126,
         "startChar": 24,
