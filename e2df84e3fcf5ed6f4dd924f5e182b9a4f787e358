@@ -16,6 +16,24 @@
       "revId": "e2df84e3fcf5ed6f4dd924f5e182b9a4f787e358",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_692722b7",
+        "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-09-01T07:15:55Z",
+      "side": 1,
+      "message": "The mtu size here is the default value of the network\u0027s mtu. User or this test case wouldn\u0027t config this size.",
+      "parentUuid": "da33351e_0602c50a",
+      "revId": "e2df84e3fcf5ed6f4dd924f5e182b9a4f787e358",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
