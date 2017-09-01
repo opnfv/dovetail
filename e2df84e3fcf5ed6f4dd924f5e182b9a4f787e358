@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_0602c50a",
+        "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2017-09-01T06:59:04Z",
+      "side": 1,
+      "message": "I didn\u0027t see neutron mtu is configured in the following steps, is it an assumption that we already have mtu size be configured to pass the mtu packet? if yes, maybe it shall be mentioned in precondition?",
+      "revId": "e2df84e3fcf5ed6f4dd924f5e182b9a4f787e358",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
