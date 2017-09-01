@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_49cb3e1e",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 17
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-01T10:33:15Z",
+      "side": 1,
+      "message": "What is the different between \"resource overload\" tests and the \"stress tests\" mentioned in the resiliency section. How about moving the \"resource overload\" tests from this section to the resilience section? Otherwise we should clarify the difference here.",
+      "range": {
+        "startLine": 211,
+        "startChar": 39,
+        "endLine": 211,
+        "endChar": 57
+      },
+      "revId": "344f27b87856faa0f5440d198b81038ae7b45626",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_49f21e70",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 17
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-01T10:33:15Z",
+      "side": 1,
+      "message": "I think we can improve the clarity of the document in terms of current scope and future scope. First of all, this entire analysis identified current and future work items in the respective previous sections. I suggest to change this particular heading to \"further CVP scope enhancements\" and just keep the list below without the first two items. Then, create a dedicted \"Future Scope section\" below the \"Summary of test scope\" section and list all future work items there.\n\nThis would create two easily identifible sections - one listing the Danube-specific scope and one the Danube-specific future scope. This would be the place where readers not interested in the analysis itself can get a clear overview of what is in and what is out.",
+      "range": {
+        "startLine": 298,
+        "startChar": 3,
+        "endLine": 298,
+        "endChar": 9
+      },
+      "revId": "344f27b87856faa0f5440d198b81038ae7b45626",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_c9fd8e3d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 17
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-01T10:33:15Z",
+      "side": 1,
+      "message": "I suggest to move this to the analyis and future work sections. If it is not included, it shouldn\u0027t be listed here.",
+      "range": {
+        "startLine": 354,
+        "startChar": 0,
+        "endLine": 356,
+        "endChar": 71
+      },
+      "revId": "344f27b87856faa0f5440d198b81038ae7b45626",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_09f81648",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 17
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-01T10:33:15Z",
+      "side": 1,
+      "message": "Can we make this more concrete or move it to the analysis section? This would make this \"this is our scope section\" more clear.",
+      "range": {
+        "startLine": 358,
+        "startChar": 0,
+        "endLine": 362,
+        "endChar": 28
+      },
+      "revId": "344f27b87856faa0f5440d198b81038ae7b45626",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
