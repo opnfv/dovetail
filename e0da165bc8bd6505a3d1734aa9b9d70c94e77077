@@ -71,6 +71,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_863ff5d5",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-09-01T07:25:26Z",
+      "side": 1,
+      "message": "I agree to delete these live migration tests.",
+      "parentUuid": "da33351e_fcfc9740",
+      "range": {
+        "startLine": 579,
+        "startChar": 2,
+        "endLine": 583,
+        "endChar": 107
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_dcf71358",
         "filename": "docs/testing/developer/testscope/index.rst",
         "patchSetId": 2
@@ -94,6 +118,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_8616d553",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 588,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-09-01T07:25:26Z",
+      "side": 1,
+      "message": "If these test cases need admin role, then they should be removed. Defcore test cases need non-admin role and it will conflict with these ones.",
+      "parentUuid": "da33351e_dcf71358",
+      "range": {
+        "startLine": 584,
+        "startChar": 0,
+        "endLine": 588,
+        "endChar": 90
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_301bc31c",
         "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
         "patchSetId": 2
@@ -105,6 +153,30 @@
       "writtenOn": "2017-08-31T13:47:38Z",
       "side": 1,
       "message": "This is the fist reference to T_STAMP1 / 2.  I would recommend referring to the earlier as, \"Create a timestamp T_STAMP1 and store it in a file F1, etc.",
+      "range": {
+        "startLine": 742,
+        "startChar": 31,
+        "endLine": 742,
+        "endChar": 58
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_a9212aa1",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 742,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-09-01T07:25:26Z",
+      "side": 1,
+      "message": "Will add that.",
+      "parentUuid": "da33351e_301bc31c",
       "range": {
         "startLine": 742,
         "startChar": 31,
@@ -164,6 +236,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_892426b0",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 761,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-09-01T07:25:26Z",
+      "side": 1,
+      "message": "Maybe all live migration test cases can be removed since they are too special.",
+      "parentUuid": "da33351e_70d42b20",
+      "range": {
+        "startLine": 761,
+        "startChar": 15,
+        "endLine": 761,
+        "endChar": 20
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_3cef1f89",
         "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
         "patchSetId": 2
@@ -187,6 +283,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_294cfa6f",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 831,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-09-01T07:25:26Z",
+      "side": 1,
+      "message": "No, it doesn\u0027t.",
+      "parentUuid": "da33351e_3cef1f89",
+      "range": {
+        "startLine": 831,
+        "startChar": 0,
+        "endLine": 831,
+        "endChar": 79
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_7ce9a77f",
         "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
         "patchSetId": 2
@@ -198,6 +318,30 @@
       "writtenOn": "2017-08-31T09:53:53Z",
       "side": 1,
       "message": "Does the test also create and attache a volume?",
+      "range": {
+        "startLine": 877,
+        "startChar": 0,
+        "endLine": 877,
+        "endChar": 82
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_69756297",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 877,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-09-01T07:25:26Z",
+      "side": 1,
+      "message": "No, it doesn\u0027t.",
+      "parentUuid": "da33351e_7ce9a77f",
       "range": {
         "startLine": 877,
         "startChar": 0,
@@ -244,6 +388,30 @@
       "writtenOn": "2017-08-31T09:53:53Z",
       "side": 1,
       "message": "Does the test also create and attache a volume?",
+      "range": {
+        "startLine": 973,
+        "startChar": 0,
+        "endLine": 973,
+        "endChar": 80
+      },
+      "revId": "e0da165bc8bd6505a3d1734aa9b9d70c94e77077",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_093016e7",
+        "filename": "docs/testing/user/testspecification/machinelifecycle/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 973,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-09-01T07:25:26Z",
+      "side": 1,
+      "message": "No, it doesn\u0027t.",
+      "parentUuid": "da33351e_5ceca38f",
       "range": {
         "startLine": 973,
         "startChar": 0,
