@@ -272,12 +272,14 @@ Volume service availability zone operations with the Cinder v2 API
 ------------------------------------------------------------------
 
 | tempest.api.volume.test_availability_zone.AvailabilityZoneV2TestJSON.test_get_availability_zone_list
+| tempest.api.volume.test_availability_zone.AvailabilityZoneTestJSON.test_get_availability_zone_list
 
 
 Volume cloning operations with the Cinder v2 API
 ------------------------------------------------
 
 | tempest.api.volume.test_volumes_get.VolumesV2GetTest.test_volume_create_get_update_delete_as_clone
+| tempest.api.volume.test_volumes_get.VolumesGetTest.test_volume_create_get_update_delete_as_clone
 
 
 Image copy-to-volume operations with the Cinder v2 API
@@ -285,6 +287,8 @@ Image copy-to-volume operations with the Cinder v2 API
 
 | tempest.api.volume.test_volumes_actions.VolumesV2ActionsTest.test_volume_bootable
 | tempest.api.volume.test_volumes_get.VolumesV2GetTest.test_volume_create_get_update_delete_from_image
+| tempest.api.volume.test_volumes_get.VolumesActionsTest.test_volume_bootable
+| tempest.api.volume.test_volumes_get.VolumesGetTest.test_volume_create_get_update_delete_from_image
 
 
 Volume creation and deletion operations with the Cinder v2 API
@@ -297,12 +301,21 @@ Volume creation and deletion operations with the Cinder v2 API
 | tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_out_passing_size
 | tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_size_negative
 | tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_size_zero
+| tempest.api.volume.test_volumes_get.VolumesGetTest.test_volume_create_get_update_delete
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_with_invalid_size
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_with_nonexistent_source_volid
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_with_nonexistent_volume_type
+| tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_without_passing_size
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_without_passing_size
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_with_size_negative
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_with_size_zero
 
 
 Volume service extension listing operations with the Cinder v2 API
 ------------------------------------------------------------------
 
 | tempest.api.volume.test_extensions.ExtensionsV2TestJSON.test_list_extensions
+| tempest.api.volume.test_extensions.ExtensionsTestJSON.test_list_extensions
 
 
 Volume GET operations with the Cinder v2 API
@@ -311,6 +324,9 @@ Volume GET operations with the Cinder v2 API
 | tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_get_invalid_volume_id
 | tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_get_volume_without_passing_volume_id
 | tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_volume_get_nonexistent_volume_id
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_get_invalid_volume_id
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_get_volume_without_passing_volume_id
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_volume_get_nonexistent_volume_id
 
 
 Volume listing operations with the Cinder v2 API
@@ -335,6 +351,25 @@ Volume listing operations with the Cinder v2 API
 | tempest.api.volume.v2.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_details_pagination
 | tempest.api.volume.v2.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_details_with_multiple_params
 | tempest.api.volume.v2.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_pagination
+| tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list
+| tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_by_name
+| tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_details_by_name
+| tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_param_display_name_and_status
+| tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_with_detail_param_display_name_and_status
+| tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_with_detail_param_metadata
+| tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_with_details
+| tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_with_param_metadata
+| tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_by_availability_zone
+| tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_by_status
+| tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_details_by_availability_zone
+| tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_details_by_status
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_list_volumes_detail_with_invalid_status
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_list_volumes_detail_with_nonexistent_name
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_list_volumes_with_invalid_status
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_list_volumes_with_nonexistent_name
+| tempest.api.volume.v2.test_volumes_list.VolumesListTestJSON.test_volume_list_details_pagination
+| tempest.api.volume.v2.test_volumes_list.VolumesListTestJSON.test_volume_list_details_with_multiple_params
+| tempest.api.volume.v2.test_volumes_list.VolumesListTestJSON.test_volume_list_pagination
 
 
 Volume metadata operations with the Cinder v2 API
@@ -342,12 +377,17 @@ Volume metadata operations with the Cinder v2 API
 
 | tempest.api.volume.test_volume_metadata.VolumesV2MetadataTest.test_create_get_delete_volume_metadata
 | tempest.api.volume.test_volume_metadata.VolumesV2MetadataTest.test_update_volume_metadata_item
+| tempest.api.volume.test_volume_metadata.VolumesMetadataTest.test_crud_volume_metadata
+| tempest.api.volume.test_volume_metadata.VolumesV2MetadataTest.test_crud_volume_metadata
+| tempest.api.volume.test_volume_metadata.VolumesMetadataTest.test_update_volume_metadata_item
+| tempest.api.volume.test_volume_metadata.VolumesMetadataTest.test_update_show_volume_metadata_item
 
 
 Verification of read-only status on volumes with the Cinder v2 API
 ------------------------------------------------------------------
 
 | tempest.api.volume.test_volumes_actions.VolumesV2ActionsTest.test_volume_readonly_update
+| tempest.api.volume.test_volumes_actions.VolumesActionsTest.test_volume_readonly_update
 
 
 Volume reservation operations with the Cinder v2 API
@@ -357,6 +397,10 @@ Volume reservation operations with the Cinder v2 API
 | tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_reserve_volume_with_negative_volume_status
 | tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_reserve_volume_with_nonexistent_volume_id
 | tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_unreserve_volume_with_nonexistent_volume_id
+| tempest.api.volume.test_volumes_actions.VolumesActionsTest.test_reserve_unreserve_volume
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_reserve_volume_with_negative_volume_status
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_reserve_volume_with_nonexistent_volume_id
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_unreserve_volume_with_nonexistent_volume_id
 
 
 Volume snapshot creation/deletion operations with the Cinder v2 API
@@ -374,6 +418,22 @@ Volume snapshot creation/deletion operations with the Cinder v2 API
 | tempest.api.volume.test_volumes_snapshots.VolumesV2SnapshotTestJSON.test_snapshots_list_with_params
 | tempest.api.volume.test_volumes_snapshots_negative.VolumesV2SnapshotNegativeTestJSON.test_create_snapshot_with_nonexistent_volume_id
 | tempest.api.volume.test_volumes_snapshots_negative.VolumesV2SnapshotNegativeTestJSON.test_create_snapshot_without_passing_volume_id
+| tempest.api.volume.test_snapshot_metadata.SnapshotMetadataTestJSON.test_crud_snapshot_metadata
+| tempest.api.volume.test_snapshot_metadata.SnapshotV2MetadataTestJSON.test_crud_snapshot_metadata
+| tempest.api.volume.test_snapshot_metadata.SnapshotMetadataTestJSON.test_update_snapshot_metadata_item
+| tempest.api.volume.test_snapshot_metadata.SnapshotMetadataTestJSON.test_update_show_snapshot_metadata_item
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_with_nonexistent_snapshot_id
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_delete_invalid_volume_id
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_delete_volume_without_passing_volume_id
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_volume_delete_nonexistent_volume_id
+| tempest.api.volume.test_volumes_snapshots.VolumesSnapshotTestJSON.test_snapshot_create_get_list_update_delete
+| tempest.api.volume.test_volumes_snapshots.VolumesSnapshotTestJSON.test_volume_from_snapshot
+| tempest.api.volume.test_volumes_snapshots_list.VolumesSnapshotListTestJSON.test_snapshots_list_details_with_params
+| tempest.api.volume.test_volumes_snapshots_list.VolumesV2SnapshotListTestJSON.test_snapshots_list_details_with_params
+| tempest.api.volume.test_volumes_snapshots_list.VolumesSnapshotListTestJSON.test_snapshots_list_with_params
+| tempest.api.volume.test_volumes_snapshots_list.VolumesV2SnapshotListTestJSON.test_snapshots_list_with_params
+| tempest.api.volume.test_volumes_snapshots_negative.VolumesSnapshotNegativeTestJSON.test_create_snapshot_with_nonexistent_volume_id
+| tempest.api.volume.test_volumes_snapshots_negative.VolumesSnapshotNegativeTestJSON.test_create_snapshot_without_passing_volume_id
 
 
 Volume update operations with the Cinder v2 API
@@ -382,6 +442,9 @@ Volume update operations with the Cinder v2 API
 | tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_update_volume_with_empty_volume_id
 | tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_update_volume_with_invalid_volume_id
 | tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_update_volume_with_nonexistent_volume_id
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_update_volume_with_empty_volume_id
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_update_volume_with_invalid_volume_id
+| tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_update_volume_with_nonexistent_volume_id
 
 
 ---------------------------
