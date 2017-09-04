@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_3581ec4a",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 525,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-04T13:13:03Z",
+      "side": 1,
+      "message": "these can be removed because we have excluded the corresponding tests for the Danube release",
+      "range": {
+        "startLine": 510,
+        "startChar": 3,
+        "endLine": 525,
+        "endChar": 34
+      },
+      "revId": "9f8dc393cc61b0bf250e9a98a45e4b83942d48a2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
