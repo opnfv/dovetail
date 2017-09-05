@@ -634,3 +634,12 @@ Filtering Packets Based on Security Rules and Port Security in Data Path
 | tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_port_security_disable_security_group
 | tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_port_update_new_security_group
 
+------------------------------------------------------------
+Dynamic Network Runtime Operations Through the Life of a VNF
+------------------------------------------------------------
+
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_network_basic_ops
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_hotplug_nic
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_subnet_details
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_update_instance_port_admin_state
+| tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_update_router_admin_state
