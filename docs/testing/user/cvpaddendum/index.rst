@@ -29,15 +29,15 @@ networks.
 Meaning of Compliance
 =====================
 
-OPNFV Compliance indicates adherence to NFV platform behavior defined as
-various platform capabilities or features to prepare, instantiate, operate and remove
-VNFs running on the NFVI. Danube compliance evaluates the ability of a platform
-to support Service Provider network capabilities and workloads that are
-supported in the OPNFV platform as of this release. Compliance test cases shall
-be designated as compulsory or optional based on the maturity of OPNFV
-capabilities as well as industry expectations. Compulsory test cases may for
-example include NFVI management capabilities whereas tests for certain
-high-availability features may be deemed as optional.
+OPNFV Compliance indicates adherence of an NFV platform to behaviors defined
+through specific platform capabilities, allowing to prepare, instantiate,
+operate and remove VNFs running on the NFVI. Danube compliance evaluates the
+ability of a platform to support Service Provider network capabilities and
+workloads that are supported in the OPNFV platform as of this release.
+Compliance test cases are designated as compulsory or optional based on the
+maturity of OPNFV capabilities as well as industry expectations. Compulsory
+test cases may for example include NFVI management capabilities whereas tests
+for certain high-availability features may be deemed as optional.
 
 Test coverage and pass/fail criteria are
 designed to ensure an acceptable level of compliance but not be so restrictive
@@ -86,6 +86,7 @@ Similarly, performance benchmarking related testing is also out of scope or
 for further study. Newer functional areas such as MANO (outside of APIs in the NFVI and
 VIM) are still developing and are for future considerations.
 
+
 General Approach
 ----------------
 
@@ -95,7 +96,7 @@ then analyzing what OPNFV and the upstream communities can effectively test and 
 presently to derive an initial working scope for CVP, and to recommend what the
 community should strive to achieve in future releases.
 
-The overall requirements for CVP can be cateorized by the basic cloud
+The overall requirements for CVP can be categorized by the basic cloud
 capabilities representing common operations needed by basic VNFs, and additional
 requirements for VNFs that go beyond the common cloud capabilities including
 functional extensions, operational capabilities and additional carrier grade
@@ -106,10 +107,10 @@ leverage or improve upon existing test cases in OPNFV projects
 and upstream projects whenever we can, and bridge the gaps when we must, to meet
 these basic requirements.
 
-We are not yet ready to support requirements
-such as hardware portability, carrier grade performance, fault management and other
-operational features, security, MANO and VNF verification.
-These areas are being studied for future considerations.
+We are not yet ready to include compliance requirements for capabilities such
+as hardware portability, carrier grade performance, fault management and other
+operational features, security, MANO and VNF verification.  These areas are
+being studied for consideration in future CVP releases.
 
 In some areas, we will start with a limited level of verification
 initially, constrained by what community resources are able to support at this
@@ -127,12 +128,16 @@ area will not have to be run or passed in order to achieve compliance.
 Optional tests provide an opportunity for vendors to demonstrate compliance with specific OPNFV
 features beyond the mandatory test scope.
 
+
 Analysis of Scope
 -----------------
 
-Following on these high level objectives and the identified general approach,
-we seek to define the initial verification scope by the analysis summarized
-in the following categories:
+In order to define the scope of the Danube-release of the compliance and
+verification program, this section analyzes NFV-focused platform capabilities
+with respect to the high-level objectives and the general approach outlined in
+the previous section. The analysis determines which capabilities are suitable
+for inclusion in this release of the CVP and which capabilities are to be
+addressed in future releases.
 
 1. Basic Cloud Capabilities
 
@@ -158,19 +163,19 @@ services. Running such basic VNF leads to a set of common requirements, includin
     suspend/resume, reboot, migrate)
   - simple virtual machine resource scheduling on multiple nodes
 
-OPNFV mainly supports Openstack as the VIM up to the Danube release. The
+OPNFV mainly supports OpenStack as the VIM up to the Danube release. The
 VNFs used in the CVP program, and features in scope for the program which are
-considered to be basic to all VNFs, require commercial Openstack distributions
+considered to be basic to all VNFs, require commercial OpenStack distributions
 to support a common basic level of cloud capabilities, and to be compliant
 to a common specification for these capabilities. This requirement significantly
-overlaps with Openstack community's Interop working group's goals, but they are not
-identical. The CVP runs the Openstack Refstack-Compute test cases to verify
+overlaps with OpenStack community's Interop working group's goals, but they are not
+identical. The CVP runs the OpenStack Refstack-Compute test cases to verify
 compliance to the basic common API requirements of cloud
 management functions and VNF (as a VM) management for OPNFV.
 Additional NFV specific requirements are added in network data path validation,
 packet filtering by security group rules and port security, life cycle runtime events of
 virtual networks, multiple networks in a topology, validation
-of VNF's functional state after common lifecylce events including reboot, pause,
+of VNF's functional state after common life-cycle events including reboot, pause,
 suspense, stop/start and cold migration. In addition, the
 basic requirement also verifies that the SUT can allocate VNF resources based
 on simple anti-affinity rules.
@@ -184,7 +189,7 @@ a common standard to enable portability across OPNFV compliant platforms.
 NFV has functional requirements beyond the basic common cloud
 capabilities, esp. in the networking area. Examples like SDNVPN, IPv6, SFC may
 be considered additional NFV requirements beyond general purpose cloud
-computing. These feature requirements expand beyond common Openstack (or other
+computing. These feature requirements expand beyond common OpenStack (or other
 VIM) requirements. OPNFV CVP will incorporate test cases to verify
 compliance in these areas as they become mature. Because these extensions
 may impose new API demands, maturity and industry adoption is a prerequisite for
@@ -208,7 +213,7 @@ High availability is a common carrier grade requirement. Availability of a
 platform involves many aspects of the SUT, for example hardware or lower layer
 system failures or system overloads, and is also highly dependent on
 configurations. The current OPNFV high availability verification focuses on
-Openstack control service failures and resource overloads, and verifies service
+OpenStack control service failures and resource overloads, and verifies service
 continuity when the system encounters such failures or resource overloads, and
 also verifies the system heals after a failure episode within a reasonable time
 window. These service HA capabilities are commonly adopted in the industry
@@ -230,7 +235,7 @@ The OPNFV testing projects have started testing
 OPNFV system resiliency in
 the Danube release that can be used to provide limited coverage in this area.
 However, this is a relatively new test methodology in OPNFV, additional study
-and testing experiences are still needed. We defer the resilency testing to
+and testing experiences are still needed. We defer the resiliency testing to
 future CVP releases.
 
 5. Security
@@ -267,104 +272,126 @@ but defer to future study.
 
 7. Use case testing
 
-More complex interactions among multiple VNFs and between VNFs and the cloud
-platform can be better exercised through selected more realistic use cases.
+Use-case test cases exercise multiple functional capabilities of a platform in
+order to realize a larger end-to-end scenario.  Such end-to-end use cases do
+not necessarily add new API requirements to the SUT per se, but exercise
+aspects of the SUT's functional capabilities in more complex ways.  For
+instance, they allow for verifying the complex interactions among multiple VNFs
+and between VNFs and the cloud platform in a more realistic fashion.  End-users
+consider use-case-level testing as a significant tool in verifying OPNFV
+compliance because it validates design patterns and support for the types of
+NFVI features that users care about.
 
-End-users see use case level testing as a significant tool in
-verifying OPNFV compliance because it validates design patterns and support
-for the types of NFVI features that users
-care about. There are a lot of projects in OPNFV developing use cases
-and sample VNFs, however most are still in early phase and require further
-enhancements to become useful additions to the CVP.
+There are a lot of projects in OPNFV developing use cases and sample VNFs,
+however most are still in early phase and require further enhancements to
+become useful additions to the CVP.  Examples such as vIMS, or those which are
+not yet available in Danube release, e.g. vCPE, will be valuable additions to
+the CVP. These use cases need to be widely accepted, and since they are more
+complex, using these VNFs for CVP demands a higher level of community resources
+to implement, analyze and document these VNFs.  Hence, use case testing is not
+ready for CVP at the time of Danube, but can be incorporated in Euphrates or as
+a future roadmap area.
 
-Many of these use case test cases do not add new API requirements to the SUT per se, but
-exercise aspects of the SUT's functional capabilities in more complex ways.
-Other use cases, such as SDNVPN, will require additional API level extension,
-and to clearly separate the two, we will categorize the latter as
-NFV specific functional requirements and not simply as use cases.
+8. Additional capabilities
 
-Examples such as vIMS, or those which are not yet available
-in Danube release e.g. vCPE,
-will be valuable additions to the CVP. These use cases need to
-be widely accepted, and since they are more complex, using these VNFs for CVP demands
-higher level of community resources to implement, analyze and document these VNFs.
+In addition to the capabilities analyzed above, there are further system
+aspects which are of importance for the CVP. These comprise operational and
+management aspects such as platform in-place upgrades and platform operational
+insights such as telemetry and logging. Further aspects include API backward
+compatibility / micro-versioning, workload migration, multi-site federation and
+interoperability with workload automation platforms, e.g. ONAP. Finally,
+efficiency aspects such as the hardware and energy footprint of the platform
+are worth considering in the CVP.
 
-Use case testing is not ready for CVP at the time of Danube, but can be incorporated
-in Euphrates or as a future roadmap area.
+OPNFV is addressing these items on different levels of details in different
+projects. However, the contributions developed in these projects are not yet
+considered widely available in commercial systems in order to include them in
+the CVP. Hence, these aspects are left for inclusion in future releases of the
+CVP.
 
-Finally, we take a preliminary look at future roadmap ideas that may be helpful
-for the community to plan and pull resources around.
 
-8. Future CVP scope enhancements
 
-Some possible areas of enhancement for the CVP scope in subsequent releases include:
+Scope of the Danube-release of the CVP
+--------------------------------------
 
-  - service assurance, as discussed above
-  - use case testing, as discussed above
-  - platform in-place upgrade
-  - API backward compatibility / micro-versioning
-  - workload migration
-  - multisite federation
-  - platform operational insights, e.g. telemetry, logging
-  - efficiency, e.g. hardware and energy footprint of the platform
-  - interoperability with workload automation platforms e.g. ONAP
+Summarizing the results of the analysis above, the scope of the Danube-release
+of the CVP is as follows:
 
-And enhancements may also be made to the existing test areas as well,
-particularly those with limited coverage in this release.
+- Test Area: Basic cloud capabilities
 
-Summary of Test Scope
----------------------
+  - **OpenStack interoperability test cases excluding object storage**\*
+  - **OPNFV-Functest/vPing, including both user data and ssh**
+  - *Port security and security groups*
+  - *VM life-cycle events*
+  - *VM networking*
+  - *VM resource scheduling*
+  - *Forwarding packets in the data path*
 
-The above analysis concludes with the following scope summarized below.
-These tested areas represent significant advancement in the
-direction to meet the CVP's objectives and end-user expectations, and is a
-good basis for the initial phase of CVP.
+\* The OPNFV CVP utilizes the same set of test cases as the OpenStack
+interoperability program *OpenStack Powered Compute*. Passing the OPNFV CVP
+does **not** imply that the SUT is certified according to the *OpenStack Powered
+Compute* program. *OpenStack Powered Compute* is a trademark of the OpenStack
+foundation and the corresponding certification label can only be awarded by the
+OpenStack foundation.
 
-- Test Area: common cloud capabilities
-  - Openstack Refstack-compute test cases
-    Image, Identity, Compute, Network, Storage
-  - OPNFV-Functest/vPing, including both user data and ssh
-  - Port security and security groups
-  - VM lifecycle events
-  - VM networking
-  - VM resource scheduling
-  - Mandatory
+
 
 - Test Area: SDNVPN
-  - OPNFV-SDNVPN
-  - Optional
+
+  - *OPNFV-SDNVPN*
+
 
 - Test Area: IPv6
-  - OPNFV-IPv6
-  - Limited to overlay tests, v6Ping
-  - Optional
+
+  - *OPNFV-IPv6
+    (Limited to overlay tests, v6Ping)*
+
 
 - Test Area: High Availability
-  - OPNFV-HA
-  - OPNFV-Yardstick
-  - Limited to service continuity verification on control services
-  - Mandatory
 
-- Test Area: Resilency with Load
-  - OPNFV-Bottlenecks
-  - OPNFV-Yardstick
-  - Limited to compute resource load testing
-  - Optional
+  - **OPNFV-Yardstick/HA**
+    (Limited to service continuity verification of control services)
 
-Note 1: While the current scope of compliance includes functional verification
-of certain performance-enhancing NFVI features, no performance measurements or
-assessment of performance capabilities are included as of this release.
+[Highlighting: **Mandatory test cases**, *Optional test cases*]
 
-Note 2: The SUT is limited to NFVI and VIM functions. While testing MANO
+
+These tested areas represent significant advancement in the direction to meet
+the CVP's objectives and end-user expectations, and is a good basis for the
+initial phase of CVP.
+
+Note: The SUT is limited to NFVI and VIM functions. While testing MANO
 component capabilities is out of scope, certain APIs exposed towards MANO are
 used by the current OPNFV compliance testing suite. MANO and other operational
 elements may be part of the test infrastructure; for example used for workload
 deployment and provisioning.
 
+
+Scope considerations for future CVP releases
+--------------------------------------------
+
+Based on the previous analysis, the following items are outside the scope of
+the Danube release of the CV but are being considered for inclusion in future
+releases:
+
+  - service assurance
+  - use case testing
+  - platform in-place upgrade
+  - API backward compatibility / micro-versioning
+  - workload migration
+  - multi-site federation
+  - service function chaining
+  - platform operational insights, e.g. telemetry, logging
+  - efficiency, e.g. hardware and energy footprint of the platform
+  - interoperability with workload automation platforms e.g. ONAP
+  - resilience
+  - security and vulnerability scanning
+  - performance measurements
+
+
 Criteria for Awarding Compliance
 ================================
 
-This section provides guidance on compliance criteia for each test area. The
+This section provides guidance on compliance criteria for each test area. The
 criteria described here are high-level, detailed pass/fail metrics are
 documented in Dovetail test specifications.
 
