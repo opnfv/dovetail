@@ -1,0 +1,12 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Wenjing Chu <chu.wenjing@gmail.com>
+Code-Review+1: Qiao Fu <fuqiao@chinamobile.com>
+Code-Review+1: Georg Kunz <georg.kunz@ericsson.com>
+Code-Review+1: Serena Feng <feng.xiaowei@zte.com.cn>
+Code-Review+1: Lincoln Lavoie <lylavoie@iol.unh.edu>
+Code-Review+2: hongbo tian <hongbo.tianhongbo@huawei.com>
+Submitted-by: hongbo tian <hongbo.tianhongbo@huawei.com>
+Submitted-at: Wed, 06 Sep 2017 01:55:00 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/37989
+Project: dovetail
+Branch: refs/heads/master
