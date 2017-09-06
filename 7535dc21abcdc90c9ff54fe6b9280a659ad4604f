@@ -1,0 +1,7 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+2: Leo wang <grakiss.wanglei@huawei.com>
+Submitted-by: Leo wang <grakiss.wanglei@huawei.com>
+Submitted-at: Wed, 06 Sep 2017 01:34:19 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/40733
+Project: dovetail
+Branch: refs/heads/master
