@@ -34,6 +34,24 @@
       "revId": "e2df84e3fcf5ed6f4dd924f5e182b9a4f787e358",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_64b620fc",
+        "filename": "docs/testing/user/testspecification/forwardingpackets/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 2667
+      },
+      "writtenOn": "2017-09-06T02:24:04Z",
+      "side": 1,
+      "message": "maybe worth mentioning the mtu size is using default?",
+      "parentUuid": "da33351e_692722b7",
+      "revId": "e2df84e3fcf5ed6f4dd924f5e182b9a4f787e358",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
