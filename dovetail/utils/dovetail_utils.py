@@ -208,3 +208,9 @@ def check_docker_version(logger=None):
     if client_ret != 0 or (LooseVersion(client_ver) < LooseVersion('1.12.3')):
         logger.error("Don't support this Docker client version. "
                      "Docker client should be updated to at least 1.12.3.")
+
+
+def add_hosts_info(hosts_info):
+    hosts_file = '/etc/hosts'
+    with open(hosts_file, 'a') as f:
+        f.write("{}\n".format(hosts_info))
