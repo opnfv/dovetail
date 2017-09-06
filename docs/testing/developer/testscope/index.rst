@@ -654,3 +654,21 @@ Dynamic Network Runtime Operations Through the Life of a VNF
 | tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_subnet_details
 | tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_update_instance_port_admin_state
 | tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_update_router_admin_state
+
+----------------------------------------------------------------
+Correct Behavior after Common Virtual Machine Life Cycles Events
+----------------------------------------------------------------
+
+| tempest.scenario.test_minimum_basic.TestMinimumBasicScenario.test_minimum_basic_scenario
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_cold_migration
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_cold_migration_revert
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_pause_unpause
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_reboot
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_rebuild
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_resize
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_stop_start
+| tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_suspend_resume
+| tempest.scenario.test_server_advanced_ops.TestServerAdvancedOps.test_server_sequence_suspend_resume
+| tempest.scenario.test_server_advanced_ops.TestServerAdvancedOps.test_resize_volume_backed_server_confirm
+| tempest.scenario.test_shelve_instance.TestShelveInstance.test_shelve_instance
+| tempest.scenario.test_shelve_instance.TestShelveInstance.test_shelve_volume_backed_instance
