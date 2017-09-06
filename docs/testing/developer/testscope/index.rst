@@ -169,12 +169,16 @@ Image get tests using the Glance v2 API
 | tempest.api.image.v2.test_images_negative.ImagesNegativeTest.test_get_delete_deleted_image
 | tempest.api.image.v2.test_images_negative.ImagesNegativeTest.test_get_image_null_id
 | tempest.api.image.v2.test_images_negative.ImagesNegativeTest.test_get_non_existent_image
+| tempest.api.image.v2.test_images.ListUserImagesTest.test_get_image_schema
+| tempest.api.image.v2.test_images.ListUserImagesTest.test_get_images_schema
 
 
 CRUD image operations in Images API v2
 --------------------------------------
 
 | tempest.api.image.v2.test_images.ListImagesTest.test_list_no_params
+| tempest.api.image.v2.test_images.ListImagesTest.test_index_no_params
+| tempest.api.image.v2.test_images.ListUserImagesTest.test_list_no_params
 
 
 Image list tests using the Glance v2 API
@@ -187,6 +191,13 @@ Image list tests using the Glance v2 API
 | tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_size
 | tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_status
 | tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_visibility
+| tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_container_format
+| tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_disk_format
+| tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_limit
+| tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_min_max_size
+| tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_size
+| tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_status
+| tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_visibility
 
 
 Image update tests using the Glance v2 API
