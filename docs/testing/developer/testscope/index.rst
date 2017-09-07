@@ -215,13 +215,13 @@ Test Area VIM Operations - Network
 Basic CRUD operations on L2 networks and L2 network ports
 ---------------------------------------------------------
 
-| tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_all_attributes
 | tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_allocation_pools
 | tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_dhcp_enabled
 | tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_gw
 | tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_gw_and_allocation_pools
 | tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_host_routes_and_dns_nameservers
 | tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_without_gateway
+| tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_all_attributes
 | tempest.api.network.test_networks.NetworksTest.test_create_update_delete_network_subnet
 | tempest.api.network.test_networks.NetworksTest.test_delete_network_with_subnet
 | tempest.api.network.test_networks.NetworksTest.test_list_networks
@@ -242,6 +242,24 @@ Basic CRUD operations on L2 networks and L2 network ports
 | tempest.api.network.test_ports.PortsTestJSON.test_show_port_fields
 | tempest.api.network.test_ports.PortsTestJSON.test_update_port_with_security_group_and_extra_attributes
 | tempest.api.network.test_ports.PortsTestJSON.test_update_port_with_two_security_groups_and_extra_attributes
+| tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_allocation_pools
+| tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_dhcp_enabled
+| tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_gw
+| tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_gw_and_allocation_pools
+| tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_host_routes_and_dns_nameservers
+| tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_without_gateway
+| tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_all_attributes
+| tempest.api.network.test_networks.NetworksTestJSON.test_create_update_delete_network_subnet
+| tempest.api.network.test_networks.NetworksTestJSON.test_delete_network_with_subnet
+| tempest.api.network.test_networks.NetworksTestJSON.test_list_networks
+| tempest.api.network.test_networks.NetworksTestJSON.test_list_networks_fields
+| tempest.api.network.test_networks.NetworksTestJSON.test_list_subnets
+| tempest.api.network.test_networks.NetworksTestJSON.test_list_subnets_fields
+| tempest.api.network.test_networks.NetworksTestJSON.test_show_network
+| tempest.api.network.test_networks.NetworksTestJSON.test_show_network_fields
+| tempest.api.network.test_networks.NetworksTestJSON.test_show_subnet
+| tempest.api.network.test_networks.NetworksTestJSON.test_show_subnet_fields
+| tempest.api.network.test_networks.NetworksTestJSON.test_update_subnet_gw_dns_host_routes_dhcp
 
 
 Basic CRUD operations on security groups
