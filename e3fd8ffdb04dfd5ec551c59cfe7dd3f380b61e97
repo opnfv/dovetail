@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_ad19247b",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-09-07T23:08:23Z",
+      "side": 1,
+      "message": "Function.",
+      "range": {
+        "startLine": 45,
+        "startChar": 17,
+        "endLine": 45,
+        "endChar": 26
+      },
+      "revId": "e3fd8ffdb04dfd5ec551c59cfe7dd3f380b61e97",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
