@@ -134,12 +134,13 @@ def get_ext_net_name(env_file, logger=None):
     insecure = os.getenv('OS_INSECURE',)
     if https_enabled:
         logger.info("https enabled...")
-        if insecure.lower() == "true":
-            insecure_option = ' --insecure '
-        else:
-            logger.warn("Env variable OS_INSECURE is {}, if https + no "
-                        "credential used, should be set as True."
-                        .format(insecure))
+        if insecure:
+            if insecure.lower() == "true":
+                insecure_option = ' --insecure '
+            else:
+                logger.warn("Env variable OS_INSECURE is {}, if https + no "
+                            "credential used, should be set as True."
+                            .format(insecure))
 
     cmd_check = "openstack %s network list" % insecure_option
     ret, msg = exec_cmd(cmd_check, logger)

@@ -164,7 +164,7 @@ class Container(object):
                     dt_utils.add_hosts_info(host)
                     hosts_config += " --add-host "
                     hosts_config += str(host)
-                cls.logger.info('Get hosts info {}.'.format(hosts_config))
+                cls.logger.debug('Get hosts info {}.'.format(host))
         except Exception:
             cls.logger.warn('Failed to get hosts info in {}, '
                             'maybe some issues with domain name resolution.'
@@ -192,18 +192,18 @@ class Container(object):
             cls.logger.info("https enabled...")
             if cacert is not None:
                 if not os.path.isfile(cacert):
-                    cls.logger.error("Env variable 'OS_CACERT' is set to {}"
+                    cls.logger.error("Env variable 'OS_CACERT' is set to {} "
                                      "but the file does not exist."
                                      .format(cacert))
                     return None
                 elif not dovetail_config['config_dir'] in cacert:
-                    cls.logger.error("Credential file has to be put in {},"
+                    cls.logger.error("Credential file has to be put in {}, "
                                      "which can be mount into container."
                                      .format(dovetail_config['config_dir']))
                     return None
                 cacert_volume = ' -v %s:%s ' % (cacert, cacert)
             else:
-                cls.logger.warn("https enabled, OS_CACERT not set, insecure"
+                cls.logger.warn("https enabled, OS_CACERT not set, insecure "
                                 "connection used or OS_CACERT missed")
 
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
