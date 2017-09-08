@@ -2,6 +2,46 @@
   "comments": [
     {
       "key": {
+        "uuid": "da33351e_e3621dac",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 327,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-08T18:09:45Z",
+      "side": 1,
+      "message": "(1) missing an item \"Forwarding packets in data path\"\n(2) In the 9/1 review, we put these tempest tests in optional category because of relative immaturity. I\u0027m glad we caught this now - separating these out and mark it Optional.",
+      "range": {
+        "startLine": 324,
+        "startChar": 4,
+        "endLine": 327,
+        "endChar": 26
+      },
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_23cfe5b1",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-08T18:09:45Z",
+      "side": 1,
+      "message": "Resilency/load testing was removed based on the review on 9/1 (removed from this release altogether). Please delete this bullet.",
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_88b1ae91",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 1
@@ -16,6 +56,29 @@
       "range": {
         "startLine": 377,
         "startChar": 0,
+        "endLine": 381,
+        "endChar": 74
+      },
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_435ae9f3",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-08T18:09:45Z",
+      "side": 1,
+      "message": "This statement was put in there partly because there are test cases (e.g. HA) where we measure time delay of an operation. There was some question about it and we wanted to clarify that measuring time in this case is to set a very high timeout bar to detect/declare failure, rather than performance benchmarking. I agree that it\u0027s better to remove it.",
+      "range": {
+        "startLine": 378,
+        "startChar": 1,
         "endLine": 381,
         "endChar": 74
       },
