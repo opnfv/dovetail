@@ -62,7 +62,7 @@ echo "Create the testapi service."
 echo "=========================="
 
 set +e
-testapi_img="opnfv/testapi:cvp.0.5.0"
+testapi_img="opnfv/testapi:cvp.0.6.0"
 echo "Step1: pull the image $testapi_img."
 sudo docker pull $testapi_img
 set -e
@@ -86,7 +86,7 @@ echo "Wait for testapi to work..."
 sleep 10
 
 set +e
-nginx_img="opnfv/dovetail:nginx.cvp.0.5.0"
+nginx_img="opnfv/dovetail:nginx.cvp.0.6.0"
 echo "Step1: pull the image $nginx_img."
 sudo docker pull $nginx_img
 set -e
