@@ -42,6 +42,46 @@
     },
     {
       "key": {
+        "uuid": "da33351e_030741cb",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-08T18:15:12Z",
+      "side": 1,
+      "message": "CVP future scope considerations",
+      "range": {
+        "startLine": 358,
+        "startChar": 0,
+        "endLine": 358,
+        "endChar": 28
+      },
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_e3097dde",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-08T18:15:12Z",
+      "side": 1,
+      "message": "are being considered",
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_88b1ae91",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 1
@@ -79,6 +119,30 @@
       "range": {
         "startLine": 378,
         "startChar": 1,
+        "endLine": 381,
+        "endChar": 74
+      },
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_a3681588",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-08T18:15:12Z",
+      "side": 1,
+      "message": "Dave, you are referring to the highlighted text/note after \"Georg:...\", right? I agree with that. \nFor the future section itself, I think we need to soften the wordings to suggest it\u0027s forward-looking considerations, but not conclusion of scope.",
+      "parentUuid": "da33351e_88b1ae91",
+      "range": {
+        "startLine": 377,
+        "startChar": 0,
         "endLine": 381,
         "endChar": 74
       },
