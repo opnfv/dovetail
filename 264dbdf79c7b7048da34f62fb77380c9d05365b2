@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_88b1ae91",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 514
+      },
+      "writtenOn": "2017-09-08T16:12:45Z",
+      "side": 1,
+      "message": "I thought the forward-looking paragraph got removed?",
+      "range": {
+        "startLine": 377,
+        "startChar": 0,
+        "endLine": 381,
+        "endChar": 74
+      },
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
