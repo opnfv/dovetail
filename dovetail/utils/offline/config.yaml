@@ -2,7 +2,7 @@
 docker_images:
   dovetail:
     domain: opnfv
-    tag: cvp.0.5.0
+    tag: cvp.0.6.0
     store_name: image_dovetail.docker
   functest:
     domain: opnfv
@@ -18,7 +18,7 @@ docker_images:
     store_name: image_bottlenecks.docker
   testapi:
     domain: opnfv
-    tag: cvp.0.5.0
+    tag: cvp.0.6.0
     store_name: image_testapi.docker
   mongo:
     tag: 3.2.1
