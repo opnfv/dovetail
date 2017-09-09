@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_03be2165",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-09T05:05:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_23d6c5c5",
+      "range": {
+        "startLine": 110,
+        "startChar": 24,
+        "endLine": 110,
+        "endChar": 44
+      },
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_83dcf1e5",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2017-09-09T01:18:01Z",
       "side": 1,
       "message": "consideration in future CVP releases.",
+      "range": {
+        "startLine": 113,
+        "startChar": 34,
+        "endLine": 113,
+        "endChar": 55
+      },
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_e3c05de2",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-09T05:05:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_83dcf1e5",
       "range": {
         "startLine": 113,
         "startChar": 34,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_237245e5",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 327,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-09T05:05:28Z",
+      "side": 1,
+      "message": "(1) added\n(2) I didn\u0027t want to seperate the optional test cases out because they are still part of the same test area. Instead, I chose to use italic and bold font to mark tests as mandatory or optional.",
+      "parentUuid": "da33351e_e3621dac",
+      "range": {
+        "startLine": 324,
+        "startChar": 4,
+        "endLine": 327,
+        "endChar": 26
+      },
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_23cfe5b1",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 1
@@ -82,6 +154,24 @@
       "writtenOn": "2017-09-08T18:09:45Z",
       "side": 1,
       "message": "Resilency/load testing was removed based on the review on 9/1 (removed from this release altogether). Please delete this bullet.",
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_43b82976",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-09T05:05:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_23cfe5b1",
       "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -111,6 +201,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_23bb6573",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-09T05:05:28Z",
+      "side": 1,
+      "message": "I agree that this statements needs to be softenend. I chose a slightly different wording. Let me know what you think.",
+      "parentUuid": "da33351e_030741cb",
+      "range": {
+        "startLine": 358,
+        "startChar": 0,
+        "endLine": 358,
+        "endChar": 28
+      },
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_e3097dde",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 1
@@ -122,6 +236,24 @@
       "writtenOn": "2017-09-08T18:15:12Z",
       "side": 1,
       "message": "are being considered",
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_83b19191",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-09T05:05:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_e3097dde",
       "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
@@ -186,6 +318,30 @@
       "side": 1,
       "message": "Dave, you are referring to the highlighted text/note after \"Georg:...\", right? I agree with that. \nFor the future section itself, I think we need to soften the wordings to suggest it\u0027s forward-looking considerations, but not conclusion of scope.",
       "parentUuid": "da33351e_88b1ae91",
+      "range": {
+        "startLine": 377,
+        "startChar": 0,
+        "endLine": 381,
+        "endChar": 74
+      },
+      "revId": "264dbdf79c7b7048da34f62fb77380c9d05365b2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_63ac4d36",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-09T05:05:28Z",
+      "side": 1,
+      "message": "I removed the paragraph.",
+      "parentUuid": "da33351e_a3681588",
       "range": {
         "startLine": 377,
         "startChar": 0,
