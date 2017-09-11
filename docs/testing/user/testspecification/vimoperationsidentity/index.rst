@@ -20,7 +20,7 @@ the Identity API.
 References
 ================
 
-- Defcore test cases
+- OpenStack interoperability guidelines (version 2016.08)
 
   - https://github.com/openstack/interop/blob/master/2016.08.json
 
@@ -28,13 +28,10 @@ References
 
   - https://www.openstack.org/brand/interop/
 
-- Defcore test cases listed using the Rest API from RefStack project
+- OpenStack Powered Compute test cases
 
   - https://refstack.openstack.org/api/v1/guidelines/2016.08/tests?target=compute&type=required&alias=true&flag=false
 
-- Refstack client
-
-  - https://github.com/openstack/refstack-client
 
 Definitions and abbreviations
 =============================
@@ -59,14 +56,10 @@ is able to run independently, i.e. irrelevant of the state created by a previous
 Dependency Description
 ======================
 
-The VIM identity operation test area is a part of the DefCore tempest test
-cases run by refstack, then inherited by dovetail. Refstack-client is a command line
-utility that allows you to execute Tempest test runs based on configurations you specify.
-It is the official tool to run Defcore test cases,
-which focuses on testing interoperability between OpenStack clouds.
-
-For Danube based dovetail release, the approved Defcore 2016.08 guidelines is adopted,
-which is valid for Kilo, Liberty, Mitaka and Newton releases of Openstack.
+The VIM identity operations test cases are a part of the OpenStack
+interoperability tempest test cases.  For Danube based dovetail release, the
+OpenStack interoperability guidelines (version 2016.08) is adopted, which is
+valid for Kilo, Liberty, Mitaka and Newton releases of Openstack.
 
 Test Descriptions
 =================

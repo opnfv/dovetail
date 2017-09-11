@@ -479,15 +479,14 @@ Users need to create file ``$DOVETAIL_HOME/pre_config/id_rsa`` to store the priv
        key_filename: /root/.ssh/id_rsa
 
 
-Special Configuration for Running defcore, IPv6 and tempest Test Cases
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Configuration for Running Tempest Test Cases
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-All test cases in test area defcore, ipv6 and tempest are picked up from Tempest.
-For all these test cases, they need some configurations. Most of them
-are done by Dovetail. However, there are still some configurations needed to be
-given by users who know the SUT better. All these additional configurations should
-be in file ``$DOVETAIL_HOME/pre_config/tempest_conf.yaml``. If this file is not given,
-some test cases will be skipped or failed.
+The test cases in the test areas `interop` (OpenStack Interoperability tests),
+`ipv6` and `tempest` are based on Tempest.  A SUT-specific configuration of
+Tempest is required in order to run those test cases successfully.  The
+corresponding SUT-specific configuration options should be supplied in the file
+``$DOVETAIL_HOME/pre_config/tempest_conf.yaml``.
 
 Create and edit file ``$DOVETAIL_HOME/pre_config/tempest_conf.yaml``.
 Here is an example of what this file should contain.
@@ -529,9 +528,9 @@ When a tester is performing trial runs, Dovetail stores results in a local file 
 
      * Additional log files may be of interests: refstack.log, dovetail_ha_tcXXX.out ...
 
-   * Example: defcore test case example
+   * Example: OpenStack Interoperability test cases
 
-     * Can see the log details in ``defcore_logs/dovetail.defcore.tc001.log``,
+     * Can see the log details in ``osinterop_logs/dovetail.osinterop.tc001.log``,
        which has the passed, skipped and failed test cases results.
 
      * The skipped test cases have the reason for the users to see why these test cases skipped.

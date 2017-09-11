@@ -34,7 +34,7 @@ References
 
   - https://wiki.openstack.org/wiki/Governance/InteropWG
 
-- Defcore test cases
+- OpenStack Interoperability guidelines (version 2016.08)
 
   - https://github.com/openstack/interop/blob/master/2016.08.json
 
