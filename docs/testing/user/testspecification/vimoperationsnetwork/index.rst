@@ -21,7 +21,7 @@ basic CRUD operations on L2 networks, L2 network ports and security groups.
 References
 ==========
 
-- Defcore test cases
+- OpenStack Interoperability guidelines (version 2016.08)
 
   - https://github.com/openstack/interop/blob/master/2016.08.json
 
