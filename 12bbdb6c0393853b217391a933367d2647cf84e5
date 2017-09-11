@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_b2033c0c",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-11T23:20:22Z",
+      "side": 1,
+      "message": "true, removed.",
+      "parentUuid": "da33351e_032bc030",
+      "range": {
+        "startLine": 136,
+        "startChar": 44,
+        "endLine": 136,
+        "endChar": 49
+      },
+      "revId": "12bbdb6c0393853b217391a933367d2647cf84e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_6321ec4c",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_320f2c30",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-11T23:20:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_6321ec4c",
+      "range": {
+        "startLine": 322,
+        "startChar": 4,
+        "endLine": 323,
+        "endChar": 48
+      },
+      "revId": "12bbdb6c0393853b217391a933367d2647cf84e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_431ca813",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 2
@@ -59,6 +107,30 @@
       "writtenOn": "2017-09-10T07:27:41Z",
       "side": 1,
       "message": "Should we include SFC in this list?",
+      "range": {
+        "startLine": 369,
+        "startChar": 4,
+        "endLine": 369,
+        "endChar": 20
+      },
+      "revId": "12bbdb6c0393853b217391a933367d2647cf84e5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_924c3872",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-11T23:20:22Z",
+      "side": 1,
+      "message": "I added it to the list.",
+      "parentUuid": "da33351e_431ca813",
       "range": {
         "startLine": 369,
         "startChar": 4,
