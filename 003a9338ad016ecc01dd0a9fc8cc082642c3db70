@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "da33351e_72541421",
+        "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 170
+      },
+      "writtenOn": "2017-09-12T06:11:35Z",
+      "side": 1,
+      "message": "One could add network traffic, storage traffic and CPU load as examples of stressors.",
+      "parentUuid": "da33351e_579310a3",
+      "revId": "003a9338ad016ecc01dd0a9fc8cc082642c3db70",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_b7909c96",
         "filename": "docs/testing/user/testspecification/resiliency/Index.rst",
         "patchSetId": 8
