@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_42e819e2",
+        "filename": "docs/testing/user/testspecification/vimoperationsidentity/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-13T04:58:14Z",
+      "side": 1,
+      "message": "Use \"openstack interoperability test\", not \"OpenStack Powered Compute\" - it\u0027s (1) a trademark (2) more than test cases. (ie CVP does not imply OpenStack Powered Compute\".",
+      "range": {
+        "startLine": 31,
+        "startChar": 2,
+        "endLine": 31,
+        "endChar": 27
+      },
+      "revId": "59b6c875ecb52553c3d6421d29fcfc4632c40556",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
