@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_a2d76522",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-13T04:52:58Z",
+      "side": 1,
+      "message": "We can not use the phrase \"OpenStack Powered Compute\" -- the reason is that, although we integrate the same set of test cases, the \"OpenStack Powered Compute\" program has a set of requirements in addition to test cases, which CVP does not specify. In addition, it\u0027s a trade mark that only OpenStack can decide who can use. We should stick to the original description in the previous version.",
+      "revId": "a2a1c0d3be3b6c7ffcbe0c58090f542e9ccc0275",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_c2d42922",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-13T04:52:58Z",
+      "side": 1,
+      "message": "follow the above convention (OPNFV-Functest/vPing), we should say \"OPNFV-Yardstick/HA\", where Yardstick is the implementation framework and HA is the test case area.",
+      "revId": "a2a1c0d3be3b6c7ffcbe0c58090f542e9ccc0275",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
