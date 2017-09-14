@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_d49ce25f",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-09-14T23:41:12Z",
+      "side": 1,
+      "message": "Enhancing interoperability is hopefully a benefit but interoperability testing is not the goal of CVP. Again ... my comment is in response to doubts that we have heard regarding the added value of CVP vs Open Stack test program.",
+      "parentUuid": "da33351e_b4d5de1d",
+      "range": {
+        "startLine": 322,
+        "startChar": 15,
+        "endLine": 322,
+        "endChar": 33
+      },
+      "revId": "9134aaad27cd90266041400e766f9d0c14ac28ad",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_b4603ea6",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 4
