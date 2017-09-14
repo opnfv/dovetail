@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_b4d5de1d",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-14T22:20:57Z",
+      "side": 1,
+      "message": "(1) interoperability is definitively a goal (though not the only goal). See line 70.\n(2) Georg\u0027s change here is per Ildiko/openstack request that we replace \"defcore\" with \"OpenStack Interoperability test\". Since defcore is no longer used in openstack, i think it\u0027s reasonable thing to do.",
+      "parentUuid": "da33351e_943eda8a",
+      "range": {
+        "startLine": 322,
+        "startChar": 15,
+        "endLine": 322,
+        "endChar": 33
+      },
+      "revId": "9134aaad27cd90266041400e766f9d0c14ac28ad",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_b4603ea6",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 4
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_34e9cee6",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-14T22:20:57Z",
+      "side": 1,
+      "message": "This was added by a lot of requests to identify in which project the test cases were developed. The Project-Name/Test naming is applied when only a portion of functions in that project (as in the case for Functest and Yardstick). Other projects do not have this ambiguity issue. Just to capture some of the history and rational. I suggest we move on in the non-essential issues in the interests of time. And we may have some experience to know better and improve next time around.",
+      "parentUuid": "da33351e_b4603ea6",
+      "range": {
+        "startLine": 323,
+        "startChar": 12,
+        "endLine": 323,
+        "endChar": 20
+      },
+      "revId": "9134aaad27cd90266041400e766f9d0c14ac28ad",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_94653ab7",
         "filename": "docs/testing/user/cvpaddendum/index.rst",
         "patchSetId": 4
@@ -59,6 +107,30 @@
       "writtenOn": "2017-09-14T20:46:47Z",
       "side": 1,
       "message": "Same comment as above ... IMO it would be better to say what type of HA is in scope.",
+      "range": {
+        "startLine": 344,
+        "startChar": 6,
+        "endLine": 344,
+        "endChar": 21
+      },
+      "revId": "9134aaad27cd90266041400e766f9d0c14ac28ad",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_14e64a15",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-14T22:20:57Z",
+      "side": 1,
+      "message": "Same comment as above. By the way, \"what type of HA\" is described in the next line.",
+      "parentUuid": "da33351e_94653ab7",
       "range": {
         "startLine": 344,
         "startChar": 6,
