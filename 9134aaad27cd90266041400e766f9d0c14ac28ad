@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_943eda8a",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-09-14T20:46:47Z",
+      "side": 1,
+      "message": "Objective of CVP per our description above is to test capability and not interoperability. It is important to make a distinction between CVP testing and OpenStack interop testing otherwise what value are we adding here? We have already had questions about this and doubts expressed which can undermine the perceived value of CVP.",
+      "range": {
+        "startLine": 322,
+        "startChar": 15,
+        "endLine": 322,
+        "endChar": 33
+      },
+      "revId": "9134aaad27cd90266041400e766f9d0c14ac28ad",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_b4603ea6",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-09-14T20:46:47Z",
+      "side": 1,
+      "message": "Why include project names with specific test-cases for the compulsory test cases but not for the optional ones? As a high-level requirements document I am not sure it makes sense to include project names or \"vPing\". The addendum is intended to define scope of testing and compliance criteria to guide Dovetail to select existing or invent new test cases.",
+      "range": {
+        "startLine": 323,
+        "startChar": 12,
+        "endLine": 323,
+        "endChar": 20
+      },
+      "revId": "9134aaad27cd90266041400e766f9d0c14ac28ad",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_94653ab7",
+        "filename": "docs/testing/user/cvpaddendum/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2017-09-14T20:46:47Z",
+      "side": 1,
+      "message": "Same comment as above ... IMO it would be better to say what type of HA is in scope.",
+      "range": {
+        "startLine": 344,
+        "startChar": 6,
+        "endLine": 344,
+        "endChar": 21
+      },
+      "revId": "9134aaad27cd90266041400e766f9d0c14ac28ad",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
