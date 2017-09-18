@@ -2,9 +2,8 @@
 proposed_tests:
   name: proposed_tests
   testcases_list:
-    # defcore,defcore.tc001 used for auto-method, defcore.tc002 used for manually method
-    - dovetail.defcore.tc001
-    # - dovetail.defcore.tc002
+    # osinterop
+    - dovetail.osinterop.tc001
     # vping
     - dovetail.vping.tc001
     - dovetail.vping.tc002
@@ -55,4 +54,4 @@ proposed_tests:
     - dovetail.tempest.tc004
     - dovetail.tempest.tc005
     # resiliency
-    - dovetail.resiliency.tc001
+    # - dovetail.resiliency.tc001

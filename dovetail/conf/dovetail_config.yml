@@ -29,7 +29,7 @@ testsuite_supported:
   - debug
 # testarea supported, should adjust accordingly
 testarea_supported:
-  - defcore
+  - osinterop
   - example
   - ha
   - ipv6

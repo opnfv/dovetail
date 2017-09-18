@@ -1,7 +1,7 @@
 ---
-dovetail.defcore.tc001:
-  name: dovetail.defcore.tc001
-  objective: > # Set of DefCore tempest test cases not flagged and required. It only contains OpenStack core (no object storage)
+dovetail.osinterop.tc001:
+  name: dovetail.osinterop.tc001
+  objective: > # Set of OpenStack interoperability test cases not flagged and required. It only contains OpenStack core (no object storage)
     # The approved guidelines (2016.08) are valid for Kilo, Liberty, Mitaka and Newton releases of OpenStack
     # The list can be generated using the Rest API from RefStack project:
     # https://refstack.openstack.org/api/v1/guidelines/2016.08/tests?target=compute&type=required&alias=true&flag=false
@@ -11,7 +11,7 @@ dovetail.defcore.tc001:
     pre_condition:
       - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/local/lib/python2.7/dist-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
     pre_copy:
-      src_file: defcore.txt
+      src_file: osinterop.txt
       dest_path: /usr/local/lib/python2.7/dist-packages/functest/opnfv_tests/openstack/refstack_client/defcore.txt
     cmds:
       - 'functest env prepare'
