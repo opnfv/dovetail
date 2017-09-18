@@ -2,25 +2,30 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) Ericsson AB
 
-======================================================
-Compliance and Verification program test specification
-======================================================
+.. _dovetail_testspecifications:
 
-.. toctree::
-   :maxdepth: 2
+==================================================
+Compliance Verification program test specification
+==================================================
 
 Introduction
 ============
 
-The OPNFV CVP provides a series or test areas aimed to evaluate the operation of an
-NFV system in accordance with carrier networking needs.  Each test area conatins a number
-of associated test cases which are descrobed in detail in the associated test specification.
+The OPNFV CVP provides a series or test areas aimed to evaluate the operation
+of an NFV system in accordance with carrier networking needs.  Each test area
+contains a number of associated test cases which are described in detail in the
+associated test specification.
 
-All tests in the CVP are required to fulfill a specific set of criteria in order that the
-CVP is able to provide a fair assesment of the system under test.  Test requierements are
-described in the 'Test Case Requierements'_ document.
+All tests in the CVP are required to fulfill a specific set of criteria in
+order that the CVP is able to provide a fair assessment of the system under
+test.  Test requirements are described in the 'Test Case Requirements'_
+document.
 
-All tests areas addressed in the CVP are covered in the following test specification documents.
+All tests areas addressed in the CVP are covered in the following test
+specification documents.
+
+.. toctree::
+   :maxdepth: 1
 
   ./faultmanagement/index.rst
   ./highavailability/index.rst
