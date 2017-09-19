@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_5fa57ea0",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-19T21:16:49Z",
+      "side": 0,
+      "message": "covered in \"system preparation\" for hw and \"user guide\" for the rest.",
+      "range": {
+        "startLine": 158,
+        "startChar": 0,
+        "endLine": 158,
+        "endChar": 14
+      },
+      "revId": "d473f82ebfe5e18540702d6ef13cad19eae4f1a6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_3fa23a99",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-19T21:16:49Z",
+      "side": 0,
+      "message": "covered in the user guide",
+      "range": {
+        "startLine": 167,
+        "startChar": 0,
+        "endLine": 167,
+        "endChar": 43
+      },
+      "revId": "d473f82ebfe5e18540702d6ef13cad19eae4f1a6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_ffb3b2e6",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-19T21:16:49Z",
+      "side": 0,
+      "message": "covered in user guide",
+      "range": {
+        "startLine": 280,
+        "startChar": 0,
+        "endLine": 280,
+        "endChar": 12
+      },
+      "revId": "d473f82ebfe5e18540702d6ef13cad19eae4f1a6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}

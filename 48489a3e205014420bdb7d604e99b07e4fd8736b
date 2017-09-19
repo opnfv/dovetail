@@ -139,6 +139,98 @@
       "revId": "48489a3e205014420bdb7d604e99b07e4fd8736b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_ff9c525f",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-19T21:16:49Z",
+      "side": 1,
+      "message": "covered in Addendum",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 16
+      },
+      "revId": "48489a3e205014420bdb7d604e99b07e4fd8736b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_dfb86eca",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-19T21:16:49Z",
+      "side": 1,
+      "message": "covered in addendum",
+      "range": {
+        "startLine": 159,
+        "startChar": 0,
+        "endLine": 159,
+        "endChar": 34
+      },
+      "revId": "48489a3e205014420bdb7d604e99b07e4fd8736b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_bfbdaab9",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-19T21:16:49Z",
+      "side": 1,
+      "message": "covered in user guide",
+      "range": {
+        "startLine": 237,
+        "startChar": 0,
+        "endLine": 237,
+        "endChar": 21
+      },
+      "revId": "48489a3e205014420bdb7d604e99b07e4fd8736b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_1faf767e",
+        "filename": "docs/testing/user/teststrategy/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-19T21:16:49Z",
+      "side": 1,
+      "message": "covered in user guide",
+      "range": {
+        "startLine": 268,
+        "startChar": 0,
+        "endLine": 268,
+        "endChar": 18
+      },
+      "revId": "48489a3e205014420bdb7d604e99b07e4fd8736b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
