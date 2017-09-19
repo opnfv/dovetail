@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_864ce8c9",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-09-19T06:40:44Z",
+      "side": 1,
+      "message": "The \"Required Infrastructure\" is given in wiki page\nhttps://wiki.opnfv.org/display/dovetail/Dovetail+Testing+Guide#DovetailTestingGuide-1CreatingaCompliantPOD\nThe \"connectivity needs\" is introduced in user guide doc with sections \"overview\" and \"checking the test host readiness\".\nThe introduction about LF accounts is also given in user guide doc with section \"OPNFV web interface\".\nhttp://artifacts.opnfv.org/dovetail/docs/testing_user_userguide/index.html",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 75
+      },
+      "revId": "48489a3e205014420bdb7d604e99b07e4fd8736b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_46ddc0df",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-09-19T06:40:44Z",
+      "side": 1,
+      "message": "About all these requirements, i.e. \"Level of connectivity required\", \"needed access to the SUT infrastructure\",  and \"files/configurations to be made available locally\" are all given in user guide doc.",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 61
+      },
+      "revId": "48489a3e205014420bdb7d604e99b07e4fd8736b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_3acd3086",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-09-19T06:40:44Z",
+      "side": 1,
+      "message": "Has been given in dovetail wiki page https://wiki.opnfv.org/display/dovetail/Dovetail+Testing+Guide#DovetailTestingGuide-1.3NetworkingHardware",
+      "range": {
+        "startLine": 64,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 85
+      },
+      "revId": "48489a3e205014420bdb7d604e99b07e4fd8736b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_06d0d8c7",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-09-19T06:40:44Z",
+      "side": 1,
+      "message": "About the \"Software ready state\", it has been introduced in test userguide doc.\nThe \"Pharos ready state\" is given in the wiki page\nhttps://wiki.opnfv.org/display/dovetail/Dovetail+Testing+Guide#DovetailTestingGuide-1CreatingaCompliantPOD",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 96
+      },
+      "revId": "48489a3e205014420bdb7d604e99b07e4fd8736b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
