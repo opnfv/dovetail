@@ -9,6 +9,8 @@ OPNFV Compliance Verification Program certification workflow
 .. toctree::
    :maxdepth: 2
 
+  ApplicationForm.rst
+
 Introduction
 ============
 
