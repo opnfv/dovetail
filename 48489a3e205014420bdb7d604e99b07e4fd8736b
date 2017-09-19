@@ -71,6 +71,30 @@
     },
     {
       "key": {
+        "uuid": "da33351e_df918e48",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-19T21:10:21Z",
+      "side": 1,
+      "message": "This should be part of the \"system preparation\" guide document, that is still to be completed. We do not rely on wiki\u0027s for docs.",
+      "parentUuid": "da33351e_3acd3086",
+      "range": {
+        "startLine": 64,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 85
+      },
+      "revId": "48489a3e205014420bdb7d604e99b07e4fd8736b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_06d0d8c7",
         "filename": "docs/testing/user/systempreparation/index.rst",
         "patchSetId": 6
@@ -82,6 +106,30 @@
       "writtenOn": "2017-09-19T06:40:44Z",
       "side": 1,
       "message": "About the \"Software ready state\", it has been introduced in test userguide doc.\nThe \"Pharos ready state\" is given in the wiki page\nhttps://wiki.opnfv.org/display/dovetail/Dovetail+Testing+Guide#DovetailTestingGuide-1CreatingaCompliantPOD",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 96
+      },
+      "revId": "48489a3e205014420bdb7d604e99b07e4fd8736b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_bf964a3d",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-09-19T21:10:21Z",
+      "side": 1,
+      "message": "Same as above. \"Pharos ready state\" is to be covered by the \"system preparation\" doc.",
+      "parentUuid": "da33351e_06d0d8c7",
       "range": {
         "startLine": 71,
         "startChar": 0,
