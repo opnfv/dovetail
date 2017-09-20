@@ -22,6 +22,30 @@
       "revId": "bc2b3cc1a9a597b6d4923e7bb6a055d75cb9441b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_62d0a6f6",
+        "filename": "docs/testing/developer/worksheet/worksheet.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-09-20T09:44:23Z",
+      "side": 1,
+      "message": "Yes, will amend it.",
+      "parentUuid": "da33351e_7f2841e2",
+      "range": {
+        "startLine": 32,
+        "startChar": 17,
+        "endLine": 32,
+        "endChar": 23
+      },
+      "revId": "bc2b3cc1a9a597b6d4923e7bb6a055d75cb9441b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
