@@ -95,6 +95,52 @@
     },
     {
       "key": {
+        "uuid": "da33351e_a5a8f877",
+        "filename": "docs/testing/developer/worksheet/worksheet.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2829
+      },
+      "writtenOn": "2017-09-20T14:56:34Z",
+      "side": 1,
+      "message": "how will the worksheet be submitted? In line 57 you mention using the wiki, is that the standard process?",
+      "range": {
+        "startLine": 42,
+        "startChar": 14,
+        "endLine": 42,
+        "endChar": 24
+      },
+      "revId": "bc2b3cc1a9a597b6d4923e7bb6a055d75cb9441b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_05b9e4cb",
+        "filename": "docs/testing/developer/worksheet/worksheet.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 2829
+      },
+      "writtenOn": "2017-09-20T14:56:34Z",
+      "side": 1,
+      "message": "so community inputs will be gathered using emails? Wouldn\u0027t Gerrit be more effective as a tool?",
+      "range": {
+        "startLine": 48,
+        "startChar": 57,
+        "endLine": 48,
+        "endChar": 73
+      },
+      "revId": "bc2b3cc1a9a597b6d4923e7bb6a055d75cb9441b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_625d4647",
         "filename": "docs/testing/developer/worksheet/worksheet.rst",
         "patchSetId": 2
