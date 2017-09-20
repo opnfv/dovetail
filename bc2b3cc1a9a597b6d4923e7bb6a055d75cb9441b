@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "da33351e_c27ff2a9",
+        "filename": "docs/testing/developer/worksheet/worksheet.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-20T11:58:46Z",
+      "side": 1,
+      "message": "I don\u0027t understand the meaning and purpose of this statement.",
+      "range": {
+        "startLine": 22,
+        "startChar": 89,
+        "endLine": 24,
+        "endChar": 42
+      },
+      "revId": "bc2b3cc1a9a597b6d4923e7bb6a055d75cb9441b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_7f2841e2",
         "filename": "docs/testing/developer/worksheet/worksheet.rst",
         "patchSetId": 2
@@ -42,6 +65,167 @@
         "startChar": 17,
         "endLine": 32,
         "endChar": 23
+      },
+      "revId": "bc2b3cc1a9a597b6d4923e7bb6a055d75cb9441b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_4243e26b",
+        "filename": "docs/testing/developer/worksheet/worksheet.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-20T11:58:46Z",
+      "side": 1,
+      "message": "in",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 2
+      },
+      "revId": "bc2b3cc1a9a597b6d4923e7bb6a055d75cb9441b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_625d4647",
+        "filename": "docs/testing/developer/worksheet/worksheet.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-20T11:58:46Z",
+      "side": 1,
+      "message": "shall we keep this generic, i.e., not refering to Danube here but instead say something like \"why it is in scope of a [specific] release of Dovetail/CVP\"? This makes it easier to maintain the documentation over multiple releases.",
+      "range": {
+        "startLine": 65,
+        "startChar": 44,
+        "endLine": 65,
+        "endChar": 59
+      },
+      "revId": "bc2b3cc1a9a597b6d4923e7bb6a055d75cb9441b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_c256d229",
+        "filename": "docs/testing/developer/worksheet/worksheet.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-20T11:58:46Z",
+      "side": 1,
+      "message": "of what exactly? Just Dovetail or the OPNFV testing frameworks in general?",
+      "range": {
+        "startLine": 69,
+        "startChar": 41,
+        "endLine": 69,
+        "endChar": 68
+      },
+      "revId": "bc2b3cc1a9a597b6d4923e7bb6a055d75cb9441b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_a253ce37",
+        "filename": "docs/testing/developer/worksheet/worksheet.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-20T11:58:46Z",
+      "side": 1,
+      "message": "see above",
+      "range": {
+        "startLine": 73,
+        "startChar": 41,
+        "endLine": 73,
+        "endChar": 68
+      },
+      "revId": "bc2b3cc1a9a597b6d4923e7bb6a055d75cb9441b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_223fbed7",
+        "filename": "docs/testing/developer/worksheet/worksheet.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-20T11:58:46Z",
+      "side": 1,
+      "message": "in the OPNFV CI pipeline?",
+      "range": {
+        "startLine": 82,
+        "startChar": 34,
+        "endLine": 82,
+        "endChar": 53
+      },
+      "revId": "bc2b3cc1a9a597b6d4923e7bb6a055d75cb9441b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_021b9a81",
+        "filename": "docs/testing/developer/worksheet/worksheet.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-20T11:58:46Z",
+      "side": 1,
+      "message": "this is mostly a copy of the test case requirements as listed in the other document. Shouldn\u0027t we refer to that document instead to avoid having to maintain 2 sets of requirements?",
+      "range": {
+        "startLine": 87,
+        "startChar": 0,
+        "endLine": 87,
+        "endChar": 41
+      },
+      "revId": "bc2b3cc1a9a597b6d4923e7bb6a055d75cb9441b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_6276e6d8",
+        "filename": "docs/testing/developer/worksheet/worksheet.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-09-20T11:58:46Z",
+      "side": 1,
+      "message": "we cannot link to artifacts.opnfv.org. Instead, we should add a rst reference in the requirements document and use :ref: to refer to it from this document",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 138,
+        "endChar": 90
       },
       "revId": "bc2b3cc1a9a597b6d4923e7bb6a055d75cb9441b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
