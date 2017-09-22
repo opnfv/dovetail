@@ -1,74 +1,63 @@
-.. This work is licensed under a Creative Commons Attribution 4.0 International License.
+.. This work is licensed under a Creative Commons Attribution 4.0 International
+.. License.
 .. http://creativecommons.org/licenses/by/4.0
-.. (c) Ericsson AB
+.. (c) Huawei, and others
 
 .. _dovetail-system_preparation_guide:
 
 ============================================================
-Compliance and Verification program system preparation guide
+Compliance Verification Program system preparation guide
 ============================================================
 
-.. toctree::
-   :maxdepth: 2
+This document provides a general guide to hardware system prerequisites
+and expectations for running OPNFV CVP testing. For detailed guide of
+preparing software tools and configurations, and conducting the test,
+please refer to the User Guide :ref:dovetail-testing_user_guide.
 
-Version history
-===============
+The CVP test tools expect that the hardware of the System Under Test (SUT)
+is Pharos compliant `Pharos specification`_
 
-+------------+----------+------------------+----------------------------------+
-| **Date**   | **Ver.** | **Author**       | **Comment**                      |
-|            |          |                  |                                  |
-+------------+----------+------------------+----------------------------------+
-| 2017-04-25 | 0.0.1    | Chris Price      | Draft version                    |
-|            |          |                  |                                  |
-+------------+----------+------------------+----------------------------------+
+The Pharos specification itself is a general guideline, rather than a set of
+specific hard requirements at this time, developed by the OPNFV community. For
+the purpose of helping CVP testers, we summarize the main aspects of hardware to
+consider in preparation for CVP testing.
 
+As described by the CVP Testing User Guide, the hardware systems involved in
+CVP testing includes a Test Node, a System Under Test (SUT) system, and network
+connectivity between them.
 
-Introduction
-============
+The Test Node can be a bare metal machine or a virtual machine that can support
+Docker container environment. If it is a bare metal machine, it needs to be a
+x86 based at this time. Detailed information of how to configure and prepare the
+Test Node can be found in the User Guide.
 
-This system preparation guide provides a detailed outline of the needed system prerequisites
-and expectations for running OPNFV evaluation testing.
+The System Under Test (SUT) system is expected to consist of a set of general
+purpose servers, storage devices or systems, and networking infrastructure
+connecting them together.
+The set of servers are expected to be of the same architecture, either x86-64 or
+ARM-64. Mixing different architectures in the same SUT is not supported.
 
-Test planning and preparation
-=============================
+A minimum of 5 servers, 3 configured for controllers and 2 or more configured for compute
+resource are expected. However this is not a hard requirement
+at this phase. The CVP 1.0 mandatory test cases only require one compute server. At
+lease two compute servers are required to pass some of the optional test cases
+in the current CVP release. CVP control service high availability tests expect two
+or more control nodes to pass, depending on the HA mechanism implemented by the
+SUT.
 
-https://jira.opnfv.org/browse/DOVETAIL-384
+The SUT is also expected to include components for persistent storage. The CVP
+testing does not expect or impose significant storage size or performance requirements.
 
-Give an outline of the planning phase.
+The SUT is expected to be connected with high performance networks. These networks
+are expected in the SUT:
 
---------------
-Pre-requisites
---------------
+- A management network by which the Test Node can reach all identity, image, network,
+and compute services in the SUT
+- A data network that supports the virtual network capabilities and data path testing
 
-Describe what needs to be in place before starting.
+Additional networks, such as Light Out Management or storage networks, may be
+beneficial and found in the SUT, but they are not a requirement for CVP testing.
 
-Required Infrastructure, connectivity needs, LF & CVP accounts and any additional security or peripheral needs.
-Use sub-chapters for instance for any accounts etc that need to be created.
-
--------------------------------------------
-Preparing the virtualisation infrastructure
--------------------------------------------
-
-Briefly state what will be tested as an intro, then outline the required system state to be achieved prior to running the tests.
-
-Preparing the test staging host system
---------------------------------------
-
-https://jira.opnfv.org/browse/DOVETAIL-385
-
-What is required from the system running the CVP test suites?
-
-Required network configuration
--------------------------------
-
-https://jira.opnfv.org/browse/DOVETAIL-386
-
-VLAN configurations required for NFV deployments.  Non-VLAN configurations if needed.
-
-Preparing your system for CVP testing
--------------------------------------
-
-https://jira.opnfv.org/browse/DOVETAIL-387
-
-Describe how to realise the "Pharos ready state" and the "Software ready state" in this section.
+.. References
+.. _`Pharos specification`: https://wiki.opnfv.org/display/pharos/Pharos+Specification
 
