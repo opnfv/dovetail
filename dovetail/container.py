@@ -149,14 +149,19 @@ class Container(object):
 
         # CI_DEBUG is used for showing the debug logs of the upstream projects
         # BUILD_TAG is the unique id for this test
-        envs = ' -e CI_DEBUG=true -e NODE_NAME=master'
+        envs = ' -e NODE_NAME=master'
+        DEBUG = os.getenv('DEBUG')
+        if DEBUG is not None and DEBUG.lower() == "true":
+            envs = envs + ' -e CI_DEBUG=true'
+        else:
+            envs = envs + ' -e CI_DEBUG=false'
         envs = envs + ' -e BUILD_TAG=%s-%s' % (dovetail_config['build_tag'],
                                                testcase_name)
 
         hosts_config = ""
         hosts_config_file = os.path.join(dovetail_config['config_dir'],
                                          'hosts.yaml')
-        try:
+        if os.path.isfile(hosts_config_file):
             with open(hosts_config_file) as f:
                 hosts_info = yaml.safe_load(f)
             if hosts_info['hosts_info']:
@@ -165,10 +170,6 @@ class Container(object):
                     hosts_config += " --add-host "
                     hosts_config += str(host)
                 cls.logger.debug('Get hosts info {}.'.format(host))
-        except Exception:
-            cls.logger.warn('Failed to get hosts info in {}, '
-                            'maybe some issues with domain name resolution.'
-                            .format(hosts_config_file))
 
         config = ""
         if type.lower() == "functest":
