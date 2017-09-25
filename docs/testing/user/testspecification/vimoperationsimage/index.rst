@@ -21,7 +21,7 @@ image creation, image list, image update and image deletion capabilities using G
 References
 ==========
 
-- Defcore test cases
+- OpenStack Interoperability guidelines (version 2016.08)
 
   - https://github.com/openstack/interop/blob/master/2016.08.json
 
