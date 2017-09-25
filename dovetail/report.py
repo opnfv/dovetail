@@ -79,7 +79,7 @@ class Report(object):
                         'result': testcase.sub_testcase_passed(sub_test)
                     })
             report_obj['testcases_list'].append(testcase_inreport)
-        cls.logger.info(json.dumps(report_obj))
+        cls.logger.debug(json.dumps(report_obj))
         return report_obj
 
     @classmethod
