@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_4d98266a",
+        "filename": "docs/testing/user/certificationworkflow/ApplicationForm.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-09-25T19:06:07Z",
+      "side": 1,
+      "message": "Change this to \"third party\"",
+      "range": {
+        "startLine": 35,
+        "startChar": 94,
+        "endLine": 35,
+        "endChar": 99
+      },
+      "revId": "fa599e74d2ba7deec61541a9934e1818dc7f4806",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_cdab9673",
+        "filename": "docs/testing/user/certificationworkflow/ApplicationForm.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-09-25T19:06:07Z",
+      "side": 1,
+      "message": "Change to \"Name and Address\"",
+      "range": {
+        "startLine": 57,
+        "startChar": 42,
+        "endLine": 57,
+        "endChar": 49
+      },
+      "revId": "fa599e74d2ba7deec61541a9934e1818dc7f4806",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
