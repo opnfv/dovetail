@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_8dccee6b",
+        "filename": "docs/testing/developer/testcaserequirements/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2017-09-25T19:11:06Z",
+      "side": 1,
+      "message": "Should there also be a requirement that tests do not require external resources, i.e. connectivity to the Internet while a test is running (i.e. once all VMs and Containers are downloaded/installed, it should download other components in the middle of the test).",
+      "range": {
+        "startLine": 90,
+        "startChar": 4,
+        "endLine": 90,
+        "endChar": 68
+      },
+      "revId": "b41b3bf9e8515b0bd521ba0e9640dd42a310431e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
