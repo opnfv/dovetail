@@ -14,6 +14,7 @@ import re
 import os
 import datetime
 import tarfile
+import time
 
 from pbr import version
 
@@ -165,14 +166,19 @@ class Report(object):
 
     @classmethod
     def save_logs(cls):
-        logs_gz = "logs.tar.gz"
+        file_suffix = time.strftime('%d_%H_%M', time.localtime(time.time()))
+        logs_gz = "logs_{}.tar.gz".format(file_suffix)
         result_dir = dt_cfg.dovetail_config['result_dir']
 
-        with tarfile.open(os.path.join(result_dir, logs_gz), "w:gz") as f_out:
+        cwd = os.getcwd()
+        os.chdir(os.path.join(result_dir, '..'))
+        tar_file = os.path.join(result_dir, '..', logs_gz)
+        with tarfile.open(tar_file, "w:gz") as f_out:
             files = os.listdir(result_dir)
             for f in files:
                 if f not in ['workspace']:
-                    f_out.add(os.path.join(result_dir, f))
+                    f_out.add(os.path.join('results', f))
+        os.chdir(cwd)
 
     # save to disk as default
     @classmethod
