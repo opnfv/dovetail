@@ -45,7 +45,7 @@ cli:
       testarea:
         flags:
           - '--testarea'
-        default: 'full'
+        multiple: 'True'
         help: 'compliance testarea within testsuite'
       debug:
         flags:

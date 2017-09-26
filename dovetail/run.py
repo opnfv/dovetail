@@ -38,14 +38,10 @@ def load_testcase():
 
 
 def run_test(testsuite, testarea, logger):
-    testarea_list = []
-    for value in testsuite['testcases_list']:
-        if value is not None and (testarea == 'full' or testarea in value):
-            testarea_list.append(value)
-
+    testcase_list = Testcase.get_testcase_list(testsuite, testarea)
     duration = 0
     start_time = time.time()
-    for testcase_name in testarea_list:
+    for testcase_name in testcase_list:
         logger.info('>>[testcase]: {}'.format(testcase_name))
         testcase = Testcase.get(testcase_name)
         if testcase is None:
@@ -275,14 +271,11 @@ def main(*args, **kwargs):
     else:
         dt_cfg.dovetail_config['offline'] = False
 
-    testarea = kwargs['testarea']
+    origin_testarea = kwargs['testarea']
     testsuite_validation = False
-    testarea_validation = False
-    if (testarea == 'full') or \
-       (testarea in dt_cfg.dovetail_config['testarea_supported']):
-        testarea_validation = True
     if kwargs['testsuite'] in dt_cfg.dovetail_config['testsuite_supported']:
         testsuite_validation = True
+    testarea_validation, testarea = Testcase.check_testarea(origin_testarea)
     if testsuite_validation and testarea_validation:
         testsuite_yaml = load_testsuite(kwargs['testsuite'])
         load_testcase()
@@ -292,7 +285,7 @@ def main(*args, **kwargs):
         Report.save_logs()
     else:
         logger.error('Invalid input commands, testsuite {} testarea {}'
-                     .format(kwargs['testsuite'], testarea))
+                     .format(kwargs['testsuite'], origin_testarea))
 
 
 dt_cfg.load_config_files()
