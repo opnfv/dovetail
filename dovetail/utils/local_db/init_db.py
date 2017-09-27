@@ -36,9 +36,6 @@ def pod():
     for p in pods:
         post(target, p)
 
-    add_pod('master', 'metal')
-    add_pod('virtual_136_2', 'virtual')
-
 
 def project():
     target = '{}/projects'.format(target_url)
