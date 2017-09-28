@@ -239,6 +239,14 @@ def env_init(logger):
     dt_utils.source_env(openrc)
 
 
+def check_hosts_file(logger):
+    hosts_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
+                              'hosts.yaml')
+    if not os.path.isfile(hosts_file):
+        logger.warn("There is no hosts file {}, may be some issues with "
+                    "domain name resolution.".format(hosts_file))
+
+
 def main(*args, **kwargs):
     """Dovetail compliance test entry!"""
     build_tag = "daily-master-%s" % str(uuid.uuid1())
@@ -259,6 +267,7 @@ def main(*args, **kwargs):
     copy_patch_files(logger)
     dt_utils.check_docker_version(logger)
     validate_input(kwargs, dt_cfg.dovetail_config['validate_input'], logger)
+    check_hosts_file(logger)
     configs = filter_config(kwargs, logger)
 
     if configs is not None:
