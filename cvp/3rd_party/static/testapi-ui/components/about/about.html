@@ -1,0 +1,11 @@
+<hr>
+<div class="about-sidebar">
+    <a><div class="about-option"
+            ng-click="ctrl.selectOption('about')"
+            ng-class="{ 'about-active': ctrl.selected === 'about' }">
+            About CVP
+    </div></a>
+</div>
+<div class="about-content">
+    <div ng-include src="ctrl.template"></div>
+</div>

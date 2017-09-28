@@ -1,0 +1,43 @@
+<div>
+	<div class="row" style="margin-top:20px">
+		<div class="col-sm-offset-1 col-sm-11">
+			<div>
+				<label class="col-sm-3">Organization name: </label>
+				<input type="text" class="text col-sm-7 application-modal-text" ng-model="ctrl.organization_name" disabled>
+			</div>
+			<div>
+				<label class="col-sm-3">Organization website: </label>
+				<input type="text" class="text col-sm-7 application-modal-text" ng-model="ctrl.organization_web" disabled>
+			</div>
+			<div>
+				<label class="col-sm-3">Product name: </label>
+				<input type="text" class="text col-sm-7 application-modal-text" ng-model="ctrl.product_name" disabled>
+			</div>
+			<div>
+				<label class="col-sm-3">Product documentation: </label>
+				<input type="text" class="text col-sm-7 application-modal-text" ng-model="ctrl.product_categories" disabled>
+			</div>
+			<div>
+				<label class="col-sm-3">User ID: </label>
+				<input type="text" class="text col-sm-7 application-modal-text" ng-model="ctrl.user_id" disabled>
+			</div>
+		</div>
+		<div class="btn-group col-sm-offset-5 application-modal-button" role="group">
+			<button type="button" class="btn btn-default" ng-click="ctrl.submitForm()">Confirm</button>
+			<button type="button" class="btn btn-default" style="margin-left:20px" ng-click="ctrl.cancelSubmit()">Cancel</button>
+		</div>
+	</div>
+</div>
+
+<style>
+.ngdialog.ngdialog-theme-default.custom-width-60 .ngdialog-content {
+    width: 50%;
+}
+.application-modal-text {
+    margin-bottom: 5px;
+}
+.application-modal-button {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+</style>

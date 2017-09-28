@@ -1,0 +1,590 @@
+{
+    "mandatory": {
+        "name": "Mandatory CVP Test Areas",
+        "value": [
+            {
+                "area_name": "Test Area VIM Operations - Compute",
+                "value": [
+                    {
+                        "api_name": "Image operations within the Compute API",
+                        "value": [
+                            "tempest.api.compute.images.test_images_oneserver.ImagesOneServerTestJSON.test_create_delete_image",
+                            "tempest.api.compute.images.test_images_oneserver.ImagesOneServerTestJSON.test_create_image_specify_multibyte_character_image_name"
+                        ]
+                    },
+                    {
+                        "api_name": "Basic support Compute API for server actions such as reboot, rebuild, resize",
+                        "value": [
+                            "tempest.api.compute.servers.test_instance_actions.InstanceActionsTestJSON.test_get_instance_action",
+                            "tempest.api.compute.servers.test_instance_actions.InstanceActionsTestJSON.test_list_instance_actions"
+                        ]
+                    },
+                    {
+                        "api_name": "Generate, import, and delete SSH keys within Compute services",
+                        "value": [
+                            "tempest.api.compute.servers.test_servers.ServersTestJSON.test_create_specify_keypair"
+                        ]
+                    },
+                    {
+                        "api_name": "List supported versions of the Compute API",
+                        "value": [
+                            "tempest.api.compute.test_versions.TestVersions.test_list_api_versions"
+                        ]
+                    },
+                    {
+                        "api_name": "Quotas management in Compute API",
+                        "value": [
+                            "tempest.api.compute.test_quotas.QuotasTestJSON.test_get_default_quotas",
+                            "tempest.api.compute.test_quotas.QuotasTestJSON.test_get_quotas"
+                        ]
+                    },
+                    {
+                        "api_name": "Basic server operations in the Compute API",
+                        "value": [
+                            "tempest.api.compute.servers.test_servers.ServersTestJSON.test_create_server_with_admin_password",
+                            "tempest.api.compute.servers.test_servers.ServersTestJSON.test_create_with_existing_server_name",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_create_numeric_server_name",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_create_server_metadata_exceeds_length_limit",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_create_server_name_length_exceeds_256",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_create_with_invalid_flavor",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_create_with_invalid_image",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_create_with_invalid_network_uuid",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_delete_server_pass_id_exceeding_length_limit",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_delete_server_pass_negative_id",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_get_non_existent_server",
+                            "tempest.api.compute.servers.test_create_server.ServersTestJSON.test_host_name_is_same_as_server_name",
+                            "tempest.api.compute.servers.test_create_server.ServersTestManualDisk.test_host_name_is_same_as_server_name",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_invalid_ip_v6_address",
+                            "tempest.api.compute.servers.test_create_server.ServersTestJSON.test_list_servers",
+                            "tempest.api.compute.servers.test_create_server.ServersTestJSON.test_list_servers_with_detail",
+                            "tempest.api.compute.servers.test_create_server.ServersTestManualDisk.test_list_servers",
+                            "tempest.api.compute.servers.test_create_server.ServersTestManualDisk.test_list_servers_with_detail",
+                            "tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_detailed_filter_by_flavor",
+                            "tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_detailed_filter_by_image",
+                            "tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_detailed_filter_by_server_name",
+                            "tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_detailed_filter_by_server_status",
+                            "tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_detailed_limit_results",
+                            "tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_flavor",
+                            "tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_image",
+                            "tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_limit",
+                            "tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_server_name",
+                            "tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_server_status",
+                            "tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filtered_by_name_wildcard",
+                            "tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_by_changes_since_future_date",
+                            "tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_by_changes_since_invalid_date",
+                            "tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_by_limits",
+                            "tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_by_limits_greater_than_actual_count",
+                            "tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_by_limits_pass_negative_value",
+                            "tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_by_limits_pass_string",
+                            "tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_by_non_existing_flavor",
+                            "tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_by_non_existing_image",
+                            "tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_by_non_existing_server_name",
+                            "tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_detail_server_is_deleted",
+                            "tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_status_non_existing",
+                            "tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_with_a_deleted_server",
+                            "tempest.api.compute.servers.test_server_actions.ServerActionsTestJSON.test_lock_unlock_server",
+                            "tempest.api.compute.servers.test_server_metadata.ServerMetadataTestJSON.test_delete_server_metadata_item",
+                            "tempest.api.compute.servers.test_server_metadata.ServerMetadataTestJSON.test_get_server_metadata_item",
+                            "tempest.api.compute.servers.test_server_metadata.ServerMetadataTestJSON.test_list_server_metadata",
+                            "tempest.api.compute.servers.test_server_metadata.ServerMetadataTestJSON.test_set_server_metadata",
+                            "tempest.api.compute.servers.test_server_metadata.ServerMetadataTestJSON.test_set_server_metadata_item",
+                            "tempest.api.compute.servers.test_server_metadata.ServerMetadataTestJSON.test_update_server_metadata",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_server_name_blank",
+                            "tempest.api.compute.servers.test_server_actions.ServerActionsTestJSON.test_reboot_server_hard",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_reboot_non_existent_server",
+                            "tempest.api.compute.servers.test_server_actions.ServerActionsTestJSON.test_rebuild_server",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_rebuild_deleted_server",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_rebuild_non_existent_server",
+                            "tempest.api.compute.servers.test_server_actions.ServerActionsTestJSON.test_stop_start_server",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_stop_non_existent_server",
+                            "tempest.api.compute.servers.test_servers.ServersTestJSON.test_update_access_server_address",
+                            "tempest.api.compute.servers.test_servers.ServersTestJSON.test_update_server_name",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_update_name_of_non_existent_server",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_update_server_name_length_exceeds_256",
+                            "tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_update_server_set_empty_name",
+                            "tempest.api.compute.servers.test_create_server.ServersTestJSON.test_verify_created_server_vcpus",
+                            "tempest.api.compute.servers.test_create_server.ServersTestJSON.test_verify_server_details",
+                            "tempest.api.compute.servers.test_create_server.ServersTestManualDisk.test_verify_created_server_vcpus",
+                            "tempest.api.compute.servers.test_create_server.ServersTestManualDisk.test_verify_server_details"
+                        ]
+                    },
+                    {
+                        "api_name": "Retrieve volume information through the Compute API",
+                        "value": [
+                            "tempest.api.compute.volumes.test_attach_volume.AttachVolumeTestJSON.test_attach_detach_volume",
+                            "tempest.api.compute.volumes.test_attach_volume.AttachVolumeTestJSON.test_list_get_volume_attachments"
+                        ]
+                    }
+                ]
+            },
+            {
+                "area_name": "Test Area VIM Operations - Identity",
+                "value": [
+                    {
+                        "api_name": "API discovery operations within the Identity v3 API",
+                        "value": [
+                            "tempest.api.identity.v3.test_api_discovery.TestApiDiscovery.test_api_media_types",
+                            "tempest.api.identity.v3.test_api_discovery.TestApiDiscovery.test_api_version_resources",
+                            "tempest.api.identity.v3.test_api_discovery.TestApiDiscovery.test_api_version_statuses"
+                        ]
+                    },
+                    {
+                        "api_name": "Auth operations within the Identity API",
+                        "value": [
+                            "tempest.api.identity.v3.test_tokens.TokensV3Test.test_create_token"
+                        ]
+                    }
+                ]
+            },
+            {
+                "area_name": "Test Area VIM Operations - Image",
+                "value": [
+                    {
+                        "api_name": "Image deletion tests using the Glance v2 API",
+                        "value": [
+                            "tempest.api.image.v2.test_images.BasicOperationsImagesTest.test_delete_image",
+                            "tempest.api.image.v2.test_images_negative.ImagesNegativeTest.test_delete_image_null_id",
+                            "tempest.api.image.v2.test_images_negative.ImagesNegativeTest.test_delete_non_existing_image",
+                            "tempest.api.image.v2.test_images_tags_negative.ImagesTagsNegativeTest.test_delete_non_existing_tag"
+                        ]
+                    },
+                    {
+                        "api_name": "Image get tests using the Glance v2 API",
+                        "value": [
+                            "tempest.api.image.v2.test_images.ListImagesTest.test_get_image_schema",
+                            "tempest.api.image.v2.test_images.ListImagesTest.test_get_images_schema",
+                            "tempest.api.image.v2.test_images_negative.ImagesNegativeTest.test_get_delete_deleted_image",
+                            "tempest.api.image.v2.test_images_negative.ImagesNegativeTest.test_get_image_null_id",
+                            "tempest.api.image.v2.test_images_negative.ImagesNegativeTest.test_get_non_existent_image"
+                        ]
+                    },
+                    {
+                        "api_name": "CRUD image operations in Images API v2",
+                        "value": [
+                            "tempest.api.image.v2.test_images.ListImagesTest.test_list_no_params"
+                        ]
+                    },
+                    {
+                        "api_name": "Image list tests using the Glance v2 API",
+                        "value": [
+                            "tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_container_format",
+                            "tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_disk_format",
+                            "tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_limit",
+                            "tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_min_max_size",
+                            "tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_size",
+                            "tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_status",
+                            "tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_visibility"
+                        ]
+                    },
+                    {
+                        "api_name": "Image update tests using the Glance v2 API",
+                        "value": [
+                            "tempest.api.image.v2.test_images.BasicOperationsImagesTest.test_update_image",
+                            "tempest.api.image.v2.test_images_tags.ImagesTagsTest.test_update_delete_tags_for_image",
+                            "tempest.api.image.v2.test_images_tags_negative.ImagesTagsNegativeTest.test_update_tags_for_non_existing_image"
+                        ]
+                    }
+                ]
+            },
+            {
+                "area_name": "Test Area VIM Operations - Network",
+                "value": [
+                    {
+                        "api_name": "Basic CRUD operations on L2 networks and L2 network ports",
+                        "value": [
+                            "tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_all_attributes",
+                            "tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_allocation_pools",
+                            "tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_dhcp_enabled",
+                            "tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_gw",
+                            "tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_gw_and_allocation_pools",
+                            "tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_host_routes_and_dns_nameservers",
+                            "tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_without_gateway",
+                            "tempest.api.network.test_networks.NetworksTest.test_create_update_delete_network_subnet",
+                            "tempest.api.network.test_networks.NetworksTest.test_delete_network_with_subnet",
+                            "tempest.api.network.test_networks.NetworksTest.test_list_networks",
+                            "tempest.api.network.test_networks.NetworksTest.test_list_networks_fields",
+                            "tempest.api.network.test_networks.NetworksTest.test_list_subnets",
+                            "tempest.api.network.test_networks.NetworksTest.test_list_subnets_fields",
+                            "tempest.api.network.test_networks.NetworksTest.test_show_network",
+                            "tempest.api.network.test_networks.NetworksTest.test_show_network_fields",
+                            "tempest.api.network.test_networks.NetworksTest.test_show_subnet",
+                            "tempest.api.network.test_networks.NetworksTest.test_show_subnet_fields",
+                            "tempest.api.network.test_networks.NetworksTest.test_update_subnet_gw_dns_host_routes_dhcp",
+                            "tempest.api.network.test_ports.PortsTestJSON.test_create_bulk_port",
+                            "tempest.api.network.test_ports.PortsTestJSON.test_create_port_in_allowed_allocation_pools",
+                            "tempest.api.network.test_ports.PortsTestJSON.test_create_update_delete_port",
+                            "tempest.api.network.test_ports.PortsTestJSON.test_list_ports",
+                            "tempest.api.network.test_ports.PortsTestJSON.test_list_ports_fields",
+                            "tempest.api.network.test_ports.PortsTestJSON.test_show_port",
+                            "tempest.api.network.test_ports.PortsTestJSON.test_show_port_fields",
+                            "tempest.api.network.test_ports.PortsTestJSON.test_update_port_with_security_group_and_extra_attributes",
+                            "tempest.api.network.test_ports.PortsTestJSON.test_update_port_with_two_security_groups_and_extra_attributes"
+                        ]
+                    },
+                    {
+                        "api_name": "Basic CRUD operations on security groups",
+                        "value": [
+                            "tempest.api.network.test_security_groups.SecGroupTest.test_create_list_update_show_delete_security_group",
+                            "tempest.api.network.test_security_groups.SecGroupTest.test_create_security_group_rule_with_additional_args",
+                            "tempest.api.network.test_security_groups.SecGroupTest.test_create_security_group_rule_with_icmp_type_code",
+                            "tempest.api.network.test_security_groups.SecGroupTest.test_create_security_group_rule_with_protocol_integer_value",
+                            "tempest.api.network.test_security_groups.SecGroupTest.test_create_security_group_rule_with_remote_group_id",
+                            "tempest.api.network.test_security_groups.SecGroupTest.test_create_security_group_rule_with_remote_ip_prefix",
+                            "tempest.api.network.test_security_groups.SecGroupTest.test_create_show_delete_security_group_rule",
+                            "tempest.api.network.test_security_groups.SecGroupTest.test_list_security_groups",
+                            "tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_additional_default_security_group_fails",
+                            "tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_duplicate_security_group_rule_fails",
+                            "tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_security_group_rule_with_bad_ethertype",
+                            "tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_security_group_rule_with_bad_protocol",
+                            "tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_security_group_rule_with_bad_remote_ip_prefix",
+                            "tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_security_group_rule_with_invalid_ports",
+                            "tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_security_group_rule_with_non_existent_remote_groupid",
+                            "tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_create_security_group_rule_with_non_existent_security_group",
+                            "tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_delete_non_existent_security_group",
+                            "tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_show_non_existent_security_group",
+                            "tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_show_non_existent_security_group_rule"
+                        ]
+                    }
+                ]
+            },
+            {
+                "area_name": "Test Area VIM Operations - Volume",
+                "value": [
+                    {
+                        "api_name": "Volume attach and detach operations with the Cinder v2 API",
+                        "value": [
+                            "tempest.api.volume.test_volumes_actions.VolumesV2ActionsTest.test_attach_detach_volume_to_instance",
+                            "tempest.api.volume.test_volumes_actions.VolumesV2ActionsTest.test_get_volume_attachment",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_attach_volumes_with_nonexistent_volume_id",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_detach_volumes_with_invalid_volume_id"
+                        ]
+                    },
+                    {
+                        "api_name": "Volume service availability zone operations with the Cinder v2 API",
+                        "value": [
+                            "tempest.api.volume.test_availability_zone.AvailabilityZoneV2TestJSON.test_get_availability_zone_list"
+                        ]
+                    },
+                    {
+                        "api_name": "Volume cloning operations with the Cinder v2 API",
+                        "value": [
+                            "tempest.api.volume.test_volumes_get.VolumesV2GetTest.test_volume_create_get_update_delete_as_clone"
+                        ]
+                    },
+                    {
+                        "api_name": "Image copy-to-volume operations with the Cinder v2 API",
+                        "value": [
+                            "tempest.api.volume.test_volumes_actions.VolumesV2ActionsTest.test_volume_bootable",
+                            "tempest.api.volume.test_volumes_get.VolumesV2GetTest.test_volume_create_get_update_delete_from_image"
+                        ]
+                    },
+                    {
+                        "api_name": "Volume creation and deletion operations with the Cinder v2 API",
+                        "value": [
+                            "tempest.api.volume.test_volumes_get.VolumesV2GetTest.test_volume_create_get_update_delete",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_invalid_size",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_nonexistent_source_volid",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_nonexistent_volume_type",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_out_passing_size",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_size_negative",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_size_zero"
+                        ]
+                    },
+                    {
+                        "api_name": "Volume service extension listing operations with the Cinder v2 API",
+                        "value": [
+                            "tempest.api.volume.test_extensions.ExtensionsV2TestJSON.test_list_extensions"
+                        ]
+                    },
+                    {
+                        "api_name": "Volume GET operations with the Cinder v2 API",
+                        "value": [
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_get_invalid_volume_id",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_get_volume_without_passing_volume_id",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_volume_get_nonexistent_volume_id"
+                        ]
+                    },
+                    {
+                        "api_name": "Volume listing operations with the Cinder v2 API",
+                        "value": [
+                            "tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list",
+                            "tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_by_name",
+                            "tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_details_by_name",
+                            "tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_param_display_name_and_status",
+                            "tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_with_detail_param_display_name_and_status",
+                            "tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_with_detail_param_metadata",
+                            "tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_with_details",
+                            "tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_with_param_metadata",
+                            "tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volumes_list_by_availability_zone",
+                            "tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volumes_list_by_status",
+                            "tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volumes_list_details_by_availability_zone",
+                            "tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volumes_list_details_by_status",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_list_volumes_detail_with_invalid_status",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_list_volumes_detail_with_nonexistent_name",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_list_volumes_with_invalid_status",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_list_volumes_with_nonexistent_name",
+                            "tempest.api.volume.v2.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_details_pagination",
+                            "tempest.api.volume.v2.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_details_with_multiple_params",
+                            "tempest.api.volume.v2.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_pagination"
+                        ]
+                    },
+                    {
+                        "api_name": "Volume metadata operations with the Cinder v2 API",
+                        "value": [
+                            "tempest.api.volume.test_volume_metadata.VolumesV2MetadataTest.test_create_get_delete_volume_metadata",
+                            "tempest.api.volume.test_volume_metadata.VolumesV2MetadataTest.test_update_volume_metadata_item"
+                        ]
+                    },
+                    {
+                        "api_name": "Verification of read-only status on volumes with the Cinder v2 API",
+                        "value": [
+                            "tempest.api.volume.test_volumes_actions.VolumesV2ActionsTest.test_volume_readonly_update"
+                        ]
+                    },
+                    {
+                        "api_name": "Volume reservation operations with the Cinder v2 API",
+                        "value": [
+                            "tempest.api.volume.test_volumes_actions.VolumesV2ActionsTest.test_reserve_unreserve_volume",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_reserve_volume_with_negative_volume_status",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_reserve_volume_with_nonexistent_volume_id",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_unreserve_volume_with_nonexistent_volume_id"
+                        ]
+                    },
+                    {
+                        "api_name": "Volume snapshot creation/deletion operations with the Cinder v2 API",
+                        "value": [
+                            "tempest.api.volume.test_snapshot_metadata.SnapshotV2MetadataTestJSON.test_create_get_delete_snapshot_metadata",
+                            "tempest.api.volume.test_snapshot_metadata.SnapshotV2MetadataTestJSON.test_update_snapshot_metadata_item",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_nonexistent_snapshot_id",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_delete_invalid_volume_id",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_delete_volume_without_passing_volume_id",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_volume_delete_nonexistent_volume_id",
+                            "tempest.api.volume.test_volumes_snapshots.VolumesV2SnapshotTestJSON.test_snapshot_create_get_list_update_delete",
+                            "tempest.api.volume.test_volumes_snapshots.VolumesV2SnapshotTestJSON.test_volume_from_snapshot",
+                            "tempest.api.volume.test_volumes_snapshots.VolumesV2SnapshotTestJSON.test_snapshots_list_details_with_params",
+                            "tempest.api.volume.test_volumes_snapshots.VolumesV2SnapshotTestJSON.test_snapshots_list_with_params",
+                            "tempest.api.volume.test_volumes_snapshots_negative.VolumesV2SnapshotNegativeTestJSON.test_create_snapshot_with_nonexistent_volume_id",
+                            "tempest.api.volume.test_volumes_snapshots_negative.VolumesV2SnapshotNegativeTestJSON.test_create_snapshot_without_passing_volume_id"
+                        ]
+                    },
+                    {
+                        "api_name": "Volume update operations with the Cinder v2 API",
+                        "value": [
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_update_volume_with_empty_volume_id",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_update_volume_with_invalid_volume_id",
+                            "tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_update_volume_with_nonexistent_volume_id"
+                        ]
+                    }
+                ]
+            },
+            {
+                "area_name": "Test Area High Availability",
+                "value": [
+                    {
+                        "api_name": "Verify high availability of OpenStack controller services",
+                        "value": [
+                            "opnfv.ha.tc001.nova-api_service_down",
+                            "opnfv.ha.tc003.neutron-server_service_down",
+                            "opnfv.ha.tc004.keystone_service_down",
+                            "opnfv.ha.tc005.glance-api_service_down",
+                            "opnfv.ha.tc006.cinder-api_service_down",
+                            "opnfv.ha.tc009.cpu_overload",
+                            "opnfv.ha.tc010.disk_I/O_block",
+                            "opnfv.ha.tc011.load_balance_service_down"
+                        ]
+                    }
+                ]
+            },
+            {
+                "area_name": "Test Area vPing - Basic VNF Connectivity",
+                "value": [
+                    {
+                        "api_name": "Verify basic VNF connectivity with ICMP ping packets",
+                        "value": [
+                            "opnfv.vping.userdata",
+                            "opnfv.vping.ssh"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "optional": {
+        "name": "Optional CVP Test Areas",
+        "value": [
+            {
+                "area_name": "Test Area BGP VPN",
+                "value": [
+                    {
+                        "api_name": "Verify association and dissasocitation of node using route targets",
+                        "value": [
+                            "opnfv.sdnvpn.subnet_connectivity",
+                            "opnfv.sdnvpn.tenant separation",
+                            "opnfv.sdnvpn.router_association",
+                            "opnfv.sdnvpn.router_association_floating_ip"
+                        ]
+                    }
+                ]
+            },
+            {
+                "area_name": "Test Area IPv6 Compliance Testing Methodology and Test Cases",
+                "value": [
+                    {
+                        "api_name": "Test Case 1: Create and Delete an IPv6 Network, Port and Subnet",
+                        "value": [
+                            "tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_network",
+                            "tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_port",
+                            "tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_subnet"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 2: Create, Update and Delete an IPv6 Network and Subnet",
+                        "value": [
+                            "tempest.api.network.test_networks.NetworksIpV6Test.test_create_update_delete_network_subnet"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 3: Check External Network Visibility",
+                        "value": [
+                            "tempest.api.network.test_networks.NetworksIpV6Test.test_external_network_visibility"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 4: List IPv6 Networks and Subnets of a Tenant",
+                        "value": [
+                            "tempest.api.network.test_networks.NetworksIpV6Test.test_list_networks",
+                            "tempest.api.network.test_networks.NetworksIpV6Test.test_list_subnets"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 5: Show Information of an IPv6 Network and Subnet",
+                        "value": [
+                            "tempest.api.network.test_networks.NetworksIpV6Test.test_show_network",
+                            "tempest.api.network.test_networks.NetworksIpV6Test.test_show_subnet"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 6: Create an IPv6 Port in Allowed Allocation Pools",
+                        "value": [
+                            "tempest.api.network.test_ports.PortsIpV6TestJSON.test_create_port_in_allowed_allocation_pools"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 7: Create an IPv6 Port without Security Groups",
+                        "value": [
+                            "tempest.api.network.test_ports.PortsIpV6TestJSON.test_create_port_with_no_securitygroups"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 8: Create, Update and Delete an IPv6 Port",
+                        "value": [
+                            "tempest.api.network.test_ports.PortsIpV6TestJSON.test_create_update_delete_port"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 9: List IPv6 Ports of a Tenant",
+                        "value": [
+                            "tempest.api.network.test_ports.PortsIpV6TestJSON.test_list_ports"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 10: Show Information of an IPv6 Port",
+                        "value": [
+                            "tempest.api.network.test_ports.PortsIpV6TestJSON.test_show_port"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 11: Add Multiple Interfaces for an IPv6 Router",
+                        "value": [
+                            "tempest.api.network.test_routers.RoutersIpV6Test.test_add_multiple_router_interfaces"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 12: Add and Remove an IPv6 Router Interface with port_id",
+                        "value": [
+                            "tempest.api.network.test_routers.RoutersIpV6Test.test_add_remove_router_interface_with_port_id"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 13: Add and Remove an IPv6 Router Interface with subnet_id",
+                        "value": [
+                            "tempest.api.network.test_routers.RoutersIpV6Test.test_add_remove_router_interface_with_subnet_id"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 14: Create, Update, Delete, List and Show an IPv6 Router",
+                        "value": [
+                            "tempest.api.network.test_routers.RoutersIpV6Test.test_create_show_list_update_delete_router"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 15: Create, Update, Delete, List and Show an IPv6 Security Group",
+                        "value": [
+                            "tempest.api.network.test_security_groups.SecGroupIPv6Test.test_create_list_update_show_delete_security_group"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 16: Create, Delete and Show Security Group Rules",
+                        "value": [
+                            "tempest.api.network.test_security_groups.SecGroupIPv6Test.test_create_show_delete_security_group_rule"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 17: List All Security Groups",
+                        "value": [
+                            "tempest.api.network.test_security_groups.SecGroupIPv6Test.test_list_security_groups"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 18: IPv6 Address Assignment - Dual Stack, SLAAC, DHCPv6 Stateless",
+                        "value": [
+                            "tempest.scenario.test_network_v6.TestGettingAddress.test_dhcp6_stateless_from_os"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 19: IPv6 Address Assignment - Dual Net, Dual Stack, SLAAC, DHCPv6 Stateless",
+                        "value": [
+                            "tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_dhcp6_stateless_from_os"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 20: IPv6 Address Assignment - Multiple Prefixes, Dual Stack, SLAAC, DHCPv6 Stateless",
+                        "value": [
+                            "tempest.scenario.test_network_v6.TestGettingAddress.test_multi_prefix_dhcpv6_stateless"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 21: IPv6 Address Assignment - Dual Net, Multiple Prefixes, Dual Stack, SLAAC, DHCPv6 Stateless",
+                        "value": [
+                            "tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_multi_prefix_dhcpv6_stateless"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 22: IPv6 Address Assignment - Dual Stack, SLAAC",
+                        "value": [
+                            "tempest.scenario.test_network_v6.TestGettingAddress.test_slaac_from_os"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 23: IPv6 Address Assignment - Dual Net, Dual Stack, SLAAC",
+                        "value": [
+                            "tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_slaac_from_os"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 24: IPv6 Address Assignment - Multiple Prefixes, Dual Stack, SLAAC",
+                        "value": [
+                            "tempest.scenario.test_network_v6.TestGettingAddress.test_multi_prefix_slaac"
+                        ]
+                    },
+                    {
+                        "api_name": "Test Case 25: IPv6 Address Assignment - Dual Net, Dual Stack, Multiple Prefixes, SLAAC",
+                        "value": [
+                            "tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_multi_prefix_slaac"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
