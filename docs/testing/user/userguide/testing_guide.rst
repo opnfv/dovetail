@@ -184,20 +184,6 @@ Export all these variables into environment by,
 
    $ source ${DOVETAIL_HOME}/pre_config/env_config.sh
 
-If OpenStack client is installed, you can validate that the OpenStack environmental
-settings are correct by,
-
-.. code-block:: bash
-
-   $ openstack service list
-
-If the SUT uses https but have no cacert, you can validate the OpenStack environmental
-settings by,
-
-.. code-block:: bash
-
-   $ openstack --insecure service list
-
 If your SUT uses hosts file to translate hostnames into the IP
 of OS_AUTH_URL, then you need to provide these hosts info in file
 ``$DOVETAIL_HOME/pre_config/hosts.yaml``.
@@ -297,8 +283,8 @@ and cirros images.
    $ sudo wget -nc http://artifacts.opnfv.org/sdnvpn/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/pre_config
    $ sudo wget -nc http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img -P ${DOVETAIL_HOME}/pre_config
 
-   $ sudo docker pull opnfv/dovetail:cvp.0.6.0
-   cvp.0.6.0: Pulling from opnfv/dovetail
+   $ sudo docker pull opnfv/dovetail:cvp.0.7.0
+   cvp.0.7.0: Pulling from opnfv/dovetail
    30d541b48fc0: Pull complete
    8ecd7f80d390: Pull complete
    46ec9927bb81: Pull complete
@@ -311,9 +297,9 @@ and cirros images.
    bf7c644692de: Pull complete
    cdc345e3f363: Pull complete
    Digest: sha256:d571b1073b2fdada79562e8cc67f63018e8d89268ff7faabee3380202c05edee
-   Status: Downloaded newer image for opnfv/dovetail:cvp.0.6.0
+   Status: Downloaded newer image for opnfv/dovetail:cvp.0.7.0
 
-An example of the <tag> is *cvp.0.6.0*.
+An example of the <tag> is *cvp.0.7.0*.
 
 If the Test Host is offline, you will need to first pull the Dovetail Docker image, and all the
 dependent images that Dovetail uses, to a host that is online. The reason that you need
@@ -323,10 +309,12 @@ offline, then all these dependencies will also need to be manually copied.
 
 .. code-block:: bash
 
-   $ sudo docker pull opnfv/dovetail:cvp.0.6.0
+   $ sudo docker pull opnfv/dovetail:cvp.0.7.0
    $ sudo docker pull opnfv/functest:cvp.0.5.0
    $ sudo docker pull opnfv/yardstick:danube.3.2
    $ sudo docker pull opnfv/bottlenecks:cvp.0.4.0
+   $ sudo docker pull opnfv/testapi:cvp.0.3.0
+   $ sudo docker pull mongo:3.2.1
    $ sudo wget -nc http://artifacts.opnfv.org/sdnvpn/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P {ANY_DIR}
    $ sudo wget -nc http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img -P {ANY_DIR}
 
@@ -337,8 +325,9 @@ At the online host, save images.
 
 .. code-block:: bash
 
-   $ sudo docker save -o dovetail.tar opnfv/dovetail:cvp.0.6.0 opnfv/functest:cvp.0.5.0 \
-     opnfv/yardstick:danube.3.2 opnfv/bottlenecks:cvp.0.4.0
+   $ sudo docker save -o dovetail.tar opnfv/dovetail:cvp.0.7.0 \
+     opnfv/functest:cvp.0.5.0 opnfv/yardstick:danube.3.2 \
+     opnfv/bottlenecks:cvp.0.4.0 opnfv/testapi:cvp.0.3.0 mongo:3.2.1
 
 Copy dovetail.tar file to the Test Host, and then load the images on the Test Host.
 
@@ -355,10 +344,12 @@ Now check to see that all Docker images have been pulled or loaded properly.
 
    $ sudo docker images
    REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-   opnfv/functest      cvp.0.5.0           9eaeaea5f203        8 days ago          1.53GB
-   opnfv/dovetail      cvp.0.6.0           5d25b289451c        8 days ago          516MB
-   opnfv/yardstick     danube.3.2          574596b6ea12        8 days ago          1.2GB
-   opnfv/bottlenecks   cvp.0.4.0           00450688bcae        3 hours ago         622 MB
+   opnfv/functest      cvp.0.5.0           e2b286547478        6 weeks ago         1.26 GB
+   opnfv/dovetail      cvp.0.7.0           5d25b289451c        8 days ago          516MB
+   opnfv/yardstick     danube.3.2          df830d5c2cb2        6 weeks ago         1.21 GB
+   opnfv/bottlenecks   cvp.0.4.0           00450688bcae        7 weeks ago         622 MB
+   opnfv/testapi       cvp.0.3.0           05c6d5ebce6c        2 months ago        448 MB
+   mongo               3.2.1               7e350b877a9a        19 months ago       317 MB
 
 Regardless of whether you pulled down the Dovetail image directly online, or loaded from
 a static image tar file, you are ready to run Dovetail.
@@ -374,6 +365,31 @@ a static image tar file, you are ready to run Dovetail.
 The ``-e`` options set the env variables in the container and the ``-v`` options map files
 in the host to files in the container.
 
+Build Local DB and Testapi Service
+----------------------------------
+
+It needs to build local DB and testapi service for storing and reporting results
+to CVP web portal. There is a script in Dovetail container for building local DB.
+All the following commands should be executed in Dovetail container.
+The DB will use port 27017 and the testapi will use port 8000. They can be reset by
+
+.. code-block:: bash
+
+   $ export mongodb_port=<new_DB_port>
+   $ export testapi_port=<new_testapi_port>
+
+Then you can run the script in Dovetail container to build local DB and testapi service.
+You need to provide the IP of the Test Host when running this script.
+
+.. code-block:: bash
+
+   $ cd /home/opnfv/dovetail/dovetail/utils/local_db/
+   $ ./launch_db.sh <test_host_ip>
+
+After that, you can check the DB and testapi service with your browser. The url of
+the results is ``http://<test_host_ip>:<testapi_port>/api/v1/results``. If you
+can access this url successfully, it means the DB and testapi service are OK now.
+
 Running the CVP Test Suite
 ----------------------------
 
@@ -381,24 +397,13 @@ Now you should be in the Dovetail container's prompt and ready to execute
 test suites.
 
 The Dovetail client CLI allows the tester to specify which test suite to run.
+You can refer to `Dovetail CLI wiki page <https://wiki.opnfv.org/display/dovetail/Dovetail+Command+Line>`_
+for the details of the CLI.
 By default the results are stored in a local file ``$DOVETAIL_HOME/results``.
 
 .. code-block:: bash
 
    $ dovetail run --testsuite <test-suite-name>
-
-If you want to see more DEBUG logs, ``--debug`` should be added.
-
-.. code-block:: bash
-
-   $ dovetail run --testsuite <test-suite-name> --debug
-
-If the Test Host is offline, ``--offline`` should be added to support running with
-local resources.
-
-.. code-block:: bash
-
-   $ dovetail run --testsuite <test-suite-name> --offline
 
 Multiple test suites may be available. For the purpose of running
 CVP test suite, the test suite name follows the following format,
@@ -410,27 +415,51 @@ For example, CVP_1_0_0.
    $ dovetail run --testsuite CVP_1_0_0
 
 If you are not running the entire test suite, you can choose to run an
-individual test area instead.
+individual test area instead. The test area can be a single test area or
+mandatory/optional test areas. The mandatory test areas are "osinterop", "vping"
+and "ha". The optional test areas are "ipv6", "sdnvpn" and "tempest".
 
 .. code-block:: bash
 
-   $ dovetail run --testsuite CVP_1_0_0 --testarea ipv6
+   $ dovetail run --testsuite CVP_1_0_0 --testarea mandatory
+
+You need to push the results to local DB if you want to store the results
+or report the results to CVP.
+
+.. code-block:: bash
+
+   $ dovetail run --testsuite CVP_1_0_0 --report http://<test_host_ip>:<testapi_port>/api/v1/results
+
+If the Test Host is offline, ``--offline`` should be added to support running with
+local resources.
+
+.. code-block:: bash
+
+   $ dovetail run --testsuite CVP_1_0_0 --offline --report http://<test_host_ip>:<testapi_port>/api/v1/results
 
 Until the official test suite is approved and released, you can use
 the *proposed_tests* for your trial runs, like this.
 
 .. code-block:: bash
 
-   $ dovetail run --testsuite proposed_tests --testarea ipv6
-   2017-05-23 05:01:49,488 - run - INFO - ================================================
-   2017-05-23 05:01:49,488 - run - INFO - Dovetail compliance: proposed_tests!
-   2017-05-23 05:01:49,488 - run - INFO - ================================================
-   2017-05-23 05:01:49,488 - run - INFO - Build tag: daily-master-4bdde6b8-afa6-40bb-8fc9-5d568d74c8d7
-   2017-05-23 05:01:49,536 - run - INFO -
-   2017-05-23 05:01:49,710 - run - INFO - >>[testcase]: dovetail.ipv6.tc001
-   2017-05-23 05:08:22,532 - run - INFO - Results have been stored with file /home/dovetail/results/functest_results.txt.
-   2017-05-23 05:08:22,538 - run - INFO - >>[testcase]: dovetail.ipv6.tc002
+   $ dovetail run --testsuite proposed_tests --testarea mandatory --report http://192.168.135.2:8000/api/v1/results
+   2017-09-29 07:00:55,718 - run - INFO - ================================================
+   2017-09-29 07:00:55,718 - run - INFO - Dovetail compliance: proposed_tests!
+   2017-09-29 07:00:55,718 - run - INFO - ================================================
+   2017-09-29 07:00:55,719 - run - INFO - Build tag: daily-master-f0795af6-a4e3-11e7-acc5-0242ac110004
+   2017-09-29 07:00:55,956 - run - INFO - >>[testcase]: dovetail.osinterop.tc001
+   2017-09-29 07:15:19,514 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
+   2017-09-29 07:15:19,514 - run - INFO - >>[testcase]: dovetail.vping.tc001
+   2017-09-29 07:17:24,095 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
+   2017-09-29 07:17:24,095 - run - INFO - >>[testcase]: dovetail.vping.tc002
+   2017-09-29 07:20:42,434 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
+   2017-09-29 07:20:42,434 - run - INFO - >>[testcase]: dovetail.ha.tc001
    ...
+
+After that there will be a tar file including the result file and all the log files,
+for example ``${DOVETAIL_HOME}/logs_29_07_22.tar.gz``.
+The file is named according to the current time. In this case, it was generated at 07:22 29th.
+This tar file is used to upload to CVP.
 
 Special Configuration for Running HA Test Cases
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -452,7 +481,7 @@ There is a sample file for users.
        # This must be controller.
        role: Controller
 
-       # This is the install IP of a controller node.
+       # This is the install IP of a controller node, which is the haproxy primary node
        ip: xx.xx.xx.xx
 
        # User name of this node. This user must have sudo privileges.
@@ -482,7 +511,7 @@ Users need to create file ``$DOVETAIL_HOME/pre_config/id_rsa`` to store the priv
 Configuration for Running Tempest Test Cases
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The test cases in the test areas `interop` (OpenStack Interoperability tests),
+The test cases in the test areas `osinterop` (OpenStack Interoperability tests),
 `ipv6` and `tempest` are based on Tempest.  A SUT-specific configuration of
 Tempest is required in order to run those test cases successfully.  The
 corresponding SUT-specific configuration options should be supplied in the file
@@ -500,13 +529,6 @@ Here is an example of what this file should contain.
 
      # Expected device name when a volume is attached to an instance.
      volume_device_name: vdb
-
-     # Lower version of the test target microversion range.
-     min_microversion: 2.2
-
-     # Upper version of the test target microversion range.
-     max_microversion: latest
-
 
 Making Sense of CVP Test Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -561,25 +583,26 @@ When a tester is performing trial runs, Dovetail stores results in a local file 
 
    * web site url
 
-     * Wait for the complement of LF, test community, etc.
+     * https://cvp.opnfv.org
 
    * Sign in / Sign up
 
      * You need to sign in you account, then you can upload results, and check your private results.
-       CVP is now using openstack id as account provider, but will soon support Linux Foundation ID
-       as well.
+       CVP is now using Linux Foundation ID as account provider.
 
-     * If you already have a openstack id, you can sign in directly with your id.
+     * If you already have a Linux Foundation ID, you can sign in directly with your id.
 
-     * If you do not have a openstack id, you can sign up a new one on the sign up page.
+     * If you do not have a Linux Foundation ID, you can sign up a new one on the sign up page.
 
      * If you do not sign in, you can only check the community results.
 
    * My results
 
-     * This page lists all results uploaded by you after you signed in,
+     * This page lists all results uploaded by you after you signed in.
 
      * You can also upload your results on this page.
+
+     * The generated results tar file is located at ``${DOVETAIL_HOME}/``, named as ``logs_29_07_22.tar.gz``.
 
      * There is a *choose file* button, once you click it, you can choose your reuslt file in your harddisk
        then click the *upload* button, and you will see a results id once your uploading succeed.
