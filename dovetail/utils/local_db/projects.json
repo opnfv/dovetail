@@ -16,5 +16,11 @@
         "description": "The goal of yardstick is to verify the infrastructure compliance when running VNF applications. NFV Use Cases described in ETSI GS NFV 001 show a large variety of  applications, each defining specific requirements and complex configuration on the underlying infrastructure and test tools.The Yardstick concept decomposes typical VNF work-load performance metrics into a number of characteristics/performance vectors, which each of them can be represented by distinct test-cases.",
         "name": "yardstick",
         "creation_date": "2015-10-14 06:56:09"
+    },
+    {
+        "_id": "565c5939514bc5087f2ddcfa",
+        "description": "The project aims to integrate the OpenStack Neutron BGPVPN project and its supported backends into the OPNFV reference platform.",
+        "name": "sdnvpn",
+        "creation_date": "2015-11-30 14:12:09.101020"
     }
 ]
