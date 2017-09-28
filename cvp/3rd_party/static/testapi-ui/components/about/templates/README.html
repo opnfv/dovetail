@@ -1,0 +1,131 @@
+<h2>Executive Summary</h2>
+<p>OPNFV® is offering OPNFV compliance verification through its Compliance Verification Program (CVP). The CVP verifies products (“Offerings”) that claim compliance to OPNFV.</p>
+<p>The OPNFV CVP is a compliance verification program intended to increase the awareness and adoption of OPNFV by demonstrating the readiness and availability of commercial products based on OPNFV. </p>
+<p>The key objectives and benefits of the OPNFV CVP are to:</p>
+<ul>
+    <li>Help build the market for </li>
+        <ul>
+            <li>OPNFV-based infrastructure</li>
+            <li>applications  designed to run on that infrastructure</li>
+        </ul>
+    <li>Reduce adoption risks for end-users</li>
+    <li>Decrease testing costs by verifying hardware and software platform interfaces and components </li>
+    <li>Enhance interoperability</li>
+</ul>
+    <p>Verified products submitted by respective vendors are expected to differentiate themselves with different features and capabilities but remain compliant by implementing explicitly defined interfaces, behaviors, and key features.</p>
+<h3>Purpose of This Document</h3>
+<p>This document defines the framework and governance of the OPNFV CVP, including the scope and objectives of the program, maintenance of program materials, compliance verification requirements and processes, trademark/logo usage guidelines, requirements for systems under compliance verification, and escalation procedures.  </p>
+This document does not define compliance verification procedures. Compliance verification procedures are defined by the community under the oversight of the Technical Steering Committee. 
+<p>The current scope of compliance verification is based on multiple sources: </p>
+<ul>
+    <li>The latest release of OPNFV </li>
+    <li>Informative ETSI NFV ISG specifications, specifically:</li>
+    <ul>
+
+        <li>Pre-deployment Testing: Report on Validation of NFV Environments and Services  <a href="http://www.etsi.org/deliver/etsi_gs/NFV-TST/001_099/001/01.01.01_60/gs_NFV-TST001v010101p.pdf">http://www.etsi.org/deliver/etsi_gs/NFV-TST/001_099/001/01.01.01_60/gs_NFV-TST001v010101p.pdf</a></li>
+    </ul>
+</ul>
+<p>Please note that these sources are subject to further revisions and may be updated at some future time. The current compliance verification procedures are published by OPNFV.</p>
+
+
+
+
+<h2>Program Management & Maintenance</h2>
+
+<h3>Role of C&C Committee</h3>
+<p>The OPNFV Certification & Compliance (C&C) Committee, hereafter referred to as the Committee, serves as the CVP administrator on behalf of the OPNFV Board of Directors.  The Committee is responsible for defining program governance, compliance verification strategy, and the overall scope of the compliance verification procedures.  </p>
+<h3>Maintenance of Program Documents</h3>
+<p>Program documents, such as this document, produced by the Committee will be labeled using semantic versioning.  That is, they will be labeled using MAJOR.MINOR.PATCH notation, where MAJOR, MINOR, and PATCH are non-negative integers.</p>
+<p>1.MAJOR version. Note: to avoid market confusion, the scope of compliance verification and other project documents is tied to the major version, and once approved by the Board of Directors, will not change until the next major release.</p>
+<p>2.MINOR version is used to denote significant functionality changes (e.g., addition/subtraction of compliance verification procedures and/or document sections).  Changes to a minor version of an approved document require Board approval. It is a goal that minor changes should not affect the ability of a product to achieve compliance/qualification status.</p>
+<p>3.PATCH version is used to indicate error corrections or editorial changes.</p>
+<p>The scope of a particular version of the CVP requirements, test-cases, compliance verification checks, tools and results is tied to an OPNFV release.  </p>
+
+<h3>Maintenance of CVP compliance verification procedures</h3>
+<p>The overall CVP compliance verification scope tied to an OPNFV release is determined by the Committee. The OPNFV TSC defines and maintains the compliance verification procedures and associated tools. The scope is constrained to features, capabilities, components, and interfaces included in an OPNFV release that are generally available in the industry (e.g., through adoption by an upstream community). Compliance verification is evaluated using functional tests that focus on defined interfaces and/or behaviors without regard to the underlying system under test. In practice, testing exercises interfaces and/or behaviors developed or exposed by OPNFV. </p>
+
+<h3>OPNFV Trademark/Logo Usage Guidelines</h3>
+
+<p>Because of its position in the industry as an Open Source Project maintained by the Linux Foundation, OPNFV cannot endorse any products or appear to endorse any products.</p>
+
+<h3>Use of the Term OPNFV Ready</h3>
+<p>Products that pass the CVP compliance verification suite may be labeled as “OPNFV Ready”.  Products that are “OPNFV Ready” expose key features/behaviors of the OPNFV release.</p>
+<ul>
+    <li>OPNFV Ready” asserts that a specific system under test</li>
+    <ul>
+        <li>Supply the key behaviors, functions, and related APIs of the OPNFV release</li>
+        <li>Promotes the key values of the OPNFV release, e.g. based upon the open source project components that comprise the OPNFV release</li>
+        <li>Performs basic NFV functions</li>
+        <li>Is interoperable with the OPNFV release</li>
+        <li>Suitable for further trials in an operator network</li>
+    </ul>
+    <li>OPNFV Ready” does not assert:</li>
+    <ul>
+        <li>Readiness for commercial deployment</li>
+    </ul>
+</ul>
+
+<p>The OPNFV C&C Committee on behalf of the Board of Directors can award a product “OPNFV Ready” status. “OPNFV Ready”, therefore, may not be used in relation to a vendor’s product without first having met the requirements outlined in this document. </p>
+<p>Use of “Ready” must be used in conjunction with the OPNFV release name under which the product was verified (e.g., “OPNFV Colorado Ready”). This allows the OPNFV compliance/qualification standard to evolve over time as the OPNFV platform matures.</p>
+<p>Organizations applying for compliance verification shall use the Logo/Trademark solely for the Product/Technology that was verified to have met the requirements designated by The Committee with respect to the appropriate category. </p>
+They shall not use the Logo/Trademark for any product/technology other than the Product/Technology submitted for compliance verification even if it belongs to the appropriate category. 
+<p>They shall only use the Logo/Trademark solely for the following purposes in order to: </p>
+
+<ul>
+    <li>promote OPNFV; </li>
+    <li>indicate to procurers and users the information of interoperability for NFV infrastructure and applications; and </li>
+    <li>indicate that the verified product meets all requirements set by the Committee for use of the Logo/Trademark. </li>
+</ul>
+<p>Organizations shall not use the Logo/Trademark in any way that would associate it with any individual or company logo or brand, beyond the association to the specific platform to which it was awarded. </p>
+
+<p>They shall use the Logo/Trademark solely in accordance with the OPNFV Logo Style Guide which is prepared and amended by the Committee from time to time. Other than in association to the specific platform to which it was awarded, they shall not frame, post, upload, transmit or modify in any way, all or any part of the Logo, unless expressly authorized in writing by the Committee. </p>
+<p></p>
+<p>Organizations shall immediately notify the Committee if they suspect or discover that the Logo/Trademark is or will be used for any purposes other than the confirmed purposes or that the use conflicts with any of the representations hereof as a result of upgrading of its submitted product/technology. In the event that the above notification is provided, they shall provide the Committee with any and all information requested by the Committee in relation to the upgrading of the confirmed product/technology and all information in order to confirm the revised product/technology actually meets the requirements designated by the Committee with respect to the appropriate category. They shall not use the Logo/Trademark for any product/technology which does not meet the requirements designated by the Committee with respect to the confirmed category. </p>
+<p>Note: Such organizations will be held responsible for any illegal use of the Logo/Trademark by others. </p>
+<p>Organizations participating in the OPNFV CVP do not own any intellectual property rights in relation to the Logo/Trademark, program documents, or compliance verification procedures.</p>
+
+
+<h2>Compliance Verification & Application Requirements </h2>
+<h3>Compliance Verification Procedures Requirements</h3>
+<p>CVP compliance verification procedures leverage tests, compliance verification tools, test infrastructure and compliance verification program infrastructure defined and maintained by OPNFV projects which are included in an OPNFV release. The OPNFV TSC defines which compliance verification procedures are included as part of the CVP. Once published, the compliance verification procedure suites will not change until the next OPNFV release (except to fix bugs or errors), as described above.</p>
+<p>OPNFV compliance verification is applicable to one or more of the following categories:</p>
+<ul>
+    <li>1) Hardware Platform</li>
+    <li>2) Software Platform (e.g,  Virtual Infrastructure – NFVI, VIM, etc.)</li>
+    <li>3) Applications (e.g., VNFs)  </li>
+    <li>4) Orchestration (End to End management)</li>
+</ul>
+<p>The scope of the criteria and requirements for each CVP release is set forth in an addendum to this document.</p>
+
+<h3>Self-Compliance Verification</h3>
+<p>Organizations may conduct compliance verification using the OPNFV-designated tools at their facilities. The OPNFV-designated tools will ensure that the results were produced by an unaltered version of the tools, and that the results were unaltered.  For example, this could be accomplished by digitally verifying the tools themselves, and signing the results file(s).  Results MUST be submitted for review with application documentation and the logo usage agreement to OPNFV.</p>
+
+<h3>OPNFV Preferred Verification Labs</h3>
+<p>Vendors may request service from third parties to conduct OPNFV compliance verification and collect results. Compliance verification occurs as documented in “Self Compliance Verification” above.  The compliance verification results and documentation may be submitted by the third party on behalf of the vendor requesting the use of an OPNFV Logo/Trademark.</p>
+<p>OPNFV may identify organizations providing third-party verification as Preferred Labs and list them on the OPNFV web site. OPNFV does not endorse or sponsor Preferred Labs’ services. Vendors are not required to use OPNFV Preferred Labs.</p>
+
+<h3>Compliance Application Requirements</h3>
+<p>The use of the OPNFV Ready logo is not restricted to OPNFV member companies. The request for use of an OPNFV Logo/Trademark must state the organization, a contact person (email and telephone number); their postal address; the location where the verification results and documentation was prepared, the category or categories the product is requesting an OPNFV Logo/Trademark(s) for; the attestation stating they will abide by OPNFV policies and procedures for use of an OPNFV Logo/Trademark; any third-party lab conducting the verification; and the product identifier.</p>
+
+<h3>Review Process</h3>
+<p>The compliance verification results and documentation submitted will be reviewed by the Committee for completeness and validity.  Based on the determination of the Committee, a recommendation will be made to the OPNFV Board of Directors regarding the approval of the granting of permission to use an OPNFV Logo/Trademark.</p>
+<p>The Committee may request additional information regarding the application for use of an OPNFV Logo/Trademark.</p>
+<p>OPNFV may charge a reasonable fee for reviewing results.  Reviews will be conducted by OPNFV member companies participating in the review committee (a C&C subcommittee). No member company may review its own compliance verification results.</p>
+<p>In the event of a dispute, the submitting organization has a right to appeal the decision with the OPNFV Board of Directors. An appeals process is documented in the Escalation Process below.</p>
+
+<h2>System Under Compliance Verification Requirements</h2>
+<p>The compliance verification environment (hardware and software) is defined by the OPNFV TSC.</p>
+
+<h3>Similarity Policy</h3>
+
+<p>Hardware platforms identified as similar to platforms that have passed CVP compliance verification procedures may apply to use the OPNFV Ready trademark.  The C&C Committee can decide to grant “OPNFV Ready” to products designated “under similarity”. The Committee will consider similarity in the following areas (for example):</p>
+<ul>
+    <li>Compute</li>
+    <li>Network</li>
+    <li>Storage</li>
+</ul>
+<p>Hardware platforms receiving rights to use the Logo/Trademark “under similarity” will be so designated on the website.</p>
+
+<h2>Escalation Process</h2>
+<p>If, after submitting compliance verification results and documentation, a vendor believes its results were evaluated unfairly or if it identifies issues with the test plan, tools, or third party lab, it may send an appeal in writing to the Committee.  The Committee will review the appeal in a reasonable timeframe and respond in writing.</p>
+<p>If the vendor wishes to appeal further, it may send a further appeal in writing to the OPNFV Board of Directors. The Board will evaluate the appeal at its next regular meeting.</p>
