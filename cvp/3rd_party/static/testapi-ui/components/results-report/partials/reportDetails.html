@@ -1,0 +1,65 @@
+<!--
+HTML for each accordion group that separates the status types on the results
+report page.
+-->
+
+Test Filters:<br />
+<div class="btn-toolbar" role="toolbar">
+    <div class="btn-group button-margin" data-toggle="buttons">
+        <label class="btn btn-default" ng-class="{'active': ctrl.testStatus === 'total'}">
+            <input type="radio" ng-model="ctrl.testStatus" value="total">
+            <span class="text-primary">All</span>
+        </label>
+        <label class="btn btn-default" ng-class="{'active': ctrl.testStatus === 'passed'}">
+            <input type="radio" ng-model="ctrl.testStatus" value="passed">
+            <span class="text-success">Passed</span>
+        </label>
+        <label class="btn btn-default" ng-class="{'active': ctrl.testStatus === 'not passed'}">
+            <input type="radio" ng-model="ctrl.testStatus" value="not passed">
+            <span class="text-danger">Not Passed</span>
+        </label>
+    </div>
+    <div class="btn-group button-margin" style="float:right">
+        <button type="button" class="btn btn-default" ng-click="ctrl.openAll()">Expand</button>
+        <button type="button" class="btn btn-default" ng-click="ctrl.folderAll()">Collapse</button>
+    </div>
+</div>
+
+<uib-accordion-group is-open="isOpen" is-disabled="ctrl.cases == 0">
+<uib-accordion-heading>
+        {{ ctrl.testId }}
+        <small>
+            (<strong>Total:</strong> {{ ctrl.cases.length }} tests)
+        </small>
+        <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isOpen, 'glyphicon-chevron-right': !isOpen}"></i>
+    </uib-accordion-heading>
+    <ol class="capabilities">
+        <li ng-repeat="testcase in ctrl.cases" ng-show="(ctrl.testStatus == 'passed' && testcase.pass != 0) || (ctrl.testStatus == 'not passed' && testcase.fail != 0) || ctrl.testStatus == 'total'">
+
+            <a ng-click="testcase.folder = !testcase.folder">
+                {{ testcase.build_tag.split('-').pop() }}
+                <span ng-if="ctrl.testStatus == 'total'" ng-class="{'text-success': testcase.total == testcase.pass, 'text-warning': (testcase.pass < testcase.total && testcase.pass > 0), 'text-danger': testcase.pass == 0}">[{{ testcase.pass }}/{{ testcase.total }}]</span>
+                <span ng-if="ctrl.testStatus == 'passed'" class="text-success">[{{ testcase.pass }}]</span>
+                <span ng-if="ctrl.testStatus == 'not passed'" class="text-danger">[{{ testcase.fail }}]</span>
+            </a>
+
+            <ul class="list-unstyled" uib-collapse="testcase.folder">
+                <li ng-if="!testcase.details.success">
+                    <span ng-class="{'glyphicon glyphicon-ok text-success':testcase.criteria == 'PASS'}" aria-hidden="true"></span>
+                    <span ng-class="{'glyphicon glyphicon-remove text-warning':testcase.criteria != 'PASS'}"></span>
+                    {{ testcase.case_name }}
+                </li>
+
+                <li ng-repeat="sub in testcase.details.success" ng-if="testcase.details.success && ctrl.testStatus != 'not passed'">
+                    <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+                    <a ng-click="ctrl.gotoDoc(sub)">{{ sub }}</a>
+                </li>
+
+                <li ng-repeat="sub in testcase.details.errors" ng-if="testcase.details.errors && ctrl.testStatus != 'passed'">
+                    <span class="glyphicon glyphicon-remove text-warning"></span>
+                    <a ng-click="ctrl.gotoDoc(sub)">{{ sub }}</a>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</uib-accordion-group>
