@@ -72,12 +72,16 @@ class Container(object):
         scenario = os.getenv('DEPLOY_SCENARIO', "unknown")
         ins_type = ''.join([" -e INSTALLER_TYPE=", ins_type])
         scenario = ''.join([" -e DEPLOY_SCENARIO=", scenario])
+        ins_ip = os.getenv('INSTALLER_IP', "192.168.0.0")
+        ins_ip = " -e INSTALLER_IP={}".format(ins_ip)
         # vpn testcase only runs when scenario name includes bgpvpn
         # functest requirements
         if 'sdnvpn' in testcase_name:
-            ins_type = "-e INSTALLER_TYPE=netvirt"
-            scenario = " -e DEPLOY_SCENARIO=bgpvpn"
-        envs = "%s %s" % (ins_type, scenario)
+            ins_type = os.getenv('INSTALLER_TYPE', "netvirt")
+            ins_type = " -e INSTALLER_TYPE={}".format(ins_type)
+            scenario = os.getenv('DEPLOY_SCENARIO', "bgpvpn")
+            scenario = " -e DEPLOY_SCENARIO={}".format(scenario)
+        envs = "%s %s %s" % (ins_type, scenario, ins_ip)
 
         dovetail_config = dt_cfg.dovetail_config
         if dovetail_config['report_dest'].startswith("http"):

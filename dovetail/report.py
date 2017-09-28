@@ -266,7 +266,8 @@ class FunctestCrawler(object):
             for jsonfile in f:
                 try:
                     data = json.loads(jsonfile)
-                    if testcase_name == data['case_name'] and \
+                    if (testcase_name == data['case_name'] or
+                        data['project_name'] == "sdnvpn") and \
                         build_tag == data['build_tag']:
                         criteria = data['criteria']
                         timestart = data['start_date']
