@@ -8,7 +8,7 @@ testcases:
       testname_db: functest_tempest # declared name in the test api
       # http://testresults.opnfv.org/test/api/v1/projects/sdnvpn/cases
 
-  testcase_2:
+  sdnvpn.test.functest.testcase_2:
       enabled: true
       description: Tenant separation
       testname_db: functest_testcase_2

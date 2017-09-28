@@ -8,7 +8,7 @@ testcases:
       testname_db: functest_tempest # declared name in the test api
       # http://testresults.opnfv.org/test/api/v1/projects/sdnvpn/cases
 
-  testcase_1:
+  sdnvpn.test.functest.testcase_1:
       enabled: true
       description: VPN provides connectivity between subnets
       testname_db: functest_testcase_1

@@ -5,6 +5,8 @@ dovetail.sdnvpn.tc001:
   validate:
     type: functest
     testcase: bgpvpn
+    pre_condition:
+      - "sed -i 's/testcase_1/sdnvpn.test.functest.testcase_1/' /usr/local/lib/python2.7/dist-packages/sdnvpn/test/functest/testcase_1.py"
     pre_copy:
       exist_src_file: sdnvpn_config_testcase1.yaml
       dest_path: /usr/local/lib/python2.7/dist-packages/sdnvpn/test/functest/config.yaml
