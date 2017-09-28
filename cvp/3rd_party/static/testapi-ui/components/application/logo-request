@@ -1,0 +1,1417 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="globalsign-domain-verification" content="tWFOHNAA_WMHmHfBMq38uTgupHFugV_dZ2rqyRxNMx" />
+    <title>Logo Request &raquo; OpenStack Open Source Cloud Computing Software</title>
+
+    <meta name="generator" content="SilverStripe - http://silverstripe.org" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta property="og:title" content="Logo Request &amp;raquo; OpenStack Open Source Cloud Computing Software" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.openstack.org/brand/logo-request/" />
+<link rel="image_src" href="https://www.openstack.org/themes/openstack/images/openstack-logo-full.png" type="image/png"/>
+<meta property="og:image" content="http://www.openstack.org/themes/openstack/images/openstack-logo-full.png" />
+<meta property="og:image:secure_url" content="https://www.openstack.org/themes/openstack/images/openstack-logo-full.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:description" content="If you plan to offer an OpenStack-related product or service using a trademark or brand that includes an OpenStack mark (e.g. logo or the word OpenStack), you are required to apply for and obtain a trademark license. We’ve created a family of logos and a set of standards specifically for this purpose. Once we understand more about your product or service, we can determine which (if any) logo program it falls under, and send you the appropriate license for signature.  " />
+<meta property="og:site_name" content="OpenStack" />
+<meta property="og:locale" content="en_US" />
+<meta property="fb:app_id" content="209869746011654" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@openstack" />
+
+
+    <base href="https://www.openstack.org/"><!--[if lte IE 6]></base><![endif]-->
+
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://www.openstack.org/blog/feed/"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"> 
+    <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32"> 
+    <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16"> 
+    <link rel="manifest" href="/favicon/manifest.json"> 
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5"> 
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+
+// Used to record outbound links before the browser resets to the new site
+
+function recordOutboundLink(link, category, action) {
+  try {
+      ga('send', 'event', {
+          eventCategory: category,
+          eventAction: 'click',
+          eventLabel: link.href
+      });
+      setTimeout('document.location = "' + link.href + '"', 100)
+  }
+  catch(err){}
+}
+  
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-17511903-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+    <script type="text/javascript">
+    _linkedin_data_partner_id = "36268";
+</script><script type="text/javascript">
+    (function(){var s = document.getElementsByTagName("script")[0];
+        var b = document.createElement("script");
+        b.type = "text/javascript";b.async = true;
+        b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+        s.parentNode.insertBefore(b, s);})();
+</script>
+  <link rel="stylesheet" type="text/css" href="/themes/openstack/css/bootstrap.min.css?m=1503597172" />
+<link rel="stylesheet" type="text/css" href="/themes/openstack/bower_assets/fontawesome/css/font-awesome.min.css?m=1502291691" />
+<link rel="stylesheet" type="text/css" href="/themes/openstack/css/combined.css?m=1503597172" />
+<link rel="stylesheet" type="text/css" href="/themes/openstack/css/navigation_menu.css?m=1503597172" />
+<link rel="stylesheet" type="text/css" href="/themes/openstack/css/dropdown.css?m=1503597172" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+<link rel="stylesheet" type="text/css" href="/framework/css/CheckboxSetField.css?m=1462921760" />
+<style type="text/css">
+.honey {
+	position: absolute; left: -9999px
+}
+</style>
+</head>
+
+  <body id="logo-request">
+      
+
+<!-- Top Site Banner -->
+<div class="top-site-banner">
+    <div class="container">
+        <p>
+            <p class="p1">Join the global OpenStack community for use cases &amp; training at the OpenStack Summit Sydney, November 6-8 &nbsp; &nbsp;
+            <a href="https://www.openstack.org/summit/sydney-2017/" class="top-site-banner-button">Register now</a>
+        </p>
+    </div>
+</div>
+<!-- End Site Banner -->
+
+      <nav class="navbar navbar-default" role="navigation">
+
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="brand-wrapper">
+                <a class="navbar-brand" href="/"></a>
+            </div>
+            <div class="search-icon show"><i class="fa fa-search"></i> <span class="header-search-text">Search</span></div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="search-container tiny">
+               
+<input type="text" class="st-default-search-input custom-search-box" placeholder="Search OpenStack">
+
+<script type="text/javascript" src="/themes/openstack/javascript/jquery.min.js?m=1503597172"></script><script type="text/javascript" src="/themes/openstack/javascript/jquery-migrate-1.2.1.min.js?m=1503597172"></script><script type="text/javascript" src="/themes/openstack/javascript/jquery.cookie.js?m=1503597172"></script><script type="text/javascript" src="/themes/openstack/javascript/querystring.jquery.js?m=1503597172"></script><script type="text/javascript" src="/themes/openstack/javascript/shadowbox/shadowbox.js?m=1503597172"></script><script type="text/javascript" src="/themes/openstack/javascript/jquery.ticker.js?m=1503597172"></script><script type="text/javascript" src="/themes/openstack/javascript/jquery.tools.min.js?m=1503597172"></script><script type="text/javascript" src="/themes/openstack/javascript/jcarousellite.min.js?m=1503597172"></script><script type="text/javascript" src="/themes/openstack/javascript/navigation.js?m=1503597172"></script><script type="text/javascript" src="/themes/openstack/javascript/filetracking.jquery.js?m=1503597172"></script><script type="text/javascript" src="/themes/openstack/javascript/updateProfileModal.js?m=1503597172"></script><script type="text/javascript" src="/themes/openstack/javascript/bootstrap.min.js?m=1503597172"></script><script type="text/javascript">//<![CDATA[
+jQuery(document).ready(function($) {
+
+    var d = new Date();
+    var user_date = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+    $.cookie('user_date',user_date , { expires: 360, path: '/' });
+
+    $('body').filetracking();
+
+    $(document).on("click", ".outbound-link", function(event){
+        var href = $(this).attr('href');
+        recordOutboundLink(this,'Outbound Links',href);
+        event.preventDefault();
+        event.stopPropagation()
+        return false;
+    });
+
+    var use_shadow_box = false;
+    if(use_shadow_box)
+        Shadowbox.init();
+});
+
+//]]></script><script type="text/javascript">//<![CDATA[
+
+            jQuery(document).ready(function() {
+
+                if($('#OsLogoProgramForm_Form_CurrentSponsor').prop('checked') != true){
+                    $('#openstack-companies').hide();
+                    $('#non-sponsor-company').show();                    
+                } else {
+                    $('#openstack-companies').show();
+                    $('#non-sponsor-company').hide();                                        
+                }
+
+                $('#OsLogoProgramForm_Form_CurrentSponsor').click(function () {                
+                    $('#openstack-companies').toggle();
+                    $('#non-sponsor-company').toggle();
+                });
+            });
+        
+
+//]]></script><script type="text/javascript">
+    (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+                (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+    })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+    _st('install','aDn5L_vgZ2yzRcE893kK','2.0.0');
+</script>
+               <i class="fa fa-times close-search"></i>
+           </div>
+           <ul class="nav navbar-nav navbar-main show">
+            <li>
+                <input type="text" class="st-default-search-input custom-search-box-mobile" placeholder="Search OpenStack">
+
+            </li>
+
+            <li>
+    <a href="https://www.openstack.org/software/" class="drop" id="dropdownMenuSoftware">Software <i class="fa fa-caret-down"></i></a><i class="mobile-expand"></i>
+    <ul class="dropdown-menu dropdown-hover" role="menu" aria-labelledby="dropdownMenuSoftware">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/">Overview</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/project-navigator/">Project Navigator</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/sample-configs/">Sample Configs</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/security/">Security</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/start/">Get Started</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/roadmap/">Roadmap</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/latest-release/">Latest Release</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/sourcecode/">Source Code</a></li>
+    </ul>
+</li>
+<li>
+    <a href="https://www.openstack.org/user-stories/" class="drop" id="dropdownMenuUsers">Users <i class="fa fa-caret-down"></i></a><i class="mobile-expand"></i>
+    <ul class="dropdown-menu dropdown-hover" role="menu" aria-labelledby="dropdownMenuUsers">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/user-stories/">Overview</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/edge/">Edge Computing</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/telecoms-and-nfv/">Telecom & NFV</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/enterprise/">OpenStack in the Enterprise</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/science/">OpenStack in Science</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/containers/">Containers</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://superuser.openstack.org/">Superuser Magazine</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/surveys/landing">User Survey</a></li>
+    </ul>
+</li>
+<li>
+    <a href="https://www.openstack.org/community/" class="drop" id="dropdownMenuCommunity">Community <i class="fa fa-caret-down"></i></a><i class="mobile-expand"></i>
+    <ul class="dropdown-menu dropdown-hover" role="menu" aria-labelledby="dropdownMenuCommunity">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/community/">Welcome! Start Here</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/foundation/">OpenStack Foundation</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://wiki.openstack.org">OpenStack Wiki</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://groups.openstack.org">User Groups</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/community/speakers/">Speakers Bureau</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/foundation/companies/">Supporting Companies</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/community/jobs/">Jobs</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/join/">Join The Community</a></li>
+    </ul>
+</li>
+<li>
+    <a href="https://www.openstack.org/marketplace/">Marketplace</a>
+</li>
+<li>
+    <a href="https://www.openstack.org/events/" class="drop" id="dropdownMenuEvents">Events <i class="fa fa-caret-down"></i></a><i class="mobile-expand"></i>
+    <ul class="dropdown-menu dropdown-hover" role="menu" aria-labelledby="dropdownMenuEvents">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/community/events/">Overview</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/summit/">The OpenStack Summit</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/ptg/">Project Teams Gathering</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/community/events/openstackdays">OpenStack Days</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/community/events/openstackhackathons">OpenStack App Hackathons</a></li>
+    </ul>
+</li>
+<li>
+    <a href="https://www.openstack.org/learn/" class="drop" id="dropdownMenuLearn">Learn <i class="fa fa-caret-down"></i></a><i class="mobile-expand"></i>
+    <ul class="dropdown-menu dropdown-hover" role="menu" aria-labelledby="dropdownMenuEvents">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/marketplace/training/">Training</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/coa/">Get Certified</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://ask.openstack.org">Ask a Technical Question</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://superuser.openstack.org">Superuser Magazine</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/videos/">Summit Videos</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/analysts/">Analyst Reports</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/news/">News</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/blog/">Blog</a></li>
+    </ul>
+</li>
+<li>
+    <a href="http://docs.openstack.org/">Docs</a>
+</li>
+<li>
+
+</li>
+
+
+            <li>
+            
+                <li class="join-nav-section">
+                    <a href="#" id="dropdownMenuJoin">Join <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu dropdown-hover" role="menu" aria-labelledby="dropdownMenuJoin" style="display: none;">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/join/register/?membership-type=foundation">Sign up for Foundation Membership</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/join/#sponsor">Sponsor the Foundation</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/foundation">More about the Foundation</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Security/login/?BackURL=/brand/logo-request/" class="sign-in-btn">Log In</a>
+                </li>
+            
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+</div>
+<!-- /.container -->
+</nav>
+
+      
+      <!-- Page Content -->
+      <div class="container">
+                
+        <div class="container">
+	
+		<div class="row">
+			<div class="col-lg-9 col-lg-push-3">
+	
+
+	<h1>Request information on OpenStack trademark licensing</h1>
+<p>If you plan to offer an OpenStack-related product or service using a trademark or brand that includes an OpenStack mark (e.g. logo or the word OpenStack), you are required to apply for and obtain a trademark license. We’ve created a family of logos and a set of standards specifically for this purpose. Once we understand more about your product or service, we can determine which (if any) logo program it falls under, and send you the appropriate license for signature.  </p>
+	
+<form id="OsLogoProgramForm_Form" action="/brand/logo-request/Form" method="post" enctype="application/x-www-form-urlencoded">
+
+	
+	<p id="OsLogoProgramForm_Form_error" class="message " style="display: none"></p>
+	
+	
+	<fieldset>
+		 
+		
+			<div id="FirstName" class="field text">
+	<label class="left" for="OsLogoProgramForm_Form_FirstName">First Name</label>
+	<div class="middleColumn">
+		<input type="text" name="FirstName" class="text form-control" id="OsLogoProgramForm_Form_FirstName" required="required" aria-required="true" />
+	</div>
+	
+	
+	
+</div>
+
+		
+			<div id="Surname" class="field text">
+	<label class="left" for="OsLogoProgramForm_Form_Surname">Last Name</label>
+	<div class="middleColumn">
+		<input type="text" name="Surname" class="text form-control" id="OsLogoProgramForm_Form_Surname" required="required" aria-required="true" />
+	</div>
+	
+	
+	
+</div>
+
+		
+			<div id="Email" class="field email text">
+	<label class="left" for="OsLogoProgramForm_Form_Email">Email Address</label>
+	<div class="middleColumn">
+		<input type="email" name="Email" class="email text form-control" id="OsLogoProgramForm_Form_Email" required="required" aria-required="true" />
+	</div>
+	
+	
+	
+</div>
+
+		
+			<div id="Phone" class="field text">
+	<label class="left" for="OsLogoProgramForm_Form_Phone">Phone Number</label>
+	<div class="middleColumn">
+		<input type="text" name="Phone" class="text form-control" id="OsLogoProgramForm_Form_Phone" required="required" aria-required="true" />
+	</div>
+	
+	
+	
+</div>
+
+		
+			<div id="Program" class="field optionset checkboxset">
+	<label class="left">Which logo program best fits your product offering?</label>
+	<div class="middleColumn">
+		<ul id="OsLogoProgramForm_Form_Program" class="optionset checkboxset" >
+	
+		
+			<li class="odd valPowered">
+				<input id="OsLogoProgramForm_Form_Program_Powered" class="checkbox" name="Program[Powered]" type="checkbox" value="Powered" />
+				<label for="OsLogoProgramForm_Form_Program_Powered">Powered</label>
+			</li> 
+		
+			<li class="even valCompatible">
+				<input id="OsLogoProgramForm_Form_Program_Compatible" class="checkbox" name="Program[Compatible]" type="checkbox" value="Compatible" />
+				<label for="OsLogoProgramForm_Form_Program_Compatible">Compatible</label>
+			</li> 
+		
+			<li class="odd valTraining">
+				<input id="OsLogoProgramForm_Form_Program_Training" class="checkbox" name="Program[Training]" type="checkbox" value="Training" />
+				<label for="OsLogoProgramForm_Form_Program_Training">Training</label>
+			</li> 
+		
+	
+</ul>
+	</div>
+	
+	
+	
+</div>
+
+		
+			<hr/>
+		
+			<div id="CurrentSponsor" class="field checkbox">
+	<input type="checkbox" name="CurrentSponsor" value="1" class="checkbox" id="OsLogoProgramForm_Form_CurrentSponsor" />
+	<label class="right" for="OsLogoProgramForm_Form_CurrentSponsor">My company is a Corporate Sponsor or Gold/Platinum Member of the OpenStack Foundation.</label>
+	
+	
+</div>
+
+		
+			<div id="openstack-companies">
+		
+			<div id="CompanyID" class="field dropdown">
+	<label class="left" for="OsLogoProgramForm_Form_CompanyID">Company</label>
+	<div class="middleColumn">
+		<select name="CompanyID" class="dropdown form-control" id="OsLogoProgramForm_Form_CompanyID">
+
+	<option value="988">3CX</option>
+
+	<option value="961">6WIND</option>
+
+	<option value="254">99Cloud Inc.</option>
+
+	<option value="864">@IT</option>
+
+	<option value="503">A10 Networks</option>
+
+	<option value="677">Accelerite</option>
+
+	<option value="786">Accenture</option>
+
+	<option value="800">Access Alto</option>
+
+	<option value="570">AcmeCloud</option>
+
+	<option value="752">AeroFS (Air Computing, Inc.)</option>
+
+	<option value="928">Agema Systems Inc</option>
+
+	<option value="719">Akanda</option>
+
+	<option value="959">Alta3 Research</option>
+
+	<option value="745">Amax</option>
+
+	<option value="683">Anchor</option>
+
+	<option value="764">Ansible, Inc</option>
+
+	<option value="758">Appcito, Inc</option>
+
+	<option value="780">AppFormix</option>
+
+	<option value="169">Aptira</option>
+
+	<option value="55">Arista Networks</option>
+
+	<option value="986">ARM</option>
+
+	<option value="941">Arrow Electronics</option>
+
+	<option value="183">AT&amp;T</option>
+
+	<option value="903">Attivo Networks</option>
+
+	<option value="907">ATTO Research</option>
+
+	<option value="613">AURO</option>
+
+	<option value="320">Avaya</option>
+
+	<option value="751">Avni Networks Inc</option>
+
+	<option value="954">Award Solutions</option>
+
+	<option value="843">AWcloud</option>
+
+	<option value="1058">BBVA</option>
+
+	<option value="958">Beijing GuoDianTong Network Technology</option>
+
+	<option value="912">Beyondsoft Consulting</option>
+
+	<option value="916">Biarca</option>
+
+	<option value="663">BIOS IT</option>
+
+	<option value="1045">Blizzard Entertainment</option>
+
+	<option value="667">Bloomberg</option>
+
+	<option value="416">Blue Box</option>
+
+	<option value="735">Breqwatr</option>
+
+	<option value="459">Bright Computing</option>
+
+	<option value="74">Brocade</option>
+
+	<option value="72">Bull</option>
+
+	<option value="849">BusinessIT</option>
+
+	<option value="636">c3dna</option>
+
+	<option value="322">Canadian Web Hosting</option>
+
+	<option value="57">Canonical</option>
+
+	<option value="757">Caringo</option>
+
+	<option value="348">Cavium</option>
+
+	<option value="149">CCAT </option>
+
+	<option value="1054">CENGN</option>
+
+	<option value="744">Chef</option>
+
+	<option value="1006">China Mobile</option>
+
+	<option value="1017">China Telecom</option>
+
+	<option value="1062">China Unicom</option>
+
+	<option value="846">Chinac Corporation</option>
+
+	<option value="882">ChinaCloud</option>
+
+	<option value="1031">CIO Review</option>
+
+	<option value="743">Cirba Inc.</option>
+
+	<option value="59">Cisco</option>
+
+	<option value="8">Citrix</option>
+
+	<option value="695">City Network</option>
+
+	<option value="766">Cleversafe</option>
+
+	<option value="572">Cliqr</option>
+
+	<option value="933">Cloud Computing Taiwan</option>
+
+	<option value="740">Cloud Foundry</option>
+
+	<option value="687">Cloud&amp;Heat Technologies</option>
+
+	<option value="664">cloud4u</option>
+
+	<option value="448">Cloudbase Solutions</option>
+
+	<option value="660">CloudFounders</option>
+
+	<option value="888">Cloudify</option>
+
+	<option value="635">CloudOrbit</option>
+
+	<option value="23">Cloudscaling</option>
+
+	<option value="1048">Cloudvisory</option>
+
+	<option value="252">Cloudwatt</option>
+
+	<option value="1039">CNCF</option>
+
+	<option value="905">Codership</option>
+
+	<option value="819">CodiLime SP (DeepSense.io)</option>
+
+	<option value="309">Comcast</option>
+
+	<option value="924">Concurrent</option>
+
+	<option value="277">Coraid</option>
+
+	<option value="774">CoreOS</option>
+
+	<option value="591">Cray</option>
+
+	<option value="397">Cumulus Networks</option>
+
+	<option value="622">DataCentred</option>
+
+	<option value="980">Datang Gohighsec Information Tech</option>
+
+	<option value="889">Datera</option>
+
+	<option value="932">DDN Storage</option>
+
+	<option value="9">Dell</option>
+
+	<option value="260">Dell EMC</option>
+
+	<option value="195">Deutsche Telekom</option>
+
+	<option value="659">Docker, Inc.</option>
+
+	<option value="1024">E8 Storage</option>
+
+	<option value="996">EANTC</option>
+
+	<option value="506">EasyStack</option>
+
+	<option value="1021">Ecloud</option>
+
+	<option value="645">Elastx AB</option>
+
+	<option value="594">Emulex Corporation</option>
+
+	<option value="168">eNovance</option>
+
+	<option value="754">Enter Cloud Suite</option>
+
+	<option value="1030">Enterprise DB</option>
+
+	<option value="866">EnterpriseZine</option>
+
+	<option value="931">Enzu</option>
+
+	<option value="753">Eplexity</option>
+
+	<option value="216">Ericsson</option>
+
+	<option value="160">F5 Networks</option>
+
+	<option value="1050">FD.io</option>
+
+	<option value="835">Fiberhome Telecommunication Technologies</option>
+
+	<option value="773">Firefly</option>
+
+	<option value="632">Flex</option>
+
+	<option value="488">Flexiant</option>
+
+	<option value="765">Fortinet</option>
+
+	<option value="403">Fujitsu</option>
+
+	<option value="307">Fusion-io</option>
+
+	<option value="902">FusionStorm</option>
+
+	<option value="244">Gale Technologies</option>
+
+	<option value="823">Gemini Open Cloud Computing</option>
+
+	<option value="1023">Genesis Hosting</option>
+
+	<option value="939">Gigamon</option>
+
+	<option value="925">Global Knowledge</option>
+
+	<option value="521">GoDaddy</option>
+
+	<option value="859">Google Cloud Platform</option>
+
+	<option value="906">GroundWork Open Source Inc.</option>
+
+	<option value="640">GuardiCore</option>
+
+	<option value="1055">HAProxy Technologies</option>
+
+	<option value="775">HCL</option>
+
+	<option value="908">Hedvig Inc.</option>
+
+	<option value="344">Hitachi </option>
+
+	<option value="1072">Host Telecom</option>
+
+	<option value="1059">HPE</option>
+
+	<option value="248">Huawei</option>
+
+	<option value="824">HyperHQ Inc.</option>
+
+	<option value="235">IBM</option>
+
+	<option value="573">INFINIDAT</option>
+
+	<option value="829">InfinitiesSoft Solutions Inc.</option>
+
+	<option value="628">Infoblox</option>
+
+	<option value="291">Inktank</option>
+
+	<option value="605">Inspur</option>
+
+	<option value="26">Intel</option>
+
+	<option value="41">Internap </option>
+
+	<option value="646">inwinSTACK</option>
+
+	<option value="755">ISA Technologies, Inc.</option>
+
+	<option value="853">IT Leaders</option>
+
+	<option value="638">it-novum</option>
+
+	<option value="865">ITmedia Enterprise</option>
+
+	<option value="806">ITOCHU</option>
+
+	<option value="820">ITRI</option>
+
+	<option value="749">JFrog</option>
+
+	<option value="1042">Joyent</option>
+
+	<option value="220">Juniper Networks</option>
+
+	<option value="261">KIO Networks</option>
+
+	<option value="502">Kontron</option>
+
+	<option value="927">Kubernetes</option>
+
+	<option value="720">Lenovo</option>
+
+	<option value="870">Linux Academy</option>
+
+	<option value="409">Linux Foundation</option>
+
+	<option value="1063">Logicalis</option>
+
+	<option value="1052">Loom Systems</option>
+
+	<option value="922">MemoScale</option>
+
+	<option value="71">Memset</option>
+
+	<option value="247">Metacloud</option>
+
+	<option value="1028">Micron Technology</option>
+
+	<option value="39">Midokura</option>
+
+	<option value="105">Mirantis</option>
+
+	<option value="121">MPSTOR</option>
+
+	<option value="135">Nebula</option>
+
+	<option value="150">NEC</option>
+
+	<option value="832">Net One Systems Co., Ltd</option>
+
+	<option value="80">NetApp</option>
+
+	<option value="894">Netronome</option>
+
+	<option value="699">NetScout</option>
+
+	<option value="525">New H3C Technologies Co., Limited</option>
+
+	<option value="202">Nexenta</option>
+
+	<option value="242">Nexus, a Dimension Data Co</option>
+
+	<option value="887">NGINX</option>
+
+	<option value="253">Nimbula</option>
+
+	<option value="625">Nokia</option>
+
+	<option value="776">NTT Communications</option>
+
+	<option value="818">NTT Software Innovation Center / NTT Group</option>
+
+	<option value="222">Nuage Networks</option>
+
+	<option value="688">Nubeliu</option>
+
+	<option value="455">Numergy</option>
+
+	<option value="353">Nutanix</option>
+
+	<option value="299">NxtGen</option>
+
+	<option value="184">Objectif Libre</option>
+
+	<option value="840">Okinawa Open Laboratory</option>
+
+	<option value="593">Onyx CCS</option>
+
+	<option value="1018">OP5</option>
+
+	<option value="1044">Open Compute</option>
+
+	<option value="895">Open Platform for NFV</option>
+
+	<option value="844">Open Source Storage, LLC</option>
+
+	<option value="1033">Open Switch</option>
+
+	<option value="822">Open vStorage</option>
+
+	<option value="1034">Open vSwitch</option>
+
+	<option value="665">OpenCloudware XLcloud</option>
+
+	<option value="1032">OpenSource.com</option>
+
+	<option value="433">OpenStack Foundation</option>
+
+	<option value="847">OpenVZ sponsored by Odin</option>
+
+	<option value="473">Oracle</option>
+
+	<option value="592">Orange</option>
+
+	<option value="1027">Ormuco</option>
+
+	<option value="856">OSDN</option>
+
+	<option value="783">OSPod</option>
+
+	<option value="698">OVH</option>
+
+	<option value="1071">Packt</option>
+
+	<option value="791">Parallels</option>
+
+	<option value="657">Paris Region Enterprises</option>
+
+	<option value="249">PayPal</option>
+
+	<option value="880">Penguin Computing</option>
+
+	<option value="50">Piston Cloud Computing, Inc.</option>
+
+	<option value="718">Platform9 Systems, Inc</option>
+
+	<option value="710">PLUMgrid</option>
+
+	<option value="702">Produban</option>
+
+	<option value="893">Project Calico</option>
+
+	<option value="1037">Promise Cloud Solutions</option>
+
+	<option value="863">Publickey</option>
+
+	<option value="603">Pure Storage</option>
+
+	<option value="604">QCT (Quanta Cloud Technology)</option>
+
+	<option value="634">Qosmos</option>
+
+	<option value="1">Rackspace</option>
+
+	<option value="750">Rancher Labs</option>
+
+	<option value="644">Ravello Systems</option>
+
+	<option value="227">Red Hat, Inc.</option>
+
+	<option value="250">RiverMeadow Software</option>
+
+	<option value="983">Samsung</option>
+
+	<option value="612">SAP</option>
+
+	<option value="489">Sardina Systems</option>
+
+	<option value="297">Scality</option>
+
+	<option value="1051">SDX</option>
+
+	<option value="787">SDX Central</option>
+
+	<option value="276">Seagate</option>
+
+	<option value="447">Servergy</option>
+
+	<option value="747">SevOne</option>
+
+	<option value="1046">Shanghai Engineering Research Center for Broadband Technologies &amp; Applications</option>
+
+	<option value="709">SI-TECH</option>
+
+	<option value="971">Sihua Technology</option>
+
+	<option value="969">SkyAtlas</option>
+
+	<option value="860">Skytap Inc</option>
+
+	<option value="113">SolidFire</option>
+
+	<option value="332">Solinea</option>
+
+	<option value="684">StackIQ</option>
+
+	<option value="626">StackStorm</option>
+
+	<option value="631">StackVelocity</option>
+
+	<option value="643">Storage Made Easy</option>
+
+	<option value="283">Stratus Technologies</option>
+
+	<option value="772">Supermicro</option>
+
+	<option value="910">SuperUser</option>
+
+	<option value="962">SurCloud</option>
+
+	<option value="987">Sureline Systems</option>
+
+	<option value="159">SUSE</option>
+
+	<option value="205">SwiftStack Inc</option>
+
+	<option value="871">T2 Cloud</option>
+
+	<option value="1053">Target</option>
+
+	<option value="697">Tata Communications</option>
+
+	<option value="854">TECH.ASCII</option>
+
+	<option value="784">TechTarget</option>
+
+	<option value="990">TelecomTV</option>
+
+	<option value="1049">Telefónica</option>
+
+	<option value="686">teuto.net</option>
+
+	<option value="361">Thales Group</option>
+
+	<option value="782">The Cube</option>
+
+	<option value="911">The New Stack</option>
+
+	<option value="848">ThinkIT</option>
+
+	<option value="734">Tintri</option>
+
+	<option value="633">Toshiba</option>
+
+	<option value="504">TrilioData</option>
+
+	<option value="742">Tufin</option>
+
+	<option value="940">UKCloud</option>
+
+	<option value="623">Ultimum Technologies s.r.o.</option>
+
+	<option value="374">UnitedStack Inc.</option>
+
+	<option value="215">UOLDIVEO</option>
+
+	<option value="926">UTSA Open Cloud Institute</option>
+
+	<option value="781">vBrownBag</option>
+
+	<option value="321">VCE</option>
+
+	<option value="873">Veritas Technologies</option>
+
+	<option value="945">Verizon</option>
+
+	<option value="120">VEXXHOST, Inc.</option>
+
+	<option value="571">Violin Memory</option>
+
+	<option value="1038">VirTool Networks</option>
+
+	<option value="474">Virtuozzo</option>
+
+	<option value="243">VMware</option>
+
+	<option value="909">Volkswagen AG</option>
+
+	<option value="989">vScaler Ltd.</option>
+
+	<option value="963">Walmart Labs</option>
+
+	<option value="839">Wanclouds</option>
+
+	<option value="1026">Wells Fargo</option>
+
+	<option value="431">Western Digital Corporation</option>
+
+	<option value="475">Wind River</option>
+
+	<option value="219">Xemeti</option>
+
+	<option value="1015">XILINX INC.</option>
+
+	<option value="203">Yahoo Inc.</option>
+
+	<option value="838">Yahoo! Japan</option>
+
+	<option value="872">ZDNet Japan</option>
+
+	<option value="825">ZeroStack</option>
+
+	<option value="430">ZTE Corporation</option>
+
+	<option value="858">クラウドWatch</option>
+
+	<option value="855">スラド</option>
+
+	<option value="857">日経Linux</option>
+
+</select>
+
+	</div>
+	
+	
+	
+</div>
+
+		
+			<div id="OtherCompany" class="field text">
+	<label class="left" for="OsLogoProgramForm_Form_OtherCompany">Other Company (if not listed above)</label>
+	<div class="middleColumn">
+		<input type="text" name="OtherCompany" class="text form-control" id="OsLogoProgramForm_Form_OtherCompany" />
+	</div>
+	
+	
+	
+</div>
+
+		
+			</div>
+		
+			<div id="non-sponsor-company">
+		
+			<div id="NonSponsorCompany" class="field text">
+	<label class="left" for="OsLogoProgramForm_Form_NonSponsorCompany">Company Name</label>
+	<div class="middleColumn">
+		<input type="text" name="NonSponsorCompany" class="text form-control" id="OsLogoProgramForm_Form_NonSponsorCompany" />
+	</div>
+	
+	
+	
+</div>
+
+		
+			</div>
+		
+			<div id="Product" class="field text">
+	<label class="left" for="OsLogoProgramForm_Form_Product">Product or Service Name</label>
+	<div class="middleColumn">
+		<input type="text" name="Product" class="text form-control" id="OsLogoProgramForm_Form_Product" />
+	</div>
+	
+	
+	
+</div>
+
+		
+			If your proposed product name includes the OpenStack word mark, it will need to be approved as part of the licensing process.<br><br>
+		
+			<hr/>
+		
+			<div id="CompanyDetails" class="field textarea">
+	<label class="left" for="OsLogoProgramForm_Form_CompanyDetails">Product or Service Description</label>
+	<div class="middleColumn">
+		<textarea name="CompanyDetails" class="textarea form-control" id="OsLogoProgramForm_Form_CompanyDetails" rows="5" cols="20"></textarea>
+	</div>
+	
+	
+	
+</div>
+
+		
+			<div id="Category" class="field optionset checkboxset">
+	<label class="left">Which of the following categories does your product fit into?  This will help us recommend the approprite licensing and associated marketing programs and assets:</label>
+	<div class="middleColumn">
+		<ul id="OsLogoProgramForm_Form_Category" class="optionset checkboxset" >
+	
+		
+			<li class="odd valPublic_Clouds">
+				<input id="OsLogoProgramForm_Form_Category_PublicClouds" class="checkbox" name="Category[Public Clouds]" type="checkbox" value="Public Clouds" />
+				<label for="OsLogoProgramForm_Form_Category_PublicClouds">Public Clouds</label>
+			</li> 
+		
+			<li class="even valDistributions">
+				<input id="OsLogoProgramForm_Form_Category_Distributions" class="checkbox" name="Category[Distributions]" type="checkbox" value="Distributions" />
+				<label for="OsLogoProgramForm_Form_Category_Distributions">Distributions</label>
+			</li> 
+		
+			<li class="odd valConverged_Appliances">
+				<input id="OsLogoProgramForm_Form_Category_ConvergedAppliances" class="checkbox" name="Category[Converged Appliances]" type="checkbox" value="Converged Appliances" />
+				<label for="OsLogoProgramForm_Form_Category_ConvergedAppliances">Converged Appliances</label>
+			</li> 
+		
+			<li class="even valStorage">
+				<input id="OsLogoProgramForm_Form_Category_Storage" class="checkbox" name="Category[Storage]" type="checkbox" value="Storage" />
+				<label for="OsLogoProgramForm_Form_Category_Storage">Storage</label>
+			</li> 
+		
+			<li class="odd valConsultants___System_Integrators">
+				<input id="OsLogoProgramForm_Form_Category_ConsultantsSystemIntegrators" class="checkbox" name="Category[Consultants & System Integrators]" type="checkbox" value="Consultants & System Integrators" />
+				<label for="OsLogoProgramForm_Form_Category_ConsultantsSystemIntegrators">Consultants & System Integrators</label>
+			</li> 
+		
+			<li class="even valTraining">
+				<input id="OsLogoProgramForm_Form_Category_Training" class="checkbox" name="Category[Training]" type="checkbox" value="Training" />
+				<label for="OsLogoProgramForm_Form_Category_Training">Training</label>
+			</li> 
+		
+			<li class="odd valPaaS">
+				<input id="OsLogoProgramForm_Form_Category_PaaS" class="checkbox" name="Category[PaaS]" type="checkbox" value="PaaS" />
+				<label for="OsLogoProgramForm_Form_Category_PaaS">PaaS</label>
+			</li> 
+		
+			<li class="even valManagement___Monitoring">
+				<input id="OsLogoProgramForm_Form_Category_ManagementMonitoring" class="checkbox" name="Category[Management & Monitoring]" type="checkbox" value="Management & Monitoring" />
+				<label for="OsLogoProgramForm_Form_Category_ManagementMonitoring">Management & Monitoring</label>
+			</li> 
+		
+			<li class="odd valApps_on_OpenStack">
+				<input id="OsLogoProgramForm_Form_Category_AppsonOpenStack" class="checkbox" name="Category[Apps on OpenStack]" type="checkbox" value="Apps on OpenStack" />
+				<label for="OsLogoProgramForm_Form_Category_AppsonOpenStack">Apps on OpenStack</label>
+			</li> 
+		
+			<li class="even valCompatible_HW___SW">
+				<input id="OsLogoProgramForm_Form_Category_CompatibleHWSW" class="checkbox" name="Category[Compatible HW & SW]" type="checkbox" value="Compatible HW & SW" />
+				<label for="OsLogoProgramForm_Form_Category_CompatibleHWSW">Compatible Hardware & Software</label>
+			</li> 
+		
+	
+</ul>
+	</div>
+	
+	
+	
+</div>
+
+		
+			<div id="Regions" class="field optionset checkboxset">
+	<label class="left">In which regions does your company operate?</label>
+	<div class="middleColumn">
+		<ul id="OsLogoProgramForm_Form_Regions" class="optionset checkboxset" >
+	
+		
+			<li class="odd valNorth_America">
+				<input id="OsLogoProgramForm_Form_Regions_NorthAmerica" class="checkbox" name="Regions[North America]" type="checkbox" value="North America" />
+				<label for="OsLogoProgramForm_Form_Regions_NorthAmerica">North America</label>
+			</li> 
+		
+			<li class="even valSouth_America">
+				<input id="OsLogoProgramForm_Form_Regions_SouthAmerica" class="checkbox" name="Regions[South America]" type="checkbox" value="South America" />
+				<label for="OsLogoProgramForm_Form_Regions_SouthAmerica">South America</label>
+			</li> 
+		
+			<li class="odd valEurope">
+				<input id="OsLogoProgramForm_Form_Regions_Europe" class="checkbox" name="Regions[Europe]" type="checkbox" value="Europe" />
+				<label for="OsLogoProgramForm_Form_Regions_Europe">Europe</label>
+			</li> 
+		
+			<li class="even valAsia_Pacific">
+				<input id="OsLogoProgramForm_Form_Regions_AsiaPacific" class="checkbox" name="Regions[Asia Pacific]" type="checkbox" value="Asia Pacific" />
+				<label for="OsLogoProgramForm_Form_Regions_AsiaPacific">Asia Pacific</label>
+			</li> 
+		
+	
+</ul>
+	</div>
+	
+	
+	
+</div>
+
+		
+			<div id="Projects" class="field optionset checkboxset">
+	<label class="left">Select the OpenStack projects your product uses:</label>
+	<div class="middleColumn">
+		<ul id="OsLogoProgramForm_Form_Projects" class="optionset checkboxset" >
+	
+		
+			<li class="odd valOpenStack_Compute">
+				<input id="OsLogoProgramForm_Form_Projects_OpenStackCompute" class="checkbox" name="Projects[OpenStack Compute]" type="checkbox" value="OpenStack Compute" />
+				<label for="OsLogoProgramForm_Form_Projects_OpenStackCompute">OpenStack Compute</label>
+			</li> 
+		
+			<li class="even valOpenStack_Object_Storage">
+				<input id="OsLogoProgramForm_Form_Projects_OpenStackObjectStorage" class="checkbox" name="Projects[OpenStack Object Storage]" type="checkbox" value="OpenStack Object Storage" />
+				<label for="OsLogoProgramForm_Form_Projects_OpenStackObjectStorage">OpenStack Object Storage</label>
+			</li> 
+		
+			<li class="odd valOpenStack_Image_Service">
+				<input id="OsLogoProgramForm_Form_Projects_OpenStackImageService" class="checkbox" name="Projects[OpenStack Image Service]" type="checkbox" value="OpenStack Image Service" />
+				<label for="OsLogoProgramForm_Form_Projects_OpenStackImageService">OpenStack Image Service</label>
+			</li> 
+		
+			<li class="even valOpenStack_Networking">
+				<input id="OsLogoProgramForm_Form_Projects_OpenStackNetworking" class="checkbox" name="Projects[OpenStack Networking]" type="checkbox" value="OpenStack Networking" />
+				<label for="OsLogoProgramForm_Form_Projects_OpenStackNetworking">OpenStack Networking</label>
+			</li> 
+		
+			<li class="odd valOpenStack_Dashboard">
+				<input id="OsLogoProgramForm_Form_Projects_OpenStackDashboard" class="checkbox" name="Projects[OpenStack Dashboard]" type="checkbox" value="OpenStack Dashboard" />
+				<label for="OsLogoProgramForm_Form_Projects_OpenStackDashboard">OpenStack Dashboard</label>
+			</li> 
+		
+			<li class="even valOpenStack_Orchestration">
+				<input id="OsLogoProgramForm_Form_Projects_OpenStackOrchestration" class="checkbox" name="Projects[OpenStack Orchestration]" type="checkbox" value="OpenStack Orchestration" />
+				<label for="OsLogoProgramForm_Form_Projects_OpenStackOrchestration">OpenStack Orchestration</label>
+			</li> 
+		
+			<li class="odd valOpenStack_Identity">
+				<input id="OsLogoProgramForm_Form_Projects_OpenStackIdentity" class="checkbox" name="Projects[OpenStack Identity]" type="checkbox" value="OpenStack Identity" />
+				<label for="OsLogoProgramForm_Form_Projects_OpenStackIdentity">OpenStack Identity</label>
+			</li> 
+		
+			<li class="even valOpenStack_Metering">
+				<input id="OsLogoProgramForm_Form_Projects_OpenStackMetering" class="checkbox" name="Projects[OpenStack Metering]" type="checkbox" value="OpenStack Metering" />
+				<label for="OsLogoProgramForm_Form_Projects_OpenStackMetering">OpenStack Metering</label>
+			</li> 
+		
+			<li class="odd valOpenStack_Block_Storage">
+				<input id="OsLogoProgramForm_Form_Projects_OpenStackBlockStorage" class="checkbox" name="Projects[OpenStack Block Storage]" type="checkbox" value="OpenStack Block Storage" />
+				<label for="OsLogoProgramForm_Form_Projects_OpenStackBlockStorage">OpenStack Block Storage</label>
+			</li> 
+		
+	
+</ul>
+	</div>
+	
+	
+	
+</div>
+
+		
+			<div id="APIExposed" class="field checkbox">
+	<input type="checkbox" name="APIExposed" value="1" class="checkbox" id="OsLogoProgramForm_Form_APIExposed" />
+	<label class="right" for="OsLogoProgramForm_Form_APIExposed">My product exposes the OpenStack API</label>
+	
+	
+</div>
+
+		
+			<div id="field_98438688" class="field text honey">
+	<label class="left" for="OsLogoProgramForm_Form_field_98438688">field_98438688</label>
+	<div class="middleColumn">
+		<input type="text" name="field_98438688" class="text honey form-control" id="OsLogoProgramForm_Form_field_98438688" />
+	</div>
+	
+	
+	
+</div>
+
+		
+			<input type="hidden" name="SecurityID" value="618918bae16ecff556e548f5dfd6eb0c9d3c79e5" class="hidden form-control" id="OsLogoProgramForm_Form_SecurityID" />
+
+		
+		<div class="clear"><!-- --></div>
+	</fieldset>
+
+	
+	<div class="Actions">
+		
+			
+	<input type="submit" name="action_save" value="Request Information" class="action" id="OsLogoProgramForm_Form_action_save" />
+
+
+		
+	</div>
+	
+
+</form>
+
+
+
+	
+			</div> <!-- Close content div -->
+			<div class="col-lg-3 col-lg-pull-9">
+				<div class="newSubNav">
+    <ul class="overviewNav">
+        
+            <li id="brand"><a href="/brand/" title="Go to the &Title&quot; page" class="section">Branding <i class="fa fa-chevron-right"></i></a></li>
+        
+        
+            <li id="openstack-trademark-policy"><a href="/brand/openstack-trademark-policy/" title="Go to the &quot;OpenStack Trademark Policy&quot; page"  class="link">OpenStack Trademark Policy <i class="fa fa-chevron-right"></i></a></li>
+        
+            <li id="web-badges"><a href="/brand/web-badges/" title="Go to the &quot;OpenStack Web Badges&quot; page"  class="link">Web Badges <i class="fa fa-chevron-right"></i></a></li>
+        
+            <li id="openstack-logo"><a href="/brand/openstack-logo/" title="Go to the &quot;OpenStack Logo&quot; page"  class="link">OpenStack Logo <i class="fa fa-chevron-right"></i></a></li>
+        
+            <li id="openstack-compatible"><a href="/brand/openstack-compatible/" title="Go to the &quot;OpenStack Compatible Logo&quot; page"  class="link">OpenStack Compatible <i class="fa fa-chevron-right"></i></a></li>
+        
+            <li id="event-policy"><a href="/brand/event-policy/" title="Go to the &quot;OpenStack Event Policy&quot; page"  class="link">OpenStack Event Policy <i class="fa fa-chevron-right"></i></a></li>
+        
+            <li id="openstack-blog-code-of-conduct"><a href="/brand/openstack-blog-code-of-conduct/" title="Go to the &quot;OpenStack Blog Code of Conduct&quot; page"  class="link">Blog Code of Conduct <i class="fa fa-chevron-right"></i></a></li>
+        
+            <li id="openstack-powered"><a href="/brand/openstack-powered/" title="Go to the &quot;OpenStack Powered&quot; page"  class="link">OpenStack Powered <i class="fa fa-chevron-right"></i></a></li>
+        
+            <li id="openstack-training"><a href="/brand/openstack-training/" title="Go to the &quot;OpenStack Training&quot; page"  class="link">OpenStack Training Logo <i class="fa fa-chevron-right"></i></a></li>
+        
+            <li id="interop"><a href="/brand/interop/" title="Go to the &quot;Interop&quot; page"  class="link">Interop <i class="fa fa-chevron-right"></i></a></li>
+        
+    </ul>
+</div>
+			</div>		
+		</div> <!-- Close row div -->
+	
+</div>
+      </div>
+
+        <footer>
+        <div class="container">
+            <div class="row footer-links">
+                <div class="col-lg-2 col-sm-2">
+                    <h3>OpenStack</h3>
+                    <ul>
+                        <li><a href="//openstack.org/projects/">Projects</a></li>
+                        <li><a href="//openstack.org/software/security/">OpenStack Security</a></li>
+                        <li><a href="//openstack.org/projects/openstack-faq/">Common Questions</a></li>
+                        <li><a href="https://openstack.org/blog/">Blog</a></li>
+                        <li><a href="//openstack.org/news/">News</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-2">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="//openstack.org/community/">User Groups</a></li>
+                        <li><a href="//openstack.org/community/events/">Events</a></li>
+                        <li><a href="//openstack.org/community/jobs/">Jobs</a></li>
+                        <li><a href="//openstack.org/foundation/companies/">Companies</a></li>
+                        <li><a href="http://docs.openstack.org/infra/manual/developers.html">Contribute</a></li>
+                        <li><a href="//openstack.org/store">Get Swag!</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-2">
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li><a href="http://docs.openstack.org">OpenStack Manuals</a></li>
+                        <li><a href="//openstack.org/software/start/">Getting Started</a></li>
+                        <li><a href="http://developer.openstack.org">API Documentation</a></li>
+                        <li><a href="https://wiki.openstack.org">Wiki</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-2">
+                    <h3>Branding & Legal</h3>
+                    <ul>
+                        <li><a href="//openstack.org/brand/">Logos & Guidelines</a></li>
+                        <li><a href="//openstack.org/brand/openstack-trademark-policy/">Trademark Policy</a></li>
+                        <li><a href="//openstack.org/privacy/">Privacy Policy</a></li>
+                        <li><a href="https://wiki.openstack.org/wiki/How_To_Contribute#Contributor_License_Agreement">OpenStack CLA</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                    <h3>Stay In Touch</h3>
+                    <a href="https://twitter.com/OpenStack" target="_blank" class="social-icons footer-twitter"></a>
+                    <a href="https://www.facebook.com/openstack" target="_blank" class="social-icons footer-facebook"></a>
+                    <a href="https://www.linkedin.com/company/openstack" target="_blank" class="social-icons footer-linkedin"></a>
+                    <a href="https://www.youtube.com/user/OpenStackFoundation" target="_blank" class="social-icons footer-youtube"></a>
+                    <!-- <form class="form-inline">
+                        <div class="form-group newsletter-form">
+                            <label>Join Our Newsletter</label>
+                            <input class="newsletter-input" type="input" placeholder="Email">
+                            <button type="submit" class="newsletter-btn">Join</button>
+                        </div>
+                    </form> -->
+                    <p class="fine-print">
+                        The OpenStack project is provided under the Apache 2.0 license. Openstack.org is powered by <a href="https://rackspace.com" target="_blank">Rackspace Cloud Computing</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <div class="container">
+            <form class="form-inline" id="FeedbackForm_FeedbackForm" action="/brand/logo-request/FeedbackForm" method="post" enctype="application/x-www-form-urlencoded">
+    <div class="form-group">
+        <div>
+            <fieldset class="footer-feedback-fieldset">
+                <input class="feedback-input" type="input" placeholder="Give Us Your Feedback On This Page" id="FeedbackForm_FeedbackForm_Content" name="Content">
+                <input type="hidden" name="SecurityID" value="618918bae16ecff556e548f5dfd6eb0c9d3c79e5" class="hidden form-control" id="FeedbackForm_FeedbackForm_SecurityID" />
+
+                <button type="submit" class="feedback-btn" id="FeedbackForm_FeedbackForm_action_submitFeedback" name="action_submitFeedback">Submit</button>
+            </fieldset>
+        </div>
+    </div>
+</form>
+        </div>
+    </div>
+    <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-fM0cfazHHeyRH"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-fM0cfazHHeyRH.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+    <!-- Twitter universal website tag code -->
+<script>
+    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+            a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+    // Insert Twitter Pixel ID and Standard Event data below
+    twq('init','nxuu6');
+    twq('track','PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+  </body>
+    <script type="text/javascript">
+    _linkedin_data_partner_id = "36268";
+</script><script type="text/javascript">
+    (function(){var s = document.getElementsByTagName("script")[0];
+        var b = document.createElement("script");
+        b.type = "text/javascript";b.async = true;
+        b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+        s.parentNode.insertBefore(b, s);})();
+</script>
+</html>

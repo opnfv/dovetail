@@ -1,0 +1,46 @@
+<h3>Test Run Results</h3>
+
+<div ng-show="ctrl.testId"  class="container-fluid">
+    <div class="row">
+        <div class="pull-left">
+            <div class="test-report">
+                <strong>Test ID:</strong> {{ctrl.testId}}<br />
+            </div>
+        </div>
+    </div>
+</div>
+
+<strong>Total: {{ctrl.total}}, Pass: {{ ctrl.mandatory_pass + ctrl.optional_pass }}, Rate: {{ (ctrl.mandatory_pass + ctrl.optional_pass) / ctrl.total * 100 | number:2 }}%</strong></br>
+<strong>Mandatory Total: {{ctrl.mandatory_total}}, Pass: {{ ctrl.mandatory_pass }}, Rate: {{ ctrl.mandatory_pass / ctrl.mandatory_total * 100 | number:2 }}%</strong></br>
+<strong>Optional Total: {{ctrl.optional_total}}, Pass: {{ ctrl.optional_pass }}, Rate: {{ ctrl.optional_pass / ctrl.optional_total * 100 | number:2 }}%</strong></br>
+
+<div ng-show="ctrl.cases">
+    <hr >
+
+    <div ng-show="ctrl.cases">
+
+        <hr>
+        <h4>Test Result Overview</h4>
+
+        <uib-accordion close-others=false>
+            <!-- The ng-repeat is used to pass in a local variable to the template. -->
+            <ng-include
+                src="ctrl.detailsTemplate"
+                onload="isOpen = true">
+            </ng-include>
+            <br />
+        </uib-accordion>
+    </div>
+</div>
+
+<!--
+<div class="loading">
+    <div cg-busy="{promise:resultsRequest,message:'Loading results'}"></div>
+</div>
+
+<div ng-show="ctrl.showError" class="alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    {{ctrl.error}}
+</div>
+-->
