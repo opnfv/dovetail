@@ -27,6 +27,9 @@ FROM ubuntu:14.04
 MAINTAINER SerenaFeng <feng.xiaowei@zte.com.cn>
 LABEL version="v1" description="OPNFV TestAPI Docker container"
 
+ARG BRANCH=master
+ARG COMMIT_ID=master
+
 ENV HOME /home
 
 # Packaged dependencies
@@ -40,10 +43,20 @@ python-pip \
 crudini \
 --no-install-recommends
 
+
+WORKDIR /home
+
 RUN pip install --upgrade pip
 
 RUN git config --global http.sslVerify false
-RUN git clone https://github.com/grakiss888/testapi.git /home/testapi
+
+RUN git clone https://gerrit.opnfv.org/gerrit/dovetail.git
+
+WORKDIR /home/dovetail
+RUN git checkout -f $COMMIT_ID
+
+RUN mkdir -p /home/testapi
+RUN cp -rf /home/dovetail/cvp/* /home/testapi
 
 WORKDIR /home/testapi/
 RUN pip install -r requirements.txt
