@@ -47,6 +47,6 @@ RUN \
 WORKDIR ${REPOS_DIR}/dovetail
 
 # get db schema from opnfv sites
-RUN mkdir -p ${REPOS_DIR}/dovetail/utils/local_db
-ADD get_db_schema.py ${REPOS_DIR}/dovetail/utils/local_db
-RUN cd ${REPOS_DIR}/dovetail/utils/local_db && python get_db_schema.py
+# RUN mkdir -p ${REPOS_DIR}/dovetail/utils/local_db
+# ADD get_db_schema.py ${REPOS_DIR}/dovetail/utils/local_db
+# RUN cd ${REPOS_DIR}/dovetail/utils/local_db && python get_db_schema.py
