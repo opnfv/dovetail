@@ -243,6 +243,44 @@ class Testcase(object):
             return cls.testcase_list[testcase_name]
         return None
 
+    @classmethod
+    def check_testarea(cls, testarea):
+        area_no_duplicate = []
+        area_full = ['full']
+
+        # testarea is empty, run full testsuite
+        if not testarea:
+            return True, area_full
+
+        mandatory_list = dt_cfg.dovetail_config['mandatory']
+        optional_list = dt_cfg.dovetail_config['optional']
+        for area in testarea:
+            if area not in dt_cfg.dovetail_config['testarea_supported']:
+                return False, None
+            if area == 'full':
+                return True, area_full
+            if area == 'mandatory':
+                for mandatory_area in mandatory_list:
+                    area_no_duplicate.append(mandatory_area)
+                continue
+            if area == 'optional':
+                for optional_area in optional_list:
+                    area_no_duplicate.append(optional_area)
+                continue
+            area_no_duplicate.append(area)
+        area_no_duplicate = list(set(area_no_duplicate))
+        return True, area_no_duplicate
+
+    @classmethod
+    def get_testcase_list(cls, testsuite, testarea):
+        testcase_list = []
+        for value in testsuite['testcases_list']:
+            for area in testarea:
+                if value is not None and (area == 'full' or area in value):
+                    testcase_list.append(value)
+                    break
+        return testcase_list
+
 
 class FunctestTestcase(Testcase):
 

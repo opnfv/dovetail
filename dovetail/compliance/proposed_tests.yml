@@ -2,11 +2,22 @@
 proposed_tests:
   name: proposed_tests
   testcases_list:
+  # mandatory test cases
     # osinterop
     - dovetail.osinterop.tc001
     # vping
     - dovetail.vping.tc001
     - dovetail.vping.tc002
+    # HA
+    - dovetail.ha.tc001
+    - dovetail.ha.tc002
+    - dovetail.ha.tc003
+    - dovetail.ha.tc004
+    - dovetail.ha.tc005
+    - dovetail.ha.tc006
+    - dovetail.ha.tc007
+    - dovetail.ha.tc008
+  # optional test cases
     # ipv6
     - dovetail.ipv6.tc001
     - dovetail.ipv6.tc002
@@ -33,15 +44,6 @@ proposed_tests:
     - dovetail.ipv6.tc023
     - dovetail.ipv6.tc024
     - dovetail.ipv6.tc025
-    # HA
-    - dovetail.ha.tc001
-    - dovetail.ha.tc002
-    - dovetail.ha.tc003
-    - dovetail.ha.tc004
-    - dovetail.ha.tc005
-    - dovetail.ha.tc006
-    - dovetail.ha.tc007
-    - dovetail.ha.tc008
     # sdnvpn
     - dovetail.sdnvpn.tc001
     - dovetail.sdnvpn.tc002
@@ -53,5 +55,6 @@ proposed_tests:
     - dovetail.tempest.tc003
     - dovetail.tempest.tc004
     - dovetail.tempest.tc005
+  # other test cases
     # resiliency
     # - dovetail.resiliency.tc001

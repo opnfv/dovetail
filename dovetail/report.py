@@ -55,11 +55,8 @@ class Report(object):
         report_obj['duration'] = duration
 
         report_obj['testcases_list'] = []
-        testarea_list = []
-        for value in testsuite_yaml['testcases_list']:
-            if value is not None and (testarea == 'full' or testarea in value):
-                testarea_list.append(value)
-        for testcase_name in testarea_list:
+        testcase_list = Testcase.get_testcase_list(testsuite_yaml, testarea)
+        for testcase_name in testcase_list:
             testcase = Testcase.get(testcase_name)
             testcase_inreport = {}
             testcase_inreport['name'] = testcase_name
