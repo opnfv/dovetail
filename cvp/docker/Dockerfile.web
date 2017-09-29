@@ -9,6 +9,8 @@ FROM ubuntu:16.04
 MAINTAINER Leo Wang <grakiss.wanglei@huawei.com>
 LABEL version="v1" description="CVP nginx"
 
+ARG BRANCH=master
+ARG COMMIT_ID=master
 
 ENV HOME /home
 WORKDIR /home
@@ -17,7 +19,15 @@ RUN apt-get update
 
 RUN apt-get install -y git nginx supervisor
 
-RUN git clone http://github.com/grakiss888/testapi
+RUN git config --global http.sslVerify false
+RUN git clone https://gerrit.opnfv.org/gerrit/dovetail.git
+
+WORKDIR /home/dovetail
+RUN git checkout -f $COMMIT_ID
+
+RUN mkdir -p /home/testapi
+
+RUN cp -rf /home/dovetail/cvp/* /home/testapi
 
 RUN mkdir /www
 RUN cp -r /home/testapi/3rd_party/static /www/
