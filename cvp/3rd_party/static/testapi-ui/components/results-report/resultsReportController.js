@@ -165,13 +165,13 @@
         }
 
         function openAll(){
-            angular.forEach(ctrl.cases, function(id, ele){
+            angular.forEach(ctrl.cases, function(ele, id){
                 ele.folder = false;
             });
         }
 
         function folderAll(){
-            angular.forEach(ctrl.cases, function(id, ele){
+            angular.forEach(ctrl.cases, function(ele, id){
                 ele.folder = true;
             });
         }
