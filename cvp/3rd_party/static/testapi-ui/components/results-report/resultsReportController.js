@@ -150,7 +150,7 @@
             var build_tag = result_case.build_tag;
             var tag = build_tag.split('-').pop().split('.')[1];
             ctrl.total += result_case.total;
-            if(tag == 'ha' || tag == 'defcore' || tag == 'vping'){
+            if(tag == 'ha' || tag == 'osinterop' || tag == 'vping'){
                 ctrl.mandatory_total += result_case.total;
                 ctrl.mandatory_pass += result_case.pass;
                 ctrl.mandatory_fail += result_case.fail;
