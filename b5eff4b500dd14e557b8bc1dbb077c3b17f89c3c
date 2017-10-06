@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_d8efb11c",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-10-06T08:58:50Z",
+      "side": 1,
+      "message": "The rendering of these references is not yet technically correct. See http://docutils.sourceforge.net/docs/user/rst/quickref.html#citations\n\nHowever, we can merge this one and fix all references in all documents in one go.",
+      "range": {
+        "startLine": 115,
+        "startChar": 0,
+        "endLine": 118,
+        "endChar": 76
+      },
+      "revId": "b5eff4b500dd14e557b8bc1dbb077c3b17f89c3c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
