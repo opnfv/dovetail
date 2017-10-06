@@ -2,7 +2,7 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) Ericsson AB
 
-.. _dovetail_testspecifications:
+.. _dovetail-test_case_specification:
 
 ==================================================
 Compliance Verification program test specification

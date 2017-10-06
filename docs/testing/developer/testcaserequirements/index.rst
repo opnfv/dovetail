@@ -2,6 +2,8 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) Ericsson AB, and others
 
+.. _dovetail-test_case_requirements:
+
 ==========================================================
 Compliance Verification Program test case requirements
 ==========================================================
@@ -28,7 +30,7 @@ The following requirements are mandatory for a test to be submitted for
 consideration in the CVP test suite:
 
 - All test cases must be fully documented, in a common format.  Please consider
-  the existing :ref:`dovetail_testspecifications` as examples.
+  the existing :ref:`dovetail-test_case_specification` as examples.
 
   - Clearly identifying the test procedure and expected results / metrics to
     determine a “pass” or “fail” result.
