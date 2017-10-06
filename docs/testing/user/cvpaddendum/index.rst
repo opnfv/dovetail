@@ -3,6 +3,8 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) Intel and others
 
+.. _dovetail-cvp_addendum:
+
 ====================================================================
 Compliance Verification Program - Guidelines Addendum for Danube
 ====================================================================
@@ -49,25 +51,31 @@ SUT Assumptions
 
 Assumptions about the System Under Test (SUT) include ...
 
-  - The minimal specification of physical infrastructure, including controller
-    nodes, compute nodes and networks, is defined by the Pharos specification
-    [2].
-  - The SUT is fully deployed and operational, i.e. SUT deployment tools are
-    out of scope of testing.
+- The minimal specification of physical infrastructure, including controller
+  nodes, compute nodes and networks, is defined by the `Pharos specification`_.
+
+- The SUT is fully deployed and operational, i.e. SUT deployment tools are
+  out of scope of testing.
 
 
 Scope of Testing
 ================
 
-The OPNFV CVP Guidelines [1], as approved by the Board of Directors, outlines
+The `OPNFV CVP Guidelines`_, as approved by the Board of Directors, outlines
 the key objectives of the CVP as follows:
-  - Help build the market for
-     - OPNFV based infrastructure
-     - applications designed to run on that infrastructure
-  - Reduce adoption risks for end-users
-  - Decrease testing costs by verifying hardware and software platform
-    interfaces and components
-  - Enhance interoperability
+
+- Help build the market for
+
+  - OPNFV based infrastructure
+
+  - applications designed to run on that infrastructure
+
+- Reduce adoption risks for end-users
+
+- Decrease testing costs by verifying hardware and software platform
+  interfaces and components
+
+- Enhance interoperability
 
 The guidelines further directs the scope to be constrained to "features,
 capabilities, components, and interfaces included in an OPNFV release that are
@@ -150,18 +158,19 @@ A basic VNF can be thought of as a single virtual machine that is networked
 and can perform the simplest network functions, for example, a simple forwarding
 gateway, or a set of such virtual machines connected only by simple virtual network
 services. Running such basic VNF leads to a set of common requirements, including:
-  - image management (Refstack testing Glance API)
-  - identity management (Refstack testing Keystone Identity API)
-  - virtual compute (Refstack testing Nova Compute API)
-  - virtual storage (Refstack testing Cinder API)
-  - virtual networks (Refstack testing Neutron Network API)
-  - forwarding packets through virtual networks in data path
-  - filtering packets based on security rules and port security in data path
-  - dynamic network runtime operations through the life of a VNF (e.g. attach/detach,
-    enable/disable, read stats)
-  - correct behavior after common virtual machine life cycles events (e.g.
-    suspend/resume, reboot, migrate)
-  - simple virtual machine resource scheduling on multiple nodes
+
+- image management (Refstack testing Glance API)
+- identity management (Refstack testing Keystone Identity API)
+- virtual compute (Refstack testing Nova Compute API)
+- virtual storage (Refstack testing Cinder API)
+- virtual networks (Refstack testing Neutron Network API)
+- forwarding packets through virtual networks in data path
+- filtering packets based on security rules and port security in data path
+- dynamic network runtime operations through the life of a VNF (e.g. attach/detach,
+  enable/disable, read stats)
+- correct behavior after common virtual machine life cycles events (e.g.
+  suspend/resume, reboot, migrate)
+- simple virtual machine resource scheduling on multiple nodes
 
 OPNFV mainly supports OpenStack as the VIM up to the Danube release. The
 VNFs used in the CVP program, and features in scope for the program which are
@@ -373,19 +382,19 @@ Based on the previous analysis, the following items are outside the scope of
 the Danube release of the CV but are being considered for inclusion in future
 releases:
 
-  - service assurance
-  - use case testing
-  - platform in-place upgrade
-  - API backward compatibility / micro-versioning
-  - workload migration
-  - multi-site federation
-  - service function chaining
-  - platform operational insights, e.g. telemetry, logging
-  - efficiency, e.g. hardware and energy footprint of the platform
-  - interoperability with workload automation platforms e.g. ONAP
-  - resilience
-  - security and vulnerability scanning
-  - performance measurements
+- service assurance
+- use case testing
+- platform in-place upgrade
+- API backward compatibility / micro-versioning
+- workload migration
+- multi-site federation
+- service function chaining
+- platform operational insights, e.g. telemetry, logging
+- efficiency, e.g. hardware and energy footprint of the platform
+- interoperability with workload automation platforms e.g. ONAP
+- resilience
+- security and vulnerability scanning
+- performance measurements
 
 
 Criteria for Awarding Compliance
@@ -407,9 +416,7 @@ documented and accepted by the reviewers.
 Applicants who choose to run the optional test cases can include the results
 of the optional test cases to highlight the additional compliance.
 
-References
-==========
-
-[1] The OPNFV CVP Guidelines v.16 [Editor's note: link to be provided.]
-[2] Pharos specification xxx [Editor's note: link to be provided.]
+.. References
+.. _`OPNFV CVP Guidelines`: https://wiki.opnfv.org/display/dovetail/CVP+document
+.. _`Pharos specification`: https://wiki.opnfv.org/display/pharos/Pharos+Specification
 
