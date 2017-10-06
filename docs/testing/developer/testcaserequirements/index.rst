@@ -2,6 +2,8 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) Ericsson AB, and others
 
+.. _dovetail-test_case_requirements:
+
 ==========================================================
 Compliance Verification Program test case requirements
 ==========================================================

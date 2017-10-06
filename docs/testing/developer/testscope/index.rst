@@ -2,6 +2,8 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) OPNFV
 
+.. _dovetail-test_scope:
+
 =======================================================
 Compliance and Verification program accepted test cases
 =======================================================
