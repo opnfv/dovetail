@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_fe7c1dee",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2017-10-06T22:13:46Z",
+      "side": 1,
+      "message": "Docker",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 6
+      },
+      "revId": "30b9fa8ff4cf58c78df5ef1b2fadd1ab8e9dbe22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_3e8325cd",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2017-10-06T22:13:46Z",
+      "side": 1,
+      "message": "identity, image, network, and compute services",
+      "range": {
+        "startLine": 56,
+        "startChar": 60,
+        "endLine": 56,
+        "endChar": 85
+      },
+      "revId": "30b9fa8ff4cf58c78df5ef1b2fadd1ab8e9dbe22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_de7f99de",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2017-10-06T22:13:46Z",
+      "side": 1,
+      "message": "beneficial",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 10
+      },
+      "revId": "30b9fa8ff4cf58c78df5ef1b2fadd1ab8e9dbe22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
