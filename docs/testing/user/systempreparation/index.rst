@@ -2,6 +2,8 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) Ericsson AB
 
+.. _dovetail-system_preparation_guide:
+
 ============================================================
 Compliance and Verification program system preparation guide
 ============================================================

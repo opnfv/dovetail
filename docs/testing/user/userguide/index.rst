@@ -2,6 +2,8 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) OPNFV
 
+.. _dovetail-testing_user_guide:
+
 ********************************************************
 Compliance Verification Program Testing User Guide
 ********************************************************
