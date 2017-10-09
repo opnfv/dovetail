@@ -6,9 +6,6 @@
 OPNFV Compliance Verification Program certification workflow
 ================================================================
 
-.. toctree::
-   :maxdepth: 2
-
 Introduction
 ============
 
@@ -120,3 +117,10 @@ References
 [3] OPNFV CVP Test Case Specifications v1.0 [Editor's note: link to be provided.]
 [4] Dovetail Test Tool User Guide v1.0 [Editor's note: link to be provided.]
 
+Appendix
+========
+
+.. toctree::
+   :maxdepth: 2
+
+   ApplicationForm
