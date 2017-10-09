@@ -1,0 +1,19 @@
+<div>
+
+    <h4>Enter user name</h4>
+    <input type="text" ng-model="ctrl.userName" />
+
+    <div style="text-align:center;margin-top:20px;">
+        <button class="btn btn-default" ng-disabled="ctrl.userName==null || ctrl.userName==''" ng-click="ctrl.addSharedUser(ctrl.tempResult, ctrl.userName)">Commit</button>
+    </div>
+
+</div>
+
+
+<style>
+    input {
+        border-radius: 10px;
+        border: 1px solid #eeeeee;
+        width: 100%;
+    }
+</style>
