@@ -10,7 +10,6 @@ MAINTAINER Leo Wang <grakiss.wanglei@huawei.com>
 LABEL version="v1" description="CVP nginx"
 
 ARG BRANCH=master
-ARG COMMIT_ID=master
 
 ENV HOME /home
 WORKDIR /home
@@ -23,7 +22,7 @@ RUN git config --global http.sslVerify false
 RUN git clone https://gerrit.opnfv.org/gerrit/dovetail.git
 
 WORKDIR /home/dovetail
-RUN git checkout -f $COMMIT_ID
+RUN git checkout -f $BRANCH
 
 RUN mkdir -p /home/testapi
 
@@ -39,4 +38,5 @@ ADD nginx/sites-enabled/default /etc/nginx/sites-enabled/default
 ADD supervisor/conf.d/nginx.conf /etc/supervisor/conf.d/nginx.conf
 ADD start-nginx.sh /home/start-nginx.sh
 
+WORKDIR /home
 CMD ["bash", "start-nginx.sh"]
