@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "9a3d3df0_68465725",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-10-10T08:59:49Z",
+      "side": 1,
+      "message": "should be replaced with inline reference to user guide:\n\n:ref:dovetail-testing_user_guide",
+      "range": {
+        "startLine": 13,
+        "startChar": 20,
+        "endLine": 15,
+        "endChar": 29
+      },
+      "revId": "30b9fa8ff4cf58c78df5ef1b2fadd1ab8e9dbe22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_08550bc6",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-10-10T08:59:49Z",
+      "side": 1,
+      "message": "should replaced with inline reference to Pharos spec:\n\n`Pharos specification`_\n\n.. _`Pharos specification`: https://wiki.opnfv.org/display/pharos/Pharos+Specification",
+      "range": {
+        "startLine": 18,
+        "startChar": 20,
+        "endLine": 20,
+        "endChar": 27
+      },
+      "revId": "30b9fa8ff4cf58c78df5ef1b2fadd1ab8e9dbe22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_fe7c1dee",
         "filename": "docs/testing/user/systempreparation/index.rst",
         "patchSetId": 1
@@ -18,6 +64,29 @@
         "startChar": 0,
         "endLine": 32,
         "endChar": 6
+      },
+      "revId": "30b9fa8ff4cf58c78df5ef1b2fadd1ab8e9dbe22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_485ef3ea",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-10-10T08:59:49Z",
+      "side": 1,
+      "message": "2 or more",
+      "range": {
+        "startLine": 42,
+        "startChar": 57,
+        "endLine": 42,
+        "endChar": 58
       },
       "revId": "30b9fa8ff4cf58c78df5ef1b2fadd1ab8e9dbe22",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
