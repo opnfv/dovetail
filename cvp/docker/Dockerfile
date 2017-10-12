@@ -46,6 +46,7 @@ libxml2-dev \
 libxslt1-dev \
 --no-install-recommends
 
+RUN pip install -U setuptools
 
 WORKDIR /home
 
