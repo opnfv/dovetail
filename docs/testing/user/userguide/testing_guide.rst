@@ -546,9 +546,7 @@ When a tester is performing trial runs, Dovetail stores results in a local file 
      * Review the dovetail.log to see if all important information has been captured
        - in default mode without DEBUG.
 
-     * The end of the log file has a summary of all test case test results.
-
-     * Additional log files may be of interests: refstack.log, dovetail_ha_tcXXX.out ...
+     * Review the results.json to see all results data including criteria PASS or FAIL.
 
    * Example: OpenStack Interoperability test cases
 
