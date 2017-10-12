@@ -397,7 +397,7 @@ Now you should be in the Dovetail container's prompt and ready to execute
 test suites.
 
 The Dovetail client CLI allows the tester to specify which test suite to run.
-You can refer to `Dovetail CLI wiki page <https://wiki.opnfv.org/display/dovetail/Dovetail+Command+Line>`_
+You can refer to :ref:`cli-reference`.
 for the details of the CLI.
 By default the results are stored in a local file ``$DOVETAIL_HOME/results``.
 
