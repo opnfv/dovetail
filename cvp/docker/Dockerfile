@@ -59,6 +59,7 @@ WORKDIR /home/dovetail
 RUN git checkout -f $BRANCH
 
 RUN mkdir -p /home/testapi
+RUN mkdir -p /home/testapi/logs/api
 RUN cp -rf /home/dovetail/cvp/* /home/testapi
 
 WORKDIR /home/dovetail/cvp
