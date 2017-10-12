@@ -30,10 +30,17 @@ TODOs :
 """
 
 import tornado.ioloop
+import logging
 
 from opnfv_testapi.common.config import CONF
 from opnfv_testapi.router import url_mappings
 from opnfv_testapi.tornado_swagger import swagger
+
+my_logger = logging.getLogger()
+handler = logging.handlers.RotatingFileHandler(
+    CONF.api_log_file, maxBytes=20000000, backupCount=50)
+my_logger.setLevel(logging.DEBUG)
+my_logger.addHandler(handler)
 
 
 def make_app():
