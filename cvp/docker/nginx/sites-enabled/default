@@ -57,6 +57,14 @@ server {
             autoindex_localtime on;
         }
 
+        location ~* /logs/api {
+            root /home/testapi;
+            expires 1d;
+            autoindex on;
+            autoindex_exact_size on;
+            autoindex_localtime on;
+        }
+
         location /api/v1/cvp {
             proxy_pass http://cvpapi/api/v1/cvp;
             proxy_set_header X-Real-IP $remote_addr;
