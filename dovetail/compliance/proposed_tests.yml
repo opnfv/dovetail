@@ -44,17 +44,17 @@ proposed_tests:
     - dovetail.ipv6.tc023
     - dovetail.ipv6.tc024
     - dovetail.ipv6.tc025
-    # sdnvpn
-    - dovetail.sdnvpn.tc001
-    - dovetail.sdnvpn.tc002
-    - dovetail.sdnvpn.tc004
-    - dovetail.sdnvpn.tc008
     # tempest
     - dovetail.tempest.tc001
     - dovetail.tempest.tc002
     - dovetail.tempest.tc003
     - dovetail.tempest.tc004
     - dovetail.tempest.tc005
+    # sdnvpn
+    - dovetail.sdnvpn.tc001
+    - dovetail.sdnvpn.tc002
+    - dovetail.sdnvpn.tc004
+    - dovetail.sdnvpn.tc008
   # other test cases
     # resiliency
     # - dovetail.resiliency.tc001
