@@ -27,6 +27,7 @@ testsuite_supported:
   - compliance_set
   - proposed_tests
   - debug
+  - cvp_0_7_0
 # testarea supported, should adjust accordingly
 testarea_supported:
   - osinterop
