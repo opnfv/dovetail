@@ -40,7 +40,7 @@ cli:
       testsuite:
         flags:
           - '--testsuite'
-        default: 'compliance_set'
+        default: 'cvp_0_7_0'
         help: 'compliance testsuite.'
       testarea:
         flags:

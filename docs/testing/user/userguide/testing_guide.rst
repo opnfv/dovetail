@@ -407,12 +407,18 @@ By default the results are stored in a local file ``$DOVETAIL_HOME/results``.
 
 Multiple test suites may be available. For the purpose of running
 CVP test suite, the test suite name follows the following format,
-``CVP_<major>_<minor>_<patch>``
-For example, CVP_1_0_0.
+``cvp_<major>_<minor>_<patch>``
+The latest and default test suite is cvp_0_7_0.
 
 .. code-block:: bash
 
-   $ dovetail run --testsuite CVP_1_0_0
+   $ dovetail run
+
+This command is equal to
+
+.. code-block:: bash
+
+   $ dovetail run --testsuite cvp_0_7_0
 
 If you are not running the entire test suite, you can choose to run an
 individual test area instead. The test area can be a single test area or
@@ -421,30 +427,29 @@ and "ha". The optional test areas are "ipv6", "sdnvpn" and "tempest".
 
 .. code-block:: bash
 
-   $ dovetail run --testsuite CVP_1_0_0 --testarea mandatory
+   $ dovetail run --testarea mandatory
 
 You need to push the results to local DB if you want to store the results
 or report the results to CVP.
 
 .. code-block:: bash
 
-   $ dovetail run --testsuite CVP_1_0_0 --report http://<test_host_ip>:<testapi_port>/api/v1/results
+   $ dovetail run --report http://<test_host_ip>:<testapi_port>/api/v1/results
 
 If the Test Host is offline, ``--offline`` should be added to support running with
 local resources.
 
 .. code-block:: bash
 
-   $ dovetail run --testsuite CVP_1_0_0 --offline --report http://<test_host_ip>:<testapi_port>/api/v1/results
+   $ dovetail run --offline --report http://<test_host_ip>:<testapi_port>/api/v1/results
 
-Until the official test suite is approved and released, you can use
-the *proposed_tests* for your trial runs, like this.
+Here is an example of running mandatory test areas.
 
 .. code-block:: bash
 
-   $ dovetail run --testsuite proposed_tests --testarea mandatory --report http://192.168.135.2:8000/api/v1/results
+   $ dovetail run --offline --testarea mandatory --report http://192.168.135.2:8000/api/v1/results
    2017-09-29 07:00:55,718 - run - INFO - ================================================
-   2017-09-29 07:00:55,718 - run - INFO - Dovetail compliance: proposed_tests!
+   2017-09-29 07:00:55,718 - run - INFO - Dovetail compliance: cvp_0_7_0!
    2017-09-29 07:00:55,718 - run - INFO - ================================================
    2017-09-29 07:00:55,719 - run - INFO - Build tag: daily-master-f0795af6-a4e3-11e7-acc5-0242ac110004
    2017-09-29 07:00:55,956 - run - INFO - >>[testcase]: dovetail.osinterop.tc001
