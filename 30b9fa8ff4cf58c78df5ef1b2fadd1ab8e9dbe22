@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_db2bcfe9",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-10-18T23:34:57Z",
+      "side": 1,
+      "message": "thanks. I will follow the example in your reference fixing patch.",
+      "parentUuid": "9a3d3df0_68465725",
+      "range": {
+        "startLine": 13,
+        "startChar": 20,
+        "endLine": 15,
+        "endChar": 29
+      },
+      "revId": "30b9fa8ff4cf58c78df5ef1b2fadd1ab8e9dbe22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_08550bc6",
         "filename": "docs/testing/user/systempreparation/index.rst",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2017-10-10T08:59:49Z",
       "side": 1,
       "message": "should replaced with inline reference to Pharos spec:\n\n`Pharos specification`_\n\n.. _`Pharos specification`: https://wiki.opnfv.org/display/pharos/Pharos+Specification",
+      "range": {
+        "startLine": 18,
+        "startChar": 20,
+        "endLine": 20,
+        "endChar": 27
+      },
+      "revId": "30b9fa8ff4cf58c78df5ef1b2fadd1ab8e9dbe22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_bb308b57",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-10-18T23:34:57Z",
+      "side": 1,
+      "message": "yes",
+      "parentUuid": "9a3d3df0_08550bc6",
       "range": {
         "startLine": 18,
         "startChar": 20,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_9b4947d3",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-10-18T23:34:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_fe7c1dee",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 6
+      },
+      "revId": "30b9fa8ff4cf58c78df5ef1b2fadd1ab8e9dbe22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_485ef3ea",
         "filename": "docs/testing/user/systempreparation/index.rst",
         "patchSetId": 1
@@ -82,6 +154,30 @@
       "writtenOn": "2017-10-10T08:59:49Z",
       "side": 1,
       "message": "2 or more",
+      "range": {
+        "startLine": 42,
+        "startChar": 57,
+        "endLine": 42,
+        "endChar": 58
+      },
+      "revId": "30b9fa8ff4cf58c78df5ef1b2fadd1ab8e9dbe22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_7b4603c1",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-10-18T23:34:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a3d3df0_485ef3ea",
       "range": {
         "startLine": 42,
         "startChar": 57,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_bb17eba2",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-10-18T23:34:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_3e8325cd",
+      "range": {
+        "startLine": 56,
+        "startChar": 60,
+        "endLine": 56,
+        "endChar": 85
+      },
+      "revId": "30b9fa8ff4cf58c78df5ef1b2fadd1ab8e9dbe22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_de7f99de",
         "filename": "docs/testing/user/systempreparation/index.rst",
         "patchSetId": 1
@@ -128,6 +248,30 @@
       "writtenOn": "2017-10-06T22:13:46Z",
       "side": 1,
       "message": "beneficial",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 10
+      },
+      "revId": "30b9fa8ff4cf58c78df5ef1b2fadd1ab8e9dbe22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_1b0d3791",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 150
+      },
+      "writtenOn": "2017-10-18T23:34:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da33351e_de7f99de",
       "range": {
         "startLine": 61,
         "startChar": 0,
