@@ -1,0 +1,10 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Georg Kunz <georg.kunz@ericsson.com>
+Code-Review+1: Mika Rautakumpu <mika.rautakumpu@nokia.com>
+Code-Review+1: Eddie Arrage <eddie.arrage@huawei.com>
+Code-Review+2: Leo wang <grakiss.wanglei@huawei.com>
+Submitted-by: Leo wang <grakiss.wanglei@huawei.com>
+Submitted-at: Wed, 18 Oct 2017 07:42:45 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/44859
+Project: dovetail
+Branch: refs/heads/master
