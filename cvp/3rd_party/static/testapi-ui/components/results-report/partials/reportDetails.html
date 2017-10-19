@@ -42,7 +42,7 @@ Test Filters:<br />
                 <span ng-if="ctrl.testStatus == 'passed'" class="text-success">[{{ testcase.pass }}]</span>
                 <span ng-if="ctrl.testStatus == 'not passed'" class="text-danger">[{{ testcase.fail }}]</span>
             </a>
-
+            <a uib-tooltip="view log" ng-click="ctrl.gotoResultLog(testcase.build_tag.split('-').pop())"><span class="glyphicon glyphicon-cog"></a>
             <ul class="list-unstyled" uib-collapse="testcase.folder">
                 <li ng-if="!testcase.details.success">
                     <span ng-class="{'glyphicon glyphicon-ok text-success':testcase.criteria == 'PASS'}" aria-hidden="true"></span>

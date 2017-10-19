@@ -56,6 +56,20 @@
         ctrl.optional_fail = 0;
 
         ctrl.testStatus = 'total';
+        ctrl.gotoResultLog = gotoResultLog;
+
+        function gotoResultLog(case_name) {
+            var case_area = case_name.split(".")[1];
+            var log_url = "/logs/"+ctrl.testId+"/results/";
+            if (case_area == "vping") {
+                log_url += "functest.log";
+            } else if (case_area == "ha") {
+                log_url += "yardstick.log";
+            } else {
+                log_url += case_area+"_logs/"+case_name+".log";
+            }
+            window.open(log_url);
+        }
 
 
         /**
