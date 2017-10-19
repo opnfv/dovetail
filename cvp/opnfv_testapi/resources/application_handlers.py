@@ -31,6 +31,8 @@ class GenericApplicationHandler(handlers.GenericApiHandler):
 
 class ApplicationsCLHandler(GenericApplicationHandler):
     @swagger.operation(nickname="queryApplications")
+    @web.asynchronous
+    @gen.coroutine
     def get(self):
         """
             @description: Retrieve result(s) for a application project
@@ -64,7 +66,8 @@ class ApplicationsCLHandler(GenericApplicationHandler):
             'per_page': CONF.api_results_per_page
         }
 
-        self._list(query=self.set_query(), **limitations)
+        query = yield self.set_query()
+        yield self._list(query=query, **limitations)
         logging.debug('list end')
 
     @swagger.operation(nickname="createApplication")
