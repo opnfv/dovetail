@@ -33,6 +33,8 @@ class GenericTestHandler(handlers.GenericApiHandler):
 
 class TestsCLHandler(GenericTestHandler):
     @swagger.operation(nickname="queryTests")
+    @web.asynchronous
+    @gen.coroutine
     def get(self):
         """
             @description: Retrieve result(s) for a test project
@@ -68,7 +70,8 @@ class TestsCLHandler(GenericTestHandler):
             'per_page': CONF.api_results_per_page
         }
 
-        self._list(query=self.set_query(), **limitations)
+        query = yield self.set_query()
+        yield self._list(query=query, **limitations)
         logging.debug('list end')
 
     @swagger.operation(nickname="createTest")
@@ -141,16 +144,26 @@ class TestsGURHandler(GenericTestHandler):
             return
 
     @gen.coroutine
+    def _convert_to_id(self, email):
+        query = {"email": email}
+        table = "users"
+        if query and table:
+            data = yield dbapi.db_find_one(table, query)
+            if data:
+                raise gen.Return((True, 'Data alreay exists. %s' % (query), data.get("openid")))
+        raise gen.Return((False, 'Data does not exist. %s' % (query), None))
+
+    @gen.coroutine
     def update(self, test_id, item, value):
         logging.debug("update")
         if item == "shared":
-            if len(value) != len(set(value)):
-                msg = "Already shared with this user"
-                self.finish_request({'code': '403', 'msg': msg})
-                return
-
+            new_list = []
             for user in value:
-                query = {"openid": user}
+                ret, msg, user_id = yield self._convert_to_id(user)
+                if ret:
+                    user = user_id
+                new_list.append(user)
+                query = {"$or": [{"openid": user}, {"email": user}]}
                 table = "users"
                 ret, msg = yield self._check_if_exists(table=table,
                                                        query=query)
@@ -158,6 +171,11 @@ class TestsGURHandler(GenericTestHandler):
                 if not ret:
                     self.finish_request({'code': '403', 'msg': msg})
                     return
+
+            if len(new_list) != len(set(new_list)):
+                msg = "Already shared with this user"
+                self.finish_request({'code': '403', 'msg': msg})
+                return
 
         logging.debug("before _update")
         self.json_args = {}
@@ -169,9 +187,9 @@ class TestsGURHandler(GenericTestHandler):
 
         query = {'id': test_id}
         db_keys = ['id', ]
-        user = self.get_secure_cookie(auth_const.OPENID)
+        curr_user = self.get_secure_cookie(auth_const.OPENID)
         if item == "shared":
-            query['owner'] = user
+            query['owner'] = curr_user
             db_keys.append('owner')
         logging.debug("before _update 2")
         self._update(query=query, db_keys=db_keys)
