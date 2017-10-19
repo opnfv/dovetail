@@ -59,6 +59,7 @@ class GenericApiHandler(web.RequestHandler):
             raises.BadRequest(message.must_int(key))
         return value
 
+    @gen.coroutine
     def set_query(self):
         query = dict()
         date_range = dict()
@@ -76,13 +77,17 @@ class GenericApiHandler(web.RequestHandler):
                 date_range.update({'$lt': str(v)})
             elif k == 'signed':
                 openid = self.get_secure_cookie(auth_const.OPENID)
+                user = yield dbapi.db_find_one("users", {'openid': openid})
                 role = self.get_secure_cookie(auth_const.ROLE)
                 logging.info('role:%s', role)
                 if role:
                     if role.find("reviewer") != -1:
                         query['$or'] = [{"shared":
-                                         {"$elemMatch": {"$eq": openid}}
-                                         }, {"owner": openid},
+                                         {"$elemMatch": {"$eq": openid}}},
+                                        {"owner": openid},
+                                        {"shared": {"$elemMatch":
+                                                    {"$eq":
+                                                     user.get("email")}}},
                                         {"status": {"$ne": "private"}}]
                     else:
                         query['$or'] = [{"shared":
@@ -99,7 +104,7 @@ class GenericApiHandler(web.RequestHandler):
                 query['start_date'].update({'$lt': str(datetime.now())})
 
         logging.debug("query:%s", query)
-        return query
+        raise gen.Return((query))
 
     def prepare(self):
         if self.request.method != "GET" and self.request.method != "DELETE":
@@ -178,9 +183,10 @@ class GenericApiHandler(web.RequestHandler):
                 raise gen.Return((True, 'Data alreay exists. %s' % (query)))
         raise gen.Return((False, 'Data does not exist. %s' % (query)))
 
-    @web.asynchronous
+    # @web.asynchronous
     @gen.coroutine
     def _list(self, query=None, res_op=None, *args, **kwargs):
+        logging.debug("_list query:%s", query)
         sort = kwargs.get('sort')
         page = kwargs.get('page', 0)
         last = kwargs.get('last', 0)
