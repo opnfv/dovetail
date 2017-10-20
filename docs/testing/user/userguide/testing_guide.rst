@@ -22,12 +22,13 @@ this overall framework.
 Within the tester's lab, the Test Host is the machine where Dovetail executes all
 automated test cases. As it hosts the test harness, the Test Host must not be part of
 the System Under Test (SUT) itself.
-The above diagram assumes that the tester's Test Host is situated in a DMZ which
-has internal network access to the SUT and external access to the OPNFV server
-via the public Internet.
-This arrangement may not be supported in some labs.
-Dovetail also supports an offline mode of testing that is
-illustrated in the next diagram.
+The above diagram assumes that the tester's Test Host is situated in a DMZ, which
+has internal network access to the SUT and external access via the public Internet.
+The public Internet connection allows for easy installation of the Dovetail containers.
+A singular compressed file that includes all the underlying results can be pulled from
+the Test Host and uploaded to the OPNFV CVP server.
+This arrangement may not be supported in some labs. Dovetail also supports an offline mode of
+installation that is illustrated in the next diagram.
 
 .. image:: ../../../images/dovetail_offline_mode.png
     :align: center
