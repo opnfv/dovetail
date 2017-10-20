@@ -189,7 +189,7 @@ class TestsGURHandler(GenericTestHandler):
         query = {'id': test_id}
         db_keys = ['id', ]
         curr_user = self.get_secure_cookie(auth_const.OPENID)
-        if item == "shared":
+        if item == "shared" or item == "label":
             query['owner'] = curr_user
             db_keys.append('owner')
         logging.debug("before _update 2")

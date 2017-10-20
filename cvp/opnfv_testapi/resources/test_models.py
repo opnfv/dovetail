@@ -53,7 +53,7 @@ class Test(models.ModelBase):
     """
     def __init__(self, _id=None, owner=None, results=[],
                  public="false", review="false", status="private",
-                 shared=[], trust_indicator=None):
+                 shared=[], filename="", label="", trust_indicator=None):
         self._id = _id
         self.owner = owner
         self.results = results
@@ -62,6 +62,8 @@ class Test(models.ModelBase):
         self.upload_date = datetime.now()
         self.status = status
         self.shared = shared
+        self.filename = filename
+        self.label = label
 
 
 @swagger.model()

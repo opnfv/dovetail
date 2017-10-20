@@ -19,7 +19,7 @@
     angular
         .module('testapiApp', [
             'ui.router','ui.bootstrap', 'cgBusy',
-            'ngResource', 'angular-confirm', 'ngDialog'
+            'ngResource', 'angular-confirm', 'ngDialog', 'xeditable'
         ]);
 
     angular

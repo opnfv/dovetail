@@ -27,10 +27,7 @@ Test Filters:<br />
 
 <uib-accordion-group is-open="isOpen" is-disabled="ctrl.cases == 0">
 <uib-accordion-heading>
-        {{ ctrl.testId }}
-        <small>
-            (<strong>Total:</strong> {{ ctrl.cases.length }} tests)
-        </small>
+        Test ID: {{ ctrl.testId }}
         <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isOpen, 'glyphicon-chevron-right': !isOpen}"></i>
     </uib-accordion-heading>
     <ol class="capabilities">

@@ -21,6 +21,8 @@
             <tr>
                 <th>Upload Date</th>
                 <th>Test ID</th>
+                <th>File Name</th>
+                <th>Label</th>
                 <th>Status</th>
                 <th>Log</th>
                 <th class="col-md-2">Operation</th>
@@ -28,10 +30,12 @@
             </tr>
         </thead>
 
-        <tbody>
+        <tbody style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
             <tr ng-repeat="(index, result) in ctrl.data.tests">
                 <td>{{ result.upload_date }}</td>
                 <td><a ng-click="ctrl.gotoResultDetail(result.id, result._id)">{{ result.id }}</a></td>
+                <td>{{ result.filename || "None"}}</td>
+                <td><div class="popover-wrapper"><a editable-theme="bs3" onbeforesave="ctrl.toggleCheck(result, 'label', $data)" editable-text="result.label"> {{ result.label || "None" }}</a></div></td>
                 <td>{{ result.status }}</td>
                 <td><a ng-click="ctrl.downloadLogs(result.id)">logs</a></td>
 		<td>

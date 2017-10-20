@@ -251,10 +251,8 @@
             })
             .success(function(data){
                 ctrl.uploadState = "";
+                data.filename = file.name;
                 var createTestUrl = testapiApiUrl + "/tests"
-                var fd = new FormData();
-                fd.append('results',data.results);
-                fd.append('id',data.id);
                 $http.post(createTestUrl, data)
                 .success(function(data, status){
                   if (data.code && data.code != 0) {
