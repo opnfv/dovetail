@@ -23,6 +23,8 @@ RUN \
 && \
     apt-get update
 
+RUN easy_install -U setuptools==30.0.0
+
 RUN wget -qO- https://get.docker.com/ \
 | \
     sed 's/-q docker-ce/-q docker-ce=17.03.0~ce-0~ubuntu-trusty/' \
