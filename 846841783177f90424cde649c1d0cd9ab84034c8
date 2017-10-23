@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_ddaa9ad3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-10-23T07:52:58Z",
+      "side": 1,
+      "message": "Can you add line breaks to make this more readable. See also https://chris.beams.io/posts/git-commit/#seven-rules for general hints on formatting commit messages.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 175
+      },
+      "revId": "846841783177f90424cde649c1d0cd9ab84034c8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
