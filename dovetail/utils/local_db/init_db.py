@@ -58,6 +58,8 @@ def cases():
             except:
                 print("useless data")
     add_case("functest", "tempest_custom")
+    add_case("sdnvpn", "functest_testcase_4")
+    add_case("sdnvpn", "functest_testcase_8")
 
 
 def add_pod(name, mode):
