@@ -283,8 +283,8 @@ and cirros images.
    $ sudo wget -nc http://artifacts.opnfv.org/sdnvpn/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/pre_config
    $ sudo wget -nc http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img -P ${DOVETAIL_HOME}/pre_config
 
-   $ sudo docker pull opnfv/dovetail:cvp.0.7.0
-   cvp.0.7.0: Pulling from opnfv/dovetail
+   $ sudo docker pull opnfv/dovetail:cvp.0.8.0
+   cvp.0.8.0: Pulling from opnfv/dovetail
    30d541b48fc0: Pull complete
    8ecd7f80d390: Pull complete
    46ec9927bb81: Pull complete
@@ -297,9 +297,9 @@ and cirros images.
    bf7c644692de: Pull complete
    cdc345e3f363: Pull complete
    Digest: sha256:d571b1073b2fdada79562e8cc67f63018e8d89268ff7faabee3380202c05edee
-   Status: Downloaded newer image for opnfv/dovetail:cvp.0.7.0
+   Status: Downloaded newer image for opnfv/dovetail:cvp.0.8.0
 
-An example of the <tag> is *cvp.0.7.0*.
+An example of the <tag> is *cvp.0.8.0*.
 
 If the Test Host is offline, you will need to first pull the Dovetail Docker image, and all the
 dependent images that Dovetail uses, to a host that is online. The reason that you need
@@ -309,7 +309,7 @@ offline, then all these dependencies will also need to be manually copied.
 
 .. code-block:: bash
 
-   $ sudo docker pull opnfv/dovetail:cvp.0.7.0
+   $ sudo docker pull opnfv/dovetail:cvp.0.8.0
    $ sudo docker pull opnfv/functest:cvp.0.5.0
    $ sudo docker pull opnfv/yardstick:danube.3.2
    $ sudo docker pull opnfv/bottlenecks:cvp.0.4.0
@@ -325,7 +325,7 @@ At the online host, save images.
 
 .. code-block:: bash
 
-   $ sudo docker save -o dovetail.tar opnfv/dovetail:cvp.0.7.0 \
+   $ sudo docker save -o dovetail.tar opnfv/dovetail:cvp.0.8.0 \
      opnfv/functest:cvp.0.5.0 opnfv/yardstick:danube.3.2 \
      opnfv/bottlenecks:cvp.0.4.0 opnfv/testapi:cvp.0.3.0 mongo:3.2.1
 
@@ -345,7 +345,7 @@ Now check to see that all Docker images have been pulled or loaded properly.
    $ sudo docker images
    REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
    opnfv/functest      cvp.0.5.0           e2b286547478        6 weeks ago         1.26 GB
-   opnfv/dovetail      cvp.0.7.0           5d25b289451c        8 days ago          516MB
+   opnfv/dovetail      cvp.0.8.0           5d25b289451c        8 days ago          516MB
    opnfv/yardstick     danube.3.2          df830d5c2cb2        6 weeks ago         1.21 GB
    opnfv/bottlenecks   cvp.0.4.0           00450688bcae        7 weeks ago         622 MB
    opnfv/testapi       cvp.0.3.0           05c6d5ebce6c        2 months ago        448 MB
