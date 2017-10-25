@@ -85,7 +85,7 @@ Test Case 1 - VPN provides connectivity between Neutron subnets
 Short name
 ----------
 
-opnfv.sdnvpn.subnet_connectivity
+dovetail.sdnvpn.tc001.subnet_connectivity
 
 
 Use case specification
@@ -200,7 +200,7 @@ Test Case 2 - VPNs ensure traffic separation between tenants
 Short Name
 ----------
 
-opnfv.sdnvpn.tenant_separation
+dovetail.sdnvpn.tc002.tenant_separation
 
 
 Use case specification
@@ -317,7 +317,7 @@ Test Case 3 - VPN provides connectivity between subnets using router association
 Short Name
 ----------
 
-opnfv.sdnvpn.router_association
+dovetail.sdnvpn.tc004.router_association
 
 
 Use case specification
@@ -441,7 +441,7 @@ Test Case 4 - Verify interworking of router and network associations with floati
 Short Name
 ----------
 
-opnfv.sdnvpn.router_association_floating_ip
+dovetail.sdnvpn.tc008.router_association_floating_ip
 
 
 Use case specification

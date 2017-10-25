@@ -77,7 +77,7 @@ Test Case 1 - vPing using userdata provided by nova metadata service
 Short name
 ----------
 
-opnfv.vping.userdata
+dovetail.vping.tc001.userdata
 
 
 Use case specification
@@ -177,7 +177,7 @@ Test Case 2 - vPing using SSH to a floating IP
 Short name
 ----------
 
-opnfv.vping.ssh
+dovetail.vping.tc002.ssh
 
 
 Use case specification
