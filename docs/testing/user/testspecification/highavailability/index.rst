@@ -8,7 +8,7 @@ OpenStack Services HA  test specification
 ==========================================
 
 .. toctree::
-:maxdepth:
+   :maxdepth: 2
 
 Scope
 =====
@@ -84,7 +84,7 @@ Test Case 1 - Controller node OpenStack service down - nova-api
 Short name
 ----------
 
-opnfv.ha.tc001.nova-api_service_down
+dovetail.ha.tc001.nova-api_service_down
 
 Use case specification
 ----------------------
@@ -180,7 +180,7 @@ Test Case 2 - Controller node OpenStack service down - neutron-server
 Short name
 ----------
 
-opnfv.ha.tc002.neutron-server_service_down
+dovetail.ha.tc002.neutron-server_service_down
 
 Use case specification
 ----------------------
@@ -264,7 +264,7 @@ Test Case 3 - Controller node OpenStack service down - keystone
 Short name
 ----------
 
-opnfv.ha.tc003.keystone_service_down
+dovetail.ha.tc003.keystone_service_down
 
 Use case specification
 ----------------------
@@ -342,7 +342,7 @@ Test Case 4 - Controller node OpenStack service down - glance-api
 Short name
 ----------
 
-opnfv.ha.tc004.glance-api_service_down
+dovetail.ha.tc004.glance-api_service_down
 
 Use case specification
 ----------------------
@@ -430,7 +430,7 @@ Test Case 5 - Controller node OpenStack service down - cinder-api
 Short name
 ----------
 
-opnfv.ha.tc005.cinder-api_service_down
+dovetail.ha.tc005.cinder-api_service_down
 
 Use case specification
 ----------------------
@@ -509,7 +509,7 @@ Test Case 6 - Controller Node CPU Overload High Availability
 Short name
 ----------
 
-opnfv.ha.tc006.cpu_overload
+dovetail.ha.tc006.cpu_overload
 
 Use case specification
 ----------------------
@@ -594,7 +594,7 @@ Test Case 7 - Controller Node Disk I/O Overload High Availability
 Short name
 ----------
 
-opnfv.ha.tc007.disk_I/O_overload
+dovetail.ha.tc007.disk_I/O_overload
 
 Use case specification
 ----------------------
@@ -668,7 +668,7 @@ Test Case 8 - Controller Load Balance as a Service High Availability
 Short name
 ----------
 
-opnfv.ha.tc008.load_balance_service_down
+dovetail.ha.tc008.load_balance_service_down
 
 Use case specification
 ----------------------

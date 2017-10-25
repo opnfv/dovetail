@@ -49,6 +49,8 @@ The test area is structured based on the basic operations of forwarding packets
 in data path through virtual networks. Specifically, the test performs
 clean-up operations which return the system to the same state as before the test.
 
+This test case is included in the test case dovetail.tempest.tc001 of cvp test suite.
+
 Test Descriptions
 =================
 

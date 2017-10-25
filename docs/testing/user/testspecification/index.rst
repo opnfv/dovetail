@@ -1,6 +1,6 @@
 .. This work is licensed under a Creative Commons Attribution 4.0 International License.
 .. http://creativecommons.org/licenses/by/4.0
-.. (c) Ericsson AB
+.. (c) Ericsson AB, Huawei Technologies Co.,Ltd
 
 .. _dovetail-test_case_specification:
 
@@ -27,11 +27,17 @@ specification documents.
 .. toctree::
    :maxdepth: 1
 
-  ./faultmanagement/index.rst
   ./highavailability/index.rst
   ./vimoperationscompute/index.rst
   ./vimoperationsidentity/index.rst
   ./vimoperationsimage/index.rst
   ./vimoperationsnetwork/index.rst
   ./vimoperationsvolume/index.rst
-
+  ./vping/index.rst
+  ./ipv6/index.rst
+  ./forwardingpackets/index.rst
+  ./securitygroup/index.rst
+  ./dynamicnetwork/index.rst
+  ./machinelifecycle/index.rst
+  ./multiplenodes/index.rst
+  ./vpn/index.rst
