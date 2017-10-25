@@ -54,6 +54,9 @@ to run independently, i.e. irrelevant of the state created by a previous test.
 For brevity, the test cases in this test area are summarized together based on
 the operations they are testing.
 
+All these test cases are included in the test case dovetail.osinterop.tc001 of
+cvp test suite.
+
 Test Descriptions
 =================
 

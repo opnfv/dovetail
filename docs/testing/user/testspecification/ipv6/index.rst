@@ -140,7 +140,7 @@ Test Case 1 - Create and Delete Bulk Network, IPv6 Subnet and Port
 Short name
 ----------
 
-opnfv.ipv6.bulk_network_subnet_port_create_delete
+dovetail.ipv6.tc001.bulk_network_subnet_port_create_delete
 
 Use case specification
 ----------------------
@@ -215,7 +215,7 @@ Test Case 2 - Create, Update and Delete an IPv6 Network and Subnet
 Short name
 -----------
 
-opnfv.ipv6.network_subnet_create_update_delete
+dovetail.ipv6.tc002.network_subnet_create_update_delete
 
 Use case specification
 ----------------------
@@ -279,7 +279,7 @@ Test Case 3 - Check External Network Visibility
 Short name
 -----------
 
-opnfv.ipv6.external_network_visibility
+dovetail.ipv6.tc003.external_network_visibility
 
 Use case specification
 ----------------------
@@ -340,7 +340,7 @@ Test Case 4 - List IPv6 Networks and Subnets
 Short name
 -----------
 
-opnfv.ipv6.network_subnet_list
+dovetail.ipv6.tc004.network_subnet_list
 
 Use case specification
 ----------------------
@@ -399,7 +399,7 @@ Test Case 5 - Show Details of an IPv6 Network and Subnet
 Short name
 ----------
 
-opnfv.ipv6.network_subnet_show
+dovetail.ipv6.tc005.network_subnet_show
 
 Use case specification
 ----------------------
@@ -459,7 +459,7 @@ Test Case 6 - Create an IPv6 Port in Allowed Allocation Pools
 Short name
 ----------
 
-opnfv.ipv6.port_create_in_allocation_pool
+dovetail.ipv6.tc006.port_create_in_allocation_pool
 
 Use case specification
 ----------------------
@@ -524,7 +524,7 @@ Test Case 7 - Create an IPv6 Port with Empty Security Groups
 Short name
 -----------
 
-opnfv.ipv6.port_create_empty_security_group
+dovetail.ipv6.tc007.port_create_empty_security_group
 
 Use case specification
 ----------------------
@@ -581,7 +581,7 @@ Test Case 8 - Create, Update and Delete an IPv6 Port
 Short name
 ----------
 
-opnfv.ipv6.port_create_update_delete
+dovetail.ipv6.tc008.port_create_update_delete
 
 Use case specification
 ----------------------
@@ -640,7 +640,7 @@ Test Case 9 - List IPv6 Ports
 Short name
 ----------
 
-opnfv.ipv6.tc009.port_list
+dovetail.ipv6.tc009.port_list
 
 Use case specification
 ----------------------
@@ -693,7 +693,7 @@ Test Case 10 - Show Key/Valus Details of an IPv6 Port
 Short name
 ----------
 
-opnfv.ipv6.tc010.port_show_details
+dovetail.ipv6.tc010.port_show_details
 
 Use case specification
 ----------------------
@@ -754,7 +754,7 @@ Test Case 11 - Add Multiple Interfaces for an IPv6 Router
 Short name
 -----------
 
-opnfv.ipv6.router_add_multiple_interface
+dovetail.ipv6.tc011.router_add_multiple_interface
 
 Use case specification
 ----------------------
@@ -819,7 +819,7 @@ Test Case 12 - Add and Remove an IPv6 Router Interface with port_id
 Short name
 ----------
 
-opnfv.ipv6.router_interface_add_remove_with_port
+dovetail.ipv6.tc012.router_interface_add_remove_with_port
 
 Use case specification
 ----------------------
@@ -879,7 +879,7 @@ Test Case 13 - Add and Remove an IPv6 Router Interface with subnet_id
 Short name
 ----------
 
-opnfv.ipv6.router_interface_add_remove
+dovetail.ipv6.tc013.router_interface_add_remove
 
 Use case specification
 ----------------------
@@ -947,7 +947,7 @@ Test Case 14 - Create, Show, List, Update and Delete an IPv6 router
 Short name
 ----------
 
-opnfv.ipv6.router_create_show_list_update_delete
+dovetail.ipv6.tc014.router_create_show_list_update_delete
 
 Use case specification
 ----------------------
@@ -1011,7 +1011,7 @@ Test Case 15 - Create, List, Update, Show and Delete an IPv6 security group
 Short name
 ----------
 
-opnfv.ipv6.security_group_create_list_update_show_delete
+dovetail.ipv6.tc015.security_group_create_list_update_show_delete
 
 Use case specification
 ----------------------
@@ -1069,7 +1069,7 @@ Test Case 16 - Create, Show and Delete IPv6 security group rule
 Short name
 ----------
 
-opnfv.ipv6.security_group_rule_create_show_delete
+dovetail.ipv6.tc016.security_group_rule_create_show_delete
 
 Use case specification
 ----------------------
@@ -1127,7 +1127,7 @@ Test Case 17 - List IPv6 Security Groups
 Short name
 ----------
 
-opnfv.ipv6.security_group_list
+dovetail.ipv6.tc017.security_group_list
 
 Use case specification
 ----------------------
@@ -1172,7 +1172,7 @@ Test Case 18 - IPv6 Address Assignment - Dual Stack, SLAAC, DHCPv6 Stateless
 Short name
 ----------
 
-opnfv.ipv6.dhcpv6_stateless
+dovetail.ipv6.tc018.dhcpv6_stateless
 
 Use case specification
 ----------------------
@@ -1247,7 +1247,7 @@ Test Case 19 - IPv6 Address Assignment - Dual Net, Dual Stack, SLAAC, DHCPv6 Sta
 Short name
 ----------
 
-opnfv.ipv6.dualnet_dhcpv6_stateless
+dovetail.ipv6.tc019.dualnet_dhcpv6_stateless
 
 Use case specification
 ----------------------
@@ -1326,7 +1326,7 @@ Test Case 20 - IPv6 Address Assignment - Multiple Prefixes, Dual Stack, SLAAC, D
 Short name
 ----------
 
-opnfv.ipv6.multiple_prefixes_dhcpv6_stateless
+dovetail.ipv6.tc020.multiple_prefixes_dhcpv6_stateless
 
 Use case specification
 ----------------------
@@ -1404,7 +1404,7 @@ Test Case 21 - IPv6 Address Assignment - Dual Net, Multiple Prefixes, Dual Stack
 Short name
 ----------
 
-opnfv.ipv6.dualnet_multiple_prefixes_dhcpv6_stateless
+dovetail.ipv6.tc021.dualnet_multiple_prefixes_dhcpv6_stateless
 
 Use case specification
 ----------------------
@@ -1484,7 +1484,7 @@ Test Case 22 - IPv6 Address Assignment - Dual Stack, SLAAC
 Short name
 ----------
 
-opnfv.ipv6.slaac
+dovetail.ipv6.tc022.slaac
 
 Use case specification
 ----------------------
@@ -1558,7 +1558,7 @@ Test Case 23 - IPv6 Address Assignment - Dual Net, Dual Stack, SLAAC
 Short name
 ----------
 
-opnfv.ipv6.dualnet_slaac
+dovetail.ipv6.tc023.dualnet_slaac
 
 Use case specification
 ----------------------
@@ -1636,7 +1636,7 @@ Test Case 24 - IPv6 Address Assignment - Multiple Prefixes, Dual Stack, SLAAC
 Short name
 ----------
 
-opnfv.ipv6.multiple_prefixes_slaac
+dovetail.ipv6.tc024.multiple_prefixes_slaac
 
 Use case specification
 ----------------------
@@ -1712,7 +1712,7 @@ Test Case 25 - IPv6 Address Assignment - Dual Net, Dual Stack, Multiple Prefixes
 Short name
 ----------
 
-opnfv.ipv6.dualnet_multiple_prefixes_slaac
+dovetail.ipv6.tc025.dualnet_multiple_prefixes_slaac
 
 Use case specification
 ----------------------
