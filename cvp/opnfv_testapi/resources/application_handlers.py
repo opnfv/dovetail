@@ -14,6 +14,7 @@ from tornado import gen
 from bson import objectid
 
 from opnfv_testapi.common.config import CONF
+from opnfv_testapi.common import utils
 from opnfv_testapi.resources import handlers
 from opnfv_testapi.resources import application_models
 from opnfv_testapi.tornado_swagger import swagger
@@ -107,8 +108,47 @@ class ApplicationsCLHandler(GenericApplicationHandler):
         if not ret:
             self.finish_request({'code': '403', 'msg': msg})
             return
-
         self._create(miss_fields=miss_fields, carriers=carriers)
+
+        self._send_email()
+
+    def _send_email(self):
+
+        data = self.table_cls.from_dict(self.json_args)
+        subject = "[OPNFV CVP]New OPNFV CVP Application Submission"
+        content = """Hi CVP Reviewer,
+
+This is a new application:
+
+    Organization Name: {},
+    Organization Website: {},
+    Product Name: {},
+    Product Specifications: {},
+    Product Documentation: {},
+    Product Categories: {},
+    Primary Name: {},
+    Primary Email: {},
+    Primary Address: {},
+    Primary Phone: {},
+    User ID Type: {},
+    User ID: {}
+
+Best Regards,
+CVP Team
+        """.format(data.organization_name,
+                   data.organization_web,
+                   data.product_name,
+                   data.product_spec,
+                   data.product_documentation,
+                   data.product_categories,
+                   data.prim_name,
+                   data.prim_email,
+                   data.prim_address,
+                   data.prim_phone,
+                   data.id_type,
+                   data.user_id)
+
+        utils.send_email(subject, content)
 
 
 class ApplicationsGURHandler(GenericApplicationHandler):
