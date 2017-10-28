@@ -16,6 +16,24 @@
       "revId": "dc25f8fac0ef4743943b55ba95c6971f07dc9af1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_3605a07a",
+        "filename": "docs/testing/user/testspecification/dynamicnetwork/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-10-28T01:38:42Z",
+      "side": 0,
+      "message": "Yeah, this is a good suggestion.\nHowever, the structure of all these test cases are a little different. For example,\nha, ipv6, vping, sdnvpn are the same and the section \u0027short name\u0027 is almost the test case name you mentioned.\nosinterop and tempest are a little different so I just added a little description in the \u0027test area structure\u0027 section.\nSo it is a little difficult to add a section \u0027test case name\u0027 to all docs.\nBut I will still keep your suggestion in my mind and try to find a better way to do this maybe next version.",
+      "parentUuid": "9a3d3df0_33bbf2e6",
+      "revId": "dc25f8fac0ef4743943b55ba95c6971f07dc9af1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
