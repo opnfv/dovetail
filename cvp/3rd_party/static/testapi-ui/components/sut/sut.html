@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" href="testapi-ui/assets/css/combine.css" />
+
+<div  class="results-table" style="margin-top:30px;overflow:scroll">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Host</th>
+                <th>Product Name</th>
+                <th>Product Version</th>
+                <th>Processor Type</th>
+                <th>Processor Cores</th>
+                <th>Processor Vcpus</th>
+            </tr>
+        </thead>
+        <tbody style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+        <tr ng-repeat="(host, info) in ctrl.sutData.hardware_info">
+            <td>{{ host }}</td>
+            <td>{{ info.product_name}}</td>
+            <td>{{ info.product_version }}</td>
+            <td>{{ info.processor_type }}</td>
+            <td>{{ info.processor_cores }}</td>
+            <td>{{ info.processor_vcpus }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
