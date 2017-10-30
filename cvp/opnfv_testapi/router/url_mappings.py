@@ -11,6 +11,7 @@ from opnfv_testapi.resources import handlers
 from opnfv_testapi.resources import result_handlers
 from opnfv_testapi.resources import test_handlers
 from opnfv_testapi.resources import application_handlers
+from opnfv_testapi.resources import sut_handlers
 from opnfv_testapi.ui.auth import sign
 from opnfv_testapi.ui.auth import user
 
@@ -27,6 +28,7 @@ mappings = [
     (r"/api/v1/cvp/applications/([^/]+)",
      application_handlers.ApplicationsGURHandler),
 
+    (r"/api/v1/suts/hardware/([^/]+)", sut_handlers.HardwareHandler),
 
 
     (r'/api/v1/auth/signin', sign.SigninHandler),
