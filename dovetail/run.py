@@ -280,6 +280,8 @@ def main(*args, **kwargs):
     else:
         dt_cfg.dovetail_config['offline'] = False
 
+    dt_utils.get_hardware_info(logger)
+
     origin_testarea = kwargs['testarea']
     testsuite_validation = False
     if kwargs['testsuite'] in dt_cfg.dovetail_config['testsuite_supported']:
