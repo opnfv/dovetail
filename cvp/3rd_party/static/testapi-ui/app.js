@@ -115,6 +115,11 @@
                 templateUrl: '/testapi-ui/components/products/cloud.html',
                 controller: 'ProductController as ctrl'
             }).
+	    state('sut', {
+                url: '/suts/:testID',
+                templateUrl: '/testapi-ui/components/sut/sut.html',
+                controller: 'SutController as ctrl'
+            }).
 	    state('application', {
                 url: '/application',
                 templateUrl: '/testapi-ui/components/application/application.html',
