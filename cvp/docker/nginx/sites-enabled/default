@@ -101,6 +101,12 @@ server {
             proxy_set_header Host $host;
         }
 
+        location ~* /api/v1/suts/hardware/([a-zA-Z0-9\-]+) {
+            proxy_pass http://cvpapi/api/v1/suts/hardware/$1;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header Host $host;
+        }
+
         location /api/v1/ {
             proxy_pass http://testapi/api/v1/;
             proxy_set_header X-Real-IP $remote_addr;

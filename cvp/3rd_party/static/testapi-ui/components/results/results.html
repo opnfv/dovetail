@@ -50,6 +50,7 @@
                             <li role="menuitem" ng-if="auth.currentUser.role.indexOf('reviewer') != -1" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status == 'not approved'}" ng-click="ctrl.toggleCheck(result, 'status', 'not approve')">not approve</a></li>
                             <li role="menuitem" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-click="ctrl.openSharedModal(result)">share with</a></li>
                             <li role="menuitem" ng-if="auth.currentUser.openid == result.owner" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-click="ctrl.deleteTest(result._id)">delete</a></li>
+                            <li role="menuitem" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-click="ctrl.gotoSUT(result.id)">SUT</a></li>
                         </ul>
                     </div>
                 </td>
