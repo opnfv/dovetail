@@ -1,5 +1,7 @@
+ansible==2.2.0
 click==6.6
 Jinja2==2.8
+paramiko==1.18.0
 pbr==2.0.0
 pytz==2016.7
 PyYAML==3.11

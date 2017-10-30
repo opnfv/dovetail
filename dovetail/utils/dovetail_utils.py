@@ -18,6 +18,9 @@ import json
 import urllib2
 from datetime import datetime
 from distutils.version import LooseVersion
+import yaml
+
+from dovetail_config import DovetailConfig as dt_cfg
 
 
 def exec_log(verbose, logger, msg, level, flush=False):
@@ -215,3 +218,82 @@ def add_hosts_info(hosts_info):
     hosts_file = '/etc/hosts'
     with open(hosts_file, 'a') as f:
         f.write("{}\n".format(hosts_info))
+
+
+def get_hardware_info(logger=None):
+    pod_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
+                            dt_cfg.dovetail_config['pod_file'])
+    logger.info("Get hardware info of all nodes list in file {} ..."
+                .format(pod_file))
+    result_dir = dt_cfg.dovetail_config['result_dir']
+    info_file_path = os.path.join(result_dir, 'sut_hardware_info')
+    all_info_file = os.path.join(result_dir, 'all_hosts_info.json')
+    inventory_file = os.path.join(result_dir, 'inventory.ini')
+    if not get_inventory_file(pod_file, inventory_file, logger):
+        logger.error("Failed to get SUT hardware info.")
+        return None
+    ret, msg = exec_cmd("cd /home/opnfv/dovetail/dovetail/userconfig "
+                        "&& ansible all -m setup -i {} --tree {}"
+                        .format(inventory_file, info_file_path), verbose=False)
+    if not os.path.exists(info_file_path) or ret != 0:
+        logger.error("Failed to get SUT hardware info.")
+        return None
+    if not combine_files(info_file_path, all_info_file, logger):
+        logger.error("Failed to get all hardware info.")
+        return None
+    logger.info("Hardware info of all nodes are stored in file {}."
+                .format(all_info_file))
+    return all_info_file
+
+
+def get_inventory_file(pod_file, inventory_file, logger=None):
+    if not os.path.isfile(pod_file):
+        logger.error("File {} doesn't exist.".format(pod_file))
+        return False
+    try:
+        with open(pod_file, 'r') as f, open(inventory_file, 'w') as out_f:
+            pod_info = yaml.safe_load(f)
+            for host in pod_info['nodes']:
+                host_info = ('{} ansible_host={} ansible_user={}'
+                             .format(host['name'], host['ip'], host['user']))
+                if 'password' in host.keys():
+                    host_info += (' ansible_ssh_pass={}\n'
+                                  .format(host['password']))
+                elif 'key_filename' in host.keys():
+                    key = os.path.join(dt_cfg.dovetail_config['config_dir'],
+                                       'id_rsa')
+                    host_info += (' ansible_ssh_private_key_file={}\n'
+                                  .format(key))
+                else:
+                    logger.error('No password or key_filename in file {}.'
+                                 .format(pod_file))
+                    return False
+                out_f.write(host_info)
+        logger.debug("Ansible inventory file is {}.".format(inventory_file))
+        return True
+    except KeyError as e:
+        logger.exception("KeyError {}.".format(e))
+        return False
+    except Exception:
+        logger.exception("Failed to read file {}.".format(pod_file))
+        return False
+
+
+def combine_files(file_path, result_file, logger=None):
+    all_info = {}
+    info_files = os.listdir(file_path)
+    for info_file in info_files:
+        try:
+            absolute_file_path = os.path.join(file_path, info_file)
+            with open(absolute_file_path, 'r') as f:
+                all_info[info_file] = json.load(f)
+        except Exception:
+            logger.error("Failed to read file {}.".format(absolute_file_path))
+            return None
+    try:
+        with open(result_file, 'w') as f:
+            f.write(json.dumps(all_info))
+    except Exception:
+        logger.exception("Failed to write file {}.".format(result_file))
+        return None
+    return result_file
