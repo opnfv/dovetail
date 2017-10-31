@@ -52,6 +52,24 @@
       "revId": "dc25f8fac0ef4743943b55ba95c6971f07dc9af1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_e776e43d",
+        "filename": "docs/testing/user/testspecification/dynamicnetwork/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-10-31T06:52:20Z",
+      "side": 0,
+      "message": "Sure. Thanks for your suggestion.",
+      "parentUuid": "9a3d3df0_61364454",
+      "revId": "dc25f8fac0ef4743943b55ba95c6971f07dc9af1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
