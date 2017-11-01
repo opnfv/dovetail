@@ -262,6 +262,7 @@ def main(*args, **kwargs):
     copy_userconfig_files(logger)
     copy_patch_files(logger)
     dt_utils.check_docker_version(logger)
+    dt_utils.get_openstack_endpoint(logger)
     validate_input(kwargs, dt_cfg.dovetail_config['validate_input'], logger)
     check_hosts_file(logger)
     configs = filter_config(kwargs, logger)
