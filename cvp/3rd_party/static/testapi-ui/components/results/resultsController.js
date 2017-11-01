@@ -61,6 +61,7 @@
         ctrl.prepVersionEdit = prepVersionEdit;
         ctrl.gotoSUT = gotoSUT;
         ctrl.gotoResultDetail = gotoResultDetail;
+        ctrl.gotoSUT = gotoSUT;
         ctrl.toggleCheck = toggleCheck;
         ctrl.toReview = toReview;
         ctrl.toPrivate = toPrivate;
