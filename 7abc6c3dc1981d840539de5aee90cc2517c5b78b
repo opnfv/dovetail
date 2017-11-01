@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_96958742",
+        "filename": "cvp/3rd_party/static/testapi-ui/components/sut/sut.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-11-01T08:30:00Z",
+      "side": 1,
+      "message": "please replace these tabs to spaces",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 3
+      },
+      "revId": "7abc6c3dc1981d840539de5aee90cc2517c5b78b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
