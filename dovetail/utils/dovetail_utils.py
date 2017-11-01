@@ -297,3 +297,30 @@ def combine_files(file_path, result_file, logger=None):
         logger.exception("Failed to write file {}.".format(result_file))
         return None
     return result_file
+
+
+def get_openstack_endpoint(logger=None):
+    https_enabled = check_https_enabled(logger)
+    insecure_option = ''
+    insecure = os.getenv('OS_INSECURE',)
+    if https_enabled:
+        if insecure:
+            if insecure.lower() == "true":
+                insecure_option = ' --insecure '
+    cmd = ("openstack {} endpoint list --interface admin -f json"
+           .format(insecure_option))
+    ret, msg = exec_cmd(cmd, logger, verbose=False)
+    if ret != 0:
+        logger.error("Failed to get the endpoint info.")
+        return None
+    result_file = os.path.join(dt_cfg.dovetail_config['result_dir'],
+                               'endpoint_info.json')
+    try:
+        with open(result_file, 'w') as f:
+            f.write(msg)
+            logger.debug("Record all endpoint info into file {}."
+                         .format(result_file))
+            return result_file
+    except Exception:
+        logger.exception("Failed to write endpoint info into file.")
+        return None
