@@ -21,10 +21,12 @@
             <tr>
                 <th>Upload Date</th>
                 <th>Test ID</th>
+                <th>Owner</th>
                 <th>File Name</th>
                 <th>Label</th>
                 <th>Status</th>
                 <th>Log</th>
+                <th>SUT</th>
                 <th class="col-md-2">Operation</th>
                 <th class="col-md-2">Share List</th>
             </tr>
@@ -32,13 +34,15 @@
 
         <tbody style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
             <tr ng-repeat="(index, result) in ctrl.data.tests">
-                <td>{{ result.upload_date }}</td>
-                <td><a ng-click="ctrl.gotoResultDetail(result.id, result._id)">{{ result.id }}</a></td>
+                <td>{{ result.upload_date | limitTo:19}}</td>
+                <td><a  uib-tooltip="{{ result.id }}" tooltip-placement="top" tooltip-append-to-body="true" ng-click="ctrl.gotoResultDetail(result.id, result._id)">{{ result.id | limitTo:8 }}</a></td>
+                <td>{{ result.owner }}</td>
                 <td>{{ result.filename || "None"}}</td>
                 <td><div class="popover-wrapper"><a editable-theme="bs3" onbeforesave="ctrl.toggleCheck(result, 'label', $data)" editable-text="result.label"> {{ result.label || "None" }}</a></div></td>
                 <td>{{ result.status }}</td>
                 <td><a ng-click="ctrl.downloadLogs(result.id)">logs</a></td>
-		<td>
+                <td><a ng-click="ctrl.gotoSUT(result.id)">info</a></td>
+                <td>
                     <div class="btn-group" uib-dropdown>
                         <a id="single-button" type="button" class="nectar-button medium accent-color regular-button" uib-dropdown-toggle>
                             Operation<span class="caret"></span>
@@ -46,8 +50,10 @@
                         <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                             <li role="menuitem" ng-if="auth.currentUser.role == 'user'" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status != 'review'}" ng-click="ctrl.toPrivate(result, 'private')">withdraw submit</a></li>
                             <li role="menuitem" ng-if="auth.currentUser.role == 'user'" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status != 'private'}" ng-click="ctrl.toReview(result, 'review')">submit to review</a></li>
+                            <!--
                             <li role="menuitem" ng-if="auth.currentUser.role.indexOf('reviewer') != -1" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status == 'approved'}" ng-click="ctrl.toggleCheck(result, 'status', 'approve')">approve</a></li>
                             <li role="menuitem" ng-if="auth.currentUser.role.indexOf('reviewer') != -1" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status == 'not approved'}" ng-click="ctrl.toggleCheck(result, 'status', 'not approve')">not approve</a></li>
+                            -->
                             <li role="menuitem" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-click="ctrl.openSharedModal(result)">share with</a></li>
                             <li role="menuitem" ng-if="auth.currentUser.openid == result.owner" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-click="ctrl.deleteTest(result._id)">delete</a></li>
                         </ul>
@@ -93,3 +99,4 @@
 .button-disabled {
     pointer-events:none;
 }
+</style>
