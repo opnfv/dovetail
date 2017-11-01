@@ -60,6 +60,7 @@
         ctrl.getProductVersions = getProductVersions;
         ctrl.prepVersionEdit = prepVersionEdit;
         ctrl.gotoResultDetail = gotoResultDetail;
+        ctrl.gotoSUT = gotoSUT;
         ctrl.toggleCheck = toggleCheck;
         ctrl.toReview = toReview;
         ctrl.toPrivate = toPrivate;
@@ -494,6 +495,10 @@
 
         function gotoResultDetail(testId, innerID) {
             $state.go('resultsDetail', {'testID': testId, 'innerID': innerID});
+        }
+
+        function gotoSUT(testId) {
+            $state.go('sut', {'testID': testId});
         }
 
     }
