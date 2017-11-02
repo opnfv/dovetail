@@ -8,20 +8,8 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 ##############################################################################
 
-if [ "$#" -ne 1 ]; then
-    echo "Error: missing parameter! try again like this:"
-    echo ""
-    echo "./launch_db.sh 192.168.115.2"
-    echo ""
-    echo "parameters:"
-    echo "  host_ip: your localhost ip address "
-    echo ""
-    exit 1
-fi
-
 export mongodb_port=${mongodb_port:-"27017"}
 export testapi_port=${testapi_port:-"8000"}
-export db_host_ip=${db_host_ip:-"$1"}
 
 set -e
 
@@ -53,6 +41,11 @@ ${cmd}
 
 echo "Successfully create mongo DB."
 
+echo "Step4: get the internal IP of ${container_name} container..."
+get_ip_cmd="ip a | grep eth0 | grep inet | awk '{print \$2}' | cut -d'/' -f 1"
+mongo_ip=$(sudo docker exec ${container_name} /bin/bash -c "${get_ip_cmd}")
+echo "The internal IP of container ${container_name} is ${mongo_ip}"
+
 
 echo "=========================="
 echo "Create the testapi service."
@@ -75,9 +68,14 @@ fi
 
 # run testapi container
 echo "Step3: run ${container_name} container."
-cmd="sudo docker run -itd -p ${testapi_port}:8000 --name ${container_name} -v ${DOVETAIL_HOME}/testapi/logs:/home/testapi/logs -e mongodb_url=mongodb://${db_host_ip}:${mongodb_port}/ ${testapi_img}"
+cmd="sudo docker run -itd -p ${testapi_port}:8000 --name ${container_name} -v ${DOVETAIL_HOME}/testapi/logs:/home/testapi/logs -e mongodb_url=mongodb://${mongo_ip}:${mongodb_port}/ ${testapi_img}"
 echo $cmd
 ${cmd}
+
+echo "Step4: get the internal IP of ${container_name} container..."
+get_ip_cmd="ip a | grep eth0 | grep inet | awk '{print \$2}' | cut -d'/' -f 1"
+testapi_ip=$(sudo docker exec ${container_name} /bin/bash -c "${get_ip_cmd}")
+echo "The internal IP of container ${container_name} is ${testapi_ip}"
 
 echo "Wait for testapi to work..."
 sleep 10
@@ -87,7 +85,7 @@ echo "Upload default project info to DB"
 echo "================================="
 
 echo "Init DB info..."
-cmd="python ./init_db.py ${db_host_ip} ${testapi_port}"
+cmd="python /home/opnfv/dovetail/dovetail/utils/local_db/init_db.py ${testapi_ip} ${testapi_port}"
 echo $cmd
 ${cmd}
 
