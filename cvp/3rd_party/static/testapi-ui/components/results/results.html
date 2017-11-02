@@ -35,7 +35,6 @@
         <tbody style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
             <tr ng-repeat="(index, result) in ctrl.data.tests">
                 <td>{{ result.upload_date | limitTo:19}}</td>
-                <td><a ng-click="ctrl.gotoResultDetail(result.id, result._id)">{{ result.id }}</a></td>
                 <td><a  uib-tooltip="{{ result.id }}" tooltip-placement="top" tooltip-append-to-body="true" ng-click="ctrl.gotoResultDetail(result.id, result._id)">{{ result.id | limitTo:8 }}</a></td>
                 <td>{{ result.owner }}</td>
                 <td>{{ result.filename || "None"}}</td>
