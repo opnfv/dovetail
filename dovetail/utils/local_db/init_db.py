@@ -10,12 +10,14 @@
 import requests
 import json
 import sys
+import os
 
 db_host_ip = sys.argv[1]
 testapi_port = sys.argv[2]
 
 target_url = 'http://{}:{}/api/v1'.format(db_host_ip, testapi_port)
 print(target_url)
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
 def get(url):
@@ -31,7 +33,7 @@ def post(url, data):
 def pod():
     target = '{}/pods'.format(target_url)
 
-    with open('pods.json', 'r') as f:
+    with open(os.path.join(dir_path, 'pods.json'), 'r') as f:
         pods = json.load(f)
     for p in pods:
         post(target, p)
@@ -39,14 +41,14 @@ def pod():
 
 def project():
     target = '{}/projects'.format(target_url)
-    with open('projects.json', 'r') as f:
+    with open(os.path.join(dir_path, 'projects.json'), 'r') as f:
         projects = json.load(f)
     for p in projects:
         post(target, p)
 
 
 def cases():
-    with open('cases.json', 'r') as f:
+    with open(os.path.join(dir_path, 'cases.json'), 'r') as f:
         for line in f:
             try:
                 cases = json.loads(line)
