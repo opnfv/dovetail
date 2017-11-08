@@ -81,18 +81,22 @@ class GenericApiHandler(web.RequestHandler):
                 role = self.get_secure_cookie(auth_const.ROLE)
                 logging.info('role:%s', role)
                 if role:
+                    query['$or'] = [
+                        {
+                            "shared": {
+                                "$elemMatch": {"$eq": openid}
+                            }
+                        },
+                        {"owner": openid},
+                        {
+                            "shared": {
+                                "$elemMatch": {"$eq": user.get("email")}
+                            }
+                        }
+                    ]
+
                     if role.find("reviewer") != -1:
-                        query['$or'] = [{"shared":
-                                         {"$elemMatch": {"$eq": openid}}},
-                                        {"owner": openid},
-                                        {"shared": {"$elemMatch":
-                                                    {"$eq":
-                                                     user.get("email")}}},
-                                        {"status": {"$ne": "private"}}]
-                    else:
-                        query['$or'] = [{"shared":
-                                         {"$elemMatch": {"$eq": openid}}
-                                         }, {"owner": openid}]
+                        query['$or'].append({"status": {"$ne": "private"}})
             elif k not in ['last', 'page', 'descend', 'per_page']:
                 query[k] = v
             if date_range:
