@@ -28,6 +28,7 @@ testsuite_supported:
   - proposed_tests
   - debug
   - cvp.0.8.0
+  - cvp.0.9.0
 # testarea supported, should adjust accordingly
 testarea_supported:
   - osinterop
