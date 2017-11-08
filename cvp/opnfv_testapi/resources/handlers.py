@@ -92,7 +92,10 @@ class GenericApiHandler(web.RequestHandler):
                     else:
                         query['$or'] = [{"shared":
                                          {"$elemMatch": {"$eq": openid}}
-                                         }, {"owner": openid}]
+                                         }, {"owner": openid},
+                                        {"shared": {"$elemMatch":
+                                                    {"$eq":
+                                                     user.get("email")}}}]
             elif k not in ['last', 'page', 'descend', 'per_page']:
                 query[k] = v
             if date_range:
