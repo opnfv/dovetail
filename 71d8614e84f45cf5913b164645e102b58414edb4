@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_ebe22100",
+        "filename": "cvp/opnfv_testapi/resources/handlers.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-11-08T14:20:19Z",
+      "side": 1,
+      "message": "why does \u0027private\u0027 status need to be checked here?",
+      "range": {
+        "startLine": 91,
+        "startChar": 40,
+        "endLine": 91,
+        "endChar": 70
+      },
+      "revId": "71d8614e84f45cf5913b164645e102b58414edb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_8bd43521",
+        "filename": "cvp/opnfv_testapi/resources/handlers.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-11-08T14:20:19Z",
+      "side": 1,
+      "message": "why is the process different between reviewer and user?",
+      "revId": "71d8614e84f45cf5913b164645e102b58414edb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
