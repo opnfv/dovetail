@@ -121,7 +121,7 @@ class TestsGURHandler(GenericTestHandler):
 
     @swagger.operation(nickname="updateTestById")
     @web.asynchronous
-    def put(self, test_id):
+    def put(self, _id):
         """
             @description: update a single test by id
             @param body: fields to be updated
@@ -138,7 +138,7 @@ class TestsGURHandler(GenericTestHandler):
         value = data.get(item)
         logging.debug('%s:%s', item, value)
         try:
-            self.update(test_id, item, value)
+            self.update(_id, item, value)
         except Exception as e:
             logging.error('except:%s', e)
             return
@@ -155,7 +155,7 @@ class TestsGURHandler(GenericTestHandler):
         raise gen.Return((False, 'Data does not exist. %s' % (query), None))
 
     @gen.coroutine
-    def update(self, test_id, item, value):
+    def update(self, _id, item, value):
         logging.debug("update")
         if item == "shared":
             new_list = []
@@ -186,12 +186,28 @@ class TestsGURHandler(GenericTestHandler):
             self.finish_request({'code': '404', 'msg': msg})
             return
 
-        query = {'id': test_id}
-        db_keys = ['id', ]
+        query = {'_id': objectid.ObjectId(_id)}
+        db_keys = ['_id', ]
         curr_user = self.get_secure_cookie(auth_const.OPENID)
-        if item == "shared" or item == "label":
+        if item in {"shared", "label"}:
             query['owner'] = curr_user
             db_keys.append('owner')
+
+        if item == 'status':
+            user = yield dbapi.db_find_one("users", {'openid': curr_user})
+            query["$or"] = [
+                {"owner": curr_user},
+                {
+                    "shared": {
+                        "$elemMatch": {"$eq": curr_user}
+                     }
+                },
+                {
+                    "shared": {
+                        "$elemMatch": {"$eq": user['email']}
+                     }
+                }
+             ]
         logging.debug("before _update 2")
         self._update(query=query, db_keys=db_keys)
 
