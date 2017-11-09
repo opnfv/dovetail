@@ -62,6 +62,7 @@
         ctrl.gotoSUT = gotoSUT;
         ctrl.gotoResultDetail = gotoResultDetail;
         ctrl.toggleCheck = toggleCheck;
+        ctrl.changeLabel = changeLabel;
         ctrl.toReview = toReview;
         ctrl.toPrivate = toPrivate;
         ctrl.removeSharedUser = removeSharedUser;
@@ -168,8 +169,8 @@
         }
 
         function toggleCheck(result, item, newValue) {
-            var id = result.id;
-	    var updateUrl = testapiApiUrl + "/tests/"+id;
+            var id = result._id;
+	    var updateUrl = testapiApiUrl + "/tests/"+ id;
 
 	    var data = {};
 	    data['item'] = item;
@@ -178,16 +179,21 @@
 	    $http.put(updateUrl, JSON.stringify(data), {
 	         transformRequest: angular.identity,
 	         headers: {'Content-Type': 'application/json'}})
-	    .then( function(ret) {
-                 if(ret.data.code && ret.data.code != 0) {
+	    .then(function(ret) {
+                if(ret.data.code && ret.data.code != 0) {
                      alert(ret.data.msg);
                  }
                  else {
 	             result[item] = newValue;
 	             console.log('update success');
                  }
-	    }, function(response){
+	    }, function(error){
+                alert("Error  when update data"); 
             });
+        }
+
+        function changeLabel(result, data){
+            toggleCheck(result, 'label', data);
         }
 
 	function toReview(result, value){
