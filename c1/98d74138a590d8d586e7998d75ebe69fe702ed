@@ -1,0 +1,10 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Dan Xu <xudan16@huawei.com>
+Code-Review+1: Jack Chan <chenjiankun1@huawei.com>
+Code-Review+1: Serena Feng <feng.xiaowei@zte.com.cn>
+Code-Review+2: Leo wang <grakiss.wanglei@huawei.com>
+Submitted-by: Leo wang <grakiss.wanglei@huawei.com>
+Submitted-at: Thu, 09 Nov 2017 03:04:27 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/46841
+Project: dovetail
+Branch: refs/heads/master
