@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_265e0013",
+        "filename": "cvp/opnfv_testapi/resources/handlers.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-11-09T03:01:02Z",
+      "side": 1,
+      "message": "This is used to select all the results that have been submitted to review (whose status is \u0027review\u0027 not \u0027private\u0027). Now there are 2 status \u0027review\u0027 and \u0027private\u0027. There may be 4 status \u0027review\u0027, \u0027approve\u0027, \u0027not approve\u0027 and \u0027private\u0027 in the future.",
+      "parentUuid": "9a3d3df0_ebe22100",
+      "range": {
+        "startLine": 91,
+        "startChar": 40,
+        "endLine": 91,
+        "endChar": 70
+      },
+      "revId": "71d8614e84f45cf5913b164645e102b58414edb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_8bd43521",
         "filename": "cvp/opnfv_testapi/resources/handlers.py",
         "patchSetId": 1
@@ -36,6 +60,24 @@
       "writtenOn": "2017-11-08T14:20:19Z",
       "side": 1,
       "message": "why is the process different between reviewer and user?",
+      "revId": "71d8614e84f45cf5913b164645e102b58414edb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_06b01c42",
+        "filename": "cvp/opnfv_testapi/resources/handlers.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1090
+      },
+      "writtenOn": "2017-11-09T03:01:02Z",
+      "side": 1,
+      "message": "Users can just see their own results and all results shared with them.\nReviewers can also see all the results submitted to review.",
+      "parentUuid": "9a3d3df0_8bd43521",
       "revId": "71d8614e84f45cf5913b164645e102b58414edb4",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
