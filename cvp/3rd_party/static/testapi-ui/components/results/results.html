@@ -38,7 +38,7 @@
                 <td><a  uib-tooltip="{{ result.id }}" tooltip-placement="top" tooltip-append-to-body="true" ng-click="ctrl.gotoResultDetail(result.id, result._id)">{{ result.id | limitTo:8 }}</a></td>
                 <td>{{ result.owner }}</td>
                 <td>{{ result.filename || "None"}}</td>
-                <td><div class="popover-wrapper"><a editable-theme="bs3" onbeforesave="ctrl.toggleCheck(result, 'label', $data)" editable-text="result.label"> {{ result.label || "None" }}</a></div></td>
+                <td><div class="popover-wrapper"><a editable-theme="bs3" onbeforesave="ctrl.changeLabel(result, $data)" editable-text="result.label"> {{ result.label || "None" }}</a></div></td>
                 <td>{{ result.status }}</td>
                 <td><a ng-click="ctrl.downloadLogs(result.id)">logs</a></td>
                 <td><a ng-click="ctrl.gotoSUT(result.id)">info</a></td>
@@ -54,7 +54,7 @@
                             <li role="menuitem" ng-if="auth.currentUser.role.indexOf('reviewer') != -1" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status == 'approved'}" ng-click="ctrl.toggleCheck(result, 'status', 'approve')">approve</a></li>
                             <li role="menuitem" ng-if="auth.currentUser.role.indexOf('reviewer') != -1" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status == 'not approved'}" ng-click="ctrl.toggleCheck(result, 'status', 'not approve')">not approve</a></li>
                             -->
-                            <li role="menuitem" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-click="ctrl.openSharedModal(result)">share with</a></li>
+                            <li role="menuitem" ng-if="auth.currentUser.openid == result.owner" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-click="ctrl.openSharedModal(result)">share with</a></li>
                             <li role="menuitem" ng-if="auth.currentUser.openid == result.owner" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-click="ctrl.deleteTest(result._id)">delete</a></li>
                         </ul>
                     </div>
@@ -65,7 +65,7 @@
                             Share List<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button" style="min-width:200%">
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page" role="menuitem" ng-repeat="share in result.shared track by $index"><span>{{ share }}<i class="pull-right glyphicon glyphicon-remove" ng-click="ctrl.removeSharedUser(result, share)"></i></span></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page" role="menuitem" ng-repeat="share in result.shared track by $index"><span>{{ share }}<i ng-if="auth.currentUser.openid == result.owner" class="pull-right glyphicon glyphicon-remove" ng-click="ctrl.removeSharedUser(result, share)"></i></span></li>
                         </ul>
                     </div>
                 </td>
