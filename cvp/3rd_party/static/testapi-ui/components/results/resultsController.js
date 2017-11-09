@@ -62,6 +62,7 @@
         ctrl.gotoSUT = gotoSUT;
         ctrl.gotoResultDetail = gotoResultDetail;
         ctrl.toggleCheck = toggleCheck;
+        ctrl.changeLabel = changeLabel;
         ctrl.toReview = toReview;
         ctrl.toPrivate = toPrivate;
         ctrl.removeSharedUser = removeSharedUser;
@@ -103,7 +104,7 @@
         /** The date format for the date picker. */
         ctrl.format = 'yyyy-MM-dd';
 
-	ctrl.userName = null;
+        ctrl.userName = null;
 
         /** Check to see if this page should display user-specific results. */
         // ctrl.isUserResults = $state.current.name === 'userResults';
@@ -168,44 +169,48 @@
         }
 
         function toggleCheck(result, item, newValue) {
-            var id = result.id;
-	    var updateUrl = testapiApiUrl + "/tests/"+id;
+            var id = result._id;
+            var updateUrl = testapiApiUrl + "/tests/"+ id;
 
-	    var data = {};
-	    data['item'] = item;
-	    data[item] = newValue;
+            var data = {};
+            data['item'] = item;
+            data[item] = newValue;
 
-	    $http.put(updateUrl, JSON.stringify(data), {
-	         transformRequest: angular.identity,
-	         headers: {'Content-Type': 'application/json'}})
-	    .then( function(ret) {
-                 if(ret.data.code && ret.data.code != 0) {
-                     alert(ret.data.msg);
-                 }
-                 else {
-	             result[item] = newValue;
-	             console.log('update success');
-                 }
-	    }, function(response){
+            $http.put(updateUrl, JSON.stringify(data), {
+                transformRequest: angular.identity,
+                headers: {'Content-Type': 'application/json'}}).then(function(ret){
+                    if(ret.data.code && ret.data.code != 0) {
+                        alert(ret.data.msg);
+                    }
+                    else {
+                        result[item] = newValue;
+                        console.log('update success');
+                    }
+            }, function(error){
+                alert("Error  when update data"); 
             });
         }
 
-	function toReview(result, value){
-   	    var resp = confirm('Once you submit a test result for review, it will become readable to all CVP reviewers. Do you want to proceed?');
- 	    if(resp){
-		toggleCheck(result, 'status', value);
- 	    }
-	}
+        function changeLabel(result, data){
+            toggleCheck(result, 'label', data);
+        }
 
-	function toPrivate(result, value){
-   	    var resp = confirm('Do you want to proceed?');
- 	    if(resp){
-		toggleCheck(result, 'status', value);
- 	    }
-	}
+        function toReview(result, value){
+            var resp = confirm('Once you submit a test result for review, it will become readable to all CVP reviewers. Do you want to proceed?');
+            if(resp){
+                toggleCheck(result, 'status', value);
+            }
+        }
 
-	function openSharedModal(result){
-		ctrl.tempResult = result;
+        function toPrivate(result, value){
+            var resp = confirm('Do you want to proceed?');
+            if(resp){
+                toggleCheck(result, 'status', value);
+            }
+        }
+
+        function openSharedModal(result){
+            ctrl.tempResult = result;
                 ngDialog.open({
                     preCloseCallback: function(value) {
                     },
@@ -216,31 +221,31 @@
                     showClose: true,
                     closeByDocument: true
                 });
-	}
+        }
 
-	function addSharedUser(result, userId){
+        function addSharedUser(result, userId){
             var tempList = copy(result.shared);
-	    tempList.push(userId);
-	    toggleCheck(result, 'shared', tempList);
-	    ngDialog.close();
-	}
+            tempList.push(userId);
+            toggleCheck(result, 'shared', tempList);
+            ngDialog.close();
+        }
 
-	function removeSharedUser(result, userId){
-	    var tempList = copy(result.shared);
-	    var idx = tempList.indexOf(userId);
-	    if(idx != -1){
-		tempList.splice(idx, 1);
-		toggleCheck(result, 'shared', tempList);
-	    }
-	}
+        function removeSharedUser(result, userId){
+            var tempList = copy(result.shared);
+            var idx = tempList.indexOf(userId);
+            if(idx != -1){
+                tempList.splice(idx, 1);
+                toggleCheck(result, 'shared', tempList);
+            }
+        }
 
-	function copy(arrList){
-	    var tempList = [];
-	    angular.forEach(arrList, function(ele){
-		tempList.push(ele);
-	    });
-	    return tempList;
-	}
+        function copy(arrList){
+            var tempList = [];
+            angular.forEach(arrList, function(ele){
+                tempList.push(ele);
+            });
+            return tempList;
+        }
 
         function uploadFileToUrl(file, uploadUrl){
             var fd = new FormData();
