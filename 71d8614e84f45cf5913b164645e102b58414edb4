@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_66e128d0",
+        "filename": "cvp/opnfv_testapi/resources/handlers.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-11-09T08:03:12Z",
+      "side": 1,
+      "message": "please correct me if I am wrong, now reviewers are also allowed to submit the result, will this restriction support that? According to my understanding, the result submitted a reviewer is also \u0027private\u0027, under this restriction, the reviewer will not see his/her own submission.",
+      "parentUuid": "9a3d3df0_265e0013",
+      "range": {
+        "startLine": 91,
+        "startChar": 40,
+        "endLine": 91,
+        "endChar": 70
+      },
+      "revId": "71d8614e84f45cf5913b164645e102b58414edb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_8bd43521",
         "filename": "cvp/opnfv_testapi/resources/handlers.py",
         "patchSetId": 1
