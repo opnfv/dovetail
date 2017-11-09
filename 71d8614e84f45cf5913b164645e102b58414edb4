@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_c68474d6",
+        "filename": "cvp/opnfv_testapi/resources/handlers.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-11-09T08:46:17Z",
+      "side": 1,
+      "message": "Now I get your point, thanks for you explanation.\nFrom clean code\u0027s perspective, I would suggest this snippet to be like:\n    query[\u0027$or\u0027] \u003d [{\"shared\":\n                                         {\"$elemMatch\": {\"$eq\": openid}}\n                                         }, {\"owner\": openid},\n                                        {\"shared\": {\"$elemMatch\":\n                                                    {\"$eq\":\n                                                     user.get(\"email\")}}}]\n    if a reviewer:\n        query[\u0027or\u0027].append({\"status\": {\"$ne\": \"private\"}})",
+      "parentUuid": "9a3d3df0_c6ff5466",
+      "range": {
+        "startLine": 91,
+        "startChar": 40,
+        "endLine": 91,
+        "endChar": 70
+      },
+      "revId": "71d8614e84f45cf5913b164645e102b58414edb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_8bd43521",
         "filename": "cvp/opnfv_testapi/resources/handlers.py",
         "patchSetId": 1
