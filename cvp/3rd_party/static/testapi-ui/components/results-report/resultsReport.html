@@ -10,9 +10,9 @@
     </div>
 </div>
 
-<strong>Total: {{ctrl.total}}, Pass: {{ ctrl.mandatory_pass + ctrl.optional_pass }}, Rate: {{ (ctrl.mandatory_pass + ctrl.optional_pass) / ctrl.total * 100 | number:2 }}%</strong></br>
-<strong>Mandatory Total: {{ctrl.mandatory_total}}, Pass: {{ ctrl.mandatory_pass }}, Rate: {{ ctrl.mandatory_pass / ctrl.mandatory_total * 100 | number:2 }}%</strong></br>
-<strong>Optional Total: {{ctrl.optional_total}}, Pass: {{ ctrl.optional_pass }}, Rate: {{ ctrl.optional_pass / ctrl.optional_total * 100 | number:2 }}%</strong></br>
+<strong>Total: 278, Upload: {{ctrl.total}}, Pass: {{ ctrl.mandatory_pass + ctrl.optional_pass }}, Rate: {{ (ctrl.mandatory_pass + ctrl.optional_pass) / 278 * 100 | number:2 }}%</strong></br>
+<strong>Mandatory Total: 215, Upload: {{ctrl.mandatory_total}}, Pass: {{ ctrl.mandatory_pass }}, Rate: {{ ctrl.mandatory_pass / 215 * 100 | number:2 }}%</strong></br>
+<strong>Optional Total: 63, Upload: {{ctrl.optional_total}}, Pass: {{ ctrl.optional_pass }}, Rate: {{ ctrl.optional_pass / 63 * 100 | number:2 }}%</strong></br>
 
 <div ng-show="ctrl.cases">
     <hr >
