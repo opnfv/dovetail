@@ -57,7 +57,7 @@ The Test Host must have network access to the management network with access rig
 the Virtual Infrastructure Manager's API.
 
 Checking the Test Host Readiness
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Test Host must have network access to the Virtual Infrastructure Manager's API
 hosted in the SUT so that the Dovetail tool can exercise the API from the Test Host.
@@ -67,7 +67,7 @@ to generate test events in the compute nodes. You can find out which test cases
 use this mechanism in the test specification document.
 
 We have tested the Dovetail tool on the following host operating systems. Other versions
-or distribution of Linux may also work, but community support may be more available on
+or distributions of Linux may also work, but community support may be more available on
 these versions.
 
 - Ubuntu 16.04.2 LTS (Xenial) or 14.04 LTS (Trusty)
@@ -75,7 +75,8 @@ these versions.
 - Red Hat Enterprise Linux 7.3
 - Fedora 24 or 25 Server
 
-Non-Linux operating systems, such as Windows, Mac OS, have not been tested
+Use of Ubuntu 16.04 is highly recommended, as it has been most widely employed during testing.
+Non-Linux operating systems, such as Windows and Mac OS, have not been tested
 and are not supported.
 
 If online mode is used, the tester should also validate that the Test Host can reach
@@ -103,111 +104,13 @@ Or, if the lab environment does not allow ping, try validating it using HTTPS in
    <head>
    ...
 
-
-Configuring the Test Host Environment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The Test Host needs a few environment variables set correctly in order to access the
-Openstack API required to drive the Dovetail tests. For convenience and as a convention,
-we will also create a home directory for storing all Dovetail related config files and
-results files:
-
-.. code-block:: bash
-
-   $ mkdir -p /home/dovetail
-   $ export DOVETAIL_HOME=/home/dovetail
-
-Here we set dovetail home directory to be ``/home/dovetail`` for an example.
-Then create a directory named ``pre_config`` in this directory to store all
-Dovetail related config files:
-
-.. code-block:: bash
-
-   $ mkdir -p ${DOVETAIL_HOME}/pre_config
-
-At this point, you will need to consult your SUT (Openstack) administrator to correctly set
-the configurations in a file named ``env_config.sh``.
-The Openstack settings need to be configured such that the Dovetail client has all the necessary
-credentials and privileges to execute all test operations. If the SUT uses terms
-somewhat differently from the standard Openstack naming, you will need to adjust
-this file accordingly.
-
-Create and edit the file ``${DOVETAIL_HOME}/pre_config/env_config.sh`` so that
-all parameters are set correctly to match your SUT. Here is an example of what
-this file should contain.
-
-.. code-block:: bash
-
-   $ cat ${DOVETAIL_HOME}/pre_config/env_config.sh
-
-   # Project-level authentication scope (name or ID), recommend admin project.
-   export OS_PROJECT_NAME=admin
-
-   # For identity v2, it uses OS_TENANT_NAME rather than OS_PROJECT_NAME.
-   export OS_TENANT_NAME=admin
-
-   # Authentication username, belongs to the project above, recommend admin user.
-   export OS_USERNAME=admin
-
-   # Authentication password. Use your own password
-   export OS_PASSWORD=xxxxxxxx
-
-   # Authentication URL, one of the endpoints of keystone service. If this is v3 version,
-   # there need some extra variables as follows.
-   export OS_AUTH_URL='http://xxx.xxx.xxx.xxx:5000/v3'
-
-   # Default is 2.0. If use keystone v3 API, this should be set as 3.
-   export OS_IDENTITY_API_VERSION=3
-
-   # Domain name or ID containing the user above.
-   # Command to check the domain: openstack user show <OS_USERNAME>
-   export OS_USER_DOMAIN_NAME=default
-
-   # Domain name or ID containing the project above.
-   # Command to check the domain: openstack project show <OS_PROJECT_NAME>
-   export OS_PROJECT_DOMAIN_NAME=default
-
-   # Home directory for dovetail that you have created before.
-   export DOVETAIL_HOME=/home/dovetail
-
-   # Special environment parameters for https.
-   # If using https + cacert, the path of cacert file should be provided.
-   # The cacert file should be put at $DOVETAIL_HOME/pre_config.
-   export OS_CACERT=$DOVETAIL_HOME/pre_config/cacert.pem
-
-   # If using https + no cacert, should add OS_INSECURE environment parameter.
-   export OS_INSECURE=True
-
-
-Export all these variables into environment by,
-
-.. code-block:: bash
-
-   $ source ${DOVETAIL_HOME}/pre_config/env_config.sh
-
-If your SUT uses hosts file to translate hostnames into the IP
-of OS_AUTH_URL, then you need to provide these hosts info in file
-``$DOVETAIL_HOME/pre_config/hosts.yaml``.
-
-Create and edit file ``$DOVETAIL_HOME/pre_config/hosts.yaml``. Here is an example of
-what this file should contain.
-
-.. code-block:: bash
-
-   $ cat ${DOVETAIL_HOME}/pre_config/hosts.yaml
-
-   ---
-   hosts_info:
-     - image.xx.xx.xx.com:172.xxx.xxx.xxx
-     - compute.xx.xx.xx.com:172.xxx.xxx.xxx
-     - <Hostname>:<IPaddress>
-
-Installing Prerequisite on the Test Host
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Installing Prerequisite Packages on the Test Host
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The main prerequisite software for Dovetail are Python and Docker.
 
-In the CVP test suite for the Danube release, Dovetail requires Python 2.7. Python 3.x
+In the CVP test suite for the Danube release, Dovetail requires Python 2.7. Various minor 
+versions of Python 2.7.x are known to work Dovetail, but there are no assurances. Python 3.x
 is not supported at this time.
 
 Use the following steps to check if the right version of python is already installed,
@@ -224,7 +127,7 @@ in your Test Host on how to install Python 2.7.
 
 Dovetail does not work with Docker versions prior to 1.12.3. We have validated
 Dovetail with Docker 17.03 CE. Other versions of Docker later than 1.12.3 may
-also work, but community support may be more available on Docker 17.03 CE.
+also work, but community support may be more available on Docker 17.03 CE or greater.
 
 .. code-block:: bash
 
@@ -268,214 +171,139 @@ to install,
 
    https://github.com/meetyg/docker-offline-install
 
+Configuring the Test Host Environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Installing Dovetail on the Test Host
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The Dovetail project maintains a Docker image that has Dovetail test tools preinstalled.
-This Docker image is tagged with versions. Before pulling the Dovetail image, check the
-OPNFV's CVP web page first to determine the right tag for CVP testing.
-
-If the Test Host is online, you can directly pull Dovetail Docker image and download ubuntu
-and cirros images.
+The Test Host needs a few environment variables set correctly in order to access the
+Openstack API required to drive the Dovetail tests. For convenience and as a convention,
+we will also create a home directory for storing all Dovetail related config files and
+results files:
 
 .. code-block:: bash
 
-   $ sudo wget -nc http://artifacts.opnfv.org/sdnvpn/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/pre_config
-   $ sudo wget -nc http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img -P ${DOVETAIL_HOME}/pre_config
+   $ mkdir -p /home/dovetail
+   $ export DOVETAIL_HOME=/home/dovetail
 
-   $ sudo docker pull opnfv/dovetail:cvp.0.8.0
-   cvp.0.8.0: Pulling from opnfv/dovetail
-   30d541b48fc0: Pull complete
-   8ecd7f80d390: Pull complete
-   46ec9927bb81: Pull complete
-   2e67a4d67b44: Pull complete
-   7d9dd9155488: Pull complete
-   cc79be29f08e: Pull complete
-   e102eed9bf6a: Pull complete
-   952b8a9d2150: Pull complete
-   bfbb639d1f38: Pull complete
-   bf7c644692de: Pull complete
-   cdc345e3f363: Pull complete
-   Digest: sha256:d571b1073b2fdada79562e8cc67f63018e8d89268ff7faabee3380202c05edee
-   Status: Downloaded newer image for opnfv/dovetail:cvp.0.8.0
-
-An example of the <tag> is *cvp.0.8.0*.
-
-If the Test Host is offline, you will need to first pull the Dovetail Docker image, and all the
-dependent images that Dovetail uses, to a host that is online. The reason that you need
-to pull all dependent images is because Dovetail normally does dependency checking at run-time
-and automatically pull images as needed, if the Test Host is online. If the Test Host is
-offline, then all these dependencies will also need to be manually copied.
+Here we set dovetail home directory to be ``/home/dovetail`` for an example.
+Then create a directory named ``pre_config`` in this directory to store all
+Dovetail related config files:
 
 .. code-block:: bash
 
-   $ sudo docker pull opnfv/dovetail:cvp.0.8.0
-   $ sudo docker pull opnfv/functest:cvp.0.5.0
-   $ sudo docker pull opnfv/yardstick:danube.3.2
-   $ sudo docker pull opnfv/bottlenecks:cvp.0.4.0
-   $ sudo docker pull opnfv/testapi:cvp.0.3.0
-   $ sudo docker pull mongo:3.2.1
-   $ sudo wget -nc http://artifacts.opnfv.org/sdnvpn/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P {ANY_DIR}
-   $ sudo wget -nc http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img -P {ANY_DIR}
+   $ mkdir -p ${DOVETAIL_HOME}/pre_config
 
-Once all these images are pulled, save the images, copy to the Test Host, and then load
-the Dovetail and all dependent images at the Test Host.
+Setting up Primary Configuration File
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-At the online host, save images.
+At this point, you will need to consult your SUT (Openstack) administrator to correctly set
+the configurations in a file named ``env_config.sh``.
+The Openstack settings need to be configured such that the Dovetail client has all the necessary
+credentials and privileges to execute all test operations. If the SUT uses terms
+somewhat differently from the standard Openstack naming, you will need to adjust
+this file accordingly.
 
-.. code-block:: bash
-
-   $ sudo docker save -o dovetail.tar opnfv/dovetail:cvp.0.8.0 \
-     opnfv/functest:cvp.0.5.0 opnfv/yardstick:danube.3.2 \
-     opnfv/bottlenecks:cvp.0.4.0 opnfv/testapi:cvp.0.3.0 mongo:3.2.1
-
-Copy dovetail.tar file to the Test Host, and then load the images on the Test Host.
+Create and edit the file ``${DOVETAIL_HOME}/pre_config/env_config.sh`` so that
+all parameters are set correctly to match your SUT. Here is an example of what
+this file should contain.
 
 .. code-block:: bash
 
-   $ sudo docker load --input dovetail.tar
+   $ cat ${DOVETAIL_HOME}/pre_config/env_config.sh
 
-Copy sdnvpn test area image ubuntu-16.04-server-cloudimg-amd64-disk1.img to ``${DOVETAIL_HOME}/pre_config/``.
-Copy cirros image cirros-0.3.5-x86_64-disk.img to ``${DOVETAIL_HOME}/pre_config/``.
+   # Project-level authentication scope (name or ID), recommend admin project.
+   export OS_PROJECT_NAME=admin
 
-Now check to see that all Docker images have been pulled or loaded properly.
+   # For identity v2, it uses OS_TENANT_NAME rather than OS_PROJECT_NAME.
+   export OS_TENANT_NAME=admin
 
-.. code-block:: bash
+   # Authentication username, belongs to the project above, recommend admin user.
+   export OS_USERNAME=admin
 
-   $ sudo docker images
-   REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-   opnfv/functest      cvp.0.5.0           e2b286547478        6 weeks ago         1.26 GB
-   opnfv/dovetail      cvp.0.8.0           5d25b289451c        8 days ago          516MB
-   opnfv/yardstick     danube.3.2          df830d5c2cb2        6 weeks ago         1.21 GB
-   opnfv/bottlenecks   cvp.0.4.0           00450688bcae        7 weeks ago         622 MB
-   opnfv/testapi       cvp.0.3.0           05c6d5ebce6c        2 months ago        448 MB
-   mongo               3.2.1               7e350b877a9a        19 months ago       317 MB
+   # Authentication password. Use your own password
+   export OS_PASSWORD=xxxxxxxx
 
-Regardless of whether you pulled down the Dovetail image directly online, or loaded from
-a static image tar file, you are ready to run Dovetail.
+   # Authentication URL, one of the endpoints of keystone service. If this is v3 version,
+   # there need some extra variables as follows.
+   export OS_AUTH_URL='http://xxx.xxx.xxx.xxx:5000/v3'
 
-.. code-block:: bash
+   # Default is 2.0. If use keystone v3 API, this should be set as 3.
+   export OS_IDENTITY_API_VERSION=3
 
-   $ sudo docker run --privileged=true -it \
-             -e DOVETAIL_HOME=$DOVETAIL_HOME \
-             -v $DOVETAIL_HOME:$DOVETAIL_HOME \
-             -v /var/run/docker.sock:/var/run/docker.sock \
-             opnfv/dovetail:<tag> /bin/bash
+   # Domain name or ID containing the user above.
+   # Command to check the domain: openstack user show <OS_USERNAME>
+   export OS_USER_DOMAIN_NAME=default
 
-The ``-e`` options set the env variables in the container and the ``-v`` options map files
-in the host to files in the container.
+   # Domain name or ID containing the project above.
+   # Command to check the domain: openstack project show <OS_PROJECT_NAME>
+   export OS_PROJECT_DOMAIN_NAME=default
 
-Build Local DB and Testapi Service
-----------------------------------
+   # Special environment parameters for https.
+   # If using https + cacert, the path of cacert file should be provided.
+   # The cacert file should be put at $DOVETAIL_HOME/pre_config.
+   export OS_CACERT=/path/to/pre_config/cacert.pem
 
-It needs to build local DB and testapi service for storing and reporting results
-to CVP web portal. There is a script in Dovetail container for building local DB.
-All the following commands should be executed in Dovetail container.
-The DB will use port 27017 and the testapi will use port 8000. They can be reset by
+   # If using https + no cacert, should add OS_INSECURE environment parameter.
+   export OS_INSECURE=True
 
-.. code-block:: bash
 
-   $ export mongodb_port=<new_DB_port>
-   $ export testapi_port=<new_testapi_port>
+The OS_AUTH_URL variable is key to configure correctly, as the other admin services
+are gleaned from the identity service. HTTPS should be configured in the SUT so the
+final two variables should be uncommented. However, if SSL is disabled in the SUT, comment
+out the OS_CACERT and OS_INSECURE variables. Ensure the '/path/to/pre_config' directory in
+the above file matches the directory location of the cacert file for the OS_CACERT variable.
 
-Then you can run the script in Dovetail container to build local DB and testapi service.
-You need to provide the IP of the Test Host when running this script.
+Export all these variables into environment by,
 
 .. code-block:: bash
 
-   $ cd /home/opnfv/dovetail/dovetail/utils/local_db/
-   $ ./launch_db.sh <test_host_ip>
+   $ source ${DOVETAIL_HOME}/pre_config/env_config.sh
 
-After that, you can check the DB and testapi service with your browser. The url of
-the results is ``http://<test_host_ip>:<testapi_port>/api/v1/results``. If you
-can access this url successfully, it means the DB and testapi service are OK now.
+The above line may be added to your .bashrc file for convenience when repeatedly using
+Dovetail.
 
-Running the CVP Test Suite
-----------------------------
+The next three sections outline additional configuration files used by Dovetail. The
+tempest (tempest_conf.yaml) configuration file is required for executing the mandatory
+osinterop test cases and the optional ipv6/tempest test cases. The HA (pod.yaml) configuration
+file is required for the mandatory HA test cases and is also employed to collect SUT hardware
+info. The hosts.yaml is optional for hostname/IP resolution.
 
-Now you should be in the Dovetail container's prompt and ready to execute
-test suites.
+Configuration for Running Tempest Test Cases (Mandatory)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Dovetail client CLI allows the tester to specify which test suite to run.
-You can refer to :ref:`cli-reference`
-for the details of the CLI.
-By default the results are stored in a local file ``$DOVETAIL_HOME/results``.
+The test cases in the test areas `osinterop` (OpenStack Interoperability tests),
+`ipv6` and `tempest` are based on Tempest.  A SUT-specific configuration of
+Tempest is required in order to run those test cases successfully.  The
+corresponding SUT-specific configuration options must be supplied in the file
+``$DOVETAIL_HOME/pre_config/tempest_conf.yaml``.
 
-.. code-block:: bash
-
-   $ dovetail run --testsuite <test-suite-name>
-
-Multiple test suites may be available. For the purpose of running
-CVP test suite, the test suite name follows the following format,
-``cvp.<major>.<minor>.<patch>``.
-The latest and default test suite is cvp.0.8.0.
+Create and edit file ``$DOVETAIL_HOME/pre_config/tempest_conf.yaml``.
+Here is an example of what this file should contain.
 
 .. code-block:: bash
 
-   $ dovetail run
+   compute:
+     # The minimum number of compute nodes expected.
+     # This should be no less than 2 and no larger than the compute nodes the SUT actually has.
+     min_compute_nodes: 2
 
-This command is equal to
+     # Expected device name when a volume is attached to an instance.
+     volume_device_name: vdb
 
-.. code-block:: bash
+Use the listing above at a minimum to execute the mandatory test areas.
 
-   $ dovetail run --testsuite cvp.0.8.0
+Configuration for Running HA Test Cases (Mandatory)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you are not running the entire test suite, you can choose to run an
-individual test area instead. The test area can be a single test area or
-mandatory/optional test areas. The mandatory test areas are "osinterop", "vping"
-and "ha". The optional test areas are "ipv6", "sdnvpn" and "tempest".
+The mandatory HA test cases require OpenStack controller node info. It must include the node's
+name, role, ip, as well as the user and key_filename or password to login to the node. Users
+must create the file ``${DOVETAIL_HOME}/pre_config/pod.yaml`` to store the info. This file is
+also used as basis to collect SUT hardware information that is stored alongside results and
+uploaded to the OVP web portal. The SUT hardware information can be viewed within the
+'My Results' view in the OVP web portal by clicking the SUT column 'info' link. In order to
+collect SUT hardware information holistically, ensure this file has an entry for each of
+the controller and compute nodes within the SUT.
 
-.. code-block:: bash
-
-   $ dovetail run --testarea mandatory
-
-You need to push the results to local DB if you want to store the results
-or report the results to CVP.
-
-.. code-block:: bash
-
-   $ dovetail run --report http://<test_host_ip>:<testapi_port>/api/v1/results
-
-If the Test Host is offline, ``--offline`` should be added to support running with
-local resources.
-
-.. code-block:: bash
-
-   $ dovetail run --offline --report http://<test_host_ip>:<testapi_port>/api/v1/results
-
-Here is an example of running mandatory test areas.
-
-.. code-block:: bash
-
-   $ dovetail run --offline --testarea mandatory --report http://192.168.135.2:8000/api/v1/results
-   2017-09-29 07:00:55,718 - run - INFO - ================================================
-   2017-09-29 07:00:55,718 - run - INFO - Dovetail compliance: cvp.0.8.0!
-   2017-09-29 07:00:55,718 - run - INFO - ================================================
-   2017-09-29 07:00:55,719 - run - INFO - Build tag: daily-master-f0795af6-a4e3-11e7-acc5-0242ac110004
-   2017-09-29 07:00:55,956 - run - INFO - >>[testcase]: dovetail.osinterop.tc001
-   2017-09-29 07:15:19,514 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
-   2017-09-29 07:15:19,514 - run - INFO - >>[testcase]: dovetail.vping.tc001
-   2017-09-29 07:17:24,095 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
-   2017-09-29 07:17:24,095 - run - INFO - >>[testcase]: dovetail.vping.tc002
-   2017-09-29 07:20:42,434 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
-   2017-09-29 07:20:42,434 - run - INFO - >>[testcase]: dovetail.ha.tc001
-   ...
-
-After that there will be a tar file including the result file and all the log files,
-for example ``${DOVETAIL_HOME}/logs_29_07_22.tar.gz``.
-The file is named according to the current time. In this case, it was generated at 07:22 29th.
-This tar file is used to upload to CVP.
-
-Special Configuration for Running HA Test Cases
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-HA test cases need to know the info of a controller node of the OpenStack.
-It should include the node's name, role, ip, as well as the user and key_filename
-or password to login the node. Users should create file
-``${DOVETAIL_HOME}/pre_config/pod.yaml`` to store the info.
-
-There is a sample file for users.
+Below is a sample with the required syntax when password is employed by the controller.
 
 .. code-block:: bash
 
@@ -496,8 +324,9 @@ There is a sample file for users.
        # Password of the user.
        password: root
 
-Besides the 'password', user could also provide 'key_filename' to login the node.
+Besides the 'password', a 'key_filename' entry can be provided to login to the controller node.
 Users need to create file ``$DOVETAIL_HOME/pre_config/id_rsa`` to store the private key.
+A sample is provided below to show the required syntax when using a key file.
 
 .. code-block:: bash
 
@@ -513,33 +342,269 @@ Users need to create file ``$DOVETAIL_HOME/pre_config/id_rsa`` to store the priv
        # to /root/.ssh/id_rsa of Yardstick container
        key_filename: /root/.ssh/id_rsa
 
+Under nodes, repeat entries for name, role, ip, user and password or key file for each of the
+controller/compute nodes that comprise the SUT. Use a '-' to separate each of the entries.
+Specify the value for the role key to be either 'Controller' or 'Compute' for each node.
 
-Configuration for Running Tempest Test Cases
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Configuration of Hosts File (Optional)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The test cases in the test areas `osinterop` (OpenStack Interoperability tests),
-`ipv6` and `tempest` are based on Tempest.  A SUT-specific configuration of
-Tempest is required in order to run those test cases successfully.  The
-corresponding SUT-specific configuration options should be supplied in the file
-``$DOVETAIL_HOME/pre_config/tempest_conf.yaml``.
+If your SUT uses a hosts file to translate hostnames into the IP of OS_AUTH_URL, then you need
+to provide the hosts info in a file ``$DOVETAIL_HOME/pre_config/hosts.yaml``.
 
-Create and edit file ``$DOVETAIL_HOME/pre_config/tempest_conf.yaml``.
-Here is an example of what this file should contain.
+Create and edit file ``$DOVETAIL_HOME/pre_config/hosts.yaml``. Below is an example of what
+this file should contain. Note, that multiple hostnames can be specified for each IP address,
+as shown in the generic syntax below the example.
 
 .. code-block:: bash
 
-   compute:
-     # The minimum number of compute nodes expected.
-     # This should be no less than 2 and no larger than the compute nodes the SUT actually has.
-     min_compute_nodes: 2
+   $ cat ${DOVETAIL_HOME}/pre_config/hosts.yaml
 
-     # Expected device name when a volume is attached to an instance.
-     volume_device_name: vdb
+   ---
+   hosts_info:
+     192.168.141.101:
+       - ha-vip
+
+     <ip>:
+       - <hostname1>
+       - <hostname2>
+
+
+Installing Dovetail on the Test Host
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Dovetail project maintains a Docker image that has Dovetail test tools preinstalled.
+This Docker image is tagged with versions. Before pulling the Dovetail image, check the
+OPNFV's CVP web page first to determine the right tag for CVP testing.
+
+Online Test Host
+""""""""""""""""
+
+If the Test Host is online, you can directly pull Dovetail Docker image and download Ubuntu
+and Cirros images. All other dependent docker images will automatically be downloaded. The
+Ubuntu and Cirros images are used by Dovetail for image creation and VM instantiation within
+the SUT.
+
+.. code-block:: bash
+
+   $ wget -nc http://artifacts.opnfv.org/sdnvpn/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/pre_config
+   $ wget -nc http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img -P ${DOVETAIL_HOME}/pre_config
+
+   $ sudo docker pull opnfv/dovetail:ovp.1.0.0
+   ovp.1.0.0: Pulling from opnfv/dovetail
+   30d541b48fc0: Pull complete
+   8ecd7f80d390: Pull complete
+   46ec9927bb81: Pull complete
+   2e67a4d67b44: Pull complete
+   7d9dd9155488: Pull complete
+   cc79be29f08e: Pull complete
+   e102eed9bf6a: Pull complete
+   952b8a9d2150: Pull complete
+   bfbb639d1f38: Pull complete
+   bf7c644692de: Pull complete
+   cdc345e3f363: Pull complete
+   Digest: sha256:d571b1073b2fdada79562e8cc67f63018e8d89268ff7faabee3380202c05edee
+   Status: Downloaded newer image for opnfv/dovetail:ovp.1.0.0
+
+An example of the <tag> is *ovp.1.0.0*.
+
+Offline Test Host
+"""""""""""""""""
+
+If the Test Host is offline, you will need to first pull the Dovetail Docker image, and all the
+dependent images that Dovetail uses, to a host that is online. The reason that you need
+to pull all dependent images is because Dovetail normally does dependency checking at run-time
+and automatically pulls images as needed, if the Test Host is online. If the Test Host is
+offline, then all these dependencies will need to be manually copied.
+
+.. code-block:: bash
+
+   $ sudo docker pull opnfv/dovetail:ovp.1.0.0
+   $ sudo docker pull opnfv/functest:ovp.1.0.0
+   $ sudo docker pull opnfv/yardstick:danube.3.2
+   $ sudo docker pull opnfv/testapi:ovp.1.0.0
+   $ sudo docker pull mongo:3.2.1
+   $ sudo wget -nc http://artifacts.opnfv.org/sdnvpn/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P {ANY_DIR}
+   $ sudo wget -nc http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img -P {ANY_DIR}
+
+Once all these images are pulled, save the images, copy to the Test Host, and then load
+the Dovetail image and all dependent images at the Test Host. The final two lines above are
+to obtain the test images for transfer to the Test Host.
+
+At the online host, save the images with the command below.
+
+.. code-block:: bash
+
+   $ sudo docker save -o dovetail.tar opnfv/dovetail:ovp.1.0.0 \
+     opnfv/functest:ovp.1.0.0 opnfv/yardstick:danube.3.2 \
+     opnfv/testapi:ovp.1.0.0 mongo:3.2.1
+
+The command above creates a dovetail.tar file with all the images, which can then be copied
+to the Test Host. To load the Dovetail images on the Test Host execute the command below.
+
+.. code-block:: bash
+
+   $ sudo docker load --input dovetail.tar
+
+Now check to see that all Docker images have been pulled or loaded properly.
+
+.. code-block:: bash
+
+   $ sudo docker images
+   REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+   opnfv/functest      ovp.1.0.0           e2b286547478        6 weeks ago         1.26 GB
+   opnfv/dovetail      ovp.1.0.0           5d25b289451c        8 days ago          516MB
+   opnfv/yardstick     danube.3.2          df830d5c2cb2        6 weeks ago         1.21 GB
+   opnfv/testapi       ovp.1.0.0           05c6d5ebce6c        2 months ago        448 MB
+   mongo               3.2.1               7e350b877a9a        19 months ago       317 MB
+
+After copying and loading the Dovetail images at the Test Host, also copy the test images
+(Ubuntu, Cirros) to the Test Host. Copy image ubuntu-16.04-server-cloudimg-amd64-disk1.img
+to ``${DOVETAIL_HOME}/pre_config/``. Copy image cirros-0.3.5-x86_64-disk.img to
+``${DOVETAIL_HOME}/pre_config/``.
+
+Starting Dovetail Docker
+------------------------
+
+Regardless of whether you pulled down the Dovetail image directly online, or loaded from
+a static image tar file, you are now ready to run Dovetail. Use the command below to
+create a Dovetail container and get access to its shell.
+
+.. code-block:: bash
+
+   $ sudo docker run --privileged=true -it \
+             -e DOVETAIL_HOME=$DOVETAIL_HOME \
+             -v $DOVETAIL_HOME:$DOVETAIL_HOME \
+             -v /var/run/docker.sock:/var/run/docker.sock \
+             opnfv/dovetail:<tag> /bin/bash
+
+The ``-e`` option sets the DOVETAIL_HOME environment variable in the container and the
+``-v`` options map files in the Test Host to files in the container. The latter option
+allows the Dovetail container to read the configuration files and write result files into
+DOVETAIL_HOME on the Test Host. The user should be within the Dovetail container shell,
+once the command above is executed.
+
+Build Local DB and Testapi Services
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The steps in this section only need to be executed if the user plans on storing consolidated
+results on the Test Host that can be uploaded to the CVP portal.
+
+Dovetail needs to build the local DB and testapi service for storing and reporting results
+to the CVP web portal. There is a script in the Dovetail container for building the local DB.
+The ports 27017 and 8000 are used by the DB and testapi respectively. If the Test Host is
+using these ports for existing services, to avoid conflicts, remap the ports to values that
+are unused. Execute the commands below in the Dovetail container to remap ports, as required.
+This step can be skipped if there are no port conflicts with the Test Host.
+
+.. code-block:: bash
+
+   $ export mongodb_port=<new_DB_port>
+   $ export testapi_port=<new_testapi_port>
+
+Within the Dovetail container, navigate to the directory and execute the shell script using
+the commands below to build the local DB and testapi services.
+
+.. code-block:: bash
+
+   $ cd /home/opnfv/dovetail/dovetail/utils/local_db/
+   $ ./launch_db.sh
+
+To validate the DB and testapi services are running successfully, navigate to the URL
+``http://<test_host_ip>:<testapi_port>/api/v1/results``, substituting within the URL
+the IP address of the Test Host and the testapi port number. If you can access this URL
+successfully, the services are up and running.
+
+Running the CVP Test Suite
+--------------------------
+
+All or a subset of the available tests can be executed at any location within the
+Dovetail container prompt. You can refer to :ref:`cli-reference`
+for the details of the CLI.
+
+
+.. code-block:: bash
+
+   $ dovetail run --testsuite <test-suite-name>
+
+The '--testsuite' option is used to control the set of tests intended for execution
+at a high level. For the purposes of running the CVP test suite, the test suite name follows
+the following format, ``ovp.<major>.<minor>.<patch>``. The latest and default test suite is
+ ovp.1.0.0.
+
+.. code-block:: bash
+
+   $ dovetail run
+
+This command is equal to
+
+.. code-block:: bash
+
+   $ dovetail run --testsuite ovp.1.0.0
+
+Without any additional options, the above command will attempt to execute all mandatory and
+optional test cases. To restrict the breadth of the test scope, test areas can also be
+specified using the '--testarea' option. The test area can be specified broadly using arguments
+'mandatory' and 'optional'. The mandatory tests can be narrowed further using test area arguments
+'osinterop', 'vping' and 'ha'. The optional tests can be narrowed further using test area
+arguments 'ipv6', 'sdnvpn' and 'tempest'.
+
+.. code-block:: bash
+
+   $ dovetail run --testarea mandatory
+
+By default, results are stored in local files on the Test Host at ``$DOVETAIL_HOME/results``.
+Each time the 'dovetail run' command is executed, the results in the aforementioned directory
+are overwritten. To create a singular compressed result file for upload to the CVP portal or
+for archival purposes, the results need to pushed to the local DB. This can be achieved by
+using the '--report' option with an argument syntax as shown below. Note, that the Test Host
+IP address and testapi port number must be substituted with appropriate values.
+
+.. code-block:: bash
+
+   $ dovetail run --report http://<test_host_ip>:<testapi_port>/api/v1/results
+
+If the Test Host is offline, ``--offline`` should be added to support running with
+local resources.
+
+.. code-block:: bash
+
+   $ dovetail run --offline --report http://<test_host_ip>:<testapi_port>/api/v1/results
+
+Below is an example of running the entire mandatory test area and the creation of the compressed
+result file on the Test Host.
+
+.. code-block:: bash
+
+   $ dovetail run --offline --testarea mandatory --report http://192.168.135.2:8000/api/v1/results
+   2017-09-29 07:00:55,718 - run - INFO - ================================================
+   2017-09-29 07:00:55,718 - run - INFO - Dovetail compliance: ovp.1.0.0!
+   2017-09-29 07:00:55,718 - run - INFO - ================================================
+   2017-09-29 07:00:55,719 - run - INFO - Build tag: daily-master-f0795af6-a4e3-11e7-acc5-0242ac110004
+   2017-09-29 07:00:55,956 - run - INFO - >>[testcase]: dovetail.osinterop.tc001
+   2017-09-29 07:15:19,514 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
+   2017-09-29 07:15:19,514 - run - INFO - >>[testcase]: dovetail.vping.tc001
+   2017-09-29 07:17:24,095 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
+   2017-09-29 07:17:24,095 - run - INFO - >>[testcase]: dovetail.vping.tc002
+   2017-09-29 07:20:42,434 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
+   2017-09-29 07:20:42,434 - run - INFO - >>[testcase]: dovetail.ha.tc001
+   ...
+
+When test execution is complete, a tar file with all result and log files is written in
+``$DOVETAIL_HOME`` on the Test Host. An example filename is
+``${DOVETAIL_HOME}/logs_20180105_0858.tar.gz``. The file is named using a
+timestamp that follows the convention 'YearMonthDay-HourMinute'. In this case, it was generated
+at 08:58 on January 5th, 2018. This tar file is used to upload to the CVP portal.
+
 
 Making Sense of CVP Test Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When a tester is performing trial runs, Dovetail stores results in a local file by default.
+When a tester is performing trial runs, Dovetail stores results in local files on the Test
+Host by default within the directory specified below. Note, that if the '--report' option
+is used to execute tests, results are written to results.json and the files functest_results.txt
+and dovetail_ha_tcXXX.out will not be created.
+
 
 .. code-block:: bash
 
@@ -552,7 +617,7 @@ When a tester is performing trial runs, Dovetail stores results in a local file 
      * Review the dovetail.log to see if all important information has been captured
        - in default mode without DEBUG.
 
-     * Review the results.json to see all results data including criteria PASS or FAIL.
+     * Review the results.json to see all results data including criteria for PASS or FAIL.
 
    * Example: OpenStack Interoperability test cases
 
@@ -581,44 +646,57 @@ When a tester is performing trial runs, Dovetail stores results in a local file 
        ``sdnvpn_logs/dovetail.sdnvpn.tcXXX.log`` and ``tempest_logs/dovetail.tempest.tcXXX.log``,
        respectively. They all have the passed, skipped and failed test cases results.
 
-#. OPNFV web interface
-  CVP will host a web site to collect test results. Users can upload their results to this web site,
-  so they can review these results in the future.
+CVP Portal Web Interface
+------------------------
 
-   * web site url
+The CVP portal is a public web interface for the community to collaborate on results
+and to submit results for official OPNFV compliance verification. The portal can be used as a
+resource by users and testers to navigate and inspect results more easily than by manually
+inspecting the log files. The portal also allows users to share results in a private manner
+until they are ready to submit results for peer community review.
 
-     * https://cvp.opnfv.org
+   * Web Site URL
 
-   * Sign in / Sign up
+     * https://verified.opnfv.org
 
-     * You need to sign in you account, then you can upload results, and check your private results.
-       CVP is now using Linux Foundation ID as account provider.
+   * Sign In / Sign Up Links
 
-     * If you already have a Linux Foundation ID, you can sign in directly with your id.
+     * Accounts are exposed through Linux Foundation or OpenStack account credentials.
 
-     * If you do not have a Linux Foundation ID, you can sign up a new one on the sign up page.
+     * If you already have a Linux Foundation ID, you can sign in directly with your ID.
 
-     * If you do not sign in, you can only check the community results.
+     * If you do not have a Linux Foundation ID, you can sign up for a new one using 'Sign Up'
 
-   * My results
+   * My Results Tab
 
-     * This page lists all results uploaded by you after you signed in.
+     * This is the primary view where most of the workflow occurs.
 
-     * You can also upload your results on this page.
+     * This page lists all results uploaded by you after signing in.
 
-     * The generated results tar file is located at ``${DOVETAIL_HOME}/``, named as ``logs_29_07_22.tar.gz``.
+     * You can also upload results on this page with the two steps below.
 
-     * There is a *choose file* button, once you click it, you can choose your reuslt file in your harddisk
-       then click the *upload* button, and you will see a results id once your uploading succeed.
+     * Obtain results tar file located at ``${DOVETAIL_HOME}/``, example ``logs_20180105_0858.tar.gz``
 
-     * Check the *review* box to submit your result to the OPNFV. Uncheck the box to withdraw your result.
+     * Use the *Choose File* button where a file selection dialog allows you to choose your result
+       file from the hard-disk. Then click the *Upload* button and see a results ID once your
+       upload succeeds.
 
-   * profile
+     * Results are status 'private' until they are submitted for review.
 
-     * This page shows your account info after you signed in.
+     * Use the *Operation* column drop-down option 'submit to review', to expose results to
+       OPNFV community peer reviewers. Use the 'withdraw submit' option to reverse this action.
+
+     * Use the *Operation* column drop-down option 'share with' to share results with other
+       users by supplying either the login user ID or the email address associated with
+       the share target account. The result is exposed to the share target but remains private
+       otherwise.
+
+   * Profile Tab
+
+     * This page shows your account info after you sign in.
 
 Updating Dovetail or a Test Suite
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 Follow the instructions in section `Installing Dovetail on the Test Host`_ and
 `Running the CVP Test Suite`_ by replacing the docker images with new_tags,
