@@ -39,6 +39,121 @@
       "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_56076d1c",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-11-13T12:24:03Z",
+      "side": 1,
+      "message": "Using this variable notation here cause failures in tempest which tried to look-up a value for the variable in tempest.conf but failed because it is an environment variable. I had to expand this variable here manually.",
+      "range": {
+        "startLine": 246,
+        "startChar": 20,
+        "endLine": 246,
+        "endChar": 34
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_20fa63bd",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-11-13T12:24:03Z",
+      "side": 1,
+      "message": "I suggest to introduce a heading here to make it more obvious that the online/offline sections are mutual exclusive configuration steps.",
+      "range": {
+        "startLine": 374,
+        "startChar": 0,
+        "endLine": 374,
+        "endChar": 27
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_8009afdf",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-11-13T12:24:03Z",
+      "side": 1,
+      "message": "it should be possible to run this without root permissions",
+      "range": {
+        "startLine": 381,
+        "startChar": 5,
+        "endLine": 381,
+        "endChar": 9
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_e0107b03",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 382,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-11-13T12:24:03Z",
+      "side": 1,
+      "message": "same as above",
+      "range": {
+        "startLine": 382,
+        "startChar": 5,
+        "endLine": 382,
+        "endChar": 9
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_c013b70b",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 402,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-11-13T12:24:03Z",
+      "side": 1,
+      "message": "I suggest to introduce a heading here to make it more obvious that the online/offline sections are mutual exclusive configuration steps.",
+      "range": {
+        "startLine": 402,
+        "startChar": 0,
+        "endLine": 402,
+        "endChar": 27
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
