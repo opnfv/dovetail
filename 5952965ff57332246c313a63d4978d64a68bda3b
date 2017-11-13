@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_9690d544",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-11-13T06:12:55Z",
+      "side": 1,
+      "message": "is python required? dovetail is executed under docker, which means python is required within docker and was guaranteed by docker image dovetail built, I don\u0027t think test host needs python to be installed.",
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_d69a5d62",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-11-13T06:12:55Z",
+      "side": 1,
+      "message": "please delete trailing spaces in the file",
+      "range": {
+        "startLine": 112,
+        "startChar": 89,
+        "endLine": 112,
+        "endChar": 90
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
