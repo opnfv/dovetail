@@ -167,13 +167,13 @@ class Container(object):
                                          'hosts.yaml')
         if os.path.isfile(hosts_config_file):
             with open(hosts_config_file) as f:
-                hosts_info = yaml.safe_load(f)
-            if hosts_info['hosts_info']:
-                for host in hosts_info['hosts_info']:
-                    dt_utils.add_hosts_info(host)
-                    hosts_config += " --add-host "
-                    hosts_config += str(host)
-                cls.logger.debug('Get hosts info {}.'.format(host))
+                hosts_yaml = yaml.safe_load(f)
+            if hosts_yaml['hosts_info']:
+                for ip, hostnames in hosts_yaml['hosts_info'].iteritems():
+                    hostnames = ' '.join(hostname for hostname in hostnames)
+                    dt_utils.add_hosts_info(ip, hostnames)
+                    hosts_config += ' --add-host=\'{}\':{} '.format(hostnames, ip)
+                    cls.logger.debug('Get hosts info {}: {}.'.format(ip, hostnames))
 
         config = ""
         if type.lower() == "functest":
