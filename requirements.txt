@@ -9,3 +9,4 @@ python-openstackclient==3.9.0
 requests==2.10.0
 six==1.10.0
 stevedore==1.20.0
+python-hosts==0.4.1

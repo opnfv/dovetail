@@ -19,6 +19,7 @@ import urllib2
 from datetime import datetime
 from distutils.version import LooseVersion
 import yaml
+import python_hosts
 
 from dovetail_config import DovetailConfig as dt_cfg
 
@@ -214,10 +215,13 @@ def check_docker_version(logger=None):
                      "Docker client should be updated to at least 1.12.3.")
 
 
-def add_hosts_info(hosts_info):
-    hosts_file = '/etc/hosts'
-    with open(hosts_file, 'a') as f:
-        f.write("{}\n".format(hosts_info))
+def add_hosts_info(ip, hostnames):
+    hosts = python_hosts.Hosts(path='/etc/hosts')
+    new_entry = python_hosts.HostsEntry(entry_type='ipv4',
+                                        address=ip,
+                                        names=hostnames)
+    hosts.add([new_entry])
+    hosts.write()
 
 
 def get_hardware_info(logger=None):
