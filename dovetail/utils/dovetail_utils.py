@@ -1,5 +1,6 @@
-#!/usr/bin/env python
-#
+##############################################################################
+# Copyright (c) 2017 <Company or Individual> and others.
+
 # jose.lausuch@ericsson.com
 # valentin.boucher@orange.com
 # grakiss.wanglei@huawei.com
@@ -7,7 +8,8 @@
 # are made available under the terms of the Apache License, Version 2.0
 # which accompanies this distribution, and is available at
 # http://www.apache.org/licenses/LICENSE-2.0
-#
+##############################################################################
+
 
 import sys
 import os
@@ -214,10 +216,10 @@ def check_docker_version(logger=None):
                      "Docker client should be updated to at least 1.12.3.")
 
 
-def add_hosts_info(hosts_info):
+def add_hosts_info(ip, hostnames):
     hosts_file = '/etc/hosts'
     with open(hosts_file, 'a') as f:
-        f.write("{}\n".format(hosts_info))
+        f.write('{} {}\n'.format(ip, hostnames))
 
 
 def get_hardware_info(logger=None):
