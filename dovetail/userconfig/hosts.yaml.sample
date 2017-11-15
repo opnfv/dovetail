@@ -1,2 +1,7 @@
 ---
 hosts_info:
+  192.168.141.101:
+    - ha-vip
+  <ip>:
+    - <hostname1>
+    - <hostname2>
