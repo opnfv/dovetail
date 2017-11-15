@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "9a3d3df0_ca13ce0b",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-15T02:56:20Z",
+      "side": 1,
+      "message": "Will it be better if add a section somewhere in this user guide to say that how many mandatory test cases there are, and list all of them as well as the optional ones.",
+      "range": {
+        "startLine": 45,
+        "startChar": 13,
+        "endLine": 45,
+        "endChar": 33
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_9690d544",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 1
@@ -42,6 +65,29 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_d4aff592",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-15T02:56:20Z",
+      "side": 1,
+      "message": "It doesn\u0027t need this \u0027DOVETAIL_HOME\u0027 in this file any more. Because we will export it when running the container.",
+      "range": {
+        "startLine": 240,
+        "startChar": 3,
+        "endLine": 241,
+        "endChar": 38
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_56076d1c",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 1
@@ -58,6 +104,99 @@
         "startChar": 20,
         "endLine": 246,
         "endChar": 34
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_3496214d",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-15T02:56:20Z",
+      "side": 1,
+      "message": "It needs to give the path of the cacert file. In this case (DOVETAIL_HOME\u003d/home/dovetail) it should be\nexport OS_CACERT\u003d/home/dovetail/pre_config/cacert.pem",
+      "parentUuid": "9a3d3df0_56076d1c",
+      "range": {
+        "startLine": 246,
+        "startChar": 20,
+        "endLine": 246,
+        "endChar": 34
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_143b1d39",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-15T02:56:20Z",
+      "side": 1,
+      "message": "This file is also required by ipv6 and tempest test cases.",
+      "range": {
+        "startLine": 268,
+        "startChar": 8,
+        "endLine": 268,
+        "endChar": 27
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_7421c9fa",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-15T02:56:20Z",
+      "side": 1,
+      "message": "pod.yaml file is also used to get all nodes\u0027 hardware info.",
+      "range": {
+        "startLine": 269,
+        "startChar": 33,
+        "endLine": 269,
+        "endChar": 43
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_f484b9d5",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-15T02:56:20Z",
+      "side": 1,
+      "message": "For HA test cases, they just need the login info of one controller node, which is node1.\nFor getting all nodes\u0027 hardware info, it needs to provide all nodes\u0027 login info in order to get all nodes\u0027 hardware info.",
+      "range": {
+        "startLine": 311,
+        "startChar": 7,
+        "endLine": 311,
+        "endChar": 18
       },
       "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
@@ -134,6 +273,29 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_f45b1985",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 385,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-15T02:56:20Z",
+      "side": 1,
+      "message": "here is cvp.0.9.0",
+      "range": {
+        "startLine": 385,
+        "startChar": 3,
+        "endLine": 385,
+        "endChar": 12
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_c013b70b",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 1
@@ -150,6 +312,121 @@
         "startChar": 0,
         "endLine": 402,
         "endChar": 27
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_34558150",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 497,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-15T02:56:20Z",
+      "side": 1,
+      "message": "For the new script, it doesn\u0027t need to provide the IP of the Test Host anymore. Because now it uses the internal IPs of testapi container and mongoDB container instead of the Test Host\u0027s IP which is disable for Centos.",
+      "range": {
+        "startLine": 496,
+        "startChar": 63,
+        "endLine": 497,
+        "endChar": 73
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_14503d5d",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 502,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-15T02:56:20Z",
+      "side": 1,
+      "message": "remove the \u003ctest_host_ip\u003e.",
+      "range": {
+        "startLine": 502,
+        "startChar": 20,
+        "endLine": 502,
+        "endChar": 34
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_d4d535ba",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 572,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-15T02:56:20Z",
+      "side": 1,
+      "message": "here is actually cvp.0.9.0",
+      "range": {
+        "startLine": 572,
+        "startChar": 63,
+        "endLine": 572,
+        "endChar": 72
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_74e6e9b5",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-15T02:56:20Z",
+      "side": 1,
+      "message": "functest_results.txt and results.json will not be created simultaneously. If use --report to push data to DB, it will store results (functest and yardstcik) in file results.json. Otherwise, it will store all functest results in file functest_results.txt and all yardstick results in file dovetail_ha_tcXXX.out.",
+      "range": {
+        "startLine": 623,
+        "startChar": 30,
+        "endLine": 623,
+        "endChar": 52
+      },
+      "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_0ac0167b",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 672,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-15T02:56:20Z",
+      "side": 1,
+      "message": "they",
+      "range": {
+        "startLine": 672,
+        "startChar": 42,
+        "endLine": 672,
+        "endChar": 45
       },
       "revId": "5952965ff57332246c313a63d4978d64a68bda3b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
