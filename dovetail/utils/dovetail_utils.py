@@ -9,6 +9,7 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 
+
 import sys
 import os
 import re
@@ -214,10 +215,10 @@ def check_docker_version(logger=None):
                      "Docker client should be updated to at least 1.12.3.")
 
 
-def add_hosts_info(hosts_info):
+def add_hosts_info(ip, hostnames):
     hosts_file = '/etc/hosts'
     with open(hosts_file, 'a') as f:
-        f.write("{}\n".format(hosts_info))
+        f.write('{} {}\n'.format(ip, hostnames))
 
 
 def get_hardware_info(logger=None):
