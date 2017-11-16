@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_49322b11",
+        "filename": "dovetail/userconfig/hosts.yaml.sample",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-16T02:41:47Z",
+      "side": 1,
+      "message": "After merging this patch, please comment on Eddie\u0027s patch to ensure the format of the hosts file is the same as the userguide says.",
+      "range": {
+        "startLine": 3,
+        "startChar": 2,
+        "endLine": 7,
+        "endChar": 17
+      },
+      "revId": "edcdb7fe57e6f3d912a1da03dc2f51b5a3d32846",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_e9533f37",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-16T02:41:47Z",
+      "side": 1,
+      "message": "Before wirtting the file, it may be better to check the existing hosts in this file. Otherwise there will be many duplicate info.\nCould you try to find a proper method to do that?",
+      "range": {
+        "startLine": 220,
+        "startChar": 8,
+        "endLine": 220,
+        "endChar": 48
+      },
+      "revId": "edcdb7fe57e6f3d912a1da03dc2f51b5a3d32846",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
