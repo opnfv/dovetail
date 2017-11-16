@@ -16,7 +16,6 @@ db_host_ip = sys.argv[1]
 testapi_port = sys.argv[2]
 
 target_url = 'http://{}:{}/api/v1'.format(db_host_ip, testapi_port)
-print(target_url)
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -27,7 +26,15 @@ def get(url):
 def post(url, data):
     headers = {'Content-Type': 'application/json'}
     res = requests.post(url, data=json.dumps(data), headers=headers)
-    print(res.text)
+    try:
+        status_code = vars(res)["status_code"]
+        if (status_code == 403 and "Already Exists" in vars(res)["_content"]) \
+            or status_code == 200:
+            return
+        else:
+            print(res.text)
+    except Exception as e:
+        print("Error: exception {}.".format(e))
 
 
 def pod():
@@ -55,7 +62,6 @@ def cases():
                 for c in cases["testcases"]:
                     target = '{}/projects/{}/cases'.format(target_url,
                                                            c['project_name'])
-                    print(target)
                     post(target, c)
             except:
                 print("useless data")
