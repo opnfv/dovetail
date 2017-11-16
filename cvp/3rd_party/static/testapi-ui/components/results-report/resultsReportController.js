@@ -20,7 +20,7 @@
         .controller('ResultsReportController', ResultsReportController);
 
     ResultsReportController.$inject = [
-        '$http', '$stateParams', '$window',
+        '$scope', '$http', '$stateParams', '$window',
         '$uibModal', 'testapiApiUrl', 'raiseAlert'
     ];
 
@@ -29,15 +29,24 @@
      * This controller is for the '/results/<test run ID>' page where a user can
      * view details for a specific test run.
      */
-    function ResultsReportController($http, $stateParams, $window,
+    function ResultsReportController($scope, $http, $stateParams, $window,
         $uibModal, testapiApiUrl, raiseAlert) {
 
         var ctrl = this;
 
-        ctrl.getResults = getResults;
+        ctrl.testStatus = 'total';
+        ctrl.case_list = [];
+        ctrl.data = {};
+        ctrl.statistics = {
+            'total': 0, 'pass': 0, 'fail': 0,
+            'mandatory': {'total': 0, 'pass': 0, 'fail': 0, 'area': 0},
+            'optional': {'total': 0, 'pass': 0, 'fail': 0, 'area': 0}
+        };
+
         ctrl.gotoDoc = gotoDoc;
         ctrl.openAll = openAll;
         ctrl.folderAll = folderAll;
+        ctrl.gotoResultLog = gotoResultLog;
 
         /** The testID extracted from the URL route. */
         ctrl.testId = $stateParams.testID;
@@ -47,16 +56,17 @@
         ctrl.detailsTemplate = 'testapi-ui/components/results-report/partials/' +
                                'reportDetails.html';
 
-        ctrl.total = 0;
-        ctrl.mandatory_total = 0;
-        ctrl.mandatory_pass = 0;
-        ctrl.mandatory_fail = 0;
-        ctrl.optional_total = 0;
-        ctrl.optional_pass = 0;
-        ctrl.optional_fail = 0;
+        $scope.load_finish = false;
 
-        ctrl.testStatus = 'total';
-        ctrl.gotoResultLog = gotoResultLog;
+        function extend(case_list) {
+            angular.forEach(case_list, function(ele){
+                ctrl.case_list.push(ele);
+            });
+        }
+
+        function strip(word) {
+              return word.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+        }
 
         function gotoResultLog(case_name) {
             var case_area = case_name.split(".")[1];
@@ -68,129 +78,163 @@
             } else {
                 log_url += case_area+"_logs/"+case_name+".log";
             }
-            window.open(log_url);
+            var is_reachable = false;
+
+            $.ajax({
+                url: log_url,
+                async: false,
+                success: function (response) {
+                    is_reachable = true;
+                },
+                error: function (response){
+                    alert("Log file could not be found. Please confirm this case has been executed successfully.");
+                }
+            });
+
+            if(is_reachable == true){
+                window.open(log_url);
+            }
         }
 
+        $scope.$watch('load_finish', function(){
+            if($scope.load_finish == true){
+                var case_url = 'testapi-ui/components/results-report/data/new_testcases.json'
+                $http.get(case_url).then(function(response){
+                    ctrl.data = response.data;
 
-        /**
-         * Retrieve results from the TestAPI API server based on the test
-         * run id in the URL. This function is the first function that will
-         * be called from the controller. Upon successful retrieval of results,
-         * the function that gets the version list will be called.
-         */
-        function getResults() {
-            ctrl.cases = {};
-            $http.get(testapiApiUrl + '/tests/' + ctrl.innerId).success(function(test_data){
-                var results = test_data.results;
-                angular.forEach(results, function(ele){
-                    var content_url = testapiApiUrl + '/results/' + ele;
-                    ctrl.resultsRequest =
-                        $http.get(content_url).success(function(data) {
-                            var result_case = data;
-                            if(result_case.project_name == 'yardstick'){
-                                yardstickHandler(result_case);
+                    angular.forEach(ctrl.data.mandatory, function(value, name){
+                        ctrl.data.mandatory[name].folder = true;
+                        ctrl.data.mandatory[name].pass = 0;
+                        ctrl.data.mandatory[name].fail = 0;
+                        angular.forEach(value.cases, function(sub_case){
+                            ctrl.statistics.total += 1;
+                            ctrl.statistics.mandatory.total += 1;
+                            if(ctrl.case_list.indexOf(sub_case) > -1){
+                                ctrl.data.mandatory[name].pass += 1;
+                                ctrl.statistics.mandatory.pass += 1;
+                                ctrl.statistics.pass += 1;
                             }else{
-                                functestHandler(result_case);
+                                ctrl.data.mandatory[name].fail += 1;
+                                ctrl.statistics.mandatory.fail += 1;
+                                ctrl.statistics.fail += 1;
                             }
-                            result_case.folder = true;
-                            ctrl.cases[result_case._id] = result_case;
-                            count(result_case);
-                       }).error(function (error) {
-                            ctrl.showError = true;
-                            ctrl.resultsData = null;
-                            ctrl.error = 'Error retrieving results from server: ' +
-                                angular.toJson(error);
+
                         });
                     });
+
+                    angular.forEach(ctrl.data.optional, function(value, name){
+                        ctrl.data.optional[name].folder = true;
+                        ctrl.data.optional[name].pass = 0;
+                        ctrl.data.optional[name].fail = 0;
+                        angular.forEach(value.cases, function(sub_case){
+                            ctrl.statistics.total += 1;
+                            ctrl.statistics.optional.total += 1;
+                            if(ctrl.case_list.indexOf(sub_case) > -1){
+                                ctrl.data.optional[name].pass += 1;
+                                ctrl.statistics.optional.pass += 1;
+                                ctrl.statistics.pass += 1;
+                            }else{
+                                ctrl.data.optional[name].fail += 1;
+                                ctrl.statistics.optional.fail += 1;
+                                ctrl.statistics.fail += 1;
+                            }
+
+                        });
+                    });
+
+                    ctrl.statistics.mandatory.area = Object.keys(ctrl.data.mandatory).length;
+                    ctrl.statistics.optional.area = Object.keys(ctrl.data.optional).length;
+                }, function(error){
+                    alert('error to get test case info');
+                });
+            }
+        });
+
+        function generate_format_data() {
+            var test_url = testapiApiUrl + '/tests/' + ctrl.innerId;
+            $http.get(test_url).then(function(test_resp){
+               angular.forEach(test_resp.data.results, function(result, index){
+                   var result_url = testapiApiUrl + '/results/' + result;
+                   $http.get(result_url).then(function(result_resp){
+                       var sub_case_list = get_sub_case_list(result_resp.data);
+                       extend(sub_case_list);
+                       if(index == test_resp.data.results.length - 1){
+                           $scope.load_finish = true;
+                       }
+                   }, function(result_error){
+                   });
+               });
+
+            }, function(test_error){
+                alert('Error when get test record');
             });
         }
 
-        function functestHandler(result_case){
-            result_case.total = 0;
-            result_case.pass = 0;
-            result_case.fail = 0;
-            if(result_case.details.success && result_case.details.success.length != 0){
-                var sub_cases = result_case.details.success;
-                if(result_case.case_name != 'refstack_defcore'){
-			angular.forEach(sub_cases, function(ele, index){
-			    sub_cases[index] = ele.split(' ')[ele.split(' ').length - 1];
-			});
-                }
-                result_case.details.success = sub_cases;
-                result_case.total += sub_cases.length;
-                result_case.pass += sub_cases.length;
-            }
-            if(result_case.details.errors && result_case.details.errors.length != 0){
-                var sub_cases = result_case.details.errors;
-                if(result_case.case_name != 'refstack_defcore'){
-			angular.forEach(sub_cases, function(ele, index){
-			    sub_cases[index] = ele.split(' ')[ele.split(' ').length - 1];
-			});
-                }
-                result_case.details.errors = sub_cases;
-                result_case.total += sub_cases.length;
-                result_case.fail += sub_cases.length;
-            }
-            if(result_case.total == 0){
-                result_case.total = 1;
-                if(result_case.criteria == 'PASS'){
-                    result_case.pass = 1;
-                }else{
-                    result_case.fail = 1;
-                }
-            }
-        }
-
-        function yardstickHandler(result_case){
-            result_case.total = 0;
-            result_case.pass = 0;
-            result_case.fail = 0;
-            angular.forEach(result_case.details.results, function(ele){
-                if(ele.benchmark){
-                    result_case.total = 1;
-                    if(ele.benchmark.data.sla_pass == 1){
-                        result_case.criteria = 'PASS';
-                        result_case.pass = 1;
-                    }else{
-                        result_case.criteria = 'FAILED';
-                        result_case.fail = 1;
-                    }
-                    return false;
-                }
-            });
-        }
-
-        function count(result_case){
-            var build_tag = result_case.build_tag;
-            var tag = build_tag.split('-').pop().split('.')[1];
-            ctrl.total += result_case.total;
-            if(tag == 'ha' || tag == 'osinterop' || tag == 'vping'){
-                ctrl.mandatory_total += result_case.total;
-                ctrl.mandatory_pass += result_case.pass;
-                ctrl.mandatory_fail += result_case.fail;
+        function get_sub_case_list(result) {
+            if(result.project_name == 'yardstick'){
+                return yardstickPass(result);
             }else{
-                ctrl.optional_total += result_case.total;
-                ctrl.optional_pass += result_case.pass;
-                ctrl.optional_fail += result_case.fail;
+                return functestPass(result);
             }
+        }
+
+        function yardstickPass(result) {
+            var case_list = [];
+            angular.forEach(result.details.results, function(ele){
+                if(ele.benchmark){
+                    if(ele.benchmark.data.sla_pass == 1){
+                        case_list.push(result.case_name);
+                        return case_list;
+                    }
+                }
+            });
+            return case_list;
+        }
+
+        function functestPass(result){
+            var case_list = [];
+            if(result.case_name == 'refstack_defcore'){
+                angular.forEach(result.details.success, function(ele){
+                    if(strip(ele) == 'tempest.api.identity.v3.test_t'){
+                        case_list.push('tempest.api.identity.v3.test_tokens.TokensV3Test.test_create_token');
+                    }else{
+                        case_list.push(ele.split(' ')[ele.split(' ').length - 2]);
+                    }
+                });
+            }else if(result.case_name == 'tempest_custom'){
+                angular.forEach(result.details.success, function(ele){
+                    case_list.push(ele.split(' ')[ele.split(' ').length - 1]);
+                });
+            }else{
+                if(result.criteria == 'PASS'){
+                    case_list.push(result.case_name);
+                }
+            }
+            return case_list;
         }
 
         function gotoDoc(sub_case){
         }
 
         function openAll(){
-            angular.forEach(ctrl.cases, function(ele, id){
+            angular.forEach(ctrl.data.mandatory, function(ele, id){
+                ele.folder = false;
+            });
+            angular.forEach(ctrl.data.optional, function(ele, id){
                 ele.folder = false;
             });
         }
 
         function folderAll(){
-            angular.forEach(ctrl.cases, function(ele, id){
+            angular.forEach(ctrl.data.mandatory, function(ele, id){
+                ele.folder = true;
+            });
+            angular.forEach(ctrl.data.optional, function(ele, id){
                 ele.folder = true;
             });
         }
 
-        getResults();
+        generate_format_data();
     }
 
 })();
