@@ -10,27 +10,22 @@
     </div>
 </div>
 
-<strong>Total: {{ctrl.total}}, Pass: {{ ctrl.mandatory_pass + ctrl.optional_pass }}, Rate: {{ (ctrl.mandatory_pass + ctrl.optional_pass) / ctrl.total * 100 | number:2 }}%</strong></br>
-<strong>Mandatory Total: {{ctrl.mandatory_total}}, Pass: {{ ctrl.mandatory_pass }}, Rate: {{ ctrl.mandatory_pass / ctrl.mandatory_total * 100 | number:2 }}%</strong></br>
-<strong>Optional Total: {{ctrl.optional_total}}, Pass: {{ ctrl.optional_pass }}, Rate: {{ ctrl.optional_pass / ctrl.optional_total * 100 | number:2 }}%</strong></br>
+<strong>Total: {{ctrl.statistics.total}}, Pass: {{ ctrl.statistics.pass}}, Rate: {{ ctrl.statistics.pass / ctrl.statistics.total * 100 | number:2 }}%</strong></br>
+<strong>Mandatory Total: {{ctrl.statistics.mandatory.total}}, Pass: {{ ctrl.statistics.mandatory.pass }}, Rate: {{ ctrl.statistics.mandatory.pass / ctrl.statistics.mandatory.total * 100 | number:2 }}%</strong></br>
+<strong>Optional Total: {{ctrl.statistics.optional.total}}, Pass: {{ ctrl.statistics.optional.pass }}, Rate: {{ ctrl.statistics.optional.pass / ctrl.statistics.optional.total * 100 | number:2 }}%</strong></br>
 
-<div ng-show="ctrl.cases">
-    <hr >
+<div>
+    <hr>
+    <h4>Test Result Overview</h4>
 
-    <div ng-show="ctrl.cases">
-
-        <hr>
-        <h4>Test Result Overview</h4>
-
-        <uib-accordion close-others=false>
-            <!-- The ng-repeat is used to pass in a local variable to the template. -->
-            <ng-include
-                src="ctrl.detailsTemplate"
-                onload="isOpen = true">
-            </ng-include>
-            <br />
-        </uib-accordion>
-    </div>
+    <uib-accordion close-others=false>
+        <!-- The ng-repeat is used to pass in a local variable to the template. -->
+        <ng-include
+            src="ctrl.detailsTemplate"
+            onload="isOpen = true">
+        </ng-include>
+        <br />
+    </uib-accordion>
 </div>
 
 <!--
