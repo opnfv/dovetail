@@ -248,7 +248,12 @@ class ResultsUploadHandler(ResultsCLHandler):
         fileinfo = self.request.files['file'][0]
         tar_in = tarfile.open(fileobj=io.BytesIO(fileinfo['body']),
                               mode="r:gz")
-        results = tar_in.extractfile('results/results.json').read()
+        try:
+            results = tar_in.extractfile('results/results.json').read()
+        except KeyError:
+            msg = 'Uploaded results must contain at least one passing test.'
+            self.finish_request({'code': 403, 'msg': msg})
+            return
         results = results.split('\n')
         result_ids = []
         for result in results:
