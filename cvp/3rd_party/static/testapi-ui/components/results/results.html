@@ -48,8 +48,8 @@
                             Operation<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                            <li role="menuitem" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status != 'review'}" ng-click="ctrl.toPrivate(result, 'private')">withdraw submit</a></li>
-                            <li role="menuitem" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status != 'private'}" ng-click="ctrl.toReview(result, 'review')">submit to review</a></li>
+                            <li role="menuitem" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status != 'review' || auth.currentUser.openid != result.owner}" ng-click="ctrl.toPrivate(result, 'private')">withdraw submit</a></li>
+                            <li role="menuitem" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status != 'private' || auth.currentUser.openid != result.owner}" ng-click="ctrl.toReview(result, 'review')">submit to review</a></li>
                             <!--
                             <li role="menuitem" ng-if="auth.currentUser.role.indexOf('reviewer') != -1" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status == 'approved'}" ng-click="ctrl.toggleCheck(result, 'status', 'approve')">approve</a></li>
                             <li role="menuitem" ng-if="auth.currentUser.role.indexOf('reviewer') != -1" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status == 'not approved'}" ng-click="ctrl.toggleCheck(result, 'status', 'not approve')">not approve</a></li>
