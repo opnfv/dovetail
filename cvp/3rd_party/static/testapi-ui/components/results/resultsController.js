@@ -254,23 +254,28 @@
             $http.post(uploadUrl, fd, {
                 transformRequest: angular.identity,
                 headers: {'Content-Type': undefined}
-            })
-            .success(function(data){
-                ctrl.uploadState = "";
-                data.filename = file.name;
-                var createTestUrl = testapiApiUrl + "/tests"
-                $http.post(createTestUrl, data)
-                .success(function(data, status){
-                  if (data.code && data.code != 0) {
-                    alert(data.msg);
-                  } else {
-                    ctrl.update();
-                  }
-                });
-             })
+            }).then(function(data){
 
-            .error(function(data, status){
-                ctrl.uploadState = "Upload failed. Error code is " + status;
+                if(data.data.code && data.data.code != 0){
+                    alert(data.data.msg);
+                    return;
+                }
+
+                ctrl.uploadState = "";
+                data.data.filename = file.name;
+                var createTestUrl = testapiApiUrl + "/tests"
+
+                $http.post(createTestUrl, data.data).then(function(data){
+                    if (data.data.code && data.data.code != 0) {
+                        alert(data.data.msg);
+                    } else {
+                        ctrl.update();
+                    }
+                }, function(error){
+                });
+
+             }, function(error){
+                ctrl.uploadState = "Upload failed. Error code is " + error.status;
             });
         }
 
