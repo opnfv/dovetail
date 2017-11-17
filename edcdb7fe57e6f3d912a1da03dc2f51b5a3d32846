@@ -93,6 +93,30 @@
       "revId": "edcdb7fe57e6f3d912a1da03dc2f51b5a3d32846",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_32d46c46",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-11-17T01:11:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a3d3df0_e9533f37",
+      "range": {
+        "startLine": 220,
+        "startChar": 8,
+        "endLine": 220,
+        "endChar": 48
+      },
+      "revId": "edcdb7fe57e6f3d912a1da03dc2f51b5a3d32846",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
