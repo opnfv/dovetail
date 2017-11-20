@@ -189,25 +189,21 @@ class TestsGURHandler(GenericTestHandler):
         query = {'_id': objectid.ObjectId(_id)}
         db_keys = ['_id', ]
         curr_user = self.get_secure_cookie(auth_const.OPENID)
-        if item in {"shared", "label"}:
+        if item in {"shared", "label", "status"}:
             query['owner'] = curr_user
             db_keys.append('owner')
 
-        if item == 'status':
-            user = yield dbapi.db_find_one("users", {'openid': curr_user})
-            query["$or"] = [
-                {"owner": curr_user},
-                {
-                    "shared": {
-                        "$elemMatch": {"$eq": curr_user}
-                    }
-                },
-                {
-                    "shared": {
-                        "$elemMatch": {"$eq": user['email']}
-                    }
-                }
-            ]
+        if item == "status" and value == "review":
+            test = yield dbapi.db_find_one("tests", query)
+            if test:
+                test_query = {'id': test['id'], 'status': 'review'}
+                record = yield dbapi.db_find_one("tests", test_query)
+                if record:
+                    msg = ('{} has already submitted one record with the same'
+                           'Test ID: {}'.format(record['owner'], test['id']))
+                    self.finish_request({'code': 403, 'msg': msg})
+                    return
+
         logging.debug("before _update 2")
         self._update(query=query, db_keys=db_keys)
 
