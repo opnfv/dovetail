@@ -15,6 +15,7 @@
 <div class="row" style="margin-bottom:24px;"></div>
 <div cg-busy="{promise:ctrl.authRequest,message:'Loading'}"></div>
 <div cg-busy="{promise:ctrl.resultsRequest,message:'Loading'}"></div>
+
 <div ng-show="ctrl.data" class="results-table">
     <table ng-data="ctrl.data.result" ng-show="ctrl.data" class="table table-striped table-hover">
         <thead>
@@ -48,12 +49,10 @@
                             Operation<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                            <li role="menuitem" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status != 'review' || auth.currentUser.openid != result.owner}" ng-click="ctrl.toPrivate(result, 'private')">withdraw submit</a></li>
-                            <li role="menuitem" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status != 'private' || auth.currentUser.openid != result.owner}" ng-click="ctrl.toReview(result, 'review')">submit to review</a></li>
-                            <!--
-                            <li role="menuitem" ng-if="auth.currentUser.role.indexOf('reviewer') != -1" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status == 'approved'}" ng-click="ctrl.toggleCheck(result, 'status', 'approve')">approve</a></li>
-                            <li role="menuitem" ng-if="auth.currentUser.role.indexOf('reviewer') != -1" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status == 'not approved'}" ng-click="ctrl.toggleCheck(result, 'status', 'not approve')">not approve</a></li>
-                            -->
+                            <li role="menuitem" ng-if="auth.currentUser.openid == result.owner" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status == 'private'}" ng-click="ctrl.toPrivate(result, 'private')">withdraw submit</a></li>
+                            <li role="menuitem" ng-if="auth.currentUser.openid == result.owner" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status != 'private'}" ng-click="ctrl.toReview(result, 'review')">submit to review</a></li>
+                            <li role="menuitem" ng-if="auth.currentUser.role.indexOf('administrator') != -1" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status == 'approved' || result.status == 'private'}" ng-click="ctrl.toggleCheck(result, 'status', 'approved')">approve</a></li>
+                            <li role="menuitem" ng-if="auth.currentUser.role.indexOf('administrator') != -1" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-class="{'hide': result.status == 'not approved' || result.status == 'private'}" ng-click="ctrl.toggleCheck(result, 'status', 'not approved')">not approve</a></li>
                             <li role="menuitem" ng-if="auth.currentUser.openid == result.owner" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-click="ctrl.openSharedModal(result)">share with</a></li>
                             <li role="menuitem" ng-if="auth.currentUser.openid == result.owner" class="menu-item menu-item-type-post_type menu-item-object-page"><a ng-click="ctrl.deleteTest(result._id)">delete</a></li>
                         </ul>
@@ -88,6 +87,7 @@
         </uib-pagination>
     </div>
 </div>
+
 </div>
 <div ng-show="ctrl.showError" class="alert alert-danger" role="alert">
     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
