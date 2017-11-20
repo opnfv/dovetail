@@ -189,20 +189,35 @@ class TestsGURHandler(GenericTestHandler):
         query = {'_id': objectid.ObjectId(_id)}
         db_keys = ['_id', ]
         curr_user = self.get_secure_cookie(auth_const.OPENID)
-        if item in {"shared", "label", "status"}:
+        if item in {"shared", "label"}:
             query['owner'] = curr_user
             db_keys.append('owner')
 
-        if item == "status" and value == "review":
-            test = yield dbapi.db_find_one("tests", query)
-            if test:
-                test_query = {'id': test['id'], 'status': 'review'}
-                record = yield dbapi.db_find_one("tests", test_query)
-                if record:
-                    msg = ('{} has already submitted one record with the same'
-                           'Test ID: {}'.format(record['owner'], test['id']))
+        if item == "status":
+            if value in {'approve', 'not approve'}:
+                user = yield dbapi.db_find_one("users", {'openid': curr_user})
+                print 'user: {}'.format(user)
+                if 'administrator' not in user['role']:
+                    msg = 'No permission to operate'
                     self.finish_request({'code': 403, 'msg': msg})
                     return
+            elif value == 'review':
+                query['owner'] = curr_user
+                db_keys.append('owner')
+
+                test = yield dbapi.db_find_one("tests", query)
+                if test:
+                    test_query = {'id': test['id'], 'status': 'review'}
+                    record = yield dbapi.db_find_one("tests", test_query)
+                    if record:
+                        msg = ('{} has already submitted '
+                               'one record with the same Test '
+                               'ID: {}'.format(record['owner'], test['id']))
+                        self.finish_request({'code': 403, 'msg': msg})
+                        return
+            else:
+                query['owner'] = curr_user
+                db_keys.append('owner')
 
         logging.debug("before _update 2")
         self._update(query=query, db_keys=db_keys)
