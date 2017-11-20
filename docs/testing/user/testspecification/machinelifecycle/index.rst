@@ -240,59 +240,8 @@ Post conditions
 
 N/A
 
------------------------------------
-Test Case 3 - Cold migration revert
------------------------------------
-
-Test case specification
------------------------
-
-tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_cold_migration_revert
-
-Test preconditions
-------------------
-
-* At least 2 compute nodes
-* Nova, neutron services are available
-* One public network
-
-Basic test flow execution description and pass/fail criteria
-------------------------------------------------------------
-
-Test execution
-''''''''''''''
-
-* Test action 1: Create a keypair KEYP1
-* Test action 2: Create a server VM1 with KEYP1
-* Test action 3: Create a floating IP FIP1 and assign FIP1 to VM1
-* Test action 4: Get VM1's host info SRC_HOST
-* Test action 5: Wait for VM1 to reach 'ACTIVE' status
-* **Test assertion 1:** Verify can ping FIP1 successfully and can SSH to VM1 via FIP1
-* Test action 6: Cold migrate VM1
-* Test action 7: Wait for VM1 to reach 'VERIFY_RESIZE' status
-* Test action 8: Revert resize VM1
-* Test action 9: Wait for VM1 to reach 'ACTIVE' status
-* **Test assertion 2:** Verify can ping FIP1 successfully and can SSH to VM1 via FIP1
-* Test action 10: Get VM1's host info DST_HOST
-* **Test assertion 3:** Verify SRC_HOST equals to DST_HOST
-* Test action 11: Delete KEYP1, VM1 and FIP1
-
-Pass / fail criteria
-''''''''''''''''''''
-
-This test evaluates the ability to revert cold-migrated VMs. Specifically, the test verifies that:
-
-* Cold migrate operation can be reverted.
-
-In order to pass this test, all test assertions listed in the test execution above need to pass.
-
-Post conditions
----------------
-
-N/A
-
 --------------------------------------
-Test Case 4 - Pause and unpause server
+Test Case 3 - Pause and unpause server
 --------------------------------------
 
 Test case specification
@@ -341,7 +290,7 @@ Post conditions
 N/A
 
 ---------------------------
-Test Case 5 - Reboot server
+Test Case 4 - Reboot server
 ---------------------------
 
 Test case specification
@@ -384,7 +333,7 @@ Post conditions
 N/A
 
 ----------------------------
-Test Case 6 - Rebuild server
+Test Case 5 - Rebuild server
 ----------------------------
 
 Test case specification
@@ -427,7 +376,7 @@ Post conditions
 N/A
 
 ---------------------------
-Test Case 7 - Resize server
+Test Case 6 - Resize server
 ---------------------------
 
 Test case specification
@@ -472,7 +421,7 @@ Post conditions
 N/A
 
 -----------------------------------
-Test Case 8 - Stop and start server
+Test Case 7 - Stop and start server
 -----------------------------------
 
 Test case specification
@@ -520,7 +469,7 @@ Post conditions
 N/A
 
 ---------------------------------------
-Test Case 9 - Suspend and resume server
+Test Case 8 - Suspend and resume server
 ---------------------------------------
 
 Test case specification
@@ -568,7 +517,7 @@ Post conditions
 N/A
 
 ----------------------------------------------------
-Test Case 10 - Suspend and resume server in sequence
+Test Case 9 - Suspend and resume server in sequence
 ----------------------------------------------------
 
 Test case specification
@@ -619,7 +568,7 @@ Post conditions
 N/A
 
 ------------------------------------------
-Test Case 11 - Resize volume backed server
+Test Case 10 - Resize volume backed server
 ------------------------------------------
 
 Test case specification
@@ -663,7 +612,7 @@ Post conditions
 N/A
 
 -----------------------------------------
-Test Case 12 - Shelve and unshelve server
+Test Case 11 - Shelve and unshelve server
 -----------------------------------------
 
 Test case specification
@@ -712,7 +661,7 @@ Post conditions
 N/A
 
 -------------------------------------------------------
-Test Case 13 - Shelve and unshelve volume backed server
+Test Case 12 - Shelve and unshelve volume backed server
 -------------------------------------------------------
 
 Test case specification
