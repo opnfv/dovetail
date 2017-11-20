@@ -163,7 +163,7 @@ class Report(object):
 
     @classmethod
     def save_logs(cls):
-        file_suffix = time.strftime('%d_%H_%M', time.localtime(time.time()))
+        file_suffix = time.strftime('%Y%m%d_%H%M', time.localtime())
         logs_gz = "logs_{}.tar.gz".format(file_suffix)
         result_dir = dt_cfg.dovetail_config['result_dir']
 
