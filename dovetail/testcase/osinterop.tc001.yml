@@ -20,6 +20,7 @@ dovetail.osinterop.tc001:
       - 'echo test for postcondition in testcase'
   report:
     sub_testcase_list:
+      # VIM compute operations test cases
       - tempest.api.compute.images.test_images_oneserver.ImagesOneServerTestJSON.test_create_delete_image
       - tempest.api.compute.images.test_images_oneserver.ImagesOneServerTestJSON.test_create_image_specify_multibyte_character_image_name
       - tempest.api.compute.servers.test_create_server.ServersTestJSON.test_host_name_is_same_as_server_name
@@ -44,7 +45,6 @@ dovetail.osinterop.tc001:
       - tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_image
       - tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_limit
       - tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_server_name
-      - tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_server_status
       - tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filtered_by_name_wildcard
       - tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_by_changes_since_future_date
       - tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_by_changes_since_invalid_date
@@ -86,7 +86,6 @@ dovetail.osinterop.tc001:
       - tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_reboot_non_existent_server
       - tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_rebuild_deleted_server
       - tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_rebuild_non_existent_server
-      - tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_rebuild_reboot_deleted_server
       - tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_server_name_blank
       - tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_stop_non_existent_server
       - tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_update_name_of_non_existent_server
@@ -97,26 +96,14 @@ dovetail.osinterop.tc001:
       - tempest.api.compute.test_versions.TestVersions.test_list_api_versions
       - tempest.api.compute.volumes.test_attach_volume.AttachVolumeTestJSON.test_attach_detach_volume
       - tempest.api.compute.volumes.test_attach_volume.AttachVolumeTestJSON.test_list_get_volume_attachments
-      - tempest.api.identity.v3.TestApiDiscovery.test_api_media_types
-      - tempest.api.identity.v3.TestApiDiscovery.test_api_version_resources
-      - tempest.api.identity.v3.TestApiDiscovery.test_api_version_statuses
+      # VIM identity operations test cases
       - tempest.api.identity.v3.test_api_discovery.TestApiDiscovery.test_api_media_types
       - tempest.api.identity.v3.test_api_discovery.TestApiDiscovery.test_api_version_resources
       - tempest.api.identity.v3.test_api_discovery.TestApiDiscovery.test_api_version_statuses
       - tempest.api.identity.v3.test_tokens.TokensV3Test.test_create_token
+      # VIM image operations test cases
       - tempest.api.image.v2.test_images.BasicOperationsImagesTest.test_delete_image
       - tempest.api.image.v2.test_images.BasicOperationsImagesTest.test_update_image
-      - tempest.api.image.v2.test_images.ListImagesTest.test_get_image_schema
-      - tempest.api.image.v2.test_images.ListImagesTest.test_get_images_schema
-      - tempest.api.image.v2.test_images.ListImagesTest.test_index_no_params
-      - tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_container_format
-      - tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_disk_format
-      - tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_limit
-      - tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_min_max_size
-      - tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_size
-      - tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_status
-      - tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_visibility
-      - tempest.api.image.v2.test_images.ListImagesTest.test_list_no_params
       - tempest.api.image.v2.test_images.ListUserImagesTest.test_get_image_schema
       - tempest.api.image.v2.test_images.ListUserImagesTest.test_get_images_schema
       - tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_container_format
@@ -135,6 +122,7 @@ dovetail.osinterop.tc001:
       - tempest.api.image.v2.test_images_tags.ImagesTagsTest.test_update_delete_tags_for_image
       - tempest.api.image.v2.test_images_tags_negative.ImagesTagsNegativeTest.test_delete_non_existing_tag
       - tempest.api.image.v2.test_images_tags_negative.ImagesTagsNegativeTest.test_update_tags_for_non_existing_image
+      # VIM network operations test cases
       - tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_all_attributes
       - tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_allocation_pools
       - tempest.api.network.test_networks.NetworksTest.test_create_delete_subnet_with_dhcp_enabled
@@ -153,24 +141,6 @@ dovetail.osinterop.tc001:
       - tempest.api.network.test_networks.NetworksTest.test_show_subnet
       - tempest.api.network.test_networks.NetworksTest.test_show_subnet_fields
       - tempest.api.network.test_networks.NetworksTest.test_update_subnet_gw_dns_host_routes_dhcp
-      - tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_all_attributes
-      - tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_allocation_pools
-      - tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_dhcp_enabled
-      - tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_gw
-      - tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_gw_and_allocation_pools
-      - tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_host_routes_and_dns_nameservers
-      - tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_without_gateway
-      - tempest.api.network.test_networks.NetworksTestJSON.test_create_update_delete_network_subnet
-      - tempest.api.network.test_networks.NetworksTestJSON.test_delete_network_with_subnet
-      - tempest.api.network.test_networks.NetworksTestJSON.test_list_networks
-      - tempest.api.network.test_networks.NetworksTestJSON.test_list_networks_fields
-      - tempest.api.network.test_networks.NetworksTestJSON.test_list_subnets
-      - tempest.api.network.test_networks.NetworksTestJSON.test_list_subnets_fields
-      - tempest.api.network.test_networks.NetworksTestJSON.test_show_network
-      - tempest.api.network.test_networks.NetworksTestJSON.test_show_network_fields
-      - tempest.api.network.test_networks.NetworksTestJSON.test_show_subnet
-      - tempest.api.network.test_networks.NetworksTestJSON.test_show_subnet_fields
-      - tempest.api.network.test_networks.NetworksTestJSON.test_update_subnet_gw_dns_host_routes_dhcp
       - tempest.api.network.test_ports.PortsTestJSON.test_create_bulk_port
       - tempest.api.network.test_ports.PortsTestJSON.test_create_port_in_allowed_allocation_pools
       - tempest.api.network.test_ports.PortsTestJSON.test_create_update_delete_port
@@ -199,12 +169,11 @@ dovetail.osinterop.tc001:
       - tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_delete_non_existent_security_group
       - tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_show_non_existent_security_group
       - tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.test_show_non_existent_security_group_rule
+      # VIM volume operations test cases
       - tempest.api.volume.test_availability_zone.AvailabilityZoneV2TestJSON.test_get_availability_zone_list
       - tempest.api.volume.test_extensions.ExtensionsV2TestJSON.test_list_extensions
-      - tempest.api.volume.test_snapshot_metadata.SnapshotV2MetadataTestJSON.test_create_get_delete_snapshot_metadata
       - tempest.api.volume.test_snapshot_metadata.SnapshotV2MetadataTestJSON.test_crud_snapshot_metadata
       - tempest.api.volume.test_snapshot_metadata.SnapshotV2MetadataTestJSON.test_update_snapshot_metadata_item
-      - tempest.api.volume.test_volume_metadata.VolumesV2MetadataTest.test_create_get_delete_volume_metadata
       - tempest.api.volume.test_volume_metadata.VolumesV2MetadataTest.test_crud_volume_metadata
       - tempest.api.volume.test_volume_metadata.VolumesV2MetadataTest.test_update_volume_metadata_item
       - tempest.api.volume.test_volumes_actions.VolumesV2ActionsTest.test_attach_detach_volume_to_instance
@@ -232,7 +201,6 @@ dovetail.osinterop.tc001:
       - tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_nonexistent_snapshot_id
       - tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_nonexistent_source_volid
       - tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_nonexistent_volume_type
-      - tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_out_passing_size
       - tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_size_negative
       - tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_size_zero
       - tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_without_passing_size
@@ -254,8 +222,6 @@ dovetail.osinterop.tc001:
       - tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_volume_delete_nonexistent_volume_id
       - tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_volume_get_nonexistent_volume_id
       - tempest.api.volume.test_volumes_snapshots.VolumesV2SnapshotTestJSON.test_snapshot_create_get_list_update_delete
-      - tempest.api.volume.test_volumes_snapshots.VolumesV2SnapshotTestJSON.test_snapshots_list_details_with_params
-      - tempest.api.volume.test_volumes_snapshots.VolumesV2SnapshotTestJSON.test_snapshots_list_with_params
       - tempest.api.volume.test_volumes_snapshots.VolumesV2SnapshotTestJSON.test_volume_from_snapshot
       - tempest.api.volume.test_volumes_snapshots_list.VolumesV2SnapshotListTestJSON.test_snapshots_list_details_with_params
       - tempest.api.volume.test_volumes_snapshots_list.VolumesV2SnapshotListTestJSON.test_snapshots_list_with_params
