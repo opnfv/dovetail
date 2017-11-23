@@ -388,7 +388,7 @@ tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.t
 tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_image
 tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_limit
 tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_server_name
-tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_server_status
+tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_active_status
 tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filtered_by_name_wildcard
 tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_by_changes_since_future_date
 tempest.api.compute.servers.test_list_servers_negative.ListServersNegativeTestJSON.test_list_servers_by_changes_since_invalid_date
@@ -426,17 +426,6 @@ tempest.api.compute.servers.test_create_server.ServersTestJSON.test_verify_creat
 tempest.api.compute.servers.test_create_server.ServersTestJSON.test_verify_server_details
 tempest.api.compute.servers.test_create_server.ServersTestManualDisk.test_verify_created_server_vcpus
 tempest.api.compute.servers.test_create_server.ServersTestManualDisk.test_verify_server_details
-
-tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_active_status
-tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_rebuild_reboot_deleted_server
-
-Note: the last 2 test cases are the alias of another 2 test cases respectively, which are
-
-tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_server_status
-tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_rebuild_deleted_server
-
-Alias should always be included so that the test run will be tempest version agnostic,
-which can be used to test different version of OpenStack.
 
 Test preconditions
 ------------------
