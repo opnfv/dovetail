@@ -132,29 +132,6 @@ tempest.api.network.test_ports.PortsTestJSON.test_show_port_fields
 tempest.api.network.test_ports.PortsTestJSON.test_update_port_with_security_group_and_extra_attributes
 tempest.api.network.test_ports.PortsTestJSON.test_update_port_with_two_security_groups_and_extra_attributes
 
-tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_allocation_pools
-tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_dhcp_enabled
-tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_gw
-tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_gw_and_allocation_pools
-tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_with_host_routes_and_dns_nameservers
-tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_without_gateway
-tempest.api.network.test_networks.NetworksTestJSON.test_create_delete_subnet_all_attributes
-tempest.api.network.test_networks.NetworksTestJSON.test_create_update_delete_network_subnet
-tempest.api.network.test_networks.NetworksTestJSON.test_delete_network_with_subnet
-tempest.api.network.test_networks.NetworksTestJSON.test_list_networks
-tempest.api.network.test_networks.NetworksTestJSON.test_list_networks_fields
-tempest.api.network.test_networks.NetworksTestJSON.test_list_subnets
-tempest.api.network.test_networks.NetworksTestJSON.test_list_subnets_fields
-tempest.api.network.test_networks.NetworksTestJSON.test_show_network
-tempest.api.network.test_networks.NetworksTestJSON.test_show_network_fields
-tempest.api.network.test_networks.NetworksTestJSON.test_show_subnet
-tempest.api.network.test_networks.NetworksTestJSON.test_show_subnet_fields
-tempest.api.network.test_networks.NetworksTestJSON.test_update_subnet_gw_dns_host_routes_dhcp
-
-Note: the latter 18 test cases are the alias of the former first 18, respectively.
-Alias should always be included so that the test run will be tempest version agnostic,
-which can be used to test different version of Openstack.
-
 Test preconditions
 ------------------
 
