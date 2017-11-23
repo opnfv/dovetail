@@ -74,16 +74,9 @@ API discovery operations within the Identity v3 API
 Use case specification
 -----------------------
 
-tempest.api.identity.v3.TestApiDiscovery.test_api_version_resources
-tempest.api.identity.v3.TestApiDiscovery.test_api_media_types
-tempest.api.identity.v3.TestApiDiscovery.test_api_version_statuses
 tempest.api.identity.v3.test_api_discovery.TestApiDiscovery.test_api_version_resources
 tempest.api.identity.v3.test_api_discovery.TestApiDiscovery.test_api_media_types
 tempest.api.identity.v3.test_api_discovery.TestApiDiscovery.test_api_version_statuses
-
-note: the latter three test cases are the alias of the former three, respectively.
-alias should always be included so that the test run will be tempest version agnostic,
-which can be used to test different version of Openstack.
 
 Test preconditions
 -------------------

@@ -82,18 +82,11 @@ Image get tests using the Glance v2 API
 Test case specification
 -----------------------
 
-tempest.api.image.v2.test_images.ListImagesTest.test_get_image_schema
-tempest.api.image.v2.test_images.ListImagesTest.test_get_images_schema
+tempest.api.image.v2.test_images.ListUserImagesTest.test_get_image_schema
+tempest.api.image.v2.test_images.ListUserImagesTest.test_get_images_schema
 tempest.api.image.v2.test_images_negative.ImagesNegativeTest.test_get_delete_deleted_image
 tempest.api.image.v2.test_images_negative.ImagesNegativeTest.test_get_image_null_id
 tempest.api.image.v2.test_images_negative.ImagesNegativeTest.test_get_non_existent_image
-
-tempest.api.image.v2.test_images.ListUserImagesTest.test_get_image_schema
-tempest.api.image.v2.test_images.ListUserImagesTest.test_get_images_schema
-
-Note: the latter two test cases are the alias of the former first two, respectively.
-Alias should always be included so that the test run will be tempest version agnostic,
-which can be used to test different version of Openstack.
 
 Test preconditions
 ------------------
@@ -151,14 +144,7 @@ CRUD image operations in Images API v2
 Test case specification
 -----------------------
 
-tempest.api.image.v2.test_images.ListImagesTest.test_list_no_params
-
-tempest.api.image.v2.test_images.ListImagesTest.test_index_no_params
 tempest.api.image.v2.test_images.ListUserImagesTest.test_list_no_params
-
-Note: the latter two test cases are the alias of the former one. Alias should
-always be included so that the test run will be tempest version agnostic,
-which can be used to test different version of Openstack.
 
 Test preconditions
 ------------------
@@ -197,14 +183,6 @@ Image list tests using the Glance v2 API
 Test case specification
 -----------------------
 
-tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_container_format
-tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_disk_format
-tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_limit
-tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_min_max_size
-tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_size
-tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_status
-tempest.api.image.v2.test_images.ListImagesTest.test_list_images_param_visibility
-
 tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_container_format
 tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_disk_format
 tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_limit
@@ -212,10 +190,6 @@ tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_min_m
 tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_size
 tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_status
 tempest.api.image.v2.test_images.ListUserImagesTest.test_list_images_param_visibility
-
-Note: the latter 7 test cases are the alias of the former 7, respectively.
-Alias should always be included so that the test run will be tempest version agnostic,
-which can be used to test different version of Openstack.
 
 Test preconditions
 ------------------
