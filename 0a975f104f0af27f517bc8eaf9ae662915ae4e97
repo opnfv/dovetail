@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_7936cbe8",
+        "filename": "dovetail/testcase/osinterop.tc001.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-25T02:10:54Z",
+      "side": 0,
+      "message": "It\u0027s Line 416 of vimoperationscompute/index.rst\nLine 436 was removed because it\u0027s a copy of Line 416.",
+      "parentUuid": "9a3d3df0_b647c24a",
+      "range": {
+        "startLine": 87,
+        "startChar": 8,
+        "endLine": 87,
+        "endChar": 109
+      },
+      "revId": "0a975f104f0af27f517bc8eaf9ae662915ae4e97",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_d6ba4622",
         "filename": "dovetail/testcase/osinterop.tc001.yml",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2017-11-24T11:54:44Z",
       "side": 0,
       "message": "this one was also removed from the rst file",
+      "range": {
+        "startLine": 205,
+        "startChar": 8,
+        "endLine": 205,
+        "endChar": 104
+      },
+      "revId": "0a975f104f0af27f517bc8eaf9ae662915ae4e97",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_d93557db",
+        "filename": "dovetail/testcase/osinterop.tc001.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-25T02:10:54Z",
+      "side": 0,
+      "message": "It\u0027s Line 713 of vimoperationsvolume/index.rst",
+      "parentUuid": "9a3d3df0_d6ba4622",
       "range": {
         "startLine": 205,
         "startChar": 8,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_b93053e9",
+        "filename": "dovetail/testcase/osinterop.tc001.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-25T02:10:54Z",
+      "side": 0,
+      "message": "It\u0027s Line 569 of vimoperationsvolume/index.rst",
+      "parentUuid": "9a3d3df0_76ab7ad6",
+      "range": {
+        "startLine": 209,
+        "startChar": 8,
+        "endLine": 209,
+        "endChar": 102
+      },
+      "revId": "0a975f104f0af27f517bc8eaf9ae662915ae4e97",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_56a7560c",
         "filename": "dovetail/testcase/osinterop.tc001.yml",
         "patchSetId": 2
@@ -82,6 +154,30 @@
       "writtenOn": "2017-11-24T11:54:44Z",
       "side": 0,
       "message": "this one was also removed from the rst file",
+      "range": {
+        "startLine": 238,
+        "startChar": 8,
+        "endLine": 238,
+        "endChar": 110
+      },
+      "revId": "0a975f104f0af27f517bc8eaf9ae662915ae4e97",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_194fbf6c",
+        "filename": "dovetail/testcase/osinterop.tc001.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-25T02:10:54Z",
+      "side": 0,
+      "message": "It\u0027s Line 313 of vimoperationsvolume/index.rst",
+      "parentUuid": "9a3d3df0_56a7560c",
       "range": {
         "startLine": 238,
         "startChar": 8,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_f9513b0f",
+        "filename": "dovetail/testcase/osinterop.tc001.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-25T02:10:54Z",
+      "side": 0,
+      "message": "It\u0027s Line 721 of vimoperationsvolume/index.rst",
+      "parentUuid": "9a3d3df0_b6b50233",
+      "range": {
+        "startLine": 260,
+        "startChar": 8,
+        "endLine": 260,
+        "endChar": 124
+      },
+      "revId": "0a975f104f0af27f517bc8eaf9ae662915ae4e97",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_1684ae5c",
         "filename": "dovetail/testcase/osinterop.tc001.yml",
         "patchSetId": 2
@@ -128,6 +248,30 @@
       "writtenOn": "2017-11-24T11:54:44Z",
       "side": 0,
       "message": "this one was also removed from the rst",
+      "range": {
+        "startLine": 261,
+        "startChar": 8,
+        "endLine": 261,
+        "endChar": 116
+      },
+      "revId": "0a975f104f0af27f517bc8eaf9ae662915ae4e97",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_59594735",
+        "filename": "dovetail/testcase/osinterop.tc001.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-25T02:10:54Z",
+      "side": 0,
+      "message": "It\u0027s Line 722 of vimoperationsvolume/index.rst",
+      "parentUuid": "9a3d3df0_1684ae5c",
       "range": {
         "startLine": 261,
         "startChar": 8,
