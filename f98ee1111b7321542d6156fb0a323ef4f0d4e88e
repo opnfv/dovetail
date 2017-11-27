@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_7c919951",
+        "filename": "dovetail/testcase/osinterop.tc001.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-11-27T09:37:27Z",
+      "side": 1,
+      "message": "if possible, I would suggest classifying the test cases with a comment line to elucidate which area the following test cases belong to, for example, add a new line between L22 \u0026 L23, L97 \u0026 L98\nsub_testcase_list:\n      # VIM compute operations test cases\n      -\n tempest.api.compute.images.test_images_oneserver.ImagesOneServerTestJSON.test_create_delete_image\n\n.........\n\n      - tempest.api.compute.volumes.test_attach_volume.AttachVolumeTestJSON.test_list_get_volume_attachments\n      # VIM identity operations test cases\n      - tempest.api.identity.v3.test_api_discovery.TestApiDiscovery.test_api_media_types\n\n..........",
+      "revId": "f98ee1111b7321542d6156fb0a323ef4f0d4e88e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
