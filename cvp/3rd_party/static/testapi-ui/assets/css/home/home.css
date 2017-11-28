@@ -1,0 +1,29 @@
+.home-container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.home-category {
+    border-right-style:solid;
+    border-left-style:solid;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.home-content-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align:center;
+}
+
+.home-content-text {
+    margin-top: 20px;
+    padding-top: 30px;
+    text-align: justify;
+}
+
+.home-content-img {
+    margin-top: 50px;
+    width: 80%;
+    padding-left: 10%;
+}

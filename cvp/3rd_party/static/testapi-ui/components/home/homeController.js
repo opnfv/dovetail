@@ -31,12 +31,14 @@
     function HomeController($scope, $rootScope, $state) {
         var ctrl = this;
 
-	ctrl.gotoApplication = function(){
-		if($rootScope.auth.isAuthenticated){
-			$state.go('application');
-		}else{
-			$rootScope.auth.doSignIn('cas');
-		}
-	}
+        ctrl.height = $(document).height() - 115;
+
+        ctrl.gotoApplication = function(){
+            if($rootScope.auth.isAuthenticated){
+                $state.go('application');
+            }else{
+                $rootScope.auth.doSignIn('cas');
+            }
+        }
     }
 })();
