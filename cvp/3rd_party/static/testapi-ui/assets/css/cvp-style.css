@@ -80,3 +80,12 @@ table .btn.medium {
     font-weight: 700;
     font-size: 12px;
 }
+
+.common-main-container {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+a { 
+    cursor: pointer; 
+}
