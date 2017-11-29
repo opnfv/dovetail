@@ -16,6 +16,24 @@
       "revId": "f98ee1111b7321542d6156fb0a323ef4f0d4e88e",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_c851ffd9",
+        "filename": "dovetail/testcase/osinterop.tc001.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2017-11-29T01:17:57Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "9a3d3df0_7c919951",
+      "revId": "f98ee1111b7321542d6156fb0a323ef4f0d4e88e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
