@@ -1,0 +1,7 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+2: Leo wang <grakiss.wanglei@huawei.com>
+Submitted-by: Leo wang <grakiss.wanglei@huawei.com>
+Submitted-at: Wed, 13 Dec 2017 02:07:39 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/48767
+Project: dovetail
+Branch: refs/heads/stable/danube
