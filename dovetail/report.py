@@ -274,10 +274,12 @@ class FunctestCrawler(object):
                         if complex_testcase:
                             tests = data['details']['tests']
                             failed_num = data['details']['failures']
+                            success_case = data['details']['success']
                             error_case = data['details']['errors']
                             skipped_case = data['details']['skipped']
                             details = {"tests": tests,
                                        "failures": failed_num,
+                                       "success": success_case,
                                        "errors": error_case,
                                        "skipped": skipped_case}
                 except KeyError as e:
@@ -487,29 +489,23 @@ class FunctestChecker(object):
         if sub_testcase_list is None:
             return
 
-        testcase_passed = 'SKIP'
+        testcase_passed = 'PASS'
         for sub_testcase in sub_testcase_list:
             self.logger.debug('Check sub_testcase: {}'.format(sub_testcase))
             try:
                 if self.get_sub_testcase(sub_testcase,
-                                         db_result['details']['errors']):
-                    testcase.sub_testcase_passed(sub_testcase, 'FAIL')
-                    testcase_passed = 'FAIL'
+                                         db_result['details']['success']):
+                    testcase.sub_testcase_passed(sub_testcase, 'PASS')
                     continue
                 if self.get_sub_testcase(sub_testcase,
                                          db_result['details']['skipped']):
                     testcase.sub_testcase_passed(sub_testcase, 'SKIP')
                 else:
-                    testcase.sub_testcase_passed(sub_testcase, 'PASS')
+                    testcase.sub_testcase_passed(sub_testcase, 'FAIL')
+                testcase_passed = 'FAIL'
             except KeyError:
                 testcase.sub_testcase_passed(sub_testcase, 'FAIL')
                 testcase_passed = 'FAIL'
-
-        if testcase_passed == 'SKIP':
-            for sub_testcase in sub_testcase_list:
-                if testcase.sub_testcase_status[sub_testcase] == 'PASS':
-                    testcase_passed = 'PASS'
-                    break
 
         testcase.passed(testcase_passed)
 
