@@ -6,15 +6,15 @@ report page.
 Test Filters:<br />
 <div class="btn-toolbar" role="toolbar">
     <div class="btn-group button-margin" data-toggle="buttons">
-        <label class="btn btn-default" ng-class="{'active': ctrl.testStatus === 'total'}">
+        <label class="btn btn-default" ng-click="ctrl.changeStatus('total')" ng-class="{'active': ctrl.testStatus === 'total'}">
             <input type="radio" ng-model="ctrl.testStatus" value="total">
             <span class="text-primary">All</span>
         </label>
-        <label class="btn btn-default" ng-class="{'active': ctrl.testStatus === 'passed'}">
+        <label class="btn btn-default" ng-click="ctrl.changeStatus('passed')" ng-class="{'active': ctrl.testStatus === 'passed'}">
             <input type="radio" ng-model="ctrl.testStatus" value="passed">
             <span class="text-success">Passed</span>
         </label>
-        <label class="btn btn-default" ng-class="{'active': ctrl.testStatus === 'not passed'}">
+        <label class="btn btn-default" ng-click="ctrl.changeStatus('not passed')" ng-class="{'active': ctrl.testStatus === 'not passed'}">
             <input type="radio" ng-model="ctrl.testStatus" value="not passed">
             <span class="text-danger">Not Passed</span>
         </label>
