@@ -47,6 +47,7 @@
         ctrl.openAll = openAll;
         ctrl.folderAll = folderAll;
         ctrl.gotoResultLog = gotoResultLog;
+        ctrl.changeStatus = changeStatus;
 
         /** The testID extracted from the URL route. */
         ctrl.testId = $stateParams.testID;
@@ -57,6 +58,10 @@
                                'reportDetails.html';
 
         $scope.load_finish = false;
+
+        function changeStatus(value){
+            ctrl.testStatus = value;
+        }
 
         function extend(case_list) {
             angular.forEach(case_list, function(ele){
