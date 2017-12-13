@@ -221,7 +221,14 @@ class TestsGURHandler(GenericTestHandler):
                 query['owner'] = curr_user
                 db_keys.append('owner')
 
-                test_query = {'id': test['id'], 'status': 'review'}
+                test_query = {
+                    'id': test['id'],
+                    '$or': [
+                        {'status': 'review'},
+                        {'status': 'approved'},
+                        {'status': 'not approved'}
+                    ]
+                }
                 record = yield dbapi.db_find_one("tests", test_query)
                 if record:
                     msg = ('{} has already submitted one record with the same '
