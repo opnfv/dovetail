@@ -16,14 +16,15 @@
     text-align:center;
 }
 
+.home-content {
+    margin-top: 100px;
+}
+
 .home-content-text {
-    margin-top: 20px;
-    padding-top: 30px;
     text-align: justify;
+    font-size: 22px;
 }
 
 .home-content-img {
-    margin-top: 50px;
     width: 80%;
-    padding-left: 10%;
 }
