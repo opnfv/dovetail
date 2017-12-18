@@ -4,9 +4,7 @@
 # Purpose: run opnfv-testapi for gathering test results
 #
 # Maintained by SerenaFeng
-# Build:
-#    $ docker build -t opnfv/testapi:tag .
-#
+# Build: #    $ docker build -t opnfv/testapi:tag .  #
 # Execution:
 #    $ docker run -dti -p 8001:8000 \
 #      -e "base_url=http://10.63.243.17:8001" \
@@ -66,5 +64,7 @@ RUN cp -rf /home/dovetail/cvp/* /home/testapi
 WORKDIR /home/dovetail/cvp
 RUN pip install -r requirements.txt
 RUN bash install.sh
+
+RUN sed -i '152,152s/)/,\ verify=False)/g' /usr/local/lib/python2.7/dist-packages/cas.py
 
 CMD ["bash", "docker/start-server.sh"]
