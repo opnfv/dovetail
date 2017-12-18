@@ -67,4 +67,6 @@ WORKDIR /home/dovetail/cvp
 RUN pip install -r requirements.txt
 RUN bash install.sh
 
+RUN sed -i '152,152s/)/,\ verify=False)/g' /usr/local/lib/python2.7/dist-packages/cas.py
+
 CMD ["bash", "docker/start-server.sh"]
