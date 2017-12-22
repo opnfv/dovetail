@@ -5,23 +5,23 @@
 .. _dovetail-test_case_specification:
 
 ==================================================
-Compliance Verification program test specification
+OPNFV Verified Program test specification
 ==================================================
 
 Introduction
 ============
 
-The OPNFV CVP provides a series or test areas aimed to evaluate the operation
+The OPNFV OVP provides a series or test areas aimed to evaluate the operation
 of an NFV system in accordance with carrier networking needs.  Each test area
 contains a number of associated test cases which are described in detail in the
 associated test specification.
 
-All tests in the CVP are required to fulfill a specific set of criteria in
-order that the CVP is able to provide a fair assessment of the system under
+All tests in the OVP are required to fulfill a specific set of criteria in
+order that the OVP is able to provide a fair assessment of the system under
 test.  Test requirements are described in the 'Test Case Requirements'_
 document.
 
-All tests areas addressed in the CVP are covered in the following test
+All tests areas addressed in the OVP are covered in the following test
 specification documents.
 
 .. toctree::

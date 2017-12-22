@@ -4,27 +4,27 @@
 
 .. _dovetail-certification_workflow:
 
-================================================================
-OPNFV Compliance Verification Program certification workflow
-================================================================
+=============================================
+OPNFV Verified Program certification workflow
+=============================================
 
 Introduction
 ============
 
 This document provides guidance for testers on how to obtain OPNFV compliance
-certification. The OPNFV Compliance Verification Program (CVP) is administered by
+certification. The OPNFV Verified Program (OVP) is administered by
 the OPNFV Compliance and Certification (C&C) committee.
 
 For further information about the workflow and general inquiries about the
-program, please check out the `CVP web portal`_, or contact
-the C&C committee by email address cvp@opnfv.org. This email address should be used
-for all communication with the CVP.
+program, please check out the `OVP web portal`_, or contact
+the C&C committee by email address verified@opnfv.org. This email address should be used
+for all communication with the OVP.
 
 Step 1: Applying
 ================
 
 A tester should start the process by completing an application.
-The application form can found on the `CVP web portal`_ and the following
+The application form can found on the `OVP web portal`_ and the following
 information should be provided:
 
 - Organization name
@@ -36,9 +36,9 @@ information should be provided:
   and third party hardware (please specify)
 - Primary contact name, business email, postal address and phone number
   Only the primary email address should be used for
-  official communication with OPNFV CVP.
-- User ID for CVP web portal
-  The CVP web portal supports the Linux Foundation user ID in the current release.
+  official communication with OPNFV OVP.
+- User ID for OVP web portal
+  The OVP web portal supports the Linux Foundation user ID in the current release.
   If a new user ID is needed, visit https://identity.linuxfoundation.org.
 - Location where the verification testing is to be conducted. Choose one:
   (internal vendor lab, third-party lab)
@@ -53,8 +53,8 @@ Once the application information is received and in order, an email response wil
 sent to the primary contact with confirmation and information to proceed.
 
 [Editor's note:
-No fee has been established at this time for CVP applications. Recommend
-we skip fee for the initial release of CVP.]
+No fee has been established at this time for OVP applications. Recommend
+we skip fee for the initial release of OVP.]
 
 Step 2: Testing
 ===============
@@ -71,20 +71,20 @@ of this ID for future reference.
 Step 3: Submitting Test Results
 ===============================
 
-Testers can upload the test results to the `CVP web portal`_.
+Testers can upload the test results to the `OVP web portal`_.
 By default, the results are visible only to the tester who uploaded the data.
 
 Testers can self-review the test results through the portal until they are ready to ask
-for CVP review. They may also update with or add new test results as needed.
+for OVP review. They may also update with or add new test results as needed.
 
 Once the tester is satisfied with the test result, the tester grants access to the test result
-for CVP review via the portal. The test result is identified by the unique Test ID.
+for OVP review via the portal. The test result is identified by the unique Test ID.
 
 When a test result is made visible to the reviewers, the web portal will notify
-cvp@opnfv.org and Cc the primary contact email that a review request has been made and reference
-the Test ID. This will alert the C&C Committee to start the CVP review process.
+verified@opnfv.org and Cc the primary contact email that a review request has been made and reference
+the Test ID. This will alert the C&C Committee to start the OVP review process.
 
-Step 4: CVP Review
+Step 4: OVP Review
 ===================
 
 Upon receiving the email notification and the Test ID, the C&C Committee conducts a
@@ -97,14 +97,13 @@ compliance or non-compliance to
 the C&C Committee. Normally, the outcome of the review should be communicated
 to the tester within 10 business days after all required information is in order.
 
-If an application is denied, an appeal can be made to the C&C Committee or ultimately to the
-Board of Directors of OPNFV.
+If an application is denied, an appeal can be made to the C&C Committee.
 
 Step 5: Grant of Use of Logo
 ============================
 
 If an application is approved, further information will be communicated to the tester
-on the guidelines of using OPNFV CVP logos and the status of compliance for promotional purposes.
+on the guidelines of using OPNFV OVP logos and the status of compliance for promotional purposes.
 
 
 Appendix
@@ -117,4 +116,4 @@ Appendix
 
 
 .. References
-.. _`CVP web portal`: https://cvp.opnfv.org
+.. _`OVP web portal`: https://verified.opnfv.org
