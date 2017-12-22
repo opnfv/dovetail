@@ -5,7 +5,7 @@
 .. _dovetail-testing_user_guide:
 
 ********************************************************
-Compliance Verification Program Testing User Guide
+OPNFV Verified Program Testing User Guide
 ********************************************************
 
 .. toctree::

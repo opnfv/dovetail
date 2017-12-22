@@ -4,9 +4,9 @@
 
 .._cvp-application-form:
 
-======================================================
-OPNFV COMPLIANCE VERIFICATION PROGRAM APPLICATION FORM
-======================================================
+=======================================
+OPNFV Verified Program Application Form
+=======================================
 
 
 +----------------------------------+--------------------------------------------------------------------------------------------+
@@ -48,7 +48,7 @@ OPNFV COMPLIANCE VERIFICATION PROGRAM APPLICATION FORM
 |                                  +--------------------------------------------------------------------------------------------+
 |                                  |                                                                                            |
 +----------------------------------+--------------------------------------------------------------------------------------------+
-| Primary business email           | *Only the Business email address should be used for official communication with OPNFV CVP* |
+| Primary business email           | *Only the Business email address should be used for official communication with OPNFV OVP* |
 |                                  +--------------------------------------------------------------------------------------------+
 |                                  |                                                                                            |
 |                                  +--------------------------------------------------------------------------------------------+
@@ -62,7 +62,7 @@ OPNFV COMPLIANCE VERIFICATION PROGRAM APPLICATION FORM
 |                                  +--------------------------------------------------------------------------------------------+
 |                                  |                                                                                            |
 +----------------------------------+--------------------------------------------------------------------------------------------+
-| User ID for CVP web portal       | *Choose one: (i) Linux Foundation (ii) Openstack (iii) Github (iv) Google (v) Fackbook ID* |
+| User ID for OVP web portal       | *Choose one: (i) Linux Foundation (ii) Openstack (iii) Github (iv) Google (v) Fackbook ID* |
 |                                  +--------------------------------------------------------------------------------------------+
 |                                  |                                                                                            |
 |                                  +--------------------------------------------------------------------------------------------+

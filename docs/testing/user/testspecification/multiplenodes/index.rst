@@ -54,7 +54,7 @@ the state created by a previous test. Specifically, every test performs clean-up
 operations which return the system to the same state as before the test.
 
 All these test cases are included in the test case dovetail.tempest.tc005 of
-cvp test suite.
+OVP test suite.
 
 Test Descriptions
 =================

@@ -5,21 +5,21 @@
 .. _dovetail-test_case_requirements:
 
 ==========================================================
-Compliance Verification Program test case requirements
+OPNFV Verified Program test case requirements
 ==========================================================
 
 .. toctree::
    :maxdepth: 2
 
 
-CVP Test Suite Purpose and Goals
+OVP Test Suite Purpose and Goals
 ================================
 
-The CVP test suite is intended to provide a method for validating the
+The OVP test suite is intended to provide a method for validating the
 interfaces and behaviors of an NFVi platform according to the expected
 capabilities exposed in OPNFV.  The behavioral foundation evaluated in these
 tests should serve to provide a functional baseline for VNF deployment and
-portability across NFVi instances.  All CVP tests are available in open source
+portability across NFVi instances.  All OVP tests are available in open source
 and are executed in open source test frameworks.
 
 
@@ -27,7 +27,7 @@ Test case requirements
 ======================
 
 The following requirements are mandatory for a test to be submitted for
-consideration in the CVP test suite:
+consideration in the OVP test suite:
 
 - All test cases must be fully documented, in a common format.  Please consider
   the existing :ref:`dovetail-test_case_specification` as examples.
@@ -35,10 +35,10 @@ consideration in the CVP test suite:
   - Clearly identifying the test procedure and expected results / metrics to
     determine a “pass” or “fail” result.
 
-- Tests must be validated for the purpose of CVP, tests should be run with both
+- Tests must be validated for the purpose of OVP, tests should be run with both
   an expected positive and negative outcome.
 
-- At the current stage of CVP, only functional tests are eligible, performance
+- At the current stage of OVP, only functional tests are eligible, performance
   testing is out of scope.
 
   - Performance test output could be built in as “for information only”, but
@@ -81,7 +81,7 @@ consideration in the CVP test suite:
 
     - applicable, i.e., support the feature that the test exercises, and
 
-    - released, i.e., in the OPNFV release supported by the CVP test suite
+    - released, i.e., in the OPNFV release supported by the OVP test suite
       version.
 
 - Tests must run against a fully deployed and operational system under test.
@@ -109,9 +109,9 @@ consideration in the CVP test suite:
   - Fault/Error test case descriptions
   - Post conditions where the system state may be left changed after completion
 
-New test case proposals should complete a CVP test case worksheet to ensure
+New test case proposals should complete a OVP test case worksheet to ensure
 that all of these considerations are met before the test case is approved for
-inclusion in the CVP test suite.
+inclusion in the OVP test suite.
 
 
 Dovetail Test Suite Naming Convention
