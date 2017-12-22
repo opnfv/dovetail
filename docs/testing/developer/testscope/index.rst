@@ -12,7 +12,7 @@ Compliance and Verification program accepted test cases
      :maxdepth: 2
 
 
-Mandatory CVP Test Areas
+Mandatory OVP Test Areas
 ========================
 
 ----------------------------------
@@ -505,7 +505,7 @@ Test Area vPing - Basic VNF Connectivity
 
 
 
-Optional CVP Test Areas
+Optional OVP Test Areas
 ========================
 
 
