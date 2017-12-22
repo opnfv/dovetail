@@ -3,15 +3,15 @@
 .. (c) OPNFV, Huawei Technologies Co.,Ltd and others.
 
 ==========================================
-Conducting CVP Testing with Dovetail
+Conducting OVP Testing with Dovetail
 ==========================================
 
 Overview
 ------------------------------
 
-The Dovetail testing framework for CVP consists of two major parts: the testing client that
+The Dovetail testing framework for OVP consists of two major parts: the testing client that
 executes all test cases in a lab (vendor self-testing or a third party lab),
-and the server system that is hosted by the CVP administrator to store and
+and the server system that is hosted by the OVP administrator to store and
 view test results based on a web API. The following diagram illustrates
 this overall framework.
 
@@ -26,7 +26,7 @@ The above diagram assumes that the tester's Test Host is situated in a DMZ, whic
 has internal network access to the SUT and external access via the public Internet.
 The public Internet connection allows for easy installation of the Dovetail containers.
 A singular compressed file that includes all the underlying results can be pulled from
-the Test Host and uploaded to the OPNFV CVP server.
+the Test Host and uploaded to the OPNFV OVP server.
 This arrangement may not be supported in some labs. Dovetail also supports an offline mode of
 installation that is illustrated in the next diagram.
 
@@ -41,11 +41,11 @@ the Test Host. While it is possible to run the Test Host as a virtual machine,
 this user guide assumes it is a physical machine for simplicity.
 
 The rest of this guide will describe how to install the Dovetail tool as a
-Docker container image, go over the steps of running the CVP test suite, and
+Docker container image, go over the steps of running the OVP test suite, and
 then discuss how to view test results and make sense of them.
 
 Readers interested
-in using Dovetail for its functionalities beyond CVP testing, e.g. for in-house
+in using Dovetail for its functionalities beyond OVP testing, e.g. for in-house
 or extended testing, should consult the Dovetail developer's guide for additional
 information.
 
@@ -207,7 +207,7 @@ Installing Prerequisite on the Test Host
 
 The main prerequisite software for Dovetail are Python and Docker.
 
-In the CVP test suite for the Danube release, Dovetail requires Python 2.7. Python 3.x
+In the OVP test suite for the Danube release, Dovetail requires Python 2.7. Python 3.x
 is not supported at this time.
 
 Use the following steps to check if the right version of python is already installed,
@@ -274,7 +274,7 @@ Installing Dovetail on the Test Host
 
 The Dovetail project maintains a Docker image that has Dovetail test tools preinstalled.
 This Docker image is tagged with versions. Before pulling the Dovetail image, check the
-OPNFV's CVP web page first to determine the right tag for CVP testing.
+OPNFV's OVP web page first to determine the right tag for OVP testing.
 
 If the Test Host is online, you can directly pull Dovetail Docker image and download ubuntu
 and cirros images.
@@ -370,7 +370,7 @@ Build Local DB and Testapi Service
 ----------------------------------
 
 It needs to build local DB and testapi service for storing and reporting results
-to CVP web portal. There is a script in Dovetail container for building local DB.
+to OVP web portal. There is a script in Dovetail container for building local DB.
 All the following commands should be executed in Dovetail container.
 The DB will use port 27017 and the testapi will use port 8000. They can be reset by
 
@@ -391,7 +391,7 @@ After that, you can check the DB and testapi service with your browser. The url 
 the results is ``http://<test_host_ip>:<testapi_port>/api/v1/results``. If you
 can access this url successfully, it means the DB and testapi service are OK now.
 
-Running the CVP Test Suite
+Running the OVP Test Suite
 ----------------------------
 
 Now you should be in the Dovetail container's prompt and ready to execute
@@ -407,7 +407,7 @@ By default the results are stored in a local file ``$DOVETAIL_HOME/results``.
    $ dovetail run --testsuite <test-suite-name>
 
 Multiple test suites may be available. For the purpose of running
-CVP test suite, the test suite name follows the following format,
+OVP test suite, the test suite name follows the following format,
 ``cvp.<major>.<minor>.<patch>``.
 The latest and default test suite is cvp.0.8.0.
 
@@ -431,7 +431,7 @@ and "ha". The optional test areas are "ipv6", "sdnvpn" and "tempest".
    $ dovetail run --testarea mandatory
 
 You need to push the results to local DB if you want to store the results
-or report the results to CVP.
+or report the results to OVP.
 
 .. code-block:: bash
 
@@ -465,7 +465,7 @@ Here is an example of running mandatory test areas.
 After that there will be a tar file including the result file and all the log files,
 for example ``${DOVETAIL_HOME}/logs_29_07_22.tar.gz``.
 The file is named according to the current time. In this case, it was generated at 07:22 29th.
-This tar file is used to upload to CVP.
+This tar file is used to upload to OVP.
 
 Special Configuration for Running HA Test Cases
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -536,7 +536,7 @@ Here is an example of what this file should contain.
      # Expected device name when a volume is attached to an instance.
      volume_device_name: vdb
 
-Making Sense of CVP Test Results
+Making Sense of OVP Test Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When a tester is performing trial runs, Dovetail stores results in a local file by default.
@@ -582,17 +582,17 @@ When a tester is performing trial runs, Dovetail stores results in a local file 
        respectively. They all have the passed, skipped and failed test cases results.
 
 #. OPNFV web interface
-  CVP will host a web site to collect test results. Users can upload their results to this web site,
+  OVP will host a web site to collect test results. Users can upload their results to this web site,
   so they can review these results in the future.
 
    * web site url
 
-     * https://cvp.opnfv.org
+     * https://verified.opnfv.org
 
    * Sign in / Sign up
 
      * You need to sign in you account, then you can upload results, and check your private results.
-       CVP is now using Linux Foundation ID as account provider.
+       OVP is now using Linux Foundation ID as account provider.
 
      * If you already have a Linux Foundation ID, you can sign in directly with your id.
 
@@ -621,7 +621,7 @@ Updating Dovetail or a Test Suite
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Follow the instructions in section `Installing Dovetail on the Test Host`_ and
-`Running the CVP Test Suite`_ by replacing the docker images with new_tags,
+`Running the OVP Test Suite`_ by replacing the docker images with new_tags,
 
 .. code-block:: bash
 
@@ -629,6 +629,6 @@ Follow the instructions in section `Installing Dovetail on the Test Host`_ and
    sudo docker pull opnfv/functest:<functest_new_tag>
    sudo docker pull opnfv/yardstick:<yardstick_new_tag>
 
-This step is necessary if dovetail software or the CVP test suite have updates.
+This step is necessary if dovetail software or the OVP test suite have updates.
 
 

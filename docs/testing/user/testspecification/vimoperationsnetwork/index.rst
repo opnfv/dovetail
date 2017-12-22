@@ -57,7 +57,7 @@ For brevity, the test cases in this test area are summarized together based on
 the operations they are testing.
 
 All these test cases are included in the test case dovetail.osinterop.tc001 of
-cvp test suite.
+OVP test suite.
 
 Test Descriptions
 =================
