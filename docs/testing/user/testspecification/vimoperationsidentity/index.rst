@@ -54,7 +54,7 @@ The test area is structured based on VIM identity operations. Each test case
 is able to run independently, i.e. irrelevant of the state created by a previous test.
 
 All these test cases are included in the test case dovetail.osinterop.tc001 of
-cvp test suite.
+OVP test suite.
 
 Dependency Description
 ======================
