@@ -1,14 +1,14 @@
 From: xudan <xudan16@huawei.com>
-Date: Wed, 20 Dec 2017 22:23:13 -0500
+Date: Sat, 23 Dec 2017 03:10:19 -0500
 Subject: [PATCH] Add AArch64 support for Dovetail docker file
 
 Signed-off-by: xudan <xudan16@huawei.com>
 ---
- docker/Dockerfile | 30 +++++++++++++++++-------------
- 1 file changed, 17 insertions(+), 13 deletions(-)
+ docker/Dockerfile | 32 +++++++++++++++++---------------
+ 1 file changed, 17 insertions(+), 15 deletions(-)
 
 diff --git a/docker/Dockerfile b/docker/Dockerfile
-index c5239db..25e2105 100644
+index c5239db..b4fd9f7 100644
 --- a/docker/Dockerfile
 +++ b/docker/Dockerfile
 @@ -1,8 +1,16 @@
@@ -31,7 +31,7 @@ index c5239db..25e2105 100644
 
  RUN \
      apt-get update \
-@@ -17,22 +25,14 @@ RUN \
+@@ -17,21 +25,11 @@ RUN \
          python-dev \
          python-mock \
          python-pip \
@@ -41,10 +41,9 @@ index c5239db..25e2105 100644
          --no-install-recommends \
  && \
 -    apt-get update
-+    apt-get update &&  apt-get -y install docker-ce --allow-unauthenticated
-
- RUN easy_install -U setuptools==30.0.0
-
+-
+-RUN easy_install -U setuptools==30.0.0
+-
 -RUN wget -qO- https://get.docker.com/ \
 -| \
 -    sed 's/-q docker-ce/-q docker-ce=17.03.0~ce-0~ubuntu-trusty/' \
@@ -52,11 +51,11 @@ index c5239db..25e2105 100644
 -    sed 's/edge/stable/' \
 -| \
 -    sh
--
++    apt-get update &&  apt-get -y install docker-ce --allow-unauthenticated
+
  ENV HOME /home/opnfv
  ENV REPOS_DIR ${HOME}/dovetail
- WORKDIR /home/opnfv
-@@ -40,6 +40,10 @@ WORKDIR /home/opnfv
+@@ -40,6 +38,10 @@ WORKDIR /home/opnfv
  RUN \
      mkdir -p ${REPOS_DIR} \
  && \
