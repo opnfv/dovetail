@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_3b81a5fb",
+        "filename": "docs/testing/user/certificationworkflow/ApplicationForm.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-12-23T11:22:44Z",
+      "side": 1,
+      "message": "Good point, I wanted to ask that in yesterday\u0027s call, but we ran out of time: Do we still need this form here? There was a review of an official application form which was created by a legal advisor. I suppose we want to use this version eventually.",
+      "parentUuid": "9a3d3df0_1bb821e4",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 30
+      },
+      "revId": "ee81aadfbb39c8aaa1d196865c2ee700a856fd22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_dba8798f",
         "filename": "docs/testing/user/ovpaddendum/index.rst",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2017-12-23T10:03:52Z",
       "side": 1,
       "message": "Could we also update this wiki page and update this link?",
+      "range": {
+        "startLine": 418,
+        "startChar": 67,
+        "endLine": 418,
+        "endChar": 80
+      },
+      "revId": "ee81aadfbb39c8aaa1d196865c2ee700a856fd22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_1b866113",
+        "filename": "docs/testing/user/ovpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2017-12-23T11:22:44Z",
+      "side": 1,
+      "message": "yes, the wiki page can easily be renamed. I can update this link here and after the change got merged, change the wiki page.",
+      "parentUuid": "9a3d3df0_dba8798f",
       "range": {
         "startLine": 418,
         "startChar": 67,
