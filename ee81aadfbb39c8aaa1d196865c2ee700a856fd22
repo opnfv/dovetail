@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_0dbe26b4",
+        "filename": "docs/testing/user/certificationworkflow/ApplicationForm.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2017-12-27T22:37:52Z",
+      "side": 1,
+      "message": "Yes, Brandon is still working on getting a DocuSign online application form live. The link, which will be included within the OVP portal home page, is still forthcoming. I suggest we leave this variant of the form for now in case there are any technical issues with the online one. The\u0027re adding an OVP version number to the form that we should add to this one for alignment. The version will allow a candidate to specify the OVP release they intend to verify against.",
+      "parentUuid": "9a3d3df0_3b81a5fb",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 30
+      },
+      "revId": "ee81aadfbb39c8aaa1d196865c2ee700a856fd22",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_dba8798f",
         "filename": "docs/testing/user/ovpaddendum/index.rst",
         "patchSetId": 1
