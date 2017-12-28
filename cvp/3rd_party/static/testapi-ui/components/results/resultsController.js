@@ -191,12 +191,12 @@
             });
         }
 
-        function changeLabel(result, data){
-            toggleCheck(result, 'label', data);
+        function changeLabel(result, key, data){
+            toggleCheck(result, key, data);
         }
 
         function toReview(result, value){
-            var resp = confirm('Once you submit a test result for review, it will become readable to all CVP reviewers. Do you want to proceed?');
+            var resp = confirm('Once you submit a test result for review, it will become readable to all OVP reviewers. Do you want to proceed?');
             if(resp){
                 toggleCheck(result, 'status', value);
             }
