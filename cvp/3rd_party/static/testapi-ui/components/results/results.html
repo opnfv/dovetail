@@ -29,6 +29,7 @@
                 <th>Status</th>
                 <th>Log</th>
                 <th>SUT</th>
+                <th>SUT Version</th>
                 <th class="col-md-2">Operation</th>
                 <th class="col-md-2">Share List</th>
             </tr>
@@ -40,10 +41,11 @@
                 <td><a  uib-tooltip="{{ result.id }}" tooltip-placement="top" tooltip-append-to-body="true" ng-click="ctrl.gotoResultDetail(result.id, result._id)">{{ result.id | limitTo:8 }}</a></td>
                 <td>{{ result.owner }}</td>
                 <td>{{ result.filename || "None"}}</td>
-                <td><div class="popover-wrapper"><a editable-theme="bs3" onbeforesave="ctrl.changeLabel(result, $data)" editable-text="result.label"> {{ result.label || "None" }}</a></div></td>
+                <td><div class="popover-wrapper"><a editable-theme="bs3" onbeforesave="ctrl.changeLabel(result, 'label', $data)" editable-text="result.label"> {{ result.label || "None" }}</a></div></td>
                 <td>{{ result.status }}</td>
                 <td><a ng-click="ctrl.downloadLogs(result.id)">logs</a></td>
                 <td><a ng-click="ctrl.gotoSUT(result.id)">info</a></td>
+                <td><div class="popover-wrapper"><a editable-theme="bs3" onbeforesave="ctrl.changeLabel(result, 'sut_label', $data)" editable-text="result.sut_label"> {{ result.sut_label || "None" }}</a></div></td>
                 <td>
                     <div class="btn-group" uib-dropdown>
                         <a id="single-button" type="button" class="btn btn-success cvp-btn medium accent-color regular-button" uib-dropdown-toggle>
