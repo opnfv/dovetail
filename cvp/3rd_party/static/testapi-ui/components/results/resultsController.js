@@ -191,8 +191,8 @@
             });
         }
 
-        function changeLabel(result, data){
-            toggleCheck(result, 'label', data);
+        function changeLabel(result, key, data){
+            toggleCheck(result, key, data);
         }
 
         function toReview(result, value){
