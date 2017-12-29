@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_c0724510",
+        "filename": "cvp/3rd_party/static/testapi-ui/components/results/resultsController.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2017-12-29T01:40:06Z",
+      "side": 1,
+      "message": "Since we are making a change to this file anyway, can we change CVP to OVP in the prompt for result review?",
+      "revId": "ae54df158354bedc441bd64a12226a8ff9030dca",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_20633143",
+        "filename": "cvp/opnfv_testapi/resources/test_handlers.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2017-12-29T01:40:06Z",
+      "side": 1,
+      "message": "Please change \u0027label\u0027 to \u0027version\u0027 and \u0027submit\u0027 to \u0027submission\u0027 or \u0027submitting\u0027",
+      "revId": "ae54df158354bedc441bd64a12226a8ff9030dca",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
