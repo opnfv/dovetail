@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_b95018d5",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-02T11:36:44Z",
+      "side": 1,
+      "message": "This section doesn\u0027t seem to have much to do with the mandatory test areas as the name of this section.\nIt\u0027s more like instructing users how to find the result.",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 23
+      },
+      "revId": "c8b4f7b27ddbeda38df8675905f5071a51871c86",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_d9c6bc67",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-02T11:36:44Z",
+      "side": 1,
+      "message": "\"within mandatory test area\" may be better.",
+      "range": {
+        "startLine": 72,
+        "startChar": 25,
+        "endLine": 72,
+        "endChar": 35
+      },
+      "revId": "c8b4f7b27ddbeda38df8675905f5071a51871c86",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_193ae498",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-02T11:36:44Z",
+      "side": 1,
+      "message": "Need to be replaced by 2018.01?",
+      "range": {
+        "startLine": 75,
+        "startChar": 60,
+        "endLine": 75,
+        "endChar": 74
+      },
+      "revId": "c8b4f7b27ddbeda38df8675905f5071a51871c86",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_196144a9",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-02T11:36:44Z",
+      "side": 1,
+      "message": "should also be replaced?",
+      "range": {
+        "startLine": 92,
+        "startChar": 54,
+        "endLine": 92,
+        "endChar": 60
+      },
+      "revId": "c8b4f7b27ddbeda38df8675905f5071a51871c86",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_794a1027",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-02T11:36:44Z",
+      "side": 1,
+      "message": "According to the latest version of web, the mandatory total will always be 215 regardless of test cases users submit.\nFor example, users submit 214 mandatory test cases except ha.tc008, then it will be,\nMandatory Total: 215, Pass: 214, Rate: 99.53%\nAnd dovetail.ha.tc008 will be [0/1]",
+      "range": {
+        "startLine": 99,
+        "startChar": 75,
+        "endLine": 100,
+        "endChar": 72
+      },
+      "revId": "c8b4f7b27ddbeda38df8675905f5071a51871c86",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_d9323cf1",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-02T11:36:44Z",
+      "side": 1,
+      "message": "white space",
+      "range": {
+        "startLine": 106,
+        "startChar": 97,
+        "endLine": 106,
+        "endChar": 98
+      },
+      "revId": "c8b4f7b27ddbeda38df8675905f5071a51871c86",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_59aaac85",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-02T11:36:44Z",
+      "side": 1,
+      "message": "Will it be better if adding another section about the optional test areas?",
+      "range": {
+        "startLine": 192,
+        "startChar": 3,
+        "endLine": 192,
+        "endChar": 15
+      },
+      "revId": "c8b4f7b27ddbeda38df8675905f5071a51871c86",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
