@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_9ffc0f74",
+        "filename": "cvp/opnfv_testapi/resources/test_handlers.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-01-05T14:41:54Z",
+      "side": 1,
+      "message": "2 points:\n1. I would suggest leveraging the followings, or else KeyError will be raised if \u0027sut_label\u0027 not exist in test\n    if not test.get(\u0027sut_label\u0027)\n    if \u0027sut_label\u0027 not in test or not test[\u0027sut_label\u0027]\n2. is the format of sut_label fixed, or the user can fill in whatever they want?",
+      "range": {
+        "startLine": 221,
+        "startChar": 19,
+        "endLine": 221,
+        "endChar": 40
+      },
+      "revId": "af1debe11cf4793bae049ff3ffd63dc906bbc1c9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
