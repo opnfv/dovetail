@@ -45,6 +45,29 @@
       "revId": "fd9ceb7eb9bfe93da70137a13344bc7d9374d3d6",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_7fe02bfa",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 674,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-01-05T12:50:02Z",
+      "side": 1,
+      "message": "see Xu Dan\u0027s comment above. A correct example is: logs_20180105_0858.tar.gz",
+      "range": {
+        "startLine": 674,
+        "startChar": 75,
+        "endLine": 674,
+        "endChar": 95
+      },
+      "revId": "fd9ceb7eb9bfe93da70137a13344bc7d9374d3d6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
