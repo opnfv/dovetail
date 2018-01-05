@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_946b56f0",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-05T09:16:08Z",
+      "side": 1,
+      "message": "The format of the hosts info has been updated. One sample file is \nhttps://github.com/opnfv/dovetail/blob/master/dovetail/userconfig/hosts.yaml.sample",
+      "range": {
+        "startLine": 363,
+        "startChar": 3,
+        "endLine": 366,
+        "endChar": 29
+      },
+      "revId": "fd9ceb7eb9bfe93da70137a13344bc7d9374d3d6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_9410765a",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 591,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-05T09:16:08Z",
+      "side": 1,
+      "message": "The file name has been updated by this patch https://gerrit.opnfv.org/gerrit/#/c/47495/.\nHere is an example logs_20180105_0858.tar.gz",
+      "range": {
+        "startLine": 591,
+        "startChar": 2,
+        "endLine": 591,
+        "endChar": 39
+      },
+      "revId": "fd9ceb7eb9bfe93da70137a13344bc7d9374d3d6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
