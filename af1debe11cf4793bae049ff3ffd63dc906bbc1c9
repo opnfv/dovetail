@@ -46,6 +46,30 @@
       "revId": "af1debe11cf4793bae049ff3ffd63dc906bbc1c9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_5a1a957d",
+        "filename": "cvp/opnfv_testapi/resources/test_handlers.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-01-08T02:33:40Z",
+      "side": 1,
+      "message": "For 1st, I know your point, but my point is when it works with web, it works fine, because \u0027sut_label\u0027 does exist for sure, but if not, \u0027sut_label\u0027 may be missing rather than an empty value, then KeyError will be returned rather than the error message it should be. it is ok for not to change it since there\u0027s no requirement operating without web, but not fault tolerant enough.",
+      "parentUuid": "9a3d3df0_baae412c",
+      "range": {
+        "startLine": 221,
+        "startChar": 19,
+        "endLine": 221,
+        "endChar": 40
+      },
+      "revId": "af1debe11cf4793bae049ff3ffd63dc906bbc1c9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
