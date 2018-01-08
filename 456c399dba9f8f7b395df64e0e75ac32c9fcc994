@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_b4277511",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2018-01-08T19:35:01Z",
+      "side": 1,
+      "message": "Should be be, no less than 2 and MUST equal the number of compute nodes being used for testing? For example, if there is a larger deployment being tests, can you run we min_compute_nodes: 4, where there are actually 5 in the deployment or does this have to equal the number of compute in the deployment?",
+      "range": {
+        "startLine": 286,
+        "startChar": 41,
+        "endLine": 286,
+        "endChar": 73
+      },
+      "revId": "456c399dba9f8f7b395df64e0e75ac32c9fcc994",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
