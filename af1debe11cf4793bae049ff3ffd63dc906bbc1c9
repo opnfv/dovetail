@@ -22,6 +22,30 @@
       "revId": "af1debe11cf4793bae049ff3ffd63dc906bbc1c9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_baae412c",
+        "filename": "cvp/opnfv_testapi/resources/test_handlers.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 5437
+      },
+      "writtenOn": "2018-01-08T01:39:57Z",
+      "side": 1,
+      "message": "For the fiist point, I have consided that.Since this is a record from database, so if \u0027sut_label\u0027 not in test we need a KeyError to know the database is not consistent with our backend code, this message should not show to users. Here we just want to info user he can\u0027t submit a test when this field is empty.\n\nFor the second point, the format of sut_label is fixed. We have discuss about it. For now, we can add a tooltip, but just check it in backend.",
+      "parentUuid": "9a3d3df0_9ffc0f74",
+      "range": {
+        "startLine": 221,
+        "startChar": 19,
+        "endLine": 221,
+        "endChar": 40
+      },
+      "revId": "af1debe11cf4793bae049ff3ffd63dc906bbc1c9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
