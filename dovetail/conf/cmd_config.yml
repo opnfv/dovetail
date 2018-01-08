@@ -28,19 +28,19 @@ cli:
           - '-f'
         path:
           - 'functest/docker_tag'
-        help: 'Overwrite tag for functest docker container (e.g. cvp.0.5.0)'
-      bott_tag:
-        flags:
-          - '--bott_tag'
-          - '-b'
-        path:
-          - 'bottlenecks/docker_tag'
-        help: 'Overwrite tag for bottlenecks docker container (e.g. cvp.0.4.0)'
+        help: 'Overwrite tag for functest docker container (e.g. ovp.1.0.0)'
+      # bott_tag:
+      #   flags:
+      #     - '--bott_tag'
+      #     - '-b'
+      #   path:
+      #     - 'bottlenecks/docker_tag'
+      #   help: 'Overwrite tag for bottlenecks docker container (e.g. cvp.0.4.0)'
     control:
       testsuite:
         flags:
           - '--testsuite'
-        default: 'cvp.0.9.0'
+        default: 'ovp.1.0.0'
         help: 'compliance testsuite.'
       testarea:
         flags:
