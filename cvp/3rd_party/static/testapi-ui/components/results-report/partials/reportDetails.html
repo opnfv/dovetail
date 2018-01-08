@@ -39,9 +39,9 @@ Test Filters:<br />
                 <span ng-if="ctrl.testStatus == 'passed'" class="text-success">[{{ value.pass }}]</span>
                 <span ng-if="ctrl.testStatus == 'not passed'" class="text-danger">[{{ value.fail }}]</span>
             </a>
-            <a uib-tooltip="view log" ng-click="ctrl.gotoResultLog(area)"><span class="glyphicon glyphicon-cog"></a>
+            <a uib-tooltip="view log" ng-click="ctrl.gotoResultLog(area)"><span class="glyphicon glyphicon-cog"></span></a>
             <ul class="list-unstyled" uib-collapse="value.folder">
-                <li ng-repeat="case in value.cases">
+                <li ng-repeat="case in value.cases" ng-if="(ctrl.testStatus=='passed' && ctrl.case_list.indexOf(case) > -1) || (ctrl.testStatus=='not passed' && ctrl.case_list.indexOf(case) == -1) || ctrl.testStatus=='total'">
                     <span ng-class="{'glyphicon glyphicon-ok text-success':ctrl.case_list.indexOf(case) > -1, 'glyphicon glyphicon-remove text-warning':ctrl.case_list.indexOf(case) == -1}" aria-hidden="true"></span>
                     <a ng-click="ctrl.gotoDoc(case)">{{ case }}</a>
                 </li>
