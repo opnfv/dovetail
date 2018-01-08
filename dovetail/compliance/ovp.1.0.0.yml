@@ -1,6 +1,6 @@
 ---
-cvp.0.9.0:
-  name: cvp.0.9.0
+ovp.1.0.0:
+  name: ovp.1.0.0
   testcases_list:
   # mandatory test cases
     # osinterop
