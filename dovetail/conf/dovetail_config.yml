@@ -27,8 +27,7 @@ testsuite_supported:
   - compliance_set
   - proposed_tests
   - debug
-  - cvp.0.8.0
-  - cvp.0.9.0
+  - ovp.1.0.0
 # testarea supported, should adjust accordingly
 testarea_supported:
   - osinterop
@@ -87,17 +86,8 @@ validate_input:
   valid_docker_tag:
     - 'stable'
     - 'latest'
-    - 'danube.1.0'
-    - 'danube.2.0'
-    - 'danube.3.0'
-    - 'danube.3.1'
     - 'danube.3.2'
-    - 'cvp.0.1.0'
-    - 'cvp.0.2.0'
-    - 'cvp.0.3.0'
-    - 'cvp.0.4.0'
-    - 'cvp.0.5.0'
-    - 'cvp.0.6.0'
+    - 'ovp.1.0.0'
 
 mandatory:
   - osinterop

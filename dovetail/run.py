@@ -105,7 +105,7 @@ def validate_input(input_dict, check_dict, logger):
     # for 'func_tag' and 'yard_tag' options
     func_tag = input_dict['func_tag']
     yard_tag = input_dict['yard_tag']
-    bott_tag = input_dict['bott_tag']
+    # bott_tag = input_dict['bott_tag']
     valid_tag = check_dict['valid_docker_tag']
     if func_tag is not None and func_tag not in valid_tag:
         logger.error("The input option 'func_tag' can't be {}, "
@@ -115,10 +115,10 @@ def validate_input(input_dict, check_dict, logger):
         logger.error("The input option 'yard_tag' can't be {}, "
                      "valid values are {}.".format(yard_tag, valid_tag))
         raise SystemExit(1)
-    if bott_tag is not None and bott_tag not in valid_tag:
-        logger.error("The input option 'bott_tag' can't be {}, "
-                     "valid values are {}.".format(bott_tag, valid_tag))
-        raise SystemExit(1)
+    # if bott_tag is not None and bott_tag not in valid_tag:
+    #     logger.error("The input option 'bott_tag' can't be {}, "
+    #                  "valid values are {}.".format(bott_tag, valid_tag))
+    #     raise SystemExit(1)
 
     # for 'report' option
     report = input_dict['report']
