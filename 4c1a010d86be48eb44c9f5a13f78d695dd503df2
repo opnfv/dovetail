@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_aab0ae43",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-01-09T07:56:56Z",
+      "side": 1,
+      "message": "ok, ignore my comment. OpenStack ID-based login works for me.",
+      "parentUuid": "9a3d3df0_4580fabf",
+      "range": {
+        "startLine": 56,
+        "startChar": 84,
+        "endLine": 57,
+        "endChar": 2
+      },
+      "revId": "4c1a010d86be48eb44c9f5a13f78d695dd503df2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_7f85cb05",
         "filename": "docs/release/release-notes/dovetail-release.rst",
         "patchSetId": 1
