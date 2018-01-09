@@ -22,6 +22,30 @@
       "revId": "456c399dba9f8f7b395df64e0e75ac32c9fcc994",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_d7fddbb2",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-09T01:38:27Z",
+      "side": 1,
+      "message": "IMO, min_compute_nodes can be 2, 3, 4 or 5 in this case.\nThis is the link of the definition of min_compute_nodes,\nhttps://github.com/openstack/tempest/blob/14.0.0/tempest/config.py#L292\nAlmost all test cases which need multi nodes (such as migration) require at least 2 compute nodes.\nThe most special test case is \u0027test_schedule_to_all_nodes\u0027,\nhttps://github.com/openstack/tempest/blob/14.0.0/tempest/scenario/test_server_multinode.py#L46\nIt needs to schedule servers to all nodes user set with \u0027min_compute_nodes\u0027. So it can be set between [2, actually_compute_nodes]",
+      "parentUuid": "9a3d3df0_b4277511",
+      "range": {
+        "startLine": 286,
+        "startChar": 41,
+        "endLine": 286,
+        "endChar": 73
+      },
+      "revId": "456c399dba9f8f7b395df64e0e75ac32c9fcc994",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
