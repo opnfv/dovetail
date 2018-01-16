@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_499122f0",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-01-16T05:52:02Z",
+      "side": 1,
+      "message": "Maybe not in this patch, but I think we need to make it more clear, because, in this way, the user will get confused whether functest:danube.3.2 is also released or available for ovp.1.0.0?",
+      "revId": "a7a9e7ad757143060a091df1b11f546da01e5618",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
