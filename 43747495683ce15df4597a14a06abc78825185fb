@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_e9d916f4",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-01-16T03:43:45Z",
+      "side": 1,
+      "message": "vping-ssh/vping-userdata are developed by Functest team",
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
