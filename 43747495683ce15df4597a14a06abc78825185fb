@@ -16,6 +16,40 @@
       "revId": "43747495683ce15df4597a14a06abc78825185fb",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_1cec76f2",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-01-16T10:53:22Z",
+      "side": 1,
+      "message": "this page seems to be missing content are we going to fill information to this page?",
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_096a7ab2",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-01-16T10:53:22Z",
+      "side": 1,
+      "message": "i added ovp.1.0.0.yml file to git because it was missing. please review.\n\nhttps://gerrit.opnfv.org/gerrit/#/c/50687/",
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
