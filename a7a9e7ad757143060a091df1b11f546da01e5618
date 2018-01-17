@@ -16,6 +16,24 @@
       "revId": "a7a9e7ad757143060a091df1b11f546da01e5618",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_7f33f413",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-17T03:43:18Z",
+      "side": 1,
+      "message": "Here just list the docker tag ovp.1.0.0 supports. Maybe in next release, it can be splict into valid_functest_docker_tag, valid_yardstick_docker_tag ...\nfunctest:danube.3.2 is not available for ovp.1.0.0",
+      "parentUuid": "9a3d3df0_499122f0",
+      "revId": "a7a9e7ad757143060a091df1b11f546da01e5618",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
