@@ -22,6 +22,30 @@
       "revId": "78809edb2a376a6ee0d6625894dc6c6f2db42973",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_1aa8f675",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-17T10:49:28Z",
+      "side": 1,
+      "message": "We are automatically collecting the endpoint information with the OpenStack endpoint command. We do not collect hardware or other host OS information here. There may not be metadata available in the host OS for company/product names, etc. \nWe do collect hardware info with Ansible under the Hosts listing. However, again there is no standard metadata that can be automatically gleaned for vendor. We\u0027ll consider how we might improve SUT info in a future release.",
+      "parentUuid": "9a3d3df0_74816dc2",
+      "range": {
+        "startLine": 196,
+        "startChar": 0,
+        "endLine": 198,
+        "endChar": 26
+      },
+      "revId": "78809edb2a376a6ee0d6625894dc6c6f2db42973",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
