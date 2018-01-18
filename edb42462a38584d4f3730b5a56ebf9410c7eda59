@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_503edf8c",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-18T11:55:44Z",
+      "side": 1,
+      "message": "This is the alias of \u0027tempest.api.compute.servers.test_list_server_filters.ListServerFiltersTestJSON.test_list_servers_filter_by_active_status\u0027.\nFor tempest 14.0.0, it\u0027s actually \u0027test_list_servers_filter_by_active_status\u0027.\nBesides this, there are a lot of alias test cases in this testscope file.\nFYI, there is a patch that removed all the alias test cases in all test specification documents. See https://gerrit.opnfv.org/gerrit/#/c/47691/4",
+      "range": {
+        "startLine": 85,
+        "startChar": 2,
+        "endLine": 85,
+        "endChar": 122
+      },
+      "revId": "edb42462a38584d4f3730b5a56ebf9410c7eda59",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_30535be3",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 490,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-18T11:55:44Z",
+      "side": 1,
+      "message": "The names of these HA test cases in test specification docs are dovetail.ha.tc001 ...\nhttp://docs.opnfv.org/en/latest/submodules/dovetail/docs/testing/user/testspecification/highavailability/index.html",
+      "range": {
+        "startLine": 490,
+        "startChar": 2,
+        "endLine": 490,
+        "endChar": 38
+      },
+      "revId": "edb42462a38584d4f3730b5a56ebf9410c7eda59",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_1050d7d2",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 504,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-18T11:55:44Z",
+      "side": 1,
+      "message": "Also these two are dovetail.vping...\nhttp://docs.opnfv.org/en/latest/submodules/dovetail/docs/testing/user/testspecification/vping/index.html",
+      "range": {
+        "startLine": 503,
+        "startChar": 2,
+        "endLine": 504,
+        "endChar": 17
+      },
+      "revId": "edb42462a38584d4f3730b5a56ebf9410c7eda59",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_50653fb3",
+        "filename": "docs/testing/developer/testscope/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-18T11:55:44Z",
+      "side": 1,
+      "message": "dovetail.sdnvpn.tc001.subnet_connectivity\nhttp://docs.opnfv.org/en/latest/submodules/dovetail/docs/testing/user/testspecification/vpn/index.html",
+      "range": {
+        "startLine": 519,
+        "startChar": 2,
+        "endLine": 519,
+        "endChar": 34
+      },
+      "revId": "edb42462a38584d4f3730b5a56ebf9410c7eda59",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
