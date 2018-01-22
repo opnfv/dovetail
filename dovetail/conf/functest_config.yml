@@ -1,7 +1,7 @@
 ---
 functest:
-  image_name: opnfv/functest
-  docker_tag: cvp.0.5.0
+  image_name: opnfv/functest-restapi
+  docker_tag: euphrates
   opts: '-id --privileged=true'
   config:
     dir: '/home/opnfv/userconfig'
