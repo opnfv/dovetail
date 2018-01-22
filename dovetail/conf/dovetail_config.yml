@@ -98,6 +98,7 @@ validate_input:
     - 'cvp.0.4.0'
     - 'cvp.0.5.0'
     - 'cvp.0.6.0'
+    - 'euphrates'
 
 mandatory:
   - osinterop

@@ -6,10 +6,10 @@ dovetail.ipv6.tc002:
     type: functest
     testcase: tempest_custom
     pre_condition:
-      - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/local/lib/python2.7/dist-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
+      - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
     pre_copy:
       src_file: tempest_custom.txt
-      dest_path: /usr/local/lib/python2.7/dist-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
+      dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
     sub_testcase_list:
       - tempest.api.network.test_networks.NetworksIpV6Test.test_create_update_delete_network_subnet[id-0e269138-0da6-4efc-a46d-578161e7b221,smoke]
