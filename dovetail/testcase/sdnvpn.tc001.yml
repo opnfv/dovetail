@@ -6,12 +6,12 @@ dovetail.sdnvpn.tc001:
     type: functest
     testcase: bgpvpn
     pre_condition:
-      - "sed -i 's/testcase_1/sdnvpn.test.functest.testcase_1/' /usr/local/lib/python2.7/dist-packages/sdnvpn/test/functest/testcase_1.py"
-      - "sed -i 's/run_sdnvpn_tests.py/run_sdnvpn_tests.py -r/' /usr/local/lib/python2.7/dist-packages/functest/ci/testcases.yaml"
+      - "sed -i 's/testcase_1/sdnvpn.test.functest.testcase_1/' /usr/lib/python2.7/site-packages/sdnvpn/test/functest/testcase_1.py"
+      - "sed -i 's/run_sdnvpn_tests.py/run_sdnvpn_tests.py -r/' /usr/lib/python2.7/site-packages/functest/ci/testcases.yaml"
       - "source /home/opnfv/functest/conf/openstack.creds && functest openstack snapshot-create"
     pre_copy:
       exist_src_file: sdnvpn_config_testcase1.yaml
-      dest_path: /usr/local/lib/python2.7/dist-packages/sdnvpn/test/functest/config.yaml
+      dest_path: /usr/lib/python2.7/site-packages/sdnvpn/test/functest/config.yaml
     post_condition:
       - "source /home/opnfv/functest/conf/openstack.creds && functest openstack clean"
   report:

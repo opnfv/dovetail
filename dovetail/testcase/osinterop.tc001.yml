@@ -9,10 +9,10 @@ dovetail.osinterop.tc001:
     type: functest
     testcase: refstack_defcore
     pre_condition:
-      - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/local/lib/python2.7/dist-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
+      - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
     pre_copy:
       src_file: osinterop.txt
-      dest_path: /usr/local/lib/python2.7/dist-packages/functest/opnfv_tests/openstack/refstack_client/defcore.txt
+      dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/refstack_client/defcore.txt
     cmds:
       - 'functest env prepare'
       - 'functest testcase run refstack_defcore -r'

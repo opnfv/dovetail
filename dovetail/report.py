@@ -458,13 +458,6 @@ class FunctestChecker(object):
 
     @staticmethod
     def get_sub_testcase(sub_testcase, result):
-        # This adaption is because of the danube bug of Functest.
-        # Has been fixed in Euphrates.
-        # Patch link https://gerrit.opnfv.org/gerrit/#/c/47897/
-        if sub_testcase == "tempest.api.identity.v3.test_tokens." \
-            "TokensV3Test.test_create_token":
-            sub_testcase = "tempest.api.identity.v3.test_t"
-
         if not result:
             return False
         sub_testcase = re.sub("\[.*?\]", "", sub_testcase)
