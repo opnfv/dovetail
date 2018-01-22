@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_bb574725",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-22T18:22:47Z",
+      "side": 1,
+      "message": "Okay added \u0027in addition to supplying native test cases\u0027",
+      "parentUuid": "9a3d3df0_e9d916f4",
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_1cec76f2",
         "filename": "docs/release/release-notes/dovetail-release.rst",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_9b524333",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-22T18:22:47Z",
+      "side": 1,
+      "message": "This had an outstanding Gerrit patch that needed to be submitted before promotion to docs.opnfv.org. This has since occurred. Thanks for the checks...",
+      "parentUuid": "9a3d3df0_1cec76f2",
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_096a7ab2",
         "filename": "docs/release/release-notes/dovetail-release.rst",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2018-01-16T10:53:22Z",
       "side": 1,
       "message": "i added ovp.1.0.0.yml file to git because it was missing. please review.\n\nhttps://gerrit.opnfv.org/gerrit/#/c/50687/",
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_1b3e33da",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-22T18:22:47Z",
+      "side": 1,
+      "message": "Thanks for the effort and pointing out that we should have broad reviews to avoid conflicts. This file will be added once patch https://gerrit.opnfv.org/gerrit/#/c/50195/ is submitted.",
+      "parentUuid": "9a3d3df0_096a7ab2",
       "revId": "43747495683ce15df4597a14a06abc78825185fb",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
