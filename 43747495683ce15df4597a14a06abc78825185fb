@@ -2,6 +2,75 @@
   "comments": [
     {
       "key": {
+        "uuid": "9a3d3df0_d6530215",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2018-01-22T21:38:17Z",
+      "side": 1,
+      "message": "The reference SUT is the deployed NFV platform, not the installers. Ideally tests should be independent of the installer (understood this is not realistic at this stage).",
+      "range": {
+        "startLine": 39,
+        "startChar": 10,
+        "endLine": 39,
+        "endChar": 72
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_f677269e",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2018-01-22T21:38:17Z",
+      "side": 1,
+      "message": "Propose rather than listing test case names here (they are not descriptive anyway) ... refer to the Test Scope document which should be the authoritative reference for test cases.",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 29
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_d67ae286",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2018-01-22T21:38:17Z",
+      "side": 1,
+      "message": "frameworks",
+      "range": {
+        "startLine": 157,
+        "startChar": 15,
+        "endLine": 157,
+        "endChar": 23
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_e9d916f4",
         "filename": "docs/release/release-notes/dovetail-release.rst",
         "patchSetId": 3
@@ -31,6 +100,144 @@
       "side": 1,
       "message": "Okay added \u0027in addition to supplying native test cases\u0027",
       "parentUuid": "9a3d3df0_e9d916f4",
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_56ad32e8",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2018-01-22T21:38:17Z",
+      "side": 1,
+      "message": "Upstream components integrated into the Dovetail framework are:",
+      "range": {
+        "startLine": 162,
+        "startChar": 0,
+        "endLine": 162,
+        "endChar": 72
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_f69e06b8",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2018-01-22T21:38:17Z",
+      "side": 1,
+      "message": "Add links or references",
+      "range": {
+        "startLine": 164,
+        "startChar": 0,
+        "endLine": 165,
+        "endChar": 10
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_96b33a4c",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2018-01-22T21:38:17Z",
+      "side": 1,
+      "message": "frameworks",
+      "range": {
+        "startLine": 167,
+        "startChar": 9,
+        "endLine": 167,
+        "endChar": 17
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_5694128a",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2018-01-22T21:38:17Z",
+      "side": 1,
+      "message": "\"the Yardstick detailed container\"",
+      "range": {
+        "startLine": 168,
+        "startChar": 81,
+        "endLine": 169,
+        "endChar": 9
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_56db727b",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2018-01-22T21:38:17Z",
+      "side": 1,
+      "message": "deleted \"of installers\"",
+      "range": {
+        "startLine": 184,
+        "startChar": 54,
+        "endLine": 184,
+        "endChar": 67
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_f63a8697",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 728
+      },
+      "writtenOn": "2018-01-22T21:38:17Z",
+      "side": 1,
+      "message": "Rather reference the marketing rules (doc or link) for using the Marks.",
+      "range": {
+        "startLine": 187,
+        "startChar": 0,
+        "endLine": 189,
+        "endChar": 12
+      },
       "revId": "43747495683ce15df4597a14a06abc78825185fb",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
