@@ -17,7 +17,7 @@
 <div cg-busy="{promise:ctrl.authRequest,message:'Loading'}"></div>
 <div cg-busy="{promise:ctrl.resultsRequest,message:'Loading'}"></div>
 
-<div ng-show="ctrl.data" class="results-table">
+<div ng-show="ctrl.data" class="results-table" style="width:100%;overflow-x:scroll">
     <table ng-data="ctrl.data.result" ng-show="ctrl.data" class="table table-striped table-hover">
         <thead>
             <tr>
@@ -29,7 +29,7 @@
                 <th>Status</th>
                 <th>Log</th>
                 <th>SUT</th>
-                <th>SUT Version</th>
+                <th>SUT Version&nbsp<a  uib-tooltip="e.g cvp.danube.0.1.0" tooltip-placement="top" tooltip-append-to-body="true"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></th>
                 <th class="col-md-2">Operation</th>
                 <th class="col-md-2">Share List</th>
             </tr>
