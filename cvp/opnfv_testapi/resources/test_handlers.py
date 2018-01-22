@@ -196,9 +196,15 @@ class TestsGURHandler(GenericTestHandler):
             return
 
         curr_user = self.get_secure_cookie(auth_const.OPENID)
-        if item in {"shared", "label"}:
+        if item in {"shared", "label", "sut_label"}:
             query['owner'] = curr_user
             db_keys.append('owner')
+
+        if item == 'sut_label':
+            if test['status'] != 'private' and not value:
+                msg = 'SUT version cannot be changed to None after submitting.'
+                self.finish_request({'code': 403, 'msg': msg})
+                return
 
         if item == "status":
             if value in {'approved', 'not approved'}:
