@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_fc070580",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-23T19:10:29Z",
+      "side": 1,
+      "message": "Okay amended the sentence to read: \u0027are the NFV components deployed by the OPNFV installers for a given release\u0027",
+      "parentUuid": "9a3d3df0_d6530215",
+      "range": {
+        "startLine": 39,
+        "startChar": 10,
+        "endLine": 39,
+        "endChar": 72
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_f677269e",
         "filename": "docs/release/release-notes/dovetail-release.rst",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_1c01096a",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-23T19:10:29Z",
+      "side": 1,
+      "message": "There isn\u0027t a concise listing of test/sub test cases anywhere in our docs with total sub test case counts for mandatory/optional test areas. The reason for this listing is to show the number of total tests. The only other place this is shown is in the web portal results. I suggest we leave in place.\n\nI\u0027m going to add a link for another doc that provides further test area breakdown with the expanded test names: http://docs.opnfv.org/en/stable-danube/submodules/dovetail/docs/testing/developer/testscope/index.html. \n\nThere\u0027s another Gerrit patch to correct this doc:\nhttps://gerrit.opnfv.org/gerrit/#/c/50643/",
+      "parentUuid": "9a3d3df0_f677269e",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 29
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_d67ae286",
         "filename": "docs/release/release-notes/dovetail-release.rst",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2018-01-22T21:38:17Z",
       "side": 1,
       "message": "frameworks",
+      "range": {
+        "startLine": 157,
+        "startChar": 15,
+        "endLine": 157,
+        "endChar": 23
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_7cfbf578",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-23T19:10:29Z",
+      "side": 1,
+      "message": "Okay, changed to \u0027frameworks\u0027 here and in doc gambit",
+      "parentUuid": "9a3d3df0_d67ae286",
       "range": {
         "startLine": 157,
         "startChar": 15,
@@ -129,6 +201,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_5cf6f18f",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-23T19:10:29Z",
+      "side": 1,
+      "message": "Adopting your wording, as it sounds better",
+      "parentUuid": "9a3d3df0_56ad32e8",
+      "range": {
+        "startLine": 162,
+        "startChar": 0,
+        "endLine": 162,
+        "endChar": 72
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_f69e06b8",
         "filename": "docs/release/release-notes/dovetail-release.rst",
         "patchSetId": 3
@@ -140,6 +236,30 @@
       "writtenOn": "2018-01-22T21:38:17Z",
       "side": 1,
       "message": "Add links or references",
+      "range": {
+        "startLine": 164,
+        "startChar": 0,
+        "endLine": 165,
+        "endChar": 10
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_fc7c25ee",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-23T19:10:29Z",
+      "side": 1,
+      "message": "Difficult to find any documentation on the TestAPI on the OPNFV wiki. I will add a reference to the doc below, which is the best link I could find. If someone has a better one, please chime in.\n\nhttp://docs.opnfv.org/en/stable-danube/submodules/functest/docs/testing/developer/devguide/#test-collection-framework",
+      "parentUuid": "9a3d3df0_f69e06b8",
       "range": {
         "startLine": 164,
         "startChar": 0,
@@ -175,6 +295,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_bcf1fd96",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-23T19:10:29Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "9a3d3df0_96b33a4c",
+      "range": {
+        "startLine": 167,
+        "startChar": 9,
+        "endLine": 167,
+        "endChar": 17
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_5694128a",
         "filename": "docs/release/release-notes/dovetail-release.rst",
         "patchSetId": 3
@@ -186,6 +330,30 @@
       "writtenOn": "2018-01-22T21:38:17Z",
       "side": 1,
       "message": "\"the Yardstick detailed container\"",
+      "range": {
+        "startLine": 168,
+        "startChar": 81,
+        "endLine": 169,
+        "endChar": 9
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_1c8629db",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-23T19:10:29Z",
+      "side": 1,
+      "message": "reworded \u0027the default Yardstick Danube container\u0027",
+      "parentUuid": "9a3d3df0_5694128a",
       "range": {
         "startLine": 168,
         "startChar": 81,
@@ -221,6 +389,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_7c70150b",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-23T19:10:29Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "9a3d3df0_56db727b",
+      "range": {
+        "startLine": 184,
+        "startChar": 54,
+        "endLine": 184,
+        "endChar": 67
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_f63a8697",
         "filename": "docs/release/release-notes/dovetail-release.rst",
         "patchSetId": 3
@@ -232,6 +424,30 @@
       "writtenOn": "2018-01-22T21:38:17Z",
       "side": 1,
       "message": "Rather reference the marketing rules (doc or link) for using the Marks.",
+      "range": {
+        "startLine": 187,
+        "startChar": 0,
+        "endLine": 189,
+        "endChar": 12
+      },
+      "revId": "43747495683ce15df4597a14a06abc78825185fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_dc668150",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-23T19:10:29Z",
+      "side": 1,
+      "message": "I\u0027m going to leave in to provide an overview of all indemnifying remarks. More details are specified in the Governance and T\u0026C links below.",
+      "parentUuid": "9a3d3df0_f63a8697",
       "range": {
         "startLine": 187,
         "startChar": 0,
