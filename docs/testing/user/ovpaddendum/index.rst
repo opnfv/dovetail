@@ -4,7 +4,7 @@
 .. (c) Intel and others
 
 ====================================================================
-OPNFV Verified Program - Guidelines Addendum for Danube
+OPNFV Verified Program - 2018.01 Guidelines Addendum for Danube
 ====================================================================
 
 .. toctree::
@@ -59,7 +59,7 @@ Assumptions about the System Under Test (SUT) include ...
 Scope of Testing
 ================
 
-The `OPNFV OVP Guidelines`_, as approved by the Board of Directors, outlines
+The `OVP Governance Guidelines`_, as approved by the Board of Directors, outlines
 the key objectives of the OVP as follows:
 
 - Help build the market for
@@ -415,6 +415,6 @@ Applicants who choose to run the optional test cases can include the results
 of the optional test cases to highlight the additional compliance.
 
 .. References
-.. _`OPNFV OVP Guidelines`: https://wiki.opnfv.org/display/dovetail/OVP+document
+.. _`OVP Governance Guidelines`: https://www.opnfv.org/wp-content/uploads/sites/12/2018/01/OVP-Governance-Guidelines-1.0.1-012218.pdf
 .. _`Pharos specification`: https://wiki.opnfv.org/display/pharos/Pharos+Specification
 
