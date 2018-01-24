@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_53b6df8a",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-24T16:24:39Z",
+      "side": 1,
+      "message": "I will update this only if there\u0027s need to have another patchset",
+      "parentUuid": "9a3d3df0_5c8711b5",
+      "range": {
+        "startLine": 46,
+        "startChar": 4,
+        "endLine": 46,
+        "endChar": 11
+      },
+      "revId": "b82fd78a39d2af34658fd220fa27c20611234bb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_bc929df3",
         "filename": "docs/release/release-notes/dovetail-release.rst",
         "patchSetId": 4
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_f0a1e9f8",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-24T16:24:39Z",
+      "side": 1,
+      "message": "It\u0027s not entirely accurate to delete this. Technically there are other options to the testsuite option. The \u0027debug\u0027 option can be used, even though its use is probably sparse. Please see \nhttps://gerrit.opnfv.org/gerrit/#/c/50195/2/dovetail/conf/dovetail_config.yml\n\ntestsuite_supported:\n  - compliance_set\n  - proposed_tests\n  - debug\n  - ovp.1.0.0",
+      "parentUuid": "9a3d3df0_bc929df3",
+      "range": {
+        "startLine": 70,
+        "startChar": 30,
+        "endLine": 70,
+        "endChar": 48
+      },
+      "revId": "b82fd78a39d2af34658fd220fa27c20611234bb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_9c8d19d6",
         "filename": "docs/release/release-notes/dovetail-release.rst",
         "patchSetId": 4
@@ -59,6 +107,30 @@
       "writtenOn": "2018-01-23T20:14:27Z",
       "side": 1,
       "message": "Rephrase this to \"All the mandatory test areas are required for a SUT to be considered \"verified.\"   All results are reviewed by community peer reviewers and partial results (missing any mandatory tests) will not be reviewed or considered.",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 94
+      },
+      "revId": "b82fd78a39d2af34658fd220fa27c20611234bb4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_f3c293e7",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-24T16:24:39Z",
+      "side": 1,
+      "message": "While my sentence is awkward, I don\u0027t think this suggestion is better. Specifically \u0027all mandatory test areas are required for SUT to be...\u0027 What is required by the mandatory test areas?",
+      "parentUuid": "9a3d3df0_9c8d19d6",
       "range": {
         "startLine": 88,
         "startChar": 0,
