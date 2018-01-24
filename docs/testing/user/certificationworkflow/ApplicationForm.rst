@@ -2,8 +2,6 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) OPNFV, Intel Corporation and others.
 
-.._ovp-application-form:
-
 =======================================
 OPNFV Verified Program Application Form
 =======================================
