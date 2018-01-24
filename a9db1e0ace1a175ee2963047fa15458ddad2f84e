@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_904e9d39",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-24T02:39:52Z",
+      "side": 1,
+      "message": "Since this is the document for releasing, do we need to remove the text \u0027Editor\u0027s note\u0027?",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 15
+      },
+      "revId": "a9db1e0ace1a175ee2963047fa15458ddad2f84e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
