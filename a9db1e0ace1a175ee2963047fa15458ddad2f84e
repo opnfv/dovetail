@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_0951c80e",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2018-01-25T13:26:40Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "9a3d3df0_904e9d39",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 15
+      },
+      "revId": "a9db1e0ace1a175ee2963047fa15458ddad2f84e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_53825f00",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 2
@@ -59,6 +83,30 @@
       "writtenOn": "2018-01-24T13:41:26Z",
       "side": 1,
       "message": "I think this should be review group not reviewer group",
+      "range": {
+        "startLine": 83,
+        "startChar": 57,
+        "endLine": 83,
+        "endChar": 66
+      },
+      "revId": "a9db1e0ace1a175ee2963047fa15458ddad2f84e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_e953c414",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2018-01-25T13:26:40Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "9a3d3df0_53825f00",
       "range": {
         "startLine": 83,
         "startChar": 57,
