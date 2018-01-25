@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_a423a354",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2018-01-25T13:26:40Z",
+      "side": 1,
+      "message": "should be \"review group\"",
+      "range": {
+        "startLine": 93,
+        "startChar": 69,
+        "endLine": 93,
+        "endChar": 77
+      },
+      "revId": "010487cb191fe573f84a7be1d309cbc32298e720",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
