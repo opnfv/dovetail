@@ -99,55 +99,55 @@ broken down into sub test cases. A listing of test cases with the number of sub 
 in parenthesis is shown below for the OVP 2018.01 release.
 
 **Mandatory**
-- dovetail.osinterop.tc001 (205)
-- dovetail.vping.tc001 (1)
-- dovetail.vping.tc002 (1)
-- dovetail.ha.tc001 (1)
-- dovetail.ha.tc002 (1)
-- dovetail.ha.tc003 (1)
-- dovetail.ha.tc004 (1)
-- dovetail.ha.tc005 (1)
-- dovetail.ha.tc006 (1)
-- dovetail.ha.tc007 (1)
-- dovetail.ha.tc008 (1)
+ * dovetail.osinterop.tc001 (205)
+ * dovetail.vping.tc001 (1)
+ * dovetail.vping.tc002 (1)
+ * dovetail.ha.tc001 (1)
+ * dovetail.ha.tc002 (1)
+ * dovetail.ha.tc003 (1)
+ * dovetail.ha.tc004 (1)
+ * dovetail.ha.tc005 (1)
+ * dovetail.ha.tc006 (1)
+ * dovetail.ha.tc007 (1)
+ * dovetail.ha.tc008 (1)
 
 There are a total of 215 mandatory test cases (osinterop: 205, vping: 2, ha: 8).
 
 **Optional**
-- dovetail.ipv6.tc001 (3)
-- dovetail.ipv6.tc002 (1)
-- dovetail.ipv6.tc003 (1)
-- dovetail.ipv6.tc004 (2)
-- dovetail.ipv6.tc005 (2)
-- dovetail.ipv6.tc006 (1)
-- dovetail.ipv6.tc007 (1)
-- dovetail.ipv6.tc008 (1)
-- dovetail.ipv6.tc009 (1)
-- dovetail.ipv6.tc010 (1)
-- dovetail.ipv6.tc011 (1)
-- dovetail.ipv6.tc012 (1)
-- dovetail.ipv6.tc013 (1)
-- dovetail.ipv6.tc014 (1)
-- dovetail.ipv6.tc015 (1)
-- dovetail.ipv6.tc016 (1)
-- dovetail.ipv6.tc017 (1)
-- dovetail.ipv6.tc018 (1)
-- dovetail.ipv6.tc019 (1)
-- dovetail.ipv6.tc020 (1)
-- dovetail.ipv6.tc021 (1)
-- dovetail.ipv6.tc022 (1)
-- dovetail.ipv6.tc023 (1)
-- dovetail.ipv6.tc024 (1)
-- dovetail.ipv6.tc025 (1)
-- dovetail.tempest.tc001 (1)
-- dovetail.tempest.tc002 (6)
-- dovetail.tempest.tc003 (5)
-- dovetail.tempest.tc004 (12)
-- dovetail.tempest.tc005 (6)
-- dovetail.sdnvpn.tc001 (1)
-- dovetail.sdnvpn.tc002 (1)
-- dovetail.sdnvpn.tc004 (1)
-- dovetail.sdnvpn.tc008 (1)
+ * dovetail.ipv6.tc001 (3)
+ * dovetail.ipv6.tc002 (1)
+ * dovetail.ipv6.tc003 (1)
+ * dovetail.ipv6.tc004 (2)
+ * dovetail.ipv6.tc005 (2)
+ * dovetail.ipv6.tc006 (1)
+ * dovetail.ipv6.tc007 (1)
+ * dovetail.ipv6.tc008 (1)
+ * dovetail.ipv6.tc009 (1)
+ * dovetail.ipv6.tc010 (1)
+ * dovetail.ipv6.tc011 (1)
+ * dovetail.ipv6.tc012 (1)
+ * dovetail.ipv6.tc013 (1)
+ * dovetail.ipv6.tc014 (1)
+ * dovetail.ipv6.tc015 (1)
+ * dovetail.ipv6.tc016 (1)
+ * dovetail.ipv6.tc017 (1)
+ * dovetail.ipv6.tc018 (1)
+ * dovetail.ipv6.tc019 (1)
+ * dovetail.ipv6.tc020 (1)
+ * dovetail.ipv6.tc021 (1)
+ * dovetail.ipv6.tc022 (1)
+ * dovetail.ipv6.tc023 (1)
+ * dovetail.ipv6.tc024 (1)
+ * dovetail.ipv6.tc025 (1)
+ * dovetail.tempest.tc001 (1)
+ * dovetail.tempest.tc002 (6)
+ * dovetail.tempest.tc003 (5)
+ * dovetail.tempest.tc004 (12)
+ * dovetail.tempest.tc005 (6)
+ * dovetail.sdnvpn.tc001 (1)
+ * dovetail.sdnvpn.tc002 (1)
+ * dovetail.sdnvpn.tc004 (1)
+ * dovetail.sdnvpn.tc008 (1)
 
 There are a total of 63 optional test cases (ipv6: 29, tempest: 30, sdnvpn: 4).
 
@@ -278,10 +278,10 @@ Documents
 Version Change
 ==============
 
-- This is the first major release of OVP/Dovetail. Please refer to the link below for minor
+This is the first major release of OVP/Dovetail. Please refer to the link below for minor
 version changes during pre-release and beta phases.
 
-https://wiki.opnfv.org/display/dovetail/Running+history+for+the+dovetail+tool
+ * https://wiki.opnfv.org/display/dovetail/Running+history+for+the+dovetail+tool
 
 Testing with OPNFV Danube Installers
 ====================================
