@@ -51,9 +51,18 @@ class Test(models.ModelBase):
         @property trust_indicator: used for long duration test case
         @ptype trust_indicator: L{TI}
     """
-    def __init__(self, _id=None, owner=None, results=[],
-                 public="false", review="false", status="private",
-                 shared=[], filename="", label="", trust_indicator=None):
+    def __init__(self,
+                 _id=None,
+                 owner=None,
+                 results=[],
+                 public="false",
+                 review="false",
+                 status="private",
+                 shared=[],
+                 filename="",
+                 label="",
+                 sut_label="",
+                 trust_indicator=None):
         self._id = _id
         self.owner = owner
         self.results = results
@@ -64,6 +73,7 @@ class Test(models.ModelBase):
         self.shared = shared
         self.filename = filename
         self.label = label
+        self.sut_label = sut_label
 
 
 @swagger.model()
