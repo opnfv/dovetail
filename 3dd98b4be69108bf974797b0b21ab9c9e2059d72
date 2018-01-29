@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_dfcca9bd",
+        "filename": "dovetail/userconfig/testcases.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-29T07:01:41Z",
+      "side": 1,
+      "message": "Last weekly meeting we talked about adding these test cases into \u0027debug\u0027 test suite and run them on CI. Because the CI results can be a reference for deciding which test case can be added in. And I am working on adding them into debug test suite and enabling them running on CI.\nI don\u0027t think this file will confuse users. Dovetail is a tool that can support to run many test cases including the compliance ones and the potential ones. They concern about the ability of this tool to run the test cases they want to test. Why will they confuse about the extra test cases this tool supports?",
+      "parentUuid": "9a3d3df0_9fd6a14d",
+      "range": {
+        "startLine": 59,
+        "startChar": 27,
+        "endLine": 59,
+        "endChar": 47
+      },
+      "revId": "3dd98b4be69108bf974797b0b21ab9c9e2059d72",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_3f44b548",
         "filename": "dovetail/userconfig/testcases.yaml",
         "patchSetId": 4
