@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_df7e6969",
+        "filename": "dovetail/userconfig/testcases.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-01-29T06:18:59Z",
+      "side": 1,
+      "message": "No, this is not included in dovetail yet. But we are discussing about adding some new test cases and maybe test case, snaps_smoke and cloudify_ims. So just add them here to let them can be run with functest docker container. This doesn\u0027t mean add them into madatory or optional.",
+      "parentUuid": "9a3d3df0_df594936",
+      "range": {
+        "startLine": 59,
+        "startChar": 27,
+        "endLine": 59,
+        "endChar": 47
+      },
+      "revId": "3dd98b4be69108bf974797b0b21ab9c9e2059d72",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_3f44b548",
         "filename": "dovetail/userconfig/testcases.yaml",
         "patchSetId": 4
