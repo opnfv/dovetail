@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_df594936",
+        "filename": "dovetail/userconfig/testcases.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-01-29T05:55:04Z",
+      "side": 1,
+      "message": "is this test case executed in dovetail? I think tempest_custom is leveraged rather than this one, please forgive me if I was wrong",
+      "range": {
+        "startLine": 59,
+        "startChar": 27,
+        "endLine": 59,
+        "endChar": 47
+      },
+      "revId": "3dd98b4be69108bf974797b0b21ab9c9e2059d72",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_3f44b548",
+        "filename": "dovetail/userconfig/testcases.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-01-29T05:55:04Z",
+      "side": 1,
+      "message": "ditto, is snaps_smoke included in dovetail?",
+      "range": {
+        "startLine": 76,
+        "startChar": 27,
+        "endLine": 76,
+        "endChar": 38
+      },
+      "revId": "3dd98b4be69108bf974797b0b21ab9c9e2059d72",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_bf77259f",
+        "filename": "dovetail/userconfig/testcases.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-01-29T05:55:04Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 143,
+        "startChar": 27,
+        "endLine": 143,
+        "endChar": 39
+      },
+      "revId": "3dd98b4be69108bf974797b0b21ab9c9e2059d72",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
