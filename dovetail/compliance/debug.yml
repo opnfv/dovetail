@@ -1,16 +1,7 @@
 ---
 # only used for dovetail tool development debug
-# nfvi.tc001 tc002 running time is shorter, about 3 minutes
-# osinterop.tc001 about 30 minutes
+# all these are new test cases adding here for running on CI
 debug:
   name: debug
   testcases_list:
-    - dovetail.example.tc002
-    - dovetail.osinterop.tc001
-#    - dovetail.osinterop.tc002
-#    - dovetail.ipv6.tc008
-#    - dovetail.ipv6.tc009
-#    - dovetail.ipv6.tc018
-#    - dovetail.ipv6.tc019
-    - dovetail.vping.tc001
-    - dovetail.vping.tc002
+    - dovetail.smoke.tc001

@@ -41,6 +41,7 @@ testarea_supported:
   - optional
   - mandatory
   - full
+  - smoke
 
 functest_testsuite:
   - refstack_defcore
