@@ -16,6 +16,24 @@
       "revId": "5dc21e929d7c39fa84b066a75d5bc3a8fd2b62bc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_c2884d73",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-01-31T17:54:21Z",
+      "side": 1,
+      "message": "Thanks for catching",
+      "parentUuid": "9a3d3df0_ee6c5d0a",
+      "revId": "5dc21e929d7c39fa84b066a75d5bc3a8fd2b62bc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
