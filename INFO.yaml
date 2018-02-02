@@ -1,0 +1,68 @@
+---
+project: 'OPNFV qualification testing (dovetail)'
+project_creation_date: 'September 1st, 2015'
+project_category: 'Testing'
+lifecycle_state: 'Incubation'
+project_lead: &opnfv_dovetail_ptl
+    name: 'Georg Kunz'
+    email: 'georg.kunz@ericsson.com'
+    company: 'ericsson.com'
+    id: 'georgkunz'
+    timezone: 'Europe/Berlin'
+primary_contact: *opnfv_dovetail_ptl
+issue_tracking:
+    type: 'jira'
+    url: 'https://jira.opnfv.org/projects/dovetail'
+    key: 'dovetail'
+mailing_list:
+    type: 'mailman2'
+    url: 'opnfv-tech-discuss@lists.opnfv.org'
+    tag: '[dovetail]'
+realtime_discussion:
+    type: irc
+    server: 'freenode.net'
+    channel: '#opnfv-dovetail'
+meetings:
+    - type: 'gotomeeting+irc'
+      agenda:  'https://wiki.opnfv.org/display/meetings/Dovetail'
+      url:  'https://global.gotomeeting.com/join/819733085'
+      server: 'freenode.net'
+      channel: '#opnfv-dovetail'
+      repeats: 'weekly'
+      time:  'Wednesday, 14:00 UTC'
+repositories:
+    - 'dovetail'
+committers:
+    - <<: *opnfv_dovetail_ptl
+    - name: 'Wenjing Chu'
+      email: 'chu.wenjing@gmail.com'
+      company: 'gmail.com'
+      id: 'wenjing'
+    - name: 'Dave Neary'
+      email: 'dneary@redhat.com'
+      company: 'redhat.com'
+      id: 'dneary'
+    - name: 'Trevor Cooper'
+      email: 'trevor.cooper@intel.com'
+      company: 'intel.com'
+      id: 'trev'
+    - name: 'Leo wang'
+      email: 'grakiss.wanglei@huawei.com'
+      company: 'huawei.com'
+      id: 'grakiss'
+    - name: 'zenghui shi'
+      email: 'vincent.w3lcome@gmail.com'
+      company: 'gmail.com'
+      id: 'cyberfinal'
+    - name: 'Qiao Fu'
+      email: 'fuqiao@chinamobile.com'
+      company: 'chinamobile.com'
+      id: 'fuqiao'
+    - name: 'Lincoln Lavoie'
+      email: 'lylavoie@iol.unh.edu'
+      company: 'iol.unh.edu'
+      id: 'lylavoie'
+tsc:
+    # yamllint disable rule:line-length
+    approval: 'http//meetbot.opnfv.org/meetings/opnfv-meeting/2015/opnfv-meeting.2015-09-01-13.59.html'
+    # yamllint enable rule:line-length
