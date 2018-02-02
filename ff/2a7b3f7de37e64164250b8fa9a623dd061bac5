@@ -1,0 +1,9 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Georg Kunz <georg.kunz@ericsson.com>
+Code-Review+1: Eddy Raineri <eddy.raineri@windriver.com>
+Code-Review+2: Leo wang <grakiss.wanglei@huawei.com>
+Submitted-by: Leo wang <grakiss.wanglei@huawei.com>
+Submitted-at: Fri, 02 Feb 2018 01:08:36 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/51421
+Project: dovetail
+Branch: refs/heads/master
