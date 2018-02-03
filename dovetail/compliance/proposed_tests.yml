@@ -12,3 +12,5 @@ proposed_tests:
     - dovetail.ha.tc011
     # vnf
     - dovetail.vnf.tc001
+    # sdnvpn
+    - dovetail.sdnvpn.tc000
