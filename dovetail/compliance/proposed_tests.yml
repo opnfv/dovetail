@@ -14,3 +14,5 @@ proposed_tests:
     - dovetail.vnf.tc001
     # stress
     - dovetail.stress.tc001
+    # sdnvpn
+    - dovetail.sdnvpn.tc000
