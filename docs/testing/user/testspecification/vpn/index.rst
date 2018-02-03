@@ -530,3 +530,84 @@ Post conditions
 ---------------
 
 N/A
+
+
+
+------------------------------------
+Test Case 5 - Tempest API CRUD Tests
+------------------------------------
+
+Short Name
+----------
+
+dovetail.sdnvpn.tempest.api_crud_tests
+
+
+Use case specification
+----------------------
+
+This test case combines multiple CRUD (Create, Read, Update, Delete) tests for
+the objects defined by the BGPVPN API extension of Neutron.
+
+These tests are implemented in the upstream networking-bgpvpn project
+repository as a Tempest plugin.
+
+
+Test preconditions
+------------------
+
+The VIM is operational and the networking-bgpvpn service plugin for Neutron is
+correctly configured and loaded. At least one compute node is available.
+
+
+Basic test flow execution description and pass/fail criteria
+------------------------------------------------------------
+
+List of test cases
+
+* networking_bgpvpn_tempest.tests.api.test_create_bgpvpn
+* networking_bgpvpn_tempest.tests.api.test_create_bgpvpn_as_non_admin_fail
+* networking_bgpvpn_tempest.tests.api.test_delete_bgpvpn_as_non_admin_fail
+* networking_bgpvpn_tempest.tests.api.test_show_bgpvpn_as_non_owner_fail
+* networking_bgpvpn_tempest.tests.api.test_list_bgpvpn_as_non_owner_fail
+* networking_bgpvpn_tempest.tests.api.test_show_netassoc_as_non_owner_fail
+* networking_bgpvpn_tempest.tests.api.test_list_netassoc_as_non_owner_fail
+* networking_bgpvpn_tempest.tests.api.test_associate_disassociate_network
+* networking_bgpvpn_tempest.tests.api.test_update_route_target
+* networking_bgpvpn_tempest.tests.api.test_update_route_target_non_admin_fail
+* networking_bgpvpn_tempest.tests.api.test_create_bgpvpn_with_invalid_routetargets
+* networking_bgpvpn_tempest.tests.api.test_update_bgpvpn_invalid_routetargets
+* networking_bgpvpn_tempest.tests.api.test_associate_invalid_network
+* networking_bgpvpn_tempest.tests.api.test_disassociate_invalid_network
+* networking_bgpvpn_tempest.tests.api.test_associate_disassociate_router
+* networking_bgpvpn_tempest.tests.api.test_attach_associated_subnet_to_associated_router
+
+The tests include both positive tests and negative tests. The latter are
+identified with the suffix "_fail" in their name.
+
+
+Test execution
+''''''''''''''
+
+The above tests are executed sequentially and a separate pass/fail result is
+recorded per test.
+
+In general, every test case performs the API actions indicated in its name
+and asserts that the action succeeds (positive test) or a specific exception
+is triggered (negative test).
+
+
+
+Pass / fail criteria
+''''''''''''''''''''
+
+This test validates that all supported CRUD operations (create, read, update,
+delete) can be applied to the objects of the Neutron BGPVPN extension.  In
+order to pass this test, all test assertions listed in the test execution above
+need to pass.
+
+
+Post conditions
+---------------
+
+N/A
