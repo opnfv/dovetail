@@ -14,3 +14,4 @@ debug:
 #    - dovetail.ipv6.tc019
     - dovetail.vping.tc001
     - dovetail.vping.tc002
+    - dovetail.sdnvpn.tempest-api
