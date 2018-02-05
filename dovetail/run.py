@@ -10,6 +10,7 @@
 
 import click
 import os
+import subprocess
 import copy
 import time
 import uuid
@@ -123,10 +124,11 @@ def validate_input(input_dict, check_dict, logger):
     # for 'report' option
     report = input_dict['report']
     if report:
-        if not (report.startswith("http") or report == "file"):
-            logger.error("Report type can't be {}, valid types are 'file' "
-                         "and 'http'.".format(input_dict['report']))
-            raise SystemExit(1)
+        if report != "default":
+            if not (report.startswith("http") or report == "file"):
+                logger.error("Report type can't be {}, valid types are 'file' "
+                             "and 'http'.".format(input_dict['report']))
+                raise SystemExit(1)
 
 
 def filter_config(input_dict, logger):
@@ -273,6 +275,9 @@ def main(*args, **kwargs):
     if kwargs['report']:
         if(kwargs['report'].endswith('/')):
             kwargs['report'] = kwargs['report'][0:kwargs['report'].rfind('/')]
+        if(kwargs['report']=="default"):
+            host_ip = subprocess.check_output("/sbin/ip route|awk '/default/ { print $3 }'", shell=True).rstrip()
+            kwargs['report'] = "http://" + host_ip + ":8000/api/v1/results"
         dt_cfg.dovetail_config['report_dest'] = kwargs['report']
         dt_cfg.update_cmds()
 
