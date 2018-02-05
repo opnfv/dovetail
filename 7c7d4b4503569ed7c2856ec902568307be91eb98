@@ -22,6 +22,30 @@
       "revId": "7c7d4b4503569ed7c2856ec902568307be91eb98",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_0757df02",
+        "filename": "dovetail/testcase/sdnvpn.tempest-api.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-02-05T08:35:58Z",
+      "side": 1,
+      "message": "thanks, good catch!",
+      "parentUuid": "9a3d3df0_ec14604e",
+      "range": {
+        "startLine": 10,
+        "startChar": 17,
+        "endLine": 10,
+        "endChar": 32
+      },
+      "revId": "7c7d4b4503569ed7c2856ec902568307be91eb98",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
