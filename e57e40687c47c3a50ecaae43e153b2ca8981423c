@@ -22,6 +22,30 @@
       "revId": "e57e40687c47c3a50ecaae43e153b2ca8981423c",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_0cd1bf22",
+        "filename": "dovetail/run.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-02-06T18:36:27Z",
+      "side": 1,
+      "message": "Tested on a few nodes including an Amazon instance and it seems to always work returning the docker0 bridge IP, which is fine. System calls are always erratic but this is just a helper - it doesn\u0027t interfere with established usage of the option.",
+      "parentUuid": "9a3d3df0_c6fdf86f",
+      "range": {
+        "startLine": 280,
+        "startChar": 12,
+        "endLine": 281,
+        "endChar": 78
+      },
+      "revId": "e57e40687c47c3a50ecaae43e153b2ca8981423c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
