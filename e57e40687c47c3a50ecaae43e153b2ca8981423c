@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_c6fdf86f",
+        "filename": "dovetail/run.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-02-06T07:24:00Z",
+      "side": 1,
+      "message": "With this I get the gateway of the machine not the host IP.\nAlso all the python scripts are executed in the docker container, and this will get the gateway ip of the dovetail container not the host IP.",
+      "range": {
+        "startLine": 280,
+        "startChar": 12,
+        "endLine": 281,
+        "endChar": 78
+      },
+      "revId": "e57e40687c47c3a50ecaae43e153b2ca8981423c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
