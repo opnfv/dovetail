@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_6c8e8b2f",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 607,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-02-06T19:06:02Z",
+      "side": 1,
+      "message": "This comment is really concerning the precedent set for writing test specifications and our conventions as we progress. If you look at the test cases documented previously in this document for the sdnvpn test area (and ubiquitously in the test specs), they are much more detailed in terms of outlining the procedure in the test execution section and conditions for success/failure in the pass/fail criteria. \n\nPerhaps, you are still planning to add this detail in another revision. But as we write the new specs, it is worth discussing what our bar is...",
+      "range": {
+        "startLine": 589,
+        "startChar": 0,
+        "endLine": 607,
+        "endChar": 13
+      },
+      "revId": "da3c3f9afd9b8a353c8796bd88fcead4ba972184",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
