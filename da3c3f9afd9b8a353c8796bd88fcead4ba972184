@@ -22,6 +22,30 @@
       "revId": "da3c3f9afd9b8a353c8796bd88fcead4ba972184",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_8c15cf9d",
+        "filename": "docs/testing/user/testspecification/vpn/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 607,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-02-06T20:09:35Z",
+      "side": 1,
+      "message": "you got me. I actually wanted to discuss this particular point as part of this review and in tomorrow\u0027s meeting. Brief spoiler for tomorrow\u0027s meeting: I tend to lean towards \"the code is the documentation. nobody will read this. nobody can keep this up-to-date if the test changes.\" Consider this a simplified statement to trigger discussions. All feedback is welcome",
+      "parentUuid": "9a3d3df0_6c8e8b2f",
+      "range": {
+        "startLine": 589,
+        "startChar": 0,
+        "endLine": 607,
+        "endChar": 13
+      },
+      "revId": "da3c3f9afd9b8a353c8796bd88fcead4ba972184",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
