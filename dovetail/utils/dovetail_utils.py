@@ -133,30 +133,34 @@ def check_https_enabled(logger=None):
 
 
 def get_ext_net_name(env_file, logger=None):
-    https_enabled = check_https_enabled(logger)
-    insecure_option = ''
-    insecure = os.getenv('OS_INSECURE',)
-    if https_enabled:
-        logger.info("https enabled...")
-        if insecure:
-            if insecure.lower() == "true":
-                insecure_option = ' --insecure '
-            else:
-                logger.warn("Env variable OS_INSECURE is {}, if https + no "
-                            "credential used, should be set as True."
-                            .format(insecure))
+    ext_net = os.getenv('EXTERNAL_NETWORK')
+    if ext_net: 
+        return ext_net
+    else:
+        https_enabled = check_https_enabled(logger)
+        insecure_option = ''
+        insecure = os.getenv('OS_INSECURE',)
+        if https_enabled:
+            logger.info("https enabled...")
+            if insecure:
+                if insecure.lower() == "true":
+                    insecure_option = ' --insecure '
+                else:
+                    logger.warn("Env variable OS_INSECURE is {}, if https + no "
+                                "credential used, should be set as True."
+                                .format(insecure))
 
-    cmd_check = "openstack %s network list" % insecure_option
-    ret, msg = exec_cmd(cmd_check, logger)
-    if ret:
-        logger.error("The credentials info in {} is invalid.".format(env_file))
+        cmd_check = "openstack %s network list" % insecure_option
+        ret, msg = exec_cmd(cmd_check, logger)
+        if ret:
+            logger.error("The credentials info in {} is invalid.".format(env_file))
+            return None
+        cmd = "openstack %s network list --long | grep 'External' | head -1 | \
+               awk '{print $4}'" % insecure_option
+        ret, msg = exec_cmd(cmd, logger)
+        if not ret:
+            return msg
         return None
-    cmd = "openstack %s network list --long | grep 'External' | head -1 | \
-           awk '{print $4}'" % insecure_option
-    ret, msg = exec_cmd(cmd, logger)
-    if not ret:
-        return msg
-    return None
 
 
 def store_db_results(db_url, build_tag, testcase, dest_file, logger):
