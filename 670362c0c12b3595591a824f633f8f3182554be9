@@ -16,6 +16,52 @@
       "revId": "670362c0c12b3595591a824f633f8f3182554be9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_0f436caf",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-02-09T08:48:18Z",
+      "side": 1,
+      "message": "I recommend not to grep for a specific name (which we don\u0027t know on commercial systems), but to let Neutron filter the returned networks: \"neutron net-list --router:external\u003dTrue\" This returns all available networks which are connected to an external router. we have to return one of those if there are multiple - but for this scenario, the EXTERNAL_NETWORK env variable should be set.",
+      "range": {
+        "startLine": 159,
+        "startChar": 8,
+        "endLine": 160,
+        "endChar": 50
+      },
+      "revId": "670362c0c12b3595591a824f633f8f3182554be9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_2f48f0ca",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-02-09T08:48:18Z",
+      "side": 1,
+      "message": "EXTERNAL_NETWORK is read by Functest and Yardstick. At least Functest has similar functionality to determine the external network through the SNAPs library. So, instead of duplicating this here, shouldn\u0027t we just forward the EXTERNAL_NETWORK env variable if it exists and otherwise leave it to the code in Functest and Yardstick to determine the external network? This limits code duplication.",
+      "range": {
+        "startLine": 136,
+        "startChar": 4,
+        "endLine": 163,
+        "endChar": 22
+      },
+      "revId": "670362c0c12b3595591a824f633f8f3182554be9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
