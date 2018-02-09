@@ -66,6 +66,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_427f0be0",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-02-09T15:35:05Z",
+      "side": 1,
+      "message": "In principle that grep catches everything which includes \"External\". The cleaner, because built-in, version is this one:\n\n\"openstack %s network list --external -c Name -f value | head -1\"\n\nIf someone touches a piece of code which can be optimized with low effort, it often makes sense to do so.",
+      "parentUuid": "9a3d3df0_02ece3b9",
+      "range": {
+        "startLine": 159,
+        "startChar": 8,
+        "endLine": 160,
+        "endChar": 50
+      },
+      "revId": "670362c0c12b3595591a824f633f8f3182554be9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_2f48f0ca",
         "filename": "dovetail/utils/dovetail_utils.py",
         "patchSetId": 3
@@ -101,6 +125,30 @@
       "side": 1,
       "message": "This is just a fail safe if EXTERNAL_NETWORK is not set at this point. It\u0027s probably not for me to say whether we should remove this and Functest/Yardstick will resolve (I don\u0027t care to analyze). But I can with certainty that there are many issues to resolve and I\u0027d rather move on to those. I can a) abandon this patch b) let\u0027s merge and you can take on your suggestion separately.",
       "parentUuid": "9a3d3df0_2f48f0ca",
+      "range": {
+        "startLine": 136,
+        "startChar": 4,
+        "endLine": 163,
+        "endChar": 22
+      },
+      "revId": "670362c0c12b3595591a824f633f8f3182554be9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_825c737e",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-02-09T15:35:05Z",
+      "side": 1,
+      "message": "No need to abandon anything. This is just review-based feedback with the goal improving the codebase.",
+      "parentUuid": "9a3d3df0_e241ffa9",
       "range": {
         "startLine": 136,
         "startChar": 4,
