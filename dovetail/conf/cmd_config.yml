@@ -53,6 +53,12 @@ cli:
           - '-d'
         is_flag: 'True'
         help: 'Flag for showing debug log on screen.'
+      stop:
+        flags:
+          - '--stop'
+          - '-s'
+        is_flag: 'True'
+        help: 'Flag for stopping on test case failure.'
       report:
         flags:
           - '--report'
