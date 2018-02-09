@@ -114,6 +114,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_055ced17",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-02-09T17:40:09Z",
+      "side": 1,
+      "message": "Let\u0027s move forward with your change.\n\nIt would be great if you could send me the error nevertheless so that I know what\u0027s the problem. It works on my system, but might be a version thing - in which case I would refrain from changing the code.",
+      "parentUuid": "9a3d3df0_850bdd22",
+      "range": {
+        "startLine": 159,
+        "startChar": 8,
+        "endLine": 160,
+        "endChar": 50
+      },
+      "revId": "670362c0c12b3595591a824f633f8f3182554be9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_2f48f0ca",
         "filename": "dovetail/utils/dovetail_utils.py",
         "patchSetId": 3
