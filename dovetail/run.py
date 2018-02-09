@@ -39,7 +39,7 @@ def load_testcase():
     Testcase.load()
 
 
-def run_test(testsuite, testarea, logger):
+def run_test(testsuite, testarea, logger, kwargs):
     testcase_list = Testcase.get_testcase_list(testsuite, testarea)
     duration = 0
     start_time = time.time()
@@ -61,7 +61,9 @@ def run_test(testsuite, testarea, logger):
         if run_testcase:
             testcase.run()
 
-        check_tc_result(testcase, logger)
+        stop_on_fail = check_tc_result(testcase, logger)
+        if stop_on_fail['criteria'] == "FAIL" and kwargs['stop']:
+            return "stop_on_fail"
 
     end_time = time.time()
     duration = end_time - start_time
@@ -99,8 +101,9 @@ def check_tc_result(testcase, logger):
         else:
             logger.error(
                 "Failed to store results with file {}.".format(result_file))
-        result = Report.get_result(testcase)
-        Report.check_result(testcase, result)
+    result = Report.get_result(testcase)
+    Report.check_result(testcase, result)
+    return result
 
 
 def validate_input(input_dict, check_dict, logger):
@@ -298,10 +301,12 @@ def main(*args, **kwargs):
     if testsuite_validation and testarea_validation:
         testsuite_yaml = load_testsuite(kwargs['testsuite'])
         load_testcase()
-        duration = run_test(testsuite_yaml, testarea, logger)
-        if dt_cfg.dovetail_config['report_dest'] == "file":
+        duration = run_test(testsuite_yaml, testarea, logger, kwargs)
+        if (dt_cfg.dovetail_config['report_dest'] == "file" and
+                duration != "stop_on_fail"):
             Report.generate(testsuite_yaml, testarea, duration)
-        if dt_cfg.dovetail_config['report_dest'].startswith("http"):
+        if (dt_cfg.dovetail_config['report_dest'].startswith("http") and
+                duration != "stop_on_fail"):
             Report.save_logs()
     else:
         logger.error('Invalid input commands, testsuite {} testarea {}'
