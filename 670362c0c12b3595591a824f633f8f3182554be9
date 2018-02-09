@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_affd2070",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-02-09T08:22:50Z",
+      "side": 1,
+      "message": "ERROR - Licence header missing in file: /home/opnfv/anteater/dovetail/dovetail/utils/dovetail_utils.py\ncheck page:\nhttps://wiki.opnfv.org/display/DEV/Contribution+Guidelines#ContributionGuidelines-NotesonCopyright\u0026Licence\n\nsearch Bash/Python from page\n\nadd this line to get rid of error\nCopyright (c) 2017 \u003cCompany or Individual\u003e and others.",
+      "revId": "670362c0c12b3595591a824f633f8f3182554be9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
