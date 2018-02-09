@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "9a3d3df0_02ece3b9",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-02-09T15:01:57Z",
+      "side": 1,
+      "message": "I only added the four lines at the beginning so this is not my code. However, the grep is not on a specific name. Rather, it is on \u0027Router Type\u0027 being external. So your suggestion is roughly the same thing. I believe the openstack commands are probably better than neutron, as the neutron commands are being deprecated.",
+      "parentUuid": "9a3d3df0_0f436caf",
+      "range": {
+        "startLine": 159,
+        "startChar": 8,
+        "endLine": 160,
+        "endChar": 50
+      },
+      "revId": "670362c0c12b3595591a824f633f8f3182554be9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a3d3df0_2f48f0ca",
         "filename": "dovetail/utils/dovetail_utils.py",
         "patchSetId": 3
@@ -53,6 +77,30 @@
       "writtenOn": "2018-02-09T08:48:18Z",
       "side": 1,
       "message": "EXTERNAL_NETWORK is read by Functest and Yardstick. At least Functest has similar functionality to determine the external network through the SNAPs library. So, instead of duplicating this here, shouldn\u0027t we just forward the EXTERNAL_NETWORK env variable if it exists and otherwise leave it to the code in Functest and Yardstick to determine the external network? This limits code duplication.",
+      "range": {
+        "startLine": 136,
+        "startChar": 4,
+        "endLine": 163,
+        "endChar": 22
+      },
+      "revId": "670362c0c12b3595591a824f633f8f3182554be9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_e241ffa9",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-02-09T15:01:57Z",
+      "side": 1,
+      "message": "This is just a fail safe if EXTERNAL_NETWORK is not set at this point. It\u0027s probably not for me to say whether we should remove this and Functest/Yardstick will resolve (I don\u0027t care to analyze). But I can with certainty that there are many issues to resolve and I\u0027d rather move on to those. I can a) abandon this patch b) let\u0027s merge and you can take on your suggestion separately.",
+      "parentUuid": "9a3d3df0_2f48f0ca",
       "range": {
         "startLine": 136,
         "startChar": 4,
