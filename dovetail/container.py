@@ -356,9 +356,9 @@ class Container(object):
         cls.pre_copy(container_id, src, dest)
         url = dt_cfg.dovetail_config['report_dest']
         if url.startswith("http"):
-            cmd = ("sed -i '16s#http://127.0.0.1:8000/results#{}#g' {}"
+            cmd = ("sed -i '17s#http://127.0.0.1:8000/results#{}#g' {}"
                    .format(url, dest))
             cls.exec_cmd(container_id, cmd)
         if url.lower() == 'file':
-            cmd = ("sed -i '12s/http/file/g' {}".format(dest))
+            cmd = ("sed -i '13s/http/file/g' {}".format(dest))
             cls.exec_cmd(container_id, cmd)
