@@ -20,6 +20,9 @@ sdnvpn_image: 'ubuntu-16.04-server-cloudimg-amd64-disk1.img'
 # Tempest image
 cirros_image: 'cirros-0.3.5-x86_64-disk.img'
 
+# Ubuntu 14.04 image for snaps_smoke
+ubuntu14_image: 'ubuntu-14.04-server-cloudimg-amd64-disk1.img'
+
 COMPLIANCE_PATH: compliance/
 TESTCASE_PATH: testcase/
 # testsuite supported, should adjust accordingly
@@ -62,6 +65,7 @@ functest_testcase:
   - copper
   - cloudify_ims
   - odl
+  - snaps_smoke
 
 # used for testcase cmd template in jinja2 format
 # we have two variables available now
