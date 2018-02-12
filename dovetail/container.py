@@ -194,24 +194,20 @@ class Container(object):
 
         cacert_volume = ""
         https_enabled = dt_utils.check_https_enabled(cls.logger)
-        cacert = os.getenv('OS_CACERT',)
-        if https_enabled:
-            cls.logger.info("https enabled...")
-            if cacert is not None:
-                if not os.path.isfile(cacert):
-                    cls.logger.error("Env variable 'OS_CACERT' is set to {} "
-                                     "but the file does not exist."
-                                     .format(cacert))
-                    return None
-                elif not dovetail_config['config_dir'] in cacert:
-                    cls.logger.error("Credential file has to be put in {}, "
-                                     "which can be mount into container."
-                                     .format(dovetail_config['config_dir']))
-                    return None
+        cacert = os.getenv('OS_CACERT')
+        insecure = os.getenv('OS_INSECURE')
+        if cacert is not None:
+            if dt_utils.check_cacert_file(cacert, cls.logger):
                 cacert_volume = ' -v %s:%s ' % (cacert, cacert)
             else:
-                cls.logger.warn("https enabled, OS_CACERT not set, insecure "
-                                "connection used or OS_CACERT missed")
+                return None
+        elif https_enabled:
+            if insecure and insecure.lower() == 'true':
+                cls.logger.debug("Use the insecure mode...")
+            else:
+                cls.logger.error("https enabled, please set OS_CACERT or "
+                                 "insecure mode...")
+                return None
 
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
@@ -292,7 +288,7 @@ class Container(object):
             return None
         if cls.has_pull_latest_image[validate_type] is True:
             cls.logger.debug(
-                '{} is already the newest version.'.format(docker_image))
+                '{} is already the latest one.'.format(docker_image))
             return docker_image
         old_image_id = cls.get_image_id(docker_image)
         if not cls.pull_image_only(docker_image):

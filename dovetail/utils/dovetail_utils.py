@@ -139,9 +139,9 @@ def get_ext_net_name(env_file, logger=None):
     else:
         https_enabled = check_https_enabled(logger)
         insecure_option = ''
-        insecure = os.getenv('OS_INSECURE',)
+        insecure = os.getenv('OS_INSECURE')
         if https_enabled:
-            logger.info("https enabled...")
+            logger.debug("https enabled...")
             if insecure:
                 if insecure.lower() == "true":
                     insecure_option = ' --insecure '
@@ -311,7 +311,7 @@ def combine_files(file_path, result_file, logger=None):
 def get_openstack_endpoint(logger=None):
     https_enabled = check_https_enabled(logger)
     insecure_option = ''
-    insecure = os.getenv('OS_INSECURE',)
+    insecure = os.getenv('OS_INSECURE')
     if https_enabled:
         if insecure:
             if insecure.lower() == "true":
@@ -333,3 +333,16 @@ def get_openstack_endpoint(logger=None):
     except Exception:
         logger.exception("Failed to write endpoint info into file.")
         return None
+
+
+def check_cacert_file(cacert, logger=None):
+    if not os.path.isfile(cacert):
+        logger.error("OS_CACERT is {}, but the file does not exist."
+                     .format(cacert))
+        return False
+    if not dt_cfg.dovetail_config['config_dir'] == os.path.dirname(cacert):
+        logger.error("Credential file must be put under {}, "
+                     "which can be mounted into other container."
+                     .format(dt_cfg.dovetail_config['config_dir']))
+        return False
+    return True
