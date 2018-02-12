@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_5d46bb24",
+        "filename": "INFO.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-02-12T01:18:45Z",
+      "side": 1,
+      "message": "My ID is \u0027xudan\u0027",
+      "range": {
+        "startLine": 68,
+        "startChar": 7,
+        "endLine": 68,
+        "endChar": 12
+      },
+      "revId": "f4bba1144e5d95534f815830423ee8d31514abf0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
