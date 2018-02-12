@@ -22,6 +22,29 @@
       "revId": "f4bba1144e5d95534f815830423ee8d31514abf0",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_bd1fff08",
+        "filename": "INFO.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-02-12T03:55:12Z",
+      "side": 1,
+      "message": "Thanks for doing this Georg. My id is \u0027earrage\u0027. If there\u0027s a limit on committers, please prioritize Xudan ahead of me.",
+      "range": {
+        "startLine": 72,
+        "startChar": 10,
+        "endLine": 72,
+        "endChar": 11
+      },
+      "revId": "f4bba1144e5d95534f815830423ee8d31514abf0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
