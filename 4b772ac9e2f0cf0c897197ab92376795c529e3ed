@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5a3f45e8_e351e6d9",
+        "filename": "dovetail/conf/dovetail_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-02-13T02:00:01Z",
+      "side": 1,
+      "message": "For tempest_smoke_serial, it is a set of sub test cases from Tempest. Some of them are already included in ipv6 and tempest testarea and some of them are about different versions v2 or v3. So I didn\u0027t integrate tempest smoke test cases directly which means just execute Functest command \u0027functest testcase run tempest_smoke_serial\u0027. I use functest \u0027tempest_custom\u0027 to run these smoke sub test cases in case we may need to delete some from the set.\nhttps://github.com/opnfv/dovetail/blob/master/dovetail/testcase/smoke.tc001.yml#L7\nAbout the snaps_smoke, even though there are also 81 sub test cases, Functest doesn\u0027t support to run a sub set of them. So it needs to be executed as a whole part, which means \u0027functest testcase run snaps_smoke\u0027.",
+      "parentUuid": "5a3f45e8_23874e63",
+      "range": {
+        "startLine": 68,
+        "startChar": 4,
+        "endLine": 68,
+        "endChar": 15
+      },
+      "revId": "4b772ac9e2f0cf0c897197ab92376795c529e3ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_439b7ac9",
         "filename": "dovetail/testcase/smoke.tc002.yml",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2018-02-12T23:43:06Z",
       "side": 1,
       "message": "I assume this is a stub file for now and the sub test case list will be added after.\n\nI suggest we split the test case listing for snaps_smoke according to the various test areas. We can consider doing the same for the existing smoke tier (all in a single test case tc001 currently) you added in https://gerrit.opnfv.org/gerrit/#/c/51289/.\n\nWe should consider segregating the test cases from tempest_smoke_serial and snaps_smoke according to security_group, image, network, orchestration, provisioning (ansible test cases), machine_lifecycle (matches test specs), etc.\n\nSo we\u0027d end up with tc001, tc002, tc003, tc004 for each test area that match back to our test specifications more easily. Currently, the test specs and the test areas (for the CLI) are not a 1-to-1, which can be confusing.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "4b772ac9e2f0cf0c897197ab92376795c529e3ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_6314b6f5",
+        "filename": "dovetail/testcase/smoke.tc002.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-02-13T02:00:01Z",
+      "side": 1,
+      "message": "I agree to segregate the test cases from tempest_smoke_serial and it\u0027s easy to do that.\nFor snaps_smoke, all test cases can only be executed together. Functest doesn\u0027t support to run a sub set now.",
+      "parentUuid": "5a3f45e8_439b7ac9",
       "range": {
         "startLine": 2,
         "startChar": 0,
