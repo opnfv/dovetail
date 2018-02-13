@@ -237,6 +237,14 @@ class Container(object):
             src_path = os.path.join(prefix_path, 'pre_config', file_name)
             dest_path = '/home/opnfv/functest/images'
             Container.pre_copy(container_id, src_path, dest_path)
+            file_name = dt_cfg.dovetail_config['cloudify_image']
+            src_path = os.path.join(prefix_path, 'pre_config', file_name)
+            dest_path = '/home/opnfv/functest/images'
+            Container.pre_copy(container_id, src_path, dest_path)
+            file_name = dt_cfg.dovetail_config['trusty_image']
+            src_path = os.path.join(prefix_path, 'pre_config', file_name)
+            dest_path = '/home/opnfv/functest/images'
+            Container.pre_copy(container_id, src_path, dest_path)
 
         if type.lower() == 'yardstick':
             cls.set_yardstick_conf_file(container_id)
