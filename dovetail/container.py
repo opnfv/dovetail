@@ -232,14 +232,13 @@ class Container(object):
 
         if type.lower() == 'functest':
             prefix_path = dt_cfg.dovetail_config[type]['config']['dir']
-            file_name = dt_cfg.dovetail_config['cirros_image']
-            src_path = os.path.join(prefix_path, 'pre_config', file_name)
-            dest_path = '/home/opnfv/functest/images'
-            Container.pre_copy(container_id, src_path, dest_path)
-            file_name = dt_cfg.dovetail_config['ubuntu14_image']
-            src_path = os.path.join(prefix_path, 'pre_config', file_name)
-            dest_path = '/home/opnfv/functest/images'
-            Container.pre_copy(container_id, src_path, dest_path)
+            images = ['cirros_image', 'ubuntu14_image', 'cloudify_image',
+                      'trusty_image']
+            for image in images:
+                file_name = dt_cfg.dovetail_config[image]
+                src_path = os.path.join(prefix_path, 'pre_config', file_name)
+                dest_path = '/home/opnfv/functest/images'
+                Container.pre_copy(container_id, src_path, dest_path)
 
         if type.lower() == 'yardstick':
             cls.set_yardstick_conf_file(container_id)
