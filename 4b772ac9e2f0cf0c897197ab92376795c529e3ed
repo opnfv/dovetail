@@ -93,6 +93,30 @@
       "revId": "4b772ac9e2f0cf0c897197ab92376795c529e3ed",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_9c095c2f",
+        "filename": "dovetail/testcase/smoke.tc002.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-02-16T15:42:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a3f45e8_6314b6f5",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "4b772ac9e2f0cf0c897197ab92376795c529e3ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
