@@ -4,9 +4,8 @@ services:
     testapi:
         image: opnfv/testapi:cvp.0.5.0
         container_name: cvp-testapi
-        environment:
-            - mongodb_url=mongodb://mongodb:27017/
-            - base_url=https://cvp.opnfv.org
+        env_file:
+            - config.env
         volumes:
             - cvp-testapi-logs:/home/testapi/logs
         links:
@@ -21,12 +20,12 @@ services:
         expose:
             - "27017"
     web:
-        image: opnfv/dovetail:web.cvp.0.7.0
+        image: opnfv/dovetail:web.ovp.1.0.0
         container_name: cvp-web
         restart: always
-        environment:
-            - testapi_url=testapi:8010
-            - VIRTUAL_HOST=cvp.opnfv.org
+        env_file:
+            - config.env
+            - vhost.env
         volumes:
             - cvp-testapi-logs:/home/testapi/logs
         links:
@@ -36,11 +35,10 @@ services:
         ports:
             - "8000:8000"
     cvpapi:
-        image: opnfv/dovetail:api.cvp.0.7.0
+        image: opnfv/dovetail:api.ovp.1.0.0
         container_name: cvp-cvpapi
-        environment:
-            - mongodb_url=mongodb://mongodb:27017/
-            - base_url=https://cvp.opnfv.org
+        env_file:
+            - config.env
         volumes:
             - cvp-testapi-logs:/home/testapi/logs
         ports:
