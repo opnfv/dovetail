@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_f02401c8",
+        "filename": "cvp/docker/docker-compose.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-02-20T21:57:01Z",
+      "side": 1,
+      "message": "Since you are removing the hardcoded config here I am wondering if the sample files are being renamed and used as config files as part of the build process? If so, where is that done?",
+      "range": {
+        "startLine": 7,
+        "startChar": 8,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "64f9df63a398f3bbd1c2bdca14962d152dda4986",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
