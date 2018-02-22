@@ -5,3 +5,6 @@ debug:
   name: debug
   testcases_list:
     - dovetail.smoke.tc001
+    - dovetail.healthcheck.tc001
+    - dovetail.healthcheck.tc002
+    #- dovetail.healthcheck.tc003

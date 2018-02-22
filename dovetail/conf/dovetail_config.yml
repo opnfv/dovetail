@@ -45,6 +45,7 @@ testarea_supported:
   - mandatory
   - full
   - smoke
+  - healthcheck
 
 functest_testsuite:
   - refstack_defcore
