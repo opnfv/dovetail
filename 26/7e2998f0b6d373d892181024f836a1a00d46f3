@@ -1,0 +1,12 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Qiao Fu <fuqiao@chinamobile.com>
+Code-Review+1: Lincoln Lavoie <lylavoie@iol.unh.edu>
+Code-Review+1: Trevor Cooper <trevor.cooper@intel.com>
+Code-Review+1: zenghui shi <zshi@redhat.com>
+Code-Review+1: Wenjing Chu <chu.wenjing@gmail.com>
+Code-Review+2: Georg Kunz <georg.kunz@ericsson.com>
+Submitted-by: Georg Kunz <georg.kunz@ericsson.com>
+Submitted-at: Fri, 23 Feb 2018 10:02:56 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/52015
+Project: dovetail
+Branch: refs/heads/master
