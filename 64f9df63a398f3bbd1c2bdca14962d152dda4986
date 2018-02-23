@@ -70,6 +70,30 @@
       "revId": "64f9df63a398f3bbd1c2bdca14962d152dda4986",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_6594a837",
+        "filename": "cvp/docker/docker-compose.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1451
+      },
+      "writtenOn": "2018-02-23T23:34:01Z",
+      "side": 1,
+      "message": "Correct. On the server you would copy config.env.sample and vhost.env.sample to config.env and vhost.env repectively. Then update the contents to match your deployment.\n\nAdding new env vars can be done by adding them to the config.env file (and config.env.sample for documentation).",
+      "parentUuid": "5a3f45e8_ff5de949",
+      "range": {
+        "startLine": 7,
+        "startChar": 8,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "64f9df63a398f3bbd1c2bdca14962d152dda4986",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
