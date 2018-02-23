@@ -46,6 +46,30 @@
       "revId": "64f9df63a398f3bbd1c2bdca14962d152dda4986",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_ff5de949",
+        "filename": "cvp/docker/docker-compose.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5437
+      },
+      "writtenOn": "2018-02-23T08:49:31Z",
+      "side": 1,
+      "message": "So you will put the config.env and vhost.env in the server side, right? One more question, if I want to add some env variables or modify it, what can I do then?",
+      "parentUuid": "5a3f45e8_0e54e952",
+      "range": {
+        "startLine": 7,
+        "startChar": 8,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "64f9df63a398f3bbd1c2bdca14962d152dda4986",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
