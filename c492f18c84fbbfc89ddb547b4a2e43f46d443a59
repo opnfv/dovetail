@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_056de432",
+        "filename": "cvp/docker/README.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-02-24T03:29:28Z",
+      "side": 1,
+      "message": "please delete trailing spaces",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 1
+      },
+      "revId": "c492f18c84fbbfc89ddb547b4a2e43f46d443a59",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_e569d826",
+        "filename": "cvp/docker/README.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-02-24T03:29:28Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "c492f18c84fbbfc89ddb547b4a2e43f46d443a59",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_a58870e8",
+        "filename": "cvp/docker/docker-compose.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-02-24T03:29:28Z",
+      "side": 1,
+      "message": "it should be 8010:8000 since the internal port of TestAPI is 8000 by default.",
+      "range": {
+        "startLine": 14,
+        "startChar": 20,
+        "endLine": 14,
+        "endChar": 24
+      },
+      "revId": "c492f18c84fbbfc89ddb547b4a2e43f46d443a59",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
