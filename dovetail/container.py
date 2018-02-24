@@ -137,6 +137,10 @@ class Container(object):
         docker_vol = '-v /var/run/docker.sock:/var/run/docker.sock'
         env = ('-e Yardstick_TAG={} -e OUTPUT_FILE={}.out'
                .format(yard_tag, testcase_name))
+        insecure = os.getenv("OS_INSECURE")
+        if insecure and insecure.lower() == 'true':
+            env = env + " -e OS_CACERT=False "
+
         report = ""
         if dovetail_config['report_dest'].startswith("http"):
             report = ("-e BOTTLENECKS_DB_TARGET={}"

@@ -1,16 +1,29 @@
 ---
 bottlenecks:
   image_name: opnfv/bottlenecks
-  docker_tag: cvp.0.4.0
+  docker_tag: stable
   opts: '-id --privileged=true'
   config:
     dir: '/home/opnfv/userconfig'
   pre_condition:
-    - 'echo test for precondition in bottlenecks'
+    - 'source /tmp/admin_rc.sh &&
+       (openstack --insecure image list | grep cirros-0.3.5 ||
+       openstack --insecure image create cirros-0.3.5
+       --disk-format qcow2 --container-format bare
+       --file /home/opnfv/userconfig/pre_config/cirros-0.3.5-x86_64-disk.img)'
+    - 'source /tmp/admin_rc.sh &&
+       (openstack --insecure flavor list | grep yardstick-flavor ||
+       openstack --insecure flavor create --id 100
+       --ram 1024 --disk 3 --vcpus 1 yardstick-flavor)'
   cmds:
-    - '/home/opnfv/bottlenecks/run_tests.sh -c {{validate_testcase}}'
+    - 'python /home/opnfv/bottlenecks/testsuites/run_testsuite.py testcase {{validate_testcase}} True'
   post_condition:
-    - 'echo test for postcondition in bottlenecks'
+    - 'source /tmp/admin_rc.sh &&
+       (! openstack --insecure image list | grep cirros-0.3.5 ||
+       openstack --insecure image delete cirros-0.3.5)'
+    - 'source /tmp/admin_rc.sh &&
+       (! openstack --insecure flavor list | grep yardstick-flavor ||
+       openstack --insecure flavor delete yardstick-flavor)'
   result:
     dir: '/tmp'
     file_path: 'bottlenecks.log'
