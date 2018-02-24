@@ -45,7 +45,7 @@ testarea_supported:
   - ipv6
   - sdnvpn
   - vping
-  - resiliency
+  - stress
   - tempest
   - optional
   - mandatory

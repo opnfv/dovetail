@@ -21,21 +21,21 @@ cli:
           - '-y'
         path:
           - 'yardstick/docker_tag'
-        help: 'Overwrite tag for yardstick docker container (e.g. danube.3.2)'
+        help: 'Overwrite tag for yardstick docker container (e.g. opnfv-5.1.0)'
       func_tag:
         flags:
           - '--func_tag'
           - '-f'
         path:
           - 'functest/docker_tag'
-        help: 'Overwrite tag for functest docker container (e.g. ovp.1.0.0)'
-      # bott_tag:
-      #   flags:
-      #     - '--bott_tag'
-      #     - '-b'
-      #   path:
-      #     - 'bottlenecks/docker_tag'
-      #   help: 'Overwrite tag for bottlenecks docker container (e.g. cvp.0.4.0)'
+        help: 'Overwrite tag for functest docker container (e.g. euphrates)'
+      bott_tag:
+        flags:
+          - '--bott_tag'
+          - '-b'
+        path:
+          - 'bottlenecks/docker_tag'
+        help: 'Overwrite tag for bottlenecks docker container (e.g. stable)'
     control:
       testsuite:
         flags:

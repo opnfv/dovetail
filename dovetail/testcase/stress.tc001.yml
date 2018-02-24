@@ -1,6 +1,6 @@
 ---
-dovetail.resiliency.tc001:
-  name: dovetail.resiliency.tc001
+dovetail.stress.tc001:
+  name: dovetail.stress.tc001
   objective: > # This test case verifies the ability of the SUT setting up VM pairs
     # for different tenants and providing acceptable capacity after the amount of
     # VM pairs reaches certain quantity.
