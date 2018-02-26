@@ -62,6 +62,30 @@
       "revId": "c492f18c84fbbfc89ddb547b4a2e43f46d443a59",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_744bbb59",
+        "filename": "cvp/docker/docker-compose.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5437
+      },
+      "writtenOn": "2018-02-26T01:08:30Z",
+      "side": 1,
+      "message": "Actually we have changed the internal port to 8010.",
+      "parentUuid": "5a3f45e8_a58870e8",
+      "range": {
+        "startLine": 14,
+        "startChar": 20,
+        "endLine": 14,
+        "endChar": 24
+      },
+      "revId": "c492f18c84fbbfc89ddb547b4a2e43f46d443a59",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
