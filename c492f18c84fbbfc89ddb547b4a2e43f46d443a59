@@ -86,6 +86,30 @@
       "revId": "c492f18c84fbbfc89ddb547b4a2e43f46d443a59",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_54179fed",
+        "filename": "cvp/docker/docker-compose.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-02-26T03:20:47Z",
+      "side": 1,
+      "message": "ok, but I think it won\u0027t be necessary since it can be changed by changing the exposed port.",
+      "parentUuid": "5a3f45e8_744bbb59",
+      "range": {
+        "startLine": 14,
+        "startChar": 20,
+        "endLine": 14,
+        "endChar": 24
+      },
+      "revId": "c492f18c84fbbfc89ddb547b4a2e43f46d443a59",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
