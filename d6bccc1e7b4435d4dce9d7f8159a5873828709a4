@@ -22,6 +22,30 @@
       "revId": "d6bccc1e7b4435d4dce9d7f8159a5873828709a4",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_173eb9b8",
+        "filename": "dovetail/compliance/proposed_tests.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-02-26T09:54:19Z",
+      "side": 1,
+      "message": "valid question. The reason is that the OPNFV-specific SDNVPN tests are already numbered from 1 to 13 [1] and more tests will likely be written in the future. We have followed this numbering already for the SDNVPN tests in OVP1.0.0 [2]. Now, I wanted to avoid a clash in the numbering to avoid confusion. Hence, I chose 000.\n\nIn general, it is a like hard right now to determine the content of a TC based on its name. Hence, we could also use a string like \"dovetail.sdnvpn.tempest-api\" and apply a similar naming to the other test cases as well. Other suggestions are welcome, too.\n\n[1] https://github.com/opnfv/sdnvpn/tree/master/sdnvpn/test/functest\n[2] https://github.com/opnfv/dovetail/blob/master/dovetail/compliance/ovp.1.0.0.yml",
+      "parentUuid": "5a3f45e8_d4b9efea",
+      "range": {
+        "startLine": 16,
+        "startChar": 22,
+        "endLine": 16,
+        "endChar": 27
+      },
+      "revId": "d6bccc1e7b4435d4dce9d7f8159a5873828709a4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
