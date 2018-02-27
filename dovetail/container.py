@@ -8,7 +8,6 @@
 #
 
 import os
-import yaml
 
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
@@ -165,20 +164,7 @@ class Container(object):
         envs = envs + ' -e BUILD_TAG=%s-%s' % (dovetail_config['build_tag'],
                                                testcase_name)
 
-        hosts_config = ""
-        hosts_config_file = os.path.join(dovetail_config['config_dir'],
-                                         'hosts.yaml')
-        if os.path.isfile(hosts_config_file):
-            with open(hosts_config_file) as f:
-                hosts_yaml = yaml.safe_load(f)
-            if hosts_yaml['hosts_info']:
-                for ip, hostnames in hosts_yaml['hosts_info'].iteritems():
-                    dt_utils.add_hosts_info(ip, hostnames)
-                    names_str = ' '.join(hostname for hostname in hostnames)
-                    hosts_config += ' --add-host=\'{}\':{} '.format(names_str,
-                                                                    ip)
-                    cls.logger.debug('Get hosts info {}:{}.'.format(ip,
-                                                                    names_str))
+        hosts_config = dt_utils.get_hosts_info(cls.logger)
 
         config = ""
         if type.lower() == "functest":

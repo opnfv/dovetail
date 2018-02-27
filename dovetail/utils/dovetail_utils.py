@@ -222,9 +222,12 @@ def check_docker_version(logger=None):
 
 def add_hosts_info(ip, hostnames):
     hosts = python_hosts.Hosts(path='/etc/hosts')
+    filtered_hostnames = [hostname for hostname in hostnames if hostname]
+    if not ip or not filtered_hostnames:
+        return
     new_entry = python_hosts.HostsEntry(entry_type='ipv4',
                                         address=ip,
-                                        names=hostnames)
+                                        names=filtered_hostnames)
     hosts.add([new_entry])
     hosts.write()
 
@@ -346,3 +349,33 @@ def check_cacert_file(cacert, logger=None):
                      .format(dt_cfg.dovetail_config['config_dir']))
         return False
     return True
+
+
+def get_hosts_info(logger=None):
+    hosts_config = ""
+    hosts_config_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
+                                     'hosts.yaml')
+    if not os.path.isfile(hosts_config_file):
+        return hosts_config
+    with open(hosts_config_file) as f:
+        hosts_yaml = yaml.safe_load(f)
+        if not hosts_yaml:
+            logger.debug("File {} is empty.".format(hosts_config_file))
+            return hosts_config
+        try:
+            if not hosts_yaml['hosts_info']:
+                return hosts_config
+            for ip, hostnames in hosts_yaml['hosts_info'].iteritems():
+                if not hostnames:
+                    continue
+                add_hosts_info(ip, hostnames)
+                names_str = ' '.join(hostname for hostname in hostnames
+                                     if hostname)
+                if not names_str:
+                    continue
+                hosts_config += ' --add-host=\'{}\':{} '.format(names_str, ip)
+                logger.debug('Get hosts info {}:{}.'.format(ip, names_str))
+        except KeyError as e:
+            logger.error("There is no key {} in file {}"
+                         .format(e, hosts_config_file))
+    return hosts_config
