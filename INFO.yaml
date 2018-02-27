@@ -34,10 +34,6 @@ repositories:
     - 'dovetail'
 committers:
     - <<: *opnfv_dovetail_ptl
-    - name: 'Wenjing Chu'
-      email: 'chu.wenjing@gmail.com'
-      company: 'gmail.com'
-      id: 'wenjing'
     - name: 'Trevor Cooper'
       email: 'trevor.cooper@intel.com'
       company: 'intel.com'
@@ -76,3 +72,6 @@ tsc:
         - type: 'removal'
           name: 'Dave Neary'
           link: 'https://lists.opnfv.org/pipermail/opnfv-tsc/2018-February/004135.html'
+        - type: 'removal'
+          name: 'Wenjing Chu'
+          link: ''
