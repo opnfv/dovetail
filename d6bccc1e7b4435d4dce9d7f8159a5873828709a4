@@ -46,6 +46,23 @@
       "revId": "d6bccc1e7b4435d4dce9d7f8159a5873828709a4",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_c4949439",
+        "filename": "dovetail/testcase/sdnvpn.tc000.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-02-28T15:01:49Z",
+      "side": 1,
+      "message": "pre_condition and pre_copy section are quite hardcoded, how about adding this test case in the upstream(sdnvpn project)?",
+      "revId": "d6bccc1e7b4435d4dce9d7f8159a5873828709a4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
