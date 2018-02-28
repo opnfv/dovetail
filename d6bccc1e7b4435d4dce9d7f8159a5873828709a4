@@ -63,6 +63,24 @@
       "revId": "d6bccc1e7b4435d4dce9d7f8159a5873828709a4",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_c4301459",
+        "filename": "dovetail/testcase/sdnvpn.tc000.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-02-28T15:24:24Z",
+      "side": 1,
+      "message": "The pre_condition basically restricts the tempest tests being executed to the API tests only, skipping the scenario tests which have been less stable. From an OVP perspective, I\u0027d like to include (pick) the stable API tests only, while leaving the scenario tests untouched in the SDNVPN repo. I can discuss with Peri if we want to split both tests sets in the SDNVPN project for Fraser and include them a separate test cases in Functest. For Euphrates, we might want to use this \"hack\" to avoid changes in Functest.",
+      "parentUuid": "5a3f45e8_c4949439",
+      "revId": "d6bccc1e7b4435d4dce9d7f8159a5873828709a4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
