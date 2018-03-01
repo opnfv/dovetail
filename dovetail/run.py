@@ -10,24 +10,25 @@
 ##############################################################################
 
 
-import click
-import os
 import copy
+import os
 import time
 import uuid
 
-import utils.dovetail_logger as dt_logger
-import utils.dovetail_utils as dt_utils
+import click
 
-from parser import Parser
 from container import Container
+from dovetail import constants
+from parser import Parser
+from report import BottlenecksChecker, FunctestChecker, YardstickChecker
+from report import BottlenecksCrawler, FunctestCrawler, YardstickCrawler
+from report import Report
+from test_runner import DockerRunner, ShellRunner
 from testcase import Testcase
 from testcase import Testsuite
-from report import Report
-from report import FunctestCrawler, YardstickCrawler, BottlenecksCrawler
-from report import FunctestChecker, YardstickChecker, BottlenecksChecker
 from utils.dovetail_config import DovetailConfig as dt_cfg
-from test_runner import DockerRunner, ShellRunner
+import utils.dovetail_logger as dt_logger
+import utils.dovetail_utils as dt_utils
 
 
 def load_testsuite(testsuite):
@@ -212,22 +213,18 @@ def get_result_path():
 
 
 def copy_userconfig_files(logger):
-    dovetail_home = os.path.dirname(os.path.abspath(__file__))
-    userconfig_path = os.path.join(dovetail_home, 'userconfig')
     pre_config_path = dt_cfg.dovetail_config['config_dir']
     if not os.path.isdir(pre_config_path):
         os.makedirs(pre_config_path)
-    cmd = 'sudo cp -r %s/* %s' % (userconfig_path, pre_config_path)
+    cmd = 'sudo cp -r %s/* %s' % (constants.USERCONF_PATH, pre_config_path)
     dt_utils.exec_cmd(cmd, logger, exit_on_error=False)
 
 
 def copy_patch_files(logger):
-    dovetail_home = os.path.dirname(os.path.abspath(__file__))
-    patch_path = os.path.join(dovetail_home, 'patch')
     patch_set_path = dt_cfg.dovetail_config['patch_dir']
     if not os.path.isdir(patch_set_path):
         os.makedirs(patch_set_path)
-    cmd = 'sudo cp -r %s/* %s' % (patch_path, patch_set_path)
+    cmd = 'sudo cp -r %s/* %s' % (constants.PATCH_PATH, patch_set_path)
     dt_utils.exec_cmd(cmd, logger, exit_on_error=False)
 
 
