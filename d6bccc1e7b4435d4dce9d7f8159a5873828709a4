@@ -81,6 +81,24 @@
       "revId": "d6bccc1e7b4435d4dce9d7f8159a5873828709a4",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_35a64411",
+        "filename": "dovetail/testcase/sdnvpn.tc000.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-03-01T06:40:18Z",
+      "side": 1,
+      "message": "I agree for the Euphrates to keep it like this, but in the long run, I think it would be better if it can be supported in the upstream.\nIMHO, Dovetail\u0027s original concept is to leverage the upstream\u0027s test cases as much as possible, rather than develop by ourselves(if new test cases are needed, they should be contributed to the upstream), please correct me if I am wrong.\nAnd be contributing to the upstream, the naming issue will be solved as well",
+      "parentUuid": "5a3f45e8_c4301459",
+      "revId": "d6bccc1e7b4435d4dce9d7f8159a5873828709a4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
