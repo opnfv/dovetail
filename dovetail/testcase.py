@@ -8,13 +8,14 @@
 #
 
 import os
+
 import yaml
 
-import utils.dovetail_logger as dt_logger
-
+from dovetail import constants
 from parser import Parser
-from utils.dovetail_config import DovetailConfig as dt_cfg
 from test_runner import TestRunnerFactory
+from utils.dovetail_config import DovetailConfig as dt_cfg
+import utils.dovetail_logger as dt_logger
 
 
 class Testcase(object):
@@ -221,9 +222,7 @@ class Testcase(object):
 
     @classmethod
     def load(cls):
-        testcase_dir = os.path.dirname(os.path.abspath(__file__))
-        testcase_path = dt_cfg.dovetail_config['TESTCASE_PATH']
-        abs_testcase_path = os.path.join(testcase_dir, testcase_path)
+        abs_testcase_path = constants.TESTCASE_PATH
         for root, dirs, files in os.walk(abs_testcase_path):
             for testcase_file in files:
                 with open(os.path.join(root, testcase_file)) as f:
@@ -363,9 +362,7 @@ class Testsuite(object):
 
     @classmethod
     def load(cls):
-        compliance_dir = os.path.dirname(os.path.abspath(__file__))
-        compliance_path = dt_cfg.dovetail_config['COMPLIANCE_PATH']
-        abs_compliance_path = os.path.join(compliance_dir, compliance_path)
+        abs_compliance_path = constants.COMPLIANCE_PATH
         for root, dirs, files in os.walk(abs_compliance_path):
             for testsuite_yaml in files:
                 with open(os.path.join(root, testsuite_yaml)) as f:
