@@ -29,8 +29,6 @@ cloudify_image: 'cloudify-manager-premium-4.0.1.qcow2'
 # Trusty image
 trusty_image: 'trusty-server-cloudimg-amd64-disk1.img'
 
-COMPLIANCE_PATH: compliance/
-TESTCASE_PATH: testcase/
 # testsuite supported, should adjust accordingly
 testsuite_supported:
   - compliance_set
