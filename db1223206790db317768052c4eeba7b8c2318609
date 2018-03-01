@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_1088761e",
+        "filename": ".pytest_cache/v/cache/lastfailed",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-01T13:33:28Z",
+      "side": 1,
+      "message": "this file was added accidently, I assume",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 2
+      },
+      "revId": "db1223206790db317768052c4eeba7b8c2318609",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
