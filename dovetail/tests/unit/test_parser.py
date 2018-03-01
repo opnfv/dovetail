@@ -28,7 +28,10 @@ class TestParser(unittest.TestCase):
 
     def setUp(self):
         """Test case setup"""
-        dt_cfg.load_config_files()
+        conf_path = os.path.join(self.test_path,
+                                 os.pardir, os.pardir, os.pardir,
+                                 'etc/conf')
+        dt_cfg.load_config_files(conf_path)
         logging.disable(logging.CRITICAL)
 
     def test_parser_cmd(self, mock_logger):
