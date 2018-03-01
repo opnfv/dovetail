@@ -16,7 +16,7 @@ To deploy the OVP Dashboard perform the following steps:
  #. Bring the services up
 
      docker-compose up -d
- 
+
  #. Navigate to the site listed in vhost.env in your browser of choice
 
      google-chrome-stable http://ovp.localhost
@@ -25,5 +25,5 @@ To deploy the OVP Dashboard perform the following steps:
 
         If you're using the default sitename 'ovp.localhost', you'll
         need to add the following line to /etc/hosts:
-        
+
           127.0.0.1 ovp.localhost
