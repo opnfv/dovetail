@@ -15,6 +15,7 @@ import six
 import dovetail.utils.dovetail_utils as dt_utils
 from dovetail.utils.dovetail_config import DovetailConfig as dt_cfg
 from dovetail.testcase import Testsuite
+from dovetail import constants
 
 
 class CliTestcase(object):
@@ -23,20 +24,6 @@ class CliTestcase(object):
     def testsuite_load(cls):
         dt_cfg.load_config_files()
         Testsuite.load()
-
-    @classmethod
-    def get_path(cls, path):
-        if isinstance(path, six.string_types):
-            dt_cfg.load_config_files()
-            dovetail_dir = os.path.abspath(
-                os.path.join(os.path.dirname(__file__),
-                             os.pardir, os.pardir))
-            relative_path = dt_cfg.dovetail_config[path]
-            abs_path = os.path.join(dovetail_dir, relative_path)
-        else:
-            click.echo("input %s is not a string" % path)
-            sys.exit(1)
-        return abs_path
 
     def list_testcase(self, testsuite):
         self.testsuite_load()
@@ -75,14 +62,14 @@ class CliTestcase(object):
                 click.echo("No testsuite defined yet in dovetail!!!")
 
     def show_testcase(self, testcase):
-        abs_testcase_path = self.get_path('TESTCASE_PATH')
+        abs_testcase_path = constants.TESTCASE_PATH
         if testcase.startswith("dovetail."):
             testcase_yml = testcase[9:] + '.yml'
         else:
             testcase_yml = testcase + '.yml'
         for root, dirs, files in os.walk(abs_testcase_path):
             if testcase_yml in files:
-                testcase_path = abs_testcase_path + testcase_yml
+                testcase_path = os.path.join(abs_testcase_path, testcase_yml)
                 with open(testcase_path, 'r') as stream:
                     try:
                         click.echo(stream.read())
