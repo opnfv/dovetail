@@ -99,6 +99,24 @@
       "revId": "d6bccc1e7b4435d4dce9d7f8159a5873828709a4",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_10187680",
+        "filename": "dovetail/testcase/sdnvpn.tc000.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-01T14:52:20Z",
+      "side": 1,
+      "message": "just to avoid misunderstandings: these tests (API and scenario) do exist in upstream SDNVPN and are run through Functest in our CI. However, I just want run a subset of the tests (only API) which have been integrated already. The pre_condition actually restricts the total number of tests to only those tests whose name includes api. I hope this clarifies it. please let me know if I misunderstood you.",
+      "parentUuid": "5a3f45e8_35a64411",
+      "revId": "d6bccc1e7b4435d4dce9d7f8159a5873828709a4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
