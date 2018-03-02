@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_d6a0c6f6",
+        "filename": "dovetail/testcase/sdnvpn.tc000.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-02T02:20:59Z",
+      "side": 1,
+      "message": "These 2 lines should be consistent with \u0027sdnvpn.tc000\u0027.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 35
+      },
+      "revId": "d9784fc0fbfe42744f76c67fb083ea589e0a17d8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_f69b42c7",
+        "filename": "dovetail/testcase/sdnvpn.tc000.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-02T02:20:59Z",
+      "side": 1,
+      "message": "There are something wrong with this file mainly Line 9 and Line 14. The traceback when I test on my local environment is,\nTraceback (most recent call last):\nFile \"/usr/local/lib/python2.7/dist-packages/dovetail/run.py\", line 339, in \u003cmodule\u003e\nmain()\nFile \"/usr/local/lib/python2.7/dist-packages/click/core.py\", line 716, in __call__\nreturn self.main(*args, **kwargs)\nFile \"/usr/local/lib/python2.7/dist-packages/click/core.py\", line 696, in main\nrv \u003d self.invoke(ctx)\nFile \"/usr/local/lib/python2.7/dist-packages/click/core.py\", line 889, in invoke\nreturn ctx.invoke(self.callback, **ctx.params)\nFile \"/usr/local/lib/python2.7/dist-packages/click/core.py\", line 534, in invoke\nreturn callback(*args, **kwargs)\nFile \"/usr/local/lib/python2.7/dist-packages/dovetail/run.py\", line 303, in main\nload_testcase()\nFile \"/usr/local/lib/python2.7/dist-packages/dovetail/run.py\", line 39, in load_testcase\nTestcase.load()\nFile \"/usr/local/lib/python2.7/dist-packages/dovetail/testcase.py\", line 230, in load\ntestcase_yaml \u003d yaml.safe_load(f)\nFile \"/usr/local/lib/python2.7/dist-packages/yaml/__init__.py\", line 93, in safe_load\nreturn load(stream, SafeLoader)\nFile \"/usr/local/lib/python2.7/dist-packages/yaml/__init__.py\", line 71, in load\nreturn loader.get_single_data()\nFile \"/usr/local/lib/python2.7/dist-packages/yaml/constructor.py\", line 37, in get_single_data\nnode \u003d self.get_single_node()\nFile \"/usr/local/lib/python2.7/dist-packages/yaml/composer.py\", line 36, in get_single_node\ndocument \u003d self.compose_document()\nFile \"/usr/local/lib/python2.7/dist-packages/yaml/composer.py\", line 55, in compose_document\nnode \u003d self.compose_node(None, None)\nFile \"/usr/local/lib/python2.7/dist-packages/yaml/composer.py\", line 84, in compose_node\nnode \u003d self.compose_mapping_node(anchor)\nFile \"/usr/local/lib/python2.7/dist-packages/yaml/composer.py\", line 133, in compose_mapping_node\nitem_value \u003d self.compose_node(node, item_key)\nFile \"/usr/local/lib/python2.7/dist-packages/yaml/composer.py\", line 84, in compose_node\nnode \u003d self.compose_mapping_node(anchor)\nFile \"/usr/local/lib/python2.7/dist-packages/yaml/composer.py\", line 133, in compose_mapping_node\nitem_value \u003d self.compose_node(node, item_key)\nFile \"/usr/local/lib/python2.7/dist-packages/yaml/composer.py\", line 84, in compose_node\nnode \u003d self.compose_mapping_node(anchor)\nFile \"/usr/local/lib/python2.7/dist-packages/yaml/composer.py\", line 127, in compose_mapping_node\nwhile not self.check_event(MappingEndEvent):\nFile \"/usr/local/lib/python2.7/dist-packages/yaml/parser.py\", line 98, in check_event\nself.current_event \u003d self.state()\nFile \"/usr/local/lib/python2.7/dist-packages/yaml/parser.py\", line 439, in parse_block_mapping_key\n\"expected \u003cblock end\u003e, but found %r\" % token.id, token.start_mark)\nyaml.parser.ParserError: while parsing a block mapping\nin \"/usr/local/lib/python2.7/dist-packages/dovetail/testcase/sdnvpn.tc000.yml\", line 6, column 5\nexpected \u003cblock end\u003e, but found \u0027\u003cscalar\u003e\u0027\nin \"/usr/local/lib/python2.7/dist-packages/dovetail/testcase/sdnvpn.tc000.yml\", line 9, column 19",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 22
+      },
+      "revId": "d9784fc0fbfe42744f76c67fb083ea589e0a17d8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
