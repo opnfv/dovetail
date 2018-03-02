@@ -66,17 +66,15 @@ class CliTestcase(object):
             testcase_yml = testcase[9:] + '.yml'
         else:
             testcase_yml = testcase + '.yml'
-        for root, dirs, files in os.walk(abs_testcase_path):
-            if testcase_yml in files:
-                testcase_path = os.path.join(abs_testcase_path, testcase_yml)
-                with open(testcase_path, 'r') as stream:
-                    try:
-                        click.echo(stream.read())
-                    except yaml.YAMLError as exc:
-                        click.echo(exc)
-            else:
-                click.echo("testcase %s does not exist or not supported"
-                           % testcase)
+        testcase_path = os.path.join(abs_testcase_path, testcase_yml)
+        if os.path.isfile(testcase_path):
+            with open(testcase_path, 'r') as stream:
+                try:
+                    click.echo(stream.read())
+                except yaml.YAMLError as exc:
+                    click.echo(exc)
+        else:
+            click.echo("testcase %s not exist or not supported" % testcase)
 
     def run(self, args_str):
         options = ''
