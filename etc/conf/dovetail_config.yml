@@ -35,6 +35,7 @@ testsuite_supported:
   - proposed_tests
   - debug
   - ovp.1.0.0
+  - onap.1.0.0
 # testarea supported, should adjust accordingly
 testarea_supported:
   - osinterop
@@ -50,6 +51,7 @@ testarea_supported:
   - full
   - smoke
   - vnf
+  - lifecycle
 
 functest_testsuite:
   - refstack_defcore
@@ -86,11 +88,13 @@ include_config:
   - functest_config.yml
   - yardstick_config.yml
   - bottlenecks_config.yml
+  - vnftest_config.yml
 
 test_project:
   - 'yardstick'
   - 'functest'
   - 'bottlenecks'
+  - 'vnftest'
 
 validate_input:
   valid_functest_tags:

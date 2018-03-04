@@ -18,7 +18,7 @@ class Container(object):
 
     container_list = {}
     has_pull_latest_image = {'yardstick': False, 'functest': False,
-                             'bottlenecks': False}
+                             'bottlenecks': False, 'vnftest': False}
 
     logger = None
 
@@ -140,6 +140,23 @@ class Container(object):
         return "{} {} {}".format(docker_vol, env, report)
 
     @classmethod
+    def set_vnftest_config(cls):
+        dovetail_config = dt_cfg.dovetail_config
+
+        log_vol = '-v %s:%s ' % (dovetail_config['result_dir'],
+                                 dovetail_config["vnftest"]['result']['log'])
+
+        key_file = os.path.join(dovetail_config['config_dir'],
+                                dovetail_config['pri_key'])
+        key_container_path = dovetail_config["vnftest"]['result']['key_path']
+        if not os.path.isfile(key_file):
+            cls.logger.debug("Key file {} is not found".format(key_file))
+            key_vol = ''
+        else:
+            key_vol = '-v %s:%s ' % (key_file, key_container_path)
+        return "%s %s" % (log_vol, key_vol)
+
+    @classmethod
     def create(cls, type, testcase_name):
         dovetail_config = dt_cfg.dovetail_config
         docker_image = cls.get_docker_image(type)
@@ -170,6 +187,8 @@ class Container(object):
             config = cls.set_yardstick_config()
         if type.lower() == "bottlenecks":
             config = cls.set_bottlenecks_config(testcase_name)
+        if type.lower() == "vnftest":
+            config = cls.set_vnftest_config()
         if not config:
             return None
 
@@ -214,6 +233,8 @@ class Container(object):
 
         if type.lower() == 'yardstick':
             cls.set_yardstick_conf_file(container_id)
+        elif type.lower() == 'vnftest':
+            cls.set_vnftest_conf_file(container_id)
 
         return container_id
 
@@ -323,6 +344,13 @@ class Container(object):
         return cls.exec_cmd(container_id, cmd, exit_on_error)
 
     @classmethod
+    def docker_copy(cls, container_id, src_path, dest_path):
+        if not src_path or not dest_path:
+            return (1, 'src_path or dest_path is empty')
+        cmd = 'docker cp %s %s:%s' % (src_path, container_id, dest_path)
+        return dt_utils.exec_cmd(cmd, cls.logger)
+
+    @classmethod
     def set_yardstick_conf_file(cls, container_id):
         valid_type = 'yardstick'
         src = dt_cfg.dovetail_config[valid_type]['yard_conf']['src_file']
@@ -336,3 +364,11 @@ class Container(object):
         if url.lower() == 'file':
             cmd = ("sed -i '13s/http/file/g' {}".format(dest))
             cls.exec_cmd(container_id, cmd)
+
+    @classmethod
+    def set_vnftest_conf_file(cls, container_id):
+        valid_type = 'vnftest'
+        for conf_file in dt_cfg.dovetail_config[valid_type]['vnftest_conf']:
+            src = conf_file['src_file']
+            dest = conf_file['dest_file']
+            cls.docker_copy(container_id, src, dest)
