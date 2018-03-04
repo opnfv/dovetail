@@ -1,0 +1,14 @@
+---
+dovetail.lifecycle.tc001:
+  name: dovetail.lifecycle.tc001
+  objective: vnf lifecycle tests
+  validate:
+    type: vnftest
+    pre_condition:
+      - 'echo pre-condition'
+    testcase: onap_vnftest_tc001
+    pre_copy:
+      src_file: ""
+      dest_path: ""
+  report:
+    sub_testcase_list:

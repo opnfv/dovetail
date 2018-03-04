@@ -260,6 +260,13 @@ class ShellRunner(object):
                                   'exception: {}'.format(result_filename, e))
 
 
+class VnftestRunner(DockerRunner):
+
+    def __init__(self, testcase):
+        self.type = 'vnftest'
+        super(VnftestRunner, self).__init__(testcase)
+
+
 class TestRunnerFactory(object):
 
     TEST_RUNNER_MAP = {
@@ -267,6 +274,7 @@ class TestRunnerFactory(object):
         "yardstick": YardstickRunner,
         "bottlenecks": BottlenecksRunner,
         "shell": ShellRunner,
+        "vnftest": VnftestRunner
     }
 
     @classmethod
