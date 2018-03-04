@@ -325,12 +325,21 @@ class ShellTestcase(Testcase):
         self.type = 'shell'
 
 
+class VnftestTestcase(Testcase):
+
+    validate_testcase_list = {}
+
+    def __init__(self, testcase_yaml):
+        super(VnftestTestcase, self).__init__(testcase_yaml)
+        self.type = 'vnftest'
+
 class TestcaseFactory(object):
     TESTCASE_TYPE_MAP = {
         'functest': FunctestTestcase,
         'yardstick': YardstickTestcase,
         'bottlenecks': BottlenecksTestcase,
         'shell': ShellTestcase,
+        'vnftest': VnftestTestcase
     }
 
     @classmethod

@@ -27,7 +27,7 @@ from testcase import Testcase
 
 class Report(object):
 
-    results = {'functest': {}, 'yardstick': {}, 'bottlenecks': {}, 'shell': {}}
+    results = {'functest': {}, 'yardstick': {}, 'bottlenecks': {}, 'shell': {}, 'vnftest': {}}
 
     logger = None
 
@@ -427,11 +427,61 @@ class ShellCrawler(object):
             return None
 
 
+class VnftestCrawler(object):
+
+    logger = None
+
+    def __init__(self):
+        self.type = 'vnftest'
+        self.logger.debug('Create crawler: {}'.format(self.type))
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.VnftestCrawler').getLogger()
+
+    def crawl(self, testcase=None):
+        report_dest = dt_cfg.dovetail_config['report_dest']
+        if report_dest.lower() == 'file':
+            return self.crawl_from_file(testcase)
+
+        if report_dest.lower().startswith('http'):
+            return self.crawl_from_url(testcase)
+
+    def crawl_from_file(self, testcase=None):
+        file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
+                                 testcase.name() + '.out')
+        if not os.path.exists(file_path):
+            self.logger.error('Result file not found: {}'.format(file_path))
+            return None
+        criteria = 'FAIL'
+        with open(file_path, 'r') as f:
+            for jsonfile in f:
+                data = json.loads(jsonfile)
+                try:
+                    criteria = data['result']['criteria']
+                    if criteria == 'PASS':
+                        valid_tc = testcase.validate_testcase()
+                        details = data['result']['testcases'][valid_tc]
+                        errors = details['tc_data'][0]['errors']
+                        if len(errors) > 0:
+                            criteria = 'FAIL'
+                except KeyError as e:
+                    self.logger.exception('Pass flag not found {}'.format(e))
+        json_results = {'criteria': criteria}
+        self.logger.debug('Results: {}'.format(str(json_results)))
+        return json_results
+
+    def crawl_from_url(self, testcase=None):
+        return None
+
+
 class CrawlerFactory(object):
 
     CRAWLER_MAP = {'functest': FunctestCrawler,
                    'yardstick': YardstickCrawler,
                    'bottlenecks': BottlenecksCrawler,
+                   'vnftest': VnftestCrawler,
                    'shell': ShellCrawler}
 
     @classmethod
@@ -558,12 +608,31 @@ class ShellChecker(object):
             testcase.passed(False)
 
 
+class VnftestChecker(object):
+
+    logger = None
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.VnftestCheckers').getLogger()
+
+    @staticmethod
+    def check(testcase, result):
+        if not result:
+            testcase.passed('FAIL')
+        else:
+            testcase.passed(result['criteria'])
+        return
+
+
 class CheckerFactory(object):
 
     CHECKER_MAP = {'functest': FunctestChecker,
                    'yardstick': YardstickChecker,
                    'bottlenecks': BottlenecksChecker,
-                   'shell': ShellChecker}
+                   'shell': ShellChecker,
+                   'vnftest': VnftestChecker}
 
     @classmethod
     def create(cls, type):
