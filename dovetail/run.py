@@ -21,7 +21,9 @@ from container import Container
 from dovetail import constants
 from parser import Parser
 from report import BottlenecksChecker, FunctestChecker, YardstickChecker
+from report import VnftestChecker
 from report import BottlenecksCrawler, FunctestCrawler, YardstickCrawler
+from report import VnftestCrawler
 from report import Report
 from test_runner import DockerRunner, ShellRunner
 from testcase import Testcase
@@ -96,6 +98,8 @@ def check_tc_result(testcase, logger):
         elif validate_type.lower() == 'functest':
             result_file = os.path.join(result_dir, functest_result)
         elif validate_type.lower() == 'bottlenecks':
+            result_file = os.path.join(result_dir, testcase.name() + '.out')
+        elif validate_type.lower() == 'vnftest':
             result_file = os.path.join(result_dir, testcase.name() + '.out')
         else:
             logger.error("Don't support {} now.".format(validate_type))
@@ -180,9 +184,11 @@ def create_logs():
     Report.create_log()
     FunctestCrawler.create_log()
     YardstickCrawler.create_log()
+    VnftestCrawler.create_log()
     BottlenecksCrawler.create_log()
     FunctestChecker.create_log()
     YardstickChecker.create_log()
+    VnftestChecker.create_log()
     BottlenecksChecker.create_log()
     Testcase.create_log()
     Testsuite.create_log()
@@ -265,6 +271,7 @@ def main(*args, **kwargs):
         os.environ['DEBUG'] = 'true'
     create_logs()
     logger = dt_logger.Logger('run').getLogger()
+
     logger.info('================================================')
     logger.info('Dovetail compliance: {}!'.format(kwargs['testsuite']))
     logger.info('================================================')

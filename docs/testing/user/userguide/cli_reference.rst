@@ -80,6 +80,9 @@ Commands List
 | dovetail run --bottlenecks_tag | -b <bottlenecks_docker_image_tag>     | Specify bottlenecks' docker image tag                                                             |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| dovetail run --vnf_tag | -v <vnftest_docker_image_tag>                 | Specify vnftest's docker image tag, default is beijing.0                                          |
+|                                                                        |                                                                                                   |
++------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 
 Commands Examples
 =================
