@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_de9578e5",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-05T16:45:25Z",
+      "side": 1,
+      "message": "Feedback from C\u0026C committee was to include exemption process in a service release of OVP 2018.01.",
+      "range": {
+        "startLine": 95,
+        "startChar": 3,
+        "endLine": 96,
+        "endChar": 56
+      },
+      "revId": "7f4be7b50bcfa84fd808bce3070780f76790eca9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_be9a2c12",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-05T16:45:25Z",
+      "side": 1,
+      "message": "make this a separate bullet list item",
+      "range": {
+        "startLine": 97,
+        "startChar": 49,
+        "endLine": 98,
+        "endChar": 55
+      },
+      "revId": "7f4be7b50bcfa84fd808bce3070780f76790eca9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
