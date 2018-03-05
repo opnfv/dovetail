@@ -63,8 +63,12 @@ def run_test(testsuite, testarea, logger, kwargs):
             testcase.run()
 
         stop_on_fail = check_tc_result(testcase, logger)
-        if stop_on_fail['criteria'] == "FAIL" and kwargs['stop']:
-            return "stop_on_fail"
+        try:
+            if (not stop_on_fail or stop_on_fail['criteria'] == "FAIL") \
+                and kwargs['stop']:
+                return "stop_on_fail"
+        except KeyError as e:
+            logger.error("There is no key {}.".format(e))
 
     end_time = time.time()
     duration = end_time - start_time
