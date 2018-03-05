@@ -46,6 +46,30 @@
       "revId": "0c7fcbcdfab8b3183f4c68b587fe333cd0fe671f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_23a0c58f",
+        "filename": "dovetail/cli/commands/cli_testcase.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-03-05T09:02:54Z",
+      "side": 1,
+      "message": "yes, 52929 is the parent patch, constants package has been added in it.",
+      "parentUuid": "5a3f45e8_83e71940",
+      "range": {
+        "startLine": 65,
+        "startChar": 12,
+        "endLine": 65,
+        "endChar": 22
+      },
+      "revId": "0c7fcbcdfab8b3183f4c68b587fe333cd0fe671f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
