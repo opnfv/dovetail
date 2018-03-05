@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "5a3f45e8_99902a97",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-05T18:50:55Z",
+      "side": 1,
+      "message": "This statement refers to the OVP exemption phase. I will rephrase this to make it clear.",
+      "parentUuid": "5a3f45e8_3ead7c32",
+      "range": {
+        "startLine": 96,
+        "startChar": 57,
+        "endLine": 97,
+        "endChar": 47
+      },
+      "revId": "7f4be7b50bcfa84fd808bce3070780f76790eca9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_be9a2c12",
         "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
         "patchSetId": 1
