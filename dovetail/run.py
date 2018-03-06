@@ -112,18 +112,20 @@ def check_tc_result(testcase, logger):
 
 
 def validate_input(input_dict, check_dict, logger):
-    # for 'func_tag' and 'yard_tag' options
-    func_tag = input_dict['func_tag']
-    yard_tag = input_dict['yard_tag']
+    func_tag = input_dict['functest_tag']
+    yard_tag = input_dict['yardstick_tag']
     # bott_tag = input_dict['bott_tag']
-    valid_tag = check_dict['valid_docker_tag']
-    if func_tag is not None and func_tag not in valid_tag:
+    valid_functest_tags = check_dict['valid_functest_tags']
+    valid_yardstick_tags = check_dict['valid_yardstick_tags']
+    if func_tag is not None and func_tag not in valid_functest_tags:
         logger.error("The input option 'func_tag' can't be {}, "
-                     "valid values are {}.".format(func_tag, valid_tag))
+                     "valid values are {}.".format(func_tag,
+                                                   valid_functest_tags))
         raise SystemExit(1)
-    if yard_tag is not None and yard_tag not in valid_tag:
+    if yard_tag is not None and yard_tag not in valid_yardstick_tags:
         logger.error("The input option 'yard_tag' can't be {}, "
-                     "valid values are {}.".format(yard_tag, valid_tag))
+                     "valid values are {}.".format(yard_tag,
+                                                   valid_yardstick_tags))
         raise SystemExit(1)
     # if bott_tag is not None and bott_tag not in valid_tag:
     #     logger.error("The input option 'bott_tag' can't be {}, "

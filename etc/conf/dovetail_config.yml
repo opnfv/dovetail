@@ -93,11 +93,12 @@ test_project:
   - 'bottlenecks'
 
 validate_input:
-  valid_docker_tag:
-    - 'stable'
+  valid_functest_tags:
     - 'latest'
-    - 'danube.3.2'
     - 'euphrates'
+  valid_yardstick_tags:
+    - 'latest'
+    - 'opnfv-5.1.0'
 
 mandatory:
   - osinterop

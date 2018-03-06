@@ -71,13 +71,13 @@ Commands List
 | dovetail run --report | -r <db_url>                                    | Push results to local or official DB                                                              |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run --yard_tag | -y <yardstick_docker_image_tag>              | Specify yardstick's docker image tag, default is danube.3.2                                       |
+| dovetail run --yardstick_tag | -y <yardstick_docker_image_tag>         | Specify yardstick's docker image tag                                                              |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run --func_tag | -f <functest_docker_image_tag>               | Specify functest's docker image tag, default is cvp.0.5.0                                         |
+| dovetail run --functest_tag | -f <functest_docker_image_tag>           | Specify functest's docker image tag                                                               |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run --bott_tag | -b <bottlenecks_docker_image_tag>            | Specify bottlenecks' docker image tag, default is cvp.0.4.0                                       |
+| dovetail run --bottlenecks_tag | -b <bottlenecks_docker_image_tag>     | Specify bottlenecks' docker image tag                                                             |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 
