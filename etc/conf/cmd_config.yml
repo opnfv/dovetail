@@ -17,21 +17,21 @@ cli:
     config:
       yard_tag:
         flags:
-          - '--yard_tag'
+          - '--yardstick_tag'
           - '-y'
         path:
           - 'yardstick/docker_tag'
         help: 'Overwrite tag for yardstick docker container (e.g. opnfv-5.1.0)'
       func_tag:
         flags:
-          - '--func_tag'
+          - '--functest_tag'
           - '-f'
         path:
           - 'functest/docker_tag'
         help: 'Overwrite tag for functest docker container (e.g. euphrates)'
       bott_tag:
         flags:
-          - '--bott_tag'
+          - '--bottlenecks_tag'
           - '-b'
         path:
           - 'bottlenecks/docker_tag'
