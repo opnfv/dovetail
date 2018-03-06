@@ -185,6 +185,14 @@ class Container(object):
             ' -v %s:%s ' % (os.getenv("DOVETAIL_HOME"),
                             dovetail_config[type]['config']['dir'])
 
+        userconfig_volume = '-v {}:{}'.format(
+            dovetail_config['config_dir'],
+            os.path.join(dovetail_config[type]['config']['dir'], 'pre_config'))
+
+        patch_volume = '-v {}:{}'.format(
+            dovetail_config['patch_dir'],
+            os.path.join(dovetail_config[type]['config']['dir'], 'patch'))
+
         cacert_volume = ""
         https_enabled = dt_utils.check_https_enabled(cls.logger)
         cacert = os.getenv('OS_CACERT')
@@ -202,33 +210,22 @@ class Container(object):
                                  "insecure mode...")
                 return None
 
+        images_volume = ''
+        if dovetail_config[type]['config'].get('images', None):
+            images_volume = '-v {}:{}'.format(
+                dovetail_config['images_dir'],
+                dovetail_config[type]['config']['images'])
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
-        cmd = 'sudo docker run %s %s %s %s %s %s %s %s %s /bin/bash' % \
-            (opts, envs, config, hosts_config, openrc, cacert_volume,
-             config_volume, result_volume, docker_image)
+        cmd = 'sudo docker run {opts} {envs} {config} {hosts_config} ' \
+              '{openrc} {cacert_volume} {config_volume} {userconfig_volume} ' \
+              '{patch_volume} {result_volume} {images_volume} ' \
+              '{docker_image} /bin/bash'.format(**locals())
         dt_utils.exec_cmd(cmd, cls.logger)
         ret, container_id = \
             dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +
                               " | awk '{print $1}' | head -1", cls.logger)
         cls.container_list[type] = container_id
-
-        if 'sdnvpn' in str(testcase_name):
-            prefix_path = dt_cfg.dovetail_config[type]['config']['dir']
-            file_name = dt_cfg.dovetail_config['sdnvpn_image']
-            src_path = os.path.join(prefix_path, 'pre_config', file_name)
-            dest_path = '/home/opnfv/functest/images'
-            Container.pre_copy(container_id, src_path, dest_path)
-
-        if type.lower() == 'functest':
-            prefix_path = dt_cfg.dovetail_config[type]['config']['dir']
-            images = ['cirros_image', 'ubuntu14_image', 'cloudify_image',
-                      'trusty_image']
-            for image in images:
-                file_name = dt_cfg.dovetail_config[image]
-                src_path = os.path.join(prefix_path, 'pre_config', file_name)
-                dest_path = '/home/opnfv/functest/images'
-                Container.pre_copy(container_id, src_path, dest_path)
 
         if type.lower() == 'yardstick':
             cls.set_yardstick_conf_file(container_id)
