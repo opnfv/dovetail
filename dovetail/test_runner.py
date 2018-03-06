@@ -60,7 +60,7 @@ class DockerRunner(object):
         # in dovetail_config.yml first.
         if 'sdnvpn' in str(self.testcase.name()):
             img_name = dt_cfg.dovetail_config['sdnvpn_image']
-            img_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
+            img_file = os.path.join(dt_cfg.dovetail_config['images_dir'],
                                     img_name)
             if not os.path.isfile(img_file):
                 self.logger.error('Image {} not found.'.format(img_name))
