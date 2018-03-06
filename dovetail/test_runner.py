@@ -60,7 +60,7 @@ class DockerRunner(object):
         # in dovetail_config.yml first.
         if 'sdnvpn' in str(self.testcase.name()):
             img_name = dt_cfg.dovetail_config['sdnvpn_image']
-            img_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
+            img_file = os.path.join(dt_cfg.dovetail_config['images_dir'],
                                     img_name)
             if not os.path.isfile(img_file):
                 self.logger.error('Image {} not found.'.format(img_name))
@@ -107,7 +107,7 @@ class DockerRunner(object):
                 ret, msg = Container.exec_cmd(container_id, cmd)
         self.testcase.cleaned(True)
 
-        Container.clean(container_id, self.type)
+        # Container.clean(container_id, self.type)
 
     def save_logs(self):
         pass

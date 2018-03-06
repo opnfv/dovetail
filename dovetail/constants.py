@@ -9,7 +9,7 @@
 import os.path
 
 
-DOVETAIL_CONF_PATH = '/etc/dovetail'
+DOVETAIL_CONF_PATH = '/Users/serena/opnfv/dovetail_c/etc'
 USERCONF_PATH = os.path.join(DOVETAIL_CONF_PATH, 'userconfig')
 PATCH_PATH = os.path.join(DOVETAIL_CONF_PATH, 'patch')
 CONF_PATH = os.path.join(DOVETAIL_CONF_PATH, 'conf')

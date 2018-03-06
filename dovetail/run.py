@@ -205,27 +205,10 @@ def get_result_path():
         return None
     result_path = os.path.join(dovetail_home, 'results')
     dt_cfg.dovetail_config['result_dir'] = result_path
-    pre_config_path = os.path.join(dovetail_home, 'pre_config')
-    patch_set_path = os.path.join(dovetail_home, 'patch')
-    dt_cfg.dovetail_config['config_dir'] = pre_config_path
-    dt_cfg.dovetail_config['patch_dir'] = patch_set_path
+    dt_cfg.dovetail_config['config_dir'] = constants.USERCONF_PATH
+    dt_cfg.dovetail_config['patch_dir'] = constants.PATCH_PATH
+    dt_cfg.dovetail_config['images_dir'] = os.path.join(dovetail_home, 'images')
     return dovetail_home
-
-
-def copy_userconfig_files(logger):
-    pre_config_path = dt_cfg.dovetail_config['config_dir']
-    if not os.path.isdir(pre_config_path):
-        os.makedirs(pre_config_path)
-    cmd = 'sudo cp -r %s/* %s' % (constants.USERCONF_PATH, pre_config_path)
-    dt_utils.exec_cmd(cmd, logger, exit_on_error=False)
-
-
-def copy_patch_files(logger):
-    patch_set_path = dt_cfg.dovetail_config['patch_dir']
-    if not os.path.isdir(patch_set_path):
-        os.makedirs(patch_set_path)
-    cmd = 'sudo cp -r %s/* %s' % (constants.PATCH_PATH, patch_set_path)
-    dt_utils.exec_cmd(cmd, logger, exit_on_error=False)
 
 
 # env_init can source some env variable used in dovetail, such as
@@ -262,8 +245,6 @@ def main(*args, **kwargs):
     logger.info('================================================')
     logger.info('Build tag: {}'.format(dt_cfg.dovetail_config['build_tag']))
     env_init(logger)
-    copy_userconfig_files(logger)
-    copy_patch_files(logger)
     dt_utils.check_docker_version(logger)
     dt_utils.get_openstack_endpoint(logger)
     validate_input(kwargs, dt_cfg.dovetail_config['validate_input'], logger)
@@ -288,7 +269,7 @@ def main(*args, **kwargs):
     else:
         dt_cfg.dovetail_config['offline'] = False
 
-    dt_utils.get_hardware_info(logger)
+    # dt_utils.get_hardware_info(logger)
 
     origin_testarea = kwargs['testarea']
     testsuite_validation = False
