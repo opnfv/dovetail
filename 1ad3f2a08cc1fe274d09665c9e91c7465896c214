@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5a3f45e8_72361454",
+        "filename": "dovetail/container.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-03-07T10:33:10Z",
+      "side": 1,
+      "message": "Ok, I test it locally, not in docker, it is a big problem, I will try to figure out a solution, but I think it will take a long time, so maybe in this patch, it is better to process images copy alone.",
+      "parentUuid": "5a3f45e8_0fd96757",
+      "range": {
+        "startLine": 189,
+        "startChar": 12,
+        "endLine": 189,
+        "endChar": 42
+      },
+      "revId": "1ad3f2a08cc1fe274d09665c9e91c7465896c214",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_6f10eb01",
         "filename": "dovetail/run.py",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2018-03-07T02:11:35Z",
       "side": 1,
       "message": "This \u0027config_dir\u0027 is $DOVETAIL_HOME/pre_config, which contains env_config.sh, pod.yaml ...\nHere changed it to be /etc/dovetail/userconfig which contains sdnvpn_config_testcase*.yaml ...\nIt will cause a lot of problems when trying to find env_config.sh, pod.yaml ...",
+      "range": {
+        "startLine": 208,
+        "startChar": 4,
+        "endLine": 208,
+        "endChar": 40
+      },
+      "revId": "1ad3f2a08cc1fe274d09665c9e91c7465896c214",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_cf901fef",
+        "filename": "dovetail/run.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-03-07T10:33:10Z",
+      "side": 1,
+      "message": "originally, pod.yaml, env_config.sh... are added manually to $DOVETAIL_HOME/pre_config, in this patch, pretend to add them directly to /etc/dovetail/userconfig, so there will be no finding issues.\nbut the first issue is a big problem.",
+      "parentUuid": "5a3f45e8_6f10eb01",
       "range": {
         "startLine": 208,
         "startChar": 4,
