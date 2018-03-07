@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_0fd96757",
+        "filename": "dovetail/container.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-07T02:11:35Z",
+      "side": 1,
+      "message": "This can\u0027t work because all the volume mapping is mapping between host and container. Here when docker run a Functest or Yardstick container, it map the host\u0027s /etc/dovetail/userconfig to the new container. However, the dir /etc/dovetail/userconfig here intend to map is belong to Dovetail container.\nSo Functest/Yardstick can\u0027t find any file in userconfig to use.\nAlso the same problem with the \u0027patch_dir\u0027.",
+      "range": {
+        "startLine": 189,
+        "startChar": 12,
+        "endLine": 189,
+        "endChar": 42
+      },
+      "revId": "1ad3f2a08cc1fe274d09665c9e91c7465896c214",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_6f10eb01",
+        "filename": "dovetail/run.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-07T02:11:35Z",
+      "side": 1,
+      "message": "This \u0027config_dir\u0027 is $DOVETAIL_HOME/pre_config, which contains env_config.sh, pod.yaml ...\nHere changed it to be /etc/dovetail/userconfig which contains sdnvpn_config_testcase*.yaml ...\nIt will cause a lot of problems when trying to find env_config.sh, pod.yaml ...",
+      "range": {
+        "startLine": 208,
+        "startChar": 4,
+        "endLine": 208,
+        "endChar": 40
+      },
+      "revId": "1ad3f2a08cc1fe274d09665c9e91c7465896c214",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
