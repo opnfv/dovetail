@@ -379,3 +379,31 @@ def get_hosts_info(logger=None):
             logger.error("There is no key {} in file {}"
                          .format(e, hosts_config_file))
     return hosts_config
+
+
+def read_yaml_file(file_path, logger=None):
+    if not os.path.isfile(file_path):
+        logger.error("File {} doesn't exist.".format(file_path))
+        return None
+    try:
+        with open(file_path, 'r') as f:
+            content = yaml.safe_load(f)
+            return content
+    except Exception as e:
+        logger.exception("Failed to read file {}, exception: {}"
+                         .format(file_path, e))
+        return None
+
+
+def read_plain_file(file_path, logger=None):
+    if not os.path.isfile(file_path):
+        logger.error("File {} doesn't exist.".format(file_path))
+        return None
+    try:
+        with open(file_path, 'r') as f:
+            content = f.read()
+            return content
+    except Exception as e:
+        logger.exception("Failed to read file {}, exception: {}"
+                         .format(file_path, e))
+        return None

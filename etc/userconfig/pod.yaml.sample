@@ -48,3 +48,29 @@ nodes:
     ip: 10.1.0.54
     user: root
     key_filename: /root/.ssh/id_rsa
+
+# The options of this section include:
+# testcase_name: the name of test case
+# attack_process: the name of the process this test case attempt to kill
+# attack_host: one of the hosts given in section 'nodes' which is the primary host of attack_process
+#
+# if not set, it will use the default value of yardstick test case config
+# the default attack_host of all test cases is 'node1'
+# the default attack_process of all test cases are
+# dovetail.ha.tc001: nova-api
+# dovetail.ha.tc002: neutron-server
+# dovetail.ha.tc003: keystone
+# dovetail.ha.tc004: glance-api
+# dovetail.ha.tc005: cinder-api
+# dovetail.ha.tc008: haproxy
+# dovetail.ha.tc010: rabbitmq-server
+# dovetail.ha.tc011: neutron-l3-agent
+
+# process_info:
+# -
+#     testcase_name: dovetail.ha.tc008
+#     attack_host: node2
+#
+# -
+#     testcase_name: dovetail.ha.tc010
+#     attack_process: rabbitmq
