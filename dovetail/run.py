@@ -211,6 +211,8 @@ def get_result_path():
         return None
     result_path = os.path.join(dovetail_home, 'results')
     dt_cfg.dovetail_config['result_dir'] = result_path
+    dt_cfg.dovetail_config['images_dir'] = os.path.join(dovetail_home,
+                                                        'images')
     pre_config_path = os.path.join(dovetail_home, 'pre_config')
     patch_set_path = os.path.join(dovetail_home, 'patch')
     dt_cfg.dovetail_config['config_dir'] = pre_config_path
