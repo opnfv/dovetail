@@ -739,5 +739,80 @@ Post conditions
 ---------------
 Restart the processes of "load balancer" if they are not running.
 
+------------------------------------------------------------------------
+Test Case 10 - Controller Messaging Queue as a Service High Availability
+------------------------------------------------------------------------
+
+Short name
+----------
+
+dovetail.ha.tc010.messaging_queue_service_down
+
+Use case specification
+----------------------
+
+This test case will verify the high availability of the messaging queue 
+service(RabbitMQ) that supports OpenStack on controller node. When 
+messaging queue service(which is active) of a specified controller node
+is killed, the test case will check whether messaging queue services
+(which are standby) on other controller nodes will be switched active,
+and whether the cluster manager on attacked the controller node will 
+restart the stopped messaging queue.
+
+Test preconditions
+------------------
+
+There is more than one controller node, which is providing the "messaging queue"
+service. Denoted as Node1 in the following configuration.
+
+Basic test flow execution description and pass/fail criteria
+------------------------------------------------------------
+
+Methodology for monitoring high availability
+''''''''''''''''''''''''''''''''''''''''''''
+
+The high availability of "messaging queue" service is evaluated by monitoring
+service outage time and process outage time
+
+Service outage time is tested by continuously executing "openstack image list"
+command in loop and checking if the response of the command request is returned
+with no failure.
+When the response fails, the "messaging queue" service is considered in outage.
+The time between the first response failure and the last response failure is
+considered as service outage time.
+
+Process outage time is tested by checking the status of processes of "messaging
+queue" service on the selected controller node. The time of those processes
+being killed to the time of those processes being recovered is the process
+outage time.
+Process recovery is verified by checking the existence of processes of 
+"messaging queue" service.
+
+Test execution
+''''''''''''''
+
+* Test action 1:  Start five monitors: one for processes of "messaging queue"
+  service and the others for "openstack image list", "openstack network list",
+  "openstack stack list" and "openstack volume list" command. Each monitor 
+  will run as an independent process
+* Test action 2: Connect to Node1 through SSH, and then kill the processes of
+  "messaging queue" service
+* Test action 3: Continuously measure service outage time from the monitor until
+  the service outage time is more than 5s
+* Test action 4: Continuously measure process outage time from the monitor until
+  the process outage time is more than 30s
+
+Pass / fail criteria
+''''''''''''''''''''
+
+The process outage time is less than 30s.
+
+The service outage time is less than 5s.
+
+A negative result will be generated if the above is not met in completion.
+
+Post conditions
+---------------
+Restart the processes of "messaging queue" if they are not running.
 
 
