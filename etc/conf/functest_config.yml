@@ -5,6 +5,7 @@ functest:
   opts: '-id --privileged=true'
   config:
     dir: '/home/opnfv/userconfig'
+    images: '/home/opnfv/functest/images'
   pre_condition:
     - 'echo test for precondition in functest'
   cmds:
