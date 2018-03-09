@@ -86,6 +86,8 @@ Short name
 
 dovetail.ha.nova_api
 
+Yardstick test case: opnfv_yardstick_tc019.yaml
+
 Use case specification
 ----------------------
 
@@ -185,6 +187,8 @@ Short name
 
 dovetail.ha.neutron_server
 
+Yardstick test case: opnfv_yardstick_tc045.yaml
+
 Use case specification
 ----------------------
 
@@ -270,6 +274,8 @@ Short name
 
 dovetail.ha.keystone
 
+Yardstick test case: opnfv_yardstick_tc046.yaml
+
 Use case specification
 ----------------------
 
@@ -348,6 +354,8 @@ Short name
 ----------
 
 dovetail.ha.glance_api
+
+Yardstick test case: opnfv_yardstick_tc047.yaml
 
 Use case specification
 ----------------------
@@ -438,6 +446,8 @@ Short name
 
 dovetail.ha.cinder_api
 
+Yardstick test case: opnfv_yardstick_tc048.yaml
+
 Use case specification
 ----------------------
 
@@ -517,6 +527,8 @@ Short name
 ----------
 
 dovetail.ha.cpu_load
+
+Yardstick test case: opnfv_yardstick_tc051.yaml
 
 Use case specification
 ----------------------
@@ -604,6 +616,8 @@ Short name
 
 dovetail.ha.disk_load
 
+Yardstick test case: opnfv_yardstick_tc052.yaml
+
 Use case specification
 ----------------------
 
@@ -677,6 +691,8 @@ Short name
 ----------
 
 dovetail.ha.haproxy
+
+Yardstick test case: opnfv_yardstick_tc053.yaml
 
 Use case specification
 ----------------------
@@ -758,6 +774,8 @@ Short name
 
 dovetail.ha.database
 
+Yardstick test case: opnfv_yardstick_tc090.yaml
+
 Use case specification
 ----------------------
 
@@ -831,14 +849,94 @@ The database service is up and running again.
 If the database service did not recover successfully by itself,
 the test explicitly restarts the database service.
 
+------------------------------------------------------------------------
+Test Case 10 - Controller Messaging Queue as a Service High Availability
+------------------------------------------------------------------------
+
+Short name
+----------
+
+dovetail.ha.messaging_queue_service_down
+
+Yardstick test case: opnfv_yardstick_tc056.yaml
+
+Use case specification
+----------------------
+
+This test case will verify the high availability of the messaging queue
+service (RabbitMQ) that supports OpenStack on controller node. This
+test case expects that message bus service implementation is RabbitMQ.
+If the SUT uses a different message bus implementations, the Dovetail
+configuration (pod.yaml) can be changed accordingly. When messaging
+queue service (which is active) of a specified controller node
+is killed, the test case will check whether messaging queue services
+(which are standby) on other controller nodes will be switched active,
+and whether the cluster manager on the attacked controller node will
+restart the stopped messaging queue.
+
+Test preconditions
+------------------
+
+There is more than one controller node, which is providing the "messaging queue"
+service. Denoted as Node1 in the following configuration.
+
+Basic test flow execution description and pass/fail criteria
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The high availability of "messaging queue" service is evaluated by monitoring
+service outage time and process outage time.
+
+Service outage time is tested by continuously executing "openstack image list",
+"openstack network list", "openstack volume list" and "openstack stack list"
+commands in loop and checking if the responses of the command requests are
+returned with no failure.
+When the response fails, the "messaging queue" service is considered in outage.
+The time between the first response failure and the last response failure is
+considered as service outage time.
+
+Process outage time is tested by checking the status of processes of "messaging
+queue" service on the selected controller node. The time of those processes
+being killed to the time of those processes being recovered is the process
+outage time.
+Process recovery is verified by checking the existence of processes of
+"messaging queue" service.
+
+Test execution
+''''''''''''''
+
+* Test action 1:  Start five monitors: one for processes of "messaging queue"
+  service and the others for "openstack image list", "openstack network list",
+  "openstack stack list" and "openstack volume list" command. Each monitor
+  will run as an independent process
+* Test action 2: Connect to Node1 through SSH, and then kill all the processes of
+  "messaging queue" service
+* Test action 3: Continuously measure service outage time from the monitors until
+  the service outage time is more than 5s
+* Test action 4: Continuously measure process outage time from the monitor until
+  the process outage time is more than 30s
+
+Pass / fail criteria
+''''''''''''''''''''
+
+Test passes if the process outage time is no more than 30s and
+the service outage time is no more than 5s.
+
+A negative result will be generated if the above is not met in completion.
+
+Post conditions
+---------------
+Restart the processes of "messaging queue" if they are not running.
+
 ---------------------------------------------------------------------------
-Test Case 10 - Controller node OpenStack service down - Controller Restart
+Test Case 11 - Controller node OpenStack service down - Controller Restart
 ---------------------------------------------------------------------------
 
 Short name
 ----------
 
 dovetail.ha.controller_restart
+
+Yardstick test case: opnfv_yardstick_tc025.yaml
 
 Use case specification
 ----------------------
@@ -901,3 +999,5 @@ Post conditions
 ---------------
 
 The controller has been restarted
+
+
