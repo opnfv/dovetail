@@ -21,9 +21,16 @@ class DovetailConfig(object):
             cls.dovetail_config = yaml.safe_load(f)
 
         for extra_config_file in cls.dovetail_config['include_config']:
-            with open(os.path.join(conf_path, extra_config_file)) as f:
-                extra_config = yaml.safe_load(f)
-                cls.dovetail_config.update(extra_config)
+
+            # The yardstick config file needs to be parsed later.
+            # Because it's related to the exact test case.
+            if extra_config_file.startswith("yardstick"):
+                continue
+            else:
+                file_path = os.path.join(conf_path, extra_config_file)
+                with open(file_path) as f:
+                    extra_config = yaml.safe_load(f)
+                    cls.dovetail_config.update(extra_config)
 
         path = os.path.join(conf_path, cls.dovetail_config['cli_file_name'])
         with open(path) as f:
