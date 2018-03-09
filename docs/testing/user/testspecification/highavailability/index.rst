@@ -86,6 +86,8 @@ Short name
 
 dovetail.ha.nova_api
 
+Yardstick test case: opnfv_yardstick_tc019.yaml
+
 Use case specification
 ----------------------
 
@@ -185,6 +187,8 @@ Short name
 
 dovetail.ha.neutron_server
 
+Yardstick test case: opnfv_yardstick_tc045.yaml
+
 Use case specification
 ----------------------
 
@@ -270,6 +274,8 @@ Short name
 
 dovetail.ha.keystone
 
+Yardstick test case: opnfv_yardstick_tc046.yaml
+
 Use case specification
 ----------------------
 
@@ -348,6 +354,8 @@ Short name
 ----------
 
 dovetail.ha.glance_api
+
+Yardstick test case: opnfv_yardstick_tc047.yaml
 
 Use case specification
 ----------------------
@@ -438,6 +446,8 @@ Short name
 
 dovetail.ha.cinder_api
 
+Yardstick test case: opnfv_yardstick_tc048.yaml
+
 Use case specification
 ----------------------
 
@@ -517,6 +527,8 @@ Short name
 ----------
 
 dovetail.ha.cpu_load
+
+Yardstick test case: opnfv_yardstick_tc051.yaml
 
 Use case specification
 ----------------------
@@ -604,6 +616,8 @@ Short name
 
 dovetail.ha.disk_load
 
+Yardstick test case: opnfv_yardstick_tc052.yaml
+
 Use case specification
 ----------------------
 
@@ -677,6 +691,8 @@ Short name
 ----------
 
 dovetail.ha.haproxy
+
+Yardstick test case: opnfv_yardstick_tc053.yaml
 
 Use case specification
 ----------------------
@@ -756,89 +772,9 @@ Test Case 9 - Controller node OpenStack service down - Database
 Short name
 ----------
 
-dovetail.ha.database
-
-Use case specification
-----------------------
-
-This test case verifies that the high availability of the data base instances
-used by OpenStack (mysql) on control node is working properly.
-Specifically, this test case kills the processes of database service on a
-selected control node, then checks whether the request of the related
-OpenStack command is OK and the killed processes are recovered.
-
-Test preconditions
-------------------
-
-In this test case, an attacker called "kill-process" is needed.
-This attacker includes three parameters: fault_type, process_name and host.
-
-The purpose of this attacker is to kill any process with a specific process
-name which is run on the host node. In case that multiple processes use the
-same name on the host node, all of them are going to be killed by this attacker.
-
-Basic test flow execution description and pass/fail criteria
-------------------------------------------------------------
-
-Methodology for verifying service continuity and recovery
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-In order to verify this service two different monitors are going to be used.
-
-As first monitor is used a OpenStack command and acts as watcher for
-database connection of different OpenStack components.
-
-For second monitor is used a process monitor and the main purpose is to watch
-whether the database processes on the host node are killed properly.
-
-Therefore, in this test case, there are two metrics:
-- service_outage_time, which indicates the maximum outage time (seconds)
-  of the specified OpenStack command request
-- process_recover_time, which indicates the maximum time (seconds) from the
-  process being killed to recovered
-
-Test execution
-''''''''''''''
-* Test action 1: Connect to Node1 through SSH, and check that "database"
-  processes are running on Node1
-* Test action 2: Start two monitors: one for "database" processes on the host
-  node and the other for connection toward database from OpenStack
-  components, verifying the results of openstack image list, openstack router list,
-  openstack stack list and openstack volume list.
-  Each monitor will run as an independent process
-* Test action 3: Connect to Node1 through SSH, and then kill the "mysql"
-  process(es)
-* Test action 4: Stop monitors after a period of time specified by "waiting_time".
-  The monitor info will be aggregated.
-* Test action 5: Verify the SLA and set the verdict of the test case to pass or fail.
-
-
-Pass / fail criteria
-''''''''''''''''''''
-
-Check whether the SLA is passed:
-- The process outage time is less than 30s.
-- The service outage time is less than 5s.
-
-The database operations are carried out in above order and no errors occur.
-
-A negative result will be generated if the above is not met in completion.
-
-Post conditions
----------------
-
-The database service is up and running again.
-If the database service did not recover successfully by itself,
-the test explicitly restarts the database service.
-
----------------------------------------------------------------------------
-Test Case 10 - Controller node OpenStack service down - Controller Restart
----------------------------------------------------------------------------
-
-Short name
-----------
-
 dovetail.ha.controller_restart
+
+Yardstick test case: opnfv_yardstick_tc025.yaml
 
 Use case specification
 ----------------------
@@ -901,3 +837,85 @@ Post conditions
 ---------------
 
 The controller has been restarted
+
+------------------------------------------------------------------------
+Test Case 10 - Controller Messaging Queue as a Service High Availability
+------------------------------------------------------------------------
+
+Short name
+----------
+
+dovetail.ha.tc010.messaging_queue_service_down
+
+Yardstick test case: opnfv_yardstick_tc056.yaml
+
+Use case specification
+----------------------
+
+This test case will verify the high availability of the messaging queue
+service (RabbitMQ) that supports OpenStack on controller node. This
+test case expects that message bus service implementation is RabbitMQ.
+If the SUT uses a different message bus implementations, the Dovetail
+configuration (pod.yaml) can be changed accordingly. When messaging
+queue service (which is active) of a specified controller node
+is killed, the test case will check whether messaging queue services
+(which are standby) on other controller nodes will be switched active,
+and whether the cluster manager on the attacked controller node will
+restart the stopped messaging queue.
+
+Test preconditions
+------------------
+
+There is more than one controller node, which is providing the "messaging queue"
+service. Denoted as Node1 in the following configuration.
+
+Basic test flow execution description and pass/fail criteria
+------------------------------------------------------------
+
+Methodology for monitoring high availability
+''''''''''''''''''''''''''''''''''''''''''''
+
+The high availability of "messaging queue" service is evaluated by monitoring
+service outage time and process outage time.
+
+Service outage time is tested by continuously executing "openstack image list",
+"openstack network list", "openstack volume list" and "openstack stack list"
+commands in loop and checking if the responses of the command requests are
+returned with no failure.
+When the response fails, the "messaging queue" service is considered in outage.
+The time between the first response failure and the last response failure is
+considered as service outage time.
+
+Process outage time is tested by checking the status of processes of "messaging
+queue" service on the selected controller node. The time of those processes
+being killed to the time of those processes being recovered is the process
+outage time.
+Process recovery is verified by checking the existence of processes of
+"messaging queue" service.
+
+Test execution
+''''''''''''''
+
+* Test action 1:  Start five monitors: one for processes of "messaging queue"
+  service and the others for "openstack image list", "openstack network list",
+  "openstack stack list" and "openstack volume list" command. Each monitor
+  will run as an independent process
+* Test action 2: Connect to Node1 through SSH, and then kill all the processes of
+  "messaging queue" service
+* Test action 3: Continuously measure service outage time from the monitors until
+  the service outage time is more than 5s
+* Test action 4: Continuously measure process outage time from the monitor until
+  the process outage time is more than 30s
+
+Pass / fail criteria
+''''''''''''''''''''
+
+Test passes if the process outage time is no more than 30s and
+the service outage time is no more than 5s.
+
+A negative result will be generated if the above is not met in completion.
+
+Post conditions
+---------------
+Restart the processes of "messaging queue" if they are not running.
+
