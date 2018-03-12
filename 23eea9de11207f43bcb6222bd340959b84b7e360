@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_acc15430",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 759,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-12T03:58:10Z",
+      "side": 1,
+      "message": "Should it be \u0027the attacked\u0027?",
+      "range": {
+        "startLine": 759,
+        "startChar": 35,
+        "endLine": 759,
+        "endChar": 47
+      },
+      "revId": "23eea9de11207f43bcb6222bd340959b84b7e360",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_0c05e879",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 775,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-12T03:58:10Z",
+      "side": 1,
+      "message": "Lack of a full stop here.",
+      "range": {
+        "startLine": 775,
+        "startChar": 39,
+        "endLine": 775,
+        "endChar": 43
+      },
+      "revId": "23eea9de11207f43bcb6222bd340959b84b7e360",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_8cf8d87d",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 777,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-12T03:58:10Z",
+      "side": 1,
+      "message": "this test case has four \u0027openstack-cmd\u0027 monitors. Besides this, there are another three \u0027openstack network list\u0027, \u0027openstack volume list\u0027 and \u0027openstack stack list\u0027.",
+      "range": {
+        "startLine": 777,
+        "startChar": 57,
+        "endLine": 777,
+        "endChar": 77
+      },
+      "revId": "23eea9de11207f43bcb6222bd340959b84b7e360",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_ccf2e099",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 798,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-12T03:58:10Z",
+      "side": 1,
+      "message": "It will be better to specify that it will kill all processes of \u0027messaging queue\u0027.",
+      "range": {
+        "startLine": 798,
+        "startChar": 61,
+        "endLine": 798,
+        "endChar": 64
+      },
+      "revId": "23eea9de11207f43bcb6222bd340959b84b7e360",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_0c2cc801",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 808,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-12T03:58:10Z",
+      "side": 1,
+      "message": "From the source code, it\u0027s no more than.",
+      "range": {
+        "startLine": 808,
+        "startChar": 27,
+        "endLine": 808,
+        "endChar": 36
+      },
+      "revId": "23eea9de11207f43bcb6222bd340959b84b7e360",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
