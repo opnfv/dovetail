@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_4c837004",
+        "filename": "etc/conf/functest_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-12T02:11:02Z",
+      "side": 1,
+      "message": "Yardtsick and Bottlenecks config files also need to add this section. ha.tc011 and stress.tc001 also need images to create openstack images and then create stacks.\nWithout this, they will fail because can\u0027t find the image file.",
+      "range": {
+        "startLine": 8,
+        "startChar": 5,
+        "endLine": 8,
+        "endChar": 41
+      },
+      "revId": "1b50349ab54a60c2241dc146413d1cc3ac62325c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
