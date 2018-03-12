@@ -93,6 +93,30 @@
       "revId": "1ad3f2a08cc1fe274d09665c9e91c7465896c214",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_8c7c5822",
+        "filename": "dovetail/run.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-12T02:21:39Z",
+      "side": 1,
+      "message": "I am afraid it won\u0027t work. If move all config files from $DOVETAIL_HOME/pre_config to /etc/dovetail/userconfig, and then mapping with \u0027-v /etc/dovetail/userconfig:/etc/dovetail/userconfig\u0027 when run a dovetail container, it will clean all the original files with dir /etc/dovetail/userconfig in Dovetail Container.\nDocker volume mapping will replace all the files in Containers with the host\u0027s files rather than merging them.",
+      "parentUuid": "5a3f45e8_cf901fef",
+      "range": {
+        "startLine": 208,
+        "startChar": 4,
+        "endLine": 208,
+        "endChar": 40
+      },
+      "revId": "1ad3f2a08cc1fe274d09665c9e91c7465896c214",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
