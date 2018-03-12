@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "5a3f45e8_bd9fc05e",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 746,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-12T15:05:09Z",
+      "side": 1,
+      "message": "yes, it is a problem and we need to add this information to the other test cases as well. If you want, we can leave this out of this particular patch set, and create a JIRA ticket for adding this information to all test cases at once.",
+      "parentUuid": "5a3f45e8_1dd0744f",
+      "range": {
+        "startLine": 746,
+        "startChar": 0,
+        "endLine": 746,
+        "endChar": 10
+      },
+      "revId": "23eea9de11207f43bcb6222bd340959b84b7e360",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_270f1f32",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 3
