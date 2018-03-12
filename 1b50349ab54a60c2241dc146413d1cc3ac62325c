@@ -46,6 +46,30 @@
       "revId": "1b50349ab54a60c2241dc146413d1cc3ac62325c",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_47a6ab11",
+        "filename": "etc/conf/functest_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-12T09:01:08Z",
+      "side": 1,
+      "message": "https://github.com/opnfv/dovetail/blob/master/etc/testcase/ha.tc011.yml#L11\nhttps://github.com/opnfv/dovetail/blob/master/etc/conf/bottlenecks_config.yml#L13\nI am noy very sure if they are all.",
+      "parentUuid": "5a3f45e8_4ca09043",
+      "range": {
+        "startLine": 8,
+        "startChar": 5,
+        "endLine": 8,
+        "endChar": 41
+      },
+      "revId": "1b50349ab54a60c2241dc146413d1cc3ac62325c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
