@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "5a3f45e8_9539fc43",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-12T20:03:45Z",
+      "side": 1,
+      "message": "[3] should go here",
+      "range": {
+        "startLine": 89,
+        "startChar": 40,
+        "endLine": 89,
+        "endChar": 57
+      },
+      "revId": "a6e41a999a63259892d69efcbd97996664d3fab4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_8cca984d",
         "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
         "patchSetId": 2
@@ -13,6 +36,30 @@
       "writtenOn": "2018-03-12T03:13:40Z",
       "side": 1,
       "message": "I didn\u0027t find anywhere to use this reference. Except this, everything looks good to me.",
+      "range": {
+        "startLine": 179,
+        "startChar": 3,
+        "endLine": 179,
+        "endChar": 23
+      },
+      "revId": "a6e41a999a63259892d69efcbd97996664d3fab4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_f53fa023",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-12T20:03:45Z",
+      "side": 1,
+      "message": "good catch. I will add the missing reference (see above) after the next TSC review tomorrow.",
+      "parentUuid": "5a3f45e8_8cca984d",
       "range": {
         "startLine": 179,
         "startChar": 3,
