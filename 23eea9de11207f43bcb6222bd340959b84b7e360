@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "5a3f45e8_4c137066",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 746,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-12T08:53:08Z",
+      "side": 1,
+      "message": "can you please mention the Yardstick-specific test case name (TC56) in this document? This helps to find the actual implementation",
+      "range": {
+        "startLine": 746,
+        "startChar": 0,
+        "endLine": 746,
+        "endChar": 10
+      },
+      "revId": "23eea9de11207f43bcb6222bd340959b84b7e360",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_270f1f32",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 755,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-12T08:53:08Z",
+      "side": 1,
+      "message": "can you mention that the *default* message bus service implementation targeted is rabbitMQ. If the SuT uses a different message bus implementations, the Dovetail configuration can be changed accordingly (related to https://gerrit.opnfv.org/gerrit/#/c/53377/)",
+      "range": {
+        "startLine": 755,
+        "startChar": 9,
+        "endLine": 755,
+        "endChar": 17
+      },
+      "revId": "23eea9de11207f43bcb6222bd340959b84b7e360",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_acc15430",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 3
@@ -94,6 +140,29 @@
     },
     {
       "key": {
+        "uuid": "5a3f45e8_673767e4",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 800,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-12T08:53:08Z",
+      "side": 1,
+      "message": "monitors",
+      "range": {
+        "startLine": 800,
+        "startChar": 67,
+        "endLine": 800,
+        "endChar": 74
+      },
+      "revId": "23eea9de11207f43bcb6222bd340959b84b7e360",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_0c2cc801",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 3
@@ -110,6 +179,29 @@
         "startChar": 27,
         "endLine": 808,
         "endChar": 36
+      },
+      "revId": "23eea9de11207f43bcb6222bd340959b84b7e360",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_275d5f22",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 808,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-12T08:53:08Z",
+      "side": 1,
+      "message": "being nitpicking here: please state that the test passes if ...",
+      "range": {
+        "startLine": 808,
+        "startChar": 0,
+        "endLine": 808,
+        "endChar": 23
       },
       "revId": "23eea9de11207f43bcb6222bd340959b84b7e360",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
