@@ -25,6 +25,69 @@
     },
     {
       "key": {
+        "uuid": "5a3f45e8_3b4a97c5",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 170
+      },
+      "writtenOn": "2018-03-13T11:46:50Z",
+      "side": 1,
+      "message": "In the OpenStack case, \"Products using additional data will be restricted to the Nova 2.0 API.\" Therefore, it would be useful to note here that the waiver only applied to Compute API version 2.0.",
+      "revId": "a6e41a999a63259892d69efcbd97996664d3fab4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_1b451bb3",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 170
+      },
+      "writtenOn": "2018-03-13T11:46:50Z",
+      "side": 1,
+      "message": "Should we mention here that the exemption is only meant to apply to Compute API 2.0, or do we allow returning extra parameters in any API?",
+      "range": {
+        "startLine": 140,
+        "startChar": 53,
+        "endLine": 142,
+        "endChar": 11
+      },
+      "revId": "a6e41a999a63259892d69efcbd97996664d3fab4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_3b21f7fb",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 170
+      },
+      "writtenOn": "2018-03-13T11:46:50Z",
+      "side": 1,
+      "message": "If I calculated correctly, the service release is the last Danube based Dovetail release. Euphrates is based on Ocata which was released in 2017 and therefore did not allow for the extra parameters in return values. Either OVP will allow OpenStack versions that do not pass the OpenStack Interop tests, or the service release of OVP 2018.01 will be the last version where this exemption process can be used.",
+      "range": {
+        "startLine": 169,
+        "startChar": 3,
+        "endLine": 170,
+        "endChar": 34
+      },
+      "revId": "a6e41a999a63259892d69efcbd97996664d3fab4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_8cca984d",
         "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
         "patchSetId": 2
