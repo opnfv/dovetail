@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "5a3f45e8_1ea9897b",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 746,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-13T15:24:37Z",
+      "side": 1,
+      "message": "Thanks.",
+      "parentUuid": "5a3f45e8_b8a06d44",
+      "range": {
+        "startLine": 746,
+        "startChar": 0,
+        "endLine": 746,
+        "endChar": 10
+      },
+      "revId": "23eea9de11207f43bcb6222bd340959b84b7e360",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_270f1f32",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 3
