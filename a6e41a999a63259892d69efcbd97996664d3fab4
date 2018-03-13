@@ -42,6 +42,24 @@
     },
     {
       "key": {
+        "uuid": "5a3f45e8_3b9457e1",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-13T13:00:39Z",
+      "side": 1,
+      "message": "Good point, but my conclusion is the opposite: Nova 2.0 API responses are NOT validated - hence allowing additional parameters by default. Instead, only newer API versions starting at 2.1 [1] are being checked.\n\n[1] https://github.com/openstack/tempest/tree/master/tempest/lib/api_schema/response/compute",
+      "parentUuid": "5a3f45e8_3b4a97c5",
+      "revId": "a6e41a999a63259892d69efcbd97996664d3fab4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_1b451bb3",
         "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
         "patchSetId": 2
@@ -65,6 +83,30 @@
     },
     {
       "key": {
+        "uuid": "5a3f45e8_fb894fcb",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-13T13:00:39Z",
+      "side": 1,
+      "message": "To my knowledge, strict API response validation is currently only implemented in Nova/compute Tempest test cases, however, strict validation of other APIs can in principle be introduced at any time by OpenStack. Cinder has started to add a limited check [1]. Given the current situation, we can limit this exemption to the compute API only and revisit the exemption process once further API response validation checks have been introduced and we see similar issues arising from this.\n\n[1] https://github.com/openstack/tempest/tree/master/tempest/lib/api_schema/response/volume",
+      "parentUuid": "5a3f45e8_1b451bb3",
+      "range": {
+        "startLine": 140,
+        "startChar": 53,
+        "endLine": 142,
+        "endChar": 11
+      },
+      "revId": "a6e41a999a63259892d69efcbd97996664d3fab4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_3b21f7fb",
         "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
         "patchSetId": 2
@@ -76,6 +118,30 @@
       "writtenOn": "2018-03-13T11:46:50Z",
       "side": 1,
       "message": "If I calculated correctly, the service release is the last Danube based Dovetail release. Euphrates is based on Ocata which was released in 2017 and therefore did not allow for the extra parameters in return values. Either OVP will allow OpenStack versions that do not pass the OpenStack Interop tests, or the service release of OVP 2018.01 will be the last version where this exemption process can be used.",
+      "range": {
+        "startLine": 169,
+        "startChar": 3,
+        "endLine": 170,
+        "endChar": 34
+      },
+      "revId": "a6e41a999a63259892d69efcbd97996664d3fab4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_fbb02f8d",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-13T13:00:39Z",
+      "side": 1,
+      "message": "Just for background information: The OpenStack waiver was only indirectly tied to specific releases, but directly to Interop guidelines. The last guideline to allow for an exemption was the 2017.09 guideline which covers \"mitaka\", \"newton\", \"ocata\", and \"pike\" [1].\n\nThe result of the OVP exemption is - by design - that a product which does pass OVP *only* under exemption, does not pass the latest OpenStack guidelines. The OVP exemption basically provides an extension of the waiver we have seen in OpenStack to allow NFV products to become fully API compliant after a transition phase.\n\n[1] https://github.com/openstack/interop/blob/master/2017.09.json#L10",
+      "parentUuid": "5a3f45e8_3b21f7fb",
       "range": {
         "startLine": 169,
         "startChar": 3,
