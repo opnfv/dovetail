@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_4aab471d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 6769
+      },
+      "writtenOn": "2018-03-14T16:51:18Z",
+      "side": 1,
+      "message": "Question regarding the test case descriptions.  I don\u0027t see where we specify optional vs required.  Does that still exist and is that documented someplace else?",
+      "revId": "69092ff6a2094c31959f8aaee16938af9ecba6a0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
