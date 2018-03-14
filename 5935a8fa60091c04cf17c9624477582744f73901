@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_8aef0f87",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 6769
+      },
+      "writtenOn": "2018-03-14T16:34:52Z",
+      "side": 1,
+      "message": "Would it be easier if we revert the change made by the Introp WG group and provide only a warning stating that additional information was received and that strict enforcing will be required after the specified waiver date?",
+      "range": {
+        "startLine": 143,
+        "startChar": 10,
+        "endLine": 143,
+        "endChar": 11
+      },
+      "revId": "5935a8fa60091c04cf17c9624477582744f73901",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_0a03ff42",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 6769
+      },
+      "writtenOn": "2018-03-14T16:34:52Z",
+      "side": 1,
+      "message": "I\u0027m wondering the importance of this request, as long as the test performs as expected won\u0027t the warnings be enough to show that there is an issue with strict enforcing and that after the waiver deadline, this product will require re-submission in order to be compliant?  As long as the reviewers see the warnings I would assume that is enough.  Additionally, if we print out the additional information received we can via inspection determine why they are present.  Seems adding a request adds some complexity that might not be needed.",
+      "revId": "5935a8fa60091c04cf17c9624477582744f73901",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
