@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_8f32810e",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-03-14T13:27:57Z",
+      "side": 1,
+      "message": "is there a way to fix this hardcoded initialization?",
+      "range": {
+        "startLine": 151,
+        "startChar": 4,
+        "endLine": 151,
+        "endChar": 45
+      },
+      "revId": "8655fde69b7ee144a58dd2434290393a8c52a065",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_2f540d20",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-03-14T13:27:57Z",
+      "side": 1,
+      "message": "I would suggest dt_utils manage a logger process by itself",
+      "range": {
+        "startLine": 176,
+        "startChar": 60,
+        "endLine": 176,
+        "endChar": 73
+      },
+      "revId": "8655fde69b7ee144a58dd2434290393a8c52a065",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_cfa00946",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-03-14T13:27:57Z",
+      "side": 1,
+      "message": "how about leveraging process_info \u003d pod_info.get(\u0027process_info\u0027, None)",
+      "range": {
+        "startLine": 179,
+        "startChar": 8,
+        "endLine": 182,
+        "endChar": 31
+      },
+      "revId": "8655fde69b7ee144a58dd2434290393a8c52a065",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_cf45a971",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-03-14T13:27:57Z",
+      "side": 1,
+      "message": "how about:\n\nprocess_dict \u003d dict((p[\u0027testcase_name\u0027], p) for p in process_info)\nconfig_item \u003d self._add_testcase_info(testcase, process_dict.get(testcase.name(), None))",
+      "range": {
+        "startLine": 183,
+        "startChar": 0,
+        "endLine": 193,
+        "endChar": 1
+      },
+      "revId": "8655fde69b7ee144a58dd2434290393a8c52a065",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
