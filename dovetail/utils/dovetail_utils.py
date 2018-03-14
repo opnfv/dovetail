@@ -21,6 +21,7 @@ from distutils.version import LooseVersion
 import yaml
 import python_hosts
 
+from dovetail import constants
 from dovetail_config import DovetailConfig as dt_cfg
 
 
@@ -244,9 +245,9 @@ def get_hardware_info(logger=None):
     if not get_inventory_file(pod_file, inventory_file, logger):
         logger.error("Failed to get SUT hardware info.")
         return None
-    ret, msg = exec_cmd("cd /home/opnfv/dovetail/dovetail/userconfig "
-                        "&& ansible all -m setup -i {} --tree {}"
-                        .format(inventory_file, info_file_path), verbose=False)
+    ret, msg = exec_cmd("cd {} && ansible all -m setup -i {} --tree {}"
+                        .format(constants.USERCONF_PATH, inventory_file,
+                                info_file_path), verbose=False)
     if not os.path.exists(info_file_path) or ret != 0:
         logger.error("Failed to get SUT hardware info.")
         return None
