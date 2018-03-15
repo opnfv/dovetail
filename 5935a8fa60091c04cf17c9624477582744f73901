@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5a3f45e8_01c64549",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-15T12:05:11Z",
+      "side": 1,
+      "message": "The code which checks the API responses is in Tempest and owned by the OpenStack QA team. The Interop WG itself did never change the Tempest code and only provided a description of how to handle test results in case of failures due to additional API responses. In order to change the behavior of Tempest, we would have to convince the QA team to disable the validation code in upstream Tempest. Given the discussions around this in the OpenStack community (which resulted in keeping the checks), I am a little skeptical that they are willing to change that for us, I have to admit.",
+      "parentUuid": "5a3f45e8_8aef0f87",
+      "range": {
+        "startLine": 143,
+        "startChar": 10,
+        "endLine": 143,
+        "endChar": 11
+      },
+      "revId": "5935a8fa60091c04cf17c9624477582744f73901",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_0a03ff42",
         "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
         "patchSetId": 3
@@ -36,6 +60,24 @@
       "writtenOn": "2018-03-14T16:34:52Z",
       "side": 1,
       "message": "I\u0027m wondering the importance of this request, as long as the test performs as expected won\u0027t the warnings be enough to show that there is an issue with strict enforcing and that after the waiver deadline, this product will require re-submission in order to be compliant?  As long as the reviewers see the warnings I would assume that is enough.  Additionally, if we print out the additional information received we can via inspection determine why they are present.  Seems adding a request adds some complexity that might not be needed.",
+      "revId": "5935a8fa60091c04cf17c9624477582744f73901",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_81089592",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-15T12:05:11Z",
+      "side": 1,
+      "message": "The rational for this additional check is mainly to have a formal step in the process which formally enables the C\u0026C to monitor the number of incoming exemption requests.\n\nIn practice, this would not be a full blown separate request, but one additional checkbox and an additional text field in the already existing application form: checkbox \"I apply for exemption\", text field \"We have additional parameters but are aiming for compliance soon\". So, it would just be part of the normal application process.\n\nYou are right that this could also be handled well just in the implementation, but given that OVP is a compliance program, there is a need to have formal processes in place.",
+      "parentUuid": "5a3f45e8_0a03ff42",
       "revId": "5935a8fa60091c04cf17c9624477582744f73901",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
