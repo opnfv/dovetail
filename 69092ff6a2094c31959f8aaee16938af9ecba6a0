@@ -34,6 +34,24 @@
       "revId": "69092ff6a2094c31959f8aaee16938af9ecba6a0",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_344581b3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-15T13:11:19Z",
+      "side": 1,
+      "message": "Specifying per OVP which test cases are mandatory and which are optional in a separate place makes it easier to promote a test case from optional to mandatory - but of course requires looking at yet another place for finding this information. At some point, I\u0027d like to include this information in the machine readable test case specs (e.g. [1]) and generate the required overview from this.\n\n[1] https://github.com/opnfv/dovetail/blob/master/etc/testcase/ha.tc005.yml",
+      "parentUuid": "5a3f45e8_be5e9074",
+      "revId": "69092ff6a2094c31959f8aaee16938af9ecba6a0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
