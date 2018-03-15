@@ -16,6 +16,24 @@
       "revId": "69092ff6a2094c31959f8aaee16938af9ecba6a0",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_be5e9074",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-15T03:24:18Z",
+      "side": 1,
+      "message": "http://docs.opnfv.org/en/stable-danube/submodules/dovetail/docs/release/release-notes/dovetail-release.html#test-suites-test-areas\nHere specify which is mandatory and which is optional.",
+      "parentUuid": "5a3f45e8_4aab471d",
+      "revId": "69092ff6a2094c31959f8aaee16938af9ecba6a0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
