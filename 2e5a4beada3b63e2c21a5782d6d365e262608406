@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_32275114",
+        "filename": "dovetail/compliance/debug.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-03-16T07:00:58Z",
+      "side": 1,
+      "message": "Note that this test case is commented out, any reason why. test case file is added in this patch set, still.",
+      "revId": "2e5a4beada3b63e2c21a5782d6d365e262608406",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
