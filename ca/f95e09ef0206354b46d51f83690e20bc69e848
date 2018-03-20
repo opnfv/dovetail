@@ -1,0 +1,12 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Trevor Cooper <trevor.cooper@intel.com>
+Code-Review+1: Dan Xu <xudan16@huawei.com>
+Code-Review+1: Eddy Raineri <eddy.raineri@windriver.com>
+Code-Review+1: Tapio Tallgren <tapio.tallgren@nokia.com>
+Code-Review+2: Georg Kunz <georg.kunz@ericsson.com>
+Verified+1: Georg Kunz <georg.kunz@ericsson.com>
+Submitted-by: Georg Kunz <georg.kunz@ericsson.com>
+Submitted-at: Tue, 20 Mar 2018 14:32:34 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/52543
+Project: dovetail
+Branch: refs/heads/master
