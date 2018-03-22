@@ -1,0 +1,19 @@
+---
+dovetail.smoke.tempest_volume:
+  name: dovetail.smoke.tempest_volume
+  objective: tempest smoke test cases about volume
+  validate:
+    type: functest
+    testcase: tempest_custom
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
+      - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+    pre_copy:
+      src_file: tempest_custom.txt
+      dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
+  report:
+    sub_testcase_list:
+      - tempest.api.volume.test_volumes_actions.VolumesV1ActionsTest.test_attach_detach_volume_to_instance[compute,id-fff42874-7db5-4487-a8e1-ddda5fb5288d,smoke]
+      - tempest.api.volume.test_volumes_get.VolumesV1GetTest.test_volume_create_get_update_delete[id-27fb0e9f-fb64-41dd-8bdb-1ffa762f0d51,smoke]
+      - tempest.api.volume.test_volumes_get.VolumesV1GetTest.test_volume_create_get_update_delete_from_image[id-54a01030-c7fc-447c-86ee-c1182beae638,image,smoke]
+      - tempest.api.volume.test_volumes_list.VolumesV1ListTestJSON.test_volume_list[id-0b6ddd39-b948-471f-8038-4787978747c4,smoke]
