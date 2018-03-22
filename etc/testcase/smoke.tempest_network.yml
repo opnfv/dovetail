@@ -1,0 +1,29 @@
+---
+dovetail.smoke.tempest_network:
+  name: dovetail.smoke.tempest_network
+  objective: tempest smoke test cases about network
+  validate:
+    type: functest
+    testcase: tempest_custom
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
+      - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+    pre_copy:
+      src_file: tempest_custom.txt
+      dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
+  report:
+    sub_testcase_list:
+      - tempest.api.network.test_extensions.ExtensionsTestJSON.test_list_show_extensions[id-ef28c7e6-e646-4979-9d67-deb207bc5564,smoke]
+      - tempest.api.network.test_floating_ips.FloatingIPTestJSON.test_create_floating_ip_specifying_a_fixed_ip_address[id-36de4bd0-f09c-43e3-a8e1-1decc1ffd3a5,smoke]
+      - tempest.api.network.test_floating_ips.FloatingIPTestJSON.test_create_list_show_update_delete_floating_ip[id-62595970-ab1c-4b7f-8fcc-fddfe55e8718,smoke]
+      - tempest.api.network.test_networks.BulkNetworkOpsTest.test_bulk_create_delete_network[id-d4f9024d-1e28-4fc1-a6b1-25dbc6fa11e2,smoke]
+      - tempest.api.network.test_networks.BulkNetworkOpsTest.test_bulk_create_delete_port[id-48037ff2-e889-4c3b-b86a-8e3f34d2d060,smoke]
+      - tempest.api.network.test_networks.BulkNetworkOpsTest.test_bulk_create_delete_subnet[id-8936533b-c0aa-4f29-8e53-6cc873aec489,smoke]
+      - tempest.api.network.test_networks.NetworksTest.test_external_network_visibility[id-af774677-42a9-4e4b-bb58-16fe6a5bc1ec,smoke]
+      - tempest.api.network.test_ports.PortsTestJSON.test_create_port_with_no_securitygroups[id-4179dcb9-1382-4ced-84fe-1b91c54f5735,smoke]
+      - tempest.api.network.test_routers.RoutersTest.test_add_multiple_router_interfaces[id-802c73c9-c937-4cef-824b-2191e24a6aab,smoke]
+      - tempest.api.network.test_routers.RoutersTest.test_add_remove_router_interface_with_port_id[id-2b7d2f37-6748-4d78-92e5-1d590234f0d5,smoke]
+      - tempest.api.network.test_routers.RoutersTest.test_add_remove_router_interface_with_subnet_id[id-b42e6e39-2e37-49cc-a6f4-8467e940900a,smoke]
+      - tempest.api.network.test_routers.RoutersTest.test_create_show_list_update_delete_router[id-f64403e2-8483-4b34-8ccd-b09a87bcc68c,smoke]
+      - tempest.api.network.test_subnetpools_extensions.SubnetPoolsTestJSON.test_create_list_show_update_delete_subnetpools[id-62595970-ab1c-4b7f-8fcc-fddfe55e9811,smoke]
+      - tempest.api.network.test_versions.NetworksApiDiscovery.test_api_version_resources[id-cac8a836-c2e0-4304-b556-cd299c7281d1,smoke]
