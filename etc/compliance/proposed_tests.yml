@@ -4,7 +4,14 @@ proposed_tests:
   testcases_list:
   # proposed test cases for 2nd release
     # smoke
-    - dovetail.smoke.tc001
+    - dovetail.smoke.tempest_compute
+    - dovetail.smoke.tempest_identity_v2
+    - dovetail.smoke.tempest_identity_v3
+    - dovetail.smoke.tempest_image
+    - dovetail.smoke.tempest_network
+    - dovetail.smoke.tempest_orchestration
+    - dovetail.smoke.tempest_scenario
+    - dovetail.smoke.tempest_volume
     - dovetail.smoke.tc002
     # HA
     - dovetail.ha.tc009
