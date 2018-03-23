@@ -51,14 +51,15 @@ class DockerRunner(object):
         return dest_path
 
     def run(self):
+        docker_image = Container.get_docker_image(self.testcase)
         if dt_cfg.dovetail_config['offline']:
-            exist = Container.check_image_exist(self.testcase.validate_type())
+            exist = Container.get_image_id(docker_image)
             if not exist:
                 self.logger.error("{} image doesn't exist, can't run offline."
                                   .format(self.testcase.validate_type()))
                 return
         else:
-            if not Container.pull_image(self.testcase.validate_type()):
+            if not Container.pull_image(docker_image):
                 self.logger.error("Failed to pull the image.")
                 return
         # for sdnvpn, there is a need to download needed images to config_dir
@@ -71,7 +72,7 @@ class DockerRunner(object):
                 self.logger.error('Image {} not found.'.format(img_name))
                 return
         container_id = Container.create(self.testcase.validate_type(),
-                                        self.testcase.name())
+                                        self.testcase.name(), docker_image)
         if not container_id:
             self.logger.error('Failed to create container.')
             return
