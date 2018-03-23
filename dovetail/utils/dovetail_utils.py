@@ -408,3 +408,20 @@ def read_plain_file(file_path, logger=None):
         logger.exception("Failed to read file {}, exception: {}"
                          .format(file_path, e))
         return None
+
+
+def get_value_from_dict(key_path, input_dict):
+    """
+    Returns the value of a key in input_dict
+    key_path must be given in string format with dots
+    Example: result.dir
+    """
+    if not isinstance(key_path, str):
+        return None
+    for key in key_path.split("."):
+        if not isinstance(input_dict, dict):
+            return None
+        input_dict = input_dict.get(key)
+        if not input_dict:
+            return None
+    return input_dict

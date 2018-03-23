@@ -17,8 +17,6 @@ from utils.dovetail_config import DovetailConfig as dt_cfg
 class Container(object):
 
     container_list = {}
-    has_pull_latest_image = {'yardstick': False, 'functest': False,
-                             'bottlenecks': False, 'vnftest': False}
 
     logger = None
 
@@ -37,14 +35,26 @@ class Container(object):
         return cls.container_list[type]
 
     @classmethod
-    def get_docker_image(cls, type):
-        try:
-            return '%s:%s' % (dt_cfg.dovetail_config[type]['image_name'],
-                              dt_cfg.dovetail_config[type]['docker_tag'])
-        except KeyError as e:
-            cls.logger.exception(
-                'There is no key {} in {} config file.'.format(e, type))
-            return None
+    def get_docker_image(cls, testcase):
+        project_cfg = dt_cfg.dovetail_config[testcase.validate_type()]
+        testcase_cfg = testcase.testcase['validate']
+
+        image_name = dt_utils.get_value_from_dict('image_name', testcase_cfg)
+        if not image_name:
+            image_name = dt_utils.get_value_from_dict('image_name',
+                                                      project_cfg)
+            if not image_name:
+                cls.logger.error("Couldn't find key 'image_name'.")
+                return None
+
+        docker_tag = dt_utils.get_value_from_dict('docker_tag', testcase_cfg)
+        if not docker_tag:
+            docker_tag = dt_utils.get_value_from_dict('docker_tag',
+                                                      project_cfg)
+            if not docker_tag:
+                cls.logger.error("Couldn't find key 'docker_tag'.")
+                return None
+        return "{}:{}".format(image_name, docker_tag)
 
     # get the openrc_volume for creating the container
     @classmethod
@@ -132,9 +142,9 @@ class Container(object):
         return "%s %s" % (log_vol, key_vol)
 
     @classmethod
-    def create(cls, type, testcase_name):
+    def create(cls, type, testcase_name, docker_image):
         dovetail_config = dt_cfg.dovetail_config
-        docker_image = cls.get_docker_image(type)
+        opts = dovetail_config[type]['opts']
 
         # credentials file openrc.sh is neccessary
         openrc = cls.openrc_volume(type)
@@ -255,18 +265,12 @@ class Container(object):
         return True
 
     @classmethod
-    def pull_image(cls, validate_type):
-        docker_image = cls.get_docker_image(validate_type)
+    def pull_image(cls, docker_image):
         if not docker_image:
             return None
-        if cls.has_pull_latest_image[validate_type] is True:
-            cls.logger.debug(
-                '{} is already the latest one.'.format(docker_image))
-            return docker_image
         old_image_id = cls.get_image_id(docker_image)
         if not cls.pull_image_only(docker_image):
             return None
-        cls.has_pull_latest_image[validate_type] = True
         new_image_id = cls.get_image_id(docker_image)
         if not new_image_id:
             cls.logger.error(
@@ -280,12 +284,6 @@ class Container(object):
         else:
             cls.remove_image(old_image_id)
         return docker_image
-
-    @classmethod
-    def check_image_exist(cls, validate_type):
-        docker_image = cls.get_docker_image(validate_type)
-        image_id = cls.get_image_id(docker_image)
-        return image_id
 
     @classmethod
     def check_container_exist(cls, container_name):

@@ -1,6 +1,6 @@
 ---
 functest:
-  image_name: opnfv/functest-restapi
+  image_name: opnfv/functest-smoke
   docker_tag: euphrates
   opts: '-id --privileged=true'
   envs: '-e INSTALLER_TYPE=unknown -e DEPLOY_SCENARIO=unknown -e NODE_NAME=unknown
