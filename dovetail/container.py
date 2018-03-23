@@ -17,8 +17,6 @@ from utils.dovetail_config import DovetailConfig as dt_cfg
 class Container(object):
 
     container_list = {}
-    has_pull_latest_image = {'yardstick': False, 'functest': False,
-                             'bottlenecks': False}
 
     logger = None
 
@@ -37,14 +35,22 @@ class Container(object):
         return cls.container_list[type]
 
     @classmethod
-    def get_docker_image(cls, type):
+    def get_docker_image(cls, testcase):
+        image_name = None
+        docker_tag = None
+        tc_type = testcase.validate_type()
         try:
-            return '%s:%s' % (dt_cfg.dovetail_config[type]['image_name'],
-                              dt_cfg.dovetail_config[type]['docker_tag'])
-        except KeyError as e:
-            cls.logger.exception(
-                'There is no key {} in {} config file.'.format(e, type))
-            return None
+            image_name = dt_cfg.dovetail_config[tc_type]['image_name']
+            docker_tag = dt_cfg.dovetail_config[tc_type]['docker_tag']
+            image_name = testcase.testcase['validate']['image_name']
+            docker_tag = testcase.testcase['validate']['docker_tag']
+        except KeyError:
+            pass
+        if image_name and docker_tag:
+            return '{}:{}'.format(image_name, docker_tag)
+        self.logger.error('Test case {} with wrong docker image.'
+                          .format(self.name()))
+        return None
 
     # get the openrc_volume for creating the container
     @classmethod
@@ -140,9 +146,8 @@ class Container(object):
         return "{} {} {}".format(docker_vol, env, report)
 
     @classmethod
-    def create(cls, type, testcase_name):
+    def create(cls, type, testcase_name, docker_image):
         dovetail_config = dt_cfg.dovetail_config
-        docker_image = cls.get_docker_image(type)
         opts = dovetail_config[type]['opts']
 
         # credentials file openrc.sh is neccessary
@@ -256,18 +261,12 @@ class Container(object):
         return True
 
     @classmethod
-    def pull_image(cls, validate_type):
-        docker_image = cls.get_docker_image(validate_type)
+    def pull_image(cls, docker_image):
         if not docker_image:
             return None
-        if cls.has_pull_latest_image[validate_type] is True:
-            cls.logger.debug(
-                '{} is already the latest one.'.format(docker_image))
-            return docker_image
         old_image_id = cls.get_image_id(docker_image)
         if not cls.pull_image_only(docker_image):
             return None
-        cls.has_pull_latest_image[validate_type] = True
         new_image_id = cls.get_image_id(docker_image)
         if not new_image_id:
             cls.logger.error(
@@ -281,12 +280,6 @@ class Container(object):
         else:
             cls.remove_image(old_image_id)
         return docker_image
-
-    @classmethod
-    def check_image_exist(cls, validate_type):
-        docker_image = cls.get_docker_image(validate_type)
-        image_id = cls.get_image_id(docker_image)
-        return image_id
 
     @classmethod
     def check_container_exist(cls, container_name):
