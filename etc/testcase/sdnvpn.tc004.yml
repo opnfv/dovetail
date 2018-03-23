@@ -5,6 +5,7 @@ dovetail.sdnvpn.tc004:
   validate:
     type: functest
     testcase: bgpvpn
+    image_name: opnfv/functest-features
     pre_copy:
       exist_src_file: sdnvpn_config_testcase4.yaml
       dest_path: /usr/lib/python2.7/site-packages/sdnvpn/test/functest/config.yaml
