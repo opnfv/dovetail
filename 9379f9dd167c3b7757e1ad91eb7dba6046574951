@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_565f5fe5",
+        "filename": "dovetail/container.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-23T08:54:12Z",
+      "side": 1,
+      "message": "This is a special requirement of yardstick and bottlenecks. Actually it\u0027s a bug and they will fix it in OPNFV Fraser release.\nDoes vnf test actually need this?",
+      "range": {
+        "startLine": 147,
+        "startChar": 8,
+        "endLine": 148,
+        "endChar": 41
+      },
+      "revId": "9379f9dd167c3b7757e1ad91eb7dba6046574951",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_b6e223ff",
+        "filename": "dovetail/container.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-23T08:54:12Z",
+      "side": 1,
+      "message": "This pri_key is the private key of one host (Controller or Compute). Yardstick mapping this key to Yardstick Container because it needs to login controller hosts to kill processes.\nDoes vnf test need this private key.",
+      "range": {
+        "startLine": 153,
+        "startChar": 8,
+        "endLine": 155,
+        "endChar": 77
+      },
+      "revId": "9379f9dd167c3b7757e1ad91eb7dba6046574951",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_76b41bd1",
+        "filename": "etc/conf/vnftest_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-23T08:54:12Z",
+      "side": 1,
+      "message": "Can\u0027t pull this image and didn\u0027t find it in the onap docker repository.",
+      "range": {
+        "startLine": 3,
+        "startChar": 2,
+        "endLine": 4,
+        "endChar": 23
+      },
+      "revId": "9379f9dd167c3b7757e1ad91eb7dba6046574951",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_f69aeb6c",
+        "filename": "etc/testcase/lifecycle.tc001.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-23T08:54:12Z",
+      "side": 1,
+      "message": "This section is used to write the sub test case into a file and copy it to Container (actually only Functest Container needs).\nIf one vnf test doesn\u0027t have any sub test case, can just remove this section like all ha test cases do.",
+      "range": {
+        "startLine": 10,
+        "startChar": 4,
+        "endLine": 12,
+        "endChar": 19
+      },
+      "revId": "9379f9dd167c3b7757e1ad91eb7dba6046574951",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
