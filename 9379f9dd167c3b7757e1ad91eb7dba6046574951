@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "5a3f45e8_712a652d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-23T16:15:58Z",
+      "side": 1,
+      "message": "can you squash these messages into one?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 10
+      },
+      "revId": "9379f9dd167c3b7757e1ad91eb7dba6046574951",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_565f5fe5",
         "filename": "dovetail/container.py",
         "patchSetId": 1
@@ -41,6 +64,52 @@
         "startChar": 8,
         "endLine": 155,
         "endChar": 77
+      },
+      "revId": "9379f9dd167c3b7757e1ad91eb7dba6046574951",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_31861d66",
+        "filename": "dovetail/report.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 454,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-23T16:15:58Z",
+      "side": 1,
+      "message": "if the argument testcase is not given, it is None due to the default value, making this statement fail.",
+      "range": {
+        "startLine": 454,
+        "startChar": 32,
+        "endLine": 454,
+        "endChar": 48
+      },
+      "revId": "9379f9dd167c3b7757e1ad91eb7dba6046574951",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_7180a546",
+        "filename": "dovetail/report.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 469,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-03-23T16:15:58Z",
+      "side": 1,
+      "message": "just curious about this one: Is this check necessary, i.e., would the VNF test actually create an overall test result which is PASS, but still has failing sub-tests? I would have assumed this kind of logic is in the test case itself.",
+      "range": {
+        "startLine": 468,
+        "startChar": 24,
+        "endLine": 469,
+        "endChar": 45
       },
       "revId": "9379f9dd167c3b7757e1ad91eb7dba6046574951",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
