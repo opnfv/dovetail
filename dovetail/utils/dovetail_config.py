@@ -64,3 +64,15 @@ class DovetailConfig(object):
     def update_cmds(cls):
         if cls.dovetail_config['report_dest'].startswith("http"):
             cls.dovetail_config['bottlenecks']['cmds'][0] += ' --report'
+
+    @classmethod
+    def get_opts(cls, valid_type):
+        if 'opts' in cls.dovetail_config[valid_type].keys():
+            return cls.dovetail_config[valid_type]['opts']
+        return ""
+
+    @classmethod
+    def get_envs(cls, valid_type):
+        if 'envs' in cls.dovetail_config[valid_type].keys():
+            return cls.dovetail_config[valid_type]['envs']
+        return ""
