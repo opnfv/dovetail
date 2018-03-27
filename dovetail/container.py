@@ -61,31 +61,6 @@ class Container(object):
                 "File {} doesn't exist.".format(dovetail_config['openrc']))
             return None
 
-    # set functest envs and TEST_DB_URL for creating functest container
-    @staticmethod
-    def set_functest_config(testcase_name):
-
-        # These are all just used by Functest's function push_results_to_db.
-        # And has nothing to do with DoveTail running test cases.
-        ins_type = "unknown"
-        scenario = "unknown"
-        ins_type = ''.join([" -e INSTALLER_TYPE=", ins_type])
-        scenario = ''.join([" -e DEPLOY_SCENARIO=", scenario])
-        ins_ip = os.getenv('INSTALLER_IP', "192.168.0.0")
-        ins_ip = " -e INSTALLER_IP={}".format(ins_ip)
-        envs = "%s %s %s" % (ins_type, scenario, ins_ip)
-
-        dovetail_config = dt_cfg.dovetail_config
-        if dovetail_config['report_dest'].startswith("http"):
-            report = " -e TEST_DB_URL=%s " % dovetail_config['report_dest']
-        if dovetail_config['report_dest'] == "file":
-            func_res_conf = dovetail_config["functest"]['result']
-            file_path = os.path.join(func_res_conf['dir'],
-                                     func_res_conf['file_path'])
-            report = " -e TEST_DB_URL=file://%s " % file_path
-        key_vol = " -v /root/.ssh/id_rsa:/root/.ssh/id_rsa "
-        return "%s %s %s" % (envs, report, key_vol)
-
     # set yardstick external network name and log volume for its container.
     # external network is necessary for yardstick.
     @classmethod
@@ -160,16 +135,17 @@ class Container(object):
     def create(cls, type, testcase_name):
         dovetail_config = dt_cfg.dovetail_config
         docker_image = cls.get_docker_image(type)
-        opts = dovetail_config[type]['opts']
 
         # credentials file openrc.sh is neccessary
         openrc = cls.openrc_volume(type)
         if not openrc:
             return None
 
+        opts = dt_cfg.get_opts(type)
+        envs = dt_cfg.get_envs(type)
+
         # CI_DEBUG is used for showing the debug logs of the upstream projects
         # BUILD_TAG is the unique id for this test
-        envs = ' -e NODE_NAME=master'
         DEBUG = os.getenv('DEBUG')
         if DEBUG is not None and DEBUG.lower() == "true":
             envs = envs + ' -e CI_DEBUG=true'
@@ -180,9 +156,11 @@ class Container(object):
 
         hosts_config = dt_utils.get_hosts_info(cls.logger)
 
-        config = ""
-        if type.lower() == "functest":
-            config = cls.set_functest_config(testcase_name)
+        # This part will be totally removed after remove the 3 functions
+        # set_functest_config has been removed
+        # set_yardstick_config
+        # set_bottlenecks_config
+        config = " "
         if type.lower() == "yardstick":
             config = cls.set_yardstick_config()
         if type.lower() == "bottlenecks":

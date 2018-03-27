@@ -5,7 +5,5 @@ dovetail.vnf.tc001:
   validate:
     type: functest
     testcase: cloudify_ims
-    pre_condition:
-      - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/functest/ci/testcases.yaml'
   report:
     sub_testcase_list:
