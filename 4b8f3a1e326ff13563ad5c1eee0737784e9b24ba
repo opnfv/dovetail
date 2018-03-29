@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_483a1337",
+        "filename": "dovetail/utils/dovetail_config.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-03-29T00:42:08Z",
+      "side": 1,
+      "message": "why declare all the methods as classmethod in a class? in that case, what\u0027s the point of making it a class?",
+      "range": {
+        "startLine": 68,
+        "startChar": 4,
+        "endLine": 68,
+        "endChar": 16
+      },
+      "revId": "4b8f3a1e326ff13563ad5c1eee0737784e9b24ba",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_68370f4f",
+        "filename": "etc/testcase/osinterop.tc001.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-03-29T00:42:08Z",
+      "side": 1,
+      "message": "instead of cp, I would recommend leveraging docker volume, but I think we can refactor it in the next patch.",
+      "revId": "4b8f3a1e326ff13563ad5c1eee0737784e9b24ba",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
