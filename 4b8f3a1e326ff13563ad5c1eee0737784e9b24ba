@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5a3f45e8_68ea6f76",
+        "filename": "dovetail/utils/dovetail_config.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-29T02:03:47Z",
+      "side": 1,
+      "message": "Yes, I totally agree with you.\nAfter decoupling special configurations for each project from source code to config files, let\u0027s try to do something against these classmethods.",
+      "parentUuid": "5a3f45e8_483a1337",
+      "range": {
+        "startLine": 68,
+        "startChar": 4,
+        "endLine": 68,
+        "endChar": 16
+      },
+      "revId": "4b8f3a1e326ff13563ad5c1eee0737784e9b24ba",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_68370f4f",
         "filename": "etc/testcase/osinterop.tc001.yml",
         "patchSetId": 2
@@ -36,6 +60,24 @@
       "writtenOn": "2018-03-29T00:42:08Z",
       "side": 1,
       "message": "instead of cp, I would recommend leveraging docker volume, but I think we can refactor it in the next patch.",
+      "revId": "4b8f3a1e326ff13563ad5c1eee0737784e9b24ba",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_08f3eb73",
+        "filename": "etc/testcase/osinterop.tc001.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-03-29T02:03:47Z",
+      "side": 1,
+      "message": "Sorry I can\u0027t agree with this.\nIMO, there should be as less docker volume mapping as possible.\nBecause more volume mappings make docker creation more complicated as well as overlap volume mappings. What\u0027s worse, if some test cases do some modifications about the config files in their docker containers, they will also change the files in host. I think this is unacceptable that test cases change the files provided by users.\nSince all Dovetail config files are located under $DOVETAIL_HOME/pre_config, all result files are located under $DOVETAIL_HOME/results, the way I suggested is only mapping -v $DOVETAIL_HOME:/home/opnfv/userconfig. After that copy different config files to different path each test case required. after that copy all result files Dovetail needs to /home/opnfv/userconfig/results.\nThe next step, I suggest remove other volume mappings to make docker creation simplier and make sure all config files be safe.",
+      "parentUuid": "5a3f45e8_68370f4f",
       "revId": "4b8f3a1e326ff13563ad5c1eee0737784e9b24ba",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
