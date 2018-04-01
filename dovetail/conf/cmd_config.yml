@@ -63,3 +63,8 @@ cli:
           - '--offline'
         is_flag: 'True'
         help: 'run in offline method, which means not to update the docker upstream images, functest, yardstick, etc.'
+      noapivalidation:
+        flags:
+          - '--no-api-validation'
+        is_flag: 'True'
+        help: 'disable strict API response validation'

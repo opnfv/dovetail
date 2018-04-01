@@ -290,6 +290,25 @@ class FunctestTestcase(Testcase):
         super(FunctestTestcase, self).__init__(testcase_yaml)
         self.type = 'functest'
 
+    def prepare_cmd(self, test_type):
+        if not super(FunctestTestcase, self).prepare_cmd(test_type):
+            return False
+
+        # if API validation is disabled, append a command for applying a
+        # patch inside the functest container
+        if dt_cfg.dovetail_config['no_api_validation']:
+            patch_cmd = os.path.join(
+                dt_cfg.dovetail_config['functest']['config']['dir'],
+                'patch',
+                'functest',
+                'disable-api-validation',
+                'apply.sh')
+            self.cmds = [patch_cmd] + self.cmds
+            self.logger.debug('Updated list of commands for test run with '
+                              'disabled API response validation: {}'
+                              .format(self.cmds))
+        return True
+
 
 class YardstickTestcase(Testcase):
 

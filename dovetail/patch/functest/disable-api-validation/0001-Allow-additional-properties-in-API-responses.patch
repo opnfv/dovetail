@@ -1,0 +1,1638 @@
+From 9e15ea5e8b15d42eb202363e9a83ae9bb09ccb64 Mon Sep 17 00:00:00 2001
+From: Georg Kunz <georg.kunz@ericsson.com>
+Date: Wed, 31 Jan 2018 21:10:35 +0100
+Subject: [PATCH 1/1] Allow additional properties in API responses
+
+---
+ .../lib/api_schema/response/compute/v2_1/agents.py | 10 ++--
+ .../api_schema/response/compute/v2_1/aggregates.py |  8 +--
+ .../response/compute/v2_1/availability_zone.py     |  8 +--
+ .../response/compute/v2_1/baremetal_nodes.py       |  6 +-
+ .../response/compute/v2_1/certificates.py          |  4 +-
+ .../api_schema/response/compute/v2_1/extensions.py |  4 +-
+ .../api_schema/response/compute/v2_1/fixed_ips.py  |  4 +-
+ .../api_schema/response/compute/v2_1/flavors.py    | 10 ++--
+ .../response/compute/v2_1/flavors_access.py        |  4 +-
+ .../response/compute/v2_1/flavors_extra_specs.py   |  2 +-
+ .../response/compute/v2_1/floating_ips.py          | 20 +++----
+ .../lib/api_schema/response/compute/v2_1/hosts.py  | 14 ++---
+ .../response/compute/v2_1/hypervisors.py           | 22 ++++----
+ .../lib/api_schema/response/compute/v2_1/images.py | 16 +++---
+ .../compute/v2_1/instance_usage_audit_logs.py      |  8 +--
+ .../api_schema/response/compute/v2_1/interfaces.py |  8 +--
+ .../api_schema/response/compute/v2_1/keypairs.py   | 14 ++---
+ .../lib/api_schema/response/compute/v2_1/limits.py | 10 ++--
+ .../api_schema/response/compute/v2_1/migrations.py |  4 +-
+ .../response/compute/v2_1/parameter_types.py       |  4 +-
+ .../lib/api_schema/response/compute/v2_1/quotas.py |  4 +-
+ .../compute/v2_1/security_group_default_rule.py    |  8 +--
+ .../response/compute/v2_1/security_groups.py       | 16 +++---
+ .../api_schema/response/compute/v2_1/servers.py    | 64 +++++++++++-----------
+ .../api_schema/response/compute/v2_1/services.py   |  8 +--
+ .../api_schema/response/compute/v2_1/snapshots.py  |  6 +-
+ .../response/compute/v2_1/tenant_networks.py       |  6 +-
+ .../api_schema/response/compute/v2_1/versions.py   | 10 ++--
+ .../api_schema/response/compute/v2_1/volumes.py    | 12 ++--
+ .../api_schema/response/compute/v2_16/servers.py   | 14 ++---
+ .../response/compute/v2_23/migrations.py           |  4 +-
+ .../api_schema/response/compute/v2_3/servers.py    | 14 ++---
+ 32 files changed, 173 insertions(+), 173 deletions(-)
+
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/agents.py b/tempest/lib/api_schema/response/compute/v2_1/agents.py
+index 6f712b4..09feb73 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/agents.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/agents.py
+@@ -23,7 +23,7 @@ common_agent_info = {
+         'url': {'type': 'string', 'format': 'uri'},
+         'md5hash': {'type': 'string'}
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     'required': ['agent_id', 'hypervisor', 'os', 'architecture',
+                  'version', 'url', 'md5hash']
+ }
+@@ -38,7 +38,7 @@ list_agents = {
+                 'items': common_agent_info
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['agents']
+     }
+ }
+@@ -50,7 +50,7 @@ create_agent = {
+         'properties': {
+             'agent': common_agent_info
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['agent']
+     }
+ }
+@@ -68,11 +68,11 @@ update_agent = {
+                     'url': {'type': 'string', 'format': 'uri'},
+                     'md5hash': {'type': 'string'}
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['agent_id', 'version', 'url', 'md5hash']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['agent']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/aggregates.py b/tempest/lib/api_schema/response/compute/v2_1/aggregates.py
+index 1a9fe41..4a86670 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/aggregates.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/aggregates.py
+@@ -26,7 +26,7 @@ aggregate_for_create = {
+         'name': {'type': 'string'},
+         'updated_at': {'type': ['string', 'null']}
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     'required': ['availability_zone', 'created_at', 'deleted',
+                  'deleted_at', 'id', 'name', 'updated_at'],
+ }
+@@ -48,7 +48,7 @@ list_aggregates = {
+                 'items': common_aggregate_info
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['aggregates'],
+     }
+ }
+@@ -60,7 +60,7 @@ get_aggregate = {
+         'properties': {
+             'aggregate': common_aggregate_info
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['aggregate'],
+     }
+ }
+@@ -84,7 +84,7 @@ create_aggregate = {
+         'properties': {
+             'aggregate': aggregate_for_create
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['aggregate'],
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/availability_zone.py b/tempest/lib/api_schema/response/compute/v2_1/availability_zone.py
+index d9aebce..7b5e03c 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/availability_zone.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/availability_zone.py
+@@ -31,19 +31,19 @@ base = {
+                             'properties': {
+                                 'available': {'type': 'boolean'}
+                             },
+-                            'additionalProperties': False,
++                            'additionalProperties': True,
+                             'required': ['available']
+                         },
+                         # NOTE: Here is the difference between detail and
+                         # non-detail.
+                         'hosts': {'type': 'null'}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['zoneName', 'zoneState', 'hosts']
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['availabilityZoneInfo']
+     }
+ }
+@@ -63,7 +63,7 @@ detail = {
+                         'active': {'type': 'boolean'},
+                         'updated_at': {'type': ['string', 'null']}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['available', 'active', 'updated_at']
+                 }
+             }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/baremetal_nodes.py b/tempest/lib/api_schema/response/compute/v2_1/baremetal_nodes.py
+index d1ee877..8ab17d3 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/baremetal_nodes.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/baremetal_nodes.py
+@@ -25,7 +25,7 @@ node = {
+         'memory_mb': {'type': ['integer', 'string']},
+         'disk_gb': {'type': ['integer', 'string']},
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     'required': ['id', 'interfaces', 'host', 'task_state', 'cpus', 'memory_mb',
+                  'disk_gb']
+ }
+@@ -40,7 +40,7 @@ list_baremetal_nodes = {
+                 'items': node
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['nodes']
+     }
+ }
+@@ -52,7 +52,7 @@ baremetal_node = {
+         'properties': {
+             'node': node
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['node']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/certificates.py b/tempest/lib/api_schema/response/compute/v2_1/certificates.py
+index 4e7cbe4..99f795a 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/certificates.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/certificates.py
+@@ -25,11 +25,11 @@ _common_schema = {
+                     'data': {'type': 'string'},
+                     'private_key': {'type': 'string'},
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['data', 'private_key']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['certificate']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/extensions.py b/tempest/lib/api_schema/response/compute/v2_1/extensions.py
+index a6a455c..9f7395a 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/extensions.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/extensions.py
+@@ -35,13 +35,13 @@ list_extensions = {
+                         'alias': {'type': 'string'},
+                         'description': {'type': 'string'}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['updated', 'name', 'links', 'namespace',
+                                  'alias', 'description']
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['extensions']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/fixed_ips.py b/tempest/lib/api_schema/response/compute/v2_1/fixed_ips.py
+index a653213..b53565a 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/fixed_ips.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/fixed_ips.py
+@@ -27,11 +27,11 @@ get_fixed_ip = {
+                     'host': {'type': 'string'},
+                     'hostname': {'type': 'string'}
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['address', 'cidr', 'host', 'hostname']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['fixed_ip']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/flavors.py b/tempest/lib/api_schema/response/compute/v2_1/flavors.py
+index 547d94d..76cbb8a 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/flavors.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/flavors.py
+@@ -28,13 +28,13 @@ list_flavors = {
+                         'links': parameter_types.links,
+                         'id': {'type': 'string'}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['name', 'links', 'id']
+                 }
+             },
+             'flavors_links': parameter_types.links
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         # NOTE(gmann): flavors_links attribute is not necessary
+         # to be present always So it is not 'required'.
+         'required': ['flavors']
+@@ -58,7 +58,7 @@ common_flavor_info = {
+         'rxtx_factor': {'type': 'number'},
+         'OS-FLV-EXT-DATA:ephemeral': {'type': 'integer'}
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     # 'OS-FLV-DISABLED', 'os-flavor-access', 'rxtx_factor' and
+     # 'OS-FLV-EXT-DATA' are API extensions. So they are not 'required'.
+     'required': ['name', 'links', 'ram', 'vcpus', 'swap', 'disk', 'id']
+@@ -77,7 +77,7 @@ list_flavors_details = {
+             # to be present always So it is not 'required'.
+             'flavors_links': parameter_types.links
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['flavors']
+     }
+ }
+@@ -93,7 +93,7 @@ create_get_flavor_details = {
+         'properties': {
+             'flavor': common_flavor_info
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['flavor']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/flavors_access.py b/tempest/lib/api_schema/response/compute/v2_1/flavors_access.py
+index a4d6af0..958ed02 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/flavors_access.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/flavors_access.py
+@@ -25,12 +25,12 @@ add_remove_list_flavor_access = {
+                         'flavor_id': {'type': 'string'},
+                         'tenant_id': {'type': 'string'},
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['flavor_id', 'tenant_id'],
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['flavor_access']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/flavors_extra_specs.py b/tempest/lib/api_schema/response/compute/v2_1/flavors_extra_specs.py
+index a438d48..c8988b1 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/flavors_extra_specs.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/flavors_extra_specs.py
+@@ -24,7 +24,7 @@ set_get_flavor_extra_specs = {
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['extra_specs']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/floating_ips.py b/tempest/lib/api_schema/response/compute/v2_1/floating_ips.py
+index 0c66590..39e4207 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/floating_ips.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/floating_ips.py
+@@ -26,7 +26,7 @@ common_floating_ip_info = {
+         'ip': parameter_types.ip_address,
+         'fixed_ip': parameter_types.ip_address
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     'required': ['id', 'pool', 'instance_id',
+                  'ip', 'fixed_ip'],
+ 
+@@ -41,7 +41,7 @@ list_floating_ips = {
+                 'items': common_floating_ip_info
+             },
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['floating_ips'],
+     }
+ }
+@@ -53,7 +53,7 @@ create_get_floating_ip = {
+         'properties': {
+             'floating_ip': common_floating_ip_info
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['floating_ip'],
+     }
+ }
+@@ -70,12 +70,12 @@ list_floating_ip_pools = {
+                     'properties': {
+                         'name': {'type': 'string'}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['name'],
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['floating_ip_pools'],
+     }
+ }
+@@ -96,11 +96,11 @@ create_floating_ips_bulk = {
+                     'ip_range': {'type': 'string'},
+                     'pool': {'type': ['string', 'null']},
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['interface', 'ip_range', 'pool'],
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['floating_ips_bulk_create'],
+     }
+ }
+@@ -112,7 +112,7 @@ delete_floating_ips_bulk = {
+         'properties': {
+             'floating_ips_bulk_delete': {'type': 'string'}
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['floating_ips_bulk_delete'],
+     }
+ }
+@@ -134,7 +134,7 @@ list_floating_ips_bulk = {
+                         'project_id': {'type': ['string', 'null']},
+                         'fixed_ip': parameter_types.ip_address
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     # NOTE: fixed_ip is introduced after JUNO release,
+                     # So it is not defined as 'required'.
+                     'required': ['address', 'instance_uuid', 'interface',
+@@ -142,7 +142,7 @@ list_floating_ips_bulk = {
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['floating_ip_info'],
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/hosts.py b/tempest/lib/api_schema/response/compute/v2_1/hosts.py
+index ae70ff1..d750cd0 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/hosts.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/hosts.py
+@@ -29,12 +29,12 @@ list_hosts = {
+                         'service': {'type': 'string'},
+                         'zone': {'type': 'string'}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['host_name', 'service', 'zone']
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['hosts']
+     }
+ }
+@@ -58,17 +58,17 @@ get_host_detail = {
+                                 'memory_mb': {'type': 'integer'},
+                                 'project': {'type': 'string'}
+                             },
+-                            'additionalProperties': False,
++                            'additionalProperties': True,
+                             'required': ['cpu', 'disk_gb', 'host',
+                                          'memory_mb', 'project']
+                         }
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['resource']
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['host']
+     }
+ }
+@@ -81,7 +81,7 @@ startup_host = {
+             'host': {'type': 'string'},
+             'power_action': {'enum': ['startup']}
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['host', 'power_action']
+     }
+ }
+@@ -110,7 +110,7 @@ update_host = {
+                                           'off_maintenance']},
+             'status': {'enum': ['enabled', 'disabled']}
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['host', 'maintenance_mode', 'status']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/hypervisors.py b/tempest/lib/api_schema/response/compute/v2_1/hypervisors.py
+index d15b4f6..5d8cf6d 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/hypervisors.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/hypervisors.py
+@@ -37,7 +37,7 @@ get_hypervisor_statistics = {
+                     'vcpus': {'type': 'integer'},
+                     'vcpus_used': {'type': 'integer'}
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['count', 'current_workload',
+                              'disk_available_least', 'free_disk_gb',
+                              'free_ram_mb', 'local_gb', 'local_gb_used',
+@@ -45,7 +45,7 @@ get_hypervisor_statistics = {
+                              'vcpus', 'vcpus_used']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['hypervisor_statistics']
+     }
+ }
+@@ -78,13 +78,13 @@ hypervisor_detail = {
+                 'id': {'type': ['integer', 'string']},
+                 'disabled_reason': {'type': ['string', 'null']}
+             },
+-            'additionalProperties': False,
++            'additionalProperties': True,
+             'required': ['host', 'id']
+         },
+         'vcpus': {'type': 'integer'},
+         'vcpus_used': {'type': 'integer'}
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     # NOTE: When loading os-hypervisor-status extension,
+     # a response contains status and state. So these params
+     # should not be required.
+@@ -107,7 +107,7 @@ list_hypervisors_detail = {
+                 'items': hypervisor_detail
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['hypervisors']
+     }
+ }
+@@ -119,7 +119,7 @@ get_hypervisor = {
+         'properties': {
+             'hypervisor': hypervisor_detail
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['hypervisor']
+     }
+ }
+@@ -139,7 +139,7 @@ list_search_hypervisors = {
+                         'id': {'type': ['integer', 'string']},
+                         'hypervisor_hostname': {'type': 'string'}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     # NOTE: When loading os-hypervisor-status extension,
+                     # a response contains status and state. So these params
+                     # should not be required.
+@@ -147,7 +147,7 @@ list_search_hypervisors = {
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['hypervisors']
+     }
+ }
+@@ -166,14 +166,14 @@ get_hypervisor_uptime = {
+                     'hypervisor_hostname': {'type': 'string'},
+                     'uptime': {'type': 'string'}
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 # NOTE: When loading os-hypervisor-status extension,
+                 # a response contains status and state. So these params
+                 # should not be required.
+                 'required': ['id', 'hypervisor_hostname', 'uptime']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['hypervisor']
+     }
+ }
+@@ -188,7 +188,7 @@ get_hypervisors_servers['response_body']['properties']['hypervisors']['items'][
+                 'uuid': {'type': 'string'},
+                 'name': {'type': 'string'}
+             },
+-            'additionalProperties': False,
++            'additionalProperties': True,
+         }
+     }
+ # In V2 API, if there is no servers (VM) on the Hypervisor host then 'servers'
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/images.py b/tempest/lib/api_schema/response/compute/v2_1/images.py
+index f65b9d8..25d3167 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/images.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/images.py
+@@ -40,13 +40,13 @@ common_image_schema = {
+                 'id': {'type': 'string'},
+                 'links': parameter_types.links
+             },
+-            'additionalProperties': False,
++            'additionalProperties': True,
+             'required': ['id', 'links']
+         },
+         'OS-EXT-IMG-SIZE:size': {'type': ['integer', 'null']},
+         'OS-DCF:diskConfig': {'type': 'string'}
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     # 'server' attributes only comes in response body if image is
+     # associated with any server. 'OS-EXT-IMG-SIZE:size' & 'OS-DCF:diskConfig'
+     # are API extension,  So those are not defined as 'required'.
+@@ -62,7 +62,7 @@ get_image = {
+         'properties': {
+             'image': common_image_schema
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['image']
+     }
+ }
+@@ -81,13 +81,13 @@ list_images = {
+                         'links': image_links,
+                         'name': {'type': ['string', 'null']}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['id', 'links', 'name']
+                 }
+             },
+             'images_links': parameter_types.links
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         # NOTE(gmann): images_links attribute is not necessary to be
+         # present always So it is not 'required'.
+         'required': ['images']
+@@ -120,7 +120,7 @@ image_metadata = {
+         'properties': {
+             'metadata': {'type': 'object'}
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['metadata']
+     }
+ }
+@@ -132,7 +132,7 @@ image_meta_item = {
+         'properties': {
+             'meta': {'type': 'object'}
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['meta']
+     }
+ }
+@@ -148,7 +148,7 @@ list_images_details = {
+             },
+             'images_links': parameter_types.links
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         # NOTE(gmann): images_links attribute is not necessary to be
+         # present always So it is not 'required'.
+         'required': ['images']
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/instance_usage_audit_logs.py b/tempest/lib/api_schema/response/compute/v2_1/instance_usage_audit_logs.py
+index 15224c5..402dfea 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/instance_usage_audit_logs.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/instance_usage_audit_logs.py
+@@ -31,7 +31,7 @@ common_instance_usage_audit_log = {
+                         'errors': {'type': 'integer'},
+                         'message': {'type': 'string'}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['state', 'instances', 'errors', 'message']
+                 }
+             }
+@@ -46,7 +46,7 @@ common_instance_usage_audit_log = {
+         'total_errors': {'type': 'integer'},
+         'total_instances': {'type': 'integer'}
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     'required': ['hosts_not_run', 'log', 'num_hosts', 'num_hosts_done',
+                  'num_hosts_not_run', 'num_hosts_running', 'overall_status',
+                  'period_beginning', 'period_ending', 'total_errors',
+@@ -60,7 +60,7 @@ get_instance_usage_audit_log = {
+         'properties': {
+             'instance_usage_audit_log': common_instance_usage_audit_log
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['instance_usage_audit_log']
+     }
+ }
+@@ -72,7 +72,7 @@ list_instance_usage_audit_log = {
+         'properties': {
+             'instance_usage_audit_logs': common_instance_usage_audit_log
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['instance_usage_audit_logs']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/interfaces.py b/tempest/lib/api_schema/response/compute/v2_1/interfaces.py
+index 9984750..6a989e5 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/interfaces.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/interfaces.py
+@@ -29,7 +29,7 @@ interface_common_info = {
+                     },
+                     'ip_address': parameter_types.ip_address
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['subnet_id', 'ip_address']
+             }
+         },
+@@ -37,7 +37,7 @@ interface_common_info = {
+         'net_id': {'type': 'string', 'format': 'uuid'},
+         'mac_addr': parameter_types.mac_address
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     'required': ['port_state', 'fixed_ips', 'port_id', 'net_id', 'mac_addr']
+ }
+ 
+@@ -48,7 +48,7 @@ get_create_interfaces = {
+         'properties': {
+             'interfaceAttachment': interface_common_info
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['interfaceAttachment']
+     }
+ }
+@@ -63,7 +63,7 @@ list_interfaces = {
+                 'items': interface_common_info
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['interfaceAttachments']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/keypairs.py b/tempest/lib/api_schema/response/compute/v2_1/keypairs.py
+index 9c04c79..ec5c2d3 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/keypairs.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/keypairs.py
+@@ -31,7 +31,7 @@ get_keypair = {
+                     'id': {'type': 'integer'}
+ 
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 # When we run the get keypair API, response body includes
+                 # all the above mentioned attributes.
+                 # But in Nova API sample file, response body includes only
+@@ -40,7 +40,7 @@ get_keypair = {
+                 'required': ['public_key', 'name', 'fingerprint']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['keypair']
+     }
+ }
+@@ -59,14 +59,14 @@ create_keypair = {
+                     'user_id': {'type': 'string'},
+                     'private_key': {'type': 'string'}
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 # When create keypair API is being called with 'Public key'
+                 # (Importing keypair) then, response body does not contain
+                 # 'private_key' So it is not defined as 'required'
+                 'required': ['fingerprint', 'name', 'public_key', 'user_id']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['keypair']
+     }
+ }
+@@ -92,16 +92,16 @@ list_keypairs = {
+                                 'name': {'type': 'string'},
+                                 'fingerprint': {'type': 'string'}
+                             },
+-                            'additionalProperties': False,
++                            'additionalProperties': True,
+                             'required': ['public_key', 'name', 'fingerprint']
+                         }
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['keypair']
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['keypairs']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/limits.py b/tempest/lib/api_schema/response/compute/v2_1/limits.py
+index 81f175f..bc4c1e3 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/limits.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/limits.py
+@@ -43,7 +43,7 @@ get_limit = {
+                             'maxServerGroups': {'type': 'integer'},
+                             'totalServerGroupsUsed': {'type': 'integer'}
+                         },
+-                        'additionalProperties': False,
++                        'additionalProperties': True,
+                         # NOTE(gmann): maxServerGroupMembers,  maxServerGroups
+                         # and totalServerGroupsUsed are API extension,
+                         # and some environments return a response without these
+@@ -86,21 +86,21 @@ get_limit = {
+                                             'verb':
+                                                 {'type': 'string'}
+                                         },
+-                                        'additionalProperties': False,
++                                        'additionalProperties': True,
+                                     }
+                                 },
+                                 'regex': {'type': 'string'},
+                                 'uri': {'type': 'string'}
+                             },
+-                            'additionalProperties': False,
++                            'additionalProperties': True,
+                         }
+                     }
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['absolute', 'rate']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['limits']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/migrations.py b/tempest/lib/api_schema/response/compute/v2_1/migrations.py
+index b7d66ea..b571820 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/migrations.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/migrations.py
+@@ -35,7 +35,7 @@ list_migrations = {
+                         'created_at': {'type': 'string'},
+                         'updated_at': {'type': ['string', 'null']}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': [
+                         'id', 'status', 'instance_uuid', 'source_node',
+                         'source_compute', 'dest_node', 'dest_compute',
+@@ -45,7 +45,7 @@ list_migrations = {
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['migrations']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/parameter_types.py b/tempest/lib/api_schema/response/compute/v2_1/parameter_types.py
+index 3cc5ca4..73843d1 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/parameter_types.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/parameter_types.py
+@@ -23,7 +23,7 @@ links = {
+             },
+             'rel': {'type': 'string'}
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['href', 'rel']
+     }
+ }
+@@ -74,7 +74,7 @@ addresses = {
+                         ]
+                     }
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['version', 'addr']
+             }
+         }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/quotas.py b/tempest/lib/api_schema/response/compute/v2_1/quotas.py
+index 7953983..f4d9153 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/quotas.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/quotas.py
+@@ -37,7 +37,7 @@ update_quota_set = {
+                     'injected_file_content_bytes': {'type': 'integer'},
+                     'injected_file_path_bytes': {'type': 'integer'}
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 # NOTE: server_group_members and server_groups are represented
+                 # when enabling quota_server_group extension. So they should
+                 # not be required.
+@@ -49,7 +49,7 @@ update_quota_set = {
+                              'injected_file_path_bytes']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['quota_set']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/security_group_default_rule.py b/tempest/lib/api_schema/response/compute/v2_1/security_group_default_rule.py
+index 2ec2826..1a2e19b 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/security_group_default_rule.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/security_group_default_rule.py
+@@ -23,12 +23,12 @@ common_security_group_default_rule_info = {
+             'properties': {
+                 'cidr': {'type': 'string'}
+             },
+-            'additionalProperties': False,
++            'additionalProperties': True,
+             'required': ['cidr'],
+         },
+         'to_port': {'type': 'integer'},
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     'required': ['from_port', 'id', 'ip_protocol', 'ip_range', 'to_port'],
+ }
+ 
+@@ -40,7 +40,7 @@ create_get_security_group_default_rule = {
+             'security_group_default_rule':
+                 common_security_group_default_rule_info
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['security_group_default_rule']
+     }
+ }
+@@ -59,7 +59,7 @@ list_security_group_default_rules = {
+                 'items': common_security_group_default_rule_info
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['security_group_default_rules']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/security_groups.py b/tempest/lib/api_schema/response/compute/v2_1/security_groups.py
+index 5ed5a5c..d9f1794 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/security_groups.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/security_groups.py
+@@ -21,7 +21,7 @@ common_security_group_rule = {
+             'tenant_id': {'type': 'string'},
+             'name': {'type': 'string'}
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+     },
+     'ip_protocol': {'type': ['string', 'null']},
+     # 'parent_group_id' can be UUID so defining it as 'string' also.
+@@ -31,7 +31,7 @@ common_security_group_rule = {
+         'properties': {
+             'cidr': {'type': 'string'}
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         # When optional argument is provided in request body
+         # like 'group_id' then, attribute 'cidr' does not
+         # comes in response body. So it is not 'required'.
+@@ -50,12 +50,12 @@ common_security_group = {
+             'items': {
+                 'type': ['object', 'null'],
+                 'properties': common_security_group_rule,
+-                'additionalProperties': False,
++                'additionalProperties': True,
+             }
+         },
+         'description': {'type': 'string'},
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     'required': ['id', 'name', 'tenant_id', 'rules', 'description'],
+ }
+ 
+@@ -69,7 +69,7 @@ list_security_groups = {
+                 'items': common_security_group
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['security_groups']
+     }
+ }
+@@ -81,7 +81,7 @@ get_security_group = create_security_group = update_security_group = {
+         'properties': {
+             'security_group': common_security_group
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['security_group']
+     }
+ }
+@@ -98,12 +98,12 @@ create_security_group_rule = {
+             'security_group_rule': {
+                 'type': 'object',
+                 'properties': common_security_group_rule,
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['from_port', 'to_port', 'group', 'ip_protocol',
+                              'parent_group_id', 'id', 'ip_range']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['security_group_rule']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/servers.py b/tempest/lib/api_schema/response/compute/v2_1/servers.py
+index 63e8467..8f4b385 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/servers.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/servers.py
+@@ -29,14 +29,14 @@ create_server = {
+                     'links': parameter_types.links,
+                     'OS-DCF:diskConfig': {'type': 'string'}
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 # NOTE: OS-DCF:diskConfig & security_groups are API extension,
+                 # and some environments return a response without these
+                 # attributes.So they are not 'required'.
+                 'required': ['id', 'links']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['server']
+     }
+ }
+@@ -61,13 +61,13 @@ list_servers = {
+                         'links': parameter_types.links,
+                         'name': {'type': 'string'}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['id', 'links', 'name']
+                 }
+             },
+             'servers_links': parameter_types.links
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         # NOTE(gmann): servers_links attribute is not necessary to be
+         # present always So it is not 'required'.
+         'required': ['servers']
+@@ -90,7 +90,7 @@ common_show_server = {
+                     'id': {'type': 'string'},
+                     'links': parameter_types.links
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['id', 'links']},
+             {'type': ['string', 'null']}
+         ]},
+@@ -100,7 +100,7 @@ common_show_server = {
+                 'id': {'type': 'string'},
+                 'links': parameter_types.links
+             },
+-            'additionalProperties': False,
++            'additionalProperties': True,
+             'required': ['id', 'links']
+         },
+         'fault': {
+@@ -111,7 +111,7 @@ common_show_server = {
+                 'message': {'type': 'string'},
+                 'details': {'type': 'string'},
+             },
+-            'additionalProperties': False,
++            'additionalProperties': True,
+             # NOTE(gmann): 'details' is not necessary to be present
+             #  in the 'fault'. So it is not defined as 'required'.
+             'required': ['code', 'created', 'message']
+@@ -129,7 +129,7 @@ common_show_server = {
+         'accessIPv4': parameter_types.access_ip_v4,
+         'accessIPv6': parameter_types.access_ip_v6
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     # NOTE(GMann): 'progress' attribute is present in the response
+     # only when server's status is one of the progress statuses
+     # ("ACTIVE","BUILD", "REBUILD", "RESIZE","VERIFY_RESIZE")
+@@ -150,7 +150,7 @@ update_server = {
+         'properties': {
+             'server': common_show_server
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['server']
+     }
+ }
+@@ -181,7 +181,7 @@ server_detail['properties'].update({
+             'properties': {
+                 'id': {'type': 'string'}
+             },
+-            'additionalProperties': False,
++            'additionalProperties': True,
+         },
+     },
+     'config_drive': {'type': 'string'}
+@@ -202,7 +202,7 @@ get_server = {
+         'properties': {
+             'server': server_detail
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['server']
+     }
+ }
+@@ -218,7 +218,7 @@ list_servers_detail = {
+             },
+             'servers_links': parameter_types.links
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         # NOTE(gmann): servers_links attribute is not necessary to be
+         # present always So it is not 'required'.
+         'required': ['servers']
+@@ -241,7 +241,7 @@ rescue_server = {
+         'properties': {
+             'adminPass': {'type': 'string'}
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['adminPass']
+     }
+ }
+@@ -260,14 +260,14 @@ list_virtual_interfaces = {
+                         'mac_address': parameter_types.mac_address,
+                         'OS-EXT-VIF-NET:net_id': {'type': 'string'}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     # 'OS-EXT-VIF-NET:net_id' is API extension So it is
+                     # not defined as 'required'
+                     'required': ['id', 'mac_address']
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['virtual_interfaces']
+     }
+ }
+@@ -280,7 +280,7 @@ common_attach_volume_info = {
+         'volumeId': {'type': 'string'},
+         'serverId': {'type': ['integer', 'string']}
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     # 'device' is optional in response.
+     'required': ['id', 'volumeId', 'serverId']
+ }
+@@ -292,7 +292,7 @@ attach_volume = {
+         'properties': {
+             'volumeAttachment': common_attach_volume_info
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['volumeAttachment']
+     }
+ }
+@@ -315,7 +315,7 @@ list_volume_attachments = {
+                 'items': common_attach_volume_info
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['volumeAttachments']
+     }
+ }
+@@ -335,7 +335,7 @@ list_addresses = {
+         'properties': {
+             'addresses': parameter_types.addresses
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['addresses']
+     }
+ }
+@@ -357,7 +357,7 @@ common_server_group = {
+         },
+         'metadata': {'type': 'object'}
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     'required': ['id', 'name', 'policies', 'members', 'metadata']
+ }
+ 
+@@ -368,7 +368,7 @@ create_show_server_group = {
+         'properties': {
+             'server_group': common_server_group
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['server_group']
+     }
+ }
+@@ -387,7 +387,7 @@ list_server_groups = {
+                 'items': common_server_group
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['server_groups']
+     }
+ }
+@@ -403,7 +403,7 @@ instance_actions = {
+         'message': {'type': ['string', 'null']},
+         'instance_uuid': {'type': 'string'}
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     'required': ['action', 'request_id', 'user_id', 'project_id',
+                  'start_time', 'message', 'instance_uuid']
+ }
+@@ -419,7 +419,7 @@ instance_action_events = {
+             'result': {'type': 'string'},
+             'traceback': {'type': ['string', 'null']}
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['event', 'start_time', 'finish_time', 'result',
+                      'traceback']
+     }
+@@ -435,7 +435,7 @@ list_instance_actions = {
+                 'items': instance_actions
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['instanceActions']
+     }
+ }
+@@ -453,7 +453,7 @@ show_instance_action = {
+         'properties': {
+             'instanceAction': instance_actions_with_events
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['instanceAction']
+     }
+ }
+@@ -465,7 +465,7 @@ show_password = {
+         'properties': {
+             'password': {'type': 'string'}
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['password']
+     }
+ }
+@@ -484,11 +484,11 @@ get_vnc_console = {
+                         'format': 'uri'
+                     }
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['type', 'url']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['console']
+     }
+ }
+@@ -500,7 +500,7 @@ get_console_output = {
+         'properties': {
+             'output': {'type': 'string'}
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['output']
+     }
+ }
+@@ -517,7 +517,7 @@ set_server_metadata = {
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['metadata']
+     }
+ }
+@@ -542,7 +542,7 @@ set_show_server_metadata_item = {
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['meta']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/services.py b/tempest/lib/api_schema/response/compute/v2_1/services.py
+index ddef7b2..4b490d1 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/services.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/services.py
+@@ -32,13 +32,13 @@ list_services = {
+                         'updated_at': {'type': ['string', 'null']},
+                         'disabled_reason': {'type': ['string', 'null']}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['id', 'zone', 'host', 'state', 'binary',
+                                  'status', 'updated_at', 'disabled_reason']
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['services']
+     }
+ }
+@@ -55,11 +55,11 @@ enable_disable_service = {
+                     'binary': {'type': 'string'},
+                     'host': {'type': 'string'}
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['status', 'binary', 'host']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['service']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/snapshots.py b/tempest/lib/api_schema/response/compute/v2_1/snapshots.py
+index 01a524b..4638dd2 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/snapshots.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/snapshots.py
+@@ -24,7 +24,7 @@ common_snapshot_info = {
+         'displayName': {'type': ['string', 'null']},
+         'displayDescription': {'type': ['string', 'null']}
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     'required': ['id', 'volumeId', 'status', 'size',
+                  'createdAt', 'displayName', 'displayDescription']
+ }
+@@ -36,7 +36,7 @@ create_get_snapshot = {
+         'properties': {
+             'snapshot': common_snapshot_info
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['snapshot']
+     }
+ }
+@@ -51,7 +51,7 @@ list_snapshots = {
+                 'items': common_snapshot_info
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['snapshots']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/tenant_networks.py b/tempest/lib/api_schema/response/compute/v2_1/tenant_networks.py
+index ddfab96..02a9382 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/tenant_networks.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/tenant_networks.py
+@@ -19,7 +19,7 @@ param_network = {
+         'cidr': {'type': ['string', 'null']},
+         'label': {'type': 'string'}
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     'required': ['id', 'cidr', 'label']
+ }
+ 
+@@ -34,7 +34,7 @@ list_tenant_networks = {
+                 'items': param_network
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['networks']
+     }
+ }
+@@ -47,7 +47,7 @@ get_tenant_network = {
+         'properties': {
+             'network': param_network
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['network']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/versions.py b/tempest/lib/api_schema/response/compute/v2_1/versions.py
+index 08a9fab..d6c1021 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/versions.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/versions.py
+@@ -29,7 +29,7 @@ _version = {
+                     'type': {'type': 'string'},
+                 },
+                 'required': ['href', 'rel'],
+-                'additionalProperties': False
++                'additionalProperties': True
+             }
+         },
+         'status': {'type': 'string'},
+@@ -48,7 +48,7 @@ _version = {
+     # so they should not be required.
+     # NOTE(sdague): media-types only shows up in single version requests.
+     'required': ['id', 'links', 'status', 'updated'],
+-    'additionalProperties': False
++    'additionalProperties': True
+ }
+ 
+ list_versions = {
+@@ -62,7 +62,7 @@ list_versions = {
+             }
+         },
+         'required': ['versions'],
+-        'additionalProperties': False
++        'additionalProperties': True
+     }
+ }
+ 
+@@ -94,7 +94,7 @@ get_version = {
+             }
+         },
+         'required': ['choices'],
+-        'additionalProperties': False
++        'additionalProperties': True
+     }
+ }
+ 
+@@ -105,6 +105,6 @@ get_one_version = {
+         'properties': {
+             'version': _version
+         },
+-        'additionalProperties': False
++        'additionalProperties': True
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_1/volumes.py b/tempest/lib/api_schema/response/compute/v2_1/volumes.py
+index bb34acb..d854d53 100644
+--- a/tempest/lib/api_schema/response/compute/v2_1/volumes.py
++++ b/tempest/lib/api_schema/response/compute/v2_1/volumes.py
+@@ -40,7 +40,7 @@ create_get_volume = {
+                                 'volumeId': {'type': 'string'},
+                                 'serverId': {'type': 'string'}
+                             },
+-                            'additionalProperties': False,
++                            'additionalProperties': True,
+                             # NOTE- If volume is not attached to any server
+                             # then, 'attachments' attributes comes as array
+                             # with empty objects "[{}]" due to that elements
+@@ -50,13 +50,13 @@ create_get_volume = {
+                         }
+                     }
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['id', 'status', 'displayName', 'availabilityZone',
+                              'createdAt', 'displayDescription', 'volumeType',
+                              'snapshotId', 'metadata', 'size', 'attachments']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['volume']
+     }
+ }
+@@ -91,7 +91,7 @@ list_volumes = {
+                                     'volumeId': {'type': 'string'},
+                                     'serverId': {'type': 'string'}
+                                 },
+-                                'additionalProperties': False,
++                                'additionalProperties': True,
+                                 # NOTE- If volume is not attached to any server
+                                 # then, 'attachments' attributes comes as array
+                                 # with empty object "[{}]" due to that elements
+@@ -101,7 +101,7 @@ list_volumes = {
+                             }
+                         }
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['id', 'status', 'displayName',
+                                  'availabilityZone', 'createdAt',
+                                  'displayDescription', 'volumeType',
+@@ -110,7 +110,7 @@ list_volumes = {
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['volumes']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_16/servers.py b/tempest/lib/api_schema/response/compute/v2_16/servers.py
+index 3eb658f..d0a30e3 100644
+--- a/tempest/lib/api_schema/response/compute/v2_16/servers.py
++++ b/tempest/lib/api_schema/response/compute/v2_16/servers.py
+@@ -32,7 +32,7 @@ server_detail = {
+                     'id': {'type': 'string'},
+                     'links': parameter_types.links
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['id', 'links']},
+             {'type': ['string', 'null']}
+         ]},
+@@ -42,7 +42,7 @@ server_detail = {
+                 'id': {'type': 'string'},
+                 'links': parameter_types.links
+             },
+-            'additionalProperties': False,
++            'additionalProperties': True,
+             'required': ['id', 'links']
+         },
+         'fault': {
+@@ -53,7 +53,7 @@ server_detail = {
+                 'message': {'type': 'string'},
+                 'details': {'type': 'string'},
+             },
+-            'additionalProperties': False,
++            'additionalProperties': True,
+             # NOTE(gmann): 'details' is not necessary to be present
+             #  in the 'fault'. So it is not defined as 'required'.
+             'required': ['code', 'created', 'message']
+@@ -90,7 +90,7 @@ server_detail = {
+                     'id': {'type': 'string'},
+                     'delete_on_termination': {'type': 'boolean'}
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+             },
+         },
+         'OS-EXT-SRV-ATTR:reservation_id': {'type': ['string', 'null']},
+@@ -104,7 +104,7 @@ server_detail = {
+         # NOTE(gmann): new attributes in version 2.16
+         'host_status': {'type': 'string'}
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     # NOTE(gmann): 'progress' attribute is present in the response
+     # only when server's status is one of the progress statuses
+     # ("ACTIVE","BUILD", "REBUILD", "RESIZE","VERIFY_RESIZE")
+@@ -134,7 +134,7 @@ get_server = {
+         'properties': {
+             'server': server_detail
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['server']
+     }
+ }
+@@ -150,7 +150,7 @@ list_servers_detail = {
+             },
+             'servers_links': parameter_types.links
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         # NOTE(gmann): servers_links attribute is not necessary to be
+         # present always So it is not 'required'.
+         'required': ['servers']
+diff --git a/tempest/lib/api_schema/response/compute/v2_23/migrations.py b/tempest/lib/api_schema/response/compute/v2_23/migrations.py
+index 3cd0f6e..af6fd8a 100644
+--- a/tempest/lib/api_schema/response/compute/v2_23/migrations.py
++++ b/tempest/lib/api_schema/response/compute/v2_23/migrations.py
+@@ -45,7 +45,7 @@ list_migrations = {
+                         'migration_type': {'type': ['string', 'null']},
+                         'links': parameter_types.links
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': [
+                         'id', 'status', 'instance_uuid', 'source_node',
+                         'source_compute', 'dest_node', 'dest_compute',
+@@ -56,7 +56,7 @@ list_migrations = {
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['migrations']
+     }
+ }
+diff --git a/tempest/lib/api_schema/response/compute/v2_3/servers.py b/tempest/lib/api_schema/response/compute/v2_3/servers.py
+index f24103e..5b5c9c1 100644
+--- a/tempest/lib/api_schema/response/compute/v2_3/servers.py
++++ b/tempest/lib/api_schema/response/compute/v2_3/servers.py
+@@ -40,7 +40,7 @@ server_detail = {
+                     'id': {'type': 'string'},
+                     'links': parameter_types.links
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['id', 'links']},
+             {'type': ['string', 'null']}
+         ]},
+@@ -50,7 +50,7 @@ server_detail = {
+                 'id': {'type': 'string'},
+                 'links': parameter_types.links
+             },
+-            'additionalProperties': False,
++            'additionalProperties': True,
+             'required': ['id', 'links']
+         },
+         'fault': {
+@@ -61,7 +61,7 @@ server_detail = {
+                 'message': {'type': 'string'},
+                 'details': {'type': 'string'},
+             },
+-            'additionalProperties': False,
++            'additionalProperties': True,
+             # NOTE(gmann): 'details' is not necessary to be present
+             #  in the 'fault'. So it is not defined as 'required'.
+             'required': ['code', 'created', 'message']
+@@ -99,7 +99,7 @@ server_detail = {
+                     'id': {'type': 'string'},
+                     'delete_on_termination': {'type': 'boolean'}
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+             },
+         },
+         'OS-EXT-SRV-ATTR:reservation_id': {'type': ['string', 'null']},
+@@ -110,7 +110,7 @@ server_detail = {
+         'OS-EXT-SRV-ATTR:root_device_name': {'type': ['string', 'null']},
+         'OS-EXT-SRV-ATTR:user_data': {'type': ['string', 'null']},
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     # NOTE(gmann): 'progress' attribute is present in the response
+     # only when server's status is one of the progress statuses
+     # ("ACTIVE","BUILD", "REBUILD", "RESIZE","VERIFY_RESIZE")
+@@ -140,7 +140,7 @@ get_server = {
+         'properties': {
+             'server': server_detail
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['server']
+     }
+ }
+@@ -156,7 +156,7 @@ list_servers_detail = {
+             },
+             'servers_links': parameter_types.links
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         # NOTE(gmann): servers_links attribute is not necessary to be
+         # present always So it is not 'required'.
+         'required': ['servers']
+-- 
+2.7.4
+

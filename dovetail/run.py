@@ -221,7 +221,7 @@ def copy_patch_files(logger):
     patch_set_path = dt_cfg.dovetail_config['patch_dir']
     if not os.path.isdir(patch_set_path):
         os.makedirs(patch_set_path)
-    cmd = 'sudo cp -r %s/* %s' % (patch_path, patch_set_path)
+    cmd = 'sudo cp -a -r %s/* %s' % (patch_path, patch_set_path)
     dt_utils.exec_cmd(cmd, logger, exit_on_error=False)
 
 
@@ -280,6 +280,12 @@ def main(*args, **kwargs):
         dt_cfg.dovetail_config['offline'] = True
     else:
         dt_cfg.dovetail_config['offline'] = False
+
+    if kwargs['no_api_validation']:
+        dt_cfg.dovetail_config['no_api_validation'] = True
+        logger.warning('Strict API response validation DISABLED.')
+    else:
+        dt_cfg.dovetail_config['no_api_validation'] = False
 
     dt_utils.get_hardware_info(logger)
 
