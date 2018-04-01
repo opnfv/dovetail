@@ -220,7 +220,7 @@ def get_result_path():
     dt_cfg.dovetail_config['images_dir'] = os.path.join(dovetail_home,
                                                         'images')
     pre_config_path = os.path.join(dovetail_home, 'pre_config')
-    patch_set_path = os.path.join(dovetail_home, 'patch')
+    patch_set_path = os.path.join(dovetail_home, 'patches')
     dt_cfg.dovetail_config['config_dir'] = pre_config_path
     dt_cfg.dovetail_config['patch_dir'] = patch_set_path
     return dovetail_home
@@ -238,7 +238,7 @@ def copy_patch_files(logger):
     patch_set_path = dt_cfg.dovetail_config['patch_dir']
     if not os.path.isdir(patch_set_path):
         os.makedirs(patch_set_path)
-    cmd = 'sudo cp -r %s/* %s' % (constants.PATCH_PATH, patch_set_path)
+    cmd = 'sudo cp -a -r %s/* %s' % (constants.PATCH_PATH, patch_set_path)
     dt_utils.exec_cmd(cmd, logger, exit_on_error=False)
 
 
@@ -302,6 +302,12 @@ def main(*args, **kwargs):
         dt_cfg.dovetail_config['offline'] = True
     else:
         dt_cfg.dovetail_config['offline'] = False
+
+    if kwargs['no_api_validation']:
+        dt_cfg.dovetail_config['no_api_validation'] = True
+        logger.warning('Strict API response validation DISABLED.')
+    else:
+        dt_cfg.dovetail_config['no_api_validation'] = False
 
     dt_utils.get_hardware_info(logger)
 
