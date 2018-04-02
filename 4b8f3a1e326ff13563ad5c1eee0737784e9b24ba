@@ -81,6 +81,24 @@
       "revId": "4b8f3a1e326ff13563ad5c1eee0737784e9b24ba",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_f89c8cc2",
+        "filename": "etc/testcase/osinterop.tc001.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-04-02T21:22:28Z",
+      "side": 1,
+      "message": "I have to admit that copying the files around does not _feel_ very clean, but we don\u0027t need to fix it right now. Xudan has a point about creating many overlapping docker volumes. We could, however, consider making the volumes we use right now (config, images, openrc, etc) read-only inside the container. This is just a small change and we would be save from unwanted modifications.",
+      "parentUuid": "5a3f45e8_08f3eb73",
+      "revId": "4b8f3a1e326ff13563ad5c1eee0737784e9b24ba",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
