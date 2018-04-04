@@ -99,6 +99,24 @@
       "revId": "4b8f3a1e326ff13563ad5c1eee0737784e9b24ba",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_ecf20a6e",
+        "filename": "etc/testcase/osinterop.tc001.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-04-04T08:47:33Z",
+      "side": 1,
+      "message": "I totally agree, testcases.yaml in Functest is read-only, it shouldn\u0027t be a problem. AFAIK, after leveraging the split Functest container, testcases.yaml is contained rightly in Functest container, it shouldn\u0027t be necessary to provide it purposely anymore.",
+      "parentUuid": "5a3f45e8_f89c8cc2",
+      "revId": "4b8f3a1e326ff13563ad5c1eee0737784e9b24ba",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
