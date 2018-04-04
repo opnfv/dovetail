@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_ccfd8e3c",
+        "filename": "dovetail/container.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-04-04T08:58:26Z",
+      "side": 1,
+      "message": "I would suggest process image_name and docker_tag separately, to make the coding more understandable.",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 27
+      },
+      "revId": "2fd8328cfc7f8e31445d6a851dedffdd6041a810",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
