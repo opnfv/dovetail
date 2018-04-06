@@ -1,4 +1,4 @@
-.. This work is lit_snapshots_list_details_with_paramsensed under a Creative Commons Attribution 4.0 International License.
+.. This work is licensed under a Creative Commons Attribution 4.0 International License.
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) OPNFV
 
