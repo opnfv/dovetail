@@ -68,42 +68,6 @@ class Container(object):
                 "File {} doesn't exist.".format(dovetail_config['openrc']))
             return None
 
-    # set yardstick external network name and log volume for its container.
-    # external network is necessary for yardstick.
-    @classmethod
-    def set_yardstick_config(cls):
-        dovetail_config = dt_cfg.dovetail_config
-        ext_net = dt_utils.get_ext_net_name(dovetail_config['openrc'],
-                                            cls.logger)
-        if ext_net:
-            envs = "%s%s" % (" -e EXTERNAL_NETWORK=", ext_net)
-        else:
-            cls.logger.error("Can't find any external network.")
-            return None
-        insecure = os.getenv("OS_INSECURE")
-        if insecure and insecure.lower() == 'true':
-            envs = envs + " -e OS_CACERT=False "
-
-        log_vol = '-v %s:%s ' % (dovetail_config['result_dir'],
-                                 dovetail_config["yardstick"]['result']['log'])
-
-        # for yardstick, support pod.yaml configuration
-        pod_file = os.path.join(dovetail_config['config_dir'],
-                                dovetail_config['pod_file'])
-        if not os.path.isfile(pod_file):
-            cls.logger.error("File {} doesn't exist.".format(pod_file))
-            return None
-        key_file = os.path.join(dovetail_config['config_dir'],
-                                dovetail_config['pri_key'])
-        key_container_path = dovetail_config["yardstick"]['result']['key_path']
-        if not os.path.isfile(key_file):
-            cls.logger.debug("Key file {} is not found, must use password in "
-                             "{} to do HA test.".format(key_file, pod_file))
-            key_vol = ''
-        else:
-            key_vol = '-v %s:%s ' % (key_file, key_container_path)
-        return "%s %s %s" % (envs, log_vol, key_vol)
-
     @classmethod
     def set_bottlenecks_config(cls, testcase_name):
         dovetail_config = dt_cfg.dovetail_config
@@ -168,8 +132,6 @@ class Container(object):
         # set_yardstick_config
         # set_bottlenecks_config
         config = " "
-        if type.lower() == "yardstick":
-            config = cls.set_yardstick_config()
         if type.lower() == "bottlenecks":
             config = cls.set_bottlenecks_config(testcase_name)
         if type.lower() == "vnftest":
@@ -216,9 +178,7 @@ class Container(object):
                               " | awk '{print $1}' | head -1", cls.logger)
         cls.container_list[type] = container_id
 
-        if type.lower() == 'yardstick':
-            cls.set_yardstick_conf_file(container_id)
-        elif type.lower() == 'vnftest':
+        if type.lower() == 'vnftest':
             cls.set_vnftest_conf_file(container_id)
 
         return container_id
@@ -309,8 +269,8 @@ class Container(object):
         return dt_utils.exec_cmd(cmd, cls.logger, exit_on_error)
 
     @classmethod
-    def pre_copy(cls, container_id, src_path, dest_path,
-                 exit_on_error=False):
+    def copy_file(cls, container_id, src_path, dest_path,
+                  exit_on_error=False):
         if not src_path or not dest_path:
             return (1, 'src_path or dest_path is empty')
         cmd = 'cp %s %s' % (src_path, dest_path)
@@ -324,19 +284,14 @@ class Container(object):
         return dt_utils.exec_cmd(cmd, cls.logger)
 
     @classmethod
-    def set_yardstick_conf_file(cls, container_id):
-        valid_type = 'yardstick'
-        src = dt_cfg.dovetail_config[valid_type]['yard_conf']['src_file']
-        dest = dt_cfg.dovetail_config[valid_type]['yard_conf']['dest_file']
-        cls.pre_copy(container_id, src, dest)
-        url = dt_cfg.dovetail_config['report_dest']
-        if url.startswith("http"):
-            cmd = ("sed -i '17s#http://127.0.0.1:8000/results#{}#g' {}"
-                   .format(url, dest))
-            cls.exec_cmd(container_id, cmd)
-        if url.lower() == 'file':
-            cmd = ("sed -i '13s/http/file/g' {}".format(dest))
-            cls.exec_cmd(container_id, cmd)
+    def copy_files_in_container(cls, valid_type, container_id):
+        project_config = dt_cfg.dovetail_config[valid_type]
+        if 'copy_file_in_container' not in project_config.keys():
+            return
+        if not project_config['copy_file_in_container']:
+            return
+        for item in project_config['copy_file_in_container']:
+            cls.copy_file(container_id, item['src_file'], item['dest_file'])
 
     @classmethod
     def set_vnftest_conf_file(cls, container_id):
