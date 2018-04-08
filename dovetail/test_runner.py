@@ -47,7 +47,7 @@ class DockerRunner(object):
             file_path = dt_cfg.dovetail_config[self.type]['config']['dir']
             src_path = os.path.join(file_path, 'pre_config', exist_file)
 
-        Container.pre_copy(container_id, src_path, dest_path)
+        Container.copy_file(container_id, src_path, dest_path)
         return dest_path
 
     def run(self):
@@ -165,6 +165,7 @@ class YardstickRunner(DockerRunner):
             config_item = {}
         config_item['validate_testcase'] = testcase.validate_testcase()
         config_item['testcase'] = testcase.name()
+        config_item['os_insecure'] = os.getenv("OS_INSECURE")
         return config_item
 
     def _update_yardstick_config(self, testcase):

@@ -67,12 +67,16 @@ class DovetailConfig(object):
 
     @classmethod
     def get_opts(cls, valid_type):
-        if 'opts' in cls.dovetail_config[valid_type].keys():
-            return cls.dovetail_config[valid_type]['opts']
+        project_config = cls.dovetail_config[valid_type]
+        if 'opts' in project_config.keys():
+            if project_config['opts']:
+                return project_config['opts']
         return ""
 
     @classmethod
     def get_envs(cls, valid_type):
-        if 'envs' in cls.dovetail_config[valid_type].keys():
-            return cls.dovetail_config[valid_type]['envs']
+        project_config = cls.dovetail_config[valid_type]
+        if 'envs' in project_config.keys():
+            if project_config['envs']:
+                return project_config['envs']
         return ""
