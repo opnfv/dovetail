@@ -22,6 +22,30 @@
       "revId": "ad6b636f3bb797d32b111b8a1d161020be674def",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_3c91bb52",
+        "filename": "dovetail/container.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-04-08T07:33:18Z",
+      "side": 1,
+      "message": "then, we can abstract a method to eliminate the duplicated code. please reference Clean Code book.",
+      "parentUuid": "5a3f45e8_bca5cbb6",
+      "range": {
+        "startLine": 42,
+        "startChar": 8,
+        "endLine": 42,
+        "endChar": 48
+      },
+      "revId": "ad6b636f3bb797d32b111b8a1d161020be674def",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
