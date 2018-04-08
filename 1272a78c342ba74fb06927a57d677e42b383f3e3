@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_bcd78b22",
+        "filename": "dovetail/utils/dovetail_config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-04-08T06:44:40Z",
+      "side": 1,
+      "message": "how about leveraging:\n\ntry:\n    return cls.dovetail_config[valid_type][\u0027opts\u0027]\nexcept Exception as err:\n    print \u0027unsupported valid_type: {}\u0027.format(valid_typ)\n    return \u0027\u0027",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 17
+      },
+      "revId": "1272a78c342ba74fb06927a57d677e42b383f3e3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_1cdf9f3c",
+        "filename": "dovetail/utils/dovetail_config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-04-08T06:44:40Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 17
+      },
+      "revId": "1272a78c342ba74fb06927a57d677e42b383f3e3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
