@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_e9b4aed2",
+        "filename": "etc/userconfig/testcases.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 7047
+      },
+      "writtenOn": "2018-04-09T22:29:39Z",
+      "side": 1,
+      "message": "I\u0027m not sure about the installer/scenario dependencies. I copied this out of the functest code as the other tiers here. However, the dependencies in the existing file were left blank in the smoke, features, vnf tiers so I\u0027m not sure.",
+      "range": {
+        "startLine": 58,
+        "startChar": 15,
+        "endLine": 60,
+        "endChar": 45
+      },
+      "revId": "5cba401ad7a93201661cca13ee62b1b502d92911",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
