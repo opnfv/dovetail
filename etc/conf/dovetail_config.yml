@@ -34,6 +34,7 @@ testsuite_supported:
   - compliance_set
   - proposed_tests
   - debug
+  - healthcheck
   - ovp.1.0.0
   - onap.1.0.0
 # testarea supported, should adjust accordingly
@@ -50,6 +51,7 @@ testarea_supported:
   - mandatory
   - full
   - smoke
+  - healthcheck
   - vnf
   - lifecycle
 
