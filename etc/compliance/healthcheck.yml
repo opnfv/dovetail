@@ -1,0 +1,9 @@
+---
+# Pre-flight check before running more complex tests
+# Will be used for running on CI
+healthcheck:
+  name: healthcheck
+  testcases_list:
+    - dovetail.healthcheck.tc001
+    - dovetail.healthcheck.tc002
+    - dovetail.healthcheck.tc003
