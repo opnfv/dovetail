@@ -46,6 +46,30 @@
       "revId": "13c91f09f5bd6dcd05044f2b636f04821a31aac7",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_d04b5b85",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-04-09T09:07:06Z",
+      "side": 1,
+      "message": "Yes, you are right. I misunderstood that.",
+      "parentUuid": "5a3f45e8_f0ebf7ad",
+      "range": {
+        "startLine": 292,
+        "startChar": 26,
+        "endLine": 292,
+        "endChar": 35
+      },
+      "revId": "13c91f09f5bd6dcd05044f2b636f04821a31aac7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
