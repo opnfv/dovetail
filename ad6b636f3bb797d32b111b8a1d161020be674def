@@ -46,6 +46,30 @@
       "revId": "ad6b636f3bb797d32b111b8a1d161020be674def",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_3cac1b35",
+        "filename": "dovetail/container.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-04-09T02:20:37Z",
+      "side": 1,
+      "message": "We can maintain a utils function to get value from dict like Functest and Yardstick do. It will avoid all the duplicate codes when trying to get value from dict.",
+      "parentUuid": "5a3f45e8_3c91bb52",
+      "range": {
+        "startLine": 42,
+        "startChar": 8,
+        "endLine": 42,
+        "endChar": 48
+      },
+      "revId": "ad6b636f3bb797d32b111b8a1d161020be674def",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
