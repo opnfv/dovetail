@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5a3f45e8_7ca6a354",
+        "filename": "dovetail/utils/dovetail_config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-04-09T02:27:45Z",
+      "side": 1,
+      "message": "Please see the comment on this patch https://gerrit.opnfv.org/gerrit/#/c/54369/\nWith that function we can unify the usage and avoid try-except or if-else everywhere.\nThen these two functions can be removed.",
+      "parentUuid": "5a3f45e8_bcd78b22",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 17
+      },
+      "revId": "1272a78c342ba74fb06927a57d677e42b383f3e3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_1cdf9f3c",
         "filename": "dovetail/utils/dovetail_config.py",
         "patchSetId": 1
