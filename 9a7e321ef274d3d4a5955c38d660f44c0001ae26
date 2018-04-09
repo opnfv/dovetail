@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_50faabbd",
+        "filename": "dovetail/container.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-04-09T06:55:17Z",
+      "side": 1,
+      "message": "I would suggest abstract a method to eliminate the duplicated code, such as:\n\ndef get_config(field, testcase):\n    project_cfg \u003d dt_cfg.dovetail_config[testcase.validate_type()]\n    testcase_cfg \u003d testcase.testcase[\u0027validate\u0027]\n\n    value \u003d dt_utils.get_value_from_dict(field, testcase_cfg)\n    if not value:\n        value \u003d dt_utils.get_value_from_dict(field, project_cfg)\n    if not value:\n        cls.logger.error(\"Couldn\u0027t find key {}.\".format(field))\n    return value\n\ndef get_docker_image(cls, testcase):\n    name \u003d get_config(\u0027image_name\u0027, testcase)\n    tag \u003d get_config(\u0027docker_tag\u0027, testcase)\n    return \"{}:{}\".format(name, tag) if name and tag else None",
+      "revId": "9a7e321ef274d3d4a5955c38d660f44c0001ae26",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
