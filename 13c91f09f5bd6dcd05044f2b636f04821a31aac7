@@ -87,6 +87,24 @@
       "revId": "13c91f09f5bd6dcd05044f2b636f04821a31aac7",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_babb06e4",
+        "filename": "etc/patches/functest/disable-api-validation/apply.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-04-10T18:38:28Z",
+      "side": 1,
+      "message": "In general a good suggestion. One aspect to consider here is that this particular patch should only be applied if a certain command line parameter is given. If apply.sh applies multiple patches (luckily we currently only have one patch), we would have to have some logic for conditionally applying a patch in apply.sh as well - even if it is just a parameter and an if-statement.\n\nApart from that, I very much agree that for generally applied patches (as for the old yardstick patch), we should have a common script/hook mechanism. As we currently only have this one patch, shall we revisit this once other (kind of) patches become necessary?",
+      "parentUuid": "5a3f45e8_e9d5ceb9",
+      "revId": "13c91f09f5bd6dcd05044f2b636f04821a31aac7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
