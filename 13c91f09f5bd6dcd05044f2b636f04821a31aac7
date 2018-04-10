@@ -70,6 +70,23 @@
       "revId": "13c91f09f5bd6dcd05044f2b636f04821a31aac7",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_e9d5ceb9",
+        "filename": "etc/patches/functest/disable-api-validation/apply.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-04-10T01:26:43Z",
+      "side": 1,
+      "message": "how about moving apply.sh to patches/apply.sh, and transfer functest/disable-api-validation/0001-Allow-additional-properties-in-API-responses.patch as the parameter, by doing so, all the patches can be patched leveraging apply.sh",
+      "revId": "13c91f09f5bd6dcd05044f2b636f04821a31aac7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
