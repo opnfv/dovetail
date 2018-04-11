@@ -105,6 +105,24 @@
       "revId": "13c91f09f5bd6dcd05044f2b636f04821a31aac7",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_9ac0cae1",
+        "filename": "etc/patches/functest/disable-api-validation/apply.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-04-11T02:11:19Z",
+      "side": 1,
+      "message": "Yes, I agree to revisit this once other patches become necessary. following is an initial concept for future improvement.\n\nIMBP, patchwork is quite testcase-oriented, it should be declared in the prepare stage in testcase definition yaml file, which is tempest.tc00x.yml in our case, if it is well defined and processed, this will not be a problem, for example\n\nprepare:\n    - cd $dest_repo1/; $patch_dir/apply.sh $patch_dir/patch_file1\n    - cd $dest_repo1/; $patch_dir/apply.sh $patch_dir/patch_file2\n    - cd $dest_repo2/; $patch_dir/apply.sh $patch_dir/patch_file3\n\nAnd I tried to find a way to handle the patchwork by python, I find https://github.com/gitpython-developers/GitPython, unfortunately, git.am is not implemented, :(",
+      "parentUuid": "5a3f45e8_babb06e4",
+      "revId": "13c91f09f5bd6dcd05044f2b636f04821a31aac7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
