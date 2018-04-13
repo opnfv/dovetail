@@ -46,6 +46,30 @@
       "revId": "bb998d8dce0c28ac7276651ffaac8b97aafdf69c",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_a20c74ee",
+        "filename": "etc/compliance/proposed_tests.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-04-13T10:27:04Z",
+      "side": 1,
+      "message": "I totally agree, but I think we need to figure out why historically leveraging the number kind of naming, if there is some special reason that we don\u0027t know but need to take into consideration. \nAnd based on that it would be better to keep the consistency of the test cases naming.",
+      "parentUuid": "5a3f45e8_8d89b177",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 1
+      },
+      "revId": "bb998d8dce0c28ac7276651ffaac8b97aafdf69c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
