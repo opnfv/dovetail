@@ -273,10 +273,10 @@ class FunctestCrawler(object):
                         duration = dt_utils.get_duration(timestart, timestop,
                                                          self.logger)
                         if complex_testcase:
-                            tests = data['details']['tests']
-                            failed_num = data['details']['failures']
+                            tests = data['details']['tests_number']
+                            failed_num = data['details']['failures_number']
                             success_case = data['details']['success']
-                            error_case = data['details']['errors']
+                            error_case = data['details']['failures']
                             skipped_case = data['details']['skipped']
                             details = {"tests": tests,
                                        "failures": failed_num,

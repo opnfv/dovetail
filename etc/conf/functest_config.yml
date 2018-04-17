@@ -1,7 +1,7 @@
 ---
 functest:
   image_name: opnfv/functest-smoke
-  docker_tag: euphrates
+  docker_tag: fraser
   opts: '-id --privileged=true'
   envs: '-e INSTALLER_TYPE=unknown -e DEPLOY_SCENARIO=unknown -e NODE_NAME=unknown
          -e TEST_DB_URL=file:///home/opnfv/functest/results/functest_results.txt'
@@ -9,13 +9,12 @@ functest:
     dir: '/home/opnfv/userconfig'
     images: '/home/opnfv/functest/images'
   pre_condition:
-    - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/functest/ci/testcases.yaml'
+    - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
   cmds:
-    - 'functest env prepare'
     - 'functest testcase run {{validate_testcase}} -r'
   post_condition:
     - 'echo test for postcondition in functest'
   result:
     dir: '/home/opnfv/functest/results'
     file_path: 'functest_results.txt'
-  openrc: '/home/opnfv/functest/conf/openstack.creds'
+  openrc: '/home/opnfv/functest/conf/env_file'
