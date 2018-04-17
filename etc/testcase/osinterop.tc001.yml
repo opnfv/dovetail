@@ -10,15 +10,10 @@ dovetail.osinterop.tc001:
     testcase: refstack_defcore
     pre_condition:
       - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
-      - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/functest/ci/testcases.yaml'
+      - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
     pre_copy:
       src_file: osinterop.txt
       dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/refstack_client/defcore.txt
-    cmds:
-      - 'functest env prepare'
-      - 'functest testcase run refstack_defcore -r'
-    post_condition:
-      - 'echo test for postcondition in testcase'
   report:
     sub_testcase_list:
       # VIM compute operations test cases

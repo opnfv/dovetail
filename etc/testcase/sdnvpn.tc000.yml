@@ -8,7 +8,7 @@ dovetail.sdnvpn.tc000:
     image_name: opnfv/functest-features
     pre_condition:
       - "sed -i 's/networking_bgpvpn_tempest/networking_bgpvpn_tempest-r networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest*/' /usr/lib/python2.7/site-packages/sdnvpn/test/functest/tempest.py"
-      - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/functest/ci/testcases.yaml'
+      - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
     pre_copy:
       exist_src_file: sdnvpn_config_tc000.yaml
       dest_path: /usr/lib/python2.7/site-packages/sdnvpn/test/functest/config.yaml
