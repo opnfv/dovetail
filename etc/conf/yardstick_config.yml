@@ -12,7 +12,7 @@
 
 yardstick:
   image_name: opnfv/yardstick
-  docker_tag: opnfv-5.1.0
+  docker_tag: stable
   opts: '-id --privileged=true'
   envs: {{os_cacert}}
   config:
