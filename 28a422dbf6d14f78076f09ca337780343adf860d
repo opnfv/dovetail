@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_3b81a9fb",
+        "filename": "etc/conf/functest_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-04-17T19:13:01Z",
+      "side": 1,
+      "message": "Cedric tols me we should switch to the run_test executable because the functest binary is not being maintained at the moment.",
+      "range": {
+        "startLine": 14,
+        "startChar": 6,
+        "endLine": 14,
+        "endChar": 54
+      },
+      "revId": "28a422dbf6d14f78076f09ca337780343adf860d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
