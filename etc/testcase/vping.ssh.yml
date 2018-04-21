@@ -1,0 +1,9 @@
+---
+dovetail.vping.ssh:
+  name: dovetail.vping.ssh
+  objective: testing for vping using ssh
+  validate:
+    type: functest
+    testcase: vping_ssh
+  report:
+    sub_testcase_list:

@@ -33,7 +33,7 @@ testsuite_supported:
   - proposed_tests
   - debug
   - healthcheck
-  - ovp.1.0.0
+  - ovp.next
   - onap.1.0.0
 # testarea supported, should adjust accordingly
 testarea_supported:

@@ -1,0 +1,10 @@
+---
+dovetail.vnf.vims:
+  name: dovetail.vnf.vims
+  objective: testing for Clearwater IMS deployment using Cloudify orchestrator
+  validate:
+    type: functest
+    testcase: cloudify_ims
+    image_name: opnfv/functest-vnf
+  report:
+    sub_testcase_list:

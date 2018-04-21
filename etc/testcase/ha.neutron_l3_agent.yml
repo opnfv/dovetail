@@ -1,0 +1,21 @@
+---
+dovetail.ha.neutron-l3-agent:
+  name: dovetail.ha.neutron_l3_agent
+  objective: OpenStack Controller Virtual Router Service High Availability.
+  validate:
+    type: yardstick
+    testcase: opnfv_yardstick_tc058
+    pre_condition:
+      - 'source /etc/yardstick/openstack.creds && openstack --insecure image create cirros-ha-11
+         --disk-format qcow2 --container-format bare --public
+         --file /home/opnfv/userconfig/images/cirros-0.3.5-x86_64-disk.img'
+    cmds:
+      - "cd /home/opnfv/repos/yardstick && source /etc/yardstick/openstack.creds &&
+         yardstick task start tests/opnfv/test_cases/{{validate_testcase}}.yaml
+         --output-file /tmp/yardstick/{{testcase}}.out
+         --task-args '{'file': '/home/opnfv/userconfig/pre_config/pod.yaml',
+         'image': 'cirros-ha-11', 'flavor': 'm1.tiny'}'"
+    post_condition:
+      - 'source /etc/yardstick/openstack.creds && openstack --insecure image delete cirros-ha-11'
+  report:
+    sub_testcase_list:
