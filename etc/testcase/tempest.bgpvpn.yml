@@ -1,0 +1,16 @@
+---
+dovetail.tempest.bgpvpn:
+  name: dovetail.tempest.bgpvpn
+  objective: validate BGPVPN API CRUD operations by means of Tempest tests from networking-bgpvpn repository
+  validate:
+    type: functest
+    testcase: bgpvpn
+    image_name: opnfv/functest-features
+    pre_condition:
+      - "sed -i 's/networking_bgpvpn_tempest/networking_bgpvpn_tempest.tests.api/' /usr/lib/python2.7/site-packages/sdnvpn/test/functest/run_tempest.py"
+      - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+    pre_copy:
+      exist_src_file: sdnvpn_config_tc000.yaml
+      dest_path: /usr/lib/python2.7/site-packages/sdnvpn/test/functest/config.yaml
+  report:
+    sub_testcase_list:

@@ -1,0 +1,11 @@
+---
+dovetail.stress.ping:
+  name: dovetail.stress.ping
+  objective: > # This test case verifies the ability of the SUT setting up VM pairs
+    # for different tenants and providing acceptable capacity after the amount of
+    # VM pairs reaches certain quantity.
+  validate:
+    type: bottlenecks
+    testcase: posca_factor_ping
+  report:
+    sub_testcase_list:

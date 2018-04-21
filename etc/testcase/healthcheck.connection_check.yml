@@ -1,0 +1,9 @@
+---
+dovetail.healthcheck.connection_check:
+  name: dovetail.healthcheck.connection_check
+  objective: check OpenStack API services connectivity through SNAPS framework
+  validate:
+    type: functest
+    testcase: connection_check
+  report:
+    sub_testcase_list:

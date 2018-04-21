@@ -1,9 +1,0 @@
----
-dovetail.smoke.tc002:
-  name: dovetail.smoke.tc002
-  objective: snaps smoke test cases
-  validate:
-    type: functest
-    testcase: snaps_smoke
-  report:
-    sub_testcase_list:

@@ -1,0 +1,9 @@
+---
+dovetail.vping.userdata:
+  name: dovetail.vping.userdata
+  objective: testing for vping using userdata
+  validate:
+    type: functest
+    testcase: vping_userdata
+  report:
+    sub_testcase_list:

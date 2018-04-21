@@ -1,9 +1,0 @@
----
-dovetail.vping.tc002:
-  name: dovetail.vping.tc002
-  objective: testing for vping using ssh
-  validate:
-    type: functest
-    testcase: vping_ssh
-  report:
-    sub_testcase_list:
