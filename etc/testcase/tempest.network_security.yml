@@ -1,0 +1,21 @@
+---
+dovetail.tempest.network_security:
+  name: dovetail.tempest.network_security
+  objective: filtering packets based on security rules and port security in data path
+  validate:
+    type: functest
+    testcase: tempest_custom
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
+      - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+    pre_copy:
+      src_file: tempest_custom.txt
+      dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
+  report:
+    sub_testcase_list:
+      - tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_port_security_macspoofing_port[compute,id-7c0bb1a2-d053-49a4-98f9-ca1a1d849f63,network]
+      - tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_cross_tenant_traffic[compute,id-e79f879e-debb-440c-a7e4-efeda05b6848,network]
+      - tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_in_tenant_traffic[compute,id-63163892-bbf6-4249-aa12-d5ea1f8f421b,network]
+      - tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_multiple_security_groups[compute,id-d2f77418-fcc4-439d-b935-72eca704e293,network]
+      - tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_port_security_disable_security_group[compute,id-7c811dcc-263b-49a3-92d2-1b4d8405f50c,network]
+      - tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_port_update_new_security_group[compute,id-f4d556d7-1526-42ad-bafb-6bebf48568f6,network]

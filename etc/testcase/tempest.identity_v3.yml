@@ -1,0 +1,25 @@
+---
+dovetail.tempest.identity_v3:
+  name: dovetail.tempest.identity_v3
+  objective: tempest smoke test cases about identity v3
+  validate:
+    type: functest
+    testcase: tempest_custom
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
+      - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+    pre_copy:
+      src_file: tempest_custom.txt
+      dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
+  report:
+    sub_testcase_list:
+      - tempest.api.identity.admin.v3.test_credentials.CredentialsTestJSON.test_credentials_create_get_update_delete[id-7cd59bf9-bda4-4c72-9467-d21cab278355,smoke]
+      - tempest.api.identity.admin.v3.test_domains.DefaultDomainTestJSON.test_default_domain_exists[id-17a5de24-e6a0-4e4a-a9ee-d85b6e5612b5,smoke]
+      - tempest.api.identity.admin.v3.test_domains.DomainsTestJSON.test_create_update_delete_domain[id-f2f5b44a-82e8-4dad-8084-0661ea3b18cf,smoke]
+      - tempest.api.identity.admin.v3.test_endpoints.EndPointsTestJSON.test_update_endpoint[id-37e8f15e-ee7c-4657-a1e7-f6b61e375eff,smoke]
+      - tempest.api.identity.admin.v3.test_groups.GroupsV3TestJSON.test_group_users_add_list_delete[id-1598521a-2f36-4606-8df9-30772bd51339,smoke]
+      - tempest.api.identity.admin.v3.test_policies.PoliciesTestJSON.test_create_update_delete_policy[id-e544703a-2f03-4cf2-9b0f-350782fdb0d3,smoke]
+      - tempest.api.identity.admin.v3.test_regions.RegionsTestJSON.test_create_region_with_specific_id[id-2c12c5b5-efcf-4aa5-90c5-bff1ab0cdbe2,smoke]
+      - tempest.api.identity.admin.v3.test_roles.RolesV3TestJSON.test_role_create_update_show_list[id-18afc6c0-46cf-4911-824e-9989cc056c3a,smoke]
+      - tempest.api.identity.admin.v3.test_services.ServicesTestJSON.test_create_update_get_service[id-5193aad5-bcb7-411d-85b0-b3b61b96ef06,smoke]
+      - tempest.api.identity.admin.v3.test_trusts.TrustsV3TestJSON.test_get_trusts_all[id-4773ebd5-ecbf-4255-b8d8-b63e6f72b65d,smoke]

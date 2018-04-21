@@ -1,0 +1,9 @@
+---
+dovetail.ha.rabbitmq:
+  name: dovetail.ha.rabbitmq
+  objective: OpenStack Controller Messaging Queue Service High Availability.
+  validate:
+    type: yardstick
+    testcase: opnfv_yardstick_tc056
+  report:
+    sub_testcase_list:

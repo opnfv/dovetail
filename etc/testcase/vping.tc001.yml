@@ -1,9 +1,0 @@
----
-dovetail.vping.tc001:
-  name: dovetail.vping.tc001
-  objective: testing for vping using userdata
-  validate:
-    type: functest
-    testcase: vping_userdata
-  report:
-    sub_testcase_list:

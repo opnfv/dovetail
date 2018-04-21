@@ -1,0 +1,9 @@
+---
+dovetail.healthcheck.api_check:
+  name: dovetail.healthcheck.api_check
+  objective: verify OpenStack API with simple queries
+  validate:
+    type: functest
+    testcase: api_check
+  report:
+    sub_testcase_list:

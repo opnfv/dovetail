@@ -1,0 +1,11 @@
+---
+dovetail.ha.cinder_api:
+  name: dovetail.ha.cinder_api
+  objective: >
+    This test case will verify the high availability of the
+    volume service provided by OpenStack (cinder-api) on control node.
+  validate:
+    type: yardstick
+    testcase: opnfv_yardstick_tc048
+  report:
+    sub_testcase_list:

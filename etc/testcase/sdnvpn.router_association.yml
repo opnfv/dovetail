@@ -1,0 +1,13 @@
+---
+dovetail.sdnvpn.router_association:
+  name: dovetail.sdnvpn.router_association
+  objective: VPN provides connectivity between subnets using association of Neutron Router to VPNs
+  validate:
+    type: functest
+    testcase: bgpvpn
+    image_name: opnfv/functest-features
+    pre_copy:
+      exist_src_file: sdnvpn_config_testcase4.yaml
+      dest_path: /usr/lib/python2.7/site-packages/sdnvpn/test/functest/config.yaml
+  report:
+    sub_testcase_list:

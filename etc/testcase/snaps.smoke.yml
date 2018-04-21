@@ -1,0 +1,9 @@
+---
+dovetail.snaps.smoke:
+  name: dovetail.snaps.smoke
+  objective: snaps smoke test cases
+  validate:
+    type: functest
+    testcase: snaps_smoke
+  report:
+    sub_testcase_list:

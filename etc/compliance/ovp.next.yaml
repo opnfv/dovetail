@@ -1,0 +1,33 @@
+---
+ovp.next:
+  name: ovp.next
+  testcases_list:
+  # mandatory test cases
+    # osinterop
+    - dovetail.tempest.osinterop
+    # vping
+    - dovetail.vping.userdata
+    - dovetail.vping.ssh
+    # HA
+    - dovetail.ha.nova_api
+    - dovetail.ha.neutron_server
+    - dovetail.ha.keystone
+    - dovetail.ha.glance_api
+    - dovetail.ha.cinder_api
+    - dovetail.ha.cpu_load
+    - dovetail.ha.disk_load
+    - dovetail.ha.haproxy
+  # optional test cases
+    # ipv6
+    - dovetail.tempest.ipv6
+    # tempest
+    # some of the previous tempest test suites tc001 - tc005 have been merged
+    # with the smoke tests executed as part of the proposed_test test suite
+    - dovetail.tempest.multi_node_scheduling
+    - dovetail.tempest.network_security
+    - dovetail.tempest.vm_lifecycle
+    # sdnvpn
+    - dovetail.sdnvpn.subnet_connectivity
+    - dovetail.sdnvpn.tenant_separation
+    - dovetail.sdnvpn.router_association
+    - dovetail.sdnvpn.router_association_floating_ip

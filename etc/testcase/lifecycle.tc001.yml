@@ -1,9 +1,0 @@
----
-dovetail.lifecycle.tc001:
-  name: dovetail.lifecycle.tc001
-  objective: vnf lifecycle tests
-  validate:
-    type: vnftest
-    testcase: onap_vnftest_tc001
-  report:
-    sub_testcase_list:

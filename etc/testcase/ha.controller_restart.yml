@@ -1,0 +1,9 @@
+---
+dovetail.ha.controller_restart:
+  name: dovetail.ha.controller_restart
+  objective: OpenStack Controll Node abnormally shutdown.
+  validate:
+    type: yardstick
+    testcase: opnfv_yardstick_tc025
+  report:
+    sub_testcase_list:

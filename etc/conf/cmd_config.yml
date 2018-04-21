@@ -47,7 +47,7 @@ cli:
       testsuite:
         flags:
           - '--testsuite'
-        default: 'ovp.1.0.0'
+        default: 'ovp.next'
         help: 'compliance testsuite.'
       testarea:
         flags:

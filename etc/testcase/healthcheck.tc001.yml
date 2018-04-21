@@ -1,9 +1,0 @@
----
-dovetail.healthcheck.tc001:
-  name: dovetail.healthcheck.tc001
-  objective: check OpenStack API services connectivity through SNAPS framework
-  validate:
-    type: functest
-    testcase: connection_check
-  report:
-    sub_testcase_list:

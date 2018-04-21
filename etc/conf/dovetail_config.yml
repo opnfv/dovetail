@@ -33,26 +33,20 @@ testsuite_supported:
   - proposed_tests
   - debug
   - healthcheck
-  - ovp.1.0.0
+  - ovp.next
   - onap.1.0.0
 # testarea supported, should adjust accordingly
 testarea_supported:
-  - osinterop
-  - example
   - ha
-  - ipv6
+  - healthcheck
+  - onap
   - sdnvpn
-  - vping
+  - security
+  - snaps
   - stress
   - tempest
-  - optional
-  - mandatory
-  - full
-  - smoke
-  - healthcheck
   - vnf
-  - lifecycle
-  - security
+  - vping
 
 functest_testsuite:
   - refstack_defcore
