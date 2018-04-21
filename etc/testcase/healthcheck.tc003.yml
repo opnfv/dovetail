@@ -1,9 +1,0 @@
----
-dovetail.healthcheck.tc003:
-  name: dovetail.healthcheck.tc003
-  objective: basic VM instance creation with port and IPv4 address through DHCP
-  validate:
-    type: functest
-    testcase: snaps_health_check
-  report:
-    sub_testcase_list:
