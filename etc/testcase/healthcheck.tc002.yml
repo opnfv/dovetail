@@ -1,9 +1,0 @@
----
-dovetail.healthcheck.tc002:
-  name: dovetail.healthcheck.tc002
-  objective: verify OpenStack API with simple queries
-  validate:
-    type: functest
-    testcase: api_check
-  report:
-    sub_testcase_list:
