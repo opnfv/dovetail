@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_2e45d816",
+        "filename": "etc/testcase/tempest.volume.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-04-24T08:41:27Z",
+      "side": 1,
+      "message": "forgot this.",
+      "range": {
+        "startLine": 2,
+        "startChar": 9,
+        "endLine": 2,
+        "endChar": 29
+      },
+      "revId": "e51fcacef3d716ad2023d84aae113b02e867a7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_733ead29",
+        "filename": "etc/testcase/vping.ssh.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-04-24T08:41:27Z",
+      "side": 1,
+      "message": "This is userdata",
+      "range": {
+        "startLine": 3,
+        "startChar": 17,
+        "endLine": 3,
+        "endChar": 26
+      },
+      "revId": "e51fcacef3d716ad2023d84aae113b02e867a7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_d347c1ba",
+        "filename": "etc/testcase/vping.userdate.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-04-24T08:41:27Z",
+      "side": 1,
+      "message": "this is ssh, BTW this file name is \u0027userdate\u0027 wrongly",
+      "range": {
+        "startLine": 3,
+        "startChar": 22,
+        "endLine": 3,
+        "endChar": 31
+      },
+      "revId": "e51fcacef3d716ad2023d84aae113b02e867a7d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
