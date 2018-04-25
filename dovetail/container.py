@@ -69,23 +69,6 @@ class Container(object):
             return None
 
     @classmethod
-    def set_bottlenecks_config(cls, testcase_name):
-        dovetail_config = dt_cfg.dovetail_config
-        yard_tag = dovetail_config['yardstick']['docker_tag']
-        docker_vol = '-v /var/run/docker.sock:/var/run/docker.sock'
-        env = ('-e Yardstick_TAG={} -e OUTPUT_FILE={}.out'
-               .format(yard_tag, testcase_name))
-        insecure = os.getenv("OS_INSECURE")
-        if insecure and insecure.lower() == 'true':
-            env = env + " -e OS_CACERT=False "
-
-        report = ""
-        if dovetail_config['report_dest'].startswith("http"):
-            report = ("-e BOTTLENECKS_DB_TARGET={}"
-                      .format(dovetail_config['report_dest']))
-        return "{} {} {}".format(docker_vol, env, report)
-
-    @classmethod
     def set_vnftest_config(cls):
         dovetail_config = dt_cfg.dovetail_config
 
@@ -103,17 +86,21 @@ class Container(object):
         return "%s %s" % (log_vol, key_vol)
 
     @classmethod
-    def create(cls, type, testcase_name, docker_image):
+    def create(cls, valid_type, testcase_name, docker_image):
         dovetail_config = dt_cfg.dovetail_config
-        opts = dovetail_config[type]['opts']
+        project_cfg = dovetail_config[valid_type]
 
         # credentials file openrc.sh is neccessary
-        openrc = cls.openrc_volume(type)
+        openrc = cls.openrc_volume(valid_type)
         if not openrc:
             return None
 
-        opts = dt_cfg.get_opts(type)
-        envs = dt_cfg.get_envs(type)
+        opts = dt_utils.get_value_from_dict('opts', project_cfg)
+        envs = dt_utils.get_value_from_dict('envs', project_cfg)
+        volumes = dt_utils.get_value_from_dict('volumes', project_cfg)
+        opts = ' ' if not opts else opts
+        envs = ' ' if not envs else envs
+        volumes = ' ' if not volumes else ' '.join(volumes)
 
         # CI_DEBUG is used for showing the debug logs of the upstream projects
         # BUILD_TAG is the unique id for this test
@@ -127,14 +114,13 @@ class Container(object):
 
         hosts_config = dt_utils.get_hosts_info(cls.logger)
 
-        # This part will be totally removed after remove the 3 functions
+        # This part will be totally removed after remove the 4 functions
         # set_functest_config has been removed
-        # set_yardstick_config
-        # set_bottlenecks_config
+        # set_yardstick_config has been removed
+        # set_bottlenecks_config has been removed
+        # set_vnftest_config
         config = " "
-        if type.lower() == "bottlenecks":
-            config = cls.set_bottlenecks_config(testcase_name)
-        if type.lower() == "vnftest":
+        if valid_type.lower() == "vnftest":
             config = cls.set_vnftest_config()
         if not config:
             return None
@@ -142,7 +128,7 @@ class Container(object):
         # for refstack, support user self_defined configuration
         config_volume = \
             ' -v %s:%s ' % (os.getenv("DOVETAIL_HOME"),
-                            dovetail_config[type]['config']['dir'])
+                            project_cfg['config']['dir'])
 
         cacert_volume = ""
         https_enabled = dt_utils.check_https_enabled(cls.logger)
@@ -162,23 +148,24 @@ class Container(object):
                 return None
 
         images_volume = ''
-        if dovetail_config[type]['config'].get('images', None):
+        if project_cfg['config'].get('images', None):
             images_volume = '-v {}:{}'.format(
                 dovetail_config['images_dir'],
-                dovetail_config[type]['config']['images'])
+                project_cfg['config']['images'])
 
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
-                                        dovetail_config[type]['result']['dir'])
-        cmd = 'sudo docker run {opts} {envs} {config} {hosts_config} ' \
-              '{openrc} {cacert_volume} {config_volume} {result_volume} ' \
-              '{images_volume} {docker_image} /bin/bash'.format(**locals())
+                                        project_cfg['result']['dir'])
+        cmd = 'sudo docker run {opts} {envs} {volumes} {config} ' \
+              '{hosts_config} {openrc} {cacert_volume} {config_volume} ' \
+              '{result_volume} {images_volume} {docker_image} /bin/bash' \
+              .format(**locals())
         dt_utils.exec_cmd(cmd, cls.logger)
         ret, container_id = \
             dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +
                               " | awk '{print $1}' | head -1", cls.logger)
-        cls.container_list[type] = container_id
+        cls.container_list[valid_type] = container_id
 
-        if type.lower() == 'vnftest':
+        if valid_type.lower() == 'vnftest':
             cls.set_vnftest_conf_file(container_id)
 
         return container_id
