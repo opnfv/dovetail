@@ -118,6 +118,50 @@ class DockerRunner(object):
     def save_logs(self):
         pass
 
+    @staticmethod
+    def _render(task_template, **kwargs):
+        return jinja2.Template(task_template).render(**kwargs)
+
+    @staticmethod
+    def _add_testcase_info(testcase, config_item=None):
+        if not config_item:
+            config_item = {}
+        config_item['validate_testcase'] = testcase.validate_testcase()
+        config_item['testcase'] = testcase.name()
+        config_item['os_insecure'] = os.getenv("OS_INSECURE")
+        return config_item
+
+    def _update_config(self, testcase):
+        config_item = None
+        pod_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
+                                dt_cfg.dovetail_config['pod_file'])
+        config_file = os.path.join(constants.CONF_PATH, self.config_file_name)
+        pod_info = dt_utils.read_yaml_file(pod_file, self.logger)
+        task_template = dt_utils.read_plain_file(config_file, self.logger)
+        if not task_template:
+            return None
+        if pod_info:
+            try:
+                process_info = pod_info['process_info']
+            except KeyError as e:
+                process_info = None
+        else:
+            process_info = None
+        if process_info:
+            for item in process_info:
+                try:
+                    if item['testcase_name'] == testcase.name():
+                        config_item = self._add_testcase_info(testcase, item)
+                        break
+                except KeyError as e:
+                    self.logger.error('Need key {} in {}'.format(e, item))
+        if not config_item:
+            config_item = self._add_testcase_info(testcase)
+        full_task = self._render(task_template, **config_item)
+        full_task_yaml = yaml.load(full_task)
+        dt_cfg.dovetail_config.update(full_task_yaml)
+        return dt_cfg.dovetail_config
+
 
 class FunctestRunner(DockerRunner):
 
@@ -156,55 +200,17 @@ class YardstickRunner(DockerRunner):
     def __init__(self, testcase):
         self.type = 'yardstick'
         super(YardstickRunner, self).__init__(testcase)
-        self._update_yardstick_config(testcase)
-
-    @staticmethod
-    def _render(task_template, **kwargs):
-        return jinja2.Template(task_template).render(**kwargs)
-
-    @staticmethod
-    def _add_testcase_info(testcase, config_item=None):
-        if not config_item:
-            config_item = {}
-        config_item['validate_testcase'] = testcase.validate_testcase()
-        config_item['testcase'] = testcase.name()
-        config_item['os_insecure'] = os.getenv("OS_INSECURE")
-        return config_item
-
-    def _update_yardstick_config(self, testcase):
-        config_item = None
-        pod_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
-                                dt_cfg.dovetail_config['pod_file'])
-        config_file = os.path.join(constants.CONF_PATH, self.config_file_name)
-        pod_info = dt_utils.read_yaml_file(pod_file, self.logger)
-        task_template = dt_utils.read_plain_file(config_file, self.logger)
-        if not (pod_info and task_template):
-            return None
-        try:
-            process_info = pod_info['process_info']
-        except KeyError as e:
-            process_info = None
-        if process_info:
-            for item in process_info:
-                try:
-                    if item['testcase_name'] == testcase.name():
-                        config_item = self._add_testcase_info(testcase, item)
-                        break
-                except KeyError as e:
-                    self.logger.error('Need key {} in {}'.format(e, item))
-        if not config_item:
-            config_item = self._add_testcase_info(testcase)
-        full_task = self._render(task_template, **config_item)
-        full_task_yaml = yaml.load(full_task)
-        dt_cfg.dovetail_config.update(full_task_yaml)
-        return dt_cfg.dovetail_config
+        self._update_config(testcase)
 
 
 class BottlenecksRunner(DockerRunner):
 
+    config_file_name = 'bottlenecks_config.yml'
+
     def __init__(self, testcase):
         self.type = 'bottlenecks'
         super(BottlenecksRunner, self).__init__(testcase)
+        self._update_config(testcase)
 
 
 class ShellRunner(object):
