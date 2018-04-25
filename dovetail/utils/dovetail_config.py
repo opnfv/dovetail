@@ -22,9 +22,10 @@ class DovetailConfig(object):
 
         for extra_config_file in cls.dovetail_config['include_config']:
 
-            # The yardstick config file needs to be parsed later.
-            # Because it's related to the exact test case.
-            if extra_config_file.startswith("yardstick"):
+            # The yardstick and bottlenecks config files are with Jinja2.
+            # They need to be parsed later.
+            # All other config files should be transfer to like this gradually.
+            if extra_config_file.startswith(("yardstick","bottlenecks")):
                 continue
             else:
                 file_path = os.path.join(conf_path, extra_config_file)
@@ -64,19 +65,3 @@ class DovetailConfig(object):
     def update_cmds(cls):
         if cls.dovetail_config['report_dest'].startswith("http"):
             cls.dovetail_config['bottlenecks']['cmds'][0] += ' --report'
-
-    @classmethod
-    def get_opts(cls, valid_type):
-        project_config = cls.dovetail_config[valid_type]
-        if 'opts' in project_config.keys():
-            if project_config['opts']:
-                return project_config['opts']
-        return ""
-
-    @classmethod
-    def get_envs(cls, valid_type):
-        project_config = cls.dovetail_config[valid_type]
-        if 'envs' in project_config.keys():
-            if project_config['envs']:
-                return project_config['envs']
-        return ""
