@@ -69,23 +69,6 @@ class Container(object):
             return None
 
     @classmethod
-    def set_bottlenecks_config(cls, testcase_name):
-        dovetail_config = dt_cfg.dovetail_config
-        yard_tag = dovetail_config['yardstick']['docker_tag']
-        docker_vol = '-v /var/run/docker.sock:/var/run/docker.sock'
-        env = ('-e Yardstick_TAG={} -e OUTPUT_FILE={}.out'
-               .format(yard_tag, testcase_name))
-        insecure = os.getenv("OS_INSECURE")
-        if insecure and insecure.lower() == 'true':
-            env = env + " -e OS_CACERT=False "
-
-        report = ""
-        if dovetail_config['report_dest'].startswith("http"):
-            report = ("-e BOTTLENECKS_DB_TARGET={}"
-                      .format(dovetail_config['report_dest']))
-        return "{} {} {}".format(docker_vol, env, report)
-
-    @classmethod
     def set_vnftest_config(cls):
         dovetail_config = dt_cfg.dovetail_config
 
@@ -105,15 +88,18 @@ class Container(object):
     @classmethod
     def create(cls, type, testcase_name, docker_image):
         dovetail_config = dt_cfg.dovetail_config
-        opts = dovetail_config[type]['opts']
 
         # credentials file openrc.sh is neccessary
         openrc = cls.openrc_volume(type)
         if not openrc:
             return None
 
-        opts = dt_cfg.get_opts(type)
-        envs = dt_cfg.get_envs(type)
+        opts = dt_utils.get_value_from_dict('opts', dovetail_config[type])
+        envs = dt_utils.get_value_from_dict('envs', dovetail_config[type])
+        maps = dt_utils.get_value_from_dict('maps', dovetail_config[type])
+        opts = ' ' if not opts else opts
+        envs = ' ' if not envs else envs
+        maps = ' ' if not maps else maps
 
         # CI_DEBUG is used for showing the debug logs of the upstream projects
         # BUILD_TAG is the unique id for this test
@@ -127,13 +113,12 @@ class Container(object):
 
         hosts_config = dt_utils.get_hosts_info(cls.logger)
 
-        # This part will be totally removed after remove the 3 functions
+        # This part will be totally removed after remove the 4 functions
         # set_functest_config has been removed
-        # set_yardstick_config
-        # set_bottlenecks_config
+        # set_yardstick_config has been removed
+        # set_bottlenecks_config has been removed
+        # set_vnftest_config
         config = " "
-        if type.lower() == "bottlenecks":
-            config = cls.set_bottlenecks_config(testcase_name)
         if type.lower() == "vnftest":
             config = cls.set_vnftest_config()
         if not config:
@@ -169,7 +154,7 @@ class Container(object):
 
         result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
                                         dovetail_config[type]['result']['dir'])
-        cmd = 'sudo docker run {opts} {envs} {config} {hosts_config} ' \
+        cmd = 'sudo docker run {opts} {envs} {maps} {config} {hosts_config} ' \
               '{openrc} {cacert_volume} {config_volume} {result_volume} ' \
               '{images_volume} {docker_image} /bin/bash'.format(**locals())
         dt_utils.exec_cmd(cmd, cls.logger)
