@@ -134,7 +134,7 @@ class FunctestRunner(DockerRunner):
         if validate_testcase == 'tempest_custom':
             source_file = os.path.join(result_path, 'tempest', 'tempest.log')
         elif validate_testcase == 'refstack_defcore':
-            source_file = os.path.join(result_path, 'refstack', 'refstack.log')
+            source_file = os.path.join(result_path, 'refstack', 'tempest.log')
         elif validate_testcase == 'bgpvpn':
             source_file = os.path.join(result_path, 'bgpvpn.log')
         else:
