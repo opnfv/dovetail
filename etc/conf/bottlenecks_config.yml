@@ -1,8 +1,21 @@
 ---
+
+{% set validate_testcase = validate_testcase or '' %}
+{% set testcase = testcase or '' %}
+{% set os_insecure = os_insecure or 'False' %}
+{% set os_cacert = '' %}
+{% if os_insecure == 'True' %}
+    {% set os_cacert = ' -e OS_CACERT=False ' %}
+{% endif %}
+
 bottlenecks:
   image_name: opnfv/bottlenecks
-  docker_tag: stable
+  docker_tag: latest
+  yardstick_image: opnfv/yardstick:stable
   opts: '-id --privileged=true'
+  envs: '{{os_cacert}} -e Yardstick_TAG=stable -e OUTPUT_FILE={{testcase}}.out'
+  volumes:
+    - '-v /var/run/docker.sock:/var/run/docker.sock'
   config:
     dir: '/home/opnfv/userconfig'
   pre_condition:
