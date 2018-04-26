@@ -7,6 +7,7 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 ##############################################################################
 import logging
+import os
 import json
 
 from tornado import web
@@ -15,11 +16,14 @@ from bson import objectid
 
 from opnfv_testapi.common.config import CONF
 from opnfv_testapi.common import message
+from opnfv_testapi.common import raises
 from opnfv_testapi.resources import handlers
 from opnfv_testapi.resources import test_models
 from opnfv_testapi.tornado_swagger import swagger
 from opnfv_testapi.ui.auth import constants as auth_const
 from opnfv_testapi.db import api as dbapi
+
+DOVETAIL_LOG_PATH = '/home/testapi/logs/{}/results/dovetail.log'
 
 
 class GenericTestHandler(handlers.GenericApiHandler):
@@ -109,10 +113,36 @@ class TestsCLHandler(GenericTestHandler):
 class TestsGURHandler(GenericTestHandler):
 
     @swagger.operation(nickname="getTestById")
+    @web.asynchronous
+    @gen.coroutine
     def get(self, test_id):
         query = dict()
         query["_id"] = objectid.ObjectId(test_id)
-        self._get_one(query=query)
+
+        data = yield dbapi.db_find_one(self.table, query)
+        if not data:
+            raises.NotFound(message.not_found(self.table, query))
+
+        validation = yield self._check_api_response_validation(data['id'])
+
+        data.update({'validation': validation})
+
+        self.finish_request(self.format_data(data))
+
+    @gen.coroutine
+    def _check_api_response_validation(self, test_id):
+        log_path = DOVETAIL_LOG_PATH.format(test_id)
+        if not os.path.exists(log_path):
+            raises.Forbidden('dovetail.log not found, please check')
+
+        with open(log_path) as f:
+            log_content = f.read()
+
+        warning_keyword = 'Strict API response validation DISABLED'
+        if warning_keyword in log_content:
+            raise gen.Return('API response validation disable')
+        else:
+            raise gen.Return('API response validation enable')
 
     @swagger.operation(nickname="deleteTestById")
     def delete(self, test_id):

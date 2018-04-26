@@ -52,6 +52,7 @@
         /** The testID extracted from the URL route. */
         ctrl.testId = $stateParams.testID;
         ctrl.innerId = $stateParams.innerID;
+        ctrl.validation = '';
 
         /** The HTML template that all accordian groups will use. */
         ctrl.detailsTemplate = 'testapi-ui/components/results-report/partials/' +
@@ -158,6 +159,7 @@
         function generate_format_data() {
             var test_url = testapiApiUrl + '/tests/' + ctrl.innerId;
             $http.get(test_url).then(function(test_resp){
+               ctrl.validation = test_resp.data.validation;
                angular.forEach(test_resp.data.results, function(result, index){
                    var result_url = testapiApiUrl + '/results/' + result;
                    $http.get(result_url).then(function(result_resp){
