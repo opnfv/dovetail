@@ -171,6 +171,26 @@ tiers:
                 run:
                     module: 'functest.opnfv_tests.openstack.tempest.tempest'
                     class: 'TempestCustom'
+            -
+                case_name: patrole
+                project_name: functest
+                criteria: 100
+                blocking: false
+                description: >-
+                    Test suite from Patrole project.
+                dependencies:
+                    installer: ''
+                    scenario: ''
+                run:
+                    module: 'functest.opnfv_tests.openstack.patrole.patrole'
+                    class: 'Patrole'
+                    args:
+                        role: 'admin'
+                        services:
+                            - 'image'
+                            - 'network'
+                        exclude:
+                            - 'test_networks_multiprovider_rbac'
 
     -
         name: features

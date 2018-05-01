@@ -1,0 +1,9 @@
+---
+dovetail.security.patrole:
+  name: dovetail.security.patrole
+  objective: Run Patrole to perform RBAC tests of the image and networking services
+  validate:
+    type: functest
+    testcase: patrole
+  report:
+    sub_testcase_list:

@@ -16,3 +16,5 @@ proposed_tests:
     - dovetail.stress.tc001
     # sdnvpn
     - dovetail.sdnvpn.tc000
+    # patrole
+    - dovetail.security.patrole

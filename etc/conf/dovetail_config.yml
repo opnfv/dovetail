@@ -54,6 +54,7 @@ testarea_supported:
   - healthcheck
   - vnf
   - lifecycle
+  - security
 
 functest_testsuite:
   - refstack_defcore
@@ -62,6 +63,7 @@ functest_testsuite:
   - tempest_custom
   - rally_sanity
   - promise
+  - patrole
 
 functest_testcase:
   - bgpvpn
