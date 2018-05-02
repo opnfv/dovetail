@@ -530,7 +530,7 @@ for the details of the CLI.
 The '--testsuite' option is used to control the set of tests intended for execution
 at a high level. For the purposes of running the OVP test suite, the test suite name follows
 the following format, ``ovp.<major>.<minor>.<patch>``. The latest and default test suite is
- ovp.1.0.0.
+ovp.1.0.0.
 
 .. code-block:: bash
 
