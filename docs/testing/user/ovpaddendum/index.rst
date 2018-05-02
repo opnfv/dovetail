@@ -414,6 +414,18 @@ documented and accepted by the reviewers.
 Applicants who choose to run the optional test cases can include the results
 of the optional test cases to highlight the additional compliance.
 
+
+Exemption from strict API response validation
+=============================================
+
+Vendors of commercial NFVI products have extended the Nova API to support
+proprietary add-on features. These additions cause Nova Tempest API tests to
+fail due to unexpected data in API responses. In order to resolve this
+transparently in the context of OVP, a temporary exemption process has been
+created. More information on the exemption can be found in section
+:ref:`dovetail-exemption_process_api_response_validation`.
+
+
 .. References
 .. _`OVP Governance Guidelines`: https://www.opnfv.org/wp-content/uploads/sites/12/2018/01/OVP-Governance-Guidelines-1.0.1-012218.pdf
 .. _`Pharos specification`: https://wiki.opnfv.org/display/pharos/Pharos+Specification
