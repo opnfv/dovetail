@@ -553,6 +553,17 @@ arguments 'ipv6', 'sdnvpn' and 'tempest'.
 
    $ dovetail run --testarea mandatory
 
+Dovetail allows the user to disable strict API response validation implemented
+by Nova Tempest tests by means of the ``--no-api-validation`` option. Usage of
+this option is only advisable if the SUT returns Nova API responses that
+contain additional attributes. For more information on this command line option
+and its intended usage, refer to
+:ref:`dovetail-exemption_process_api_response_validation`.
+
+.. code-block:: bash
+
+   $ dovetail run --no-api-validation
+
 By default, results are stored in local files on the Test Host at ``$DOVETAIL_HOME/results``.
 Each time the 'dovetail run' command is executed, the results in the aforementioned directory
 are overwritten. To create a singular compressed result file for upload to the OVP portal or
