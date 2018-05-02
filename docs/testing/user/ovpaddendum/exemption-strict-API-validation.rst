@@ -3,9 +3,11 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) Ericsson and others
 
-==============================================================
-Exemption Process - Disabling Strict API Validation in Tempest
-==============================================================
+.. _dovetail-exemption_process_api_response_validation:
+
+==========================================
+Disabling Strict API Validation in Tempest
+==========================================
 
 .. toctree::
    :maxdepth: 2
@@ -136,7 +138,7 @@ Exemption process for additional properties in API responses in the OVP
 The details of the exemption process for disabling strict validation of API
 responses is as follows:
 
-#. The Dovetail tool provides a new command line option "--non-strict-api" for
+#. The Dovetail tool provides a new command line option "--no-api-validation" for
    disabling strict API validation. This option needs to be explicitly given on
    the command line to disable strict API validation. If this command line
    option is omitted, the default behavior (i.e., strict API validation) is
