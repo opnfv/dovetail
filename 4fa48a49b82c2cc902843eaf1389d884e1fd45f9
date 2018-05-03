@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_b3865ed9",
+        "filename": "docs/testing/user/ovpaddendum/exemption-strict-API-validation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2018-05-03T15:32:48Z",
+      "side": 1,
+      "message": "It seems clear for the case of an API response including additional parameters, however, with this feature enabled, what would happen if a response was missing a parameter?  Will the test pass still (assuming that parameter was not required for the specific test function, i.e. to do something).  That would seem like very very dangerous behavior to allow to claim certification.",
+      "range": {
+        "startLine": 139,
+        "startChar": 57,
+        "endLine": 139,
+        "endChar": 73
+      },
+      "revId": "4fa48a49b82c2cc902843eaf1389d884e1fd45f9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
