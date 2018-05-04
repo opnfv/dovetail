@@ -1,7 +1,5 @@
 ---
-# report_file: 'dovetail_report.txt'
 cli_file_name: 'cmd_config.yml'
-report_dest: 'file'
 result_file: 'results.json'
 
 # OPENSTACK Credential file

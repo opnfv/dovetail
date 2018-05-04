@@ -81,35 +81,19 @@ def check_tc_result(testcase, logger):
     result_dir = dt_cfg.dovetail_config['result_dir']
     validate_type = testcase.validate_type()
     functest_result = dt_cfg.dovetail_config['functest']['result']['file_path']
-    dovetail_result = os.path.join(result_dir,
-                                   dt_cfg.dovetail_config['result_file'])
-    if dt_cfg.dovetail_config['report_dest'].startswith("http"):
-        if dt_utils.store_db_results(dt_cfg.dovetail_config['report_dest'],
-                                     dt_cfg.dovetail_config['build_tag'],
-                                     testcase.name(), dovetail_result,
-                                     logger):
-            logger.info("Results have been pushed to database and stored "
-                        "with local file {}.".format(dovetail_result))
-        else:
-            logger.error("Failed to push results to database.")
-    if dt_cfg.dovetail_config['report_dest'] == "file":
-        if validate_type.lower() == 'yardstick':
-            result_file = os.path.join(result_dir, testcase.name() + '.out')
-        elif validate_type.lower() == 'functest':
-            result_file = os.path.join(result_dir, functest_result)
-        elif validate_type.lower() == 'bottlenecks':
-            result_file = os.path.join(result_dir, testcase.name() + '.out')
-        elif validate_type.lower() == 'vnftest':
-            result_file = os.path.join(result_dir, testcase.name() + '.out')
-        else:
-            logger.error("Don't support {} now.".format(validate_type))
-            return
-        if os.path.isfile(result_file):
-            logger.info(
-                "Results have been stored with file {}.".format(result_file))
-        else:
-            logger.error(
-                "Failed to store results with file {}.".format(result_file))
+    if validate_type.lower() in ['yardstick', 'bottlenecks', 'vnftest']:
+        result_file = os.path.join(result_dir, testcase.name() + '.out')
+    elif validate_type.lower() == 'functest':
+        result_file = os.path.join(result_dir, functest_result)
+    else:
+        logger.error("Don't support {} now.".format(validate_type))
+        return
+    if os.path.isfile(result_file):
+        logger.info(
+            "Results have been stored with file {}.".format(result_file))
+    else:
+        logger.error(
+            "Failed to store results with file {}.".format(result_file))
     result = Report.get_result(testcase)
     Report.check_result(testcase, result)
     return result
@@ -135,15 +119,6 @@ def validate_input(input_dict, check_dict, logger):
     #     logger.error("The input option 'bott_tag' can't be {}, "
     #                  "valid values are {}.".format(bott_tag, valid_tag))
     #     raise SystemExit(1)
-
-    # for 'report' option
-    report = input_dict['report']
-    if report:
-        if report != "default":
-            if not (report.startswith("http") or report == "file"):
-                logger.error("Report type can't be {}, valid types are 'file' "
-                             "and 'http'.".format(input_dict['report']))
-                raise SystemExit(1)
 
 
 def filter_config(input_dict, logger):
@@ -288,16 +263,6 @@ def main(*args, **kwargs):
     if configs is not None:
         dt_cfg.update_config(configs)
 
-    if kwargs['report']:
-        if(kwargs['report'].endswith('/')):
-            kwargs['report'] = kwargs['report'][0:kwargs['report'].rfind('/')]
-        if(kwargs['report'] == "default"):
-            host_ip = os.popen(
-                "/sbin/ip route|awk '/default/ { print $3 }'").read().rstrip()
-            kwargs['report'] = "http://" + host_ip + ":8000/api/v1/results"
-        dt_cfg.dovetail_config['report_dest'] = kwargs['report']
-        dt_cfg.update_cmds()
-
     if kwargs['offline']:
         dt_cfg.dovetail_config['offline'] = True
     else:
@@ -320,12 +285,10 @@ def main(*args, **kwargs):
         testsuite_yaml = load_testsuite(kwargs['testsuite'])
         load_testcase()
         duration = run_test(testsuite_yaml, testarea, logger, kwargs)
-        if (dt_cfg.dovetail_config['report_dest'] == "file" and
-                duration != "stop_on_fail"):
+        if (duration != "stop_on_fail"):
             Report.generate(testsuite_yaml, testarea, duration)
-        if (dt_cfg.dovetail_config['report_dest'].startswith("http") and
-                duration != "stop_on_fail"):
-            Report.save_logs()
+            if (kwargs['report']):
+                Report.save_logs()
     else:
         logger.error('Invalid input commands, testsuite {} testarea {}'
                      .format(kwargs['testsuite'], origin_testarea))

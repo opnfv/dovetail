@@ -9,7 +9,6 @@
 from __future__ import division
 
 import json
-import urllib2
 import re
 import os
 import datetime
@@ -178,18 +177,6 @@ class Report(object):
                     f_out.add(os.path.join('results', f))
         os.chdir(cwd)
 
-    # save to disk as default
-    @classmethod
-    def save(cls, report):
-        report_file_name = dt_cfg.dovetail_config['report_file']
-        try:
-            with open(os.path.join(dt_cfg.dovetail_config['result_dir'],
-                      report_file_name), 'w') as report_file:
-                report_file.write(report)
-            cls.logger.info('Save report to {}'.format(report_file_name))
-        except Exception:
-            cls.logger.exception('Failed to save: {}'.format(report_file_name))
-
     @classmethod
     def get_result(cls, testcase):
         validate_testcase = testcase.validate_testcase()
@@ -216,7 +203,22 @@ class Report(object):
         return result
 
 
-class FunctestCrawler(object):
+class Crawler(object):
+
+    def add_result_to_file(self, result):
+        result_file = os.path.join(dt_cfg.dovetail_config['result_dir'],
+                                   dt_cfg.dovetail_config['result_file'])
+        try:
+            with open(result_file, 'a') as f:
+                f.write(json.dumps(result) + '\n')
+                return True
+        except Exception as e:
+            self.logger.exception("Failed to add result to file {}, "
+                                  "exception: {}".format(result_file, e))
+            return False
+
+
+class FunctestCrawler(Crawler):
 
     logger = None
 
@@ -230,12 +232,7 @@ class FunctestCrawler(object):
             dt_logger.Logger(__name__ + '.FunctestCrawler').getLogger()
 
     def crawl(self, testcase=None):
-        report_dest = dt_cfg.dovetail_config['report_dest']
-        if report_dest.lower() == 'file':
-            return self.crawl_from_file(testcase)
-
-        if report_dest.lower().startswith('http'):
-            return self.crawl_from_url(testcase)
+        return self.crawl_from_file(testcase)
 
     def crawl_from_file(self, testcase=None):
         dovetail_config = dt_cfg.dovetail_config
@@ -267,6 +264,7 @@ class FunctestCrawler(object):
                     if (testcase_name == data['case_name'] or
                         data['project_name'] == "sdnvpn") and \
                         build_tag == data['build_tag']:
+                        self.add_result_to_file(data)
                         criteria = data['criteria']
                         timestart = data['start_date']
                         timestop = data['stop_date']
@@ -297,21 +295,8 @@ class FunctestCrawler(object):
         self.logger.debug('Results: {}'.format(str(json_results)))
         return json_results
 
-    def crawl_from_url(self, testcase=None):
-        url = "%s?case=%s&last=1" % \
-            (dt_cfg.dovetail_config['report_dest'],
-             testcase.validate_testcase())
-        self.logger.debug("Query to rest api: {}".format(url))
-        try:
-            data = json.load(urllib2.urlopen(url))
-            return data['results'][0]
-        except Exception as e:
-            self.logger.exception("Cannot read content from the url: {}, "
-                                  "exception: {}".format(url, e))
-            return None
 
-
-class YardstickCrawler(object):
+class YardstickCrawler(Crawler):
 
     logger = None
 
@@ -325,12 +310,7 @@ class YardstickCrawler(object):
             dt_logger.Logger(__name__ + '.YardstickCrawler').getLogger()
 
     def crawl(self, testcase=None):
-        report_dest = dt_cfg.dovetail_config['report_dest']
-        if report_dest.lower() == 'file':
-            return self.crawl_from_file(testcase)
-
-        if report_dest.lower().startswith('http'):
-            return self.crawl_from_url(testcase)
+        return self.crawl_from_file(testcase)
 
     def crawl_from_file(self, testcase=None):
         file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
@@ -342,6 +322,7 @@ class YardstickCrawler(object):
         with open(file_path, 'r') as f:
             for jsonfile in f:
                 data = json.loads(jsonfile)
+                self.add_result_to_file(data, testcase.name())
                 try:
                     criteria = data['result']['criteria']
                     if criteria == 'PASS':
@@ -356,11 +337,14 @@ class YardstickCrawler(object):
         self.logger.debug('Results: {}'.format(str(json_results)))
         return json_results
 
-    def crawl_from_url(self, testcase=None):
-        return None
+    def add_result_to_file(self, result, tc_name):
+        build_tag = '{}-{}'.format(dt_cfg.dovetail_config['build_tag'],
+                                   tc_name)
+        result['build_tag'] = build_tag
+        super(YardstickCrawler, self).add_result_to_file(result)
 
 
-class BottlenecksCrawler(object):
+class BottlenecksCrawler(Crawler):
 
     logger = None
 
@@ -374,12 +358,7 @@ class BottlenecksCrawler(object):
             dt_logger.Logger(__name__ + '.BottlenecksCrawler').getLogger()
 
     def crawl(self, testcase=None):
-        report_dest = dt_cfg.dovetail_config['report_dest']
-        if report_dest.lower() == 'file':
-            return self.crawl_from_file(testcase)
-
-        if report_dest.lower().startswith('http'):
-            return self.crawl_from_url(testcase)
+        return self.crawl_from_file(testcase)
 
     def crawl_from_file(self, testcase=None):
         file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
@@ -403,11 +382,8 @@ class BottlenecksCrawler(object):
         self.logger.debug('Results: {}'.format(str(json_results)))
         return json_results
 
-    def crawl_from_url(self, testcase=None):
-        return None
 
-
-class ShellCrawler(object):
+class ShellCrawler(Crawler):
 
     def __init__(self):
         self.type = 'shell'
@@ -428,7 +404,7 @@ class ShellCrawler(object):
             return None
 
 
-class VnftestCrawler(object):
+class VnftestCrawler(Crawler):
 
     logger = None
 
@@ -442,12 +418,7 @@ class VnftestCrawler(object):
             dt_logger.Logger(__name__ + '.VnftestCrawler').getLogger()
 
     def crawl(self, testcase):
-        report_dest = dt_cfg.dovetail_config['report_dest']
-        if report_dest.lower() == 'file':
-            return self.crawl_from_file(testcase)
-
-        if report_dest.lower().startswith('http'):
-            return self.crawl_from_url(testcase)
+        return self.crawl_from_file(testcase)
 
     def crawl_from_file(self, testcase):
 
@@ -467,9 +438,6 @@ class VnftestCrawler(object):
         json_results = {'criteria': criteria}
         self.logger.debug('Results: {}'.format(str(json_results)))
         return json_results
-
-    def crawl_from_url(self, testcase=None):
-        return None
 
 
 class CrawlerFactory(object):

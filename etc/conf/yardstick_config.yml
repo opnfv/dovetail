@@ -14,7 +14,7 @@ yardstick:
   image_name: opnfv/yardstick
   docker_tag: stable
   opts: '-id --privileged=true'
-  envs: {{os_cacert}}
+  envs: "{{os_cacert}} -e YARDSTICK_BRANCH=fraser"
   config:
     dir: '/home/opnfv/userconfig'
   pre_condition:

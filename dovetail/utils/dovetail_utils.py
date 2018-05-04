@@ -15,7 +15,6 @@ import re
 import subprocess
 from collections import Mapping, Set, Sequence
 import json
-import urllib2
 from datetime import datetime
 from distutils.version import LooseVersion
 import yaml
@@ -163,23 +162,6 @@ def get_ext_net_name(env_file, logger=None):
         if not ret:
             return msg
         return None
-
-
-def store_db_results(db_url, build_tag, testcase, dest_file, logger):
-    url = "%s?build_tag=%s-%s" % (db_url, build_tag, testcase)
-    logger.debug("Query to rest api: {}".format(url))
-    try:
-        data = json.load(urllib2.urlopen(url))
-        if data['results']:
-            with open(dest_file, 'a') as f:
-                f.write(json.dumps(data['results'][0]) + '\n')
-            return True
-        else:
-            return False
-    except Exception as e:
-        logger.exception(
-            "Cannot read content from {}, exception: {}".format(url, e))
-        return False
 
 
 def get_duration(start_date, stop_date, logger):

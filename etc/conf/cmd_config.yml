@@ -70,7 +70,8 @@ cli:
         flags:
           - '--report'
           - '-r'
-        help: 'push results to DB (e.g. --report http://192.168.135.2:8000/api/v1/results)'
+        is_flag: 'True'
+        help: 'Create a tarball file to upload to OVP web portal'
       offline:
         flags:
           - '--offline'
