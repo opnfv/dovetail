@@ -18,3 +18,5 @@ proposed_tests:
     - dovetail.sdnvpn.tc000
     # patrole
     - dovetail.security.patrole
+    # vEPC
+    - dovetail.vnf.vepc
