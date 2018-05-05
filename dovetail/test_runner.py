@@ -139,6 +139,10 @@ class FunctestRunner(DockerRunner):
             source_file = os.path.join(result_path, 'bgpvpn.log')
         elif validate_testcase == 'patrole':
             source_file = os.path.join(result_path, 'patrole', 'tempest.log')
+        elif validate_testcase == 'neutron_trunk':
+            source_file = os.path.join(result_path,
+                                       'neutron_trunk',
+                                       'tempest.log')
         else:
             source_file = None
         if source_file:

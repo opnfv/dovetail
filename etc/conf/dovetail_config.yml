@@ -64,6 +64,7 @@ functest_testsuite:
   - rally_sanity
   - promise
   - patrole
+  - neutron_trunk
 
 functest_testcase:
   - bgpvpn
