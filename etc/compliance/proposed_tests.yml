@@ -4,17 +4,19 @@ proposed_tests:
   testcases_list:
   # proposed test cases for 2nd release
     # smoke
-    - dovetail.smoke.tc001
-    - dovetail.smoke.tc002
-    # HA
-    - dovetail.ha.tc009
-    - dovetail.ha.tc010
-    - dovetail.ha.tc011
-    # vnf
-    - dovetail.vnf.tc001
-    # stress
-    - dovetail.stress.tc001
-    # sdnvpn
-    - dovetail.sdnvpn.tc000
-    # patrole
-    - dovetail.security.patrole
+#    - dovetail.smoke.tc001
+#    - dovetail.smoke.tc002
+#    # HA
+#    - dovetail.ha.tc009
+#    - dovetail.ha.tc010
+#    - dovetail.ha.tc011
+#    # vnf
+#    - dovetail.vnf.tc001
+#    # stress
+#    - dovetail.stress.tc001
+#    # sdnvpn
+#    - dovetail.sdnvpn.tc000
+#    # patrole
+#    - dovetail.security.patrole
+     # Neutron trunk port Tempest tests
+     - dovetail.tempest.neutron_trunk_ports
