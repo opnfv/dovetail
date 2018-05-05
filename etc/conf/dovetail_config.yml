@@ -70,6 +70,7 @@ functest_testcase:
   - cloudify_ims
   - odl
   - snaps_smoke
+  - juju_epc
 
 # used for testcase cmd template in jinja2 format
 # we have two variables available now
