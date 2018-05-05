@@ -18,6 +18,7 @@ proposed_tests:
     - dovetail.ha.database
     # vnf
     - dovetail.vnf.vims
+    - dovetail.vnf.vepc
     # security
     - dovetail.security.patrole
     # sdnvpn
