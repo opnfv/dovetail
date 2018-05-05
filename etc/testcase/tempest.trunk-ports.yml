@@ -1,0 +1,9 @@
+---
+dovetail.tempest.neutron_trunk_ports:
+  name: dovetail.tempest.neutron_trunk_ports
+  objective: Run Neutron trunk port Tempest tests
+  validate:
+    type: functest
+    testcase: neutron_trunk
+  report:
+    sub_testcase_list:

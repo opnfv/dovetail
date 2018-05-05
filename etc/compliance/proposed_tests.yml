@@ -18,3 +18,5 @@ proposed_tests:
     - dovetail.sdnvpn.tc000
     # patrole
     - dovetail.security.patrole
+    # Neutron trunk port Tempest tests
+    - dovetail.tempest.neutron_trunk_ports
