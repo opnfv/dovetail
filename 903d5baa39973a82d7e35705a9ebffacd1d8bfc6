@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_48b7603a",
+        "filename": "docs/testing/user/ovpaddendum/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 422,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-05-07T08:05:18Z",
+      "side": 1,
+      "message": "is/are",
+      "range": {
+        "startLine": 422,
+        "startChar": 42,
+        "endLine": 422,
+        "endChar": 44
+      },
+      "revId": "903d5baa39973a82d7e35705a9ebffacd1d8bfc6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
