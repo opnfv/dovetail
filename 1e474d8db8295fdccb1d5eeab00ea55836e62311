@@ -22,6 +22,30 @@
       "revId": "1e474d8db8295fdccb1d5eeab00ea55836e62311",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_01b1b346",
+        "filename": "etc/conf/dovetail_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-05-08T10:24:23Z",
+      "side": 1,
+      "message": "Agree to using the testcase.json.\n\nI wanted to get this test integrated quickly based on the current framework. Where to able to run this test? It hangs on my virtual deployment and times out.",
+      "parentUuid": "5a3f45e8_68897c74",
+      "range": {
+        "startLine": 67,
+        "startChar": 3,
+        "endLine": 67,
+        "endChar": 12
+      },
+      "revId": "1e474d8db8295fdccb1d5eeab00ea55836e62311",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
