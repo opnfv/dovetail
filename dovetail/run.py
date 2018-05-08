@@ -38,21 +38,16 @@ def load_testsuite(testsuite):
     return Testsuite.get(testsuite)
 
 
-def load_testcase():
-    Testcase.load()
-
-
-def run_test(testsuite, testarea, logger, kwargs):
-    testcase_list = Testcase.get_testcase_list(testsuite, testarea)
+def run_test(testcase_list, logger):
     duration = 0
+    if not testcase_list:
+        logger.warning("No test case will be executed.")
+        return duration
+
     start_time = time.time()
     for testcase_name in testcase_list:
         logger.info('>>[testcase]: {}'.format(testcase_name))
         testcase = Testcase.get(testcase_name)
-        if testcase is None:
-            logger.error('Test case {} is not defined in testcase folder, '
-                         'skipping.'.format(testcase_name))
-            continue
         run_testcase = True
 
         # if testcase.exceed_max_retry_times():
@@ -67,7 +62,7 @@ def run_test(testsuite, testarea, logger, kwargs):
         stop_on_fail = check_tc_result(testcase, logger)
         try:
             if (not stop_on_fail or stop_on_fail['criteria'] == "FAIL") \
-                and kwargs['stop']:
+                and dt_cfg.dovetail_config['stop']:
                 return "stop_on_fail"
         except KeyError as e:
             logger.error("There is no key {}.".format(e))
@@ -235,6 +230,57 @@ def check_hosts_file(logger):
                     "domain name resolution.".format(hosts_file))
 
 
+def parse_cli(logger=None, **kwargs):
+    validate_input(kwargs, dt_cfg.dovetail_config['validate_input'], logger)
+    configs = filter_config(kwargs, logger)
+    if configs is not None:
+        dt_cfg.update_config(configs)
+    dt_cfg.dovetail_config['offline'] = True if kwargs['offline'] else False
+    dt_cfg.dovetail_config['noclean'] = True if kwargs['no_clean'] else False
+    dt_cfg.dovetail_config['stop'] = True if kwargs['stop'] else False
+    if kwargs['no_api_validation']:
+        dt_cfg.dovetail_config['no_api_validation'] = True
+        logger.warning('Strict API response validation DISABLED.')
+    else:
+        dt_cfg.dovetail_config['no_api_validation'] = False
+
+
+def check_testcase_list(testcase_list, logger=None):
+    if testcase_list:
+        for tc in testcase_list:
+            if tc not in Testcase.testcase_list:
+                logger.error('Test case {} is not defined.'.format(tc))
+                return None
+        return testcase_list
+    return None
+
+
+# If specify 'testcase' with CLI, ignore 'testsuite' and 'testarea'
+# If not specify 'testcase', check combination of 'testsuite' and 'testarea'
+def get_testcase_list(logger=None, **kwargs):
+    Testcase.load()
+    testcase_list = kwargs['testcase']
+    if testcase_list:
+        return check_testcase_list(testcase_list, logger)
+
+    testsuite_validation = False
+    testsuite = kwargs['testsuite']
+    if testsuite in dt_cfg.dovetail_config['testsuite_supported']:
+        testsuite_validation = True
+    origin_testarea = kwargs['testarea']
+    testarea_validation, testarea = Testcase.check_testarea(origin_testarea)
+
+    if testsuite_validation and testarea_validation:
+        testsuite_yaml = load_testsuite(testsuite)
+        testcase_list = Testcase.get_testcase_list(testsuite_yaml, testarea)
+        return check_testcase_list(testcase_list, logger)
+    elif not testsuite_validation:
+        logger.error('Test suite {} is not defined.'.format(testsuite))
+    else:
+        logger.error('Test area {} is not defined.'.format(origin_testarea))
+    return None
+
+
 def main(*args, **kwargs):
     """Dovetail compliance test entry!"""
     build_tag = "daily-master-%s" % str(uuid.uuid1())
@@ -251,47 +297,21 @@ def main(*args, **kwargs):
     logger.info('Dovetail compliance: {}!'.format(kwargs['testsuite']))
     logger.info('================================================')
     logger.info('Build tag: {}'.format(dt_cfg.dovetail_config['build_tag']))
+    parse_cli(logger, **kwargs)
     env_init(logger)
     copy_userconfig_files(logger)
     copy_patch_files(logger)
     dt_utils.check_docker_version(logger)
     dt_utils.get_openstack_endpoint(logger)
-    validate_input(kwargs, dt_cfg.dovetail_config['validate_input'], logger)
     check_hosts_file(logger)
-    configs = filter_config(kwargs, logger)
-
-    if configs is not None:
-        dt_cfg.update_config(configs)
-
-    if kwargs['offline']:
-        dt_cfg.dovetail_config['offline'] = True
-    else:
-        dt_cfg.dovetail_config['offline'] = False
-
-    if kwargs['no_api_validation']:
-        dt_cfg.dovetail_config['no_api_validation'] = True
-        logger.warning('Strict API response validation DISABLED.')
-    else:
-        dt_cfg.dovetail_config['no_api_validation'] = False
-
     dt_utils.get_hardware_info(logger)
 
-    origin_testarea = kwargs['testarea']
-    testsuite_validation = False
-    if kwargs['testsuite'] in dt_cfg.dovetail_config['testsuite_supported']:
-        testsuite_validation = True
-    testarea_validation, testarea = Testcase.check_testarea(origin_testarea)
-    if testsuite_validation and testarea_validation:
-        testsuite_yaml = load_testsuite(kwargs['testsuite'])
-        load_testcase()
-        duration = run_test(testsuite_yaml, testarea, logger, kwargs)
-        if (duration != "stop_on_fail"):
-            Report.generate(testsuite_yaml, testarea, duration)
-            if (kwargs['report']):
-                Report.save_logs()
-    else:
-        logger.error('Invalid input commands, testsuite {} testarea {}'
-                     .format(kwargs['testsuite'], origin_testarea))
+    testcase_list = get_testcase_list(logger, **kwargs)
+    duration = run_test(testcase_list, logger)
+    if (duration != "stop_on_fail"):
+        Report.generate(testcase_list, duration)
+        if (kwargs['report']):
+            Report.save_logs()
 
 
 dt_cfg.load_config_files(constants.CONF_PATH)
