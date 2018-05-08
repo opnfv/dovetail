@@ -113,7 +113,8 @@ class DockerRunner(object):
                 ret, msg = Container.exec_cmd(container_id, cmd)
         self.testcase.cleaned(True)
 
-        Container.clean(container_id, self.type)
+        if not dt_cfg.dovetail_config['noclean']:
+            Container.clean(container_id, self.type)
 
     def save_logs(self):
         pass

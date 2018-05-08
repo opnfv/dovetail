@@ -53,7 +53,12 @@ cli:
         flags:
           - '--testarea'
         multiple: 'True'
-        help: 'compliance testarea within testsuite'
+        help: 'Compliance testarea within testsuite. Specify option multiple times to include multiple test areas.'
+      testcase:
+        flags:
+          - '--testcase'
+        multiple: 'True'
+        help: 'Compliance testcase. Specify option multiple times to include multiple test cases.'
       debug:
         flags:
           - '--debug'
@@ -82,3 +87,9 @@ cli:
           - '--no-api-validation'
         is_flag: 'True'
         help: 'disable strict API response validation'
+      noclean:
+        flags:
+          - '--no-clean'
+          - '-n'
+        is_flag: 'True'
+        help: 'Keep all Containers created for debuging.'

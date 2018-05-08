@@ -42,20 +42,19 @@ class Report(object):
             checker.check(testcase, db_result)
 
     @classmethod
-    def generate_json(cls, testsuite_yaml, testarea, duration):
+    def generate_json(cls, testcase_list, duration):
         report_obj = {}
         report_obj['version'] = \
             version.VersionInfo('dovetail').version_string()
-        report_obj['testsuite'] = testsuite_yaml['name']
-        # TO DO: once dashboard url settled, adjust accordingly
-        report_obj['dashboard'] = None
         report_obj['build_tag'] = dt_cfg.dovetail_config['build_tag']
         report_obj['upload_date'] =\
             datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
         report_obj['duration'] = duration
 
         report_obj['testcases_list'] = []
-        testcase_list = Testcase.get_testcase_list(testsuite_yaml, testarea)
+        if not testcase_list:
+            return report_obj
+
         for testcase_name in testcase_list:
             testcase = Testcase.get(testcase_name)
             testcase_inreport = {}
@@ -81,19 +80,14 @@ class Report(object):
         return report_obj
 
     @classmethod
-    def generate(cls, testsuite_yaml, testarea, duration):
-        report_data = cls.generate_json(testsuite_yaml, testarea, duration)
+    def generate(cls, testcase_list, duration):
+        report_data = cls.generate_json(testcase_list, duration)
         report_txt = ''
         report_txt += '\n\nDovetail Report\n'
         report_txt += 'Version: %s\n' % report_data['version']
-        report_txt += 'TestSuite: %s\n' % report_data['testsuite']
-        report_txt += 'Result Dashboard: %s\n' % report_data['dashboard']
         report_txt += 'Build Tag: %s\n' % report_data['build_tag']
         report_txt += 'Upload Date: %s\n' % report_data['upload_date']
-        if report_data['duration'] == 0:
-            report_txt += 'Duration: %s\n\n' % 'N/A'
-        else:
-            report_txt += 'Duration: %.2f s\n\n' % report_data['duration']
+        report_txt += 'Duration: %.2f s\n\n' % report_data['duration']
 
         total_num = 0
         pass_num = 0
@@ -138,7 +132,7 @@ class Report(object):
             report_txt += 'Assessed test areas:\n'
         else:
             report_txt += \
-                'no testcase or all testcases are skipped in this testsuite'
+                'no testcase or all testcases are skipped in this testsuite\n'
 
         for key in sub_report:
             if testcase_num[key] != 0:
@@ -158,7 +152,6 @@ class Report(object):
                 report_txt += sub_report[key]
 
         cls.logger.info(report_txt)
-        # cls.save(report_txt)
         return report_txt
 
     @classmethod
