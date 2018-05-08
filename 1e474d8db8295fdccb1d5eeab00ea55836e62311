@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_68897c74",
+        "filename": "etc/conf/dovetail_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-05-08T06:45:58Z",
+      "side": 1,
+      "message": "This test case should be added into next section \u0027functest_testcase\u0027 which means has no sub test cases.\nOtherwise it will be KeyError exception.\nThe only usage of \u0027functest_testsuite\u0027 and \u0027functest_testcase\u0027 is https://github.com/opnfv/dovetail/blob/master/dovetail/report.py#L252\nIt\u0027s better to leverage another section with test cases configure files or the testcase.json file we are planning now rather than these 2 sections here.",
+      "range": {
+        "startLine": 67,
+        "startChar": 3,
+        "endLine": 67,
+        "endChar": 12
+      },
+      "revId": "1e474d8db8295fdccb1d5eeab00ea55836e62311",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
