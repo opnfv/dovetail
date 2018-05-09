@@ -46,6 +46,30 @@
       "revId": "1e474d8db8295fdccb1d5eeab00ea55836e62311",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3f45e8_fc738e7d",
+        "filename": "etc/conf/dovetail_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-05-09T01:12:15Z",
+      "side": 1,
+      "message": "Agree to add it with the current framework quickly.\nAnd then \u0027juju_epc\u0027 should be moved to next section \u0027functest_testcase\u0027.\nFunctest only runs it with the baremetal deployment and it doesn\u0027t support virtual environment. I also meet the same time-out problem.\nI just set up a Compass baremetal nosdn-nofeature env and will test juju_epc with that pod.",
+      "parentUuid": "5a3f45e8_01b1b346",
+      "range": {
+        "startLine": 67,
+        "startChar": 3,
+        "endLine": 67,
+        "endChar": 12
+      },
+      "revId": "1e474d8db8295fdccb1d5eeab00ea55836e62311",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
