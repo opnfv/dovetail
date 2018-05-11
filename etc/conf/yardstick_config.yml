@@ -32,7 +32,3 @@ yardstick:
     dir: '/tmp/yardstick'
     file_path: 'yardstick.log'
   openrc: '/etc/yardstick/openstack.creds'
-  copy_file_in_container:
-  -
-    src_file: 'pre_config/id_rsa'
-    dest_file: '/root/.ssh/id_rsa'

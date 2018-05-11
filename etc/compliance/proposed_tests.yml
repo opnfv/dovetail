@@ -10,6 +10,7 @@ proposed_tests:
     - dovetail.ha.tc009
     - dovetail.ha.tc010
     - dovetail.ha.tc011
+    - dovetail.ha.database
     # vnf
     - dovetail.vnf.tc001
     # stress
