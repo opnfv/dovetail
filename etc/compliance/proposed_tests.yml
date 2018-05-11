@@ -4,24 +4,25 @@ proposed_tests:
   testcases_list:
   # proposed test cases for 2nd release
     # smoke
-#    - dovetail.tempest.compute
-#    - dovetail.tempest.identity_v2
-#    - dovetail.tempest.identity_v3
-#    - dovetail.tempest.image
-#    - dovetail.tempest.network
-#    - dovetail.tempest.orchestration
-#    - dovetail.tempest.volume
+    - dovetail.tempest.compute
+    - dovetail.tempest.identity_v2
+    - dovetail.tempest.identity_v3
+    - dovetail.tempest.image
+    - dovetail.tempest.network
+    - dovetail.tempest.orchestration
+    - dovetail.tempest.volume
     # HA
-#    - dovetail.ha.controller_restart
-#    - dovetail.ha.rabbitmq
-#    - dovetail.ha.neutron_l3_agent
+    - dovetail.ha.controller_restart
+    - dovetail.ha.rabbitmq
+    - dovetail.ha.neutron_l3_agent
+    - dovetail.ha.database
     # vnf
-#    - dovetail.vnf.vims
+    - dovetail.vnf.vims
     # stress
-#    - dovetail.stress.ping
+    - dovetail.stress.ping
     # sdnvpn
-#    - dovetail.tempest.bgpvpn
+    - dovetail.tempest.bgpvpn
     # patrole
-#    - dovetail.security.patrole
+    - dovetail.security.patrole
     # Neutron trunk port Tempest tests
-#    - dovetail.tempest.neutron_trunk_ports
+    - dovetail.tempest.neutron_trunk_ports
