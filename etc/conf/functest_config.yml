@@ -1,7 +1,7 @@
 ---
 functest:
   image_name: opnfv/functest-smoke
-  docker_tag: opnfv-6.0.0
+  docker_tag: fraser
   opts: '-id --privileged=true'
   envs: '-e INSTALLER_TYPE=unknown -e DEPLOY_SCENARIO=unknown -e NODE_NAME=unknown
          -e TEST_DB_URL=file:///home/opnfv/functest/results/functest_results.txt'
