@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "1a494da4_5ee23104",
+        "filename": "etc/compliance/proposed_tests.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-05-14T19:26:39Z",
+      "side": 1,
+      "message": "The Snaps tests got lost in my editing attempts - not on purpose. However, you seem to prefer not to include the SNAPS tests for the reasons mentioned. Can you reach out to your Functest contacts to find out their concrete plans regarding removing SNAPS?",
+      "parentUuid": "1a494da4_3b5e57ea",
+      "range": {
+        "startLine": 15,
+        "startChar": 6,
+        "endLine": 15,
+        "endChar": 26
+      },
+      "revId": "b2088b43a305743f937d9eb3cb8a30cb6bc5d8dd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_250cb693",
         "filename": "etc/testcase/tempest.scenario.yml",
         "patchSetId": 3
