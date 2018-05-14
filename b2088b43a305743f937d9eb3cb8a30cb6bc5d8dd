@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "1a494da4_3b5e57ea",
+        "filename": "etc/compliance/proposed_tests.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-05-14T01:27:14Z",
+      "side": 1,
+      "message": "Don\u0027t we consider snaps anymore?\nSteven will step down as PTL of snaps soon and I am afraid that there will be nobody to maintain snaps. Also Functest has already begun to transfer from snaps to shade. They maybe delete snaps test cases in the future release.",
+      "range": {
+        "startLine": 15,
+        "startChar": 6,
+        "endLine": 15,
+        "endChar": 26
+      },
+      "revId": "b2088b43a305743f937d9eb3cb8a30cb6bc5d8dd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3f45e8_250cb693",
         "filename": "etc/testcase/tempest.scenario.yml",
         "patchSetId": 3
