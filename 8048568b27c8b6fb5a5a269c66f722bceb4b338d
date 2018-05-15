@@ -22,6 +22,30 @@
       "revId": "8048568b27c8b6fb5a5a269c66f722bceb4b338d",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a494da4_5ed6b1c6",
+        "filename": "etc/conf/yardstick_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-05-15T06:58:15Z",
+      "side": 0,
+      "message": "This does not seem to be called anywhere. If I missed if, please point me to the code. Even if this would be called, the copy command would fail because in the current version of Yardstick, no /root/.ssh directory exists. That would have to be created, too.",
+      "parentUuid": "1a494da4_7e83adcc",
+      "range": {
+        "startLine": 35,
+        "startChar": 2,
+        "endLine": 38,
+        "endChar": 34
+      },
+      "revId": "8048568b27c8b6fb5a5a269c66f722bceb4b338d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
