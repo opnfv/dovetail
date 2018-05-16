@@ -61,7 +61,7 @@ ID to login. Users are welcome to use the portal to upload, inspect and share re
 manner. In order to submit results for official review, the first step is apply for acceptance
 into the program with the participation form provided in the link:
 
- * https://na3.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=e03e78d7-c32e-47d3-8292-350b747a0105
+ * https://na3.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=579ac00d-0a1f-4db3-82ea-ddd977769a60
 
 Test Suites & Test Areas
 ------------------------
