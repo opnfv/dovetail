@@ -23,3 +23,4 @@ dovetail.tempest.identity_v3:
       - tempest.api.identity.admin.v3.test_roles.RolesV3TestJSON.test_role_create_update_show_list[id-18afc6c0-46cf-4911-824e-9989cc056c3a,smoke]
       - tempest.api.identity.admin.v3.test_services.ServicesTestJSON.test_create_update_get_service[id-5193aad5-bcb7-411d-85b0-b3b61b96ef06,smoke]
       - tempest.api.identity.admin.v3.test_trusts.TrustsV3TestJSON.test_get_trusts_all[id-4773ebd5-ecbf-4255-b8d8-b63e6f72b65d,smoke]
+      - tempest.api.identity.v3.test_api_discovery.TestApiDiscovery.test_list_api_versions[id-721f480f-35b6-46c7-846e-047e6acea0dc,smoke]
