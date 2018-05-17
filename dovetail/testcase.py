@@ -16,6 +16,7 @@ from parser import Parser
 from test_runner import TestRunnerFactory
 from utils.dovetail_config import DovetailConfig as dt_cfg
 import utils.dovetail_logger as dt_logger
+import utils.dovetail_utils as dt_utils
 
 
 class Testcase(object):
@@ -273,7 +274,10 @@ class Testcase(object):
     @classmethod
     def get_testcase_list(cls, testsuite, testarea):
         testcase_list = []
-        for value in testsuite['testcases_list']:
+        testcases = dt_utils.get_value_from_dict('testcases_list', testsuite)
+        if not testcases:
+            return testcase_list
+        for value in testcases:
             for area in testarea:
                 if value is not None and (area == 'full' or area in value):
                     testcase_list.append(value)
