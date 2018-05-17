@@ -57,7 +57,7 @@ dovetail.tempest.ipv6:
       #
       - tempest.scenario.test_network_v6.TestGettingAddress.test_multi_prefix_dhcpv6_stateless[compute,id-7ab23f41-833b-4a16-a7c9-5b42fe6d4123,network,slow]
       #
-      - tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_multi_prefix_dhcpv6_stateless[compute,id-cf1c4425-766b-45b8-be35-e2959728eb00,network]
+      - tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_multi_prefix_dhcpv6_stateless[compute,id-cf1c4425-766b-45b8-be35-e2959728eb00,network,slow]
       #
       - tempest.scenario.test_network_v6.TestGettingAddress.test_slaac_from_os[compute,id-2c92df61-29f0-4eaa-bee3-7c65bef62a43,network,slow]
       #
