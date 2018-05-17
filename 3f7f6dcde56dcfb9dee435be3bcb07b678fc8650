@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a494da4_35ee6023",
+        "filename": "etc/testcase/tempest.compute.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-05-17T01:56:54Z",
+      "side": 1,
+      "message": "These 3 are the new added in Tempest smoke for Tempest 17.1.0",
+      "range": {
+        "startLine": 24,
+        "startChar": 8,
+        "endLine": 26,
+        "endChar": 14
+      },
+      "revId": "3f7f6dcde56dcfb9dee435be3bcb07b678fc8650",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a494da4_95f3f409",
+        "filename": "etc/testcase/tempest.identity_v3.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-05-17T01:56:54Z",
+      "side": 1,
+      "message": "This is new for tempest.17.1.0",
+      "range": {
+        "startLine": 26,
+        "startChar": 8,
+        "endLine": 26,
+        "endChar": 32
+      },
+      "revId": "3f7f6dcde56dcfb9dee435be3bcb07b678fc8650",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a494da4_75f8e8e5",
+        "filename": "etc/testcase/tempest.image.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-05-17T01:56:54Z",
+      "side": 1,
+      "message": "This is new for tempest.17.1.0",
+      "range": {
+        "startLine": 17,
+        "startChar": 8,
+        "endLine": 17,
+        "endChar": 48
+      },
+      "revId": "3f7f6dcde56dcfb9dee435be3bcb07b678fc8650",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}

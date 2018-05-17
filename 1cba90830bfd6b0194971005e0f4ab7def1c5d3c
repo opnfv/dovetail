@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a494da4_b5d9d085",
+        "filename": "etc/testcase/tempest.orchestration.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-05-17T01:56:54Z",
+      "side": 0,
+      "message": "There is no orchestration test cases in tempest now.",
+      "range": {
+        "startLine": 2,
+        "startChar": 1,
+        "endLine": 2,
+        "endChar": 31
+      },
+      "revId": "1cba90830bfd6b0194971005e0f4ab7def1c5d3c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a494da4_95cad49f",
+        "filename": "etc/testcase/tempest.volume.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-05-17T01:56:54Z",
+      "side": 0,
+      "message": "This test case has been renamed as \"tempest.api.volume.test_volumes_get.VolumesGetTest.test_volume_create_get_update_delete\" and already included in osinterop.\nThe next 2 test cases are deleted as the same reason.",
+      "range": {
+        "startLine": 17,
+        "startChar": 8,
+        "endLine": 17,
+        "endChar": 97
+      },
+      "revId": "1cba90830bfd6b0194971005e0f4ab7def1c5d3c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a494da4_75cf48b1",
+        "filename": "etc/testcase/tempest.volume.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-05-17T01:56:54Z",
+      "side": 0,
+      "message": "There is no this test cases in tempest.17.1.0",
+      "range": {
+        "startLine": 22,
+        "startChar": 8,
+        "endLine": 22,
+        "endChar": 102
+      },
+      "revId": "1cba90830bfd6b0194971005e0f4ab7def1c5d3c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
