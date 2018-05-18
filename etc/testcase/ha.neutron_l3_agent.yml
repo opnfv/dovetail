@@ -1,5 +1,5 @@
 ---
-dovetail.ha.neutron-l3-agent:
+dovetail.ha.neutron_l3_agent:
   name: dovetail.ha.neutron_l3_agent
   objective: OpenStack Controller Virtual Router Service High Availability.
   validate:
