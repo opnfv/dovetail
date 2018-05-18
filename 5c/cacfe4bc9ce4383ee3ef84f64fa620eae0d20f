@@ -1,0 +1,7 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+2: Georg Kunz <georg.kunz@ericsson.com>
+Submitted-by: Georg Kunz <georg.kunz@ericsson.com>
+Submitted-at: Fri, 18 May 2018 06:27:21 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/57509
+Project: dovetail
+Branch: refs/heads/master
