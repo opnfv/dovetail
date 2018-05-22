@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a494da4_ae5a1a81",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-05-22T17:39:04Z",
+      "side": 1,
+      "message": "creating this directory typically requires root access. The same procedure should also work if we create this directory in the user\u0027s home directory: \nmkdir ${HOME}/dovetail",
+      "range": {
+        "startLine": 164,
+        "startChar": 14,
+        "endLine": 164,
+        "endChar": 28
+      },
+      "revId": "2a3e95ec3ad3e9f1d399eb051b5c7a25e7e2fe6c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a494da4_8e5f5e72",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-05-22T17:39:04Z",
+      "side": 1,
+      "message": "${HOME}/dovetail",
+      "range": {
+        "startLine": 165,
+        "startChar": 26,
+        "endLine": 165,
+        "endChar": 40
+      },
+      "revId": "2a3e95ec3ad3e9f1d399eb051b5c7a25e7e2fe6c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a494da4_ee53826a",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-05-22T17:39:04Z",
+      "side": 1,
+      "message": "${HOME}/dovetail",
+      "range": {
+        "startLine": 167,
+        "startChar": 44,
+        "endLine": 167,
+        "endChar": 49
+      },
+      "revId": "2a3e95ec3ad3e9f1d399eb051b5c7a25e7e2fe6c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a494da4_ce504661",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-05-22T17:39:04Z",
+      "side": 1,
+      "message": "log in",
+      "range": {
+        "startLine": 286,
+        "startChar": 34,
+        "endLine": 286,
+        "endChar": 39
+      },
+      "revId": "2a3e95ec3ad3e9f1d399eb051b5c7a25e7e2fe6c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a494da4_4e655644",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 679,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-05-22T17:39:04Z",
+      "side": 1,
+      "message": "replace with \"a web browser\". We can be generic here.",
+      "range": {
+        "startLine": 679,
+        "startChar": 49,
+        "endLine": 679,
+        "endChar": 66
+      },
+      "revId": "2a3e95ec3ad3e9f1d399eb051b5c7a25e7e2fe6c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
