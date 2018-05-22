@@ -107,23 +107,7 @@ Or, if the lab environment does not allow ping, try validating it using HTTPS in
 Installing Prerequisite Packages on the Test Host
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The main prerequisite software for Dovetail are Python and Docker.
-
-In the OVP test suite for the Danube release, Dovetail requires Python 2.7. Various minor 
-versions of Python 2.7.x are known to work Dovetail, but there are no assurances. Python 3.x
-is not supported at this time.
-
-Use the following steps to check if the right version of python is already installed,
-and if not, install it.
-
-.. code-block:: bash
-
-   $ python --version
-   Python 2.7.6
-
-If your Test Host does not have Python installed, or the version is not 2.7, you
-should consult Python installation guides corresponding to the operating system
-in your Test Host on how to install Python 2.7.
+The main prerequisite software for Dovetail is Docker.
 
 Dovetail does not work with Docker versions prior to 1.12.3. We have validated
 Dovetail with Docker 17.03 CE. Other versions of Docker later than 1.12.3 may
@@ -159,10 +143,6 @@ Docker installation guide that is relevant to your Test Host's operating system.
 The above installation steps assume that the Test Host is in the online mode. For offline
 testing, use the following offline installation steps instead.
 
-In order to install or upgrade Python offline, you may download packaged Python 2.7
-for your Test Host's operating system on a connected host, copy the packge to
-the Test Host, then install from that local copy.
-
 In order to install Docker offline, download Docker static binaries and copy the
 tar file to the Test Host, such as for Ubuntu14.04, you may follow the following link
 to install,
@@ -181,16 +161,17 @@ results files:
 
 .. code-block:: bash
 
-   $ mkdir -p /home/dovetail
-   $ export DOVETAIL_HOME=/home/dovetail
+   $ mkdir -p ${HOME}/dovetail
+   $ export DOVETAIL_HOME=${HOME}/dovetail
 
-Here we set dovetail home directory to be ``/home/dovetail`` for an example.
-Then create a directory named ``pre_config`` in this directory to store all
-Dovetail related config files:
+Here we set dovetail home directory to be ``${HOME}/dovetail`` for an example.
+Then create 2 directories named ``pre_config`` and ``images`` in this directory
+to store all Dovetail related config files and all VM images respectively:
 
 .. code-block:: bash
 
    $ mkdir -p ${DOVETAIL_HOME}/pre_config
+   $ mkdir -p ${DOVETAIL_HOME}/images
 
 Setting up Primary Configuration File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -245,6 +226,10 @@ this file should contain.
    # If using https + no cacert, should add OS_INSECURE environment parameter.
    export OS_INSECURE=True
 
+   # External network name for allocating floating IPs.
+   # The attribute 'external' for this network must be True.
+   export EXTERNAL_NETWORK=xxx
+
 
 The OS_AUTH_URL variable is key to configure correctly, as the other admin services
 are gleaned from the identity service. HTTPS should be configured in the SUT so the
@@ -262,17 +247,18 @@ The above line may be added to your .bashrc file for convenience when repeatedly
 Dovetail.
 
 The next three sections outline additional configuration files used by Dovetail. The
-tempest (tempest_conf.yaml) configuration file is required for executing the mandatory
-osinterop test cases and the optional ipv6/tempest test cases. The HA (pod.yaml) configuration
-file is required for the mandatory HA test cases and is also employed to collect SUT hardware
+tempest (tempest_conf.yaml) configuration file is required for executing all tempest
+test cases (e.g. dovetail.tempest.compute, dovetail.tempest.ipv6 ...) and
+dovetail.security.patrole. The HA (pod.yaml) configuration
+file is required for HA test cases and is also employed to collect SUT hardware
 info. The hosts.yaml is optional for hostname/IP resolution.
 
 Configuration for Running Tempest Test Cases (Mandatory)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The test cases in the test areas `osinterop` (OpenStack Interoperability tests),
-`ipv6` and `tempest` are based on Tempest.  A SUT-specific configuration of
-Tempest is required in order to run those test cases successfully.  The
+The test cases in the test areas `tempest` and `security`
+are based on Tempest. A SUT-specific configuration of
+Tempest is required in order to run those test cases successfully. The
 corresponding SUT-specific configuration options must be supplied in the file
 ``$DOVETAIL_HOME/pre_config/tempest_conf.yaml``.
 
@@ -294,10 +280,14 @@ Use the listing above at a minimum to execute the mandatory test areas.
 Configuration for Running HA Test Cases (Mandatory)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The mandatory HA test cases require OpenStack controller node info. It must include the node's
+The HA test cases require OpenStack controller node info. It must include the node's
 name, role, ip, as well as the user and key_filename or password to login to the node. Users
-must create the file ``${DOVETAIL_HOME}/pre_config/pod.yaml`` to store the info. This file is
-also used as basis to collect SUT hardware information that is stored alongside results and
+must create the file ``${DOVETAIL_HOME}/pre_config/pod.yaml`` to store the info.
+For some HA test cases, they will log in the controller node 'node1' and kill the specific processes.
+The names of the specific processes may be different with the actual ones of the SUTs.
+The process names can also be changed with file ``${DOVETAIL_HOME}/pre_config/pod.yaml``.
+
+This file is also used as basis to collect SUT hardware information that is stored alongside results and
 uploaded to the OVP web portal. The SUT hardware information can be viewed within the
 'My Results' view in the OVP web portal by clicking the SUT column 'info' link. In order to
 collect SUT hardware information holistically, ensure this file has an entry for each of
@@ -308,6 +298,22 @@ Below is a sample with the required syntax when password is employed by the cont
 .. code-block:: bash
 
    nodes:
+   -
+       # This can not be changed and must be node0.
+       name: node0
+
+       # This must be Jumpserver.
+       role: Jumpserver
+
+       # This is the install IP of a node which has ipmitool installed.
+       ip: xx.xx.xx.xx
+
+       # User name of this node. This user must have sudo privileges.
+       user: root
+
+       # Password of the user.
+       password: root
+
    -
        # This can not be changed and must be node1.
        name: node1
@@ -323,6 +329,19 @@ Below is a sample with the required syntax when password is employed by the cont
 
        # Password of the user.
        password: root
+
+   process_info:
+   -
+       # The default attack process of dovetail.ha.rabbitmq is 'rabbitmq-server'.
+       # Here can reset it to be 'rabbitmq'.
+       testcase_name: dovetail.ha.rabbitmq
+       attack_process: rabbitmq
+
+   -
+       # The default attack host for all HA test cases is 'node1'.
+       # Here can reset it to be any other node given in the section 'nodes'.
+       testcase_name: dovetail.ha.glance_api
+       attack_host: node2
 
 Besides the 'password', a 'key_filename' entry can be provided to login to the controller node.
 Users need to create file ``$DOVETAIL_HOME/pre_config/id_rsa`` to store the private key.
@@ -346,6 +365,34 @@ A sample is provided below to show the required syntax when using a key file.
 Under nodes, repeat entries for name, role, ip, user and password or key file for each of the
 controller/compute nodes that comprise the SUT. Use a '-' to separate each of the entries.
 Specify the value for the role key to be either 'Controller' or 'Compute' for each node.
+
+Under process_info, repeat entries for testcase_name, attack_host and attack_process
+for each HA test case. Use a '-' to separate each of the entries.
+The default attack host of all HA test cases is **node1**.
+The default attack processes of all HA test cases are list here,
+
+   +------------------------------+-------------------------+
+   |      Test Case Name          |  Attack Process Name    |
+   +==============================+=========================+
+   | dovetail.ha.cinder_api       |   cinder-api            |
+   +------------------------------+-------------------------+
+   | dovetail.ha.database         |   mysql                 |
+   +------------------------------+-------------------------+
+   | dovetail.ha.glance_api       |   glance-api            |
+   +------------------------------+-------------------------+
+   | dovetail.ha.haproxy          |   haproxy               |
+   +------------------------------+-------------------------+
+   | dovetail.ha.keystone         |   keystone              |
+   +------------------------------+-------------------------+
+   | dovetail.ha.neutron_l3_agent |   neutron-l3-agent      |
+   +------------------------------+-------------------------+
+   | dovetail.ha.neutron_server   |   neutron-server        |
+   +------------------------------+-------------------------+
+   | dovetail.ha.nova_api         |   nova-api              |
+   +------------------------------+-------------------------+
+   | dovetail.ha.rabbitmq         |   rabbitmq-server       |
+   +------------------------------+-------------------------+
+
 
 Configuration of Hosts File (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -388,26 +435,27 @@ the SUT.
 
 .. code-block:: bash
 
-   $ wget -nc http://artifacts.opnfv.org/sdnvpn/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/pre_config
-   $ wget -nc http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img -P ${DOVETAIL_HOME}/pre_config
+   $ wget -nc http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img -P ${DOVETAIL_HOME}/images
+   $ wget -nc https://cloud-images.ubuntu.com/releases/14.04/release/ubuntu-14.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/images
+   $ wget -nc https://cloud-images.ubuntu.com/releases/16.04/release/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/images
+   $ wget -nc http://repository.cloudifysource.org/cloudify/4.0.1/sp-release/cloudify-manager-premium-4.0.1.qcow2 -P ${DOVETAIL_HOME}/images
 
-   $ sudo docker pull opnfv/dovetail:ovp.1.0.0
-   ovp.1.0.0: Pulling from opnfv/dovetail
-   30d541b48fc0: Pull complete
-   8ecd7f80d390: Pull complete
-   46ec9927bb81: Pull complete
-   2e67a4d67b44: Pull complete
-   7d9dd9155488: Pull complete
-   cc79be29f08e: Pull complete
-   e102eed9bf6a: Pull complete
-   952b8a9d2150: Pull complete
-   bfbb639d1f38: Pull complete
-   bf7c644692de: Pull complete
-   cdc345e3f363: Pull complete
-   Digest: sha256:d571b1073b2fdada79562e8cc67f63018e8d89268ff7faabee3380202c05edee
-   Status: Downloaded newer image for opnfv/dovetail:ovp.1.0.0
+   $ sudo docker pull opnfv/dovetail:latest
+   latest: Pulling from opnfv/dovetail
+   324d088ce065: Pull complete
+   2ab951b6c615: Pull complete
+   9b01635313e2: Pull complete
+   04510b914a6c: Pull complete
+   83ab617df7b4: Pull complete
+   40ebbe7294ae: Pull complete
+   d5db7e3e81ae: Pull complete
+   0701bf048879: Pull complete
+   0ad9f4168266: Pull complete
+   d949894f87f6: Pull complete
+   Digest: sha256:7449601108ebc5c40f76a5cd9065ca5e18053be643a0eeac778f537719336c29
+   Status: Downloaded newer image for opnfv/dovetail:latest
 
-An example of the <tag> is *ovp.1.0.0*.
+An example of the <tag> is **latest**.
 
 Offline Test Host
 """""""""""""""""
@@ -420,25 +468,30 @@ offline, then all these dependencies will need to be manually copied.
 
 .. code-block:: bash
 
-   $ sudo docker pull opnfv/dovetail:ovp.1.0.0
-   $ sudo docker pull opnfv/functest:ovp.1.0.0
-   $ sudo docker pull opnfv/yardstick:danube.3.2
-   $ sudo docker pull opnfv/testapi:ovp.1.0.0
-   $ sudo docker pull mongo:3.2.1
-   $ sudo wget -nc http://artifacts.opnfv.org/sdnvpn/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P {ANY_DIR}
-   $ sudo wget -nc http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img -P {ANY_DIR}
+   $ sudo docker pull opnfv/dovetail:latest
+   $ sudo docker pull opnfv/functest-smoke:fraser
+   $ sudo docker pull opnfv/functest-healthcheck:fraser
+   $ sudo docker pull opnfv/functest-features:fraser
+   $ sudo docker pull opnfv/functest-vnf:fraser
+   $ sudo docker pull opnfv/yardstick:stable
+   $ sudo docker pull opnfv/bottlenecks:stable
+   $ wget -nc http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img -P {ANY_DIR}
+   $ wget -nc https://cloud-images.ubuntu.com/releases/14.04/release/ubuntu-14.04-server-cloudimg-amd64-disk1.img -P {ANY_DIR}
+   $ wget -nc https://cloud-images.ubuntu.com/releases/16.04/release/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P {ANY_DIR}
+   $ wget -nc http://repository.cloudifysource.org/cloudify/4.0.1/sp-release/cloudify-manager-premium-4.0.1.qcow2 -P {ANY_DIR}
 
 Once all these images are pulled, save the images, copy to the Test Host, and then load
-the Dovetail image and all dependent images at the Test Host. The final two lines above are
+the Dovetail image and all dependent images at the Test Host. The final 4 lines above are
 to obtain the test images for transfer to the Test Host.
 
 At the online host, save the images with the command below.
 
 .. code-block:: bash
 
-   $ sudo docker save -o dovetail.tar opnfv/dovetail:ovp.1.0.0 \
-     opnfv/functest:ovp.1.0.0 opnfv/yardstick:danube.3.2 \
-     opnfv/testapi:ovp.1.0.0 mongo:3.2.1
+   $ sudo docker save -o dovetail.tar opnfv/dovetail:latest \
+     opnfv/functest-smoke:fraser opnfv/functest-healthcheck:fraser \
+     opnfv/functest-features:fraser opnfv/functest-vnf:fraser \
+     opnfv/yardstick:stable opnfv/bottlenecks:stable
 
 The command above creates a dovetail.tar file with all the images, which can then be copied
 to the Test Host. To load the Dovetail images on the Test Host execute the command below.
@@ -452,17 +505,21 @@ Now check to see that all Docker images have been pulled or loaded properly.
 .. code-block:: bash
 
    $ sudo docker images
-   REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-   opnfv/functest      ovp.1.0.0           e2b286547478        6 weeks ago         1.26 GB
-   opnfv/dovetail      ovp.1.0.0           5d25b289451c        8 days ago          516MB
-   opnfv/yardstick     danube.3.2          df830d5c2cb2        6 weeks ago         1.21 GB
-   opnfv/testapi       ovp.1.0.0           05c6d5ebce6c        2 months ago        448 MB
-   mongo               3.2.1               7e350b877a9a        19 months ago       317 MB
+   REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE
+   opnfv/dovetail                  latest              ac3b2d12b1b0        24 hours ago        784 MB
+   opnfv/functest-smoke            fraser              010aacb7c1ee        17 hours ago        594.2 MB
+   opnfv/functest-healthcheck      fraser              2cfd4523f797        17 hours ago        234 MB
+   opnfv/functest-features         fraser              b61d4abd56fd        17 hours ago        530.5 MB
+   opnfv/functest-vnf              fraser              929e847a22c3        17 hours ago        1.87 GB
+   opnfv/yardstick                 stable              84b4edebfc44        17 hours ago        2.052 GB
+   opnfv/bottlenecks               stable              3d4ed98a6c9a        21 hours ago        638 MB
 
 After copying and loading the Dovetail images at the Test Host, also copy the test images
-(Ubuntu, Cirros) to the Test Host. Copy image ubuntu-16.04-server-cloudimg-amd64-disk1.img
-to ``${DOVETAIL_HOME}/pre_config/``. Copy image cirros-0.3.5-x86_64-disk.img to
-``${DOVETAIL_HOME}/pre_config/``.
+(Ubuntu, Cirros and cloudify-manager) to the Test Host.
+Copy image ``cirros-0.4.0-x86_64-disk.img`` to ``${DOVETAIL_HOME}/images/``.
+Copy image ``ubuntu-14.04-server-cloudimg-amd64-disk1.img`` to ``${DOVETAIL_HOME}/images/``.
+Copy image ``ubuntu-16.04-server-cloudimg-amd64-disk1.img`` to ``${DOVETAIL_HOME}/images/``.
+Copy image ``cloudify-manager-premium-4.0.1.qcow2`` to ``${DOVETAIL_HOME}/images/``.
 
 Starting Dovetail Docker
 ------------------------
@@ -485,36 +542,6 @@ allows the Dovetail container to read the configuration files and write result f
 DOVETAIL_HOME on the Test Host. The user should be within the Dovetail container shell,
 once the command above is executed.
 
-Build Local DB and Testapi Services
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The steps in this section only need to be executed if the user plans on storing consolidated
-results on the Test Host that can be uploaded to the OVP portal.
-
-Dovetail needs to build the local DB and testapi service for storing and reporting results
-to the OVP web portal. There is a script in the Dovetail container for building the local DB.
-The ports 27017 and 8000 are used by the DB and testapi respectively. If the Test Host is
-using these ports for existing services, to avoid conflicts, remap the ports to values that
-are unused. Execute the commands below in the Dovetail container to remap ports, as required.
-This step can be skipped if there are no port conflicts with the Test Host.
-
-.. code-block:: bash
-
-   $ export mongodb_port=<new_DB_port>
-   $ export testapi_port=<new_testapi_port>
-
-Within the Dovetail container, navigate to the directory and execute the shell script using
-the commands below to build the local DB and testapi services.
-
-.. code-block:: bash
-
-   $ cd /home/opnfv/dovetail/dovetail/utils/local_db/
-   $ ./launch_db.sh
-
-To validate the DB and testapi services are running successfully, navigate to the URL
-``http://<test_host_ip>:<testapi_port>/api/v1/results``, substituting within the URL
-the IP address of the Test Host and the testapi port number. If you can access this URL
-successfully, the services are up and running.
 
 Running the OVP Test Suite
 ----------------------------
@@ -531,7 +558,7 @@ for the details of the CLI.
 The '--testsuite' option is used to control the set of tests intended for execution
 at a high level. For the purposes of running the OVP test suite, the test suite name follows
 the following format, ``ovp.<major>.<minor>.<patch>``. The latest and default test suite is
-ovp.1.0.0.
+ovp.next.
 
 .. code-block:: bash
 
@@ -541,10 +568,11 @@ This command is equal to
 
 .. code-block:: bash
 
-   $ dovetail run --testsuite ovp.1.0.0
+   $ dovetail run --testsuite ovp.next
 
 Without any additional options, the above command will attempt to execute all mandatory and
-optional test cases. To restrict the breadth of the test scope, test areas can also be
+optional test cases with test suite ovp.next.
+To restrict the breadth of the test scope, test areas can also be
 specified using the '--testarea' option. The test area can be specified broadly using arguments
 'mandatory' and 'optional'. The mandatory tests can be narrowed further using test area arguments
 'osinterop', 'vping' and 'ha'. The optional tests can be narrowed further using test area
@@ -553,6 +581,12 @@ arguments 'ipv6', 'sdnvpn' and 'tempest'.
 .. code-block:: bash
 
    $ dovetail run --testarea mandatory
+
+Also there is a '--testcase' option provided to run a specified test case.
+
+.. code-block:: bash
+
+   $ dovetail run --testcase dovetail.tempest.osinterop
 
 Dovetail allows the user to disable strict API response validation implemented
 by Nova Tempest tests by means of the ``--no-api-validation`` option. Usage of
@@ -568,39 +602,46 @@ and its intended usage, refer to
 By default, results are stored in local files on the Test Host at ``$DOVETAIL_HOME/results``.
 Each time the 'dovetail run' command is executed, the results in the aforementioned directory
 are overwritten. To create a singular compressed result file for upload to the OVP portal or
-for archival purposes, the results need to pushed to the local DB. This can be achieved by
-using the '--report' option with an argument syntax as shown below. Note, that the Test Host
-IP address and testapi port number must be substituted with appropriate values.
+for archival purposes, the tool provided an option '--report'.
 
 .. code-block:: bash
 
-   $ dovetail run --report http://<test_host_ip>:<testapi_port>/api/v1/results
+   $ dovetail run --report
 
 If the Test Host is offline, ``--offline`` should be added to support running with
 local resources.
 
 .. code-block:: bash
 
-   $ dovetail run --offline --report http://<test_host_ip>:<testapi_port>/api/v1/results
+   $ dovetail run --offline
 
-Below is an example of running the entire mandatory test area and the creation of the compressed
+Below is an example of running one test case and the creation of the compressed
 result file on the Test Host.
 
 .. code-block:: bash
 
-   $ dovetail run --offline --testarea mandatory --report http://192.168.135.2:8000/api/v1/results
-   2017-09-29 07:00:55,718 - run - INFO - ================================================
-   2017-09-29 07:00:55,718 - run - INFO - Dovetail compliance: ovp.1.0.0!
-   2017-09-29 07:00:55,718 - run - INFO - ================================================
-   2017-09-29 07:00:55,719 - run - INFO - Build tag: daily-master-f0795af6-a4e3-11e7-acc5-0242ac110004
-   2017-09-29 07:00:55,956 - run - INFO - >>[testcase]: dovetail.osinterop.tc001
-   2017-09-29 07:15:19,514 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
-   2017-09-29 07:15:19,514 - run - INFO - >>[testcase]: dovetail.vping.tc001
-   2017-09-29 07:17:24,095 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
-   2017-09-29 07:17:24,095 - run - INFO - >>[testcase]: dovetail.vping.tc002
-   2017-09-29 07:20:42,434 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
-   2017-09-29 07:20:42,434 - run - INFO - >>[testcase]: dovetail.ha.tc001
-   ...
+   $ dovetail run --offline --testcase dovetail.vping.userdata --report
+   2018-05-22 08:16:16,353 - run - INFO - ================================================
+   2018-05-22 08:16:16,353 - run - INFO - Dovetail compliance: ovp.next!
+   2018-05-22 08:16:16,353 - run - INFO - ================================================
+   2018-05-22 08:16:16,353 - run - INFO - Build tag: daily-master-660de986-5d98-11e8-b635-0242ac110001
+   2018-05-22 08:19:31,595 - run - WARNING - There is no hosts file /home/dovetail/pre_config/hosts.yaml, may be some issues with domain name resolution.
+   2018-05-22 08:19:31,595 - run - INFO - Get hardware info of all nodes list in file /home/dovetail/pre_config/pod.yaml ...
+   2018-05-22 08:19:39,778 - run - INFO - Hardware info of all nodes are stored in file /home/dovetail/results/all_hosts_info.json.
+   2018-05-22 08:19:39,961 - run - INFO - >>[testcase]: dovetail.vping.userdata
+   2018-05-22 08:31:17,961 - run - INFO - Results have been stored with file /home/dovetail/results/functest_results.txt.
+   2018-05-22 08:31:17,969 - report.Report - INFO -
+
+   Dovetail Report
+   Version: 1.0.0
+   Build Tag: daily-master-660de986-5d98-11e8-b635-0242ac110001
+   Upload Date: 2018-05-22 08:31:17 UTC
+   Duration: 698.01 s
+
+   Pass Rate: 100.00% (1/1)
+   vping:                     pass rate 100.00%
+   -dovetail.vping.userdata   PASS
+
 
 When test execution is complete, a tar file with all result and log files is written in
 ``$DOVETAIL_HOME`` on the Test Host. An example filename is
@@ -613,9 +654,7 @@ Making Sense of OVP Test Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When a tester is performing trial runs, Dovetail stores results in local files on the Test
-Host by default within the directory specified below. Note, that if the '--report' option
-is used to execute tests, results are written to results.json and the files functest_results.txt
-and dovetail_ha_tcXXX.out will not be created.
+Host by default within the directory specified below.
 
 
 .. code-block:: bash
@@ -631,32 +670,53 @@ and dovetail_ha_tcXXX.out will not be created.
 
      * Review the results.json to see all results data including criteria for PASS or FAIL.
 
-   * Example: OpenStack Interoperability test cases
+   * Tempest and security test cases
 
-     * Can see the log details in ``osinterop_logs/dovetail.osinterop.tc001.log``,
+     * Can see the log details in ``tempest_logs/dovetail.tempest.XXX.html`` and
+       ``security_logs/dovetail.security.XXX.html`` respectively,
        which has the passed, skipped and failed test cases results.
+
+     * This kind of files need to be opened with a web browser.
 
      * The skipped test cases have the reason for the users to see why these test cases skipped.
 
      * The failed test cases have rich debug information for the users to see why these test cases fail.
 
-   * Example: vping test case example
+   * Vping test cases
 
      * Its log is stored in dovetail.log.
 
      * Its result is stored in functest_results.txt.
 
-   * Example: ha test case example
+   * HA test cases
 
      * Its log is stored in dovetail.log.
 
-     * Its result is stored in dovetail_ha_tcXXX.out.
+     * Its result is stored in dovetail.ha.XXX.out.
 
-   * Example: ipv6, sdnvpn and tempest test cases examples
+   * Snaps test cases
 
-     * Can see the log details in ``ipv6_logs/dovetail.ipv6.tcXXX.log``,
-       ``sdnvpn_logs/dovetail.sdnvpn.tcXXX.log`` and ``tempest_logs/dovetail.tempest.tcXXX.log``,
-       respectively. They all have the passed, skipped and failed test cases results.
+     * Its log is stored in functest.log.
+
+     * Its result is stored in functest_results.txt.
+
+   * Stress test cases
+
+     * Its log is stored in bottlenecks.log.
+
+     * Its result is stored in dovetail.stress.ping.out.
+
+   * VNF test cases
+
+     * Its log is stored in functest.log.
+
+     * Its result is stored in functest_results.txt.
+
+   * Sdnvpn test cases
+
+     * Can see the log details in ``sdnvpn_logs/dovetail.sdnvpn.XXX.log``.
+
+     * Its result is stored in functest_results.txt.
 
 OVP Portal Web Interface
 ------------------------
