@@ -43,7 +43,15 @@
                 ctrl.prim_address = null;
                 ctrl.prim_phone = null;
                 ctrl.id_type = "Linux Foundation";
-		ctrl.user_id = null;
+	            ctrl.user_id = null;
+                ctrl.description = null;
+                ctrl.sut_version = null;
+                ctrl.sut_hw_version = null;
+                ctrl.ovp_version = "2018.01";
+                ctrl.ovp_category = "Infrastructure";
+                ctrl.company_logo = null;
+                ctrl.approve_date = null;
+                ctrl.approved = "false";
                 ctrl.lab_location="internal";
                 ctrl.lab_name = null;
                 ctrl.lab_email=null;
@@ -78,6 +86,14 @@
                     "prim_phone": ctrl.prim_phone,
                     "id_type": ctrl.id_type,
 		    "user_id": ctrl.user_id,
+                    "description": ctrl.description,
+                    "sut_version": ctrl.sut_version,
+                    "sut_hw_version": ctrl.sut_hw_version,
+                    "ovp_version": ctrl.ovp_version,
+                    "ovp_category": ctrl.ovp_category,
+                    "company_logo": ctrl.company_logo,
+                    "approve_date": ctrl.approve_date,
+                    "approved": ctrl.approved,
                     "lab_location": ctrl.lab_location,
                     "lab_email": ctrl.lab_email,
                     "lab_address": ctrl.lab_address,

@@ -17,7 +17,7 @@
                             <div><a href="https://www.opnfv.org/wp-content/uploads/sites/12/2018/01/OVP-Terms-and-Conditions-011918.pdf" target="_blank">Terms & Conditions&nbsp<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></div>
                             <div><a href="http://docs.opnfv.org/en/stable-danube/submodules/dovetail/docs/testing/user/certificationworkflow/index.html
                             " target="_blank">Process Workflow&nbsp<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></div>
-                            <div><a href="https://na3.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=e03e78d7-c32e-47d3-8292-350b747a0105" target="_blank">Participation Form&nbsp<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></div>
+                            <div><a href="https://na3.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=579ac00d-0a1f-4db3-82ea-ddd977769a60" target="_blank">Participation Form&nbsp<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></div>
                             <!--
                             <div><a target="_blank">Approved 3rd Party Labs&nbsp<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></div>
                             -->
@@ -100,7 +100,7 @@
                         <img class="home-content-img" src="testapi-ui/assets/img/icon.png" />
                     </div>
                     <div class="col-md-10">
-                        <p class="home-content-text">
+                        <p class="home-content-text" style="padding-bottom:40px;">
                             The OPNFV Verified program demonstrates the readiness and availability of commercial products based on OPNFV.
                             Verified products and services submitted by vendors and service providers become compliant by implementing explicitly defined interfaces,
                             behaviors and key features while retaining distinct and value-added innovations across features and capabilities.
@@ -109,6 +109,32 @@
                         </p>
                     </div>
                 </div>
+                <div id="directory_break">
+                </div>
+                <div class="home-content-title">
+                    <h1>OPNFV Verified Products Directory</h1>
+                </div>
+                <div class="directory_main">
+                        <table id="directory_inner" class="table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Product</th>
+                                    <th>Cateogry</th>
+                                    <th>Version</th>
+                                </tr>
+                            </thead>
+                            <tbody style="overflow: hidden; text-overflow: ellipsis;">
+                                <tr ng-click="ctrl.getCompany(app)" ng-repeat="app in ctrl.applications | filter:{approved:true} | orderBy : 'approve_date'">
+                                    <td width="450"><img src="testapi-ui/assets/img/{{app.company_logo}}" />&ensp;{{ app.organization_name}}</td>
+                                    <td width="300">{{ app.product_name}}</td>
+                                    <td width="150">{{ app.ovp_category}}</td>
+                                    <td width="150">{{ app.ovp_version}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+
             </div>
         </div>
     </div>

@@ -20,7 +20,7 @@
         .controller('HomeController', HomeController);
 
     HomeController.$inject = [
-        '$scope', '$rootScope', '$state'
+        '$http', '$scope', '$rootScope', '$state', 'testapiApiUrl'
     ];
 
     /**
@@ -28,10 +28,11 @@
      * This controller is for the '/results' page where a user can browse
      * a listing of community uploaded results.
      */
-    function HomeController($scope, $rootScope, $state) {
+    function HomeController($http, $scope, $rootScope, $state, testapiApiUrl) {
         var ctrl = this;
+        getApplication();
 
-        ctrl.height = $(document).height() - 115;
+        ctrl.height = $(document).height() + 500;
 
         ctrl.gotoApplication = function(){
             if($rootScope.auth.isAuthenticated){
@@ -40,5 +41,18 @@
                 $rootScope.auth.doSignIn('cas');
             }
         }
+
+        function getApplication(){
+            $http.get(testapiApiUrl + "/cvp/applications").then(function(response){
+                ctrl.applications = response.data.applications;
+            }, function(error){
+            });
+        }
+
+        ctrl.getCompany = function(row){
+            //console.log(row)
+            $state.go('directory', {'companyID': row.organization_name, 'logo': row.company_logo});
+        }
+
     }
 })();

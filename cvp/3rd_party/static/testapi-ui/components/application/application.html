@@ -124,6 +124,62 @@ urpose. Once we understand more about your product or service, we can determine 
                                     </div>
                                 </div>
                                 <div class="field text col-md-4">
+                                    <label class="left">Description</label>
+                                    <i uib-tooltip="Product Description" class="glyphicon glyphicon-question-sign opnfv-blue"></i>
+                                    <div class="middleColumn">
+                                        <input type="text" class="text form-control" ng-model="ctrl.description" />
+                                    </div>
+                                </div>
+                                <div class="field text col-md-4">
+                                    <label class="left">SUT Version</label>
+                                    <i uib-tooltip="SUT Version" class="glyphicon glyphicon-question-sign opnfv-blue"></i>
+                                    <div class="middleColumn">
+                                        <input type="text" class="text form-control" ng-model="ctrl.sut_version" />
+                                    </div>
+                                </div>
+                                <div class="field text col-md-4">
+                                    <label class="left">SUT HW Version</label>
+                                    <i uib-tooltip="SUT HW Version - leave blank if not applicable" class="glyphicon glyphicon-question-sign opnfv-blue"></i>
+                                    <div class="middleColumn">
+                                        <input type="text" class="text form-control" ng-model="ctrl.sut_hw_version" />
+                                    </div>
+                                </div>
+                                <div class="field text col-md-4">
+                                    <label class="left">OVP Version</label>
+                                    <i uib-tooltip="OVP Version" class="glyphicon glyphicon-question-sign opnfv-blue"></i>
+                                    <div class="middleColumn">
+                                        <input type="text" class="text form-control" ng-model="ctrl.ovp_version" />
+                                    </div>
+                                </div>
+                                <div class="field text col-md-4">
+                                    <label class="left">OVP Category</label>
+                                    <i uib-tooltip="OVP Category" class="glyphicon glyphicon-question-sign opnfv-blue"></i>
+                                    <div class="middleColumn">
+                                        <input type="text" class="text form-control" ng-model="ctrl.ovp_category" />
+                                    </div>
+                                </div>
+                                <div class="field text col-md-4">
+                                    <label class="left">Company Logo</label>
+                                    <i uib-tooltip="Company Logo" class="glyphicon glyphicon-question-sign opnfv-blue"></i>
+                                    <div class="middleColumn">
+                                        <input type="text" class="text form-control" ng-model="ctrl.company_logo" />
+                                    </div>
+                                </div>
+                                <div class="field text col-md-4">
+                                    <label class="left">Approve Date</label>
+                                    <i uib-tooltip="Approve Date - YYYY-MM-DD" class="glyphicon glyphicon-question-sign opnfv-blue"></i>
+                                    <div class="middleColumn">
+                                        <input type="text" class="text form-control" ng-model="ctrl.approve_date" />
+                                    </div>
+                                </div>
+                                <div class="field text col-md-4">
+                                    <label class="left">Approved</label>
+                                    <i uib-tooltip="Approved - insert true or false" class="glyphicon glyphicon-question-sign opnfv-blue"></i>
+                                    <div class="middleColumn">
+                                        <input type="text" class="text form-control" ng-model="ctrl.approved" />
+                                    </div>
+                                </div>
+                                <div class="field text col-md-4">
                                         <label class="left">Location</label>
                                         <i uib-tooltip="Location" class="glyphicon glyphicon-question-sign opnfv-blue"></i>
                                             <div class="middleColumn">
@@ -179,6 +235,14 @@ urpose. Once we understand more about your product or service, we can determine 
                 <th>Primary phone number</th>
                 <th>User ID Type</th>
                 <th>User ID</th>
+                <th>Description</th>
+                <th>SUT version</th>
+                <th>SUT HW version</th>
+                <th>OVP version</th>
+                <th>OVP category</th>
+                <th>Company logo</th>
+                <th>Approve date</th>
+                <th>Approved</th>
                 <th>Location</th>
                 <th>Operation</th>
             </tr>
@@ -230,6 +294,14 @@ urpose. Once we understand more about your product or service, we can determine 
                 <td>{{ app.prim_phone }}</td>
                 <td>{{ app.id_type }}</td>
                 <td>{{ app.user_id }}</td>
+                <td>{{ app.description }}</td>
+                <td>{{ app.sut_version }}</td>
+                <td>{{ app.sut_hw_version }}</td>
+                <td>{{ app.ovp_version }}</td>
+                <td>{{ app.ovp_category }}</td>
+                <td>{{ app.company_logo }}</td>
+                <td>{{ app.approve_date }}</td>
+                <td>{{ app.approved }}</td>
                 <td><span popover-enable="app.lab_location != 'internal'" uib-popover-template="ctrl.lab_tpl" popover-title="Lab Info" popover-placement="top" popover-trigger="mouseenter">{{ app.lab_location | labLocation}}</span><i ng-if="app.lab_location != 'internal'" class="glyphicon glyphicon-info-sign opnfv-blue"></i></td>
                 <td><a ng-click="ctrl.deleteApp(app._id)" class="badge badge-info"><i class="glyphicon glyphicon-remove" ></i></a></td>
             </tr>

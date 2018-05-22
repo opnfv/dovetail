@@ -45,6 +45,11 @@
                 templateUrl: 'testapi-ui/components/about/about.html',
                 controller: 'AboutController as ctrl'
             }).
+            state('directory', {
+                url: '/directory/:companyID&:logo',
+                templateUrl: 'testapi-ui/components/directory/directory.html',
+                controller: 'DirectoryController as ctrl'
+            }).
             state('guidelines', {
                 url: '/guidelines',
                 templateUrl: 'testapi-ui/components/guidelines/guidelines.html',
