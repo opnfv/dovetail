@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "1a494da4_c9e32004",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 628,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-05-23T07:23:02Z",
+      "side": 1,
+      "message": "These need to be the DOVETAIL_HOME path.\nI will make it the same as ${HOME}/dovetail as said before.",
+      "parentUuid": "1a494da4_291a8417",
+      "range": {
+        "startLine": 628,
+        "startChar": 74,
+        "endLine": 628,
+        "endChar": 77
+      },
+      "revId": "2cbb007b170f62709747b9f87a6507d4d98b42cb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a494da4_0917c8ee",
         "filename": "docs/testing/user/userguide/testing_guide.rst",
         "patchSetId": 2
