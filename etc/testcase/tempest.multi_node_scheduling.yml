@@ -12,6 +12,14 @@ dovetail.tempest.multi_node_scheduling:
       src_file: tempest_custom.txt
       dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
+    source_archive_files:
+      - functest.log
+      - tempest/tempest.log
+      - tempest/tempest-report.html
+    dest_archive_files:
+      - tempest_logs/dovetail.tempest.multi_node_scheduling.functest.log
+      - tempest_logs/dovetail.tempest.multi_node_scheduling.log
+      - tempest_logs/dovetail.tempest.multi_node_scheduling.html
     sub_testcase_list:
       - tempest.scenario.test_server_multinode.TestServerMultinode.test_schedule_to_all_nodes[compute,id-9cecbe35-b9d4-48da-a37e-7ce70aa43d30,network,smoke]
       - tempest.api.compute.servers.test_server_group.ServerGroupTestJSON.test_create_delete_multiple_server_groups_with_same_name_policy[id-154dc5a4-a2fe-44b5-b99e-f15806a4a113]

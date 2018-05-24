@@ -11,10 +11,16 @@ dovetail.tempest.osinterop:
     pre_condition:
       - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
       - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
-    pre_copy:
-      src_file: osinterop.txt
-      dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/refstack_client/defcore.txt
   report:
+    source_archive_files:
+      - functest.log
+      - refstack/tempest.log
+      - refstack/tempest-report.html
+    dest_archive_files:
+      - tempest_logs/dovetail.tempest.osinterop.functest.log
+      - tempest_logs/dovetail.tempest.osinterop.log
+      - tempest_logs/dovetail.tempest.osinterop.html
+    check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.network.test_security_groups.SecGroupTest.test_create_security_group_rule_with_icmp_type_code
       - tempest.api.network.test_networks.NetworksTest.test_update_subnet_gw_dns_host_routes_dhcp

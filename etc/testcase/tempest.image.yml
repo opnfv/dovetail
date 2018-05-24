@@ -12,6 +12,15 @@ dovetail.tempest.image:
       src_file: tempest_custom.txt
       dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
+    source_archive_files:
+      - functest.log
+      - tempest/tempest.log
+      - tempest/tempest-report.html
+    dest_archive_files:
+      - tempest_logs/dovetail.tempest.image.functest.log
+      - tempest_logs/dovetail.tempest.image.log
+      - tempest_logs/dovetail.tempest.image.html
+    check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.image.v2.test_images.BasicOperationsImagesTest.test_register_upload_get_image_file[id-139b765e-7f3d-4b3d-8b37-3ca3876ee318,smoke]
       - tempest.api.image.v2.test_versions.VersionsTest.test_list_versions[id-659ea30a-a17c-4317-832c-0f68ed23c31d,smoke]

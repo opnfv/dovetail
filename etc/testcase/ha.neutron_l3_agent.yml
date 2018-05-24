@@ -18,4 +18,11 @@ dovetail.ha.neutron_l3_agent:
     post_condition:
       - 'source /etc/yardstick/openstack.creds && openstack --insecure image delete cirros-ha-11'
   report:
+    source_archive_files:
+      - yardstick.log
+      - dovetail.ha.neutron_l3_agent.out
+    dest_archive_files:
+      - ha_logs/dovetail.ha.neutron_l3_agent.log
+      - ha_logs/dovetail.ha.neutron_l3_agent.out
+    check_results_file: ha_logs/dovetail.ha.neutron_l3_agent.out
     sub_testcase_list:

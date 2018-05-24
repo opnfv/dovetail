@@ -8,4 +8,11 @@ dovetail.stress.ping:
     type: bottlenecks
     testcase: posca_factor_ping
   report:
+    source_archive_files:
+      - bottlenecks.log
+      - dovetail.stress.ping.out
+    dest_archive_files:
+      - stress_logs/dovetail.stress.ping.log
+      - stress_logs/dovetail.stress.ping.out
+    check_results_file: stress_logs/dovetail.stress.ping.out
     sub_testcase_list:
