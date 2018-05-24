@@ -6,4 +6,9 @@ dovetail.vping.userdata:
     type: functest
     testcase: vping_userdata
   report:
+    source_archive_files:
+      - functest.log
+    dest_archive_files:
+      - vping_logs/dovetail.vping.userdata.log
+    check_results_file: 'functest_results.txt'
     sub_testcase_list:

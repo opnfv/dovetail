@@ -6,4 +6,9 @@ dovetail.healthcheck.connection_check:
     type: functest
     testcase: connection_check
   report:
+    source_archive_files:
+      - functest.log
+    dest_archive_files:
+      - healthcheck_logs/dovetail.healthcheck.connection_check.log
+    check_results_file: 'functest_results.txt'
     sub_testcase_list:

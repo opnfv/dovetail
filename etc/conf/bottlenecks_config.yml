@@ -38,7 +38,6 @@ bottlenecks:
        openstack --insecure flavor delete yardstick-flavor)'
   result:
     dir: '/tmp'
-    file_path: 'bottlenecks.log'
   openrc: '/tmp/admin_rc.sh'
   extra_container:
     - 'Bottlenecks-Yardstick'

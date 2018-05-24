@@ -16,5 +16,4 @@ functest:
     - 'echo test for postcondition in functest'
   result:
     dir: '/home/opnfv/functest/results'
-    file_path: 'functest_results.txt'
   openrc: '/home/opnfv/functest/conf/env_file'

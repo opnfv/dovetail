@@ -11,4 +11,11 @@ dovetail.ha.cpu_load:
     type: yardstick
     testcase: opnfv_yardstick_tc051
   report:
+    source_archive_files:
+      - yardstick.log
+      - dovetail.ha.cpu_load.out
+    dest_archive_files:
+      - ha_logs/dovetail.ha.cpu_load.log
+      - ha_logs/dovetail.ha.cpu_load.out
+    check_results_file: ha_logs/dovetail.ha.cpu_load.out
     sub_testcase_list:

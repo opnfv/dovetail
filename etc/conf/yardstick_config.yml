@@ -30,5 +30,4 @@ yardstick:
     - 'echo this is post_condition'
   result:
     dir: '/tmp/yardstick'
-    file_path: 'yardstick.log'
   openrc: '/etc/yardstick/openstack.creds'
