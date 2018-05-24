@@ -12,6 +12,15 @@ dovetail.tempest.compute:
       src_file: tempest_custom.txt
       dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
+    source_archive_files:
+      - functest.log
+      - tempest/tempest.log
+      - tempest/tempest-report.html
+    dest_archive_files:
+      - tempest_logs/dovetail.tempest.compute.functest.log
+      - tempest_logs/dovetail.tempest.compute.log
+      - tempest_logs/dovetail.tempest.compute.html
+    check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.compute.flavors.test_flavors.FlavorsV2TestJSON.test_get_flavor[id-1f12046b-753d-40d2-abb6-d8eb8b30cb2f,smoke]
       - tempest.api.compute.flavors.test_flavors.FlavorsV2TestJSON.test_list_flavors[id-e36c0eaa-dff5-4082-ad1f-3f9a80aa3f59,smoke]

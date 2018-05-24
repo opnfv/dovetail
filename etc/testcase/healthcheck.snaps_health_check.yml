@@ -6,4 +6,9 @@ dovetail.healthcheck.snaps_health_check:
     type: functest
     testcase: snaps_health_check
   report:
+    source_archive_files:
+      - functest.log
+    dest_archive_files:
+      - healthcheck_logs/dovetail.healthcheck.snaps_health_check.log
+    check_results_file: 'functest_results.txt'
     sub_testcase_list:

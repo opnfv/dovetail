@@ -23,6 +23,7 @@ pip-log.txt
 .coverage
 .tox
 .cache
+.pytest_cache
 nosetests.xml
 unittest_results.log
 

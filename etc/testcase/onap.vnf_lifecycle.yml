@@ -6,4 +6,9 @@ dovetail.onap.vnf_lifecycle:
     type: vnftest
     testcase: onap_vnftest_tc001
   report:
+    source_archive_files:
+      - dovetail.onap.vnf_lifecycle.out
+    dest_archive_files:
+      - onap_logs/dovetail.onap.vnf_lifecycle.out
+    check_results_file: onap_logs/dovetail.onap.vnf_lifecycle.out
     sub_testcase_list:
