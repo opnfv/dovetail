@@ -116,8 +116,29 @@ class DockerRunner(object):
         if not dt_cfg.dovetail_config['noclean']:
             Container.clean(container_id, self.type)
 
-    def save_logs(self):
-        pass
+    def archive_logs(self):
+        result_path = os.path.join(os.environ["DOVETAIL_HOME"], 'results')
+        src_files = dt_utils.get_value_from_dict(
+            'report.source_archive_files', self.testcase.testcase)
+        dest_files = dt_utils.get_value_from_dict(
+            'report.dest_archive_files', self.testcase.testcase)
+        if not src_files and not dest_files:
+            return True
+        if not (src_files and dest_files) or len(src_files) != len(dest_files):
+            self.logger.error("Can't find corresponding 'result_dest_files' "
+                              "for 'result_source_files' with testcase {}"
+                              .format(self.testcase.name()))
+            return False
+        res = True
+        for index in range(0, len(src_files)):
+            src_file_path = os.path.join(result_path, src_files[index])
+            dest_file_path = os.path.join(result_path, dest_files[index])
+            if os.path.isfile(src_file_path):
+                os.renames(src_file_path, dest_file_path)
+            else:
+                self.logger.error("Can't find file {}.".format(src_file_path))
+                res = False
+        return res
 
     @staticmethod
     def _render(task_template, **kwargs):
@@ -169,33 +190,6 @@ class FunctestRunner(DockerRunner):
     def __init__(self, testcase):
         self.type = 'functest'
         super(FunctestRunner, self).__init__(testcase)
-
-    def save_logs(self):
-        validate_testcase = self.testcase.validate_testcase()
-        test_area = self.testcase.name().split(".")[1]
-        result_path = os.path.join(os.environ["DOVETAIL_HOME"], 'results')
-        dest_path = os.path.join(result_path, test_area + '_logs')
-        dest_file = os.path.join(dest_path, self.testcase.name() + '.log')
-        if validate_testcase == 'tempest_custom':
-            source_file = os.path.join(result_path, 'tempest', 'tempest.log')
-        elif validate_testcase == 'refstack_defcore':
-            source_file = os.path.join(result_path, 'refstack', 'tempest.log')
-        elif validate_testcase == 'bgpvpn':
-            source_file = os.path.join(result_path, 'bgpvpn.log')
-        elif validate_testcase == 'patrole':
-            source_file = os.path.join(result_path, 'patrole', 'tempest.log')
-        elif validate_testcase == 'neutron_trunk':
-            source_file = os.path.join(result_path,
-                                       'neutron_trunk',
-                                       'tempest.log')
-        else:
-            source_file = None
-        if source_file:
-            if os.path.isfile(source_file):
-                os.renames(source_file, dest_file)
-            else:
-                self.logger.error("Tempest log file for test case {} is not "
-                                  "found.".format(self.testcase.name()))
 
 
 class YardstickRunner(DockerRunner):

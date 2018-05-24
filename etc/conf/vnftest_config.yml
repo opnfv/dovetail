@@ -19,7 +19,6 @@ vnftest:
   result:
     dir: '/home/onap/vnftest/results'
     log: '/tmp/vnftest'
-    file_path: 'vnftest.log'
     key_path: '/root/.ssh/id_rsa'
   openrc: '/etc/vnftest/openstack.creds'
   vnftest_conf:

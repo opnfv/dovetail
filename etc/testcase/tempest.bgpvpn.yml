@@ -13,4 +13,11 @@ dovetail.tempest.bgpvpn:
       exist_src_file: sdnvpn_config_tc000.yaml
       dest_path: /usr/lib/python2.7/site-packages/sdnvpn/test/functest/config.yaml
   report:
+    source_archive_files:
+      - functest.log
+      - bgpvpn.log
+    dest_archive_files:
+      - tempest_logs/dovetail.tempest.bgpvpn.functest.log
+      - tempest_logs/dovetail.tempest.bgpvpn.log
+    check_results_file: 'functest_results.txt'
     sub_testcase_list:

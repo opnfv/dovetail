@@ -6,4 +6,9 @@ dovetail.snaps.smoke:
     type: functest
     testcase: snaps_smoke
   report:
+    source_archive_files:
+      - functest.log
+    dest_archive_files:
+      - snaps_logs/dovetail.snaps.smoke.log
+    check_results_file: 'functest_results.txt'
     sub_testcase_list:

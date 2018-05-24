@@ -59,7 +59,7 @@ def run_test(testcase_list, logger):
         if run_testcase:
             testcase.run()
 
-        stop_on_fail = check_tc_result(testcase, logger)
+        stop_on_fail = Report.check_tc_result(testcase)
         try:
             if (not stop_on_fail or stop_on_fail['criteria'] == "FAIL") \
                 and dt_cfg.dovetail_config['stop']:
@@ -70,28 +70,6 @@ def run_test(testcase_list, logger):
     end_time = time.time()
     duration = end_time - start_time
     return duration
-
-
-def check_tc_result(testcase, logger):
-    result_dir = dt_cfg.dovetail_config['result_dir']
-    validate_type = testcase.validate_type()
-    functest_result = dt_cfg.dovetail_config['functest']['result']['file_path']
-    if validate_type.lower() in ['yardstick', 'bottlenecks', 'vnftest']:
-        result_file = os.path.join(result_dir, testcase.name() + '.out')
-    elif validate_type.lower() == 'functest':
-        result_file = os.path.join(result_dir, functest_result)
-    else:
-        logger.error("Don't support {} now.".format(validate_type))
-        return
-    if os.path.isfile(result_file):
-        logger.info(
-            "Results have been stored with file {}.".format(result_file))
-    else:
-        logger.error(
-            "Failed to store results with file {}.".format(result_file))
-    result = Report.get_result(testcase)
-    Report.check_result(testcase, result)
-    return result
 
 
 def validate_input(input_dict, check_dict, logger):

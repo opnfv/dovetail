@@ -12,6 +12,15 @@ dovetail.tempest.network:
       src_file: tempest_custom.txt
       dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
+    source_archive_files:
+      - functest.log
+      - tempest/tempest.log
+      - tempest/tempest-report.html
+    dest_archive_files:
+      - tempest_logs/dovetail.tempest.network.functest.log
+      - tempest_logs/dovetail.tempest.network.log
+      - tempest_logs/dovetail.tempest.network.html
+    check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.network.test_extensions.ExtensionsTestJSON.test_list_show_extensions[id-ef28c7e6-e646-4979-9d67-deb207bc5564,smoke]
       - tempest.api.network.test_floating_ips.FloatingIPTestJSON.test_create_floating_ip_specifying_a_fixed_ip_address[id-36de4bd0-f09c-43e3-a8e1-1decc1ffd3a5,smoke]

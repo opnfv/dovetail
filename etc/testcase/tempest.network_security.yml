@@ -12,6 +12,15 @@ dovetail.tempest.network_security:
       src_file: tempest_custom.txt
       dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
+    source_archive_files:
+      - functest.log
+      - tempest/tempest.log
+      - tempest/tempest-report.html
+    dest_archive_files:
+      - tempest_logs/dovetail.tempest.network_security.functest.log
+      - tempest_logs/dovetail.tempest.network_security.log
+      - tempest_logs/dovetail.tempest.network_security.html
+    check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_port_security_macspoofing_port[compute,id-7c0bb1a2-d053-49a4-98f9-ca1a1d849f63,network,slow]
       - tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_cross_tenant_traffic[compute,id-e79f879e-debb-440c-a7e4-efeda05b6848,network]

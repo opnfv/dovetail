@@ -10,4 +10,11 @@ dovetail.sdnvpn.subnet_connectivity:
       exist_src_file: sdnvpn_config_testcase1.yaml
       dest_path: /usr/lib/python2.7/site-packages/sdnvpn/test/functest/config.yaml
   report:
+    source_archive_files:
+      - functest.log
+      - bgpvpn.log
+    dest_archive_files:
+      - sdnvpn_logs/dovetail.sdnvpn.subnet_connectivity.functest.log
+      - sdnvpn_logs/dovetail.sdnvpn.subnet_connectivity.log
+    check_results_file: 'functest_results.txt'
     sub_testcase_list:

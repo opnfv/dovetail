@@ -35,8 +35,31 @@ class Report(object):
     def create_log(cls):
         cls.logger = dt_logger.Logger(__name__ + '.Report').getLogger()
 
+    @classmethod
+    def check_tc_result(cls, testcase):
+        result_path = dt_cfg.dovetail_config['result_dir']
+        check_results_file = dt_utils.get_value_from_dict(
+            'report.check_results_file', testcase.testcase)
+        if not check_results_file:
+            cls.logger.error("Failed to get 'check_results_file' from config "
+                             "file of test case {}".format(testcase.name()))
+            cls.check_result(testcase)
+            return None
+        result_file = os.path.join(result_path, check_results_file)
+        if os.path.isfile(result_file):
+            cls.logger.info(
+                "Results have been stored with file {}.".format(result_file))
+            result = cls.get_result(testcase, result_file)
+            cls.check_result(testcase, result)
+            return result
+        else:
+            cls.logger.error(
+                "Failed to store results with file {}.".format(result_file))
+            cls.check_result(testcase)
+            return None
+
     @staticmethod
-    def check_result(testcase, db_result):
+    def check_result(testcase, db_result=None):
         checker = CheckerFactory.create(testcase.validate_type())
         if checker is not None:
             checker.check(testcase, db_result)
@@ -163,7 +186,7 @@ class Report(object):
         os.chdir(cwd)
 
     @classmethod
-    def get_result(cls, testcase):
+    def get_result(cls, testcase, check_results_file):
         validate_testcase = testcase.validate_testcase()
         type = testcase.validate_type()
         crawler = CrawlerFactory.create(type)
@@ -174,7 +197,7 @@ class Report(object):
         # if validate_testcase in cls.results[type]:
         #    return cls.results[type][validate_testcase]
 
-        result = crawler.crawl(testcase)
+        result = crawler.crawl(testcase, check_results_file)
 
         if result is not None:
             cls.results[type][validate_testcase] = result
@@ -216,10 +239,10 @@ class FunctestCrawler(Crawler):
         cls.logger = \
             dt_logger.Logger(__name__ + '.FunctestCrawler').getLogger()
 
-    def crawl(self, testcase=None):
-        return self.crawl_from_file(testcase)
+    def crawl(self, testcase, file_path):
+        return self.crawl_from_file(testcase, file_path)
 
-    def crawl_from_file(self, testcase=None):
+    def crawl_from_file(self, testcase, file_path):
         dovetail_config = dt_cfg.dovetail_config
         criteria = 'FAIL'
         details = {}
@@ -228,9 +251,6 @@ class FunctestCrawler(Crawler):
         duration = 0
         testcase_name = testcase.validate_testcase()
         build_tag = '%s-%s' % (dovetail_config['build_tag'], testcase.name())
-        file_path = \
-            os.path.join(dovetail_config['result_dir'],
-                         dovetail_config[self.type]['result']['file_path'])
         if not os.path.exists(file_path):
             self.logger.error('Result file not found: {}'.format(file_path))
             return None
@@ -293,12 +313,10 @@ class YardstickCrawler(Crawler):
         cls.logger = \
             dt_logger.Logger(__name__ + '.YardstickCrawler').getLogger()
 
-    def crawl(self, testcase=None):
-        return self.crawl_from_file(testcase)
+    def crawl(self, testcase, file_path):
+        return self.crawl_from_file(testcase, file_path)
 
-    def crawl_from_file(self, testcase=None):
-        file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
-                                 testcase.name() + '.out')
+    def crawl_from_file(self, testcase, file_path):
         if not os.path.exists(file_path):
             self.logger.error('Result file not found: {}'.format(file_path))
             return None
@@ -340,12 +358,10 @@ class BottlenecksCrawler(Crawler):
         cls.logger = \
             dt_logger.Logger(__name__ + '.BottlenecksCrawler').getLogger()
 
-    def crawl(self, testcase=None):
-        return self.crawl_from_file(testcase)
+    def crawl(self, testcase, file_path):
+        return self.crawl_from_file(testcase, file_path)
 
-    def crawl_from_file(self, testcase=None):
-        file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
-                                 testcase.name() + '.out')
+    def crawl_from_file(self, testcase, file_path):
         if not os.path.exists(file_path):
             self.logger.error('Result file not found: {}'.format(file_path))
             return None
@@ -370,12 +386,10 @@ class ShellCrawler(Crawler):
     def __init__(self):
         self.type = 'shell'
 
-    def crawl(self, testcase=None):
-        return self.crawl_from_file(testcase)
+    def crawl(self, testcase, file_path):
+        return self.crawl_from_file(testcase, file_path)
 
-    def crawl_from_file(self, testcase=None):
-        file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
-                                 testcase.name()) + '.out'
+    def crawl_from_file(self, testcase, file_path):
         if not os.path.exists(file_path):
             return None
         try:
@@ -399,13 +413,10 @@ class VnftestCrawler(Crawler):
         cls.logger = \
             dt_logger.Logger(__name__ + '.VnftestCrawler').getLogger()
 
-    def crawl(self, testcase):
-        return self.crawl_from_file(testcase)
+    def crawl(self, testcase, file_path):
+        return self.crawl_from_file(testcase, file_path)
 
-    def crawl_from_file(self, testcase):
-
-        file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
-                                 testcase.name() + '.out')
+    def crawl_from_file(self, testcase, file_path):
         if not os.path.exists(file_path):
             self.logger.error('Result file not found: {}'.format(file_path))
             return None
