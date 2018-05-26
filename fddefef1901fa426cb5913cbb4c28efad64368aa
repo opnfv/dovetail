@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a494da4_9c5f8f72",
+        "filename": "etc/testcase/security.patrole.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3405
+      },
+      "writtenOn": "2018-05-26T19:55:05Z",
+      "side": 1,
+      "message": "Why should Dovetail list the patrole testcase?\nI thought Dovetail was a wrapper..",
+      "revId": "fddefef1901fa426cb5913cbb4c28efad64368aa",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a494da4_fc53336a",
+        "filename": "etc/testcase/tempest.trunk-ports.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3405
+      },
+      "writtenOn": "2018-05-26T19:55:05Z",
+      "side": 1,
+      "message": "idem",
+      "revId": "fddefef1901fa426cb5913cbb4c28efad64368aa",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
