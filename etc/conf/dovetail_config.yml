@@ -12,21 +12,6 @@ pod_file: 'pod.yaml'
 # If use password to login hosts, there's no need to provide the private key
 pri_key: 'id_rsa'
 
-# SDNVPN offline image
-sdnvpn_image: 'ubuntu-16.04-server-cloudimg-amd64-disk1.img'
-
-# Tempest image
-cirros_image: 'cirros-0.3.5-x86_64-disk.img'
-
-# Ubuntu 14.04 image for snaps_smoke
-ubuntu14_image: 'ubuntu-14.04-server-cloudimg-amd64-disk1.img'
-
-# cloudify_ims image
-cloudify_image: 'cloudify-manager-premium-4.0.1.qcow2'
-
-# Trusty image
-trusty_image: 'trusty-server-cloudimg-amd64-disk1.img'
-
 # testsuite supported, should adjust accordingly
 testsuite_supported:
   - proposed_tests
@@ -47,30 +32,6 @@ testarea_supported:
   - vnf
   - vping
 
-functest_testsuite:
-  - refstack_defcore
-  - tempest_smoke_serial
-  - tempest_full_parallel
-  - tempest_custom
-  - rally_sanity
-  - promise
-  - patrole
-  - neutron_trunk
-
-functest_testcase:
-  - bgpvpn
-  - connection_check
-  - api_check
-  - snaps_health_check
-  - vping_ssh
-  - vping_userdata
-  - doctor
-  - copper
-  - cloudify_ims
-  - odl
-  - snaps_smoke
-  - juju_epc
-
 # used for testcase cmd template in jinja2 format
 # we have two variables available now
 # parameter path, use this path to walk through python object and get value
@@ -83,9 +44,3 @@ parameters:
 
 include_config:
   - vnftest_config.yml
-
-test_project:
-  - 'yardstick'
-  - 'functest'
-  - 'bottlenecks'
-  - 'vnftest'
