@@ -70,10 +70,8 @@ class Testcase(object):
         return self.testcase['objective']
 
     def sub_testcase(self):
-        try:
-            return self.testcase['report']['sub_testcase_list']
-        except KeyError:
-            return []
+        return dt_utils.get_value_from_dict('report.sub_testcase_list',
+                                            self.testcase)
 
     def sub_testcase_passed(self, name, passed=None):
         if passed is not None:

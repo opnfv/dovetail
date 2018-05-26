@@ -234,14 +234,10 @@ class FunctestCrawler(Crawler):
         if not os.path.exists(file_path):
             self.logger.error('Result file not found: {}'.format(file_path))
             return None
-        if testcase_name in dt_cfg.dovetail_config['functest_testcase']:
-            complex_testcase = False
-        elif testcase_name in dt_cfg.dovetail_config['functest_testsuite']:
-            complex_testcase = True
-        else:
-            self.logger.error(
-                "Wrong Functest test case {}.".format(testcase_name))
-            return None
+
+        sub_testcase_list = testcase.sub_testcase()
+        complex_testcase = True if sub_testcase_list else False
+
         with open(file_path, 'r') as f:
             for jsonfile in f:
                 try:

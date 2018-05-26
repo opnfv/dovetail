@@ -62,15 +62,7 @@ class DockerRunner(object):
             if not Container.pull_image(docker_image):
                 self.logger.error("Failed to pull the image.")
                 return
-        # for sdnvpn, there is a need to download needed images to config_dir
-        # in dovetail_config.yml first.
-        if 'sdnvpn' in str(self.testcase.name()):
-            img_name = dt_cfg.dovetail_config['sdnvpn_image']
-            img_file = os.path.join(dt_cfg.dovetail_config['images_dir'],
-                                    img_name)
-            if not os.path.isfile(img_file):
-                self.logger.error('Image {} not found.'.format(img_name))
-                return
+
         container_id = Container.create(self.testcase.validate_type(),
                                         self.testcase.name(), docker_image)
         if not container_id:
