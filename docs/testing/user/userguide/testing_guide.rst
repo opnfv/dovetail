@@ -245,6 +245,11 @@ this file should contain.
    # If using https + no cacert, should add OS_INSECURE environment parameter.
    export OS_INSECURE=True
 
+   # Specify the name of a network with external connectivity (floating IPs).
+   # This network is used by test cases to SSH into tenant VMs and perform
+   # operations there
+   export EXTERNAL_NETWORK=external
+
 
 The OS_AUTH_URL variable is key to configure correctly, as the other admin services
 are gleaned from the identity service. HTTPS should be configured in the SUT so the
