@@ -226,8 +226,11 @@ this file should contain.
    # If using https + no cacert, should add OS_INSECURE environment parameter.
    export OS_INSECURE=True
 
-   # External network name for allocating floating IPs.
-   # The attribute 'external' for this network must be True.
+   # The name of a network with external connectivity for allocating floating
+   # IPs. It is required that at least one Neutron network with the attribute
+   # 'router:external=True' is pre-configured on the system under test.
+   # This network is used by test cases to SSH into tenant VMs and perform
+   # operations there.
    export EXTERNAL_NETWORK=xxx
 
 
