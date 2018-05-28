@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a494da4_87d0dc54",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-05-28T01:31:23Z",
+      "side": 1,
+      "message": "This has been added with patch \u0027update user guide\u0027. But I like the detailed description here.\nOne more thing is that, this value is also used by Functest. Functest willl check the attribute \u0027external\u0027 of the given network. if it\u0027s True, Functest will use it to assign floating ips, if not, Functest will try to find another external network to do that.\nHowever, as we know, whether this network can be used to assign floating ips or not has nothing to do with the \u0027External\u0027 attribute actually. So for commercial products, this value may be False, which may cause the Functest test cases failed.",
+      "range": {
+        "startLine": 251,
+        "startChar": 3,
+        "endLine": 251,
+        "endChar": 35
+      },
+      "revId": "174b30e97d6955948240065c16bad19c0261cdee",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
