@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a494da4_a746b821",
+        "filename": "etc/testcase/security.patrole.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-05-28T02:44:32Z",
+      "side": 1,
+      "message": "The sub_testcase_list here for patrole and neutron_trunk has nothing to do with the test cases execution. Dovetail always uses command \u0027run_tests -t patrole/neutron_trunk -r\u0027 for them.\nThe list here is only used to parse results. Dovetail will check the test cases list here one by one by comparing with the results data Functest reports.\nThere are 2 reasons for listing all sub test cases here,\n1. the number of sub test cases Functest actually executes may not be always the same. For example, for refstack_defcore, Compass runs 204 test cases while Apex only runs 110. Functest says it passed because there is no failed test cases. Dovetail should say it failed because 94 test cases failed (no execution). Maybe commercial products also have the same problem for Tempest test cases.\n2. Functest doesn\u0027t take the skip test cases into account when giving the results criteria. Dovetail does need to check the skipped test cases. The sub test cases skipped may because of wrong tempest.conf or don\u0027t support. All not passed test cases(including failed and skipped) should be regarded as fail for Dovetail except the sub test cases that the environment really doesn\u0027t support.",
+      "parentUuid": "1a494da4_9c5f8f72",
+      "revId": "fddefef1901fa426cb5913cbb4c28efad64368aa",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a494da4_fc53336a",
         "filename": "etc/testcase/tempest.trunk-ports.yml",
         "patchSetId": 1
