@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a494da4_e2f54ecc",
+        "filename": "dovetail/utils/openstack_utils.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-05-29T08:19:49Z",
+      "side": 1,
+      "message": "do we really need the admin endpoints here? What if we run Dovetail against the public endpoints of a SuT?",
+      "range": {
+        "startLine": 16,
+        "startChar": 69,
+        "endLine": 16,
+        "endChar": 74
+      },
+      "revId": "c50c62cecce252a059d2a3898985a214eb4db817",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
