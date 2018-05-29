@@ -3,7 +3,7 @@ click==6.6
 Jinja2==2.8
 keystoneauth1==2.12.3
 openstacksdk==0.9.5
-os-client-config==1.21.1
+os-client-config==1.28.0
 osc-lib==1.1.0
 paramiko==1.18.0
 pbr==2.0.0
@@ -18,3 +18,4 @@ PyYAML==3.11
 requests==2.10.0
 six==1.10.0
 stevedore==1.20.0
+shade==1.22.2
