@@ -84,5 +84,5 @@ class CliTestcase(object):
 
         cmd = ("python %s/run.py"
                " %s" % (repo_dir, options))
-        dt_utils.exec_cmd(cmd, exit_on_error=False,
+        dt_utils.exec_cmd(cmd, exit_on_error=True,
                           exec_msg_on=False, info=True)
