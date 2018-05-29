@@ -22,6 +22,7 @@ import python_hosts
 
 from dovetail import constants
 from dovetail_config import DovetailConfig as dt_cfg
+from openstack_utils import OS_Utils
 
 
 def exec_log(verbose, logger, msg, level, flush=False):
@@ -130,38 +131,6 @@ def check_https_enabled(logger=None):
         return True
     logger.debug("https is not enabled")
     return False
-
-
-def get_ext_net_name(env_file, logger=None):
-    ext_net = os.getenv('EXTERNAL_NETWORK')
-    if ext_net:
-        return ext_net
-    else:
-        https_enabled = check_https_enabled(logger)
-        insecure_option = ''
-        insecure = os.getenv('OS_INSECURE')
-        if https_enabled:
-            logger.debug("https enabled...")
-            if insecure:
-                if insecure.lower() == "true":
-                    insecure_option = ' --insecure '
-                else:
-                    logger.warn("Env variable OS_INSECURE is {}, if https + "
-                                "no credential used, should be set as True."
-                                .format(insecure))
-
-        cmd_check = "openstack %s network list" % insecure_option
-        ret, msg = exec_cmd(cmd_check, logger)
-        if ret:
-            logger.error("The credentials info in {} is invalid."
-                         .format(env_file))
-            return None
-        cmd = "openstack %s network list --long | grep 'External' | head -1 | \
-               awk '{print $4}'" % insecure_option
-        ret, msg = exec_cmd(cmd, logger)
-        if not ret:
-            return msg
-        return None
 
 
 def get_duration(start_date, stop_date, logger):
@@ -296,17 +265,15 @@ def combine_files(file_path, result_file, logger=None):
 
 def get_openstack_endpoint(logger=None):
     https_enabled = check_https_enabled(logger)
-    insecure_option = ''
     insecure = os.getenv('OS_INSECURE')
-    if https_enabled:
-        if insecure:
-            if insecure.lower() == "true":
-                insecure_option = ' --insecure '
-    cmd = ("openstack {} endpoint list --interface admin -f json"
-           .format(insecure_option))
-    ret, msg = exec_cmd(cmd, logger, verbose=False)
-    if ret != 0:
-        logger.error("Failed to get the endpoint info.")
+    if https_enabled and insecure and insecure.lower() == "true":
+        os_utils = OS_Utils(verify=False)
+    else:
+        os_utils = OS_Utils()
+    res, msg = os_utils.list_endpoints()
+    if not res:
+        logger.error("Failed to get admin endpoints. Exception message, {}"
+                     .format(msg))
         return None
     result_file = os.path.join(dt_cfg.dovetail_config['result_dir'],
                                'endpoint_info.json')
@@ -315,7 +282,7 @@ def get_openstack_endpoint(logger=None):
             f.write(msg)
             logger.debug("Record all endpoint info into file {}."
                          .format(result_file))
-            return result_file
+            return msg
     except Exception:
         logger.exception("Failed to write endpoint info into file.")
         return None

@@ -1,9 +1,17 @@
 ---
+
+{% set validate_testcase = validate_testcase or '' %}
+{% set os_insecure = os_insecure or 'False' %}
+{% set os_verify = '' %}
+{% if os_insecure == 'True' %}
+    {% set os_verify = ' -e OS_VERIFY= ' %}
+{% endif %}
+
 functest:
   image_name: opnfv/functest-smoke
   docker_tag: fraser
   opts: '-id --privileged=true'
-  envs: '-e INSTALLER_TYPE=unknown -e DEPLOY_SCENARIO=unknown -e NODE_NAME=unknown
+  envs: '{{os_verify}} -e INSTALLER_TYPE=unknown -e DEPLOY_SCENARIO=unknown -e NODE_NAME=unknown
          -e TEST_DB_URL=file:///home/opnfv/functest/results/functest_results.txt'
   config:
     dir: '/home/opnfv/userconfig'

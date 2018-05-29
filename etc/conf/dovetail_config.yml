@@ -83,9 +83,6 @@ parameters:
     path: '("validate", "testcase")'
 
 include_config:
-  - functest_config.yml
-  - yardstick_config.yml
-  - bottlenecks_config.yml
   - vnftest_config.yml
 
 test_project:

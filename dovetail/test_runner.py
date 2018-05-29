@@ -187,9 +187,12 @@ class DockerRunner(object):
 
 class FunctestRunner(DockerRunner):
 
+    config_file_name = 'functest_config.yml'
+
     def __init__(self, testcase):
         self.type = 'functest'
         super(FunctestRunner, self).__init__(testcase)
+        self._update_config(testcase)
 
 
 class YardstickRunner(DockerRunner):

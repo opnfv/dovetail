@@ -21,17 +21,10 @@ class DovetailConfig(object):
             cls.dovetail_config = yaml.safe_load(f)
 
         for extra_config_file in cls.dovetail_config['include_config']:
-
-            # The yardstick and bottlenecks config files are with Jinja2.
-            # They need to be parsed later.
-            # All other config files should be transfer to like this gradually.
-            if extra_config_file.startswith(("yardstick", "bottlenecks")):
-                continue
-            else:
-                file_path = os.path.join(conf_path, extra_config_file)
-                with open(file_path) as f:
-                    extra_config = yaml.safe_load(f)
-                    cls.dovetail_config.update(extra_config)
+            file_path = os.path.join(conf_path, extra_config_file)
+            with open(file_path) as f:
+                extra_config = yaml.safe_load(f)
+                cls.dovetail_config.update(extra_config)
 
         path = os.path.join(conf_path, cls.dovetail_config['cli_file_name'])
         with open(path) as f:
