@@ -33,6 +33,9 @@ import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
 
 
+EXIT_RUN_FAILED = 2
+
+
 def load_testsuite(testsuite):
     Testsuite.load()
     return Testsuite.get(testsuite)
@@ -285,6 +288,9 @@ def main(*args, **kwargs):
     dt_utils.get_hardware_info(logger)
 
     testcase_list = get_testcase_list(logger, **kwargs)
+    if not testcase_list:
+        raise SystemExit(EXIT_RUN_FAILED)
+
     duration = run_test(testcase_list, logger)
     if (duration != "stop_on_fail"):
         Report.generate(testcase_list, duration)
