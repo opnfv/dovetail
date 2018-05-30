@@ -85,12 +85,12 @@ def validate_input(input_dict, check_dict, logger):
         logger.error("The input option 'functest_tag' can't be '{}', "
                      "valid values are {}.".format(func_tag,
                                                    valid_functest_tags))
-        raise SystemExit(1)
+        raise SystemExit(EXIT_RUN_FAILED)
     if yard_tag is not None and yard_tag not in valid_yardstick_tags:
         logger.error("The input option 'yardstick_tag' can't be '{}', "
                      "valid values are {}.".format(yard_tag,
                                                    valid_yardstick_tags))
-        raise SystemExit(1)
+        raise SystemExit(EXIT_RUN_FAILED)
     # if bott_tag is not None and bott_tag not in valid_tag:
     #     logger.error("The input option 'bott_tag' can't be {}, "
     #                  "valid values are {}.".format(bott_tag, valid_tag))
@@ -123,7 +123,7 @@ def filter_config(input_dict, logger):
                         break
                 except KeyError as e:
                     logger.exception('KeyError {}.'.format(e))
-                    raise SystemExit(1)
+                    raise SystemExit(EXIT_RUN_FAILED)
     if not configs:
         return None
     return configs
@@ -155,7 +155,7 @@ def clean_results_dir():
             dt_utils.exec_cmd(cmd, exit_on_error=False, exec_msg_on=False)
         else:
             print "result_dir in dovetail_config.yml is not a directory."
-            raise SystemExit(1)
+            raise SystemExit(EXIT_RUN_FAILED)
 
 
 def get_result_path():
