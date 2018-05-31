@@ -24,6 +24,10 @@ mappings = [
     (r"/api/v1/tests", test_handlers.TestsCLHandler),
     (r"/api/v1/tests/([^/]+)", test_handlers.TestsGURHandler),
 
+    (r"/api/v1/cvp/applications/getlogo/([^/]+)",
+     application_handlers.ApplicationsGetLogoHandler),
+    (r"/api/v1/cvp/applications/uploadlogo",
+     application_handlers.ApplicationsLogoHandler),
     (r"/api/v1/cvp/applications", application_handlers.ApplicationsCLHandler),
     (r"/api/v1/cvp/applications/([^/]+)",
      application_handlers.ApplicationsGURHandler),

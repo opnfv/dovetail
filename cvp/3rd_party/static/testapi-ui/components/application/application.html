@@ -180,6 +180,13 @@ urpose. Once we understand more about your product or service, we can determine 
                                     </div>
                                 </div>
                                 <div class="field text col-md-4">
+                                    <label class="left">Test ID</label>
+                                    <i uib-tooltip="Test ID - enter approved test_id" class="glyphicon glyphicon-question-sign opnfv-blue"></i>
+                                    <div class="middleColumn">
+                                        <input type="text" class="text form-control" ng-model="ctrl.test_id" />
+                                    </div>
+                                </div>
+                                <div class="field text col-md-4">
                                         <label class="left">Location</label>
                                         <i uib-tooltip="Location" class="glyphicon glyphicon-question-sign opnfv-blue"></i>
                                             <div class="middleColumn">
@@ -243,6 +250,7 @@ urpose. Once we understand more about your product or service, we can determine 
                 <th>Company logo</th>
                 <th>Approve date</th>
                 <th>Approved</th>
+                <th>Test ID</th>
                 <th>Location</th>
                 <th>Operation</th>
             </tr>
@@ -302,6 +310,7 @@ urpose. Once we understand more about your product or service, we can determine 
                 <td>{{ app.company_logo }}</td>
                 <td>{{ app.approve_date }}</td>
                 <td>{{ app.approved }}</td>
+                <td>{{ app.test_id }}</td>
                 <td><span popover-enable="app.lab_location != 'internal'" uib-popover-template="ctrl.lab_tpl" popover-title="Lab Info" popover-placement="top" popover-trigger="mouseenter">{{ app.lab_location | labLocation}}</span><i ng-if="app.lab_location != 'internal'" class="glyphicon glyphicon-info-sign opnfv-blue"></i></td>
                 <td><a ng-click="ctrl.deleteApp(app._id)" class="badge badge-info"><i class="glyphicon glyphicon-remove" ></i></a></td>
             </tr>
@@ -322,4 +331,18 @@ urpose. Once we understand more about your product or service, we can determine 
         </uib-pagination>
     </div>
 </div>
+
+<div>
+    <br>
+    <h3>Company Logo Upload for Directory</h3>
+    <form enctype="multipart/form-data" method="post">
+        <div class="form-group col-m-3">
+             <input class="form-contrl btn btn-success cvp-btn medium accent-color regular-button" file-model="logoFile" type="file">
+        </div>
+        <div class="form-group col-m-3">
+             <a class="btn btn-success cvp-btn medium accent-color regular-button" ng-click="ctrl.uploadLogo()"><span>Upload Logo</span></a>
+        </div>
+    </form>
+</div>
+
 </div>
