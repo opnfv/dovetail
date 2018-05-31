@@ -30,6 +30,7 @@
         $uibModal, testapiApiUrl, raiseAlert, ngDialog, $scope) {
 
         var ctrl = this;
+        ctrl.uploadLogo=uploadLogo;
 
 	function init(){
 		ctrl.organization_name = null;
@@ -52,6 +53,7 @@
                 ctrl.company_logo = null;
                 ctrl.approve_date = null;
                 ctrl.approved = "false";
+                ctrl.test_id = null;
                 ctrl.lab_location="internal";
                 ctrl.lab_name = null;
                 ctrl.lab_email=null;
@@ -94,6 +96,7 @@
                     "company_logo": ctrl.company_logo,
                     "approve_date": ctrl.approve_date,
                     "approved": ctrl.approved,
+                    "test_id": ctrl.test_id,
                     "lab_location": ctrl.lab_location,
                     "lab_email": ctrl.lab_email,
                     "lab_address": ctrl.lab_address,
@@ -140,6 +143,24 @@
               getApplication();
           });
         }
+
+    function uploadLogo(){
+        var file = $scope.logoFile;
+        var fd = new FormData();
+        fd.append('file', file);
+
+        $http.post(testapiApiUrl + "/cvp/applications/uploadlogo", fd, {
+            transformRequest: angular.identity,
+            headers: {'Content-Type': undefined}
+        }).then(function(resp){
+            if(resp.data.code && resp.data.code != 0) {
+                alert(resp.data.msg);
+                return;
+            }
+        }, function(error){
+        });
+
+    };
 
 	function getApplication(){
 		$http.get(testapiApiUrl + "/cvp/applications?page="+ctrl.currentPage+"&signed&per_page="+ctrl.itemsPerPage).then(function(response){
