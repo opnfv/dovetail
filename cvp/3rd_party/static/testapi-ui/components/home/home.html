@@ -61,7 +61,7 @@
                             " target="_blank">2018.01 Reviewer Guide&nbsp<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></div>
                             <div><a href="http://docs.opnfv.org/en/stable-danube/submodules/dovetail/docs/testing/user/ovpaddendum/index.html
                             " target="_blank">2018.01 Guidelines Addendum&nbsp<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></div>
-                            <div><a href="https://www.opnfv.org/wp-content/uploads/sites/12/2018/02/OPNFV_Verified_BrandGuide_021618.pdf
+                            <div><a href="https://www.opnfv.org/wp-content/uploads/sites/12/2018/05/OPNFV_Verified_BrandGuide_021618.pdf
                             " target="_blank">OPNFV Verified Brand Guidelines&nbsp<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></div>
                             <!--
                             <div><a target="_blank">FAQ</a></div>
@@ -113,9 +113,10 @@
                 </div>
                 <div class="home-content-title">
                     <h1>OPNFV Verified Products Directory</h1>
+                    Click on rows for more product verification details per company.
                 </div>
                 <div class="directory_main">
-                        <table id="directory_inner" class="table-striped table-hover">
+                        <table id="directory_inner" class="">
                             <thead>
                                 <tr>
                                     <th>Company</th>
@@ -125,8 +126,8 @@
                                 </tr>
                             </thead>
                             <tbody style="overflow: hidden; text-overflow: ellipsis;">
-                                <tr ng-click="ctrl.getCompany(app)" ng-repeat="app in ctrl.applications | filter:{approved:true} | orderBy : 'approve_date'">
-                                    <td width="450"><img src="testapi-ui/assets/img/{{app.company_logo}}" />&ensp;{{ app.organization_name}}</td>
+                                <tr class="company_row" ng-click="ctrl.getCompany(app)" ng-repeat="app in ctrl.applications | filter:{approved:true} | orderBy : 'approve_date'">
+                                    <td width="400"><img class="company_logo" src="api/v1/cvp/applications/getlogo/{{app.company_logo}}" />{{ app.organization_name}}</td>
                                     <td width="300">{{ app.product_name}}</td>
                                     <td width="150">{{ app.ovp_category}}</td>
                                     <td width="150">{{ app.ovp_version}}</td>
