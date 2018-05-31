@@ -30,6 +30,49 @@ class GenericApplicationHandler(handlers.GenericApiHandler):
         self.table_cls = application_models.Application
 
 
+class ApplicationsLogoHandler(GenericApplicationHandler):
+    @web.asynchronous
+    @gen.coroutine
+    def post(self):
+        role = self.get_secure_cookie(auth_const.ROLE)
+        if role.find('administrator') == -1:
+            msg = 'Only administrator is allowed to upload logos'
+            self.finish_request({'code': '-1', 'msg': msg})
+            return
+
+        fileinfo = self.request.files['file'][0]
+        fname = fileinfo['filename']
+        location = '3rd_party/static/testapi-ui/assets/img/'
+        fh = open(location + fname, 'w')
+        fh.write(fileinfo['body'])
+        msg = 'Successfully uploaded logo: ' + fname
+        resp = {'code': '1', 'msg': msg}
+        self.finish_request(resp)
+
+
+class ApplicationsGetLogoHandler(GenericApplicationHandler):
+    def get(self, filename):
+        location = '3rd_party/static/testapi-ui/assets/img/' + filename
+        self.set_header('Content-Type', 'application/force-download')
+        self.set_header('Content-Disposition',
+                        'attachment; filename=%s' % filename)
+        try:
+            with open(location, "rb") as f:
+                try:
+                    while True:
+                        _buffer = f.read(4096)
+                        if _buffer:
+                            self.write(_buffer)
+                        else:
+                            f.close()
+                            self.finish()
+                            return
+                except Exception:
+                    raise web.HTTPError(404)
+        except Exception:
+            raise web.HTTPError(500)
+
+
 class ApplicationsCLHandler(GenericApplicationHandler):
     @swagger.operation(nickname="queryApplications")
     @web.asynchronous
