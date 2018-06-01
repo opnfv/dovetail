@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a494da4_c50e5734",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-06-01T20:10:03Z",
+      "side": 1,
+      "message": "minor thing: could you add the following lines to this message? You can directly edit the message in Gerrit.\n\nJIRA: DOVETAIL-663\nJIRA: DOVETAIL-664",
+      "range": {
+        "startLine": 14,
+        "startChar": 2,
+        "endLine": 17,
+        "endChar": 36
+      },
+      "revId": "884c4a3130f52bb63eaa1092158e6274014dcaf2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
