@@ -7,4 +7,9 @@ dovetail.vnf.vepc:
     testcase: juju_epc
     image_name: opnfv/functest-vnf
   report:
+    source_archive_files:
+      - functest.log
+    dest_archive_files:
+      - vnf_logs/dovetail.vnf.vepc.log
+    check_results_file: 'functest_results.txt'
     sub_testcase_list:
