@@ -1,45 +1,50 @@
-From 9e15ea5e8b15d42eb202363e9a83ae9bb09ccb64 Mon Sep 17 00:00:00 2001
+From 90e0e23ce73a4459d981acca588f3873eb29c770 Mon Sep 17 00:00:00 2001
 From: Georg Kunz <georg.kunz@ericsson.com>
-Date: Wed, 31 Jan 2018 21:10:35 +0100
-Subject: [PATCH 1/1] Allow additional properties in API responses
+Date: Wed, 6 Jun 2018 15:07:43 +0200
+Subject: [PATCH] Allow additional properties in API responses
 
 ---
- .../lib/api_schema/response/compute/v2_1/agents.py | 10 ++--
- .../api_schema/response/compute/v2_1/aggregates.py |  8 +--
- .../response/compute/v2_1/availability_zone.py     |  8 +--
- .../response/compute/v2_1/baremetal_nodes.py       |  6 +-
- .../response/compute/v2_1/certificates.py          |  4 +-
- .../api_schema/response/compute/v2_1/extensions.py |  4 +-
- .../api_schema/response/compute/v2_1/fixed_ips.py  |  4 +-
- .../api_schema/response/compute/v2_1/flavors.py    | 10 ++--
- .../response/compute/v2_1/flavors_access.py        |  4 +-
- .../response/compute/v2_1/flavors_extra_specs.py   |  2 +-
- .../response/compute/v2_1/floating_ips.py          | 20 +++----
- .../lib/api_schema/response/compute/v2_1/hosts.py  | 14 ++---
- .../response/compute/v2_1/hypervisors.py           | 22 ++++----
- .../lib/api_schema/response/compute/v2_1/images.py | 16 +++---
- .../compute/v2_1/instance_usage_audit_logs.py      |  8 +--
- .../api_schema/response/compute/v2_1/interfaces.py |  8 +--
- .../api_schema/response/compute/v2_1/keypairs.py   | 14 ++---
- .../lib/api_schema/response/compute/v2_1/limits.py | 10 ++--
- .../api_schema/response/compute/v2_1/migrations.py |  4 +-
- .../response/compute/v2_1/parameter_types.py       |  4 +-
- .../lib/api_schema/response/compute/v2_1/quotas.py |  4 +-
- .../compute/v2_1/security_group_default_rule.py    |  8 +--
- .../response/compute/v2_1/security_groups.py       | 16 +++---
- .../api_schema/response/compute/v2_1/servers.py    | 64 +++++++++++-----------
- .../api_schema/response/compute/v2_1/services.py   |  8 +--
- .../api_schema/response/compute/v2_1/snapshots.py  |  6 +-
- .../response/compute/v2_1/tenant_networks.py       |  6 +-
- .../api_schema/response/compute/v2_1/versions.py   | 10 ++--
- .../api_schema/response/compute/v2_1/volumes.py    | 12 ++--
- .../api_schema/response/compute/v2_16/servers.py   | 14 ++---
- .../response/compute/v2_23/migrations.py           |  4 +-
- .../api_schema/response/compute/v2_3/servers.py    | 14 ++---
- 32 files changed, 173 insertions(+), 173 deletions(-)
+ .../response/compute/v2_1/agents.py           | 10 +--
+ .../response/compute/v2_1/aggregates.py       |  8 +--
+ .../compute/v2_1/availability_zone.py         |  8 +--
+ .../response/compute/v2_1/baremetal_nodes.py  |  6 +-
+ .../response/compute/v2_1/certificates.py     |  4 +-
+ .../response/compute/v2_1/extensions.py       |  4 +-
+ .../response/compute/v2_1/fixed_ips.py        |  4 +-
+ .../response/compute/v2_1/flavors.py          | 10 +--
+ .../response/compute/v2_1/flavors_access.py   |  4 +-
+ .../compute/v2_1/flavors_extra_specs.py       |  2 +-
+ .../response/compute/v2_1/floating_ips.py     | 20 +++---
+ .../api_schema/response/compute/v2_1/hosts.py | 14 ++--
+ .../response/compute/v2_1/hypervisors.py      | 22 +++----
+ .../response/compute/v2_1/images.py           | 16 ++---
+ .../compute/v2_1/instance_usage_audit_logs.py |  8 +--
+ .../response/compute/v2_1/interfaces.py       |  8 +--
+ .../response/compute/v2_1/keypairs.py         | 14 ++--
+ .../response/compute/v2_1/limits.py           | 10 +--
+ .../response/compute/v2_1/migrations.py       |  4 +-
+ .../response/compute/v2_1/parameter_types.py  |  4 +-
+ .../response/compute/v2_1/quotas.py           |  4 +-
+ .../v2_1/security_group_default_rule.py       |  8 +--
+ .../response/compute/v2_1/security_groups.py  | 16 ++---
+ .../response/compute/v2_1/servers.py          | 66 +++++++++----------
+ .../response/compute/v2_1/services.py         | 12 ++--
+ .../response/compute/v2_1/snapshots.py        |  6 +-
+ .../response/compute/v2_1/tenant_networks.py  |  6 +-
+ .../response/compute/v2_1/versions.py         | 10 +--
+ .../response/compute/v2_1/volumes.py          | 12 ++--
+ .../response/compute/v2_11/services.py        |  4 +-
+ .../response/compute/v2_16/servers.py         | 14 ++--
+ .../response/compute/v2_23/migrations.py      |  4 +-
+ .../response/compute/v2_26/servers.py         |  2 +-
+ .../response/compute/v2_3/servers.py          | 14 ++--
+ .../response/compute/v2_47/servers.py         |  2 +-
+ .../response/compute/v2_48/servers.py         | 10 +--
+ .../response/compute/v2_6/servers.py          |  4 +-
+ 37 files changed, 187 insertions(+), 187 deletions(-)
 
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/agents.py b/tempest/lib/api_schema/response/compute/v2_1/agents.py
-index 6f712b4..09feb73 100644
+index 6f712b41e..09feb73df 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/agents.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/agents.py
 @@ -23,7 +23,7 @@ common_agent_info = {
@@ -84,19 +89,19 @@ index 6f712b4..09feb73 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/aggregates.py b/tempest/lib/api_schema/response/compute/v2_1/aggregates.py
-index 1a9fe41..4a86670 100644
+index 3289a34a7..021959b10 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/aggregates.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/aggregates.py
-@@ -26,7 +26,7 @@ aggregate_for_create = {
+@@ -28,7 +28,7 @@ aggregate_for_create = {
          'name': {'type': 'string'},
-         'updated_at': {'type': ['string', 'null']}
+         'updated_at': parameter_types.date_time_or_null
      },
 -    'additionalProperties': False,
 +    'additionalProperties': True,
      'required': ['availability_zone', 'created_at', 'deleted',
                   'deleted_at', 'id', 'name', 'updated_at'],
  }
-@@ -48,7 +48,7 @@ list_aggregates = {
+@@ -50,7 +50,7 @@ list_aggregates = {
                  'items': common_aggregate_info
              }
          },
@@ -105,7 +110,7 @@ index 1a9fe41..4a86670 100644
          'required': ['aggregates'],
      }
  }
-@@ -60,7 +60,7 @@ get_aggregate = {
+@@ -62,7 +62,7 @@ get_aggregate = {
          'properties': {
              'aggregate': common_aggregate_info
          },
@@ -124,10 +129,10 @@ index 1a9fe41..4a86670 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/availability_zone.py b/tempest/lib/api_schema/response/compute/v2_1/availability_zone.py
-index d9aebce..7b5e03c 100644
+index 0dc28c378..ded47d7c0 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/availability_zone.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/availability_zone.py
-@@ -31,19 +31,19 @@ base = {
+@@ -33,19 +33,19 @@ base = {
                              'properties': {
                                  'available': {'type': 'boolean'}
                              },
@@ -150,9 +155,9 @@ index d9aebce..7b5e03c 100644
          'required': ['availabilityZoneInfo']
      }
  }
-@@ -63,7 +63,7 @@ detail = {
+@@ -65,7 +65,7 @@ detail = {
                          'active': {'type': 'boolean'},
-                         'updated_at': {'type': ['string', 'null']}
+                         'updated_at': parameter_types.date_time_or_null
                      },
 -                    'additionalProperties': False,
 +                    'additionalProperties': True,
@@ -160,7 +165,7 @@ index d9aebce..7b5e03c 100644
                  }
              }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/baremetal_nodes.py b/tempest/lib/api_schema/response/compute/v2_1/baremetal_nodes.py
-index d1ee877..8ab17d3 100644
+index d1ee87728..8ab17d3fb 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/baremetal_nodes.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/baremetal_nodes.py
 @@ -25,7 +25,7 @@ node = {
@@ -191,7 +196,7 @@ index d1ee877..8ab17d3 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/certificates.py b/tempest/lib/api_schema/response/compute/v2_1/certificates.py
-index 4e7cbe4..99f795a 100644
+index 4e7cbe4d2..99f795a3b 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/certificates.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/certificates.py
 @@ -25,11 +25,11 @@ _common_schema = {
@@ -209,10 +214,10 @@ index 4e7cbe4..99f795a 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/extensions.py b/tempest/lib/api_schema/response/compute/v2_1/extensions.py
-index a6a455c..9f7395a 100644
+index b5962d752..833bc9df0 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/extensions.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/extensions.py
-@@ -35,13 +35,13 @@ list_extensions = {
+@@ -34,13 +34,13 @@ list_extensions = {
                          'alias': {'type': 'string'},
                          'description': {'type': 'string'}
                      },
@@ -229,7 +234,7 @@ index a6a455c..9f7395a 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/fixed_ips.py b/tempest/lib/api_schema/response/compute/v2_1/fixed_ips.py
-index a653213..b53565a 100644
+index a653213f0..b53565aab 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/fixed_ips.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/fixed_ips.py
 @@ -27,11 +27,11 @@ get_fixed_ip = {
@@ -247,7 +252,7 @@ index a653213..b53565a 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/flavors.py b/tempest/lib/api_schema/response/compute/v2_1/flavors.py
-index 547d94d..76cbb8a 100644
+index 547d94d57..76cbb8a55 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/flavors.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/flavors.py
 @@ -28,13 +28,13 @@ list_flavors = {
@@ -294,7 +299,7 @@ index 547d94d..76cbb8a 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/flavors_access.py b/tempest/lib/api_schema/response/compute/v2_1/flavors_access.py
-index a4d6af0..958ed02 100644
+index a4d6af0d7..958ed02b5 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/flavors_access.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/flavors_access.py
 @@ -25,12 +25,12 @@ add_remove_list_flavor_access = {
@@ -313,7 +318,7 @@ index a4d6af0..958ed02 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/flavors_extra_specs.py b/tempest/lib/api_schema/response/compute/v2_1/flavors_extra_specs.py
-index a438d48..c8988b1 100644
+index a438d4869..c8988b1de 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/flavors_extra_specs.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/flavors_extra_specs.py
 @@ -24,7 +24,7 @@ set_get_flavor_extra_specs = {
@@ -326,7 +331,7 @@ index a438d48..c8988b1 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/floating_ips.py b/tempest/lib/api_schema/response/compute/v2_1/floating_ips.py
-index 0c66590..39e4207 100644
+index 0c665905f..39e4207ca 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/floating_ips.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/floating_ips.py
 @@ -26,7 +26,7 @@ common_floating_ip_info = {
@@ -413,7 +418,7 @@ index 0c66590..39e4207 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/hosts.py b/tempest/lib/api_schema/response/compute/v2_1/hosts.py
-index ae70ff1..d750cd0 100644
+index cae343597..76bf47ed1 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/hosts.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/hosts.py
 @@ -29,12 +29,12 @@ list_hosts = {
@@ -467,11 +472,11 @@ index ae70ff1..d750cd0 100644
          },
 -        'additionalProperties': False,
 +        'additionalProperties': True,
-         'required': ['host', 'maintenance_mode', 'status']
-     }
- }
+         'anyOf': [
+             {'required': ['host', 'status']},
+             {'required': ['host', 'maintenance_mode']}
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/hypervisors.py b/tempest/lib/api_schema/response/compute/v2_1/hypervisors.py
-index d15b4f6..5d8cf6d 100644
+index d15b4f66a..5d8cf6d39 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/hypervisors.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/hypervisors.py
 @@ -37,7 +37,7 @@ get_hypervisor_statistics = {
@@ -571,7 +576,7 @@ index d15b4f6..5d8cf6d 100644
      }
  # In V2 API, if there is no servers (VM) on the Hypervisor host then 'servers'
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/images.py b/tempest/lib/api_schema/response/compute/v2_1/images.py
-index f65b9d8..25d3167 100644
+index 156ff4ac6..2acc12835 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/images.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/images.py
 @@ -40,13 +40,13 @@ common_image_schema = {
@@ -643,7 +648,7 @@ index f65b9d8..25d3167 100644
          # present always So it is not 'required'.
          'required': ['images']
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/instance_usage_audit_logs.py b/tempest/lib/api_schema/response/compute/v2_1/instance_usage_audit_logs.py
-index 15224c5..402dfea 100644
+index 15224c5a0..402dfeac3 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/instance_usage_audit_logs.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/instance_usage_audit_logs.py
 @@ -31,7 +31,7 @@ common_instance_usage_audit_log = {
@@ -683,7 +688,7 @@ index 15224c5..402dfea 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/interfaces.py b/tempest/lib/api_schema/response/compute/v2_1/interfaces.py
-index 9984750..6a989e5 100644
+index 99847502c..6a989e5eb 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/interfaces.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/interfaces.py
 @@ -29,7 +29,7 @@ interface_common_info = {
@@ -723,20 +728,18 @@ index 9984750..6a989e5 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/keypairs.py b/tempest/lib/api_schema/response/compute/v2_1/keypairs.py
-index 9c04c79..ec5c2d3 100644
+index e7dcf791d..8a95112c2 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/keypairs.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/keypairs.py
-@@ -31,7 +31,7 @@ get_keypair = {
+@@ -33,13 +33,13 @@ get_keypair = {
                      'id': {'type': 'integer'}
  
                  },
 -                'additionalProperties': False,
 +                'additionalProperties': True,
-                 # When we run the get keypair API, response body includes
-                 # all the above mentioned attributes.
-                 # But in Nova API sample file, response body includes only
-@@ -40,7 +40,7 @@ get_keypair = {
-                 'required': ['public_key', 'name', 'fingerprint']
+                 'required': ['public_key', 'name', 'fingerprint', 'user_id',
+                              'deleted', 'created_at', 'updated_at',
+                              'deleted_at', 'id']
              }
          },
 -        'additionalProperties': False,
@@ -744,7 +747,7 @@ index 9c04c79..ec5c2d3 100644
          'required': ['keypair']
      }
  }
-@@ -59,14 +59,14 @@ create_keypair = {
+@@ -58,14 +58,14 @@ create_keypair = {
                      'user_id': {'type': 'string'},
                      'private_key': {'type': 'string'}
                  },
@@ -761,7 +764,7 @@ index 9c04c79..ec5c2d3 100644
          'required': ['keypair']
      }
  }
-@@ -92,16 +92,16 @@ list_keypairs = {
+@@ -91,16 +91,16 @@ list_keypairs = {
                                  'name': {'type': 'string'},
                                  'fingerprint': {'type': 'string'}
                              },
@@ -782,7 +785,7 @@ index 9c04c79..ec5c2d3 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/limits.py b/tempest/lib/api_schema/response/compute/v2_1/limits.py
-index 81f175f..bc4c1e3 100644
+index 81f175fa7..bc4c1e3d8 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/limits.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/limits.py
 @@ -43,7 +43,7 @@ get_limit = {
@@ -821,19 +824,19 @@ index 81f175f..bc4c1e3 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/migrations.py b/tempest/lib/api_schema/response/compute/v2_1/migrations.py
-index b7d66ea..b571820 100644
+index c50286d27..19922f2b4 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/migrations.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/migrations.py
-@@ -35,7 +35,7 @@ list_migrations = {
-                         'created_at': {'type': 'string'},
-                         'updated_at': {'type': ['string', 'null']}
+@@ -37,7 +37,7 @@ list_migrations = {
+                         'created_at': parameter_types.date_time,
+                         'updated_at': parameter_types.date_time_or_null
                      },
 -                    'additionalProperties': False,
 +                    'additionalProperties': True,
                      'required': [
                          'id', 'status', 'instance_uuid', 'source_node',
                          'source_compute', 'dest_node', 'dest_compute',
-@@ -45,7 +45,7 @@ list_migrations = {
+@@ -47,7 +47,7 @@ list_migrations = {
                  }
              }
          },
@@ -843,7 +846,7 @@ index b7d66ea..b571820 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/parameter_types.py b/tempest/lib/api_schema/response/compute/v2_1/parameter_types.py
-index 3cc5ca4..73843d1 100644
+index 28ed81673..dc7544581 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/parameter_types.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/parameter_types.py
 @@ -23,7 +23,7 @@ links = {
@@ -865,7 +868,7 @@ index 3cc5ca4..73843d1 100644
              }
          }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/quotas.py b/tempest/lib/api_schema/response/compute/v2_1/quotas.py
-index 7953983..f4d9153 100644
+index 44f5bdfd2..a4515a9ea 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/quotas.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/quotas.py
 @@ -37,7 +37,7 @@ update_quota_set = {
@@ -887,7 +890,7 @@ index 7953983..f4d9153 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/security_group_default_rule.py b/tempest/lib/api_schema/response/compute/v2_1/security_group_default_rule.py
-index 2ec2826..1a2e19b 100644
+index 2ec282698..1a2e19b84 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/security_group_default_rule.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/security_group_default_rule.py
 @@ -23,12 +23,12 @@ common_security_group_default_rule_info = {
@@ -924,7 +927,7 @@ index 2ec2826..1a2e19b 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/security_groups.py b/tempest/lib/api_schema/response/compute/v2_1/security_groups.py
-index 5ed5a5c..d9f1794 100644
+index 5ed5a5c80..d9f1794c6 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/security_groups.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/security_groups.py
 @@ -21,7 +21,7 @@ common_security_group_rule = {
@@ -994,7 +997,7 @@ index 5ed5a5c..d9f1794 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/servers.py b/tempest/lib/api_schema/response/compute/v2_1/servers.py
-index 63e8467..8f4b385 100644
+index 2954de005..e22fba32c 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/servers.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/servers.py
 @@ -29,14 +29,14 @@ create_server = {
@@ -1039,16 +1042,16 @@ index 63e8467..8f4b385 100644
                  'required': ['id', 'links']},
              {'type': ['string', 'null']}
          ]},
-@@ -100,7 +100,7 @@ common_show_server = {
-                 'id': {'type': 'string'},
-                 'links': parameter_types.links
-             },
--            'additionalProperties': False,
-+            'additionalProperties': True,
-             'required': ['id', 'links']
+@@ -103,7 +103,7 @@ common_show_server = {
+             # NOTE(gmann): This will be empty object if there is no
+             # flavor info present in DB. This can happen when flavor info is
+             # deleted after server creation.
+-            'additionalProperties': False
++            'additionalProperties': True
          },
          'fault': {
-@@ -111,7 +111,7 @@ common_show_server = {
+             'type': 'object',
+@@ -113,7 +113,7 @@ common_show_server = {
                  'message': {'type': 'string'},
                  'details': {'type': 'string'},
              },
@@ -1057,7 +1060,7 @@ index 63e8467..8f4b385 100644
              # NOTE(gmann): 'details' is not necessary to be present
              #  in the 'fault'. So it is not defined as 'required'.
              'required': ['code', 'created', 'message']
-@@ -129,7 +129,7 @@ common_show_server = {
+@@ -131,7 +131,7 @@ common_show_server = {
          'accessIPv4': parameter_types.access_ip_v4,
          'accessIPv6': parameter_types.access_ip_v6
      },
@@ -1066,7 +1069,7 @@ index 63e8467..8f4b385 100644
      # NOTE(GMann): 'progress' attribute is present in the response
      # only when server's status is one of the progress statuses
      # ("ACTIVE","BUILD", "REBUILD", "RESIZE","VERIFY_RESIZE")
-@@ -150,7 +150,7 @@ update_server = {
+@@ -152,7 +152,7 @@ update_server = {
          'properties': {
              'server': common_show_server
          },
@@ -1075,7 +1078,7 @@ index 63e8467..8f4b385 100644
          'required': ['server']
      }
  }
-@@ -181,7 +181,7 @@ server_detail['properties'].update({
+@@ -183,7 +183,7 @@ server_detail['properties'].update({
              'properties': {
                  'id': {'type': 'string'}
              },
@@ -1084,7 +1087,7 @@ index 63e8467..8f4b385 100644
          },
      },
      'config_drive': {'type': 'string'}
-@@ -202,7 +202,7 @@ get_server = {
+@@ -204,7 +204,7 @@ get_server = {
          'properties': {
              'server': server_detail
          },
@@ -1093,7 +1096,7 @@ index 63e8467..8f4b385 100644
          'required': ['server']
      }
  }
-@@ -218,7 +218,7 @@ list_servers_detail = {
+@@ -220,7 +220,7 @@ list_servers_detail = {
              },
              'servers_links': parameter_types.links
          },
@@ -1102,16 +1105,16 @@ index 63e8467..8f4b385 100644
          # NOTE(gmann): servers_links attribute is not necessary to be
          # present always So it is not 'required'.
          'required': ['servers']
-@@ -241,7 +241,7 @@ rescue_server = {
-         'properties': {
-             'adminPass': {'type': 'string'}
-         },
+@@ -240,7 +240,7 @@ rescue_server = {
+     'status_code': [200],
+     'response_body': {
+         'type': 'object',
 -        'additionalProperties': False,
 +        'additionalProperties': True,
-         'required': ['adminPass']
      }
  }
-@@ -260,14 +260,14 @@ list_virtual_interfaces = {
+ 
+@@ -265,14 +265,14 @@ list_virtual_interfaces = {
                          'mac_address': parameter_types.mac_address,
                          'OS-EXT-VIF-NET:net_id': {'type': 'string'}
                      },
@@ -1128,7 +1131,7 @@ index 63e8467..8f4b385 100644
          'required': ['virtual_interfaces']
      }
  }
-@@ -280,7 +280,7 @@ common_attach_volume_info = {
+@@ -285,7 +285,7 @@ common_attach_volume_info = {
          'volumeId': {'type': 'string'},
          'serverId': {'type': ['integer', 'string']}
      },
@@ -1137,7 +1140,7 @@ index 63e8467..8f4b385 100644
      # 'device' is optional in response.
      'required': ['id', 'volumeId', 'serverId']
  }
-@@ -292,7 +292,7 @@ attach_volume = {
+@@ -297,7 +297,7 @@ attach_volume = {
          'properties': {
              'volumeAttachment': common_attach_volume_info
          },
@@ -1146,7 +1149,7 @@ index 63e8467..8f4b385 100644
          'required': ['volumeAttachment']
      }
  }
-@@ -315,7 +315,7 @@ list_volume_attachments = {
+@@ -320,7 +320,7 @@ list_volume_attachments = {
                  'items': common_attach_volume_info
              }
          },
@@ -1155,7 +1158,7 @@ index 63e8467..8f4b385 100644
          'required': ['volumeAttachments']
      }
  }
-@@ -335,7 +335,7 @@ list_addresses = {
+@@ -340,7 +340,7 @@ list_addresses = {
          'properties': {
              'addresses': parameter_types.addresses
          },
@@ -1164,7 +1167,7 @@ index 63e8467..8f4b385 100644
          'required': ['addresses']
      }
  }
-@@ -357,7 +357,7 @@ common_server_group = {
+@@ -362,7 +362,7 @@ common_server_group = {
          },
          'metadata': {'type': 'object'}
      },
@@ -1173,7 +1176,7 @@ index 63e8467..8f4b385 100644
      'required': ['id', 'name', 'policies', 'members', 'metadata']
  }
  
-@@ -368,7 +368,7 @@ create_show_server_group = {
+@@ -373,7 +373,7 @@ create_show_server_group = {
          'properties': {
              'server_group': common_server_group
          },
@@ -1182,7 +1185,7 @@ index 63e8467..8f4b385 100644
          'required': ['server_group']
      }
  }
-@@ -387,7 +387,7 @@ list_server_groups = {
+@@ -392,7 +392,7 @@ list_server_groups = {
                  'items': common_server_group
              }
          },
@@ -1191,7 +1194,7 @@ index 63e8467..8f4b385 100644
          'required': ['server_groups']
      }
  }
-@@ -403,7 +403,7 @@ instance_actions = {
+@@ -408,7 +408,7 @@ instance_actions = {
          'message': {'type': ['string', 'null']},
          'instance_uuid': {'type': 'string'}
      },
@@ -1200,8 +1203,8 @@ index 63e8467..8f4b385 100644
      'required': ['action', 'request_id', 'user_id', 'project_id',
                   'start_time', 'message', 'instance_uuid']
  }
-@@ -419,7 +419,7 @@ instance_action_events = {
-             'result': {'type': 'string'},
+@@ -429,7 +429,7 @@ instance_action_events = {
+             'result': {'type': ['string', 'null']},
              'traceback': {'type': ['string', 'null']}
          },
 -        'additionalProperties': False,
@@ -1209,7 +1212,7 @@ index 63e8467..8f4b385 100644
          'required': ['event', 'start_time', 'finish_time', 'result',
                       'traceback']
      }
-@@ -435,7 +435,7 @@ list_instance_actions = {
+@@ -445,7 +445,7 @@ list_instance_actions = {
                  'items': instance_actions
              }
          },
@@ -1218,7 +1221,7 @@ index 63e8467..8f4b385 100644
          'required': ['instanceActions']
      }
  }
-@@ -453,7 +453,7 @@ show_instance_action = {
+@@ -463,7 +463,7 @@ show_instance_action = {
          'properties': {
              'instanceAction': instance_actions_with_events
          },
@@ -1227,7 +1230,7 @@ index 63e8467..8f4b385 100644
          'required': ['instanceAction']
      }
  }
-@@ -465,7 +465,7 @@ show_password = {
+@@ -475,7 +475,7 @@ show_password = {
          'properties': {
              'password': {'type': 'string'}
          },
@@ -1236,7 +1239,7 @@ index 63e8467..8f4b385 100644
          'required': ['password']
      }
  }
-@@ -484,11 +484,11 @@ get_vnc_console = {
+@@ -494,11 +494,11 @@ get_vnc_console = {
                          'format': 'uri'
                      }
                  },
@@ -1250,7 +1253,7 @@ index 63e8467..8f4b385 100644
          'required': ['console']
      }
  }
-@@ -500,7 +500,7 @@ get_console_output = {
+@@ -510,7 +510,7 @@ get_console_output = {
          'properties': {
              'output': {'type': 'string'}
          },
@@ -1259,7 +1262,7 @@ index 63e8467..8f4b385 100644
          'required': ['output']
      }
  }
-@@ -517,7 +517,7 @@ set_server_metadata = {
+@@ -527,7 +527,7 @@ set_server_metadata = {
                  }
              }
          },
@@ -1268,7 +1271,7 @@ index 63e8467..8f4b385 100644
          'required': ['metadata']
      }
  }
-@@ -542,7 +542,7 @@ set_show_server_metadata_item = {
+@@ -552,7 +552,7 @@ set_show_server_metadata_item = {
                  }
              }
          },
@@ -1277,12 +1280,21 @@ index 63e8467..8f4b385 100644
          'required': ['meta']
      }
  }
+@@ -583,7 +583,7 @@ evacuate_server_with_admin_pass = {
+         'properties': {
+             'adminPass': {'type': 'string'}
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['adminPass']
+     }
+ }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/services.py b/tempest/lib/api_schema/response/compute/v2_1/services.py
-index ddef7b2..4b490d1 100644
+index 3b58ece48..b590c0221 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/services.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/services.py
-@@ -32,13 +32,13 @@ list_services = {
-                         'updated_at': {'type': ['string', 'null']},
+@@ -34,13 +34,13 @@ list_services = {
+                         'updated_at': parameter_types.date_time_or_null,
                          'disabled_reason': {'type': ['string', 'null']}
                      },
 -                    'additionalProperties': False,
@@ -1297,7 +1309,7 @@ index ddef7b2..4b490d1 100644
          'required': ['services']
      }
  }
-@@ -55,11 +55,11 @@ enable_disable_service = {
+@@ -57,11 +57,11 @@ enable_disable_service = {
                      'binary': {'type': 'string'},
                      'host': {'type': 'string'}
                  },
@@ -1311,11 +1323,25 @@ index ddef7b2..4b490d1 100644
          'required': ['service']
      }
  }
+@@ -79,11 +79,11 @@ disable_log_reason = {
+                     'host': {'type': 'string'},
+                     'status': {'type': 'string'}
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['disabled_reason', 'binary', 'host', 'status']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['service']
+     }
+ }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/snapshots.py b/tempest/lib/api_schema/response/compute/v2_1/snapshots.py
-index 01a524b..4638dd2 100644
+index 826f85413..c808f5ee5 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/snapshots.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/snapshots.py
-@@ -24,7 +24,7 @@ common_snapshot_info = {
+@@ -26,7 +26,7 @@ common_snapshot_info = {
          'displayName': {'type': ['string', 'null']},
          'displayDescription': {'type': ['string', 'null']}
      },
@@ -1324,7 +1350,7 @@ index 01a524b..4638dd2 100644
      'required': ['id', 'volumeId', 'status', 'size',
                   'createdAt', 'displayName', 'displayDescription']
  }
-@@ -36,7 +36,7 @@ create_get_snapshot = {
+@@ -38,7 +38,7 @@ create_get_snapshot = {
          'properties': {
              'snapshot': common_snapshot_info
          },
@@ -1333,7 +1359,7 @@ index 01a524b..4638dd2 100644
          'required': ['snapshot']
      }
  }
-@@ -51,7 +51,7 @@ list_snapshots = {
+@@ -53,7 +53,7 @@ list_snapshots = {
                  'items': common_snapshot_info
              }
          },
@@ -1343,7 +1369,7 @@ index 01a524b..4638dd2 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/tenant_networks.py b/tempest/lib/api_schema/response/compute/v2_1/tenant_networks.py
-index ddfab96..02a9382 100644
+index ddfab9619..02a9382ec 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/tenant_networks.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/tenant_networks.py
 @@ -19,7 +19,7 @@ param_network = {
@@ -1374,10 +1400,10 @@ index ddfab96..02a9382 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/versions.py b/tempest/lib/api_schema/response/compute/v2_1/versions.py
-index 08a9fab..d6c1021 100644
+index 7f5623928..b57d1b8cb 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/versions.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/versions.py
-@@ -29,7 +29,7 @@ _version = {
+@@ -31,7 +31,7 @@ _version = {
                      'type': {'type': 'string'},
                  },
                  'required': ['href', 'rel'],
@@ -1386,7 +1412,7 @@ index 08a9fab..d6c1021 100644
              }
          },
          'status': {'type': 'string'},
-@@ -48,7 +48,7 @@ _version = {
+@@ -50,7 +50,7 @@ _version = {
      # so they should not be required.
      # NOTE(sdague): media-types only shows up in single version requests.
      'required': ['id', 'links', 'status', 'updated'],
@@ -1395,7 +1421,7 @@ index 08a9fab..d6c1021 100644
  }
  
  list_versions = {
-@@ -62,7 +62,7 @@ list_versions = {
+@@ -64,7 +64,7 @@ list_versions = {
              }
          },
          'required': ['versions'],
@@ -1404,7 +1430,7 @@ index 08a9fab..d6c1021 100644
      }
  }
  
-@@ -94,7 +94,7 @@ get_version = {
+@@ -96,7 +96,7 @@ get_version = {
              }
          },
          'required': ['choices'],
@@ -1413,7 +1439,7 @@ index 08a9fab..d6c1021 100644
      }
  }
  
-@@ -105,6 +105,6 @@ get_one_version = {
+@@ -107,6 +107,6 @@ get_one_version = {
          'properties': {
              'version': _version
          },
@@ -1422,10 +1448,10 @@ index 08a9fab..d6c1021 100644
      }
  }
 diff --git a/tempest/lib/api_schema/response/compute/v2_1/volumes.py b/tempest/lib/api_schema/response/compute/v2_1/volumes.py
-index bb34acb..d854d53 100644
+index c35dae981..c487aa5a4 100644
 --- a/tempest/lib/api_schema/response/compute/v2_1/volumes.py
 +++ b/tempest/lib/api_schema/response/compute/v2_1/volumes.py
-@@ -40,7 +40,7 @@ create_get_volume = {
+@@ -42,7 +42,7 @@ create_get_volume = {
                                  'volumeId': {'type': 'string'},
                                  'serverId': {'type': 'string'}
                              },
@@ -1434,7 +1460,7 @@ index bb34acb..d854d53 100644
                              # NOTE- If volume is not attached to any server
                              # then, 'attachments' attributes comes as array
                              # with empty objects "[{}]" due to that elements
-@@ -50,13 +50,13 @@ create_get_volume = {
+@@ -52,13 +52,13 @@ create_get_volume = {
                          }
                      }
                  },
@@ -1450,7 +1476,7 @@ index bb34acb..d854d53 100644
          'required': ['volume']
      }
  }
-@@ -91,7 +91,7 @@ list_volumes = {
+@@ -93,7 +93,7 @@ list_volumes = {
                                      'volumeId': {'type': 'string'},
                                      'serverId': {'type': 'string'}
                                  },
@@ -1459,7 +1485,7 @@ index bb34acb..d854d53 100644
                                  # NOTE- If volume is not attached to any server
                                  # then, 'attachments' attributes comes as array
                                  # with empty object "[{}]" due to that elements
-@@ -101,7 +101,7 @@ list_volumes = {
+@@ -103,7 +103,7 @@ list_volumes = {
                              }
                          }
                      },
@@ -1468,7 +1494,7 @@ index bb34acb..d854d53 100644
                      'required': ['id', 'status', 'displayName',
                                   'availabilityZone', 'createdAt',
                                   'displayDescription', 'volumeType',
-@@ -110,7 +110,7 @@ list_volumes = {
+@@ -112,7 +112,7 @@ list_volumes = {
                  }
              }
          },
@@ -1477,8 +1503,26 @@ index bb34acb..d854d53 100644
          'required': ['volumes']
      }
  }
+diff --git a/tempest/lib/api_schema/response/compute/v2_11/services.py b/tempest/lib/api_schema/response/compute/v2_11/services.py
+index 18b833bd2..885e8cdac 100644
+--- a/tempest/lib/api_schema/response/compute/v2_11/services.py
++++ b/tempest/lib/api_schema/response/compute/v2_11/services.py
+@@ -36,11 +36,11 @@ update_forced_down = {
+                     'host': {'type': 'string'},
+                     'forced_down': {'type': 'boolean'}
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['binary', 'host', 'forced_down']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['service']
+     }
+ }
 diff --git a/tempest/lib/api_schema/response/compute/v2_16/servers.py b/tempest/lib/api_schema/response/compute/v2_16/servers.py
-index 3eb658f..d0a30e3 100644
+index 3eb658f4e..d0a30e3b0 100644
 --- a/tempest/lib/api_schema/response/compute/v2_16/servers.py
 +++ b/tempest/lib/api_schema/response/compute/v2_16/servers.py
 @@ -32,7 +32,7 @@ server_detail = {
@@ -1545,7 +1589,7 @@ index 3eb658f..d0a30e3 100644
          # present always So it is not 'required'.
          'required': ['servers']
 diff --git a/tempest/lib/api_schema/response/compute/v2_23/migrations.py b/tempest/lib/api_schema/response/compute/v2_23/migrations.py
-index 3cd0f6e..af6fd8a 100644
+index 3cd0f6ec1..af6fd8ade 100644
 --- a/tempest/lib/api_schema/response/compute/v2_23/migrations.py
 +++ b/tempest/lib/api_schema/response/compute/v2_23/migrations.py
 @@ -45,7 +45,7 @@ list_migrations = {
@@ -1566,8 +1610,21 @@ index 3cd0f6e..af6fd8a 100644
          'required': ['migrations']
      }
  }
+diff --git a/tempest/lib/api_schema/response/compute/v2_26/servers.py b/tempest/lib/api_schema/response/compute/v2_26/servers.py
+index b03bdf6fa..6b3936b3c 100644
+--- a/tempest/lib/api_schema/response/compute/v2_26/servers.py
++++ b/tempest/lib/api_schema/response/compute/v2_26/servers.py
+@@ -54,7 +54,7 @@ list_tags = {
+         'properties': {
+             'tags': tag_items,
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['tags']
+     }
+ }
 diff --git a/tempest/lib/api_schema/response/compute/v2_3/servers.py b/tempest/lib/api_schema/response/compute/v2_3/servers.py
-index f24103e..5b5c9c1 100644
+index f24103ea2..5b5c9c197 100644
 --- a/tempest/lib/api_schema/response/compute/v2_3/servers.py
 +++ b/tempest/lib/api_schema/response/compute/v2_3/servers.py
 @@ -40,7 +40,7 @@ server_detail = {
@@ -1633,6 +1690,84 @@ index f24103e..5b5c9c1 100644
          # NOTE(gmann): servers_links attribute is not necessary to be
          # present always So it is not 'required'.
          'required': ['servers']
+diff --git a/tempest/lib/api_schema/response/compute/v2_47/servers.py b/tempest/lib/api_schema/response/compute/v2_47/servers.py
+index 37a084f1c..aa2f312a4 100644
+--- a/tempest/lib/api_schema/response/compute/v2_47/servers.py
++++ b/tempest/lib/api_schema/response/compute/v2_47/servers.py
+@@ -30,7 +30,7 @@ flavor = {
+             }
+         }
+     },
+-    'additionalProperties': False,
++    'additionalProperties': True,
+     'required': ['original_name', 'disk', 'ephemeral', 'ram', 'swap', 'vcpus']
+ }
+ 
+diff --git a/tempest/lib/api_schema/response/compute/v2_48/servers.py b/tempest/lib/api_schema/response/compute/v2_48/servers.py
+index 59047583a..e688db305 100644
+--- a/tempest/lib/api_schema/response/compute/v2_48/servers.py
++++ b/tempest/lib/api_schema/response/compute/v2_48/servers.py
+@@ -45,7 +45,7 @@ show_server_diagnostics = {
+                     'maximum': {'type': ['integer', 'null']},
+                     'used': {'type': ['integer', 'null']}
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['maximum', 'used']
+             },
+             'cpu_details': {
+@@ -57,7 +57,7 @@ show_server_diagnostics = {
+                         'time': {'type': ['integer', 'null']},
+                         'utilisation': {'type': ['integer', 'null']}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['id', 'time', 'utilisation']
+                 }
+             },
+@@ -79,7 +79,7 @@ show_server_diagnostics = {
+                         'tx_packets': {'type': ['integer', 'null']},
+                         'tx_rate': {'type': ['integer', 'null']}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['mac_address', 'rx_octets', 'rx_errors',
+                                  'rx_drop',
+                                  'rx_packets', 'rx_rate', 'tx_octets',
+@@ -98,13 +98,13 @@ show_server_diagnostics = {
+                         'write_requests': {'type': ['integer', 'null']},
+                         'errors_count': {'type': ['integer', 'null']}
+                     },
+-                    'additionalProperties': False,
++                    'additionalProperties': True,
+                     'required': ['read_bytes', 'read_requests', 'write_bytes',
+                                  'write_requests', 'errors_count']
+                 }
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': [
+             'state', 'driver', 'hypervisor', 'hypervisor_os', 'uptime',
+             'config_drive', 'num_cpus', 'num_nics', 'num_disks',
+diff --git a/tempest/lib/api_schema/response/compute/v2_6/servers.py b/tempest/lib/api_schema/response/compute/v2_6/servers.py
+index 29b3e8600..4caf107a4 100644
+--- a/tempest/lib/api_schema/response/compute/v2_6/servers.py
++++ b/tempest/lib/api_schema/response/compute/v2_6/servers.py
+@@ -38,11 +38,11 @@ get_remote_consoles = {
+                         'format': 'uri'
+                     }
+                 },
+-                'additionalProperties': False,
++                'additionalProperties': True,
+                 'required': ['protocol', 'type', 'url']
+             }
+         },
+-        'additionalProperties': False,
++        'additionalProperties': True,
+         'required': ['remote_console']
+     }
+ }
 -- 
-2.7.4
+2.17.1
 
