@@ -22,6 +22,30 @@
       "revId": "c50c62cecce252a059d2a3898985a214eb4db817",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_62ddc714",
+        "filename": "dovetail/utils/openstack_utils.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-06-11T08:30:33Z",
+      "side": 1,
+      "message": "Maybe we can list all endpoints including admin, internal and public.",
+      "parentUuid": "1a494da4_e2f54ecc",
+      "range": {
+        "startLine": 16,
+        "startChar": 69,
+        "endLine": 16,
+        "endChar": 74
+      },
+      "revId": "c50c62cecce252a059d2a3898985a214eb4db817",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
