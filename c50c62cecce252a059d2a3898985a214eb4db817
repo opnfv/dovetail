@@ -70,6 +70,30 @@
       "revId": "c50c62cecce252a059d2a3898985a214eb4db817",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_85d625c4",
+        "filename": "dovetail/utils/openstack_utils.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-06-12T03:10:46Z",
+      "side": 1,
+      "message": "IMO, Dovetail tool should support both identity v2 and v3. The more versions Dovetail tool supports, the more flexible it will be.\nFor shade, it won\u0027t use the extra option \u0027--interface\u0027. It lists all endpoints and then filter from the response data. So here it can work on both identity versions even we try to only get the admin endpoints.",
+      "parentUuid": "da5c1566_055fb50f",
+      "range": {
+        "startLine": 16,
+        "startChar": 69,
+        "endLine": 16,
+        "endChar": 74
+      },
+      "revId": "c50c62cecce252a059d2a3898985a214eb4db817",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
