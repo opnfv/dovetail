@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_cc0fa22d",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-06-14T07:23:00Z",
+      "side": 1,
+      "message": "is this variable used somewhere?",
+      "range": {
+        "startLine": 190,
+        "startChar": 4,
+        "endLine": 190,
+        "endChar": 20
+      },
+      "revId": "46754323aeac6193dd9b451a6525a478fdb0887b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
