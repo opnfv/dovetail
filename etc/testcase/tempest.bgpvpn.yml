@@ -4,20 +4,37 @@ dovetail.tempest.bgpvpn:
   objective: validate BGPVPN API CRUD operations by means of Tempest tests from networking-bgpvpn repository
   validate:
     type: functest
-    testcase: bgpvpn
+    testcase: tempest_custom
     image_name: opnfv/functest-features
     pre_condition:
-      - "sed -i 's/networking_bgpvpn_tempest/networking_bgpvpn_tempest.tests.api/' /usr/lib/python2.7/site-packages/sdnvpn/test/functest/run_tempest.py"
+      - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
       - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
     pre_copy:
-      exist_src_file: sdnvpn_config_tc000.yaml
-      dest_path: /usr/lib/python2.7/site-packages/sdnvpn/test/functest/config.yaml
+      src_file: tempest_custom.txt
+      dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
   report:
     source_archive_files:
       - functest.log
-      - bgpvpn.log
+      - tempest/tempest.log
+      - tempest/tempest-report.html
     dest_archive_files:
       - tempest_logs/dovetail.tempest.bgpvpn.functest.log
       - tempest_logs/dovetail.tempest.bgpvpn.log
+      - tempest_logs/dovetail.tempest.bgpvpn.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_associate_disassociate_network
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_associate_disassociate_router
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_associate_invalid_network[negative]
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_attach_associated_subnet_to_associated_router[negative]
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_create_bgpvpn
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_create_bgpvpn_as_non_admin_fail[negative]
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_create_bgpvpn_with_invalid_routetargets[negative]
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_delete_bgpvpn_as_non_admin_fail[negative]
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_disassociate_invalid_network[negative]
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_list_bgpvpn_as_non_owner_fail[negative]
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_list_netassoc_as_non_owner_fail[negative]
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_show_bgpvpn_as_non_owner_fail[negative]
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_show_netassoc_as_non_owner_fail[negative]
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_update_bgpvpn_invalid_routetargets[negative]
+      - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_update_route_target_non_admin_fail[negative]

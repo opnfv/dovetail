@@ -278,7 +278,17 @@ Here is an example of what this file should contain.
      # Expected device name when a volume is attached to an instance.
      volume_device_name: vdb
 
-Use the listing above at a minimum to execute the mandatory test areas.
+Use the listing above as a minimum to execute the mandatory test areas.
+
+If the optional BGPVPN Tempest API tests shall be run, Tempest needs to be told
+that the BGPVPN service is available. To do that, add the following to the
+``$DOVETAIL_HOME/pre_config/tempest_conf.yaml`` configuration file:
+
+.. code-block:: bash
+
+  service_available:
+    bgpvpn: True
+
 
 Configuration for Running HA Test Cases (Mandatory)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
