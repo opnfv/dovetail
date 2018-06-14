@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_cc220201",
+        "filename": "etc/testcase/tempest.trunk-ports.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-06-14T12:16:09Z",
+      "side": 1,
+      "message": "the behavior of this is a little strange. Dovetail only executes one of the two pre_conditions: either the one defined in the test case or the global one defined per tool. Shouldn\u0027t it actually run both?\n\nWe can merge this now to allow configuring the test cases, but over time we should change the logic.",
+      "range": {
+        "startLine": 8,
+        "startChar": 4,
+        "endLine": 8,
+        "endChar": 18
+      },
+      "revId": "4f95f0b5d79789a329f528cec785a7b51fcbd04f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
