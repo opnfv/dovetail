@@ -33,5 +33,4 @@ dovetail.tempest.compute:
       - tempest.api.compute.test_versions.TestVersions.test_get_version_details[id-b953a29e-929c-4a8e-81be-ec3a7e03cb76,smoke]
       - tempest.api.compute.servers.test_create_server.ServersTestBootFromVolume.test_verify_server_details[id-5de47127-9977-400a-936f-abcfbec1218f,smoke]
       - tempest.api.compute.servers.test_create_server.ServersTestBootFromVolume.test_list_servers[id-9a438d88-10c6-4bcd-8b5b-5b6e25e1346f,smoke]
-      #
       - tempest.scenario.test_server_basic_ops.TestServerBasicOps.test_server_basic_ops[compute,id-7fff3fb3-91d8-4fd0-bd7d-0204f1f180ba,network,smoke]
