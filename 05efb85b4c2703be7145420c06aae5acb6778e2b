@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_4aad3188",
+        "filename": "requirements.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-06-15T20:40:08Z",
+      "side": 1,
+      "message": "I noticed that we get the same error message inside the Dovetail container as in Bottlenecks. Shouldn\u0027t we try to apply the same upper contraints as OpenStack stable/pike?\n\nhttps://git.openstack.org/cgit/openstack/requirements/plain/upper-constraints.txt?h\u003dstable/pike",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 29
+      },
+      "revId": "05efb85b4c2703be7145420c06aae5acb6778e2b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
