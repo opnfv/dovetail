@@ -22,6 +22,30 @@
       "revId": "acae5e0121daea008c580d1c3fe5b0bf11227e54",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_f6c35088",
+        "filename": "etc/testcase/tempest.osinterop.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-06-19T07:48:15Z",
+      "side": 1,
+      "message": "Rally needs the full name in order to find the tests. Without the IDs, only 164 tests get executed on my virtual Apex deployment whereas with IDs all 204 tests are run.\n\nThe generated tempest-list.txt file does include all 204 tests with IDs, but this list is somehow not used correctly.",
+      "parentUuid": "da5c1566_dbcd955f",
+      "range": {
+        "startLine": 25,
+        "startChar": 47,
+        "endLine": 25,
+        "endChar": 66
+      },
+      "revId": "acae5e0121daea008c580d1c3fe5b0bf11227e54",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
