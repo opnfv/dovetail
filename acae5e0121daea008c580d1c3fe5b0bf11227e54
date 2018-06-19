@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_dbcd955f",
+        "filename": "etc/testcase/tempest.osinterop.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-06-19T01:51:31Z",
+      "side": 1,
+      "message": "Is there any error on CI or commercial products when lacking IDs?\nAs I know, only tempest_custom needs the full name (with IDs).\nHere this test case uses refsatck_defcore directly and refstack_defcore itself uses refstack client to find and add IDs for a osinterop sub test case list.\nAlso the list here in this file is only used to parse the results and has nothing to do with the actually sub test cases executed by Functest.\nAnyhow, I agree to add the IDs here.",
+      "range": {
+        "startLine": 25,
+        "startChar": 47,
+        "endLine": 25,
+        "endChar": 66
+      },
+      "revId": "acae5e0121daea008c580d1c3fe5b0bf11227e54",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
