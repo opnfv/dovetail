@@ -20,7 +20,7 @@ services:
         expose:
             - "27017"
     web:
-        image: opnfv/dovetail:web.ovp.1.1.1
+        image: opnfv/dovetail:web.ovp.1.1.2
         container_name: cvp-web
         restart: always
         env_file:
@@ -35,7 +35,7 @@ services:
         ports:
             - "8000:8000"
     cvpapi:
-        image: opnfv/dovetail:api.ovp.1.1.1
+        image: opnfv/dovetail:api.ovp.1.1.2
         container_name: cvp-cvpapi
         env_file:
             - config.env
