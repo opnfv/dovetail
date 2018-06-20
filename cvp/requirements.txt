@@ -14,3 +14,4 @@ tlslite>=0.4.9
 pyjwt>=1.5.2
 cryptography>=2.0.3
 python-cas>=1.2.0
+futures
