@@ -4,6 +4,7 @@
 healthcheck:
   name: healthcheck
   testcases_list:
-    - dovetail.healthcheck.tc001
-    - dovetail.healthcheck.tc002
-    - dovetail.healthcheck.tc003
+    mandatory:
+      - dovetail.healthcheck.tc001
+      - dovetail.healthcheck.tc002
+      - dovetail.healthcheck.tc003
