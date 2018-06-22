@@ -18,8 +18,6 @@ import datetime
 import tarfile
 import time
 
-from pbr import version
-
 import utils.dovetail_logger as dt_logger
 
 from utils.dovetail_config import DovetailConfig as dt_cfg
@@ -70,17 +68,18 @@ class Report(object):
     @classmethod
     def generate_json(cls, testcase_list, duration):
         report_obj = {}
-        report_obj['version'] = \
-            version.VersionInfo('dovetail').version_string()
+        # egeokun: using a hardcoded string instead of pbr version for
+        # versioning the result file. The version of the results.json is
+        # logically independent of the release of Dovetail.
+        report_obj['version'] = '2018.08'
         report_obj['build_tag'] = dt_cfg.dovetail_config['build_tag']
-        report_obj['upload_date'] =\
+        report_obj['test_date'] =\
             datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
         report_obj['duration'] = duration
 
         report_obj['testcases_list'] = []
         if not testcase_list:
             return report_obj
-
         for testcase_name in testcase_list:
             testcase = Testcase.get(testcase_name)
             testcase_inreport = {}
@@ -89,11 +88,13 @@ class Report(object):
                 testcase_inreport['result'] = 'Undefined'
                 testcase_inreport['objective'] = ''
                 testcase_inreport['sub_testcase'] = []
+                testcase_inreport['mandatory'] = False
                 report_obj['testcases_list'].append(testcase_inreport)
                 continue
 
             testcase_inreport['result'] = testcase.passed()
             testcase_inreport['objective'] = testcase.objective()
+            testcase_inreport['mandatory'] = testcase.is_mandatory
             testcase_inreport['sub_testcase'] = []
             if testcase.sub_testcase() is not None:
                 for sub_test in testcase.sub_testcase():
@@ -108,11 +109,13 @@ class Report(object):
     @classmethod
     def generate(cls, testcase_list, duration):
         report_data = cls.generate_json(testcase_list, duration)
+        cls.save_json_results(report_data)
+
         report_txt = ''
         report_txt += '\n\nDovetail Report\n'
         report_txt += 'Version: %s\n' % report_data['version']
         report_txt += 'Build Tag: %s\n' % report_data['build_tag']
-        report_txt += 'Upload Date: %s\n' % report_data['upload_date']
+        report_txt += 'Test Date: %s\n' % report_data['test_date']
         report_txt += 'Duration: %.2f s\n\n' % report_data['duration']
 
         total_num = 0
@@ -173,6 +176,18 @@ class Report(object):
         return report_txt
 
     @classmethod
+    def save_json_results(cls, results):
+        result_file = os.path.join(dt_cfg.dovetail_config['result_dir'],
+                                   dt_cfg.dovetail_config['result_file'])
+
+        try:
+            with open(result_file, 'w') as f:
+                f.write(json.dumps(results) + '\n')
+        except Exception as e:
+            cls.logger.exception("Failed to add result to file {}, "
+                                 "exception: {}".format(result_file, e))
+
+    @classmethod
     def save_logs(cls):
         file_suffix = time.strftime('%Y%m%d_%H%M', time.localtime())
         logs_gz = "logs_{}.tar.gz".format(file_suffix)
@@ -197,14 +212,10 @@ class Report(object):
             cls.logger.error('Crawler is None: {}'.format(testcase.name()))
             return None
 
-        # if validate_testcase in cls.results[type]:
-        #    return cls.results[type][validate_testcase]
-
         result = crawler.crawl(testcase, check_results_file)
 
         if result is not None:
             cls.results[type][validate_testcase] = result
-            # testcase.script_result_acquired(True)
             cls.logger.debug(
                 'Test case: {} -> result acquired'.format(validate_testcase))
         else:
@@ -215,18 +226,7 @@ class Report(object):
 
 
 class Crawler(object):
-
-    def add_result_to_file(self, result):
-        result_file = os.path.join(dt_cfg.dovetail_config['result_dir'],
-                                   dt_cfg.dovetail_config['result_file'])
-        try:
-            with open(result_file, 'a') as f:
-                f.write(json.dumps(result) + '\n')
-                return True
-        except Exception as e:
-            self.logger.exception("Failed to add result to file {}, "
-                                  "exception: {}".format(result_file, e))
-            return False
+    pass
 
 
 class FunctestCrawler(Crawler):
@@ -268,7 +268,6 @@ class FunctestCrawler(Crawler):
                     if (testcase_name == data['case_name'] or
                         data['project_name'] == "sdnvpn") and \
                         build_tag == data['build_tag']:
-                        self.add_result_to_file(data)
                         criteria = data['criteria']
                         timestart = data['start_date']
                         timestop = data['stop_date']
@@ -296,6 +295,7 @@ class FunctestCrawler(Crawler):
                         'timestop': timestop, 'duration': duration,
                         'details': details}
 
+        testcase.set_results(json_results)
         return json_results
 
 
@@ -323,7 +323,6 @@ class YardstickCrawler(Crawler):
         with open(file_path, 'r') as f:
             for jsonfile in f:
                 data = json.loads(jsonfile)
-                self.add_result_to_file(data, testcase.name())
                 try:
                     criteria = data['result']['criteria']
                     if criteria == 'PASS':
@@ -335,13 +334,9 @@ class YardstickCrawler(Crawler):
                 except KeyError as e:
                     self.logger.exception('Pass flag not found {}'.format(e))
         json_results = {'criteria': criteria}
-        return json_results
 
-    def add_result_to_file(self, result, tc_name):
-        build_tag = '{}-{}'.format(dt_cfg.dovetail_config['build_tag'],
-                                   tc_name)
-        result['build_tag'] = build_tag
-        super(YardstickCrawler, self).add_result_to_file(result)
+        testcase.set_results(json_results)
+        return json_results
 
 
 class BottlenecksCrawler(Crawler):
@@ -377,6 +372,8 @@ class BottlenecksCrawler(Crawler):
                 except KeyError as e:
                     self.logger.exception('Pass flag not found {}'.format(e))
         json_results = {'criteria': criteria}
+
+        testcase.set_results(json_results)
         return json_results
 
 

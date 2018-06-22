@@ -221,11 +221,15 @@ def check_testcase_list(testcase_list, logger=None):
     return None
 
 
-# If specify 'testcase' with CLI, ignore 'testsuite' and 'testarea'
-# If not specify 'testcase', check combination of 'testsuite' and 'testarea'
 def get_testcase_list(logger=None, **kwargs):
     Testcase.load()
     testcase_list = kwargs['testcase']
+
+    # If specify 'testcase' on the CLI, ignore 'testsuite' and 'testarea'. In
+    # this case, all test cases are marked as mandatory=false in the result
+    # file because there is no testsuite to relate to.
+    # If 'testcase' is not specified on the CLI, check the combination of
+    # 'testsuite' and 'testarea'
     if testcase_list:
         return check_testcase_list(testcase_list, logger)
 
@@ -238,7 +242,8 @@ def get_testcase_list(logger=None, **kwargs):
 
     if testsuite_validation and testarea_validation:
         testsuite_yaml = load_testsuite(testsuite)
-        testcase_list = Testcase.get_testcase_list(testsuite_yaml, testarea)
+        testcase_list = Testcase.get_testcases_for_testsuite(testsuite_yaml,
+                                                             testarea)
         return check_testcase_list(testcase_list, logger)
     elif not testsuite_validation:
         logger.error('Test suite {} is not defined.'.format(testsuite))
