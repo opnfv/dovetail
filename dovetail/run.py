@@ -238,7 +238,8 @@ def get_testcase_list(logger=None, **kwargs):
 
     if testsuite_validation and testarea_validation:
         testsuite_yaml = load_testsuite(testsuite)
-        testcase_list = Testcase.get_testcase_list(testsuite_yaml, testarea)
+        testcase_list = Testcase.get_testcases_for_testsuite(testsuite_yaml,
+                                                             testarea)
         return check_testcase_list(testcase_list, logger)
     elif not testsuite_validation:
         logger.error('Test suite {} is not defined.'.format(testsuite))
