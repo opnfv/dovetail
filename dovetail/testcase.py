@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #
-# grakiss.wanglei@huawei.com
+# Copyright (c) 2018 grakiss.wanglei@huawei.com and others.
+#
 # All rights reserved. This program and the accompanying materials
 # are made available under the terms of the Apache License, Version 2.0
 # which accompanies this distribution, and is available at
