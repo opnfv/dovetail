@@ -140,9 +140,9 @@ class TestsGURHandler(GenericTestHandler):
 
         warning_keyword = 'Strict API response validation DISABLED'
         if warning_keyword in log_content:
-            raise gen.Return('API response validation disable')
+            raise gen.Return('API response validation disabled')
         else:
-            raise gen.Return('API response validation enable')
+            raise gen.Return('API response validation enabled')
 
     @swagger.operation(nickname="deleteTestById")
     def delete(self, test_id):
