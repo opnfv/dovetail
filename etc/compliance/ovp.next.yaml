@@ -2,33 +2,32 @@
 ovp.next:
   name: ovp.next
   testcases_list:
-  # mandatory test cases
-    # osinterop
-    - dovetail.tempest.osinterop
-    # vping
-    - dovetail.vping.userdata
-    - dovetail.vping.ssh
-    # HA
-    - dovetail.ha.nova_api
-    - dovetail.ha.neutron_server
-    - dovetail.ha.keystone
-    - dovetail.ha.glance_api
-    - dovetail.ha.cinder_api
-    - dovetail.ha.cpu_load
-    - dovetail.ha.disk_load
-    - dovetail.ha.haproxy
-  # optional test cases
-    # ipv6
-    - dovetail.tempest.ipv6_api
-    - dovetail.tempest.ipv6_scenario
-    # tempest
-    # some of the previous tempest test suites tc001 - tc005 have been merged
-    # with the smoke tests executed as part of the proposed_test test suite
-    - dovetail.tempest.multi_node_scheduling
-    - dovetail.tempest.network_security
-    - dovetail.tempest.vm_lifecycle
-    # sdnvpn
-    - dovetail.sdnvpn.subnet_connectivity
-    - dovetail.sdnvpn.tenant_separation
-    - dovetail.sdnvpn.router_association
-    - dovetail.sdnvpn.router_association_floating_ip
+    mandatory:
+      # OpenStack interop tests 2017.09
+      - dovetail.tempest.osinterop
+      # OPNFV vping
+      - dovetail.vping.userdata
+      - dovetail.vping.ssh
+      # OPNFV High availability
+      - dovetail.ha.nova_api
+      - dovetail.ha.neutron_server
+      - dovetail.ha.keystone
+      - dovetail.ha.glance_api
+      - dovetail.ha.cinder_api
+      - dovetail.ha.cpu_load
+      - dovetail.ha.disk_load
+      - dovetail.ha.haproxy
+      # Tempest IPv6 API tests
+      - dovetail.tempest.ipv6_api
+
+    optional:
+      # Tempest
+      - dovetail.tempest.ipv6_scenario
+      - dovetail.tempest.multi_node_scheduling
+      - dovetail.tempest.network_security
+      - dovetail.tempest.vm_lifecycle
+      # OPNFV SDNVPN
+      - dovetail.sdnvpn.subnet_connectivity
+      - dovetail.sdnvpn.tenant_separation
+      - dovetail.sdnvpn.router_association
+      - dovetail.sdnvpn.router_association_floating_ip

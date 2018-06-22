@@ -2,29 +2,30 @@
 proposed_tests:
   name: proposed_tests
   testcases_list:
-  # proposed test cases for 2nd release
-    # tempest
-    - dovetail.tempest.compute
-    - dovetail.tempest.identity_v2
-    - dovetail.tempest.identity_v3
-    - dovetail.tempest.image
-    - dovetail.tempest.network_api
-    - dovetail.tempest.network_scenario
-    - dovetail.tempest.volume
-    - dovetail.tempest.neutron_trunk_ports
-    # HA
-    - dovetail.ha.controller_restart
-    - dovetail.ha.rabbitmq
-    - dovetail.ha.neutron_l3_agent
-    - dovetail.ha.database
-    # vnf
-    - dovetail.vnf.vims
-    - dovetail.vnf.vepc
-    # security
-    - dovetail.security.patrole
-    # sdnvpn
-    - dovetail.tempest.bgpvpn
-    # snaps
-    - dovetail.snaps.smoke
-    # stress
-    - dovetail.stress.ping
+    # by design, all proposed tests are optional until merged into ovp testsuite
+    optional:
+      # tempest
+      - dovetail.tempest.compute
+      - dovetail.tempest.identity_v2
+      - dovetail.tempest.identity_v3
+      - dovetail.tempest.image
+      - dovetail.tempest.network_api
+      - dovetail.tempest.network_scenario
+      - dovetail.tempest.volume
+      - dovetail.tempest.neutron_trunk_ports
+      # HA
+      - dovetail.ha.controller_restart
+      - dovetail.ha.rabbitmq
+      - dovetail.ha.neutron_l3_agent
+      - dovetail.ha.database
+      # vnf
+      - dovetail.vnf.vims
+      - dovetail.vnf.vepc
+      # security
+      - dovetail.security.patrole
+      # sdnvpn
+      - dovetail.tempest.bgpvpn
+      # snaps
+      - dovetail.snaps.smoke
+      # stress
+      - dovetail.stress.ping

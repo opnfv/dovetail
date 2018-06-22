@@ -30,6 +30,8 @@ class Testcase(object):
         self.cmds = []
         self.sub_testcase_status = {}
         self.update_validate_testcase(self.validate_testcase())
+        self.is_mandatory = False
+        self.results = None
 
     @classmethod
     def create_log(cls):
@@ -102,6 +104,12 @@ class Testcase(object):
         if passed is not None:
             self.testcase['passed'] = passed
         return self.testcase['passed']
+
+    def set_results(self, results):
+        self.results = results
+
+    def get_results(self):
+        return self.results
 
     def script_result_acquired(self, acquired=None):
         return self._result_acquired(self.validate_testcase(), acquired)
@@ -273,16 +281,21 @@ class Testcase(object):
         return True, area_no_duplicate
 
     @classmethod
-    def get_testcase_list(cls, testsuite, testarea):
+    def get_testcases_for_testsuite(cls, testsuite, testarea):
         testcase_list = []
         testcases = dt_utils.get_value_from_dict('testcases_list', testsuite)
         if not testcases:
             return testcase_list
-        for value in testcases:
-            for area in testarea:
-                if value is not None and (area == 'full' or area in value):
-                    testcase_list.append(value)
-                    break
+        for type in ['mandatory', 'optional']:
+            if type in testcases and testcases[type] is not None:
+                for value in testcases[type]:
+                    for area in testarea:
+                        if value is not None and (area == 'full' or
+                                                  area in value):
+                            testcase_list.append(value)
+                            Testcase.testcase_list[value].is_mandatory = \
+                                True if type == 'mandatory' else False
+                            break
         return testcase_list
 
 
