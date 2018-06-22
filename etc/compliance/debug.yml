@@ -1,7 +1,0 @@
----
-# only used for dovetail tool development debug
-# all these are new test cases adding here for running on CI
-debug:
-  name: debug
-  testcases_list:
-    - dovetail.smoke.tc001
