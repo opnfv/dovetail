@@ -2,7 +2,7 @@
 proposed_tests:
   name: proposed_tests
   testcases_list:
-  # proposed test cases for 2nd release
+    # proposed test cases for 2nd release
     mandatory:
       # tempest
       - dovetail.tempest.compute

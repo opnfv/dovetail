@@ -30,6 +30,8 @@ class Testcase(object):
         self.cmds = []
         self.sub_testcase_status = {}
         self.update_validate_testcase(self.validate_testcase())
+        self.is_mandatory = False
+        self.results = None
 
     @classmethod
     def create_log(cls):
@@ -100,6 +102,12 @@ class Testcase(object):
         if passed is not None:
             self.testcase['passed'] = passed
         return self.testcase['passed']
+
+    def set_results(self, results):
+        self.results = results
+
+    def get_results(self):
+        return self.results
 
     def script_result_acquired(self, acquired=None):
         return self._result_acquired(self.validate_testcase(), acquired)
@@ -270,7 +278,7 @@ class Testcase(object):
             return False
 
     @classmethod
-    def get_testcase_list(cls, testsuite, testarea):
+    def get_testcases_for_testsuite(cls, testsuite, testarea):
         testcase_list = []
         selected_tests = []
         testcases = dt_utils.get_value_from_dict('testcases_list', testsuite)
@@ -303,6 +311,10 @@ class Testcase(object):
             for area in testarea:
                 if cls.check_testcase_area(value, area):
                     testcase_list.append(value)
+                    if value in mandatory:
+                        Testcase.testcase_list[value].is_mandatory = True
+                    else
+                        Testcase.testcase_list[value].is_mandatory = False
                     break
         return testcase_list
 
