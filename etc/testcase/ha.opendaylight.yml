@@ -1,0 +1,31 @@
+---
+dovetail.ha.opendaylight:
+  name: dovetail.ha.opendaylight
+  objective: OpenDaylight clustering high availability.
+  validate:
+    type: yardstick
+    testcase: opnfv_yardstick_tc092
+    pre_condition:
+      - 'source /etc/yardstick/openstack.creds &&
+         openstack --insecure image create yardstick-image
+           --disk-format qcow2 --container-format bare --public
+           --file /home/opnfv/userconfig/images/ubuntu-16.04-server-cloudimg-amd64-disk1.img &&
+         openstack --insecure flavor create --ram 1024 --vcpu 1 --disk 3 yardstick-flavor'
+    cmds:
+      - "cd /home/opnfv/repos/yardstick && source /etc/yardstick/openstack.creds &&
+         yardstick task start tests/opnfv/test_cases/{{validate_testcase}}.yaml
+         --output-file /tmp/yardstick/{{testcase}}.out
+         --task-args '{'file': '/home/opnfv/userconfig/pre_config/pod.yaml'}'"
+    post_condition:
+      - 'source /etc/yardstick/openstack.creds &&
+         openstack --insecure image delete yardstick-image &&
+         openstack --insecure flavor delete yardstick-flavor'
+  report:
+    source_archive_files:
+      - yardstick.log
+      - dovetail.ha.opendaylight.out
+    dest_archive_files:
+      - ha_logs/dovetail.ha.opendaylight.log
+      - ha_logs/dovetail.ha.opendaylight.out
+    check_results_file: ha_logs/dovetail.ha.opendaylight.out
+    sub_testcase_list:

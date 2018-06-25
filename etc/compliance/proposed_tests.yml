@@ -16,6 +16,7 @@ proposed_tests:
     - dovetail.ha.rabbitmq
     - dovetail.ha.neutron_l3_agent
     - dovetail.ha.database
+    - dovetail.ha.opendaylight
     # vnf
     - dovetail.vnf.vims
     - dovetail.vnf.vepc
