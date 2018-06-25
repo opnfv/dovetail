@@ -5,3 +5,4 @@ proposed_tests:
   testcases_list:
     mandatory:
     optional:
+    - yardstick.ha.opendaylight
