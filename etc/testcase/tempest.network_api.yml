@@ -1,7 +1,7 @@
 ---
-dovetail.tempest.network:
-  name: dovetail.tempest.network
-  objective: tempest smoke test cases about network
+dovetail.tempest.network_api:
+  name: dovetail.tempest.network_api
+  objective: tempest smoke API test cases covering networking capabilities
   validate:
     type: functest
     testcase: tempest_custom
@@ -17,9 +17,9 @@ dovetail.tempest.network:
       - tempest/tempest.log
       - tempest/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.network.functest.log
-      - tempest_logs/dovetail.tempest.network.log
-      - tempest_logs/dovetail.tempest.network.html
+      - tempest_logs/dovetail.tempest.network_api.functest.log
+      - tempest_logs/dovetail.tempest.network_api.log
+      - tempest_logs/dovetail.tempest.network_api.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.network.test_extensions.ExtensionsTestJSON.test_list_show_extensions[id-ef28c7e6-e646-4979-9d67-deb207bc5564,smoke]
@@ -36,8 +36,3 @@ dovetail.tempest.network:
       - tempest.api.network.test_routers.RoutersTest.test_create_show_list_update_delete_router[id-f64403e2-8483-4b34-8ccd-b09a87bcc68c,smoke]
       - tempest.api.network.test_subnetpools_extensions.SubnetPoolsTestJSON.test_create_list_show_update_delete_subnetpools[id-62595970-ab1c-4b7f-8fcc-fddfe55e9811,smoke]
       - tempest.api.network.test_versions.NetworksApiDiscovery.test_api_version_resources[id-cac8a836-c2e0-4304-b556-cd299c7281d1,smoke]
-      - tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_hotplug_nic[compute,id-c5adff73-e961-41f1-b4a9-343614f18cfa,network]
-      - tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_network_basic_ops[compute,id-f323b3ba-82f8-4db7-8ea6-6a895869ec49,network,smoke]
-      - tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_subnet_details[compute,id-d8bb918e-e2df-48b2-97cd-b73c95450980,network,slow]
-      - tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_update_instance_port_admin_state[compute,id-f5dfcc22-45fd-409f-954c-5bd500d7890b,network,slow]
-      - tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_update_router_admin_state[compute,id-04b9fe4e-85e8-4aea-b937-ea93885ac59f,network,slow]
