@@ -19,7 +19,8 @@ ovp.next:
     - dovetail.ha.haproxy
   # optional test cases
     # ipv6
-    - dovetail.tempest.ipv6
+    - dovetail.tempest.ipv6_api
+    - dovetail.tempest.ipv6_scenario
     # tempest
     # some of the previous tempest test suites tc001 - tc005 have been merged
     # with the smoke tests executed as part of the proposed_test test suite
