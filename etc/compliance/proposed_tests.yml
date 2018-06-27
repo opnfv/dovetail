@@ -8,7 +8,8 @@ proposed_tests:
     - dovetail.tempest.identity_v2
     - dovetail.tempest.identity_v3
     - dovetail.tempest.image
-    - dovetail.tempest.network
+    - dovetail.tempest.network_api
+    - dovetail.tempest.network_scenario
     - dovetail.tempest.volume
     - dovetail.tempest.neutron_trunk_ports
     # HA
