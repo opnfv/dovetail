@@ -154,7 +154,7 @@ def clean_results_dir():
             cmd = 'sudo rm -rf %s/*' % (result_path)
             dt_utils.exec_cmd(cmd, exit_on_error=False, exec_msg_on=False)
         else:
-            print "result_dir in dovetail_config.yml is not a directory."
+            print("result_dir in dovetail_config.yml is not a directory.")
             raise SystemExit(EXIT_RUN_FAILED)
 
 
