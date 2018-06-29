@@ -5,16 +5,16 @@
 {% set validate_testcase = validate_testcase or '' %}
 {% set testcase = testcase or '' %}
 {% set os_insecure = os_insecure or 'False' %}
-{% set os_cacert = '' %}
+{% set os_verify = '' %}
 {% if os_insecure == 'True' %}
-    {% set os_cacert = ' -e OS_CACERT=False ' %}
+    {% set os_verify = ' -e OS_VERIFY= ' %}
 {% endif %}
 
 yardstick:
   image_name: opnfv/yardstick
   docker_tag: stable
   opts: '-id --privileged=true'
-  envs: "{{os_cacert}} -e YARDSTICK_BRANCH=fraser"
+  envs: "{{os_verify}} -e YARDSTICK_BRANCH=fraser"
   config:
     dir: '/home/opnfv/userconfig'
   pre_condition:
