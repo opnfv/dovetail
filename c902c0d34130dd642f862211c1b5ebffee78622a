@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_d4aa71d3",
+        "filename": "dovetail/run.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2018-06-29T13:25:29Z",
+      "side": 1,
+      "message": "The idea behind of this part of the code is to replace the name of the scenario to \"ovs\" in order to be recognized by functest and yardstick projects. According to the ticket (I have not tested yet), the yardstick and functest are able to recognize the \u0027ovs\u0027 string in the deploy_scenarios env variable and to take the proper actions [i.e. to enable the hugepage support\u0027].",
+      "range": {
+        "startLine": 211,
+        "startChar": 12,
+        "endLine": 220,
+        "endChar": 52
+      },
+      "revId": "c902c0d34130dd642f862211c1b5ebffee78622a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
