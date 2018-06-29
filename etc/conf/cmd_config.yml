@@ -93,3 +93,8 @@ cli:
           - '-n'
         is_flag: 'True'
         help: 'Keep all Containers created for debuging.'
+      dpdk:
+        flags:
+          - '--enable-dpdk'
+        is_flag: 'True'
+        help: 'The DPDK support is enabled updating the feature of DEPLOY_SCENARIO to OVS'

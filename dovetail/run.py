@@ -203,6 +203,25 @@ def env_init(logger):
     dt_utils.source_env(openrc)
 
 
+def check_dpdk_support(logger, **kwargs):
+    if 'enable_dpdk' in kwargs and kwargs['enable_dpdk'] is True:
+        if 'DEPLOY_SCENARIO' not in os.environ:
+            os.environ['DEPLOY_SCENARIO'] = "ovs"
+        else:
+            temp_env = os.environ['DEPLOY_SCENARIO']
+            deploy_scenario_string = temp_env.replace('-', ' ').split(' ')
+            deploy_scenario_string[2] = "ovs"
+            temp_env = deploy_scenario_string[0]
+            index = 1
+            while index < 4:
+                temp_env = temp_env + '-'
+                temp_env = temp_env + deploy_scenario_string[index]
+                index += 1
+            os.environ['DEPLOY_SCENARIO'] = temp_env
+
+        logger.info("DEPLOY_SCENARIO : %s", os.environ['DEPLOY_SCENARIO'])
+
+
 def check_hosts_file(logger):
     hosts_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
                               'hosts.yaml')
@@ -279,6 +298,7 @@ def main(*args, **kwargs):
     logger.info('================================================')
     logger.info('Build tag: {}'.format(dt_cfg.dovetail_config['build_tag']))
     parse_cli(logger, **kwargs)
+    check_dpdk_support(logger, **kwargs)
     env_init(logger)
     copy_userconfig_files(logger)
     copy_patch_files(logger)
