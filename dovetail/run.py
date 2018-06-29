@@ -32,7 +32,6 @@ from utils.dovetail_config import DovetailConfig as dt_cfg
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
 
-
 EXIT_RUN_FAILED = 2
 
 
@@ -203,6 +202,12 @@ def env_init(logger):
     dt_utils.source_env(openrc)
 
 
+def update_deploy_scenario(logger, **kwargs):
+    if 'deploy_scenario' in kwargs and kwargs['deploy_scenario'] is not None:
+        os.environ['DEPLOY_SCENARIO'] = kwargs['deploy_scenario']
+        logger.info("DEPLOY_SCENARIO : %s", os.environ['DEPLOY_SCENARIO'])
+
+
 def check_hosts_file(logger):
     hosts_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
                               'hosts.yaml')
@@ -279,6 +284,7 @@ def main(*args, **kwargs):
     logger.info('================================================')
     logger.info('Build tag: {}'.format(dt_cfg.dovetail_config['build_tag']))
     parse_cli(logger, **kwargs)
+    update_deploy_scenario(logger, **kwargs)
     env_init(logger)
     copy_userconfig_files(logger)
     copy_patch_files(logger)
