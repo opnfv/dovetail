@@ -151,6 +151,7 @@ class DockerRunner(object):
         config_item['validate_testcase'] = testcase.validate_testcase()
         config_item['testcase'] = testcase.name()
         config_item['os_insecure'] = os.getenv("OS_INSECURE")
+        config_item['deploy_scenario'] = os.environ['DEPLOY_SCENARIO']
         return config_item
 
     def _update_config(self, testcase):

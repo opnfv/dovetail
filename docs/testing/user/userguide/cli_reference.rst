@@ -83,6 +83,10 @@ Commands List
 | dovetail run --vnf_tag | -v <vnftest_docker_image_tag>                 | Specify vnftest's docker image tag, default is beijing.0                                          |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| dovetail run --deploy-scenario <deploy_scenario_name>                  | Specify the deploy scenario having as project name 'ovs'                                          |
+|                                                                        |                                                                                                   |
++------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+
 
 Commands Examples
 =================
@@ -191,23 +195,25 @@ Dovetail Run Commands
    Dovetail compliance test entry!
 
    Options:
-   -b, --bott_tag TEXT  Overwrite tag for bottlenecks docker container (e.g. cvp.0.4.0)
-   -f, --func_tag TEXT  Overwrite tag for functest docker container (e.g. cvp.0.5.0)
-   -y, --yard_tag TEXT  Overwrite tag for yardstick docker container (e.g. danube.3.2)
-   --testarea TEXT      compliance testarea within testsuite
-   --offline            run in offline method, which means not to update the docker upstream images, functest, yardstick, etc.
-   -r, --report TEXT    push results to DB (e.g. --report http://192.168.135.2:8000/api/v1/results)
-   --testsuite TEXT     compliance testsuite.
-   -d, --debug          Flag for showing debug log on screen.
-   -h, --help           Show this message and exit.
+   -b, --bott_tag TEXT     Overwrite tag for bottlenecks docker container (e.g. cvp.0.4.0)
+   -f, --func_tag TEXT     Overwrite tag for functest docker container (e.g. cvp.0.5.0)
+   -y, --yard_tag TEXT     Overwrite tag for yardstick docker container (e.g. danube.3.2)
+   --deploy-scenario TEXT  Specify the DEPLOY_SCENARIO which will be used as input by each testcase respectively
+   --testarea TEXT         compliance testarea within testsuite
+   --offline               run in offline method, which means not to update the docker upstream images, functest, yardstick, etc.
+   -r, --report TEXT       push results to DB (e.g. --report http://192.168.135.2:8000/api/v1/results)
+   --testsuite TEXT        compliance testsuite.
+   -d, --debug             Flag for showing debug log on screen.
+   -h, --help              Show this message and exit.
 
 .. code-block:: bash
 
-   root@1f230e719e44:~/dovetail/dovetail# dovetail run --testsuite proposed_tests --testarea vping --offline -r http://192.168.135.2:8000/api/v1/results
+   root@1f230e719e44:~/dovetail/dovetail# dovetail run --testsuite proposed_tests --testarea vping --offline -r http://192.168.135.2:8000/api/v1/results --deploy-scenario os-nosdn-ovs-ha
    2017-10-12 14:57:51,278 - run - INFO - ================================================
    2017-10-12 14:57:51,278 - run - INFO - Dovetail compliance: proposed_tests!
    2017-10-12 14:57:51,278 - run - INFO - ================================================
    2017-10-12 14:57:51,278 - run - INFO - Build tag: daily-master-b80bca76-af5d-11e7-879a-0242ac110002
+   2017-10-12 14:57:51,278 - run - INFO - DEPLOY_SCENARIO : os-nosdn-ovs-ha
    2017-10-12 14:57:51,336 - run - WARNING - There is no hosts file /home/jenkins/opnfv/slave_root/workspace/dovetail-compass-huawei-pod7-proposed_tests-danube/cvp/pre_config/hosts.yaml, may be some issues with domain name resolution.
    2017-10-12 14:57:51,517 - run - INFO - >>[testcase]: dovetail.vping.tc001
    2017-10-12 14:58:21,325 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
