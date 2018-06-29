@@ -610,6 +610,26 @@ and its intended usage, refer to
 
 .. code-block:: bash
 
+   $ dovetail run --testcase dovetail.tempest.osinterop --deploy-scenario os-nosdn-ovs-ha
+
+By default, during test case execution, the respective feature is responsible to
+decide what flavor is going to use for the execution of each test scenario which is under
+of its umbrella.
+In parallel, there is also implemented a mechanism in order for the extra specs in flavors of
+executing test scenarios to be hugepages instead of the default option.
+This is happening if the name of the scenario contains the substring "ovs".
+In this case, the flavor which is going to be used for the running test case has
+'hugepage' characteristics.
+
+Taking the above into our consideration and having in our mind that the DEPLOY_SCENARIO
+environment parameter is not used by dovetail framework (the initial value is 'unknown'),
+we set as input, for the features that they are responsible for the test case execution,
+the DEPLOY_SCENARIO environment parameter having as substring the feature name "ovs"
+(e.g. os-nosdn-ovs-ha).
+
+
+.. code-block:: bash
+
    $ dovetail run --no-api-validation
 
 By default, results are stored in local files on the Test Host at ``$DOVETAIL_HOME/results``.
