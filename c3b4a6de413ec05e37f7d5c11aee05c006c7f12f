@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_ed87e40d",
+        "filename": "etc/conf/yardstick_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-02T15:04:30Z",
+      "side": 1,
+      "message": "Looks a little weird: If a certificate is being used, then OS_VERIFY is NOT set at all. If use of certificates should be disabled, then it is set but empty. Can it also be set to a specific value?\n\nSorry for the stupid question. I couldn\u0027t find any documentation.",
+      "range": {
+        "startLine": 10,
+        "startChar": 4,
+        "endLine": 10,
+        "endChar": 43
+      },
+      "revId": "c3b4a6de413ec05e37f7d5c11aee05c006c7f12f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
