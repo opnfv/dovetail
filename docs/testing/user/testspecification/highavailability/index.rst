@@ -749,5 +749,158 @@ Post conditions
 
 Restart the processes of "haproxy" if they are not running.
 
+----------------------------------------------------------------
+Test Case 9 - Controller node OpenStack service down - Database
+----------------------------------------------------------------
+
+Short name
+----------
+
+dovetail.ha.database
+
+Use case specification
+----------------------
+
+This test case verifies that the high availability of the data base instances
+used by OpenStack (mysql) on control node is working properly.
+Specifically, this test case kills the processes of database service on a
+selected control node, then checks whether the request of the related
+OpenStack command is OK and the killed processes are recovered.
+
+Test preconditions
+------------------
+
+In this test case, an attacker called "kill-process" is needed.
+This attacker includes three parameters: fault_type, process_name and host.
+
+The purpose of this attacker is to kill any purpose with a specific process
+name which is run on the host node. In case that multiple processes use the
+same name on the host node, all of them are going to be killed by this attacker.
+
+Basic test flow execution description and pass/fail criteria
+------------------------------------------------------------
+
+Methodology for verifying service continuity and recovery
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+In order to verify this service two different monitors are going to be used.
+
+As first monitor is used a OpenStack command and acts as watcher for
+database connection of different OpenStack components.
+
+For second monitor is used a process monitor and the main purpose is to watch
+whether the database processes on the host node are killed properly.
+
+Therefore, in this test case, there are two metrics:
+- service_outage_time, which indicates the maximum outage time (seconds)
+  of the specified OpenStack command request
+- process_recover_time, which indicates the maximum time (seconds) from the
+  process being killed to recovered
+
+Test execution
+''''''''''''''
+* Test action 1: Connect to Node1 through SSH, and check that "database"
+  processes are running on Node1
+* Test action 2: Create a image
+* Test action 3: Flavor is being created
+* Test action 4: Start two monitors: one for "database" processes on the host
+  node and the other for connection toward database from different OpenStack
+  components.
+  Each monitor will run as an independent process
+* Test action 5: Connect to Node1 through SSH, and then kill the "mysql"
+  process(es)
+* Test action 6: Stop monitors after a period of time specified by "waiting_time".
+  The monitor info will be aggregated.
+* Test action 7: Verify the SLA and set the verdict of the test case to pass or fail.
 
 
+Pass / fail criteria
+''''''''''''''''''''
+
+Check whether the SLA is passed:
+- The process outage time is less than 30s.
+- The service outage time is less than 5s.
+
+The database operations are carried out in above order and no errors occur.
+
+A negative result will be generated if the above is not met in completion.
+
+Post conditions
+---------------
+
+It is the action when the test cases exist.
+It will check the status of the specified process on the host, and restart
+the process if it is not running for next test cases
+
+---------------------------------------------------------------------------
+Test Case 10 - Controller node OpenStack service down - Controller Restart
+---------------------------------------------------------------------------
+
+Short name
+----------
+
+dovetail.ha.controller_restart
+
+Use case specification
+----------------------
+
+This test case verifies that the high availability of controller node is working
+properly.
+Specifically, this test case shutdowns a specified controller node via IPMI,
+then checks whether all services provided by the controller node are OK with
+some monitor tools.
+
+Test preconditions
+------------------
+
+In this test case, an attacker called "host-shutdown" is needed.
+This attacker includes two parameters: fault_type and host.
+
+The purpose of this attacker is to shutdown a controller and check whether the
+services are handled by this controller are still working normally.
+
+Basic test flow execution description and pass/fail criteria
+------------------------------------------------------------
+
+Methodology for verifying service continuity and recovery
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+In order to verify this service one monitor is going to be used.
+
+This monitor is using an OpenStack command and the respective command name of
+the OpenStack component that we want to verify that the respective service is
+still running normally.
+
+In this test case, there is one metric: 1)service_outage_time: which indicates
+the maximum outage time (seconds) of the specified OpenStack command request.
+
+Test execution
+''''''''''''''
+* Test action 1: Connect to Node1 through SSH, and check that controller services
+  are running normally
+* Test action 2: Create image
+* Test action 3: Flavor is being created
+* Test action 4: Start monitors: each monitor will run as independently
+  process, monitoring the image list, router list, stack list and volume list accordingly.
+  The monitor info will be collected.
+* Test action 5: Using the IPMI component, the Node1 is shut-down remotely.
+* Test action 6: Stop monitors after a period of time specified by "waiting_time".
+  The monitor info will be aggregated.
+* Test action 7: Verify the SLA and set the verdict of the test case to pass or fail.
+
+
+Pass / fail criteria
+''''''''''''''''''''
+
+Check whether the SLA is passed:
+- The process outage time is less than 30s.
+- The service outage time is less than 5s.
+
+The controller operations are carried out in above order and no errors occur.
+
+A negative result will be generated if the above is not met in completion.
+
+Post conditions
+---------------
+
+The controller has been restarted
