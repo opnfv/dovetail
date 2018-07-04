@@ -298,6 +298,29 @@
       "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_e3e7f43e",
+        "filename": "docs/testing/user/testspecification/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:19:24Z",
+      "side": 1,
+      "message": "can you please add your new descriptions to the index.rst file? It is fine to just extend the existing file.",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 43
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
