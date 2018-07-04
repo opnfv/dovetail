@@ -6,15 +6,12 @@
 VIM volume operations test specification
 =========================================
 
-.. toctree::
-   :maxdepth: 2
-
 Scope
 =====
 
 The VIM volume operations test area evaluates the ability of the system under
 test to support VIM volume operations. The test cases documented here are the
-volume API test cases in the OpenStack Interop guideline 2016.8 as implemented
+volume API test cases in the OpenStack Interop guideline 2017.09 as implemented
 by the RefStack client. These test cases will evaluate basic OpenStack (as a VIM)
 volume operations, including:
 
@@ -26,21 +23,6 @@ volume operations, including:
 - Volume service extension listing
 - Volume metadata operations
 - Volume snapshot operations
-
-References
-================
-
-- OpenStack Governance/Interop
-
-  - https://wiki.openstack.org/wiki/Governance/InteropWG
-
-- OpenStack Interoperability guidelines (version 2016.08)
-
-  - https://github.com/openstack/interop/blob/master/2016.08.json
-
-- Refstack client
-
-  - https://github.com/openstack/refstack-client
 
 Definitions and abbreviations
 =============================
@@ -69,12 +51,13 @@ the same state as before the test.
 For brevity, the test cases in this test area are summarized together based on
 the operations they are testing.
 
-All these test cases are included in the test case dovetail.osinterop.tc001 of
+All these test cases are included in the test case dovetail.tempest.osinterop of
 OVP test suite.
 
 Test Descriptions
 =================
 
+----------------------
 API Used and Reference
 ----------------------
 
@@ -94,17 +77,14 @@ Block storage: https://developer.openstack.org/api-ref/block-storage
 - update snapshot
 - delete snapshot
 
-------------------------------------------------------------------------
-Test Case 1 - Volume attach and detach operations with the Cinder v2 API
-------------------------------------------------------------------------
+-----------------------------------------------------
+Test Case 1 - Upload volumes with Cinder v2 or v3 API
+-----------------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_volumes_actions.VolumesV2ActionsTest.test_attach_detach_volume_to_instance
-tempest.api.volume.test_volumes_actions.VolumesV2ActionsTest.test_get_volume_attachment
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_attach_volumes_with_nonexistent_volume_id
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_detach_volumes_with_invalid_volume_id
+tempest.api.volume.test_volumes_actions.VolumesActionsTest.test_volume_upload
 
 Test preconditions
 ------------------
@@ -116,30 +96,20 @@ Basic test flow execution description and pass/fail criteria
 
 Test execution
 ''''''''''''''
-* Test action 1: Create a server VM1
-* Test action 2: Attach a provided VOL1 to VM1
-* **Test assertion 1:** Verify VOL1 is in 'in-use' status
-* Test action 3: Detach VOL1 from VM1
-* **Test assertion 2:** Verify VOL1 is in 'available' status
-* Test action 4: Create a server VM2
-* Test action 5: Attach a provided VOL2 to VM2 and wait for VOL2 to reach 'in-use' status
-* Test action 6: Retrieve VOL2's attachment information ATTCH_INFO
-* **Test assertion 3:** Verify ATTCH_INFO is correct
-* Test action 7: Create a server VM3 and wait for VM3 to reach 'ACTIVE' status
-* Test action 8: Attach a non-existent volume to VM3
-* **Test assertion 4:** Verify attach volume failed, a 'NOT FOUND' error is returned in the response
-* Test action 9: Detach a volume from a server by using an invalid volume ID
-* **Test assertion 5:** Verify detach volume failed, a 'NOT FOUND' error is returned in the response
+* Test action 1: Create a volume VOL1
+* Test action 2: Convert VOL1 and upload image IMG1 to the Glance
+* Test action 3: Wait until the status of IMG1 is 'ACTIVE' and VOL1 is 'available'
+* Test action 4: Show the details of IMG1
+* **Test assertion 1:** The name of IMG1 shown is the same as the name used to upload it
+* **Test assertion 2:** The disk_format of IMG1 is the same as the disk_format of VOL1
 
 Pass / fail criteria
 ''''''''''''''''''''
 
-This test evaluates the volume API ability of attaching a volume to a server
-and detaching a volume from a server. Specifically, the test verifies that:
+This test case evaluates the volume API ability of uploading images.
+Specifically, the test verifies that:
 
-* Volumes can be attached and detached from servers.
-* Volume attachment information can be retrieved.
-* Attach and detach a volume using an invalid volume ID is not allowed.
+* The Volume can convert volumes and upload images.
 
 In order to pass this test, all test assertions listed in the test execution above need to pass.
 
@@ -148,14 +118,14 @@ Post conditions
 
 N/A
 
---------------------------------------------------------------------------------
-Test Case 2 - Volume service availability zone operations with the Cinder v2 API
---------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+Test Case 2 - Volume service availability zone operations with the Cinder v2 or v3 API
+--------------------------------------------------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_availability_zone.AvailabilityZoneV2TestJSON.test_get_availability_zone_list
+tempest.api.volume.test_availability_zone.AvailabilityZoneTestJSON.test_get_availability_zone_list
 
 Test preconditions
 ------------------
@@ -185,14 +155,14 @@ Post conditions
 
 N/A
 
---------------------------------------------------------------
-Test Case 3 - Volume cloning operations with the Cinder v2 API
---------------------------------------------------------------
+--------------------------------------------------------------------
+Test Case 3 - Volume cloning operations with the Cinder v2 or v3 API
+--------------------------------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_volumes_get.VolumesV2GetTest.test_volume_create_get_update_delete_as_clone
+tempest.api.volume.test_volumes_get.VolumesGetTest.test_volume_create_get_update_delete_as_clone
 
 Test preconditions
 ------------------
@@ -239,15 +209,15 @@ Post conditions
 
 N/A
 
---------------------------------------------------------------------
-Test Case 4 - Image copy-to-volume operations with the Cinder v2 API
---------------------------------------------------------------------
+--------------------------------------------------------------------------
+Test Case 4 - Image copy-to-volume operations with the Cinder v2 or v3 API
+--------------------------------------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_volumes_actions.VolumesV2ActionsTest.test_volume_bootable
-tempest.api.volume.test_volumes_get.VolumesV2GetTest.test_volume_create_get_update_delete_from_image
+tempest.api.volume.test_volumes_actions.VolumesActionsTest.test_volume_bootable
+tempest.api.volume.test_volumes_get.VolumesGetTest.test_volume_create_get_update_delete_from_image
 
 Test preconditions
 ------------------
@@ -299,20 +269,20 @@ Post conditions
 
 N/A
 
-----------------------------------------------------------------------------
-Test Case 5 - Volume creation and deletion operations with the Cinder v2 API
-----------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Test Case 5 - Volume creation and deletion operations with the Cinder v2 or v3 API
+----------------------------------------------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_volumes_get.VolumesV2GetTest.test_volume_create_get_update_delete
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_invalid_size
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_nonexistent_source_volid
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_nonexistent_volume_type
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_without_passing_size
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_size_negative
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_size_zero
+tempest.api.volume.test_volumes_get.VolumesGetTest.test_volume_create_get_update_delete
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_with_invalid_size
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_with_nonexistent_source_volid
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_with_nonexistent_volume_type
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_without_passing_size
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_with_size_negative
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_with_size_zero
 
 Test preconditions
 ------------------
@@ -372,14 +342,14 @@ Post conditions
 
 N/A
 
---------------------------------------------------------------------------------
-Test Case 6 - Volume service extension listing operations with the Cinder v2 API
---------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+Test Case 6 - Volume service extension listing operations with the Cinder v2 or v3 API
+--------------------------------------------------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_extensions.ExtensionsV2TestJSON.test_list_extensions
+tempest.api.volume.test_extensions.ExtensionsTestJSON.test_list_extensions
 
 Test preconditions
 ------------------
@@ -410,16 +380,16 @@ Post conditions
 
 N/A
 
-----------------------------------------------------------
-Test Case 7 - Volume GET operations with the Cinder v2 API
-----------------------------------------------------------
+----------------------------------------------------------------
+Test Case 7 - Volume GET operations with the Cinder v2 or v3 API
+----------------------------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_get_invalid_volume_id
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_get_volume_without_passing_volume_id
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_volume_get_nonexistent_volume_id
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_get_invalid_volume_id
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_get_volume_without_passing_volume_id
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_volume_get_nonexistent_volume_id
 
 Test preconditions
 ------------------
@@ -454,32 +424,32 @@ Post conditions
 
 N/A
 
---------------------------------------------------------------
-Test Case 8 - Volume listing operations with the Cinder v2 API
---------------------------------------------------------------
+--------------------------------------------------------------------
+Test Case 8 - Volume listing operations with the Cinder v2 or v3 API
+--------------------------------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list
-tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_by_name
-tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_details_by_name
-tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_param_display_name_and_status
-tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_with_detail_param_display_name_and_status
-tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_with_detail_param_metadata
-tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_with_details
-tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_with_param_metadata
-tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volumes_list_by_availability_zone
-tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volumes_list_by_status
-tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volumes_list_details_by_availability_zone
-tempest.api.volume.test_volumes_list.VolumesV2ListTestJSON.test_volumes_list_details_by_status
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_list_volumes_detail_with_invalid_status
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_list_volumes_detail_with_nonexistent_name
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_list_volumes_with_invalid_status
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_list_volumes_with_nonexistent_name
-tempest.api.volume.v2.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_details_pagination
-tempest.api.volume.v2.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_details_with_multiple_params
-tempest.api.volume.v2.test_volumes_list.VolumesV2ListTestJSON.test_volume_list_pagination
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_by_name
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_details_by_name
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_param_display_name_and_status
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_with_detail_param_display_name_and_status
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_with_detail_param_metadata
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_with_details
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_with_param_metadata
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volumes_list_by_availability_zone
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volumes_list_by_status
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volumes_list_details_by_availability_zone
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volumes_list_details_by_status
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_list_volumes_detail_with_invalid_status
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_list_volumes_detail_with_nonexistent_name
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_list_volumes_with_invalid_status
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_list_volumes_with_nonexistent_name
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_details_pagination
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_details_with_multiple_params
+tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_pagination
 
 Test preconditions
 ------------------
@@ -558,15 +528,15 @@ Post conditions
 
 N/A
 
----------------------------------------------------------------
-Test Case 9 - Volume metadata operations with the Cinder v2 API
----------------------------------------------------------------
+---------------------------------------------------------------------
+Test Case 9 - Volume metadata operations with the Cinder v2 or v3 API
+---------------------------------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_volume_metadata.VolumesV2MetadataTest.test_crud_volume_metadata
-tempest.api.volume.test_volume_metadata.VolumesV2MetadataTest.test_update_volume_metadata_item
+tempest.api.volume.test_volume_metadata.VolumesMetadataTest.test_crud_volume_metadata
+tempest.api.volume.test_volume_metadata.VolumesMetadataTest.test_update_show_volume_metadata_item
 
 Test preconditions
 ------------------
@@ -610,14 +580,14 @@ Post conditions
 
 N/A
 
----------------------------------------------------------------------------------
-Test Case 10 - Verification of read-only status on volumes with the Cinder v2 API
----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+Test Case 10 - Verification of read-only status on volumes with the Cinder v2 or v3 API
+---------------------------------------------------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_volumes_actions.VolumesV2ActionsTest.test_volume_readonly_update
+tempest.api.volume.test_volumes_actions.VolumesActionsTest.test_volume_readonly_update
 
 Test preconditions
 ------------------
@@ -650,17 +620,17 @@ Post conditions
 
 N/A
 
--------------------------------------------------------------------
-Test Case 11 - Volume reservation operations with the Cinder v2 API
--------------------------------------------------------------------
+-------------------------------------------------------------------------
+Test Case 11 - Volume reservation operations with the Cinder v2 or v3 API
+-------------------------------------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_volumes_actions.VolumesV2ActionsTest.test_reserve_unreserve_volume
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_reserve_volume_with_negative_volume_status
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_reserve_volume_with_nonexistent_volume_id
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_unreserve_volume_with_nonexistent_volume_id
+tempest.api.volume.test_volumes_actions.VolumesActionsTest.test_reserve_unreserve_volume
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_reserve_volume_with_negative_volume_status
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_reserve_volume_with_nonexistent_volume_id
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_unreserve_volume_with_nonexistent_volume_id
 
 Test preconditions
 ------------------
@@ -703,25 +673,25 @@ Post conditions
 
 N/A
 
-----------------------------------------------------------------------------------
-Test Case 12 - Volume snapshot creation/deletion operations with the Cinder v2 API
-----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+Test Case 12 - Volume snapshot creation/deletion operations with the Cinder v2 or v3 API
+----------------------------------------------------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_snapshot_metadata.SnapshotV2MetadataTestJSON.test_crud_snapshot_metadata
-tempest.api.volume.test_snapshot_metadata.SnapshotV2MetadataTestJSON.test_update_snapshot_metadata_item
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_create_volume_with_nonexistent_snapshot_id
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_delete_invalid_volume_id
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_delete_volume_without_passing_volume_id
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_volume_delete_nonexistent_volume_id
-tempest.api.volume.test_volumes_snapshots.VolumesV2SnapshotTestJSON.test_snapshot_create_get_list_update_delete
-tempest.api.volume.test_volumes_snapshots.VolumesV2SnapshotTestJSON.test_volume_from_snapshot
-tempest.api.volume.test_volumes_snapshots_list.VolumesV2SnapshotListTestJSON.test_snapshots_list_details_with_params
-tempest.api.volume.test_volumes_snapshots_list.VolumesV2SnapshotListTestJSON.test_snapshots_list_with_params
-tempest.api.volume.test_volumes_snapshots_negative.VolumesV2SnapshotNegativeTestJSON.test_create_snapshot_with_nonexistent_volume_id
-tempest.api.volume.test_volumes_snapshots_negative.VolumesV2SnapshotNegativeTestJSON.test_create_snapshot_without_passing_volume_id
+tempest.api.volume.test_snapshot_metadata.SnapshotMetadataTestJSON.test_crud_snapshot_metadata
+tempest.api.volume.test_snapshot_metadata.SnapshotMetadataTestJSON.test_update_show_snapshot_metadata_item
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_create_volume_with_nonexistent_snapshot_id
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_delete_invalid_volume_id
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_delete_volume_without_passing_volume_id
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_volume_delete_nonexistent_volume_id
+tempest.api.volume.test_volumes_snapshots.VolumesSnapshotTestJSON.test_snapshot_create_get_list_update_delete
+tempest.api.volume.test_volumes_snapshots.VolumesSnapshotTestJSON.test_volume_from_snapshot
+tempest.api.volume.test_volumes_snapshots_list.VolumesSnapshotListTestJSON.test_snapshots_list_details_with_params
+tempest.api.volume.test_volumes_snapshots_list.VolumesSnapshotListTestJSON.test_snapshots_list_with_params
+tempest.api.volume.test_volumes_snapshots_negative.VolumesSnapshotNegativeTestJSON.test_create_snapshot_with_nonexistent_volume_id
+tempest.api.volume.test_volumes_snapshots_negative.VolumesSnapshotNegativeTestJSON.test_create_snapshot_without_passing_volume_id
 
 Test preconditions
 ------------------
@@ -813,16 +783,16 @@ Post conditions
 
 N/A
 
---------------------------------------------------------------
-Test Case 13 - Volume update operations with the Cinder v2 API
---------------------------------------------------------------
+--------------------------------------------------------------------
+Test Case 13 - Volume update operations with the Cinder v2 or v3 API
+--------------------------------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_update_volume_with_empty_volume_id
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_update_volume_with_invalid_volume_id
-tempest.api.volume.test_volumes_negative.VolumesV2NegativeTest.test_update_volume_with_nonexistent_volume_id
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_update_volume_with_empty_volume_id
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_update_volume_with_invalid_volume_id
+tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_update_volume_with_nonexistent_volume_id
 
 Test preconditions
 ------------------

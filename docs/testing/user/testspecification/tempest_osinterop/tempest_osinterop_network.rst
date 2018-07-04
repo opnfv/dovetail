@@ -6,28 +6,14 @@
 VIM network operations test specification
 =========================================
 
-.. toctree::
-   :maxdepth: 2
-
 Scope
 =====
 
 The VIM network test area evaluates the ability of the system under test to support
 VIM network operations. The test cases documented here are the network API test cases
-in the Openstack Interop guideline 2016.8 as implemented by the Refstack client.
+in the Openstack Interop guideline 2017.09 as implemented by the Refstack client.
 These test cases will evaluate basic Openstack (as a VIM) network operations including
 basic CRUD operations on L2 networks, L2 network ports and security groups.
-
-References
-==========
-
-- OpenStack Interoperability guidelines (version 2016.08)
-
-  - https://github.com/openstack/interop/blob/master/2016.08.json
-
-- Refstack client
-
-  - https://github.com/openstack/refstack-client
 
 Definitions and abbreviations
 =============================
@@ -56,12 +42,13 @@ the same state as before the test.
 For brevity, the test cases in this test area are summarized together based on
 the operations they are testing.
 
-All these test cases are included in the test case dovetail.osinterop.tc001 of
+All these test cases are included in the test case dovetail.tempest.osinterop of
 OVP test suite.
 
 Test Descriptions
 =================
 
+----------------------
 API Used and Reference
 ----------------------
 
@@ -129,8 +116,6 @@ tempest.api.network.test_ports.PortsTestJSON.test_list_ports
 tempest.api.network.test_ports.PortsTestJSON.test_list_ports_fields
 tempest.api.network.test_ports.PortsTestJSON.test_show_port
 tempest.api.network.test_ports.PortsTestJSON.test_show_port_fields
-tempest.api.network.test_ports.PortsTestJSON.test_update_port_with_security_group_and_extra_attributes
-tempest.api.network.test_ports.PortsTestJSON.test_update_port_with_two_security_groups_and_extra_attributes
 
 Test preconditions
 ------------------
@@ -225,16 +210,6 @@ Test execution
   and mac_address info with the port's id
 * **Test assertion 25:** The keys returned in the response are just id and mac_address,
   and the values of all the keys equal to port's id and mac_address
-* Test action 26: Create a network, 2 subnets (SUBNET1 and SUBNET2) and 2 security groups
-  (SG1 and SG2), create a port with SG1 and SUBNET1, then update the port's security group to SG2
-  and its subnet_id to SUBNET2
-* **Test assertion 26:** The port's subnet_id equals to SUBNET2's id and its security_group_ids
-  equals to SG2's id
-* Test action 27: Create a network, 2 subnets (SUBNET1 and SUBNET2) and 3 security groups
-  (SG1, SG2 and SG3), create a port with SG1 and SUBNET1, then update the port's security group to
-  SG2 and SG3 and its subnet_id to SUBNET2
-* **Test assertion 27:** The port's subnet_id equal to SUBNET2's id and its security_group_ids
-  equals to the ids of SG2 and SG3
 
 Pass / fail criteria
 ''''''''''''''''''''
@@ -359,6 +334,50 @@ Specifically it verifies that:
 * Cannot create security group rules with bad ethertype, protocol, remote_ip_prefix, ports,
   remote_group_id and security_group_id.
 * Cannot show or delete security groups or security group rules with nonexistent ids.
+
+In order to pass this test, all test assertions listed in the test execution above need to pass.
+
+Post conditions
+---------------
+
+N/A
+
+-------------------------------
+CRUD operations on subnet pools
+-------------------------------
+
+Test case specification
+-----------------------
+
+tempest.api.network.test_subnetpools_extensions.SubnetPoolsTestJSON.test_create_list_show_update_delete_subnetpools
+
+Test preconditions
+------------------
+
+Neutron is available.
+
+Basic test flow execution description and pass/fail criteria
+------------------------------------------------------------
+
+Test execution
+''''''''''''''
+
+* Test action 1: Create a subnetpool SNP1 with a specific name and get the name from the response body
+* **Test assertion 1:** The name got from the body is the same as the name used to create SNP1
+* Test action 2: Show SNP1 and get the name from the response body
+* **Test assertion 2:** The name got from the body is the same as the name used to create SNP1
+* Test action 3: Update the name of SNP1 and get the new name from the response body
+* **Test assertion 3:** The name got from the body is the same as the name used to update SNP1
+* Test action 4: Delete SNP1
+
+
+Pass / fail criteria
+''''''''''''''''''''
+
+These test cases evaluate the ability of Basic CRUD operations on subnetpools.
+Specifically it verifies that:
+
+* Subnetpools can be created, updated, shown and deleted.
 
 In order to pass this test, all test assertions listed in the test execution above need to pass.
 

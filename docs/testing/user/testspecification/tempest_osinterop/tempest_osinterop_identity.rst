@@ -6,9 +6,6 @@
 VIM identity operations test specification
 ==========================================
 
-.. toctree::
-   :maxdepth: 2
-
 Scope
 =====
 
@@ -16,22 +13,6 @@ The VIM identity test area evaluates the ability of the system under test to
 support VIM identity operations. The tests in this area will evaluate
 API discovery operations within the Identity v3 API, auth operations within
 the Identity API.
-
-References
-================
-
-- OpenStack interoperability guidelines (version 2016.08)
-
-  - https://github.com/openstack/interop/blob/master/2016.08.json
-
-- Openstack interoperability
-
-  - https://www.openstack.org/brand/interop/
-
-- OpenStack interoperability test cases excluding object storage
-
-  - https://refstack.openstack.org/api/v1/guidelines/2016.08/tests?target=compute&type=required&alias=true&flag=false
-
 
 Definitions and abbreviations
 =============================
@@ -53,16 +34,16 @@ Test Area Structure
 The test area is structured based on VIM identity operations. Each test case
 is able to run independently, i.e. irrelevant of the state created by a previous test.
 
-All these test cases are included in the test case dovetail.osinterop.tc001 of
+All these test cases are included in the test case dovetail.tempest.osinterop of
 OVP test suite.
 
 Dependency Description
 ======================
 
 The VIM identity operations test cases are a part of the OpenStack
-interoperability tempest test cases.  For Danube based dovetail release, the
-OpenStack interoperability guidelines (version 2016.08) is adopted, which is
-valid for Kilo, Liberty, Mitaka and Newton releases of Openstack.
+interoperability tempest test cases. For Fraser based dovetail release, the
+OpenStack interoperability guidelines (version 2017.09) is adopted, which is
+valid for Mitaka, Newton, Ocata and Pike releases of Openstack.
 
 Test Descriptions
 =================

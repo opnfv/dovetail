@@ -6,28 +6,14 @@
 VIM image operations test specification
 =======================================
 
-.. toctree::
-   :maxdepth: 2
-
 Scope
 =====
 
 The VIM image test area evaluates the ability of the system under test to support
 VIM image operations. The test cases documented here are the Image API test cases
-in the Openstack Interop guideline 2016.8 as implemented by the Refstack client.
+in the Openstack Interop guideline 2017.09 as implemented by the Refstack client.
 These test cases will evaluate basic Openstack (as a VIM) image operations including
 image creation, image list, image update and image deletion capabilities using Glance v2 API.
-
-References
-==========
-
-- OpenStack Interoperability guidelines (version 2016.08)
-
-  - https://github.com/openstack/interop/blob/master/2016.08.json
-
-- Refstack client
-
-  - https://github.com/openstack/refstack-client
 
 Definitions and abbreviations
 =============================
@@ -54,12 +40,13 @@ to run independently, i.e. irrelevant of the state created by a previous test.
 For brevity, the test cases in this test area are summarized together based on
 the operations they are testing.
 
-All these test cases are included in the test case dovetail.osinterop.tc001 of
+All these test cases are included in the test case dovetail.tempest.osinterop of
 OVP test suite.
 
 Test Descriptions
 =================
 
+----------------------
 API Used and Reference
 ----------------------
 

@@ -18,7 +18,7 @@ associated test specification.
 
 All tests in the OVP are required to fulfill a specific set of criteria in
 order that the OVP is able to provide a fair assessment of the system under
-test.  Test requirements are described in the 'Test Case Requirements'_
+test.  Test requirements are described in the :ref:dovetail-test_case_requirements
 document.
 
 All tests areas addressed in the OVP are covered in the following test
@@ -28,16 +28,11 @@ specification documents.
    :maxdepth: 1
 
   ./highavailability/index.rst
-  ./vimoperationscompute/index.rst
-  ./vimoperationsidentity/index.rst
-  ./vimoperationsimage/index.rst
-  ./vimoperationsnetwork/index.rst
-  ./vimoperationsvolume/index.rst
+  ./tempest_osinterop/index.rst
   ./vping/index.rst
-  ./ipv6/index.rst
-  ./forwardingpackets/index.rst
-  ./securitygroup/index.rst
-  ./dynamicnetwork/index.rst
-  ./machinelifecycle/index.rst
-  ./multiplenodes/index.rst
+  ./tempest_ipv6/index.rst
+  ./tempest_network_security/index.rst
+  ./tempest_network/network_scenario.rst
+  ./tempest_vm_lifecycle/index.rst
+  ./tempest_multi_node_scheduling/index.rst
   ./vpn/index.rst

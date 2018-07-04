@@ -84,7 +84,7 @@ Test Case 1 - Controller node OpenStack service down - nova-api
 Short name
 ----------
 
-dovetail.ha.tc001.nova-api_service_down
+dovetail.ha.nova_api
 
 Use case specification
 ----------------------
@@ -102,6 +102,7 @@ Test preconditions
 
 There is more than one controller node, which is providing the "nova-api"
 service for API end-point.
+
 Denoted a controller node as Node1 in the following configuration.
 
 
@@ -169,8 +170,10 @@ Post conditions
 ---------------
 
 Restart the process of "nova-api" if they are not running.
-Delete image with "openstack image delete test-cirros"
-Delete flavor with "openstack flavor delete m1.test"
+
+Delete image with "openstack image delete test-cirros".
+
+Delete flavor with "openstack flavor delete m1.test".
 
 
 ---------------------------------------------------------------------
@@ -180,7 +183,7 @@ Test Case 2 - Controller node OpenStack service down - neutron-server
 Short name
 ----------
 
-dovetail.ha.tc002.neutron-server_service_down
+dovetail.ha.neutron_server
 
 Use case specification
 ----------------------
@@ -196,6 +199,7 @@ Test preconditions
 
 There is more than one controller node, which is providing the "neutron-server"
 service for API end-point.
+
 Denoted a controller node as Node1 in the following configuration.
 
 Basic test flow execution description and pass/fail criteria
@@ -264,7 +268,7 @@ Test Case 3 - Controller node OpenStack service down - keystone
 Short name
 ----------
 
-dovetail.ha.tc003.keystone_service_down
+dovetail.ha.keystone
 
 Use case specification
 ----------------------
@@ -280,6 +284,7 @@ Test preconditions
 
 There is more than one controller node, which is providing the "keystone"
 service for API end-point.
+
 Denoted a controller node as Node1 in the following configuration.
 
 Basic test flow execution description and pass/fail criteria
@@ -342,7 +347,7 @@ Test Case 4 - Controller node OpenStack service down - glance-api
 Short name
 ----------
 
-dovetail.ha.tc004.glance-api_service_down
+dovetail.ha.glance_api
 
 Use case specification
 ----------------------
@@ -358,6 +363,7 @@ Test preconditions
 
 There is more than one controller node, which is providing the "glance-api"
 service for API end-point.
+
 Denoted a controller node as Node1 in the following configuration.
 
 
@@ -430,7 +436,7 @@ Test Case 5 - Controller node OpenStack service down - cinder-api
 Short name
 ----------
 
-dovetail.ha.tc005.cinder-api_service_down
+dovetail.ha.cinder_api
 
 Use case specification
 ----------------------
@@ -446,6 +452,7 @@ Test preconditions
 
 There is more than one controller node, which is providing the "cinder-api"
 service for API end-point.
+
 Denoted a controller node as Node1 in the following configuration.
 
 Basic test flow execution description and pass/fail criteria
@@ -509,7 +516,7 @@ Test Case 6 - Controller Node CPU Overload High Availability
 Short name
 ----------
 
-dovetail.ha.tc006.cpu_overload
+dovetail.ha.cpu_load
 
 Use case specification
 ----------------------
@@ -526,6 +533,7 @@ Test preconditions
 
 There is more than one controller node, which is providing the "cinder-api",
 "neutron-server", "glance-api" and "keystone" services for API end-point.
+
 Denoted a controller node as Node1 in the following configuration.
 
 Basic test flow execution description and pass/fail criteria
@@ -594,7 +602,7 @@ Test Case 7 - Controller Node Disk I/O Overload High Availability
 Short name
 ----------
 
-dovetail.ha.tc007.disk_I/O_overload
+dovetail.ha.disk_load
 
 Use case specification
 ----------------------
@@ -668,16 +676,16 @@ Test Case 8 - Controller Load Balance as a Service High Availability
 Short name
 ----------
 
-dovetail.ha.tc008.load_balance_service_down
+dovetail.ha.haproxy
 
 Use case specification
 ----------------------
 
-This test verifies the high availability of "load balancer" service. When
-the "load balancer" service of a specified controller node is killed, whether
-"load balancer" service on other controller nodes will work, and whether the
-controller node will restart the "load balancer" service are checked. This
-test case kills the processes of "load balancer" service on the selected
+This test verifies the high availability of "haproxy" service. When
+the "haproxy" service of a specified controller node is killed, whether
+"haproxy" service on other controller nodes will work, and whether the
+controller node will restart the "haproxy" service are checked. This
+test case kills the processes of "haproxy" service on the selected
 controller node, then checks whether the request of the related OpenStack
 command is processed with no failure and whether the killed processes are
 recovered.
@@ -685,8 +693,10 @@ recovered.
 Test preconditions
 ------------------
 
-There is more than one controller node, which is providing the "load balancer"
-service for rest-api. Denoted as Node1 in the following configuration.
+There is more than one controller node, which is providing the "haproxy"
+service for rest-api.
+
+Denoted as Node1 in the following configuration.
 
 Basic test flow execution description and pass/fail criteria
 ------------------------------------------------------------
@@ -694,33 +704,32 @@ Basic test flow execution description and pass/fail criteria
 Methodology for monitoring high availability
 ''''''''''''''''''''''''''''''''''''''''''''
 
-The high availability of "load balancer" service is evaluated by monitoring
+The high availability of "haproxy" service is evaluated by monitoring
 service outage time and process outage time
 
 Service outage time is tested by continuously executing "openstack image list"
 command in loop and checking if the response of the command request is returned
 with no failure.
-When the response fails, the "load balancer" service is considered in outage.
+When the response fails, the "haproxy" service is considered in outage.
 The time between the first response failure and the last response failure is
 considered as service outage time.
 
-Process outage time is tested by checking the status of processes of "load
-balancer" service on the selected controller node. The time of those processes
+Process outage time is tested by checking the status of processes of "haproxy"
+service on the selected controller node. The time of those processes
 being killed to the time of those processes being recovered is the process
 outage time.
-Process recovery is verified by checking the existence of processes of "load
-balancer" service.
+Process recovery is verified by checking the existence of processes of "haproxy" service.
 
 Test execution
 ''''''''''''''
 
 * Test action 1: Connect to Node1 through SSH, and check that processes of
-  "load balancer" service are running on Node1
-* Test action 2: Start two monitors: one for processes of "load balancer"
+  "haproxy" service are running on Node1
+* Test action 2: Start two monitors: one for processes of "haproxy"
   service and the other for "openstack image list" command. Each monitor will
   run as an independent process
 * Test action 3: Connect to Node1 through SSH, and then kill the processes of
-  "load balancer" service
+  "haproxy" service
 * Test action 4: Continuously measure service outage time from the monitor until
   the service outage time is more than 5s
 * Test action 5: Continuously measure process outage time from the monitor until
@@ -737,7 +746,8 @@ A negative result will be generated if the above is not met in completion.
 
 Post conditions
 ---------------
-Restart the processes of "load balancer" if they are not running.
+
+Restart the processes of "haproxy" if they are not running.
 
 
 
