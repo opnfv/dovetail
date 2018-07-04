@@ -77,7 +77,7 @@ Test Case 1 - vPing using userdata provided by nova metadata service
 Short name
 ----------
 
-dovetail.vping.tc001.userdata
+dovetail.vping.userdata
 
 
 Use case specification
@@ -111,15 +111,15 @@ Test execution
 ''''''''''''''
 
 * Test action 1:
-  * Create a private tenant network by using neutron client
-  * Create one subnet and one router in the network by neutron client
-  * Add one interface between the subnet and router
-  * Add one gateway route to the router by neutron client
-  * Store the network id in the response
+    * Create a private tenant network by using neutron client
+    * Create one subnet and one router in the network by neutron client
+    * Add one interface between the subnet and router
+    * Add one gateway route to the router by neutron client
+    * Store the network id in the response
 * **Test assertion 1:** The network id, subnet id and router id can be found in the response
 * Test action 2:
-  * Create an security group by using neutron client
-  * Store the security group id parameter in the response
+    * Create an security group by using neutron client
+    * Store the security group id parameter in the response
 * **Test assertion 2:** The security group id can be found in the response
 * Test action 3: boot VM1 by using nova client with configured name, image, flavor, private tenant
   network created in test action 1, security group created in test action 2
@@ -177,7 +177,7 @@ Test Case 2 - vPing using SSH to a floating IP
 Short name
 ----------
 
-dovetail.vping.tc002.ssh
+dovetail.vping.ssh
 
 
 Use case specification
@@ -212,15 +212,15 @@ Test execution
 
 
 * Test action 1:
-  * Create a private tenant network by neutron client
-  * Create one subnet and one router are created in the network by using neutron client
-  * Create one interface between the subnet and router
-  * Add one gateway route to the router by neutron client
-  * Store the network id in the response
+    * Create a private tenant network by neutron client
+    * Create one subnet and one router are created in the network by using neutron client
+    * Create one interface between the subnet and router
+    * Add one gateway route to the router by neutron client
+    * Store the network id in the response
 * **Test assertion 1:** The network id, subnet id and router id can be found in the response
 * Test action 2:
-  * Create an security group by using neutron client
-  * Store the security group id parameter in the response
+    * Create an security group by using neutron client
+    * Store the security group id parameter in the response
 * **Test assertion 2:** The security group id can be found in the response
 * Test action 3: Boot VM1 by using nova client with configured name, image, flavor, private tenant
   network created in test action 1, security group created in test action 2
