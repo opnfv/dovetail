@@ -1,0 +1,303 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_23ea8c0f",
+        "filename": "docs/testing/user/testspecification/highavailability/controller_restart.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:14:57Z",
+      "side": 1,
+      "message": "via IPMI",
+      "range": {
+        "startLine": 15,
+        "startChar": 72,
+        "endLine": 16,
+        "endChar": 21
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_2383ac57",
+        "filename": "docs/testing/user/testspecification/highavailability/controller_restart.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:14:57Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 46,
+        "startChar": 14,
+        "endLine": 46,
+        "endChar": 16
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_03882870",
+        "filename": "docs/testing/user/testspecification/highavailability/controller_restart.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:14:57Z",
+      "side": 1,
+      "message": "remove the details. These will be outdated soon anyway",
+      "range": {
+        "startLine": 47,
+        "startChar": 37,
+        "endLine": 48,
+        "endChar": 82
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_637da46e",
+        "filename": "docs/testing/user/testspecification/highavailability/controller_restart.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:14:57Z",
+      "side": 1,
+      "message": "remove the details and just say that a flavor is being created",
+      "range": {
+        "startLine": 49,
+        "startChar": 17,
+        "endLine": 50,
+        "endChar": 49
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_43822050",
+        "filename": "docs/testing/user/testspecification/highavailability/controller_restart.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:14:57Z",
+      "side": 1,
+      "message": "that\u0027s not really a test action, but just configuration. Just remove this.",
+      "range": {
+        "startLine": 51,
+        "startChar": 2,
+        "endLine": 53,
+        "endChar": 23
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_a3969c92",
+        "filename": "docs/testing/user/testspecification/highavailability/controller_restart.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:14:57Z",
+      "side": 1,
+      "message": "please mention the services being tested. See config file: https://github.com/opnfv/yardstick/blob/master/tests/opnfv/test_cases/opnfv_yardstick_tc025.yaml",
+      "range": {
+        "startLine": 55,
+        "startChar": 18,
+        "endLine": 55,
+        "endChar": 48
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_839398a2",
+        "filename": "docs/testing/user/testspecification/highavailability/controller_restart.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:14:57Z",
+      "side": 1,
+      "message": "nope, this test uses IPMI to remotely shut-down the server via its management interface.",
+      "range": {
+        "startLine": 56,
+        "startChar": 17,
+        "endLine": 57,
+        "endChar": 41
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_e3909497",
+        "filename": "docs/testing/user/testspecification/highavailability/controller_restart.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:14:57Z",
+      "side": 1,
+      "message": "please mention the SLA values (see https://github.com/opnfv/yardstick/blob/master/tests/opnfv/test_cases/opnfv_yardstick_tc025.yaml)",
+      "range": {
+        "startLine": 66,
+        "startChar": 18,
+        "endLine": 66,
+        "endChar": 32
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_c38d907d",
+        "filename": "docs/testing/user/testspecification/highavailability/controller_restart.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:14:57Z",
+      "side": 1,
+      "message": "the Yardstick documentation is really not good in this regard.   Just replace this by: \"The controller has been restarted\"",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 77,
+        "endChar": 52
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_03ef881f",
+        "filename": "docs/testing/user/testspecification/highavailability/database.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:14:57Z",
+      "side": 1,
+      "message": "remove details",
+      "range": {
+        "startLine": 53,
+        "startChar": 37,
+        "endLine": 54,
+        "endChar": 82
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_63f484f2",
+        "filename": "docs/testing/user/testspecification/highavailability/database.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:14:57Z",
+      "side": 1,
+      "message": "remove details",
+      "range": {
+        "startLine": 55,
+        "startChar": 17,
+        "endLine": 56,
+        "endChar": 49
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_43f980e8",
+        "filename": "docs/testing/user/testspecification/highavailability/database.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:14:57Z",
+      "side": 1,
+      "message": "not a test action, but config. remove.",
+      "range": {
+        "startLine": 57,
+        "startChar": 2,
+        "endLine": 59,
+        "endChar": 23
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_a3ddfc72",
+        "filename": "docs/testing/user/testspecification/highavailability/database.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-04T21:14:57Z",
+      "side": 1,
+      "message": "please mention SLA value as given in config file: https://github.com/opnfv/yardstick/blob/master/tests/opnfv/test_cases/opnfv_yardstick_tc090.yaml",
+      "range": {
+        "startLine": 74,
+        "startChar": 18,
+        "endLine": 74,
+        "endChar": 31
+      },
+      "revId": "aabf6576e64b227897fa2635e0b67d6dc2b25fde",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
