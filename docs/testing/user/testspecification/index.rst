@@ -28,6 +28,8 @@ specification documents.
    :maxdepth: 1
 
   ./highavailability/index.rst
+  ./highavailability/database.rst
+  ./highavailability/controller_restart.rst
   ./tempest_osinterop/index.rst
   ./vping/index.rst
   ./tempest_ipv6/index.rst
