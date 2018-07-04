@@ -59,12 +59,13 @@ Each test case is able to run independently, i.e. irrelevant of the state
 created by a previous test. Specifically, every test performs clean-up
 operations which return the system to the same state as before the test.
 
-All these test cases are included in the test case dovetail.tempest.tc004 of
+All these test cases are included in the test case dovetail.tempest.vm_lifecycle of
 OVP test suite.
 
 Test Descriptions
 =================
 
+----------------------
 API Used and Reference
 ----------------------
 

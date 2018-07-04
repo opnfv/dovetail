@@ -2,9 +2,9 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) Huawei Technologies Co.,Ltd
 
-=====================================================
-Dynamic Network Runtime Operations test specification
-=====================================================
+===========================================
+Tempest Network Scenario test specification
+===========================================
 
 .. toctree::
    :maxdepth: 2
@@ -12,7 +12,7 @@ Dynamic Network Runtime Operations test specification
 Scope
 =====
 
-The dynamic network runtime operations test area evaluates the ability of the
+The Tempest Network scenario test area evaluates the ability of the
 system under test to support dynamic network runtime operations through the
 life of a VNF (e.g. attach/detach, enable/disable, read stats).
 The tests in this test area will evaluate IPv4 network runtime operations
@@ -58,12 +58,13 @@ test case is able to run independently, i.e. irrelevant of the state created by
 a previous test. Specifically, every test performs clean-up operations which
 return the system to the same state as before the test.
 
-All these test cases are included in the test case dovetail.tempest.tc003 of
+All these test cases are included in the test case dovetail.tempest.network_scenario of
 OVP test suite.
 
 Test Descriptions
 =================
 
+----------------------
 API Used and Reference
 ----------------------
 
