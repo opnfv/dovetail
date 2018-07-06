@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da5c1566_26645a21",
+        "filename": "dovetail/run.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2018-07-06T07:54:04Z",
+      "side": 1,
+      "message": "This method gets the console argument of --deploy-scenario command option and the \u0027unknown\u0027 value in the env file  is replaced accordingly. I have already tested it. But, I will double check that this update is reflected properly on the Functest config [1].",
+      "parentUuid": "da5c1566_c690feee",
+      "range": {
+        "startLine": 206,
+        "startChar": 0,
+        "endLine": 209,
+        "endChar": 74
+      },
+      "revId": "350bee26dc6e1e3676e46f8b5ff9183751714e43",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da5c1566_e69382f8",
         "filename": "etc/conf/cmd_config.yml",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2018-07-06T07:27:02Z",
       "side": 1,
       "message": "better rename this to scenario",
+      "range": {
+        "startLine": 96,
+        "startChar": 6,
+        "endLine": 96,
+        "endChar": 10
+      },
+      "revId": "350bee26dc6e1e3676e46f8b5ff9183751714e43",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_46734ee9",
+        "filename": "etc/conf/cmd_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2018-07-06T07:54:04Z",
+      "side": 1,
+      "message": "Yes, you\u0027re right. I\u0027ve missed  this update!",
+      "parentUuid": "da5c1566_e69382f8",
       "range": {
         "startLine": 96,
         "startChar": 6,
