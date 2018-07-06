@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_c690feee",
+        "filename": "dovetail/run.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-06T07:27:02Z",
+      "side": 1,
+      "message": "Currently, the scenario name is being hardcoded in the Functest config [1]. I suppose this needs to be changed because it would otherwise overwrite your newly set scenario with its \"unknown\" default value. Can you check that please?\n\n[1] https://github.com/opnfv/dovetail/blob/master/etc/conf/functest_config.yml#L14",
+      "range": {
+        "startLine": 206,
+        "startChar": 0,
+        "endLine": 209,
+        "endChar": 74
+      },
+      "revId": "350bee26dc6e1e3676e46f8b5ff9183751714e43",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_e69382f8",
+        "filename": "etc/conf/cmd_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-06T07:27:02Z",
+      "side": 1,
+      "message": "better rename this to scenario",
+      "range": {
+        "startLine": 96,
+        "startChar": 6,
+        "endLine": 96,
+        "endChar": 10
+      },
+      "revId": "350bee26dc6e1e3676e46f8b5ff9183751714e43",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
