@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_86ff2634",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 805,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-06T07:18:46Z",
+      "side": 1,
+      "message": "I just realized that these actions are not taken by the test case. Please see the Yardstick documentation: https://github.com/opnfv/yardstick/blob/master/tests/opnfv/test_cases/opnfv_yardstick_tc090.yaml",
+      "range": {
+        "startLine": 804,
+        "startChar": 0,
+        "endLine": 805,
+        "endChar": 40
+      },
+      "revId": "bcbedf178188c58ad27dc7f12aae4d0d9ec78e07",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_c6f91e4f",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 808,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-06T07:18:46Z",
+      "side": 1,
+      "message": "can you list those: openstack image list, openstack router list, openstack stack list, volume list",
+      "range": {
+        "startLine": 807,
+        "startChar": 57,
+        "endLine": 808,
+        "endChar": 13
+      },
+      "revId": "bcbedf178188c58ad27dc7f12aae4d0d9ec78e07",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_26961af1",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 882,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-06T07:18:46Z",
+      "side": 1,
+      "message": "see comment above:\nhttps://github.com/opnfv/yardstick/blob/master/tests/opnfv/test_cases/opnfv_yardstick_tc025.yaml",
+      "range": {
+        "startLine": 881,
+        "startChar": 2,
+        "endLine": 882,
+        "endChar": 40
+      },
+      "revId": "bcbedf178188c58ad27dc7f12aae4d0d9ec78e07",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
