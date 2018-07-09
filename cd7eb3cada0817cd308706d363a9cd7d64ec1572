@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_4ced2dc3",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 776,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-09T12:08:25Z",
+      "side": 1,
+      "message": "process",
+      "range": {
+        "startLine": 776,
+        "startChar": 44,
+        "endLine": 776,
+        "endChar": 51
+      },
+      "revId": "cd7eb3cada0817cd308706d363a9cd7d64ec1572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_acd169fd",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 832,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-09T12:08:25Z",
+      "side": 1,
+      "message": "replace by: \nThe database service is up and running again. If the database service did not recover successfully by itself, the test explicitly restarts the database service.",
+      "range": {
+        "startLine": 830,
+        "startChar": 0,
+        "endLine": 832,
+        "endChar": 52
+      },
+      "revId": "cd7eb3cada0817cd308706d363a9cd7d64ec1572",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
