@@ -180,7 +180,7 @@ class DockerRunner(object):
         if not config_item:
             config_item = self._add_testcase_info(testcase)
         full_task = self._render(task_template, **config_item)
-        full_task_yaml = yaml.load(full_task)
+        full_task_yaml = yaml.safe_load(full_task)
         dt_cfg.dovetail_config.update(full_task_yaml)
         return dt_cfg.dovetail_config
 
