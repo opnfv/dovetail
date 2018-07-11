@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_bdb6b53b",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 628,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-11T12:28:08Z",
+      "side": 1,
+      "message": "Can you please add two prominent notes for users:\ni) if their system uses DPDK, they should run with --deploy-scenario os-nosdn-ovs-ha\nii) this is an experimental feature",
+      "range": {
+        "startLine": 624,
+        "startChar": 0,
+        "endLine": 628,
+        "endChar": 23
+      },
+      "revId": "36a5879ca7bf91ab77d0a8fc416c99a2df38187e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
