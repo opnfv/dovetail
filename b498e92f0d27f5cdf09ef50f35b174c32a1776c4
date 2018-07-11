@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_bd0075ab",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-11T13:46:02Z",
+      "side": 1,
+      "message": "this requires the DEPLOY_SCENARIO variable to be exported. If it is not set, because a user did not use the new command line option, it fails. Can you please add a check to only add the config_item if the environment variable is set.",
+      "range": {
+        "startLine": 154,
+        "startChar": 8,
+        "endLine": 154,
+        "endChar": 70
+      },
+      "revId": "b498e92f0d27f5cdf09ef50f35b174c32a1776c4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
