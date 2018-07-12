@@ -2,4 +2,5 @@
 onap.1.0.0:
   name: onap.1.0.0
   testcases_list:
-    - dovetail.lifecycle.tc001
+    optional:
+      - dovetail.lifecycle.tc001

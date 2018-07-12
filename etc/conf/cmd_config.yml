@@ -69,3 +69,13 @@ cli:
         flags:
           - '--deploy-scenario'
         help: 'Specify the DEPLOY_SCENARIO which will be used as input by each testcase respectively'
+      mandatory:
+        flags:
+          - '--mandatory'
+        is_flag: 'True'
+        help: 'Run all mandatory test cases.'
+      optional:
+        flags:
+          - '--optional'
+        is_flag: 'True'
+        help: 'Run all optional test cases.'
