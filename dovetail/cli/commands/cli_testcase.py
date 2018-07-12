@@ -24,39 +24,38 @@ class CliTestcase(object):
         dt_cfg.load_config_files(constants.CONF_PATH)
         Testsuite.load()
 
-    def list_testcase(self, testsuite):
+    def list_one_testsuite(self, testsuite):
+        testsuite_stream = Testsuite.get(testsuite)
+        if testsuite_stream:
+            mandatory = dt_utils.get_value_from_dict(
+                'testcases_list.mandatory', testsuite_stream)
+            optional = dt_utils.get_value_from_dict(
+                'testcases_list.optional', testsuite_stream)
+            if mandatory:
+                click.echo("- mandatory")
+                for testcase in mandatory:
+                    click.echo("    {}".format(testcase))
+            if optional:
+                click.echo("- optional")
+                for testcase in optional:
+                    click.echo("    {}".format(testcase))
+            if not (mandatory or optional):
+                click.echo("No testcase in testsuite {}".format(testsuite))
+        else:
+            click.echo("testsuite {} does not exist".format(testsuite))
+
+    def list_testsuites(self, testsuite):
         self.testsuite_load()
         if testsuite:
-            testsuite_stream = Testsuite.get(testsuite)
-            if testsuite_stream:
-                testcase_list = []
-                for value in testsuite_stream['testcases_list']:
-                    if value is not None:
-                        testcase_list.append(value)
-                testarea_list = []
-                for testcase in testcase_list:
-                    testarea = testcase.split('.')[1]
-                    if testarea not in testarea_list:
-                        testarea_list.append(testarea)
-                for testarea in testarea_list:
-                    click.echo("- %s" % testarea)
-                    for testcase in testcase_list:
-                        if testarea in testcase:
-                            click.echo("    %s" % testcase)
-            else:
-                click.echo("testsuite %s does not exist or not supported"
-                           % testsuite)
+            self.list_one_testsuite(testsuite)
         else:
             testsuite_json = Testsuite.get_all()
             if testsuite_json:
                 for key, value in testsuite_json.items():
-                    click.echo("- %s" % key)
-                    testsuite_stream = Testsuite.get(key)
-                    if testsuite_stream['testcases_list']:
-                        for testcase in testsuite_stream['testcases_list']:
-                            click.echo("    %s" % testcase)
-                    else:
-                        click.echo("No testcase in testsuite %s" % key)
+                    click.echo("--------------------------")
+                    click.echo("Test Suite {}".format(key))
+                    click.echo("--------------------------")
+                    self.list_one_testsuite(key)
             else:
                 click.echo("No testsuite defined yet in dovetail!!!")
 
