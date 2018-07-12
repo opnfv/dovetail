@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_3882b34f",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-12T07:52:32Z",
+      "side": 1,
+      "message": "can you please add a link to the Functest documentation for reference and credit.",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 10
+      },
+      "revId": "c9a5a2091873d1b05b1ca6a72255b3413012c8dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_f8879b5f",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-12T07:52:32Z",
+      "side": 1,
+      "message": "remove as we don\u0027t store results in the DB for Dovetail",
+      "range": {
+        "startLine": 135,
+        "startChar": 0,
+        "endLine": 136,
+        "endChar": 77
+      },
+      "revId": "c9a5a2091873d1b05b1ca6a72255b3413012c8dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_587de76d",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-12T07:52:32Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 142,
+        "startChar": 0,
+        "endLine": 142,
+        "endChar": 3
+      },
+      "revId": "c9a5a2091873d1b05b1ca6a72255b3413012c8dc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
