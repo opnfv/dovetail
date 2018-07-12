@@ -28,7 +28,7 @@ _testcase = CliTestcase()
              help='list the testsuite details')
 @click.argument('testsuite', type=click.STRING, required=False)
 def testcase_list(testsuite):
-    _testcase.list_testcase(testsuite)
+    _testcase.list_testsuites(testsuite)
 
 
 @cli.command('show',

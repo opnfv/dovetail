@@ -4,6 +4,7 @@
 healthcheck:
   name: healthcheck
   testcases_list:
-    - dovetail.healthcheck.tc001
-    - dovetail.healthcheck.tc002
-    - dovetail.healthcheck.tc003
+    optional:
+      - dovetail.healthcheck.snaps_health_check
+      - dovetail.healthcheck.connection_check
+      - dovetail.healthcheck.api_check
