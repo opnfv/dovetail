@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_2cb6f4d9",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-12T16:35:44Z",
+      "side": 1,
+      "message": "there is a corner case in which a user specifies both --mandatory and --optional, but only the mandatory tests get run because of the early return statement",
+      "range": {
+        "startLine": 282,
+        "startChar": 8,
+        "endLine": 299,
+        "endChar": 56
+      },
+      "revId": "53b6517e20db4341a9de53adacd515b0097606cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
