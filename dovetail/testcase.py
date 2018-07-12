@@ -253,34 +253,57 @@ class Testcase(object):
         if not testarea:
             return True, area_full
 
-        mandatory_list = dt_cfg.dovetail_config['mandatory']
-        optional_list = dt_cfg.dovetail_config['optional']
         for area in testarea:
             if area not in dt_cfg.dovetail_config['testarea_supported']:
                 return False, None
             if area == 'full':
                 return True, area_full
-            if area == 'mandatory':
-                for mandatory_area in mandatory_list:
-                    area_no_duplicate.append(mandatory_area)
-                continue
-            if area == 'optional':
-                for optional_area in optional_list:
-                    area_no_duplicate.append(optional_area)
-                continue
             area_no_duplicate.append(area)
         area_no_duplicate = list(set(area_no_duplicate))
         return True, area_no_duplicate
 
+    @staticmethod
+    def check_testcase_area(testcase, testarea):
+        if not testcase:
+            return False
+        if testarea == 'full' or testarea in testcase:
+            return True
+        else:
+            return False
+
     @classmethod
     def get_testcase_list(cls, testsuite, testarea):
         testcase_list = []
+        selected_tests = []
         testcases = dt_utils.get_value_from_dict('testcases_list', testsuite)
+        mandatory = dt_utils.get_value_from_dict('mandatory', testcases)
+        optional = dt_utils.get_value_from_dict('optional', testcases)
         if not testcases:
             return testcase_list
-        for value in testcases:
+        if dt_cfg.dovetail_config['mandatory']:
+            if not mandatory:
+                cls.logger.error("There is no mandatory test case in "
+                                 "test suite {}".format(testsuite['name']))
+            else:
+                selected_tests += mandatory
+        if dt_cfg.dovetail_config['optional']:
+            if not optional:
+                cls.logger.error("There is no optional test case in "
+                                 "test suite {}".format(testsuite['name']))
+            else:
+                selected_tests += optional
+        if (not dt_cfg.dovetail_config['mandatory'] and
+                not dt_cfg.dovetail_config['optional']):
+            if mandatory:
+                selected_tests += mandatory
+            if optional:
+                selected_tests += optional
+
+        if not selected_tests:
+            return None
+        for value in selected_tests:
             for area in testarea:
-                if value is not None and (area == 'full' or area in value):
+                if cls.check_testcase_area(value, area):
                     testcase_list.append(value)
                     break
         return testcase_list

@@ -29,7 +29,6 @@ trusty_image: 'trusty-server-cloudimg-amd64-disk1.img'
 
 # testsuite supported, should adjust accordingly
 testsuite_supported:
-  - compliance_set
   - proposed_tests
   - debug
   - healthcheck
@@ -90,13 +89,3 @@ test_project:
   - 'functest'
   - 'bottlenecks'
   - 'vnftest'
-
-mandatory:
-  - osinterop
-  - ha
-  - vping
-
-optional:
-  - ipv6
-  - tempest
-  - sdnvpn

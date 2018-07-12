@@ -2,33 +2,43 @@
 ovp.next:
   name: ovp.next
   testcases_list:
-  # mandatory test cases
-    # osinterop
-    - dovetail.tempest.osinterop
-    # vping
-    - dovetail.vping.userdata
-    - dovetail.vping.ssh
-    # HA
-    - dovetail.ha.nova_api
-    - dovetail.ha.neutron_server
-    - dovetail.ha.keystone
-    - dovetail.ha.glance_api
-    - dovetail.ha.cinder_api
-    - dovetail.ha.cpu_load
-    - dovetail.ha.disk_load
-    - dovetail.ha.haproxy
-  # optional test cases
-    # ipv6
-    - dovetail.tempest.ipv6_api
-    - dovetail.tempest.ipv6_scenario
-    # tempest
-    # some of the previous tempest test suites tc001 - tc005 have been merged
-    # with the smoke tests executed as part of the proposed_test test suite
-    - dovetail.tempest.multi_node_scheduling
-    - dovetail.tempest.network_security
-    - dovetail.tempest.vm_lifecycle
-    # sdnvpn
-    - dovetail.sdnvpn.subnet_connectivity
-    - dovetail.sdnvpn.tenant_separation
-    - dovetail.sdnvpn.router_association
-    - dovetail.sdnvpn.router_association_floating_ip
+    mandatory:
+      - dovetail.vping.userdata
+      - dovetail.vping.ssh
+      - dovetail.tempest.osinterop
+      - dovetail.tempest.compute
+      - dovetail.tempest.identity_v2
+      - dovetail.tempest.identity_v3
+      - dovetail.tempest.image
+      - dovetail.tempest.network_api
+      - dovetail.tempest.volume
+      - dovetail.tempest.neutron_trunk_ports
+      - dovetail.tempest.ipv6_api
+      - dovetail.security.patrole
+      - dovetail.ha.nova_api
+      - dovetail.ha.neutron_server
+      - dovetail.ha.keystone
+      - dovetail.ha.glance_api
+      - dovetail.ha.cinder_api
+      - dovetail.ha.cpu_load
+      - dovetail.ha.disk_load
+      - dovetail.ha.haproxy
+      - dovetail.ha.rabbitmq
+      - dovetail.ha.database
+      - dovetail.stress.ping
+    optional:
+      - dovetail.tempest.ipv6_scenario
+      - dovetail.tempest.multi_node_scheduling
+      - dovetail.tempest.network_security
+      - dovetail.tempest.vm_lifecycle
+      - dovetail.tempest.network_scenario
+      - dovetail.tempest.bgpvpn
+      - dovetail.sdnvpn.subnet_connectivity
+      - dovetail.sdnvpn.tenant_separation
+      - dovetail.sdnvpn.router_association
+      - dovetail.sdnvpn.router_association_floating_ip
+      - dovetail.ha.neutron_l3_agent
+      - dovetail.ha.controller_restart
+      - dovetail.vnf.vims
+      - dovetail.vnf.vepc
+      - dovetail.snaps.smoke

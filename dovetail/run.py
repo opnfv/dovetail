@@ -198,9 +198,11 @@ def parse_cli(logger=None, **kwargs):
     configs = filter_config(kwargs, logger)
     if configs is not None:
         dt_cfg.update_config(configs)
-    dt_cfg.dovetail_config['offline'] = True if kwargs['offline'] else False
-    dt_cfg.dovetail_config['noclean'] = True if kwargs['no_clean'] else False
-    dt_cfg.dovetail_config['stop'] = True if kwargs['stop'] else False
+    dt_cfg.dovetail_config['offline'] = kwargs['offline']
+    dt_cfg.dovetail_config['noclean'] = kwargs['no_clean']
+    dt_cfg.dovetail_config['stop'] = kwargs['stop']
+    dt_cfg.dovetail_config['mandatory'] = kwargs['mandatory']
+    dt_cfg.dovetail_config['optional'] = kwargs['optional']
     if kwargs['no_api_validation']:
         dt_cfg.dovetail_config['no_api_validation'] = True
         logger.warning('Strict API response validation DISABLED.')
@@ -215,6 +217,7 @@ def check_testcase_list(testcase_list, logger=None):
                 logger.error('Test case {} is not defined.'.format(tc))
                 return None
         return testcase_list
+    logger.error("There is no test case to be executed.")
     return None
 
 
