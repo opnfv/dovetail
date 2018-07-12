@@ -29,7 +29,6 @@ trusty_image: 'trusty-server-cloudimg-amd64-disk1.img'
 
 # testsuite supported, should adjust accordingly
 testsuite_supported:
-  - compliance_set
   - proposed_tests
   - debug
   - healthcheck
@@ -98,13 +97,3 @@ validate_input:
   valid_yardstick_tags:
     - 'latest'
     - 'opnfv-5.1.0'
-
-mandatory:
-  - osinterop
-  - ha
-  - vping
-
-optional:
-  - ipv6
-  - tempest
-  - sdnvpn

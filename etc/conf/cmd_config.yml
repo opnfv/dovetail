@@ -93,3 +93,13 @@ cli:
           - '-n'
         is_flag: 'True'
         help: 'Keep all Containers created for debuging.'
+      mandatory:
+        flags:
+          - '--mandatory'
+        is_flag: 'True'
+        help: 'Run all mandatory test cases.'
+      optional:
+        flags:
+          - '--optional'
+        is_flag: 'True'
+        help: 'Run all optional test cases.'
