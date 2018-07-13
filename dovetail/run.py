@@ -75,28 +75,6 @@ def run_test(testcase_list, logger):
     return duration
 
 
-def validate_input(input_dict, check_dict, logger):
-    func_tag = input_dict['functest_tag']
-    yard_tag = input_dict['yardstick_tag']
-    # bott_tag = input_dict['bott_tag']
-    valid_functest_tags = check_dict['valid_functest_tags']
-    valid_yardstick_tags = check_dict['valid_yardstick_tags']
-    if func_tag is not None and func_tag not in valid_functest_tags:
-        logger.error("The input option 'functest_tag' can't be '{}', "
-                     "valid values are {}.".format(func_tag,
-                                                   valid_functest_tags))
-        raise SystemExit(EXIT_RUN_FAILED)
-    if yard_tag is not None and yard_tag not in valid_yardstick_tags:
-        logger.error("The input option 'yardstick_tag' can't be '{}', "
-                     "valid values are {}.".format(yard_tag,
-                                                   valid_yardstick_tags))
-        raise SystemExit(EXIT_RUN_FAILED)
-    # if bott_tag is not None and bott_tag not in valid_tag:
-    #     logger.error("The input option 'bott_tag' can't be {}, "
-    #                  "valid values are {}.".format(bott_tag, valid_tag))
-    #     raise SystemExit(1)
-
-
 def filter_config(input_dict, logger):
     cli_dict = dt_cfg.dovetail_config['cli']
     configs = {}
@@ -212,7 +190,6 @@ def check_hosts_file(logger):
 
 
 def parse_cli(logger=None, **kwargs):
-    validate_input(kwargs, dt_cfg.dovetail_config['validate_input'], logger)
     configs = filter_config(kwargs, logger)
     if configs is not None:
         dt_cfg.update_config(configs)

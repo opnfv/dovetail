@@ -91,14 +91,6 @@ test_project:
   - 'bottlenecks'
   - 'vnftest'
 
-validate_input:
-  valid_functest_tags:
-    - 'latest'
-    - 'euphrates'
-  valid_yardstick_tags:
-    - 'latest'
-    - 'opnfv-5.1.0'
-
 mandatory:
   - osinterop
   - ha
