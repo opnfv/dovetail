@@ -37,3 +37,4 @@ specification documents.
   ./tempest_multi_node_scheduling/index.rst
   ./vpn/index.rst
   ./vnf/index.rst
+  ./stress/index.rst
