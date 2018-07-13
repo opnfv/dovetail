@@ -22,6 +22,30 @@
       "revId": "53b6517e20db4341a9de53adacd515b0097606cc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_6c510c62",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-13T01:15:27Z",
+      "side": 1,
+      "message": "Yes. I am considering that does it allow to set both --mandatory and --optional? Here I assume that only one is given.",
+      "parentUuid": "da5c1566_2cb6f4d9",
+      "range": {
+        "startLine": 282,
+        "startChar": 8,
+        "endLine": 299,
+        "endChar": 56
+      },
+      "revId": "53b6517e20db4341a9de53adacd515b0097606cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
