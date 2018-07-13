@@ -46,6 +46,30 @@
       "revId": "53b6517e20db4341a9de53adacd515b0097606cc",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_cf1aca16",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-13T12:53:16Z",
+      "side": 1,
+      "message": "how about this. It supports both flags and removes two for loops:\n\n        testcase_list \u003d []\n        selected_tests \u003d []\n        testcases \u003d dt_utils.get_value_from_dict(\u0027testcases_list\u0027, testsuite)\n        mandatory \u003d dt_utils.get_value_from_dict(\u0027mandatory\u0027, testcases)\n        optional \u003d dt_utils.get_value_from_dict(\u0027optional\u0027, testcases)\n        if not testcases:\n            return testcase_list\n        if dt_cfg.dovetail_config[\u0027mandatory\u0027]:\n            selected_tests \u003d mandatory\n        if dt_cfg.dovetail_config[\u0027optional\u0027]:\n            selected_tests +\u003d optional\n        if (not dt_cfg.dovetail_config[\u0027mandatory\u0027] and\n                not dt_cfg.dovetail_config[\u0027optional\u0027]):\n            selected_tests \u003d mandatory + optional\n\n        for value in selected_tests:\n            for area in testarea:\n                if cls.check_testcase_area(value, area):\n                    testcase_list.append(value)\n                    break\n        return testcase_list",
+      "parentUuid": "da5c1566_6c510c62",
+      "range": {
+        "startLine": 282,
+        "startChar": 8,
+        "endLine": 299,
+        "endChar": 56
+      },
+      "revId": "53b6517e20db4341a9de53adacd515b0097606cc",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
