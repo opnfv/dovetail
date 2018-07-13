@@ -15,34 +15,6 @@ cli:
 
   options:
     config:
-      yard_tag:
-        flags:
-          - '--yardstick_tag'
-          - '-y'
-        path:
-          - 'yardstick/docker_tag'
-        help: 'Overwrite tag for yardstick docker container (e.g. opnfv-5.1.0)'
-      func_tag:
-        flags:
-          - '--functest_tag'
-          - '-f'
-        path:
-          - 'functest/docker_tag'
-        help: 'Overwrite tag for functest docker container (e.g. euphrates)'
-      bott_tag:
-        flags:
-          - '--bottlenecks_tag'
-          - '-b'
-        path:
-          - 'bottlenecks/docker_tag'
-        help: 'Overwrite tag for bottlenecks docker container (e.g. stable)'
-      vnf_tag:
-        flags:
-          - '--vnf_tag'
-          - '-v'
-        path:
-          - 'vnftest/docker_tag'
-        help: 'Overwrite tag for vnftest docker container (e.g. beijing.0)'
     control:
       testsuite:
         flags:
