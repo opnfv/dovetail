@@ -46,6 +46,30 @@
       "revId": "62b82af16d2477305dc5c5a8c485f4d97de2d594",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_97d784bf",
+        "filename": "docs/testing/user/testspecification/stress/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 833
+      },
+      "writtenOn": "2018-07-16T08:12:40Z",
+      "side": 1,
+      "message": "Hi Georg,the VM pairs created during the test will be removed at the end of each subtest. Regarding deleting the test tools containers, we leave it as an optional operation due to the need of debugging and test results graphing.\nIf there needs an operation of deleting containers for Dovetail, it could be easily adjusted.",
+      "parentUuid": "9a561d44_97502460",
+      "range": {
+        "startLine": 159,
+        "startChar": 0,
+        "endLine": 161,
+        "endChar": 63
+      },
+      "revId": "62b82af16d2477305dc5c5a8c485f4d97de2d594",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
