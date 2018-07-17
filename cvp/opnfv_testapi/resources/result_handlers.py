@@ -254,15 +254,29 @@ class ResultsUploadHandler(ResultsCLHandler):
             msg = 'Uploaded results must contain at least one passing test.'
             self.finish_request({'code': 403, 'msg': msg})
             return
-        results = results.split('\n')
+
         result_ids = []
-        for result in results:
-            if result == '':
-                continue
-            self.json_args = json.loads(result).copy()
+        try:
+            # OVP 2018.08 results file structure: entire result file is a
+            # correctly formatted json file
+            data = json.loads(results).copy()
+            self.json_args = data
             build_tag = self.json_args['build_tag']
             _id = yield self._inner_create()
             result_ids.append(str(_id))
+
+        except ValueException:
+            # OVP 2018.01 results file structure: one test result json struct
+            # per line
+            results = results.split('\n')
+            for result in results:
+                if result == '':
+                    continue
+                self.json_args = json.loads(result).copy()
+                build_tag = self.json_args['build_tag']
+                _id = yield self._inner_create()
+                result_ids.append(str(_id))
+
         test_id = build_tag[13:49]
         log_path = '/home/testapi/logs/%s' % (test_id)
         tar_in.extractall(log_path)

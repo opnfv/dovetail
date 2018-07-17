@@ -53,6 +53,7 @@
         ctrl.testId = $stateParams.testID;
         ctrl.innerId = $stateParams.innerID;
         ctrl.validation = '';
+        ctrl.version = ''
 
         /** The HTML template that all accordian groups will use. */
         ctrl.detailsTemplate = 'testapi-ui/components/results-report/partials/' +
@@ -104,7 +105,7 @@
 
         $scope.$watch('load_finish', function(){
             if($scope.load_finish == true){
-                var case_url = 'testapi-ui/components/results-report/data/testcases.json'
+                var case_url = 'testapi-ui/components/results-report/data/' + ctrl.version + '/testcases.json'
                 $http.get(case_url).then(function(response){
                     ctrl.data = response.data;
 
@@ -160,11 +161,34 @@
             var test_url = testapiApiUrl + '/tests/' + ctrl.innerId;
             $http.get(test_url).then(function(test_resp){
                ctrl.validation = test_resp.data.validation;
+
+               // OVP 2018.01 results are stored as individual result sets per test case:
+               // Looping over all individual test cases
                angular.forEach(test_resp.data.results, function(result, index){
                    var result_url = testapiApiUrl + '/results/' + result;
                    $http.get(result_url).then(function(result_resp){
-                       var sub_case_list = get_sub_case_list(result_resp.data);
-                       extend(sub_case_list);
+
+                       ctrl.version = result_resp.data.version
+                       if(ctrl.version == 'master') {
+                            // there was no result format versioning in the first release of OVP but
+                            // instead the version was set to 'master'. We are using this as an indicator
+                            // that a set of results were created based on the 2018.01 release
+                            ctrl.version = '2018.01'
+                       }
+
+                       if(ctrl.version == '2018.01') {
+                           var sub_case_list = get_sub_case_list_2018_01(result_resp.data);
+                           extend(sub_case_list);
+                       }
+                       else if(ctrl.version == '2018.08') {
+                           // OVP 2018.08 and later results store all results in a single json structure:
+                           // Looping over all test cases of this individual test run
+                           angular.forEach(result_resp.data.testcases_list, function(testcase, index){
+                               var sub_case_list = get_sub_case_list_2018_08(testcase)
+                               extend(sub_case_list)
+                           });
+                       }
+
                        if(index == test_resp.data.results.length - 1){
                            $scope.load_finish = true;
                        }
@@ -177,15 +201,15 @@
             });
         }
 
-        function get_sub_case_list(result) {
+        function get_sub_case_list_2018_01(result) {
             if(result.project_name == 'yardstick'){
-                return yardstickPass(result);
+                return yardstickPass_2018_01(result);
             }else{
-                return functestPass(result);
+                return functestPass_2018_01(result);
             }
         }
 
-        function yardstickPass(result) {
+        function yardstickPass_2018_01(result) {
             var case_list = [];
             angular.forEach(result.details.results, function(ele){
                 if(ele.benchmark){
@@ -198,7 +222,7 @@
             return case_list;
         }
 
-        function functestPass(result){
+        function functestPass_2018_01(result){
             var case_list = [];
             if(result.case_name == 'refstack_defcore'){
                 angular.forEach(result.details.success, function(ele){
@@ -216,6 +240,21 @@
                 if(result.criteria == 'PASS'){
                     case_list.push(result.case_name);
                 }
+            }
+            return case_list;
+        }
+
+        function get_sub_case_list_2018_08(result) {
+            var case_list = [];
+            if(result.sub_testcase.length == 0 && result.result == "PASS") {
+                case_list.push(result.name);
+            }
+            else {
+                angular.forEach(result.sub_testcase, function(subtest, index) {
+                    if(subtext.result == "PASS") {
+                        case_list.push(subtest.name)
+                    }
+                });
             }
             return case_list;
         }
