@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "9a561d44_3d4db773",
+        "filename": "docs/testing/user/testspecification/stress/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 6933
+      },
+      "writtenOn": "2018-07-17T06:25:47Z",
+      "side": 1,
+      "message": "These ports have been mixed,\nElastic: 9200\nKibana: 5601\nLogStash: 5044\nYardstick: 5000(unexpose)\nfor reference yardstick in[1],others in [2]\n\n[1]https://github.com/opnfv/yardstick/blob/master/docker/Dockerfile\n[2]https://github.com/spujadas/elk-docker/blob/master/docs/index.md",
+      "range": {
+        "startLine": 90,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 22
+      },
+      "revId": "62b82af16d2477305dc5c5a8c485f4d97de2d594",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_d7ee1cb4",
         "filename": "docs/testing/user/testspecification/stress/index.rst",
         "patchSetId": 2
