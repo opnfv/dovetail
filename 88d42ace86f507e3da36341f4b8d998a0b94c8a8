@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_3d82d752",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2018-07-17T08:23:37Z",
+      "side": 1,
+      "message": "if dt_cfg.dovetail_config[\u0027mandatory\u0027] and mandatory is not None:\n\nThere are cases that the testsuite has only optional testcases\n\nThink the option if there are not mandatory testcases and the parameter mandatory is active then an appropriate message to be appeared.",
+      "range": {
+        "startLine": 283,
+        "startChar": 8,
+        "endLine": 283,
+        "endChar": 47
+      },
+      "revId": "88d42ace86f507e3da36341f4b8d998a0b94c8a8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_1d871363",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2018-07-17T08:23:37Z",
+      "side": 1,
+      "message": "if dt_cfg.dovetail_config[\u0027optional\u0027] and optional is not None:\n\nFor the case that a testsuite has no testcases inside (neither mandatory nor optional), nothing will be executed in any case. This code could be added so a possible error to be avoided - Optional update.\n\nThink the option if there are not optional testcases and the parameter optional is active then an appropriate message to be appeared.",
+      "range": {
+        "startLine": 285,
+        "startChar": 7,
+        "endLine": 285,
+        "endChar": 46
+      },
+      "revId": "88d42ace86f507e3da36341f4b8d998a0b94c8a8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_fd8fbf73",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2018-07-17T08:23:37Z",
+      "side": 1,
+      "message": "For the case that you choose a testsuite without any parameter (neither optional nor mandatory) and this testsuite has not any mandatory testcase in its list (e.g. healthcheck), an error is appeared.\n\nPlease try the following code instead of this line:\n\nif mandatory is None:\n    selected_tests \u003d optional\nelif optional is None:\n    selected_tests \u003d mandatory\nelse:\n    selected_tests \u003d mandatory + optional",
+      "range": {
+        "startLine": 289,
+        "startChar": 12,
+        "endLine": 289,
+        "endChar": 49
+      },
+      "revId": "88d42ace86f507e3da36341f4b8d998a0b94c8a8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
