@@ -1,0 +1,9 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Panagiotis Karalis <pkaralis@intracom-telecom.com>
+Code-Review+1: Georg Kunz <georg.kunz@ericsson.com>
+Code-Review+2: Dan Xu <xudan16@huawei.com>
+Submitted-by: Dan Xu <xudan16@huawei.com>
+Submitted-at: Wed, 18 Jul 2018 01:31:20 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/59745
+Project: dovetail
+Branch: refs/heads/master
