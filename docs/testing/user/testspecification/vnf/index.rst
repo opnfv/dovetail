@@ -23,9 +23,13 @@ References
 
 This test area references the following specifications and guides:
 
-- Functest repo for detailed description of the below testcases
+- Functest repo for detailed description of the vEPC testcase
 
-  - https://github.com/opnfv/functest/blob/master/docs/testing/user/userguide/test_details.rst
+  - https://github.com/opnfv/functest/blob/master/docs/testing/user/userguide/test_details.rst#juju_epc
+
+- Functest repo for detailed description of the vIMS testcase
+
+  - https://github.com/opnfv/functest/blob/master/docs/testing/user/userguide/test_details.rst#cloudify_ims
 
 - 3GPP LTE
 
@@ -39,6 +43,10 @@ This test area references the following specifications and guides:
 
   - https://www.rebaca.com/abot-test-orchestration-tool/
 
+- Cloudify clearwater: opnfv-cloudify-clearwater [1]
+
+  - https://github.com/Orange-OpenSource/opnfv-cloudify-clearwater
+
 
 Definitions and abbreviations
 =============================
@@ -49,6 +57,7 @@ area
 - 3GPP - 3rd Generation Partnership Project
 - EPC - Evolved Packet Core
 - ETSI - European Telecommunications Standards Institute
+- IMS - IP Multimedia Core Network Subsystem
 - LTE - Long Term Evolution
 - NFV - Network functions virtualization
 - OAI - Open Air Interface
@@ -128,7 +137,7 @@ Test execution
 * Test action 3: Execution of ABot feature files triggered by Juju actions.
   This executes a suite of LTE signalling tests on the OAI EPC.
 * Test action 4: ABot test results are parsed accordingly.
-* Test action 5: The deployed VMS are deleted.
+* Test action 5: The deployed VMs are deleted.
 
 
 Pass / fail criteria
@@ -147,3 +156,74 @@ Post conditions
 ---------------
 
 The clean-up operations are run.
+
+----------------------------------------------------------------
+Test Case 2 - vIMS
+----------------------------------------------------------------
+
+Short name
+----------
+
+dovetail.vnf.vims
+
+Use case specification
+----------------------
+
+The IP Multimedia Subsystem or IP Multimedia Core Network Subsystem (IMS) is
+an architectural framework for delivering IP multimedia services.
+
+vIMS test case is integrated to demonstrate the capability to deploy a
+relatively complex NFV scenario on top of the OPNFV infrastructure.
+
+Example of a real VNF deployment to show the NFV capabilities of the platform.
+The IP Multimedia Subsytem is a typical Telco test case, referenced by ETSI.
+It provides a fully functional VoIP System.
+
+Test preconditions
+------------------
+
+Large number of compute resources are required for this testcase.
+
+ - https://github.com/opnfv/functest/blob/706fa77f3f1a88e80a7f5c0599850f39ccf6f854/functest/opnfv_tests/vnf/ims/cloudify_ims.yaml#L26-L28
+
+Basic test flow execution description and pass/fail criteria
+------------------------------------------------------------
+
+Methodology for verifying connectivity
+''''''''''''''''''''''''''''''''''''''
+
+vIMS has been integrated in Functest to demonstrate the capability to deploy
+a relatively complex NFV scenario on the OPNFV platform. The deployment of a
+complete functional VNF allows the test of most of the essential functions
+needed for a NFV platform.
+
+
+Test execution
+''''''''''''''
+* Test action 1: Deploy a VNF orchestrator (Cloudify).
+* Test action 2: Deploy a Clearwater vIMS (IP Multimedia Subsystem) VNF from
+  this orchestrator based on a TOSCA blueprint defined in repository of
+  opnfv-cloudify-clearwater [1].
+* Test action 3: Run suite of signaling tests on top of this VNF
+* Test action 4: Collect test results.
+* Test action 5: The deployed VMs are deleted.
+
+
+Pass / fail criteria
+''''''''''''''''''''
+
+The VNF orchestrator (Cloudify) should be deployed successfully.
+
+The Clearwater vIMS (IP Multimedia Subsystem) VNF from this orchestrator
+should be deployed successfully.
+
+The suite of signaling tests on top of vIMS should be run successfully.
+
+The test scenarios on the NFV platform should be executed successfully following
+the ETSI standards accordingly.
+
+
+Post conditions
+---------------
+
+All resources created during the test run have been cleaned-up
