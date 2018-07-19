@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_ac36b7e5",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-19T21:21:03Z",
+      "side": 1,
+      "message": "Although it is the basically the same information, can you please point to the official OPNFV documentation:\nhttps://docs.opnfv.org/en/stable-fraser/submodules/functest/docs/testing/user/userguide/test_details.html\n\nThis is the rendered version of the document you are linking here.",
+      "range": {
+        "startLine": 28,
+        "startChar": 4,
+        "endLine": 28,
+        "endChar": 94
+      },
+      "revId": "11dc2fbe25af86154fbdde714bfffe52e64169ec",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_2c52a713",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-19T21:21:03Z",
+      "side": 1,
+      "message": "Nitpicking: So, the condition after the clean-up has been run is that \"all resources created during the test run have been cleaned-up\"",
+      "range": {
+        "startLine": 221,
+        "startChar": 0,
+        "endLine": 221,
+        "endChar": 32
+      },
+      "revId": "11dc2fbe25af86154fbdde714bfffe52e64169ec",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
