@@ -39,6 +39,10 @@ This test area references the following specifications and guides:
 
   - https://www.rebaca.com/abot-test-orchestration-tool/
 
+- Clearwater blueprint: openstack-blueprint.yaml [1]
+
+  - https://github.com/Orange-OpenSource/opnfv-cloudify-clearwater/blob/master/openstack-blueprint.yaml
+
 
 Definitions and abbreviations
 =============================
@@ -49,6 +53,7 @@ area
 - 3GPP - 3rd Generation Partnership Project
 - EPC - Evolved Packet Core
 - ETSI - European Telecommunications Standards Institute
+- IMS - IP Multimedia Core Network Subsystem
 - LTE - Long Term Evolution
 - NFV - Network functions virtualization
 - OAI - Open Air Interface
@@ -128,7 +133,7 @@ Test execution
 * Test action 3: Execution of ABot feature files triggered by Juju actions.
   This executes a suite of LTE signalling tests on the OAI EPC.
 * Test action 4: ABot test results are parsed accordingly.
-* Test action 5: The deployed VMS are deleted.
+* Test action 5: The deployed VMs are deleted.
 
 
 Pass / fail criteria
@@ -141,6 +146,73 @@ scenarios to be defined in high-level DSL
 
 VMs which are act as VNFs (including the VNF that is the SUT for test case) are
 following the 3GPP technical specifications accordingly.
+
+
+Post conditions
+---------------
+
+The clean-up operations are run.
+
+----------------------------------------------------------------
+Test Case 2 - vIMS
+----------------------------------------------------------------
+
+Short name
+----------
+
+dovetail.vnf.vims
+
+Use case specification
+----------------------
+
+The IP Multimedia Subsystem or IP Multimedia Core Network Subsystem (IMS) is
+an architectural framework for delivering IP multimedia services.
+
+vIMS test case is integrated to demonstrate the capability to deploy a
+relatively complex NFV scenario on top of the OPNFV infrastructure.
+
+Example of a real VNF deployment to show the NFV capabilities of the platform.
+The IP Multimedia Subsytem is a typical Telco test case, referenced by ETSI.
+It provides a fully functional VoIP System.
+
+Test preconditions
+------------------
+
+At least one compute node is available. No further pre-configuration needed.
+
+Basic test flow execution description and pass/fail criteria
+------------------------------------------------------------
+
+Methodology for verifying connectivity
+''''''''''''''''''''''''''''''''''''''
+
+vIMS has been integrated in Functest to demonstrate the capability to deploy
+a relatively complex NFV scenario on the OPNFV platform. The deployment of a
+complete functional VNF allows the test of most of the essential functions
+needed for a NFV platform.
+
+
+Test execution
+''''''''''''''
+* Test action 1: Deploy a VNF orchestrator (Cloudify).
+* Test action 2: Deploy a Clearwater vIMS (IP Multimedia Subsystem) VNF from
+  this orchestrator based on a TOSCA blueprint defined in repository of
+  opnfv-cloudify-clearwater [1].
+* Test action 3: Run suite of signaling tests on top of this VNF
+* Test action 4: Collect test results.
+* Test action 5: The deployed VMs are deleted.
+
+
+Pass / fail criteria
+''''''''''''''''''''
+
+The VNF orchestrator (Cloudify) should be deployed successfully.
+
+The Clearwater vIMS (IP Multimedia Subsystem) VNF from this orchestrator
+should be deployed successfully.
+
+The test scenarios on the NFV platform should be executed successfully following
+the ETSI standards accordingly.
 
 
 Post conditions
