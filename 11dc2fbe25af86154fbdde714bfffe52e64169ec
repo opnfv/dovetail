@@ -25,6 +25,92 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_ccdccb77",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 6933
+      },
+      "writtenOn": "2018-07-20T03:41:35Z",
+      "side": 1,
+      "message": "Ithink this point to github \u0027opnfv-cloudify-clearwater\u0027[1]is better , if so reader can have a better understand of clearwater and cloudify. Also would you mind change this tittle to \"Cloudify clearwater\"\n\n[1]https://github.com/Orange-OpenSource/opnfv-cloudify-clearwater",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 103
+      },
+      "revId": "11dc2fbe25af86154fbdde714bfffe52e64169ec",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_2cd58743",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 6933
+      },
+      "writtenOn": "2018-07-20T03:41:35Z",
+      "side": 1,
+      "message": "This should add the required images , such as\nubuntu-14.04-server-cloudimg-amd64-disk1.img\ncloudify-manager-premium-4.0.1.qcow2\n\nAlso im my opinion, due to the vIMS need a large number of compute resources, should we add the requirment clearly[1]?\n\n[1]https://github.com/opnfv/functest/blob/706fa77f3f1a88e80a7f5c0599850f39ccf6f854/functest/opnfv_tests/vnf/ims/cloudify_ims.yaml#L26-L28",
+      "range": {
+        "startLine": 181,
+        "startChar": 0,
+        "endLine": 181,
+        "endChar": 76
+      },
+      "revId": "11dc2fbe25af86154fbdde714bfffe52e64169ec",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_ec51cfd9",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 6933
+      },
+      "writtenOn": "2018-07-20T03:41:35Z",
+      "side": 1,
+      "message": "@Georg Is this tittle  consistent with the bellow describe? I am confused of how the \"verifying connectivity\" is related with the bellow description.",
+      "range": {
+        "startLine": 186,
+        "startChar": 0,
+        "endLine": 186,
+        "endChar": 38
+      },
+      "revId": "11dc2fbe25af86154fbdde714bfffe52e64169ec",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_acc0777d",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 6933
+      },
+      "writtenOn": "2018-07-20T03:41:35Z",
+      "side": 1,
+      "message": "Is there should add \"The suite of signaling tests on top of vIMS should be run successfully.\" ?",
+      "revId": "11dc2fbe25af86154fbdde714bfffe52e64169ec",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_2c52a713",
         "filename": "docs/testing/user/testspecification/vnf/index.rst",
         "patchSetId": 1
