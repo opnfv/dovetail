@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_6c881fe8",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-20T08:55:50Z",
+      "side": 1,
+      "message": "I agree",
+      "parentUuid": "9a561d44_ccdccb77",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 103
+      },
+      "revId": "11dc2fbe25af86154fbdde714bfffe52e64169ec",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_2cd58743",
         "filename": "docs/testing/user/testspecification/vnf/index.rst",
         "patchSetId": 1
@@ -95,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_ec454fb4",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-20T08:55:50Z",
+      "side": 1,
+      "message": "Louie has a good point here. I wanted to avoid adding specific versions of images to each and every test cases description because they are likely to change across releases and hence get easily outdated. It does make sense however to mention that \"all images need to be in place according to the user guide \u003clink\u003e\". We need to keep the user guide up-to-date anyway, but that\u0027s just one document instead of many different once.",
+      "parentUuid": "9a561d44_ccf7ab8b",
+      "range": {
+        "startLine": 181,
+        "startChar": 0,
+        "endLine": 181,
+        "endChar": 76
+      },
+      "revId": "11dc2fbe25af86154fbdde714bfffe52e64169ec",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_ec51cfd9",
         "filename": "docs/testing/user/testspecification/vnf/index.rst",
         "patchSetId": 1
@@ -118,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_2c1747a5",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-20T08:55:50Z",
+      "side": 1,
+      "message": "True. This heading was used in other test case descriptions in order to explain that ICMP pings are used to verify the connectivity between two VMs. In case of this description here, we should remove the heading and leave the  remaining text as introductory text for this section.",
+      "parentUuid": "9a561d44_ec51cfd9",
+      "range": {
+        "startLine": 186,
+        "startChar": 0,
+        "endLine": 186,
+        "endChar": 38
+      },
+      "revId": "11dc2fbe25af86154fbdde714bfffe52e64169ec",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_acc0777d",
         "filename": "docs/testing/user/testspecification/vnf/index.rst",
         "patchSetId": 1
@@ -129,6 +201,24 @@
       "writtenOn": "2018-07-20T03:41:35Z",
       "side": 1,
       "message": "Is there should add \"The suite of signaling tests on top of vIMS should be run successfully.\" ?",
+      "revId": "11dc2fbe25af86154fbdde714bfffe52e64169ec",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_4c79dbfb",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-20T08:55:50Z",
+      "side": 1,
+      "message": "yes, that\u0027s a good idea. I am actually missing a more detailed description of what those tests are really doing in order to link to this, but I couldn\u0027t find any.",
+      "parentUuid": "9a561d44_acc0777d",
       "revId": "11dc2fbe25af86154fbdde714bfffe52e64169ec",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
