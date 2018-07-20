@@ -71,6 +71,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_ccf7ab8b",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2018-07-20T08:40:52Z",
+      "side": 1,
+      "message": "According to previous review, Georg wanted to avoid the specific information regarding the images and the flavors. I will add the comment that \u0027large number of compute resources are required for this testcase\u0027. Do you agree? If not, please add a new comment!",
+      "parentUuid": "9a561d44_2cd58743",
+      "range": {
+        "startLine": 181,
+        "startChar": 0,
+        "endLine": 181,
+        "endChar": 76
+      },
+      "revId": "11dc2fbe25af86154fbdde714bfffe52e64169ec",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_ec51cfd9",
         "filename": "docs/testing/user/testspecification/vnf/index.rst",
         "patchSetId": 1
