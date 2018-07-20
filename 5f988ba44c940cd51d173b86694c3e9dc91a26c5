@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_201d8b67",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2018-07-20T11:32:41Z",
+      "side": 1,
+      "message": "Ok i got it!I\u0027ll put the Louie\u0027s proposal instead.",
+      "parentUuid": "9a561d44_8c449375",
+      "range": {
+        "startLine": 185,
+        "startChar": 0,
+        "endLine": 201,
+        "endChar": 27
+      },
+      "revId": "5f988ba44c940cd51d173b86694c3e9dc91a26c5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_ac5a374e",
         "filename": "docs/testing/user/testspecification/vnf/index.rst",
         "patchSetId": 3
@@ -60,6 +84,30 @@
       "writtenOn": "2018-07-20T10:51:17Z",
       "side": 1,
       "message": "Yes, I also cann\u0027t find what the detail test does the suit test run ?we can just write this first. Then update this after asking functest and get more details.",
+      "range": {
+        "startLine": 231,
+        "startChar": 0,
+        "endLine": 231,
+        "endChar": 71
+      },
+      "revId": "5f988ba44c940cd51d173b86694c3e9dc91a26c5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_001a076e",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2018-07-20T11:32:41Z",
+      "side": 1,
+      "message": "Ok, let\u0027s leave this for the time being and I\u0027ll send an email to Cedric and Linda asking more info about this scenario.\nI\u0027ll add you cc in the email chain.",
+      "parentUuid": "9a561d44_ac5a374e",
       "range": {
         "startLine": 231,
         "startChar": 0,
