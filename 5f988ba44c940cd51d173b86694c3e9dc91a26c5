@@ -22,6 +22,53 @@
       "revId": "5f988ba44c940cd51d173b86694c3e9dc91a26c5",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_8c449375",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 6933
+      },
+      "writtenOn": "2018-07-20T10:51:17Z",
+      "side": 1,
+      "message": "Yes, I just want to express to the tester/reader that this testcase require more resources,so they can make sure whether their NFV environment can hold this testcase. \nHow about this:\n\nCertain ubuntu server and cloudify images version refer to dovetail testing user guide\n\nAt least 30G RAMs and 50 vcpu cores required",
+      "parentUuid": "9a561d44_6cbbff72",
+      "range": {
+        "startLine": 185,
+        "startChar": 0,
+        "endLine": 201,
+        "endChar": 27
+      },
+      "revId": "5f988ba44c940cd51d173b86694c3e9dc91a26c5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_ac5a374e",
+        "filename": "docs/testing/user/testspecification/vnf/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 6933
+      },
+      "writtenOn": "2018-07-20T10:51:17Z",
+      "side": 1,
+      "message": "Yes, I also cann\u0027t find what the detail test does the suit test run ?we can just write this first. Then update this after asking functest and get more details.",
+      "range": {
+        "startLine": 231,
+        "startChar": 0,
+        "endLine": 231,
+        "endChar": 71
+      },
+      "revId": "5f988ba44c940cd51d173b86694c3e9dc91a26c5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
