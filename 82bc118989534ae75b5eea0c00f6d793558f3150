@@ -117,6 +117,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_56d04553",
+        "filename": "etc/testcase/security.patrole.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-23T14:23:03Z",
+      "side": 0,
+      "message": "how did you determine that the tests are the same?",
+      "parentUuid": "9a561d44_a3e8857d",
+      "range": {
+        "startLine": 127,
+        "startChar": 8,
+        "endLine": 127,
+        "endChar": 110
+      },
+      "revId": "82bc118989534ae75b5eea0c00f6d793558f3150",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_83ed818e",
         "filename": "etc/testcase/security.patrole.yml",
         "patchSetId": 1
@@ -140,6 +164,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_36d5d143",
+        "filename": "etc/testcase/security.patrole.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-23T14:23:03Z",
+      "side": 0,
+      "message": "dito",
+      "parentUuid": "9a561d44_83ed818e",
+      "range": {
+        "startLine": 129,
+        "startChar": 7,
+        "endLine": 129,
+        "endChar": 112
+      },
+      "revId": "82bc118989534ae75b5eea0c00f6d793558f3150",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_e301dd3a",
         "filename": "etc/testcase/security.patrole.yml",
         "patchSetId": 1
@@ -151,6 +199,30 @@
       "writtenOn": "2018-07-23T11:45:48Z",
       "side": 0,
       "message": "This is the same as patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_create_high_availability_router",
+      "range": {
+        "startLine": 130,
+        "startChar": 7,
+        "endLine": 130,
+        "endChar": 118
+      },
+      "revId": "82bc118989534ae75b5eea0c00f6d793558f3150",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_96cadd9f",
+        "filename": "etc/testcase/security.patrole.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-23T14:23:03Z",
+      "side": 0,
+      "message": "dito",
+      "parentUuid": "9a561d44_e301dd3a",
       "range": {
         "startLine": 130,
         "startChar": 7,
