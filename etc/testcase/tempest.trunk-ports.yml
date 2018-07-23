@@ -19,7 +19,6 @@ dovetail.tempest.neutron_trunk_ports:
       - tempest_logs/dovetail.tempest.neutron_trunk_ports.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
-      - neutron.tests.tempest.api.test_trunk.TrunkTestInheritJSONBase.test_add_subport
       - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_add_subport
       - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_create_show_delete_trunk
       - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_create_trunk_empty_subports_list
@@ -31,10 +30,6 @@ dovetail.tempest.neutron_trunk_ports:
       - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_list_trunks
       - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_remove_subport
       - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_show_trunk_has_project_id
-      - neutron.tests.tempest.api.test_trunk.TrunkTestMtusJSON.test_add_subport_with_mtu_equal_to_trunk
-      - neutron.tests.tempest.api.test_trunk.TrunkTestMtusJSON.test_add_subport_with_mtu_smaller_than_trunk
-      - neutron.tests.tempest.api.test_trunk.TrunkTestMtusJSON.test_create_trunk_with_mtu_equal_to_subport
-      - neutron.tests.tempest.api.test_trunk.TrunkTestMtusJSON.test_create_trunk_with_mtu_greater_than_subport
       - neutron.tests.tempest.api.test_trunk.TrunksSearchCriteriaTest.test_list_no_pagination_limit_0
       - neutron.tests.tempest.api.test_trunk.TrunksSearchCriteriaTest.test_list_pagination
       - neutron.tests.tempest.api.test_trunk.TrunksSearchCriteriaTest.test_list_pagination_page_reverse_asc
@@ -51,7 +46,6 @@ dovetail.tempest.neutron_trunk_ports:
       - neutron.tests.tempest.api.test_trunk_negative.TrunkTestJSON.test_add_subport_passing_dict
       - neutron.tests.tempest.api.test_trunk_negative.TrunkTestJSON.test_add_subport_port_id_disabled_trunk
       - neutron.tests.tempest.api.test_trunk_negative.TrunkTestJSON.test_add_subport_port_id_uses_trunk_port_id
-      - neutron.tests.tempest.api.test_trunk_negative.TrunkTestJSON.test_create_subport_invalid_inherit_network_segmentation_type
       - neutron.tests.tempest.api.test_trunk_negative.TrunkTestJSON.test_create_subport_missing_segmentation_id
       - neutron.tests.tempest.api.test_trunk_negative.TrunkTestJSON.test_create_subport_nonexistent_port_id
       - neutron.tests.tempest.api.test_trunk_negative.TrunkTestJSON.test_create_subport_nonexistent_trunk
@@ -67,7 +61,4 @@ dovetail.tempest.neutron_trunk_ports:
       - neutron.tests.tempest.api.test_trunk_negative.TrunkTestJSON.test_remove_subport_not_found
       - neutron.tests.tempest.api.test_trunk_negative.TrunkTestJSON.test_remove_subport_passing_dict
       - neutron.tests.tempest.api.test_trunk_negative.TrunkTestJSON.test_remove_subport_port_id_disabled_trunk
-      - neutron.tests.tempest.api.test_trunk_negative.TrunkTestMtusJSON.test_add_subport_with_mtu_greater_than_trunk
-      - neutron.tests.tempest.api.test_trunk_negative.TrunkTestMtusJSON.test_create_trunk_with_mtu_smaller_than_subport
-      - neutron.tests.tempest.scenario.test_trunk.TrunkTest.test_subport_connectivity
       - neutron.tests.tempest.scenario.test_trunk.TrunkTest.test_trunk_subport_lifecycle
