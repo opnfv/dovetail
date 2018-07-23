@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_e3da7de8",
+        "filename": "etc/testcase/security.patrole.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-23T11:45:48Z",
+      "side": 0,
+      "message": "These 3 sub test cases skipped because \"l3_agent_scheduler extension not enabled\" on both Apex and Compass odl scenario.\nRefer CI link:\n1. https://build.opnfv.org/ci/view/dovetail/job/dovetail-apex-baremetal-proposed_tests-fraser/25/artifact/results/security_logs/dovetail.security.patrole.log/*view*/\n2. https://build.opnfv.org/ci/view/dovetail/job/dovetail-compass-baremetal-default-mandatory-fraser/2/artifact/results/security_logs/dovetail.security.patrole.log/*view*/",
+      "range": {
+        "startLine": 64,
+        "startChar": 8,
+        "endLine": 66,
+        "endChar": 120
+      },
+      "revId": "82bc118989534ae75b5eea0c00f6d793558f3150",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_c3d779be",
+        "filename": "etc/testcase/security.patrole.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-23T11:45:48Z",
+      "side": 0,
+      "message": "These 3 sub test cases skipped because \"metering extension not enabled\" on Apex(both nosdn-nofeature and odl)\nRefer CI link:\n1. https://build.opnfv.org/ci/view/dovetail/job/dovetail-apex-baremetal-proposed_tests-fraser/28/artifact/results/security_logs/dovetail.security.patrole.log/*view*/\n2. https://build.opnfv.org/ci/view/dovetail/job/dovetail-apex-baremetal-proposed_tests-fraser/25/artifact/results/security_logs/dovetail.security.patrole.log/*view*/",
+      "range": {
+        "startLine": 72,
+        "startChar": 7,
+        "endLine": 77,
+        "endChar": 122
+      },
+      "revId": "82bc118989534ae75b5eea0c00f6d793558f3150",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_03e2119f",
+        "filename": "etc/testcase/security.patrole.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-23T11:45:48Z",
+      "side": 0,
+      "message": "This sub test case skipped because \"network extension: dvr is not enabled\" on Apex and Compass nosdn-nofeature scenario.\nRefer CI link:\n1. https://build.opnfv.org/ci/view/dovetail/job/dovetail-compass-baremetal-default-mandatory-fraser/3/artifact/results/security_logs/dovetail.security.patrole.log/*view*/\n2. https://build.opnfv.org/ci/view/dovetail/job/dovetail-apex-baremetal-proposed_tests-fraser/28/artifact/results/security_logs/dovetail.security.patrole.log/*view*/",
+      "range": {
+        "startLine": 120,
+        "startChar": 8,
+        "endLine": 120,
+        "endChar": 112
+      },
+      "revId": "82bc118989534ae75b5eea0c00f6d793558f3150",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_63ee6d8d",
+        "filename": "etc/testcase/security.patrole.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-23T11:45:48Z",
+      "side": 0,
+      "message": "This sub test case skipped because \"network extension: l3-ha is not enabled\" on Apex and Compass odl scenario.\nRefer CI link:\n1. https://build.opnfv.org/ci/view/dovetail/job/dovetail-apex-baremetal-proposed_tests-fraser/25/artifact/results/security_logs/dovetail.security.patrole.log/*view*/\n2. https://build.opnfv.org/ci/view/dovetail/job/dovetail-compass-baremetal-default-mandatory-fraser/2/artifact/results/security_logs/dovetail.security.patrole.log/*view*/",
+      "range": {
+        "startLine": 121,
+        "startChar": 8,
+        "endLine": 121,
+        "endChar": 118
+      },
+      "revId": "82bc118989534ae75b5eea0c00f6d793558f3150",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_a3e8857d",
+        "filename": "etc/testcase/security.patrole.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-23T11:45:48Z",
+      "side": 0,
+      "message": "This is the same as patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_create_distributed_router",
+      "range": {
+        "startLine": 127,
+        "startChar": 8,
+        "endLine": 127,
+        "endChar": 110
+      },
+      "revId": "82bc118989534ae75b5eea0c00f6d793558f3150",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_83ed818e",
+        "filename": "etc/testcase/security.patrole.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-23T11:45:48Z",
+      "side": 0,
+      "message": "This is the same as patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_create_distributed_router",
+      "range": {
+        "startLine": 129,
+        "startChar": 7,
+        "endLine": 129,
+        "endChar": 112
+      },
+      "revId": "82bc118989534ae75b5eea0c00f6d793558f3150",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_e301dd3a",
+        "filename": "etc/testcase/security.patrole.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-23T11:45:48Z",
+      "side": 0,
+      "message": "This is the same as patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_create_high_availability_router",
+      "range": {
+        "startLine": 130,
+        "startChar": 7,
+        "endLine": 130,
+        "endChar": 118
+      },
+      "revId": "82bc118989534ae75b5eea0c00f6d793558f3150",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_8349018e",
+        "filename": "etc/testcase/tempest.trunk-ports.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-23T11:45:48Z",
+      "side": 0,
+      "message": "These 9 sub test cases are all skipped on Apex, Compass and Fuel.\nRefer CI links:\n1. https://build.opnfv.org/ci/view/dovetail/job/dovetail-compass-baremetal-default-mandatory-fraser/3/artifact/results/tempest_logs/dovetail.tempest.neutron_trunk_ports.log/*view*/\n2. https://build.opnfv.org/ci/view/dovetail/job/dovetail-apex-baremetal-proposed_tests-fraser/28/artifact/results/tempest_logs/dovetail.tempest.neutron_trunk_ports.log/*view*/\n3. https://build.opnfv.org/ci/view/dovetail/job/dovetail-fuel-baremetal-proposed_tests-fraser/23/artifact/results/tempest_logs/dovetail.tempest.neutron_trunk_ports.log/*view*/",
+      "range": {
+        "startLine": 22,
+        "startChar": 8,
+        "endLine": 22,
+        "endChar": 86
+      },
+      "revId": "82bc118989534ae75b5eea0c00f6d793558f3150",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
