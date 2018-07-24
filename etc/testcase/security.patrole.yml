@@ -42,8 +42,6 @@ dovetail.security.patrole:
       - patrole_tempest_plugin.tests.api.image.test_images_member_rbac.ImagesMemberRbacTest.test_delete_image_member
       - patrole_tempest_plugin.tests.api.image.test_images_member_rbac.ImagesMemberRbacTest.test_list_image_members
       - patrole_tempest_plugin.tests.api.image.test_images_member_rbac.ImagesMemberRbacTest.test_show_image_member
-      - patrole_tempest_plugin.tests.api.image.test_images_member_rbac.ImagesMemberRbacTest.test_update_image_member
-      - patrole_tempest_plugin.tests.api.image.test_images_rbac.BasicOperationsImagesRbacTest.test_communitize_image
       - patrole_tempest_plugin.tests.api.image.test_images_rbac.BasicOperationsImagesRbacTest.test_create_image
       - patrole_tempest_plugin.tests.api.image.test_images_rbac.BasicOperationsImagesRbacTest.test_create_image_tag
       - patrole_tempest_plugin.tests.api.image.test_images_rbac.BasicOperationsImagesRbacTest.test_deactivate_image
