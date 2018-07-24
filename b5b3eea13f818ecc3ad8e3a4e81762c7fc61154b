@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_361dd174",
+        "filename": "dovetail/run.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-24T07:51:26Z",
+      "side": 1,
+      "message": "If return here, it won\u0027t call Testcase.get_testcases_for_testsuite(), then all executed test cases is regarded as \u0027is_mandatory\u003dFalse\u0027",
+      "range": {
+        "startLine": 230,
+        "startChar": 8,
+        "endLine": 230,
+        "endChar": 57
+      },
+      "revId": "b5b3eea13f818ecc3ad8e3a4e81762c7fc61154b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_56184584",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-24T07:51:26Z",
+      "side": 1,
+      "message": "here is else:",
+      "range": {
+        "startLine": 316,
+        "startChar": 21,
+        "endLine": 316,
+        "endChar": 24
+      },
+      "revId": "b5b3eea13f818ecc3ad8e3a4e81762c7fc61154b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
