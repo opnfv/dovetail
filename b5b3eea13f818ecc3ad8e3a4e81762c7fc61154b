@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_59a196a8",
+        "filename": "dovetail/run.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-24T11:00:18Z",
+      "side": 1,
+      "message": "good point. I am wondering about the use case, though. The way this is implemented right now, if you provide a list of tests, the test suite is ignored. So, there is no mapping to a test suite which defines if a test is mandatory or optional. We could then assume the default test suite.",
+      "parentUuid": "9a561d44_361dd174",
+      "range": {
+        "startLine": 230,
+        "startChar": 8,
+        "endLine": 230,
+        "endChar": 57
+      },
+      "revId": "b5b3eea13f818ecc3ad8e3a4e81762c7fc61154b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_56184584",
         "filename": "dovetail/testcase.py",
         "patchSetId": 6
