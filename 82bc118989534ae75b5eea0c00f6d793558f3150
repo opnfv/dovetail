@@ -165,6 +165,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_b96ef294",
+        "filename": "etc/testcase/security.patrole.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-24T08:49:26Z",
+      "side": 0,
+      "message": "Ah, right, of course. Sorry, me stupid.",
+      "parentUuid": "9a561d44_7649098b",
+      "range": {
+        "startLine": 127,
+        "startChar": 8,
+        "endLine": 127,
+        "endChar": 110
+      },
+      "revId": "82bc118989534ae75b5eea0c00f6d793558f3150",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_83ed818e",
         "filename": "etc/testcase/security.patrole.yml",
         "patchSetId": 1
