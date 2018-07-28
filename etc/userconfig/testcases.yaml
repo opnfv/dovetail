@@ -132,7 +132,11 @@ tiers:
                     scenario: ''
                 run:
                     module: 'functest.opnfv_tests.openstack.tempest.tempest'
-                    class: 'TempestSmokeSerial'
+                    class: 'TempestCommon'
+                    args:
+                        mode: '^tempest\.(api|scenario).*\[.*\bsmoke\b.*\]$'
+                        option:
+                            - '--concurrency=1'
 
             -
                 case_name: snaps_smoke
@@ -171,6 +175,7 @@ tiers:
                 run:
                     module: 'functest.opnfv_tests.openstack.tempest.tempest'
                     class: 'TempestCustom'
+
             -
                 case_name: patrole
                 project_name: functest
@@ -191,6 +196,7 @@ tiers:
                             - 'network'
                         exclude:
                             - 'test_networks_multiprovider_rbac'
+
             -
                 case_name: neutron_trunk
                 project_name: functest
@@ -206,7 +212,9 @@ tiers:
                     scenario: ''
                 run:
                     module: 'functest.opnfv_tests.openstack.tempest.tempest'
-                    class: 'TempestNeutronTrunk'
+                    class: 'TempestCommon'
+                    args:
+                        mode: 'neutron.tests.tempest.(api|scenario).test_trunk'
 
     -
         name: features
@@ -252,6 +260,7 @@ tiers:
                 run:
                     module: 'functest.opnfv_tests.vnf.ims.cloudify_ims'
                     class: 'CloudifyIms'
+
             -
                 case_name: juju_epc
                 project_name: functest
