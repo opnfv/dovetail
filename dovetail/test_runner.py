@@ -9,6 +9,7 @@
 
 import json
 import os
+import time
 
 import jinja2
 import jinja2.meta
@@ -109,6 +110,7 @@ class DockerRunner(object):
             Container.clean(container_id, self.type)
 
     def archive_logs(self):
+        retry = 5
         result_path = os.path.join(os.environ["DOVETAIL_HOME"], 'results')
         src_files = dt_utils.get_value_from_dict(
             'report.source_archive_files', self.testcase.testcase)
@@ -125,8 +127,12 @@ class DockerRunner(object):
         for index in range(0, len(src_files)):
             src_file_path = os.path.join(result_path, src_files[index])
             dest_file_path = os.path.join(result_path, dest_files[index])
-            if os.path.isfile(src_file_path):
-                os.renames(src_file_path, dest_file_path)
+            for loop in range(retry):
+                if os.path.isfile(src_file_path):
+                    os.renames(src_file_path, dest_file_path)
+                    break
+                else:
+                    time.sleep(1)
             else:
                 self.logger.error("Can't find file {}.".format(src_file_path))
                 res = False
