@@ -14,8 +14,8 @@ dovetail.tempest.identity_v3:
   report:
     source_archive_files:
       - functest.log
-      - tempest/tempest.log
-      - tempest/tempest-report.html
+      - tempest_custom/tempest.log
+      - tempest_custom/tempest-report.html
     dest_archive_files:
       - tempest_logs/dovetail.tempest.identity_v3.functest.log
       - tempest_logs/dovetail.tempest.identity_v3.log

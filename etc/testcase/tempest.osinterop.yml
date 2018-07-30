@@ -14,8 +14,8 @@ dovetail.tempest.osinterop:
   report:
     source_archive_files:
       - functest.log
-      - refstack/tempest.log
-      - refstack/tempest-report.html
+      - refstack_defcore/tempest.log
+      - refstack_defcore/tempest-report.html
     dest_archive_files:
       - tempest_logs/dovetail.tempest.osinterop.functest.log
       - tempest_logs/dovetail.tempest.osinterop.log
