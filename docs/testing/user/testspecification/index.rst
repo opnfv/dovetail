@@ -38,3 +38,4 @@ specification documents.
   ./vpn/index.rst
   ./vnf/index.rst
   ./stress/index.rst
+  ./snaps_smoke/index.rst
