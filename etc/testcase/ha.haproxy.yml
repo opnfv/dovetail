@@ -1,6 +1,6 @@
 ---
-dovetail.ha.haproxy:
-  name: dovetail.ha.haproxy
+yardstick.ha.haproxy:
+  name: yardstick.ha.haproxy
   objective: >
     This test case will verify the high availability of the load balance
     service(current is HAProxy) that supports OpenStack on controller node. When the
@@ -13,9 +13,9 @@ dovetail.ha.haproxy:
   report:
     source_archive_files:
       - yardstick.log
-      - dovetail.ha.haproxy.out
+      - yardstick.ha.haproxy.out
     dest_archive_files:
-      - ha_logs/dovetail.ha.haproxy.log
-      - ha_logs/dovetail.ha.haproxy.out
-    check_results_file: ha_logs/dovetail.ha.haproxy.out
+      - ha_logs/yardstick.ha.haproxy.log
+      - ha_logs/yardstick.ha.haproxy.out
+    check_results_file: ha_logs/yardstick.ha.haproxy.out
     sub_testcase_list:

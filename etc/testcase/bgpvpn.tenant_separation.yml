@@ -1,6 +1,6 @@
 ---
-dovetail.sdnvpn.tenant_separation:
-  name: dovetail.sdnvpn.tenant_separation
+functest.bgpvpn.tenant_separation:
+  name: functest.bgpvpn.tenant_separation
   objective: Separation of tenant networks through association to different VPNs
   validate:
     type: functest
@@ -13,6 +13,6 @@ dovetail.sdnvpn.tenant_separation:
     source_archive_files:
       - functest.log
     dest_archive_files:
-      - sdnvpn_logs/dovetail.sdnvpn.tenant_separation.log
+      - bgpvpn_logs/functest.bgpvpn.tenant_separation.log
     check_results_file: 'functest_results.txt'
     sub_testcase_list:

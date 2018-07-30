@@ -1,6 +1,6 @@
 ---
-dovetail.vnf.vepc:
-  name: dovetail.vnf.vepc
+functest.vnf.vepc:
+  name: functest.vnf.vepc
   objective: Deploy a vEPC using Juju and perform EPC-specific test cases (e.g. attaching a UE to the EPC).
   validate:
     type: functest
@@ -10,6 +10,6 @@ dovetail.vnf.vepc:
     source_archive_files:
       - functest.log
     dest_archive_files:
-      - vnf_logs/dovetail.vnf.vepc.log
+      - vnf_logs/functest.vnf.vepc.log
     check_results_file: 'functest_results.txt'
     sub_testcase_list:

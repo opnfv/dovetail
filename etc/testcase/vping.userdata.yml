@@ -1,6 +1,6 @@
 ---
-dovetail.vping.userdata:
-  name: dovetail.vping.userdata
+functest.vping.userdata:
+  name: functest.vping.userdata
   objective: testing for vping using userdata
   validate:
     type: functest
@@ -9,6 +9,6 @@ dovetail.vping.userdata:
     source_archive_files:
       - functest.log
     dest_archive_files:
-      - vping_logs/dovetail.vping.userdata.log
+      - vping_logs/functest.vping.userdata.log
     check_results_file: 'functest_results.txt'
     sub_testcase_list:

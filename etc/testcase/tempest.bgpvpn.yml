@@ -1,6 +1,6 @@
 ---
-dovetail.tempest.bgpvpn:
-  name: dovetail.tempest.bgpvpn
+functest.tempest.bgpvpn:
+  name: functest.tempest.bgpvpn
   objective: validate BGPVPN API CRUD operations by means of Tempest tests from networking-bgpvpn repository
   validate:
     type: functest
@@ -18,9 +18,9 @@ dovetail.tempest.bgpvpn:
       - tempest_custom/tempest.log
       - tempest_custom/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.bgpvpn.functest.log
-      - tempest_logs/dovetail.tempest.bgpvpn.log
-      - tempest_logs/dovetail.tempest.bgpvpn.html
+      - tempest_logs/functest.tempest.bgpvpn.functest.log
+      - tempest_logs/functest.tempest.bgpvpn.log
+      - tempest_logs/functest.tempest.bgpvpn.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_associate_disassociate_network

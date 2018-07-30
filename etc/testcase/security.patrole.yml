@@ -1,6 +1,6 @@
 ---
-dovetail.security.patrole:
-  name: dovetail.security.patrole
+functest.security.patrole:
+  name: functest.security.patrole
   objective: Run Patrole to perform RBAC tests of the image and networking services
   validate:
     type: functest
@@ -14,9 +14,9 @@ dovetail.security.patrole:
       - patrole/tempest.log
       - patrole/tempest-report.html
     dest_archive_files:
-      - security_logs/dovetail.security.patrole.functest.log
-      - security_logs/dovetail.security.patrole.log
-      - security_logs/dovetail.security.patrole.html
+      - security_logs/functest.security.patrole.functest.log
+      - security_logs/functest.security.patrole.log
+      - security_logs/functest.security.patrole.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - patrole_tempest_plugin.tests.api.image.test_image_namespace_objects_rbac.ImageNamespacesObjectsRbacTest.test_create_metadef_object_in_namespace

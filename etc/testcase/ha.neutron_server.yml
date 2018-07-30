@@ -1,6 +1,6 @@
 ---
-dovetail.ha.neutron_server:
-  name: dovetail.ha.neutron_server
+yardstick.ha.neutron_server:
+  name: yardstick.ha.neutron_server
   objective: >
     This test case will verify the high availability of the
     network service provided by OpenStack (neutro-server) on control node.
@@ -10,9 +10,9 @@ dovetail.ha.neutron_server:
   report:
     source_archive_files:
       - yardstick.log
-      - dovetail.ha.neutron_server.out
+      - yardstick.ha.neutron_server.out
     dest_archive_files:
-      - ha_logs/dovetail.ha.neutron_server.log
-      - ha_logs/dovetail.ha.neutron_server.out
-    check_results_file: ha_logs/dovetail.ha.neutron_server.out
+      - ha_logs/yardstick.ha.neutron_server.log
+      - ha_logs/yardstick.ha.neutron_server.out
+    check_results_file: ha_logs/yardstick.ha.neutron_server.out
     sub_testcase_list:

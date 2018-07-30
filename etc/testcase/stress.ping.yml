@@ -1,6 +1,6 @@
 ---
-dovetail.stress.ping:
-  name: dovetail.stress.ping
+bottlenecks.stress.ping:
+  name: bottlenecks.stress.ping
   objective: > # This test case verifies the ability of the SUT setting up VM pairs
     # for different tenants and providing acceptable capacity after the amount of
     # VM pairs reaches certain quantity.
@@ -10,9 +10,9 @@ dovetail.stress.ping:
   report:
     source_archive_files:
       - bottlenecks.log
-      - dovetail.stress.ping.out
+      - bottlenecks.stress.ping.out
     dest_archive_files:
-      - stress_logs/dovetail.stress.ping.log
-      - stress_logs/dovetail.stress.ping.out
-    check_results_file: stress_logs/dovetail.stress.ping.out
+      - stress_logs/bottlenecks.stress.ping.log
+      - stress_logs/bottlenecks.stress.ping.out
+    check_results_file: stress_logs/bottlenecks.stress.ping.out
     sub_testcase_list:

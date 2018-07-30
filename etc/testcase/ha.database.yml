@@ -1,6 +1,6 @@
 ---
-dovetail.ha.database:
-  name: dovetail.ha.database
+yardstick.ha.database:
+  name: yardstick.ha.database
   objective: >
     This test case verifies the high-availability of the OpenStack
     controller database instance.
@@ -10,9 +10,9 @@ dovetail.ha.database:
   report:
     source_archive_files:
       - yardstick.log
-      - dovetail.ha.database.out
+      - yardstick.ha.database.out
     dest_archive_files:
-      - ha_logs/dovetail.ha.database.log
-      - ha_logs/dovetail.ha.database.out
-    check_results_file: ha_logs/dovetail.ha.database.out
+      - ha_logs/yardstick.ha.database.log
+      - ha_logs/yardstick.ha.database.out
+    check_results_file: ha_logs/yardstick.ha.database.out
     sub_testcase_list:

@@ -1,6 +1,6 @@
 ---
-dovetail.tempest.ipv6_api:
-  name: dovetail.tempest.ipv6_api
+functest.tempest.ipv6_api:
+  name: functest.tempest.ipv6_api
   objective: IPv6 API tempest tests
   validate:
     type: functest
@@ -17,9 +17,9 @@ dovetail.tempest.ipv6_api:
       - tempest_custom/tempest.log
       - tempest_custom/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.ipv6_api.functest.log
-      - tempest_logs/dovetail.tempest.ipv6_api.log
-      - tempest_logs/dovetail.tempest.ipv6_api.html
+      - tempest_logs/functest.tempest.ipv6_api.functest.log
+      - tempest_logs/functest.tempest.ipv6_api.log
+      - tempest_logs/functest.tempest.ipv6_api.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_network[id-d4f9024d-1e28-4fc1-a6b1-25dbc6fa11e2,smoke]

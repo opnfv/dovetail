@@ -1,6 +1,6 @@
 ---
-dovetail.healthcheck.snaps_health_check:
-  name: dovetail.healthcheck.snaps_health_check
+functest.healthcheck.snaps_health_check:
+  name: functest.healthcheck.snaps_health_check
   objective: basic VM instance creation with port and IPv4 address through DHCP
   validate:
     type: functest
@@ -9,6 +9,6 @@ dovetail.healthcheck.snaps_health_check:
     source_archive_files:
       - functest.log
     dest_archive_files:
-      - healthcheck_logs/dovetail.healthcheck.snaps_health_check.log
+      - healthcheck_logs/functest.healthcheck.snaps_health_check.log
     check_results_file: 'functest_results.txt'
     sub_testcase_list:

@@ -1,6 +1,6 @@
 ---
-dovetail.ha.cpu_load:
-  name: dovetail.ha.cpu_load
+yardstick.ha.cpu_load:
+  name: yardstick.ha.cpu_load
   objective: >
     This test case will verify the high availability of control node.
     When the CPU usage of a specified controller node is stressed to 100%,
@@ -13,9 +13,9 @@ dovetail.ha.cpu_load:
   report:
     source_archive_files:
       - yardstick.log
-      - dovetail.ha.cpu_load.out
+      - yardstick.ha.cpu_load.out
     dest_archive_files:
-      - ha_logs/dovetail.ha.cpu_load.log
-      - ha_logs/dovetail.ha.cpu_load.out
-    check_results_file: ha_logs/dovetail.ha.cpu_load.out
+      - ha_logs/yardstick.ha.cpu_load.log
+      - ha_logs/yardstick.ha.cpu_load.out
+    check_results_file: ha_logs/yardstick.ha.cpu_load.out
     sub_testcase_list:

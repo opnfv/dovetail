@@ -1,6 +1,6 @@
 ---
-dovetail.ha.nova_api:
-  name: dovetail.ha.nova_api
+yardstick.ha.nova_api:
+  name: yardstick.ha.nova_api
   objective: >
     This test case will verify the high availability
     of the service provided by OpenStack (like nova-api, neutro-server) on control node.
@@ -10,9 +10,9 @@ dovetail.ha.nova_api:
   report:
     source_archive_files:
       - yardstick.log
-      - dovetail.ha.nova_api.out
+      - yardstick.ha.nova_api.out
     dest_archive_files:
-      - ha_logs/dovetail.ha.nova_api.log
-      - ha_logs/dovetail.ha.nova_api.out
-    check_results_file: ha_logs/dovetail.ha.nova_api.out
+      - ha_logs/yardstick.ha.nova_api.log
+      - ha_logs/yardstick.ha.nova_api.out
+    check_results_file: ha_logs/yardstick.ha.nova_api.out
     sub_testcase_list:

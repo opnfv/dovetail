@@ -1,18 +1,18 @@
 ---
-dovetail.sdnvpn.router_association_floating_ip:
-  name: dovetail.sdnvpn.router_association_floating_ip
-  objective: associate Neutron Router with an attached subnet to a VPN and verify reachability of the Floating IP
+functest.bgpvpn.router_association:
+  name: functest.bgpvpn.router_association
+  objective: VPN provides connectivity between subnets using association of Neutron Router to VPNs
   validate:
     type: functest
     testcase: bgpvpn
     image_name: opnfv/functest-features
     pre_copy:
-      exist_src_file: sdnvpn_config_testcase8.yaml
+      exist_src_file: sdnvpn_config_testcase4.yaml
       dest_path: /usr/lib/python2.7/site-packages/sdnvpn/test/functest/config.yaml
   report:
     source_archive_files:
       - functest.log
     dest_archive_files:
-      - sdnvpn_logs/dovetail.sdnvpn.router_association_floating_ip.log
+      - bgpvpn_logs/functest.bgpvpn.router_association.log
     check_results_file: 'functest_results.txt'
     sub_testcase_list:

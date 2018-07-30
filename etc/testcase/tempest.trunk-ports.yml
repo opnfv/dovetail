@@ -1,6 +1,6 @@
 ---
-dovetail.tempest.neutron_trunk_ports:
-  name: dovetail.tempest.neutron_trunk_ports
+functest.tempest.neutron_trunk_ports:
+  name: functest.tempest.neutron_trunk_ports
   objective: Run Neutron trunk port Tempest tests
   validate:
     type: functest
@@ -14,9 +14,9 @@ dovetail.tempest.neutron_trunk_ports:
       - neutron_trunk/tempest.log
       - neutron_trunk/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.neutron_trunk_ports.functest.log
-      - tempest_logs/dovetail.tempest.neutron_trunk_ports.log
-      - tempest_logs/dovetail.tempest.neutron_trunk_ports.html
+      - tempest_logs/functest.tempest.neutron_trunk_ports.functest.log
+      - tempest_logs/functest.tempest.neutron_trunk_ports.log
+      - tempest_logs/functest.tempest.neutron_trunk_ports.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_add_subport
