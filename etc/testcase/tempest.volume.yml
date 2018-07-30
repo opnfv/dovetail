@@ -1,6 +1,6 @@
 ---
-dovetail.tempest.volume:
-  name: dovetail.tempest.volume
+functest.tempest.volume:
+  name: functest.tempest.volume
   objective: tempest smoke test cases about volume
   validate:
     type: functest
@@ -17,9 +17,9 @@ dovetail.tempest.volume:
       - tempest_custom/tempest.log
       - tempest_custom/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.volume.functest.log
-      - tempest_logs/dovetail.tempest.volume.log
-      - tempest_logs/dovetail.tempest.volume.html
+      - tempest_logs/functest.tempest.volume.functest.log
+      - tempest_logs/functest.tempest.volume.log
+      - tempest_logs/functest.tempest.volume.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.volume.test_volumes_actions.VolumesActionsTest.test_attach_detach_volume_to_instance[compute,id-fff42874-7db5-4487-a8e1-ddda5fb5288d,smoke]

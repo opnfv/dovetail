@@ -1,6 +1,6 @@
 ---
-dovetail.vnf.vims:
-  name: dovetail.vnf.vims
+functest.vnf.vims:
+  name: functest.vnf.vims
   objective: testing for Clearwater IMS deployment using Cloudify orchestrator
   validate:
     type: functest
@@ -10,6 +10,6 @@ dovetail.vnf.vims:
     source_archive_files:
       - functest.log
     dest_archive_files:
-      - vnf_logs/dovetail.vnf.vims.log
+      - vnf_logs/functest.vnf.vims.log
     check_results_file: 'functest_results.txt'
     sub_testcase_list:

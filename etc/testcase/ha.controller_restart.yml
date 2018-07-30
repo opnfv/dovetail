@@ -1,6 +1,6 @@
 ---
-dovetail.ha.controller_restart:
-  name: dovetail.ha.controller_restart
+yardstick.ha.controller_restart:
+  name: yardstick.ha.controller_restart
   objective: OpenStack Controll Node abnormally shutdown.
   validate:
     type: yardstick
@@ -8,9 +8,9 @@ dovetail.ha.controller_restart:
   report:
     source_archive_files:
       - yardstick.log
-      - dovetail.ha.controller_restart.out
+      - yardstick.ha.controller_restart.out
     dest_archive_files:
-      - ha_logs/dovetail.ha.controller_restart.log
-      - ha_logs/dovetail.ha.controller_restart.out
-    check_results_file: ha_logs/dovetail.ha.controller_restart.out
+      - ha_logs/yardstick.ha.controller_restart.log
+      - ha_logs/yardstick.ha.controller_restart.out
+    check_results_file: ha_logs/yardstick.ha.controller_restart.out
     sub_testcase_list:

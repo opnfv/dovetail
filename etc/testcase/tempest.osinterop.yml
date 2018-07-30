@@ -1,6 +1,6 @@
 ---
-dovetail.tempest.osinterop:
-  name: dovetail.tempest.osinterop
+functest.tempest.osinterop:
+  name: functest.tempest.osinterop
   objective: > # Set of OpenStack interoperability test cases not flagged and required. It only contains OpenStack core (no object storage)
     # The approved guidelines (2016.08) are valid for Kilo, Liberty, Mitaka and Newton releases of OpenStack
     # The list can be generated using the Rest API from RefStack project:
@@ -17,9 +17,9 @@ dovetail.tempest.osinterop:
       - refstack_defcore/tempest.log
       - refstack_defcore/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.osinterop.functest.log
-      - tempest_logs/dovetail.tempest.osinterop.log
-      - tempest_logs/dovetail.tempest.osinterop.html
+      - tempest_logs/functest.tempest.osinterop.functest.log
+      - tempest_logs/functest.tempest.osinterop.log
+      - tempest_logs/functest.tempest.osinterop.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.network.test_security_groups.SecGroupTest.test_create_security_group_rule_with_icmp_type_code[id-c9463db8-b44d-4f52-b6c0-8dbda99f26ce]

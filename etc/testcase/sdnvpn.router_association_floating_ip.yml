@@ -1,6 +1,6 @@
 ---
-dovetail.sdnvpn.router_association_floating_ip:
-  name: dovetail.sdnvpn.router_association_floating_ip
+functest.bgpvpn.router_association_floating_ip:
+  name: functest.bgpvpn.router_association_floating_ip
   objective: associate Neutron Router with an attached subnet to a VPN and verify reachability of the Floating IP
   validate:
     type: functest
@@ -13,6 +13,6 @@ dovetail.sdnvpn.router_association_floating_ip:
     source_archive_files:
       - functest.log
     dest_archive_files:
-      - sdnvpn_logs/dovetail.sdnvpn.router_association_floating_ip.log
+      - sdnvpn_logs/functest.bgpvpn.router_association_floating_ip.log
     check_results_file: 'functest_results.txt'
     sub_testcase_list:

@@ -1,6 +1,6 @@
 ---
-dovetail.tempest.identity_v3:
-  name: dovetail.tempest.identity_v3
+functest.tempest.identity_v3:
+  name: functest.tempest.identity_v3
   objective: tempest smoke test cases about identity v3
   validate:
     type: functest
@@ -17,9 +17,9 @@ dovetail.tempest.identity_v3:
       - tempest_custom/tempest.log
       - tempest_custom/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.identity_v3.functest.log
-      - tempest_logs/dovetail.tempest.identity_v3.log
-      - tempest_logs/dovetail.tempest.identity_v3.html
+      - tempest_logs/functest.tempest.identity_v3.functest.log
+      - tempest_logs/functest.tempest.identity_v3.log
+      - tempest_logs/functest.tempest.identity_v3.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.identity.admin.v3.test_credentials.CredentialsTestJSON.test_credentials_create_get_update_delete[id-7cd59bf9-bda4-4c72-9467-d21cab278355,smoke]

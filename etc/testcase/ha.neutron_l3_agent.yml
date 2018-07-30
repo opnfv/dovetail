@@ -1,6 +1,6 @@
 ---
-dovetail.ha.neutron_l3_agent:
-  name: dovetail.ha.neutron_l3_agent
+yardstick.ha.neutron_l3_agent:
+  name: yardstick.ha.neutron_l3_agent
   objective: OpenStack Controller Virtual Router Service High Availability.
   validate:
     type: yardstick
@@ -24,9 +24,9 @@ dovetail.ha.neutron_l3_agent:
   report:
     source_archive_files:
       - yardstick.log
-      - dovetail.ha.neutron_l3_agent.out
+      - yardstick.ha.neutron_l3_agent.out
     dest_archive_files:
-      - ha_logs/dovetail.ha.neutron_l3_agent.log
-      - ha_logs/dovetail.ha.neutron_l3_agent.out
-    check_results_file: ha_logs/dovetail.ha.neutron_l3_agent.out
+      - ha_logs/yardstick.ha.neutron_l3_agent.log
+      - ha_logs/yardstick.ha.neutron_l3_agent.out
+    check_results_file: ha_logs/yardstick.ha.neutron_l3_agent.out
     sub_testcase_list:

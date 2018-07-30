@@ -1,6 +1,6 @@
 ---
 dovetail.onap.vnf_lifecycle:
-  name: dovetail.onap.vnf_lifecycle
+  name: onap.onap.vnf_lifecycle
   objective: vnf lifecycle tests
   validate:
     type: vnftest

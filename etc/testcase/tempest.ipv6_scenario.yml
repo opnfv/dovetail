@@ -1,6 +1,6 @@
 ---
-dovetail.tempest.ipv6_scenario:
-  name: dovetail.tempest.ipv6_scenario
+functest.tempest.ipv6_scenario:
+  name: functest.tempest.ipv6_scenario
   objective: IPv6 tempest scenario tests
   validate:
     type: functest
@@ -17,9 +17,9 @@ dovetail.tempest.ipv6_scenario:
       - tempest_custom/tempest.log
       - tempest_custom/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.ipv6_scenario.functest.log
-      - tempest_logs/dovetail.tempest.ipv6_scenario.log
-      - tempest_logs/dovetail.tempest.ipv6_scenario.html
+      - tempest_logs/functest.tempest.ipv6_scenario.functest.log
+      - tempest_logs/functest.tempest.ipv6_scenario.log
+      - tempest_logs/functest.tempest.ipv6_scenario.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.scenario.test_network_v6.TestGettingAddress.test_dhcp6_stateless_from_os[compute,id-d7e1f858-187c-45a6-89c9-bdafde619a9f,network,slow]

@@ -1,6 +1,6 @@
 ---
-dovetail.tempest.network_security:
-  name: dovetail.tempest.network_security
+functest.tempest.network_security:
+  name: functest.tempest.network_security
   objective: filtering packets based on security rules and port security in data path
   validate:
     type: functest
@@ -17,9 +17,9 @@ dovetail.tempest.network_security:
       - tempest_custom/tempest.log
       - tempest_custom/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.network_security.functest.log
-      - tempest_logs/dovetail.tempest.network_security.log
-      - tempest_logs/dovetail.tempest.network_security.html
+      - tempest_logs/functest.tempest.network_security.functest.log
+      - tempest_logs/functest.tempest.network_security.log
+      - tempest_logs/functest.tempest.network_security.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_port_security_macspoofing_port[compute,id-7c0bb1a2-d053-49a4-98f9-ca1a1d849f63,network,slow]

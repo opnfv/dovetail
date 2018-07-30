@@ -1,6 +1,6 @@
 ---
-dovetail.ha.disk_load:
-  name: dovetail.ha.disk_load
+yardstick.ha.disk_load:
+  name: yardstick.ha.disk_load
   objective: >
     This test case will verify the high availability of control node.
     When the disk I/O of a specified disk is blocked, which breaks down the Openstack
@@ -12,9 +12,9 @@ dovetail.ha.disk_load:
   report:
     source_archive_files:
       - yardstick.log
-      - dovetail.ha.disk_load.out
+      - yardstick.ha.disk_load.out
     dest_archive_files:
-      - ha_logs/dovetail.ha.disk_load.log
-      - ha_logs/dovetail.ha.disk_load.out
-    check_results_file: ha_logs/dovetail.ha.disk_load.out
+      - ha_logs/yardstick.ha.disk_load.log
+      - ha_logs/yardstick.ha.disk_load.out
+    check_results_file: ha_logs/yardstick.ha.disk_load.out
     sub_testcase_list:

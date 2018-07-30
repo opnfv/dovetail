@@ -1,6 +1,6 @@
 ---
-dovetail.ha.cinder_api:
-  name: dovetail.ha.cinder_api
+yardstick.ha.cinder_api:
+  name: yardstick.ha.cinder_api
   objective: >
     This test case will verify the high availability of the
     volume service provided by OpenStack (cinder-api) on control node.
@@ -10,9 +10,9 @@ dovetail.ha.cinder_api:
   report:
     source_archive_files:
       - yardstick.log
-      - dovetail.ha.cinder_api.out
+      - yardstick.ha.cinder_api.out
     dest_archive_files:
-      - ha_logs/dovetail.ha.cinder_api.log
-      - ha_logs/dovetail.ha.cinder_api.out
-    check_results_file: ha_logs/dovetail.ha.cinder_api.out
+      - ha_logs/yardstick.ha.cinder_api.log
+      - ha_logs/yardstick.ha.cinder_api.out
+    check_results_file: ha_logs/yardstick.ha.cinder_api.out
     sub_testcase_list:

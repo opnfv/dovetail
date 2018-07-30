@@ -1,6 +1,6 @@
 ---
-dovetail.ha.rabbitmq:
-  name: dovetail.ha.rabbitmq
+yardstick.ha.rabbitmq:
+  name: yardstick.ha.rabbitmq
   objective: OpenStack Controller Messaging Queue Service High Availability.
   validate:
     type: yardstick
@@ -8,9 +8,9 @@ dovetail.ha.rabbitmq:
   report:
     source_archive_files:
       - yardstick.log
-      - dovetail.ha.rabbitmq.out
+      - yardstick.ha.rabbitmq.out
     dest_archive_files:
-      - ha_logs/dovetail.ha.rabbitmq.log
-      - ha_logs/dovetail.ha.rabbitmq.out
-    check_results_file: ha_logs/dovetail.ha.rabbitmq.out
+      - ha_logs/yardstick.ha.rabbitmq.log
+      - ha_logs/yardstick.ha.rabbitmq.out
+    check_results_file: ha_logs/yardstick.ha.rabbitmq.out
     sub_testcase_list:

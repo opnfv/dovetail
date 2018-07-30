@@ -1,6 +1,6 @@
 ---
-dovetail.sdnvpn.subnet_connectivity:
-  name: dovetail.sdnvpn.subnet_connectivity
+functest.bgpvpn.subnet_connectivity:
+  name: functest.bgpvpn.subnet_connectivity
   objective: Connectivity between Neutron subnets through association of Neutron Networks to VPNs
   validate:
     type: functest
@@ -13,6 +13,6 @@ dovetail.sdnvpn.subnet_connectivity:
     source_archive_files:
       - functest.log
     dest_archive_files:
-      - sdnvpn_logs/dovetail.sdnvpn.subnet_connectivity.log
+      - sdnvpn_logs/functest.bgpvpn.subnet_connectivity.log
     check_results_file: 'functest_results.txt'
     sub_testcase_list:

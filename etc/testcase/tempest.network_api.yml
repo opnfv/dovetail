@@ -1,6 +1,6 @@
 ---
-dovetail.tempest.network_api:
-  name: dovetail.tempest.network_api
+functest.tempest.network_api:
+  name: functest.tempest.network_api
   objective: tempest smoke API test cases covering networking capabilities
   validate:
     type: functest
@@ -17,9 +17,9 @@ dovetail.tempest.network_api:
       - tempest_custom/tempest.log
       - tempest_custom/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.network_api.functest.log
-      - tempest_logs/dovetail.tempest.network_api.log
-      - tempest_logs/dovetail.tempest.network_api.html
+      - tempest_logs/functest.tempest.network_api.functest.log
+      - tempest_logs/functest.tempest.network_api.log
+      - tempest_logs/functest.tempest.network_api.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.network.test_extensions.ExtensionsTestJSON.test_list_show_extensions[id-ef28c7e6-e646-4979-9d67-deb207bc5564,smoke]

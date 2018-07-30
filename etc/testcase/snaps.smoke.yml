@@ -1,6 +1,6 @@
 ---
-dovetail.snaps.smoke:
-  name: dovetail.snaps.smoke
+functest.snaps.smoke:
+  name: functest.snaps.smoke
   objective: snaps smoke test cases
   validate:
     type: functest
@@ -9,6 +9,6 @@ dovetail.snaps.smoke:
     source_archive_files:
       - functest.log
     dest_archive_files:
-      - snaps_logs/dovetail.snaps.smoke.log
+      - snaps_logs/functest.snaps.smoke.log
     check_results_file: 'functest_results.txt'
     sub_testcase_list:

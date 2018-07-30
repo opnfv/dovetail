@@ -1,6 +1,6 @@
 ---
-dovetail.tempest.multi_node_scheduling:
-  name: dovetail.tempest.multi_node_scheduling
+functest.tempest.multi_node_scheduling:
+  name: functest.tempest.multi_node_scheduling
   objective: simple virtual machine resource scheduling on multiple nodes
   validate:
     type: functest
@@ -17,9 +17,9 @@ dovetail.tempest.multi_node_scheduling:
       - tempest_custom/tempest.log
       - tempest_custom/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.multi_node_scheduling.functest.log
-      - tempest_logs/dovetail.tempest.multi_node_scheduling.log
-      - tempest_logs/dovetail.tempest.multi_node_scheduling.html
+      - tempest_logs/functest.tempest.multi_node_scheduling.functest.log
+      - tempest_logs/functest.tempest.multi_node_scheduling.log
+      - tempest_logs/functest.tempest.multi_node_scheduling.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.scenario.test_server_multinode.TestServerMultinode.test_schedule_to_all_nodes[compute,id-9cecbe35-b9d4-48da-a37e-7ce70aa43d30,network,smoke]

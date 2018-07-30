@@ -1,6 +1,6 @@
 ---
-dovetail.ha.glance_api:
-  name: dovetail.ha.glance_api
+yardstick.ha.glance_api:
+  name: yardstick.ha.glance_api
   objective: >
     This test case will verify the high availability of the
     image service provided by OpenStack (glance-api) on control node.
@@ -10,9 +10,9 @@ dovetail.ha.glance_api:
   report:
     source_archive_files:
       - yardstick.log
-      - dovetail.ha.glance_api.out
+      - yardstick.ha.glance_api.out
     dest_archive_files:
-      - ha_logs/dovetail.ha.glance_api.log
-      - ha_logs/dovetail.ha.glance_api.out
-    check_results_file: ha_logs/dovetail.ha.glance_api.out
+      - ha_logs/yardstick.ha.glance_api.log
+      - ha_logs/yardstick.ha.glance_api.out
+    check_results_file: ha_logs/yardstick.ha.glance_api.out
     sub_testcase_list:

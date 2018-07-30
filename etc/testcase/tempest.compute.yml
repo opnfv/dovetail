@@ -1,6 +1,6 @@
 ---
-dovetail.tempest.compute:
-  name: dovetail.tempest.compute
+functest.tempest.compute:
+  name: functest.tempest.compute
   objective: tempest smoke test cases about compute
   validate:
     type: functest
@@ -17,9 +17,9 @@ dovetail.tempest.compute:
       - tempest_custom/tempest.log
       - tempest_custom/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.compute.functest.log
-      - tempest_logs/dovetail.tempest.compute.log
-      - tempest_logs/dovetail.tempest.compute.html
+      - tempest_logs/functest.tempest.compute.functest.log
+      - tempest_logs/functest.tempest.compute.log
+      - tempest_logs/functest.tempest.compute.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.compute.flavors.test_flavors.FlavorsV2TestJSON.test_get_flavor[id-1f12046b-753d-40d2-abb6-d8eb8b30cb2f,smoke]

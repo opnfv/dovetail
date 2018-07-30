@@ -1,6 +1,6 @@
 ---
-dovetail.tempest.network_scenario:
-  name: dovetail.tempest.network_scenario
+functest.tempest.network_scenario:
+  name: functest.tempest.network_scenario
   objective: tempest smoke scenario test cases covering networking capabilities
   validate:
     type: functest
@@ -17,9 +17,9 @@ dovetail.tempest.network_scenario:
       - tempest_custom/tempest.log
       - tempest_custom/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.network_scenario.functest.log
-      - tempest_logs/dovetail.tempest.network_scenario.log
-      - tempest_logs/dovetail.tempest.network_scenario.html
+      - tempest_logs/functest.tempest.network_scenario.functest.log
+      - tempest_logs/functest.tempest.network_scenario.log
+      - tempest_logs/functest.tempest.network_scenario.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_hotplug_nic[compute,id-c5adff73-e961-41f1-b4a9-343614f18cfa,network]

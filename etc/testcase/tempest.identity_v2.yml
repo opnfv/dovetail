@@ -1,6 +1,6 @@
 ---
-dovetail.tempest.identity_v2:
-  name: dovetail.tempest.identity_v2
+functest.tempest.identity_v2:
+  name: functest.tempest.identity_v2
   objective: tempest smoke test cases about identity v2
   validate:
     type: functest
@@ -17,9 +17,9 @@ dovetail.tempest.identity_v2:
       - tempest_custom/tempest.log
       - tempest_custom/tempest-report.html
     dest_archive_files:
-      - tempest_logs/dovetail.tempest.identity_v2.functest.log
-      - tempest_logs/dovetail.tempest.identity_v2.log
-      - tempest_logs/dovetail.tempest.identity_v2.html
+      - tempest_logs/functest.tempest.identity_v2.functest.log
+      - tempest_logs/functest.tempest.identity_v2.log
+      - tempest_logs/functest.tempest.identity_v2.html
     check_results_file: 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.identity.admin.v2.test_services.ServicesTestJSON.test_list_services[id-34ea6489-012d-4a86-9038-1287cadd5eca,smoke]
