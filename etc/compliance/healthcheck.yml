@@ -5,6 +5,6 @@ healthcheck:
   name: healthcheck
   testcases_list:
     optional:
-      - dovetail.healthcheck.snaps_health_check
-      - dovetail.healthcheck.connection_check
-      - dovetail.healthcheck.api_check
+      - functest.healthcheck.snaps_health_check
+      - functest.healthcheck.connection_check
+      - functest.healthcheck.api_check

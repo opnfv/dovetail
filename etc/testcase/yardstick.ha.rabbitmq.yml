@@ -1,0 +1,16 @@
+---
+yardstick.ha.rabbitmq:
+  name: yardstick.ha.rabbitmq
+  objective: OpenStack Controller Messaging Queue Service High Availability.
+  validate:
+    type: yardstick
+    testcase: opnfv_yardstick_tc056
+  report:
+    source_archive_files:
+      - yardstick.log
+      - yardstick.ha.rabbitmq.out
+    dest_archive_files:
+      - ha_logs/yardstick.ha.rabbitmq.log
+      - ha_logs/yardstick.ha.rabbitmq.out
+    check_results_file: ha_logs/yardstick.ha.rabbitmq.out
+    sub_testcase_list:

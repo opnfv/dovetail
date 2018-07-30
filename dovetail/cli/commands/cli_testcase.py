@@ -60,9 +60,7 @@ class CliTestcase(object):
                 click.echo("No testsuite defined yet in dovetail!!!")
 
     def show_testcase(self, name):
-        tc_path = os.path.join(
-            constants.TESTCASE_PATH,
-            "%s.yml" % (name[9:] if name.startswith('dovetail.') else name))
+        tc_path = os.path.join(constants.TESTCASE_PATH, "{}.yml".format(name))
         if os.path.isfile(tc_path):
             with open(tc_path, 'r') as stream:
                 try:

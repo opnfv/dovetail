@@ -1,0 +1,18 @@
+---
+yardstick.ha.neutron_server:
+  name: yardstick.ha.neutron_server
+  objective: >
+    This test case will verify the high availability of the
+    network service provided by OpenStack (neutro-server) on control node.
+  validate:
+    type: yardstick
+    testcase: opnfv_yardstick_tc045
+  report:
+    source_archive_files:
+      - yardstick.log
+      - yardstick.ha.neutron_server.out
+    dest_archive_files:
+      - ha_logs/yardstick.ha.neutron_server.log
+      - ha_logs/yardstick.ha.neutron_server.out
+    check_results_file: ha_logs/yardstick.ha.neutron_server.out
+    sub_testcase_list:

@@ -1,0 +1,14 @@
+---
+functest.healthcheck.connection_check:
+  name: functest.healthcheck.connection_check
+  objective: check OpenStack API services connectivity through SNAPS framework
+  validate:
+    type: functest
+    testcase: connection_check
+  report:
+    source_archive_files:
+      - functest.log
+    dest_archive_files:
+      - healthcheck_logs/functest.healthcheck.connection_check.log
+    check_results_file: 'functest_results.txt'
+    sub_testcase_list:

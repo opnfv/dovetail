@@ -1,0 +1,20 @@
+---
+yardstick.ha.disk_load:
+  name: yardstick.ha.disk_load
+  objective: >
+    This test case will verify the high availability of control node.
+    When the disk I/O of a specified disk is blocked, which breaks down the Openstack
+    services on this node. Read and write services should still be accessed by other
+    controller nodes, and the services on failed controller node should be isolated.
+  validate:
+    type: yardstick
+    testcase: opnfv_yardstick_tc052
+  report:
+    source_archive_files:
+      - yardstick.log
+      - yardstick.ha.disk_load.out
+    dest_archive_files:
+      - ha_logs/yardstick.ha.disk_load.log
+      - ha_logs/yardstick.ha.disk_load.out
+    check_results_file: ha_logs/yardstick.ha.disk_load.out
+    sub_testcase_list:

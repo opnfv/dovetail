@@ -1,0 +1,15 @@
+---
+functest.vnf.vims:
+  name: functest.vnf.vims
+  objective: testing for Clearwater IMS deployment using Cloudify orchestrator
+  validate:
+    type: functest
+    testcase: cloudify_ims
+    image_name: opnfv/functest-vnf
+  report:
+    source_archive_files:
+      - functest.log
+    dest_archive_files:
+      - vnf_logs/functest.vnf.vims.log
+    check_results_file: 'functest_results.txt'
+    sub_testcase_list:

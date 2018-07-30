@@ -1,0 +1,14 @@
+---
+functest.vping.ssh:
+  name: functest.vping.ssh
+  objective: testing for vping using ssh
+  validate:
+    type: functest
+    testcase: vping_ssh
+  report:
+    source_archive_files:
+      - functest.log
+    dest_archive_files:
+      - vping_logs/functest.vping.ssh.log
+    check_results_file: 'functest_results.txt'
+    sub_testcase_list:

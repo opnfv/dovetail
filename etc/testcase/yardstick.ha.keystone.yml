@@ -1,0 +1,18 @@
+---
+yardstick.ha.keystone:
+  name: yardstick.ha.keystone
+  objective: >
+    This test case will verify the high availability of the
+    user service provided by OpenStack (keystone) on control node.
+  validate:
+    type: yardstick
+    testcase: opnfv_yardstick_tc046
+  report:
+    source_archive_files:
+      - yardstick.log
+      - yardstick.ha.keystone.out
+    dest_archive_files:
+      - ha_logs/yardstick.ha.keystone.log
+      - ha_logs/yardstick.ha.keystone.out
+    check_results_file: ha_logs/yardstick.ha.keystone.out
+    sub_testcase_list:

@@ -24,7 +24,7 @@ testarea_supported:
   - ha
   - healthcheck
   - onap
-  - sdnvpn
+  - bgpvpn
   - security
   - snaps
   - stress

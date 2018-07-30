@@ -1,0 +1,18 @@
+---
+functest.bgpvpn.tenant_separation:
+  name: functest.bgpvpn.tenant_separation
+  objective: Separation of tenant networks through association to different VPNs
+  validate:
+    type: functest
+    testcase: bgpvpn
+    image_name: opnfv/functest-features
+    pre_copy:
+      exist_src_file: sdnvpn_config_testcase2.yaml
+      dest_path: /usr/lib/python2.7/site-packages/sdnvpn/test/functest/config.yaml
+  report:
+    source_archive_files:
+      - functest.log
+    dest_archive_files:
+      - bgpvpn_logs/functest.bgpvpn.tenant_separation.log
+    check_results_file: 'functest_results.txt'
+    sub_testcase_list:

@@ -7,4 +7,4 @@ debug:
   name: debug
   testcases_list:
     optional:
-      - dovetail.vping.userdata
+      - functest.vping.userdata

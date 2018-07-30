@@ -1,0 +1,16 @@
+---
+onap.onap.vnf_lifecycle:
+  name: onap.onap.vnf_lifecycle
+  objective: vnf lifecycle tests
+  validate:
+    type: vnftest
+    testcase: onap_vnftest_tc001
+  report:
+    source_archive_files:
+      - vnftest.log
+      - onap.onap.vnf_lifecycle.out
+    dest_archive_files:
+      - onap_logs/onap.onap.vnf_lifecycle.log
+      - onap_logs/onap.onap.vnf_lifecycle.out
+    check_results_file: onap_logs/onap.onap.vnf_lifecycle.out
+    sub_testcase_list:
