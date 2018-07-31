@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_928f8023",
+        "filename": "etc/compliance/ovp.next.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 3405
+      },
+      "writtenOn": "2018-07-31T09:47:13Z",
+      "side": 1,
+      "message": "functest.vnf.vrouter maybe optional. (We may suggest all vnf testcases or none in Dovetail)",
+      "revId": "731ad9d9375a62121a5b327b9232e81c32ddaa99",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
