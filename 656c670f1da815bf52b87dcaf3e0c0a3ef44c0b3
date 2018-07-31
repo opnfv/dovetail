@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_1d1701ef",
+        "filename": "docs/testing/user/testspecification/snaps_smoke/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-31T19:58:56Z",
+      "side": 1,
+      "message": "I wasn\u0027t aware of this documentation. Nevertheless, it is very outdated, unfortunately: It was last build 1,5 years ago, apparently:\nhttps://readthedocs.org/projects/snaps-provisioning/",
+      "range": {
+        "startLine": 28,
+        "startChar": 2,
+        "endLine": 28,
+        "endChar": 53
+      },
+      "revId": "656c670f1da815bf52b87dcaf3e0c0a3ef44c0b3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_7dd39d38",
+        "filename": "docs/testing/user/testspecification/snaps_smoke/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-07-31T19:58:56Z",
+      "side": 1,
+      "message": "Can you include the full list of tests? See the bottom of this file:\n\nhttps://build.opnfv.org/ci/view/dovetail/job/dovetail-compass-baremetal-default-optional-fraser/9/artifact/results/snaps_logs/dovetail.snaps.smoke.log",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 19
+      },
+      "revId": "656c670f1da815bf52b87dcaf3e0c0a3ef44c0b3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
