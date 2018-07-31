@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_b273a4b0",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 769,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-31T07:23:39Z",
+      "side": 1,
+      "message": "Why remove the description about this test case?",
+      "range": {
+        "startLine": 769,
+        "startChar": 9,
+        "endLine": 769,
+        "endChar": 63
+      },
+      "revId": "2b19cfaaa4e626e856b166c868b55f1abf76e056",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_526208d9",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 775,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-31T07:23:39Z",
+      "side": 1,
+      "message": "This is the controller restart, but its title is database",
+      "range": {
+        "startLine": 775,
+        "startChar": 0,
+        "endLine": 775,
+        "endChar": 30
+      },
+      "revId": "2b19cfaaa4e626e856b166c868b55f1abf76e056",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_f264fce6",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 848,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-07-31T07:23:39Z",
+      "side": 1,
+      "message": "remove this, and keep the short name the same way as others.",
+      "range": {
+        "startLine": 848,
+        "startChar": 12,
+        "endLine": 848,
+        "endChar": 17
+      },
+      "revId": "2b19cfaaa4e626e856b166c868b55f1abf76e056",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
