@@ -84,7 +84,7 @@ Test Case 1 - Controller node OpenStack service down - nova-api
 Short name
 ----------
 
-dovetail.ha.nova_api
+yardstick.ha.nova_api
 
 Yardstick test case: opnfv_yardstick_tc019.yaml
 
@@ -185,7 +185,7 @@ Test Case 2 - Controller node OpenStack service down - neutron-server
 Short name
 ----------
 
-dovetail.ha.neutron_server
+yardstick.ha.neutron_server
 
 Yardstick test case: opnfv_yardstick_tc045.yaml
 
@@ -272,7 +272,7 @@ Test Case 3 - Controller node OpenStack service down - keystone
 Short name
 ----------
 
-dovetail.ha.keystone
+yardstick.ha.keystone
 
 Yardstick test case: opnfv_yardstick_tc046.yaml
 
@@ -353,7 +353,7 @@ Test Case 4 - Controller node OpenStack service down - glance-api
 Short name
 ----------
 
-dovetail.ha.glance_api
+yardstick.ha.glance_api
 
 Yardstick test case: opnfv_yardstick_tc047.yaml
 
@@ -444,7 +444,7 @@ Test Case 5 - Controller node OpenStack service down - cinder-api
 Short name
 ----------
 
-dovetail.ha.cinder_api
+yardstick.ha.cinder_api
 
 Yardstick test case: opnfv_yardstick_tc048.yaml
 
@@ -526,7 +526,7 @@ Test Case 6 - Controller Node CPU Overload High Availability
 Short name
 ----------
 
-dovetail.ha.cpu_load
+yardstick.ha.cpu_load
 
 Yardstick test case: opnfv_yardstick_tc051.yaml
 
@@ -614,7 +614,7 @@ Test Case 7 - Controller Node Disk I/O Overload High Availability
 Short name
 ----------
 
-dovetail.ha.disk_load
+yardstick.ha.disk_load
 
 Yardstick test case: opnfv_yardstick_tc052.yaml
 
@@ -690,7 +690,7 @@ Test Case 8 - Controller Load Balance as a Service High Availability
 Short name
 ----------
 
-dovetail.ha.haproxy
+yardstick.ha.haproxy
 
 Yardstick test case: opnfv_yardstick_tc053.yaml
 
@@ -772,7 +772,7 @@ Test Case 9 - Controller node OpenStack service down - Database
 Short name
 ----------
 
-dovetail.ha.database
+yardstick.ha.database
 
 Yardstick test case: opnfv_yardstick_tc090.yaml
 
@@ -856,7 +856,7 @@ Test Case 10 - Controller Messaging Queue as a Service High Availability
 Short name
 ----------
 
-dovetail.ha.messaging_queue_service_down
+yardstick.ha.rabbitmq
 
 Yardstick test case: opnfv_yardstick_tc056.yaml
 
@@ -881,7 +881,10 @@ There is more than one controller node, which is providing the "messaging queue"
 service. Denoted as Node1 in the following configuration.
 
 Basic test flow execution description and pass/fail criteria
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+------------------------------------------------------------
+
+Methodology for verifying service continuity and recovery
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 The high availability of "messaging queue" service is evaluated by monitoring
 service outage time and process outage time.
@@ -934,7 +937,7 @@ Test Case 11 - Controller node OpenStack service down - Controller Restart
 Short name
 ----------
 
-dovetail.ha.controller_restart
+yardstick.ha.controller_restart
 
 Yardstick test case: opnfv_yardstick_tc025.yaml
 
@@ -1000,4 +1003,80 @@ Post conditions
 
 The controller has been restarted
 
+----------------------------------------------------------------------------
+Test Case 12 - OpenStack Controller Virtual Router Service High Availability
+----------------------------------------------------------------------------
 
+Short name
+----------
+
+yardstick.ha.neutron_l3_agent
+
+Yardstick test case: opnfv_yardstick_tc058.yaml
+
+Use case specification
+----------------------
+
+This test case will verify the high availability of virtual routers(L3 agent)
+on controller node. When a virtual router service on a specified controller
+node is shut down, this test case will check whether the network of virtual
+machines will be affected, and whether the attacked virtual router service
+will be recovered.
+
+Test preconditions
+------------------
+
+There is more than one controller node, which is providing the Neutron API
+extension called "neutron-l3-agent" virtual router service API.
+
+Denoted as Node1 in the following configuration.
+
+Basic test flow execution description and pass/fail criteria
+------------------------------------------------------------
+
+Methodology for verifying service continuity and recovery
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The high availability of "neutrol-l3-agent" virtual router service is evaluated
+by monitoring service outage time and process outage time.
+
+Service outage is tested using ping to virtual machines. Ping tests that
+the network routing of virtual machines is ok.
+When the response fails, the virtual router service is considered in outage.
+The time between the first response failure and the last response failure is
+considered as service outage time.
+
+Process outage time is tested by checking the status of processes of "neutron-l3-agent"
+service on the selected controller node. The time of those processes being
+killed to the time of those processes being recovered is the process outage time.
+
+Process recovery is verified by checking the existence of processes of
+"neutron-l3-agent" service.
+
+Test execution
+''''''''''''''
+* Test action 1: Two host VMs are booted, these two hosts are in two different
+networks, the networks are connected by a virtual router.
+* Test action 2: Start monitors: each monitor will run with independently process.
+  The monitor info will be collected.
+* Test action 3: Do attacker: Connect the host through SSH, and then execute the kill
+  process script with param value specified by “process_name”
+* Test action 4: Stop monitors after a period of time specified by “waiting_time”
+  The monitor info will be aggregated.
+* Test action 5: Verify the SLA and set the verdict of the test case to pass or fail.
+
+Pass / fail criteria
+''''''''''''''''''''
+
+Check whether the SLA is passed:
+- The process outage time is less than 30s.
+- The service outage time is less than 5s.
+
+A negative result will be generated if the above is not met in completion.
+
+Post conditions
+---------------
+
+Delete image with "openstack image delete neutron-l3-agent_ha_image".
+
+Delete flavor with "openstack flavor delete neutron-l3-agent_ha_flavor".
