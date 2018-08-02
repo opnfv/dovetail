@@ -84,7 +84,7 @@ Test Case 1 - Controller node OpenStack service down - nova-api
 Short name
 ----------
 
-dovetail.ha.nova_api
+yardstick.ha.nova_api
 
 Yardstick test case: opnfv_yardstick_tc019.yaml
 
@@ -185,7 +185,7 @@ Test Case 2 - Controller node OpenStack service down - neutron-server
 Short name
 ----------
 
-dovetail.ha.neutron_server
+yardstick.ha.neutron_server
 
 Yardstick test case: opnfv_yardstick_tc045.yaml
 
@@ -272,7 +272,7 @@ Test Case 3 - Controller node OpenStack service down - keystone
 Short name
 ----------
 
-dovetail.ha.keystone
+yardstick.ha.keystone
 
 Yardstick test case: opnfv_yardstick_tc046.yaml
 
@@ -353,7 +353,7 @@ Test Case 4 - Controller node OpenStack service down - glance-api
 Short name
 ----------
 
-dovetail.ha.glance_api
+yardstick.ha.glance_api
 
 Yardstick test case: opnfv_yardstick_tc047.yaml
 
@@ -444,7 +444,7 @@ Test Case 5 - Controller node OpenStack service down - cinder-api
 Short name
 ----------
 
-dovetail.ha.cinder_api
+yardstick.ha.cinder_api
 
 Yardstick test case: opnfv_yardstick_tc048.yaml
 
@@ -526,7 +526,7 @@ Test Case 6 - Controller Node CPU Overload High Availability
 Short name
 ----------
 
-dovetail.ha.cpu_load
+yardstick.ha.cpu_load
 
 Yardstick test case: opnfv_yardstick_tc051.yaml
 
@@ -614,7 +614,7 @@ Test Case 7 - Controller Node Disk I/O Overload High Availability
 Short name
 ----------
 
-dovetail.ha.disk_load
+yardstick.ha.disk_load
 
 Yardstick test case: opnfv_yardstick_tc052.yaml
 
@@ -690,7 +690,7 @@ Test Case 8 - Controller Load Balance as a Service High Availability
 Short name
 ----------
 
-dovetail.ha.haproxy
+yardstick.ha.haproxy
 
 Yardstick test case: opnfv_yardstick_tc053.yaml
 
@@ -772,7 +772,7 @@ Test Case 9 - Controller node OpenStack service down - Database
 Short name
 ----------
 
-dovetail.ha.database
+yardstick.ha.database
 
 Yardstick test case: opnfv_yardstick_tc090.yaml
 
@@ -856,7 +856,7 @@ Test Case 10 - Controller Messaging Queue as a Service High Availability
 Short name
 ----------
 
-dovetail.ha.messaging_queue_service_down
+yardstick.ha.rabbitmq
 
 Yardstick test case: opnfv_yardstick_tc056.yaml
 
@@ -881,7 +881,10 @@ There is more than one controller node, which is providing the "messaging queue"
 service. Denoted as Node1 in the following configuration.
 
 Basic test flow execution description and pass/fail criteria
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+------------------------------------------------------------
+
+Methodology for verifying service continuity and recovery
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 The high availability of "messaging queue" service is evaluated by monitoring
 service outage time and process outage time.
@@ -934,7 +937,7 @@ Test Case 11 - Controller node OpenStack service down - Controller Restart
 Short name
 ----------
 
-dovetail.ha.controller_restart
+yardstick.ha.controller_restart
 
 Yardstick test case: opnfv_yardstick_tc025.yaml
 
@@ -1000,4 +1003,90 @@ Post conditions
 
 The controller has been restarted
 
+----------------------------------------------------------------------------
+Test Case 12 - OpenStack Controller Virtual Router Service High Availability
+----------------------------------------------------------------------------
 
+Short name
+----------
+
+yardstick.ha.neutron_l3_agent
+
+Yardstick test case: opnfv_yardstick_tc058.yaml
+
+Use case specification
+----------------------
+
+This test case will verify the high availability of virtual routers(L3 agent) 
+on controller node. When a virtual router service on a specified controller
+node is shut down, this test case will check whether the network of virtual 
+machines will be affected, and whether the attacked virtual router service
+will be recovered.
+
+Test preconditions
+------------------
+
+In this test case, an attacker called "kill-process" is needed.
+This attacker includes three parameters: fault_type, process_name and host.
+Attackers default values are -fault_type: “kill-process” -process_name:
+“l3agent” -host: node1
+
+Basic test flow execution description and pass/fail criteria
+------------------------------------------------------------
+
+Methodology for verifying service continuity and recovery
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+This test case kills the processes of virtual router service (l3-agent) on a
+selected controller node(the node holds the active l3-agent), then checks
+whether the network routing of virtual machines is OK and whether the killed
+service will be recovered.
+
+In this test case, two kinds of monitor are needed:
+1. the “ip_status” monitor that pings a specific ip to check the connectivity
+of this ip, which needs two parameters:
+
+1) monitor_type: It should be always set to “ip_status” for this monitor.
+2) ip_address: The ip to be pinged. In this case, ip_address will be either
+an ip address of external network or an ip address of a virtual machine.
+3) host: The node on which ping will be executed, in this case the host will
+be a virtual machine.
+
+2. the “process” monitor check whether a process is running on a specific node,
+which needs three parameters:
+1) monitor_type: It should be always set to “process” for this monitor.
+2) process_name: the process name for monitor, default value “neutron-l3-agent”.
+3) host: which is the name of the node running the process.
+
+Example:
+monitor1-1: -monitor_type: “ip_status” -host: 172.16.0.11 -ip_address: 172.16.1.11
+monitor1-2: -monitor_type: “ip_status” -host: 172.16.0.11 -ip_address: 8.8.8.8
+monitor2: -monitor_type: “process” -process_name: “l3agent” -host: node1
+
+Test execution
+''''''''''''''
+* Test action 1: Two host VMs are booted, these two hosts are in two different
+networks, the networks are connected by a virtual router.
+* Test action 2: Start monitors: each monitor will run with independently process.
+  The monitor info will be collected.
+* Test action 3: Do attacker: Connect the host through SSH, and then execute the kill
+  process script with param value specified by “process_name”
+* Test action 4: Stop monitors after a period of time specified by “waiting_time”
+  The monitor info will be aggregated.
+* Test action 5: Verify the SLA and set the verdict of the test case to pass or fail.
+
+Pass / fail criteria
+''''''''''''''''''''
+
+Check whether the SLA is passed:
+- The process outage time is less than 30s.
+- The service outage time is less than 5s.
+
+A negative result will be generated if the above is not met in completion.
+
+Post conditions
+---------------
+
+Delete image with "openstack image delete neutron-l3-agent_ha_image".
+
+Delete flavor with "openstack flavor delete neutron-l3-agent_ha_flavor".
