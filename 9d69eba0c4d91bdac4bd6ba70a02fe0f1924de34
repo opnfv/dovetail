@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_defe1f38",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 1032,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-03T06:51:06Z",
+      "side": 1,
+      "message": "The precondition here means all works needed by the user to prepare. For example there should be more than one controller node, something like this.",
+      "range": {
+        "startLine": 1029,
+        "startChar": 0,
+        "endLine": 1032,
+        "endChar": 22
+      },
+      "revId": "9d69eba0c4d91bdac4bd6ba70a02fe0f1924de34",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_3efc7b3e",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 1059,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-03T06:51:06Z",
+      "side": 1,
+      "message": "Not very sure about whether these lines can be displayed as index due to the rst file format.",
+      "range": {
+        "startLine": 1046,
+        "startChar": 0,
+        "endLine": 1059,
+        "endChar": 59
+      },
+      "revId": "9d69eba0c4d91bdac4bd6ba70a02fe0f1924de34",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_1ef9b74d",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 1064,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-03T06:51:06Z",
+      "side": 1,
+      "message": "Also these 3 lines.",
+      "range": {
+        "startLine": 1062,
+        "startChar": 0,
+        "endLine": 1064,
+        "endChar": 72
+      },
+      "revId": "9d69eba0c4d91bdac4bd6ba70a02fe0f1924de34",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
