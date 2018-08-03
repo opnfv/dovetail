@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_def45f89",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 884,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-08-03T06:15:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a561d44_beb40bf3",
+      "range": {
+        "startLine": 884,
+        "startChar": 0,
+        "endLine": 884,
+        "endChar": 60
+      },
+      "revId": "e171a15cdfa3fdf7ab38905440848bae2040a187",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_3ec8fb73",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 1
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_3ef2bb9a",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 1007,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-08-03T06:15:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a561d44_3ec8fb73",
+      "range": {
+        "startLine": 1007,
+        "startChar": 76,
+        "endLine": 1007,
+        "endChar": 77
+      },
+      "revId": "e171a15cdfa3fdf7ab38905440848bae2040a187",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_fecde387",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 1
@@ -59,6 +107,30 @@
       "writtenOn": "2018-08-03T02:25:35Z",
       "side": 1,
       "message": "The default value is \u0027neutron-l3-agent\u0027.",
+      "range": {
+        "startLine": 1058,
+        "startChar": 71,
+        "endLine": 1058,
+        "endChar": 78
+      },
+      "revId": "e171a15cdfa3fdf7ab38905440848bae2040a187",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_1eeff7b1",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 1058,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-08-03T06:15:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a561d44_fecde387",
       "range": {
         "startLine": 1058,
         "startChar": 71,
