@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_5e9a0f15",
+        "filename": "docs/testing/user/testspecification/highavailability/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 1032,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-08-03T08:27:22Z",
+      "side": 1,
+      "message": "ok, i will follow same format what is used in other test case descriptions",
+      "parentUuid": "9a561d44_defe1f38",
+      "range": {
+        "startLine": 1029,
+        "startChar": 0,
+        "endLine": 1032,
+        "endChar": 22
+      },
+      "revId": "9d69eba0c4d91bdac4bd6ba70a02fe0f1924de34",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_3efc7b3e",
         "filename": "docs/testing/user/testspecification/highavailability/index.rst",
         "patchSetId": 3
