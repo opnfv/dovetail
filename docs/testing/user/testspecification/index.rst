@@ -30,6 +30,8 @@ specification documents.
   ./highavailability/index.rst
   ./tempest_osinterop/index.rst
   ./vping/index.rst
+  ./tempest_trunk_ports/index.rst
+  ./security_patrole/index.rst
   ./tempest_ipv6/index.rst
   ./tempest_network_security/index.rst
   ./tempest_network/network_scenario.rst
