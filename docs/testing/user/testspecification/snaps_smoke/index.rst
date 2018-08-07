@@ -172,7 +172,7 @@ by the tests, review the Python source code accessible via the following links:
     - snaps.openstack.tests.create_instance_tests.CreateInstanceVolumeTests.test_create_instance_with_one_volume
     - snaps.openstack.tests.create_instance_tests.CreateInstanceVolumeTests.test_create_instance_with_two_volumes
 
-- `Create Instance Signle Network tests <https://github.com/opnfv/snaps/blob/stable/fraser/snaps/openstack/tests/create_instance_tests.py#L687>`_
+- `Create Instance Single Network tests <https://github.com/opnfv/snaps/blob/stable/fraser/snaps/openstack/tests/create_instance_tests.py#L687>`_
     - snaps.openstack.tests.create_instance_tests.CreateInstanceSingleNetworkTests.test_single_port_static
     - snaps.openstack.tests.create_instance_tests.CreateInstanceSingleNetworkTests.test_ssh_client_fip_after_active
     - snaps.openstack.tests.create_instance_tests.CreateInstanceSingleNetworkTests.test_ssh_client_fip_after_init
