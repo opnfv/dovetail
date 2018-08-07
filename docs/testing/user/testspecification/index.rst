@@ -39,3 +39,9 @@ specification documents.
   ./vnf/index.rst
   ./stress/index.rst
   ./snaps_smoke/index.rst
+  ./tempest_compute/index.rst
+  ./tempest_identity_v2/index.rst
+  ./tempest_identity_v3/index.rst
+  ./tempest_image/index.rst
+  ./tempest_network/index.rst
+  ./tempest_volume/index.rst
