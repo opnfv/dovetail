@@ -24,7 +24,6 @@ functest.tempest.neutron_trunk_ports:
       - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_create_trunk_empty_subports_list
       - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_create_trunk_subports_not_specified
       - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_create_update_trunk
-      - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_create_update_trunk_with_description
       - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_delete_trunk_with_subport_is_allowed
       - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_get_subports
       - neutron.tests.tempest.api.test_trunk.TrunkTestJSON.test_list_trunks
