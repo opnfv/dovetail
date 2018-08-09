@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_3c9c7e69",
+        "filename": "docs/testing/user/testspecification/tempest_compute/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-09T02:32:48Z",
+      "side": 1,
+      "message": "extra withspace",
+      "range": {
+        "startLine": 14,
+        "startChar": 71,
+        "endLine": 14,
+        "endChar": 72
+      },
+      "revId": "25896cf82e3a2e44800a52c8fc02f11a20c94059",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_9c882a24",
+        "filename": "docs/testing/user/testspecification/tempest_compute/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-09T02:32:48Z",
+      "side": 1,
+      "message": "\u0027delete\u0027 or \u0027delete list\u0027?",
+      "range": {
+        "startLine": 22,
+        "startChar": 13,
+        "endLine": 22,
+        "endChar": 24
+      },
+      "revId": "25896cf82e3a2e44800a52c8fc02f11a20c94059",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_7c8d5631",
+        "filename": "docs/testing/user/testspecification/tempest_compute/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-09T02:32:48Z",
+      "side": 1,
+      "message": "?",
+      "range": {
+        "startLine": 96,
+        "startChar": 64,
+        "endLine": 96,
+        "endChar": 96
+      },
+      "revId": "25896cf82e3a2e44800a52c8fc02f11a20c94059",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_dc82a2ff",
+        "filename": "docs/testing/user/testspecification/tempest_identity_v3/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-09T02:32:48Z",
+      "side": 1,
+      "message": "v3",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 6,
+        "endChar": 19
+      },
+      "revId": "25896cf82e3a2e44800a52c8fc02f11a20c94059",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_bc87ee0e",
+        "filename": "docs/testing/user/testspecification/tempest_image/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-09T02:32:48Z",
+      "side": 1,
+      "message": "image",
+      "range": {
+        "startLine": 6,
+        "startChar": 8,
+        "endLine": 6,
+        "endChar": 19
+      },
+      "revId": "25896cf82e3a2e44800a52c8fc02f11a20c94059",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
