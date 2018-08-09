@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_c1b0fff6",
+        "filename": "docs/testing/user/testspecification/snaps_smoke/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-09T01:40:35Z",
+      "side": 1,
+      "message": "single",
+      "range": {
+        "startLine": 175,
+        "startChar": 19,
+        "endLine": 175,
+        "endChar": 25
+      },
+      "revId": "c4d8c6f551ebdbfd932c40d4ddc44aae27c36360",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
