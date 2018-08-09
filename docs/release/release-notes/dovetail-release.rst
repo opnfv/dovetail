@@ -5,13 +5,13 @@
 License
 =======
 
-OPNFV Danube release note for Dovetail Docs
+OPNFV Fraser release note for Dovetail Docs
 are licensed under a Creative Commons Attribution 4.0 International License.
 You should have received a copy of the license along with this.
 If not, see <http://creativecommons.org/licenses/by/4.0/>.
 
 ==================================================================
-OPNFV Verified Program (OVP) 2018.01 / Dovetail 1.0.0 Release Note
+OPNFV Verified Program (OVP) 2018.08 / Dovetail 1.0.0 Release Note
 ==================================================================
 
 Abstract
@@ -30,6 +30,10 @@ Version History
 | 2018-01-21 | 1.0.0    | Dovetail for OVP 2018.01 |
 |            |          | Danube release           |
 +------------+----------+--------------------------+
+| 2018-08-09 | 2.0.0    | Dovetail for OVP 2018.08 |
+|            |          | Fraser release           |
++------------+----------+--------------------------+
+
 
 OPNFV Danube Release
 ====================
@@ -37,7 +41,7 @@ OPNFV Danube Release
 The OPNFV Verified Program (OVP) allows vendors and operators to obtain 'OPNFV Verified'
 status based on an agreed upon set of compliance verification test cases that align to OPNFV
 releases. The reference System under Test (SUT) are the NFV components deployed by the OPNFV
-installers for a given release, where OVP 2018.01 is based on the Danube release. Participants
+installers for a given release, where OVP 2018.08 is based on the Fraser release. Participants
 of the program can verify commercial or open source offerings against an OVP release. This implies
 that the SUT used for verification has interfaces, components, functions and behaviors that align
 to OPNFV installer integrations.
@@ -52,108 +56,104 @@ Dovetail works in conjunction with a web portal interface dubbed the 'OVP web po
 users to upload test results to a centralized community repository. This facilitates user
 collaboration, result sharing, self-testing and community reviews. It also serves as a hub for
 new participants to learn about the program and access key resources. The link for this portal
-is at:
-
- * https://verified.opnfv.org
+is at: `OPNFV Verified Program <https://verified.opnfv.org>`_.
 
 Use of the OVP web portal is open to all and only requires a valid Linux Foundation or OpenStack
 ID to login. Users are welcome to use the portal to upload, inspect and share results in a private
 manner. In order to submit results for official review, the first step is apply for acceptance
-into the program with the participation form provided in the link:
-
- * https://na3.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=579ac00d-0a1f-4db3-82ea-ddd977769a60
+into the program with the participation form provided in the link: `OPNFV Verified Program Participation Form <https://na3.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=579ac00d-0a1f-4db3-82ea-ddd977769a60>`_
 
 Test Suites & Test Areas
 ------------------------
 
 OVP/Dovetail groups test cases into test suites and test areas. Test suites are currently a basic
-categorization around releases for the most part. Executing the test suite 'ovp.1.0.0' without
-further specification will run all the test cases in the OVP 2018.01 release. Test suites are
+categorization around releases for the most part. Executing the test suite 'ovp.2.0.0' without
+further specification will run all the test cases in the OVP 2018.08 release. Test suites are
 divided into test areas that can be executed separately.
 
-Test areas include a division into 'mandatory' and 'optional' in an overarching categorization.
+Test areas include a division into **'mandatory'** and **'optional'** in an overarching categorization.
 The mandatory test area is further subdivided into the following three test areas, which can
 be executed independently:
 
- * osinterop
- * vping
- * ha
+Mandatory test area
+ - Vping
+ - Stress
+ - Tempest Smoke
+ - Patrole RBAC
+ - High-availability
 
-The optional test area is further subdivided into the following three test areas:
-
- * ipv6
- * tempest
- * sdnvpn
+Optional test area
+    - VNF
+    - OPNFV SNAPS smoke
+    - High-availability
+    - Tempest (optional tests)
+    - BGPVPN
 
 All the mandatory test areas are required to be executed with passing results for all inclusive
 test cases for results to be reviewed and approved by the community made up of peer reviewers.
 The optional test areas are not required to be executed for the official compliance verification
-review in the OVP 2018.01 release. However, execution of these areas is encouraged, as some
+review in the OVP 2018.08 release. However, execution of these areas is encouraged, as some
 optional test areas may become mandatory in future releases.
 
 Test Cases and Sub Test Cases
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 Each test area consists of multiple test cases where each test case can be a single test or
 broken down into sub test cases. A listing of test cases with the number of sub test cases noted
-in parenthesis is shown below for the OVP 2018.01 release.
+in parenthesis is shown below for the OVP 2018.08 release.
 
 **Mandatory**
- * dovetail.osinterop.tc001 (205)
- * dovetail.vping.tc001 (1)
- * dovetail.vping.tc002 (1)
- * dovetail.ha.tc001 (1)
- * dovetail.ha.tc002 (1)
- * dovetail.ha.tc003 (1)
- * dovetail.ha.tc004 (1)
- * dovetail.ha.tc005 (1)
- * dovetail.ha.tc006 (1)
- * dovetail.ha.tc007 (1)
- * dovetail.ha.tc008 (1)
 
-There are a total of 215 mandatory test cases (osinterop: 205, vping: 2, ha: 8).
+- dovetail.vping.userdata (1)
+- dovetail.vping.ssh (1)
+- dovetail.stress.ping
+- dovetail.tempest.osinterop (204)
+- dovetail.tempest.compute (12)
+- dovetail.tempest.identity_v2 (5)
+- dovetail.tempest.identity_v3 (11)
+- dovetail.tempest.image (2)
+- dovetail.tempest.network_api (14)
+- dovetail.tempest.volume (2)
+- dovetail.tempest.neutron_trunk_ports (43)
+- dovetail.tempest.ipv6_api (21)
+- dovetail.security.patrole (119)
+- dovetail.ha.nova_api (1)
+- dovetail.ha.neutron_server (1)
+- dovetail.ha.keystone (1)
+- dovetail.ha.glance_api (1)
+- dovetail.ha.cinder_api (1)
+- dovetail.ha.cpu_load (1)
+- dovetail.ha.disk_load (1)
+- dovetail.ha.haproxy (1)
+- dovetail.ha.rabbitmq (1)
+- dovetail.ha.database  (1)
+
+
+There are a total of 445 mandatory test cases.
 
 **Optional**
- * dovetail.ipv6.tc001 (3)
- * dovetail.ipv6.tc002 (1)
- * dovetail.ipv6.tc003 (1)
- * dovetail.ipv6.tc004 (2)
- * dovetail.ipv6.tc005 (2)
- * dovetail.ipv6.tc006 (1)
- * dovetail.ipv6.tc007 (1)
- * dovetail.ipv6.tc008 (1)
- * dovetail.ipv6.tc009 (1)
- * dovetail.ipv6.tc010 (1)
- * dovetail.ipv6.tc011 (1)
- * dovetail.ipv6.tc012 (1)
- * dovetail.ipv6.tc013 (1)
- * dovetail.ipv6.tc014 (1)
- * dovetail.ipv6.tc015 (1)
- * dovetail.ipv6.tc016 (1)
- * dovetail.ipv6.tc017 (1)
- * dovetail.ipv6.tc018 (1)
- * dovetail.ipv6.tc019 (1)
- * dovetail.ipv6.tc020 (1)
- * dovetail.ipv6.tc021 (1)
- * dovetail.ipv6.tc022 (1)
- * dovetail.ipv6.tc023 (1)
- * dovetail.ipv6.tc024 (1)
- * dovetail.ipv6.tc025 (1)
- * dovetail.tempest.tc001 (1)
- * dovetail.tempest.tc002 (6)
- * dovetail.tempest.tc003 (5)
- * dovetail.tempest.tc004 (12)
- * dovetail.tempest.tc005 (6)
- * dovetail.sdnvpn.tc001 (1)
- * dovetail.sdnvpn.tc002 (1)
- * dovetail.sdnvpn.tc004 (1)
- * dovetail.sdnvpn.tc008 (1)
 
-There are a total of 63 optional test cases (ipv6: 29, tempest: 30, sdnvpn: 4).
+- functest.vnf.vims (1)
+- functest.vnf.vepc (1)
+- functest.snaps.smoke  (1)
+- yardstick.ha.neutron_l3_agent  (1)
+- yardstick.ha.controller_restart (1)
+- functest.tempest.ipv6_scenario (8)
+- functest.tempest.multi_node_scheduling (6)
+- functest.tempest.network_security (6)
+- functest.tempest.vm_lifecycle (12)
+- functest.tempest.network_scenario (5)
+- functest.tempest.bgpvpn (15)
+- functest.bgpvpn.subnet_connectivity (1)
+- functest.bgpvpn.tenant_separation (1)
+- functest.bgpvpn.router_association (1)
+- functest.bgpvpn.router_association_floating_ip (1)
+
+
+There are a total of 61 optional test cases.
 
 Further details on test area breakdown with expanded test and sub test case names is available at:
-
- * http://docs.opnfv.org/en/stable-danube/submodules/dovetail/docs/testing/developer/testscope/index.html
+`Compliance and Verification program accepted test cases <https://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/developer/testscope/index.html>`_
 
 OPNFV Test Projects and Components
 ----------------------------------
@@ -168,43 +168,41 @@ Other upstream components integrated into the Dovetail framework are:
  * TestAPI
  * MongoDB
 
-The above components are part of the OPNFV test collection framework. Further information on how
-this framework is used to collect test results can be found at:
+.. The above components are part of the OPNFV test collection framework. Further information on how
+.. this framework is used to collect test results can be found at:
 
- * http://docs.opnfv.org/en/stable-danube/submodules/functest/docs/testing/developer/devguide/#test-collection-framework
+.. http://docs.opnfv.org/en/stable-danube/submodules/functest/docs/testing/developer/devguide/#test-collection-framework
 
 The test frameworks and components above are packaged as Docker containers for Dovetail to employ.
 Dovetail creates OVP-specific containers for Functest and TestAPI, while it uses the default
 Yardstick Danube container. Additionally, a generic container version of MongoDB is used.
 Installation instructions for Dovetail and its dependent containers can be found in the user
-guide at:
-
- * http://docs.opnfv.org/en/stable-danube/submodules/dovetail/docs/testing/user/userguide/testing_guide.html
+guide at `Dovetail Testing Guide <https://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/userguide/testing_guide.html>`_.
 
 Acceptence and Marketing
 ------------------------
 
-Upon successful community review of results for OVP 2018.01, the OPNFV C&C Committee on behalf of
+Upon successful community review of results for OVP 2018.08, the OPNFV C&C Committee on behalf of
 the Board of Directors can award a product 'OPNFV Verified' status. Use of 'OPNFV Verified'
 Program Marks shall be awarded to the platform used for compliance verification. The category label
 of 'Infrastructure' is used within the Program Marks logo and limits the scope of this OVP release
 to a SUT consisting of NFVI and VIM components using ETSI terminology. It does not provide
-compliance verification for specific VNFs in any fashion. The date '2018.01' corresponds to a
-reference SUT that aligns to the OPNFV Danube release and currently aligns to the Dovetail
-framework version 1.0.0.
+compliance verification for specific VNFs in any fashion. The date '2018.08' corresponds to a
+reference SUT that aligns to the OPNFV Fraser release and currently aligns to the Dovetail
+framework version 2.0.0.
 
 Organizations shall not use the Program Marks in any way that would associate it with any
 individual or company logo or brand, beyond the association to the specific platform to which it
 was awarded. While OpenStack RefStack interoperability and Tempest integration test cases are
-executed as part of the OVP 2018.01 compliance verification test suites, the OVP does not grant or
+executed as part of the OVP 2018.08 compliance verification test suites, the OVP does not grant or
 award OpenStack Marks in any fashion. 'OPNFV Verified' status does not assert readiness for
 commercial deployment.
 
 Please refer to the program governance guidelines and term & conditions documents for additional
 details using the respective links:
 
- * https://www.opnfv.org/wp-content/uploads/sites/12/2018/01/OVP-Governance-Guidelines-1.0.1-012218.pdf
- * https://www.opnfv.org/wp-content/uploads/sites/12/2018/01/OVP-Terms-and-Conditions-011918.pdf
+* `OVP Governance Guidelines <https://www.opnfv.org/wp-content/uploads/sites/12/2018/01/OVP-Governance-Guidelines-1.0.1-012218.pdf>`_
+* `OVP Terms and Conditions <https://www.opnfv.org/wp-content/uploads/sites/12/2018/01/OVP-Terms-and-Conditions-011918.pdf>`_
 
 Release Data
 ============
@@ -213,16 +211,16 @@ Release Data
 | **Project**                          | Dovetail                              |
 |                                      |                                       |
 +--------------------------------------+---------------------------------------+
-| **Repo tag**                         | ovp.1.0.0                             |
+| **Repo tag**                         | ovp.2.0.0                             |
 |                                      |                                       |
 +--------------------------------------+---------------------------------------+
 | **Release designation**              | OPNFV Verified Program (OVP)          |
-|                                      | 2018.01 (Danube)                      |
+|                                      | 2018.08 (Fraser)                      |
 +--------------------------------------+---------------------------------------+
-| **Release date**                     | January 21st 2018                      |
+| **Release date**                     | August xxxx 2018                      |
 |                                      |                                       |
 +--------------------------------------+---------------------------------------+
-| **Purpose of the delivery**          | Support OVP 2018.01 release with      |
+| **Purpose of the delivery**          | Support OVP 2018.08 release with      |
 |                                      | OPNFV Danube release as reference SUT |
 +--------------------------------------+---------------------------------------+
 
@@ -236,76 +234,73 @@ Software
 |  Docker         | Docker Image         | Tag         |
 |  Container      |                      |             |
 +=================+======================+=============+
-| dovetail        |  opnfv/dovetail      |  ovp.1.0.0  |
+| dovetail        |  opnfv/dovetail      |  ovp.2.0.0  |
 +-----------------+----------------------+-------------+
-| functest        |  opnfv/functest      |  ovp.1.0.0  |
+| functest        |  opnfv/functest      |  fraser     |
 +-----------------+----------------------+-------------+
-| yardstick       |  opnfv/yardstick     |  danube.3.2 |
+| yardstick       |  opnfv/yardstick     |  stable     |
 +-----------------+----------------------+-------------+
-| testapi         |  opnfv/testapi       |  ovp.1.0.0  |
+| testapi         |  opnfv/testapi       |  ovp.2.0.0  |
 +-----------------+----------------------+-------------+
 | mongo           |  mongo               |  3.2.1      |
 +-----------------+----------------------+-------------+
 
+Docker images:
 
- - Dovetail Docker images: https://hub.docker.com/r/opnfv/dovetail
-
- - Functest Docker images: https://hub.docker.com/r/opnfv/functest
-
- - Yardstick Docker images: https://hub.docker.com/r/opnfv/yardstick
-
- - TestAPI Docker images: https://hub.docker.com/r/opnfv/testapi
-
- - MongoDB Docker images: https://hub.docker.com/r/mongo
+- `Dovetail Docker images <https://hub.docker.com/r/opnfv/dovetail>`_
+- `Functest Docker images <https://hub.docker.com/r/opnfv/functest>`_
+- `Yardstick Docker images <https://hub.docker.com/r/opnfv/yardstick>`_
+- `TestAPI Docker images <https://hub.docker.com/r/opnfv/testapi>`_
+- `MongoDB Docker images <https://hub.docker.com/_/mongo/>`_
 
 
 Documents
 ---------
 
- - System Preparation Guide: http://docs.opnfv.org/en/stable-danube/submodules/dovetail/docs/testing/user/systempreparation/index.html
+- `System Preparation Guide <http://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/systempreparation/index.html>`_
 
- - User Guide: http://docs.opnfv.org/en/stable-danube/submodules/dovetail/docs/testing/user/userguide/testing_guide.html
+- `User Guide <http://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/userguide/testing_guide.html>`_
 
- - Test Specifications: http://docs.opnfv.org/en/stable-danube/submodules/dovetail/docs/testing/user/testspecification/index.html
+- `OPV Test Specifications <http://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/testspecification/index.html>`_
 
- - Dovetail CLI Reference: http://docs.opnfv.org/en/stable-danube/submodules/dovetail/docs/testing/user/userguide/cli_reference.html
+- `Dovetail CLI Reference <http://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/userguide/cli_reference.html>`_
 
- - Process Workflow: http://docs.opnfv.org/en/stable-danube/submodules/dovetail/docs/testing/user/certificationworkflow/index.html
+- `OPV Workflow <http://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/certificationworkflow/index.html>`_
 
- - Reviewer Guide: http://docs.opnfv.org/en/stable-danube/submodules/dovetail/docs/testing/user/reviewerguide/index.html
+- `OPV Reviewer Guide <http://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/reviewerguide/index.html>`_
 
 
-Version Change
-==============
+.. Version Change
+.. ==============
 
-This is the first major release of OVP/Dovetail. Please refer to the link below for minor
-version changes during pre-release and beta phases.
+.. This is the first major release of OVP/Dovetail. Please refer to the link below for minor
+.. version changes during pre-release and beta phases.
 
- * https://wiki.opnfv.org/display/dovetail/Running+history+for+the+dovetail+tool
+..  * https://wiki.opnfv.org/display/dovetail/Running+history+for+the+dovetail+tool
 
-Testing with OPNFV Danube Installers
+Testing with OPNFV Fraser Installers ????????
 ====================================
 
-OVP 2018.01 and Dovetail 1.0.0 are known to be have been tested with the following OPNFV
-Danube installer versions.
+OVP 2018.08 and Dovetail 2.0.0 are known to be have been tested with the following OPNFV
+Fraser installer versions.
 
 +-----------------+----------------------+
 |   Installer     |      Version         |
 +=================+======================+
-|   Apex          |      danube.3.1      |
+|   Apex          |      fraser.x.x      |
 +-----------------+----------------------+
-|   Compass       |      danube.3.1      |
+|   Compass       |      fraser.x.x      |
 +-----------------+----------------------+
-|   Fuel          |      danube.3.0      |
+|   Fuel          |      fraser.x.x      |
 +-----------------+----------------------+
 
 
-Danube Known Restrictions/Issues
+Fraser Known Restrictions/Issues ?????????
 ==================================
 
-Please refer to the following link for known issues with the Dovetail Danube release:
+Please refer to the following link for known issues with the Dovetail Fraser release:
 
- * https://wiki.opnfv.org/display/dovetail/Running+history+for+the+dovetail+tool#Runninghistoryforthedovetailtool-4.KnownIssuesList
+.. https://wiki.opnfv.org/display/dovetail/Running+history+for+the+dovetail+tool#Runninghistoryforthedovetailtool-4.KnownIssuesList
 
 Open JIRA Tickets
 =================
@@ -323,16 +318,16 @@ All blocking tickets have been fixed.
 Useful Links
 ============
 
- - OVP Web Portal: https://verified.opnfv.org
+ - `OVP Web Portal <https://verified.opnfv.org>`_
 
- - Wiki Project Page: https://wiki.opnfv.org/display/dovetail
+ - `Wiki Project Page <https://wiki.opnfv.org/display/dovetail>`_
 
- - Dovetail Repo: https://git.opnfv.org/dovetail/
+ - `Dovetail Repo <https://git.opnfv.org/dovetail/>`_
 
- - Dovetail CI dashboard: https://build.opnfv.org/ci/view/dovetail/
+ - `Dovetail CI dashboard <https://build.opnfv.org/ci/view/dovetail/>`_
 
- - JIRA dashboard: https://jira.opnfv.org/secure/RapidBoard.jspa?rapidView=149
+ - `JIRA dashboard <https://jira.opnfv.org/secure/RapidBoard.jspa?rapidView=149>`_
 
  - Dovetail IRC Channel: #opnfv-dovetail
 
- - Dovetail Test Configuration: https://git.opnfv.org/dovetail/tree/dovetail/compliance/ovp.1.0.0.yml
+ - `Dovetail Test Configuration <https://git.opnfv.org/dovetail/tree/dovetail/compliance/ovp.1.0.0.yml>`_
