@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_5354c053",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 483,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-08-10T09:21:34Z",
+      "side": 1,
+      "message": "ovp.2.0.0 when release is freezed",
+      "range": {
+        "startLine": 483,
+        "startChar": 37,
+        "endLine": 483,
+        "endChar": 43
+      },
+      "revId": "eeef3a3c1827f72cf90ab9d34a52b56a4824c72f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_135b6888",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 507,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-08-10T09:21:34Z",
+      "side": 1,
+      "message": "this is ok in beta phase? But it should be changed to correct release when dovetail release code is freezed.",
+      "range": {
+        "startLine": 507,
+        "startChar": 53,
+        "endLine": 507,
+        "endChar": 59
+      },
+      "revId": "eeef3a3c1827f72cf90ab9d34a52b56a4824c72f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_33514c63",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 638,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-08-10T09:21:34Z",
+      "side": 1,
+      "message": "functest",
+      "range": {
+        "startLine": 638,
+        "startChar": 29,
+        "endLine": 638,
+        "endChar": 37
+      },
+      "revId": "eeef3a3c1827f72cf90ab9d34a52b56a4824c72f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
