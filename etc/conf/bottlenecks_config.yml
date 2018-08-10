@@ -17,8 +17,12 @@ bottlenecks:
     - 'cp /home/opnfv/userconfig/images/cirros-0.4.0-x86_64-disk.img /tmp/yardstick.img'
   cmds:
     - 'python /home/opnfv/bottlenecks/testsuites/run_testsuite.py testcase {{validate_testcase}} False'
+  post_condition:
+    - 'mkdir -p /home/opnfv/bottlenecks/results'
+    - 'cp /tmp/bottlenecks.log /home/opnfv/bottlenecks/results'
+    - 'cp /tmp/bottlenecks.stress.ping.out /home/opnfv/bottlenecks/results'
   result:
-    dir: '/tmp'
+    dir: '/home/opnfv/bottlenecks/results'
   openrc: '/tmp/admin_rc.sh'
   extra_container:
     - 'Bottlenecks-Yardstick'
