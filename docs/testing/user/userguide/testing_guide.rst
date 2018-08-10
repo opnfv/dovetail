@@ -166,7 +166,7 @@ results files:
 
 Here we set dovetail home directory to be ``${HOME}/dovetail`` for an example.
 Then create 2 directories named ``pre_config`` and ``images`` in this directory
-to store all Dovetail related config files and all VM images respectively:
+to store all Dovetail related config files and all test images respectively:
 
 .. code-block:: bash
 
@@ -233,26 +233,22 @@ this file should contain.
    # operations there.
    export EXTERNAL_NETWORK=xxx
 
+   # Set an existing role used to create project and user for vping test cases.
+   # Otherwise, it will create a role 'Member' to do that.
+   export NEW_USER_ROLE=xxx
+
 
 The OS_AUTH_URL variable is key to configure correctly, as the other admin services
-are gleaned from the identity service. HTTPS should be configured in the SUT so the
-final two variables should be uncommented. However, if SSL is disabled in the SUT, comment
-out the OS_CACERT and OS_INSECURE variables. Ensure the '/path/to/pre_config' directory in
+are gleaned from the identity service. HTTPS should be configured in the SUT so
+either OS_CACERT or OS_INSECURE should be uncommented.
+However, if SSL is disabled in the SUT, comment out both OS_CACERT and OS_INSECURE variables.
+Ensure the '/path/to/pre_config' directory in
 the above file matches the directory location of the cacert file for the OS_CACERT variable.
-
-Export all these variables into environment by,
-
-.. code-block:: bash
-
-   $ source ${DOVETAIL_HOME}/pre_config/env_config.sh
-
-The above line may be added to your .bashrc file for convenience when repeatedly using
-Dovetail.
 
 The next three sections outline additional configuration files used by Dovetail. The
 tempest (tempest_conf.yaml) configuration file is required for executing all tempest
-test cases (e.g. dovetail.tempest.compute, dovetail.tempest.ipv6 ...) and
-dovetail.security.patrole. The HA (pod.yaml) configuration
+test cases (e.g. functest.tempest.compute, functest.tempest.ipv6 ...) and
+functest.security.patrole. The HA (pod.yaml) configuration
 file is required for HA test cases and is also employed to collect SUT hardware
 info. The hosts.yaml is optional for hostname/IP resolution.
 
@@ -345,15 +341,15 @@ Below is a sample with the required syntax when password is employed by the cont
 
    process_info:
    -
-       # The default attack process of dovetail.ha.rabbitmq is 'rabbitmq-server'.
+       # The default attack process of yardstick.ha.rabbitmq is 'rabbitmq-server'.
        # Here can reset it to be 'rabbitmq'.
-       testcase_name: dovetail.ha.rabbitmq
+       testcase_name: yardstick.ha.rabbitmq
        attack_process: rabbitmq
 
    -
        # The default attack host for all HA test cases is 'node1'.
        # Here can reset it to be any other node given in the section 'nodes'.
-       testcase_name: dovetail.ha.glance_api
+       testcase_name: yardstick.ha.glance_api
        attack_host: node2
 
 Besides the 'password', a 'key_filename' entry can be provided to login to the controller node.
@@ -384,27 +380,27 @@ for each HA test case. Use a '-' to separate each of the entries.
 The default attack host of all HA test cases is **node1**.
 The default attack processes of all HA test cases are list here,
 
-   +------------------------------+-------------------------+
-   |      Test Case Name          |  Attack Process Name    |
-   +==============================+=========================+
-   | dovetail.ha.cinder_api       |   cinder-api            |
-   +------------------------------+-------------------------+
-   | dovetail.ha.database         |   mysql                 |
-   +------------------------------+-------------------------+
-   | dovetail.ha.glance_api       |   glance-api            |
-   +------------------------------+-------------------------+
-   | dovetail.ha.haproxy          |   haproxy               |
-   +------------------------------+-------------------------+
-   | dovetail.ha.keystone         |   keystone              |
-   +------------------------------+-------------------------+
-   | dovetail.ha.neutron_l3_agent |   neutron-l3-agent      |
-   +------------------------------+-------------------------+
-   | dovetail.ha.neutron_server   |   neutron-server        |
-   +------------------------------+-------------------------+
-   | dovetail.ha.nova_api         |   nova-api              |
-   +------------------------------+-------------------------+
-   | dovetail.ha.rabbitmq         |   rabbitmq-server       |
-   +------------------------------+-------------------------+
+   +-------------------------------+-------------------------+
+   |      Test Case Name           |  Attack Process Name    |
+   +===============================+=========================+
+   | yardstick.ha.cinder_api       |   cinder-api            |
+   +-------------------------------+-------------------------+
+   | yardstick.ha.database         |   mysql                 |
+   +-------------------------------+-------------------------+
+   | yardstick.ha.glance_api       |   glance-api            |
+   +-------------------------------+-------------------------+
+   | yardstick.ha.haproxy          |   haproxy               |
+   +-------------------------------+-------------------------+
+   | yardstick.ha.keystone         |   keystone              |
+   +-------------------------------+-------------------------+
+   | yardstick.ha.neutron_l3_agent |   neutron-l3-agent      |
+   +-------------------------------+-------------------------+
+   | yardstick.ha.neutron_server   |   neutron-server        |
+   +-------------------------------+-------------------------+
+   | yardstick.ha.nova_api         |   nova-api              |
+   +-------------------------------+-------------------------+
+   | yardstick.ha.rabbitmq         |   rabbitmq-server       |
+   +-------------------------------+-------------------------+
 
 
 Configuration of Hosts File (Optional)
@@ -424,7 +420,8 @@ as shown in the generic syntax below the example.
    ---
    hosts_info:
      192.168.141.101:
-       - ha-vip
+       - identity.endpoint.url
+       - compute.endpoint.url
 
      <ip>:
        - <hostname1>
@@ -479,23 +476,29 @@ to pull all dependent images is because Dovetail normally does dependency checki
 and automatically pulls images as needed, if the Test Host is online. If the Test Host is
 offline, then all these dependencies will need to be manually copied.
 
+The Docker images and Cirros image below are necessary for all mandatory test cases.
+
 .. code-block:: bash
 
    $ sudo docker pull opnfv/dovetail:latest
    $ sudo docker pull opnfv/functest-smoke:fraser
-   $ sudo docker pull opnfv/functest-healthcheck:fraser
-   $ sudo docker pull opnfv/functest-features:fraser
-   $ sudo docker pull opnfv/functest-vnf:fraser
    $ sudo docker pull opnfv/yardstick:stable
    $ sudo docker pull opnfv/bottlenecks:stable
    $ wget -nc http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img -P {ANY_DIR}
+
+The other Docker images and test images below are only used by optional test cases.
+
+.. code-block:: bash
+
+   $ sudo docker pull opnfv/functest-healthcheck:fraser
+   $ sudo docker pull opnfv/functest-features:fraser
+   $ sudo docker pull opnfv/functest-vnf:fraser
    $ wget -nc https://cloud-images.ubuntu.com/releases/14.04/release/ubuntu-14.04-server-cloudimg-amd64-disk1.img -P {ANY_DIR}
    $ wget -nc https://cloud-images.ubuntu.com/releases/16.04/release/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P {ANY_DIR}
    $ wget -nc http://repository.cloudifysource.org/cloudify/4.0.1/sp-release/cloudify-manager-premium-4.0.1.qcow2 -P {ANY_DIR}
 
 Once all these images are pulled, save the images, copy to the Test Host, and then load
-the Dovetail image and all dependent images at the Test Host. The final 4 lines above are
-to obtain the test images for transfer to the Test Host.
+the Dovetail image and all dependent images at the Test Host.
 
 At the online host, save the images with the command below.
 
@@ -529,10 +532,11 @@ Now check to see that all Docker images have been pulled or loaded properly.
 
 After copying and loading the Dovetail images at the Test Host, also copy the test images
 (Ubuntu, Cirros and cloudify-manager) to the Test Host.
-Copy image ``cirros-0.4.0-x86_64-disk.img`` to ``${DOVETAIL_HOME}/images/``.
-Copy image ``ubuntu-14.04-server-cloudimg-amd64-disk1.img`` to ``${DOVETAIL_HOME}/images/``.
-Copy image ``ubuntu-16.04-server-cloudimg-amd64-disk1.img`` to ``${DOVETAIL_HOME}/images/``.
-Copy image ``cloudify-manager-premium-4.0.1.qcow2`` to ``${DOVETAIL_HOME}/images/``.
+
+- Copy image ``cirros-0.4.0-x86_64-disk.img`` to ``${DOVETAIL_HOME}/images/``.
+- Copy image ``ubuntu-14.04-server-cloudimg-amd64-disk1.img`` to ``${DOVETAIL_HOME}/images/``.
+- Copy image ``ubuntu-16.04-server-cloudimg-amd64-disk1.img`` to ``${DOVETAIL_HOME}/images/``.
+- Copy image ``cloudify-manager-premium-4.0.1.qcow2`` to ``${DOVETAIL_HOME}/images/``.
 
 Starting Dovetail Docker
 ------------------------
@@ -585,21 +589,18 @@ This command is equal to
 
 Without any additional options, the above command will attempt to execute all mandatory and
 optional test cases with test suite ovp.next.
-To restrict the breadth of the test scope, test areas can also be
-specified using the '--testarea' option. The test area can be specified broadly using arguments
-'mandatory' and 'optional'. The mandatory tests can be narrowed further using test area arguments
-'osinterop', 'vping' and 'ha'. The optional tests can be narrowed further using test area
-arguments 'ipv6', 'sdnvpn' and 'tempest'.
+To restrict the breadth of the test scope, it can also be specified using options
+'--mandatory' or '--optional'.
 
 .. code-block:: bash
 
-   $ dovetail run --testarea mandatory
+   $ dovetail run --mandatory
 
 Also there is a '--testcase' option provided to run a specified test case.
 
 .. code-block:: bash
 
-   $ dovetail run --testcase dovetail.tempest.osinterop
+   $ dovetail run --testcase functest.tempest.osinterop
 
 Dovetail allows the user to disable strict API response validation implemented
 by Nova Tempest tests by means of the ``--no-api-validation`` option. Usage of
@@ -610,7 +611,7 @@ and its intended usage, refer to
 
 .. code-block:: bash
 
-   $ dovetail run --testcase dovetail.tempest.osinterop --deploy-scenario os-nosdn-ovs-ha
+   $ dovetail run --testcase functest.tempest.osinterop --no-api-validation
 
 By default, during test case execution, the respective feature is responsible to
 decide what flavor is going to use for the execution of each test scenario which is under
@@ -634,7 +635,7 @@ Note for the users:
 
 .. code-block:: bash
 
-   $ dovetail run --no-api-validation
+   $ dovetail run --testcase functest.tempest.osinterop --deploy-scenario os-nosdn-ovs-ha
 
 By default, results are stored in local files on the Test Host at ``$DOVETAIL_HOME/results``.
 Each time the 'dovetail run' command is executed, the results in the aforementioned directory
@@ -657,7 +658,7 @@ result file on the Test Host.
 
 .. code-block:: bash
 
-   $ dovetail run --offline --testcase dovetail.vping.userdata --report
+   $ dovetail run --offline --testcase functest.vping.userdata --report
    2018-05-22 08:16:16,353 - run - INFO - ================================================
    2018-05-22 08:16:16,353 - run - INFO - Dovetail compliance: ovp.next!
    2018-05-22 08:16:16,353 - run - INFO - ================================================
@@ -665,7 +666,7 @@ result file on the Test Host.
    2018-05-22 08:19:31,595 - run - WARNING - There is no hosts file /home/dovetail/pre_config/hosts.yaml, may be some issues with domain name resolution.
    2018-05-22 08:19:31,595 - run - INFO - Get hardware info of all nodes list in file /home/dovetail/pre_config/pod.yaml ...
    2018-05-22 08:19:39,778 - run - INFO - Hardware info of all nodes are stored in file /home/dovetail/results/all_hosts_info.json.
-   2018-05-22 08:19:39,961 - run - INFO - >>[testcase]: dovetail.vping.userdata
+   2018-05-22 08:19:39,961 - run - INFO - >>[testcase]: functest.vping.userdata
    2018-05-22 08:31:17,961 - run - INFO - Results have been stored with file /home/dovetail/results/functest_results.txt.
    2018-05-22 08:31:17,969 - report.Report - INFO -
 
@@ -677,7 +678,7 @@ result file on the Test Host.
 
    Pass Rate: 100.00% (1/1)
    vping:                     pass rate 100.00%
-   -dovetail.vping.userdata   PASS
+   -functest.vping.userdata   PASS
 
 
 When test execution is complete, a tar file with all result and log files is written in
@@ -709,8 +710,8 @@ Host by default within the directory specified below.
 
    * Tempest and security test cases
 
-     * Can see the log details in ``tempest_logs/dovetail.tempest.XXX.html`` and
-       ``security_logs/dovetail.security.XXX.html`` respectively,
+     * Can see the log details in ``tempest_logs/functest.tempest.XXX.html`` and
+       ``security_logs/functest.security.XXX.html`` respectively,
        which has the passed, skipped and failed test cases results.
 
      * This kind of files need to be opened with a web browser.
@@ -721,39 +722,28 @@ Host by default within the directory specified below.
 
    * Vping test cases
 
-     * Its log is stored in dovetail.log.
-
-     * Its result is stored in functest_results.txt.
+     * Its log is stored in ``vping_logs/functest.vping.XXX.log``.
 
    * HA test cases
 
-     * Its log is stored in dovetail.log.
-
-     * Its result is stored in dovetail.ha.XXX.out.
-
-   * Snaps test cases
-
-     * Its log is stored in functest.log.
-
-     * Its result is stored in functest_results.txt.
+     * Its log is stored in ``ha_logs/yardstick.ha.XXX.log``.
 
    * Stress test cases
 
-     * Its log is stored in bottlenecks.log.
+     * Its log is stored in ``stress_logs/bottlenecks.stress.XXX.log``.
 
-     * Its result is stored in dovetail.stress.ping.out.
+   * Snaps test cases
+
+     * Its log is stored in ``snaps_logs/functest.snaps.smoke.log``.
 
    * VNF test cases
 
-     * Its log is stored in functest.log.
+     * Its log is stored in ``vnf_logs/functest.vnf.XXX.log``.
 
-     * Its result is stored in functest_results.txt.
+   * Bgpvpn test cases
 
-   * Sdnvpn test cases
+     * Can see the log details in ``bgpvpn_logs/functest.bgpvpn.XXX.log``.
 
-     * Can see the log details in ``sdnvpn_logs/dovetail.sdnvpn.XXX.log``.
-
-     * Its result is stored in functest_results.txt.
 
 OVP Portal Web Interface
 ------------------------
