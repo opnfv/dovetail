@@ -51,39 +51,46 @@ Commands List
 | dovetail run --help | -h                                               | Show usage of command "dovetail run"                                                              |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run                                                           | Run Dovetail with all test areas within default test suite "compliance_set"                       |
+| dovetail run                                                           | Run Dovetail with all test cases within default test suite                                        |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run --testsuite <test_suite_name>                             | Run Dovetail with all test areas within test suite <test_suite_name>                              |
+| dovetail run --testsuite <test_suite_name>                             | Run Dovetail with all test cases within test suite <test_suite_name>                              |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 | dovetail run --testsuite <test_suite_name> --testarea <test_area_name> | Run Dovetail with test area <test_area_name> within test suite <test_suite_name>.                 |
-|                                                                        | Test area can be chosen from (mandatory, optional, osinterop, ha, vping, ipv6, tempest, sdnvpn).  |
+|                                                                        | Test area can be chosen from (vping, tempest, security, ha, stress, bgpvpn, vnf, snaps).          |
 |                                                                        | Repeat option to set multiple test areas.                                                         |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run --debug | -d                                              | Run Dovetail with a debug mode and show all debug logs                                            |
+| dovetail run --testcase <test_case_name>                               | Run Dovetail with one or more specified test cases.                                               |
+|                                                                        | Repeat option to set multiple test cases.                                                         |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run --offline                                                 | Run Dovetail offline, use local docker images and will not update them                            |
+| dovetail run --mandatory --testsuite <test_suite_name>                 | Run Dovetail with all mandatory test cases within test suite <test_suite_name>                    |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run --report | -r <db_url>                                    | Push results to local or official DB                                                              |
+| dovetail run --optional --testsuite <test_suite_name>                  | Run Dovetail with all optional test cases within test suite <test_suite_name>                     |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run --yardstick_tag | -y <yardstick_docker_image_tag>         | Specify yardstick's docker image tag                                                              |
+| dovetail run --debug | -d                                              | Run Dovetail with debug mode and show all debug logs                                            |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run --functest_tag | -f <functest_docker_image_tag>           | Specify functest's docker image tag                                                               |
+| dovetail run --offline                                                 | Run Dovetail offline, use local docker images instead of download online                          |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run --bottlenecks_tag | -b <bottlenecks_docker_image_tag>     | Specify bottlenecks' docker image tag                                                             |
-|                                                                        |                                                                                                   |
-+------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run --vnf_tag | -v <vnftest_docker_image_tag>                 | Specify vnftest's docker image tag, default is beijing.0                                          |
+| dovetail run --report | -r <db_url>                                    | Package the results directory which can be used to upload to OVP web portal                       |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 | dovetail run --deploy-scenario <deploy_scenario_name>                  | Specify the deploy scenario having as project name 'ovs'                                          |
+|                                                                        |                                                                                                   |
++------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| dovetail run --no-api-validation                                       | Disable strict API response validation                                                            |
+|                                                                        |                                                                                                   |
++------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| dovetail run --no-clean | -n                                           | Keep all Containers created for debuging                                                          |
+|                                                                        |                                                                                                   |
++------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| dovetail run --stop | -s                                               | Stop immediately when one test case failed                                                        |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 
@@ -111,7 +118,7 @@ Dovetail Commands
 .. code-block:: bash
 
    root@1f230e719e44:~/dovetail/dovetail# dovetail --version
-   dovetail, version 0.7.0
+   dovetail, version 2018.8.0
 
 Dovetail List Commands
 ----------------------
@@ -128,14 +135,47 @@ Dovetail List Commands
 
 .. code-block:: bash
 
-   root@1f230e719e44:~/dovetail/dovetail# dovetail list debug
-   - example
-       dovetail.example.tc002
-   - osinterop
-       dovetail.osinterop.tc001
-   - vping
-       dovetail.vping.tc001
-       dovetail.vping.tc002
+   root@1f230e719e44:~/dovetail/dovetail# dovetail list ovp.next
+   - mandatory
+       functest.vping.userdata
+       functest.vping.ssh
+       functest.tempest.osinterop
+       functest.tempest.compute
+       functest.tempest.identity_v2
+       functest.tempest.identity_v3
+       functest.tempest.image
+       functest.tempest.network_api
+       functest.tempest.volume
+       functest.tempest.neutron_trunk_ports
+       functest.tempest.ipv6_api
+       functest.security.patrole
+       yardstick.ha.nova_api
+       yardstick.ha.neutron_server
+       yardstick.ha.keystone
+       yardstick.ha.glance_api
+       yardstick.ha.cinder_api
+       yardstick.ha.cpu_load
+       yardstick.ha.disk_load
+       yardstick.ha.haproxy
+       yardstick.ha.rabbitmq
+       yardstick.ha.database
+       bottlenecks.stress.ping
+   - optional
+       functest.tempest.ipv6_scenario
+       functest.tempest.multi_node_scheduling
+       functest.tempest.network_security
+       functest.tempest.vm_lifecycle
+       functest.tempest.network_scenario
+       functest.tempest.bgpvpn
+       functest.bgpvpn.subnet_connectivity
+       functest.bgpvpn.tenant_separation
+       functest.bgpvpn.router_association
+       functest.bgpvpn.router_association_floating_ip
+       yardstick.ha.neutron_l3_agent
+       yardstick.ha.controller_restart
+       functest.vnf.vims
+       functest.vnf.vepc
+       functest.snaps.smoke
 
 Dovetail Show Commands
 ----------------------
@@ -152,37 +192,51 @@ Dovetail Show Commands
 
 .. code-block:: bash
 
-   root@1f230e719e44:~/dovetail/dovetail# dovetail show dovetail.vping.tc001
+   root@1f230e719e44:~/dovetail/dovetail# dovetail show functest.vping.ssh
    ---
-   dovetail.vping.tc001:
-     name: dovetail.vping.tc001
-     objective: testing for vping using userdata
+   functest.vping.ssh:
+     name: functest.vping.ssh
+     objective: testing for vping using ssh
      validate:
        type: functest
-       testcase: vping_userdata
+       testcase: vping_ssh
      report:
+       source_archive_files:
+         - functest.log
+       dest_archive_files:
+         - vping_logs/functest.vping.ssh.log
+       check_results_file: 'functest_results.txt'
        sub_testcase_list:
 
 .. code-block:: bash
 
-   root@1f230e719e44:~/dovetail/dovetail# dovetail show ipv6.tc001
+   root@1f230e719e44:~/dovetail/dovetail# dovetail show functest.tempest.image
    ---
-   dovetail.ipv6.tc001:
-     name: dovetail.ipv6.tc001
-     objective: Bulk creation and deletion of IPv6 networks, ports and subnets
+   functest.tempest.image:
+     name: functest.tempest.image
+     objective: tempest smoke test cases about image
      validate:
        type: functest
        testcase: tempest_custom
        pre_condition:
-         - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/local/lib/python2.7/dist-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
+         - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
+         - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
        pre_copy:
          src_file: tempest_custom.txt
-         dest_path: /usr/local/lib/python2.7/dist-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
+         dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
      report:
+       source_archive_files:
+         - functest.log
+         - tempest_custom/tempest.log
+         - tempest_custom/tempest-report.html
+       dest_archive_files:
+         - tempest_logs/functest.tempest.image.functest.log
+         - tempest_logs/functest.tempest.image.log
+         - tempest_logs/functest.tempest.image.html
+       check_results_file: 'functest_results.txt'
        sub_testcase_list:
-         - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_network[id-d4f9024d-1e28-4fc1-a6b1-25dbc6fa11e2,smoke]
-         - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_port[id-48037ff2-e889-4c3b-b86a-8e3f34d2d060,smoke]
-         - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_subnet[id-8936533b-c0aa-4f29-8e53-6cc873aec489,smoke]
+         - tempest.api.image.v2.test_images.BasicOperationsImagesTest.test_register_upload_get_image_file[id-139b765e-7f3d-4b3d-8b37-3ca3876ee318,smoke]
+         - tempest.api.image.v2.test_versions.VersionsTest.test_list_versions[id-659ea30a-a17c-4317-832c-0f68ed23c31d,smoke]
 
 Dovetail Run Commands
 ----------------------
@@ -195,27 +249,41 @@ Dovetail Run Commands
    Dovetail compliance test entry!
 
    Options:
-   -b, --bott_tag TEXT     Overwrite tag for bottlenecks docker container (e.g. cvp.0.4.0)
-   -f, --func_tag TEXT     Overwrite tag for functest docker container (e.g. cvp.0.5.0)
-   -y, --yard_tag TEXT     Overwrite tag for yardstick docker container (e.g. danube.3.2)
    --deploy-scenario TEXT  Specify the DEPLOY_SCENARIO which will be used as input by each testcase respectively
-   --testarea TEXT         compliance testarea within testsuite
+   --optional              Run all optional test cases.
    --offline               run in offline method, which means not to update the docker upstream images, functest, yardstick, etc.
-   -r, --report TEXT       push results to DB (e.g. --report http://192.168.135.2:8000/api/v1/results)
-   --testsuite TEXT        compliance testsuite.
+   -r, --report            Create a tarball file to upload to OVP web portal
    -d, --debug             Flag for showing debug log on screen.
+   --testcase TEXT         Compliance testcase. Specify option multiple times to include multiple test cases.
+   --testarea TEXT         Compliance testarea within testsuite. Specify option multiple times to include multiple test areas.
+   -s, --stop              Flag for stopping on test case failure.
+   -n, --no-clean          Keep all Containers created for debuging.
+   --no-api-validation     disable strict API response validation
+   --mandatory             Run all mandatory test cases.
+   --testsuite TEXT        compliance testsuite.
    -h, --help              Show this message and exit.
 
 .. code-block:: bash
 
-   root@1f230e719e44:~/dovetail/dovetail# dovetail run --testsuite proposed_tests --testarea vping --offline -r http://192.168.135.2:8000/api/v1/results --deploy-scenario os-nosdn-ovs-ha
+   root@1f230e719e44:~/dovetail/dovetail# dovetail run --testcase functest.vping.ssh --offline -r --deploy-scenario os-nosdn-ovs-ha
    2017-10-12 14:57:51,278 - run - INFO - ================================================
-   2017-10-12 14:57:51,278 - run - INFO - Dovetail compliance: proposed_tests!
+   2017-10-12 14:57:51,278 - run - INFO - Dovetail compliance: ovp.next!
    2017-10-12 14:57:51,278 - run - INFO - ================================================
    2017-10-12 14:57:51,278 - run - INFO - Build tag: daily-master-b80bca76-af5d-11e7-879a-0242ac110002
    2017-10-12 14:57:51,278 - run - INFO - DEPLOY_SCENARIO : os-nosdn-ovs-ha
-   2017-10-12 14:57:51,336 - run - WARNING - There is no hosts file /home/jenkins/opnfv/slave_root/workspace/dovetail-compass-huawei-pod7-proposed_tests-danube/cvp/pre_config/hosts.yaml, may be some issues with domain name resolution.
-   2017-10-12 14:57:51,517 - run - INFO - >>[testcase]: dovetail.vping.tc001
-   2017-10-12 14:58:21,325 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
-   2017-10-12 14:58:21,337 - run - INFO - >>[testcase]: dovetail.vping.tc002
-   2017-10-12 14:58:48,862 - run - INFO - Results have been pushed to database and stored with local file /home/dovetail/results/results.json.
+   2017-10-12 14:57:51,336 - run - WARNING - There is no hosts file /home/dovetail/pre_config/hosts.yaml, may be some issues with domain name resolution.
+   2017-10-12 14:57:51,336 - run - INFO - Get hardware info of all nodes list in file /home/cvp/pre_config/pod.yaml ...
+   2017-10-12 14:57:51,336 - run - INFO - Hardware info of all nodes are stored in file /home/cvp/results/all_hosts_info.json.
+   2017-10-12 14:57:51,517 - run - INFO - >>[testcase]: functest.vping.ssh
+   2017-10-12 14:58:21,325 - report.Report - INFO - Results have been stored with file /home/cvp/results/functest_results.txt.
+   2017-10-12 14:58:21,325 - report.Report - INFO -
+
+   Dovetail Report
+   Version: 2018.08
+   Build Tag: daily-master-b80bca76-af5d-11e7-879a-0242ac110002
+   Test Date: 2018-08-13 03:23:56 UTC
+   Duration: 291.92 s
+
+   Pass Rate: 0.00% (1/1)
+   vping:                     pass rate 100%
+   -functest.vping.ssh        PASS
