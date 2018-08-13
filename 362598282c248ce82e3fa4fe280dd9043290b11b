@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_19ff0769",
+        "filename": "etc/compliance/proposed_tests.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-08-13T07:01:45Z",
+      "side": 1,
+      "message": "functest?",
+      "range": {
+        "startLine": 9,
+        "startChar": 6,
+        "endLine": 9,
+        "endChar": 14
+      },
+      "revId": "362598282c248ce82e3fa4fe280dd9043290b11b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_f9033371",
+        "filename": "etc/compliance/proposed_tests.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-08-13T07:01:45Z",
+      "side": 1,
+      "message": "yardstick?",
+      "range": {
+        "startLine": 15,
+        "startChar": 6,
+        "endLine": 15,
+        "endChar": 14
+      },
+      "revId": "362598282c248ce82e3fa4fe280dd9043290b11b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_b909bb97",
+        "filename": "etc/testcase/ha.opendaylight.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-08-13T07:01:45Z",
+      "side": 1,
+      "message": "Fix this to yardstick",
+      "range": {
+        "startLine": 3,
+        "startChar": 8,
+        "endLine": 3,
+        "endChar": 16
+      },
+      "revId": "362598282c248ce82e3fa4fe280dd9043290b11b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
