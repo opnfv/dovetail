@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_19e9c780",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 2071
+      },
+      "writtenOn": "2018-08-13T09:27:22Z",
+      "side": 1,
+      "message": "please check and fix all test case names to correct ones\u0027 like -\u003e dovetail.vping.ssh is functest.vping.ssh etc.",
+      "range": {
+        "startLine": 108,
+        "startChar": 2,
+        "endLine": 108,
+        "endChar": 10
+      },
+      "revId": "fb73cd9b0be20edf201eb994864b31d649ca5e9b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
