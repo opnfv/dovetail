@@ -1,0 +1,395 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_1c5b7588",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "2018.08",
+      "range": {
+        "startLine": 38,
+        "startChar": 6,
+        "endLine": 38,
+        "endChar": 12
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_7cef11b1",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "I\u0027d like to eventually rename the corresponding yaml file to \"ovp.2018.08\".",
+      "range": {
+        "startLine": 71,
+        "startChar": 76,
+        "endLine": 71,
+        "endChar": 85
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_dc2bbde9",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "five",
+      "range": {
+        "startLine": 76,
+        "startChar": 65,
+        "endLine": 76,
+        "endChar": 70
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_7c4b91b0",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "remove, not relevant for end users",
+      "range": {
+        "startLine": 76,
+        "startChar": 80,
+        "endLine": 77,
+        "endChar": 26
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_bccc0937",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "please use the same indentation",
+      "range": {
+        "startLine": 87,
+        "startChar": 0,
+        "endLine": 91,
+        "endChar": 12
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_5c3fad25",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "This document has not been updated and I propose to remove it as it duplicates the content of the test case descriptions.",
+      "range": {
+        "startLine": 156,
+        "startChar": 0,
+        "endLine": 157,
+        "endChar": 164
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_3c3c792f",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "+ Bottlenecks",
+      "range": {
+        "startLine": 164,
+        "startChar": 1,
+        "endLine": 165,
+        "endChar": 12
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_9c4945d3",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "these components have been removed.",
+      "range": {
+        "startLine": 167,
+        "startChar": 0,
+        "endLine": 170,
+        "endChar": 10
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_7c46f1c0",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "Not really needed anymore as TestAPI and MongoDB have been removed and we are leveraging the stable release tags as listed below.",
+      "range": {
+        "startLine": 177,
+        "startChar": 0,
+        "endLine": 181,
+        "endChar": 144
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_dc129db3",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "this is now the Linux Foundation Networking Compliance Verification Committee (LFN CVC)",
+      "range": {
+        "startLine": 186,
+        "startChar": 65,
+        "endLine": 186,
+        "endChar": 74
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_fc5fa170",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "Fraser",
+      "range": {
+        "startLine": 225,
+        "startChar": 47,
+        "endLine": 225,
+        "endChar": 53
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_3c511963",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "This Functest container is not used anymore - in general, not just by Functest. Instead, we are using multiple Functest containers: functest-smoke, functest-features and functest-vnf",
+      "range": {
+        "startLine": 240,
+        "startChar": 21,
+        "endLine": 240,
+        "endChar": 35
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_bc17e9a2",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "not needed anymore. Add Bottlenecks",
+      "range": {
+        "startLine": 243,
+        "startChar": 0,
+        "endLine": 247,
+        "endChar": 56
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_9c4e65c0",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "see above",
+      "range": {
+        "startLine": 252,
+        "startChar": 0,
+        "endLine": 252,
+        "endChar": 69
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_1c0d3591",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "not needed anymore. Add Bottlenecks.",
+      "range": {
+        "startLine": 254,
+        "startChar": 0,
+        "endLine": 255,
+        "endChar": 60
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_9c2025f9",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 274,
+        "startChar": 0,
+        "endLine": 280,
+        "endChar": 83
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_dc79fdfd",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-13T20:44:36Z",
+      "side": 1,
+      "message": "we should keep this and use the versions utilized in CI",
+      "range": {
+        "startLine": 282,
+        "startChar": 37,
+        "endLine": 282,
+        "endChar": 45
+      },
+      "revId": "c6f77b551b05891267f2637048a03ff5370ea19d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
