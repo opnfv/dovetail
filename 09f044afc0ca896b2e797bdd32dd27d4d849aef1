@@ -22,6 +22,30 @@
       "revId": "09f044afc0ca896b2e797bdd32dd27d4d849aef1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_9c814592",
+        "filename": "docs/testing/user/userguide/cli_reference.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-14T01:20:28Z",
+      "side": 1,
+      "message": "OK. I will also do that for Dovetail tool.",
+      "parentUuid": "9a561d44_dcee1d8b",
+      "range": {
+        "startLine": 138,
+        "startChar": 60,
+        "endLine": 138,
+        "endChar": 64
+      },
+      "revId": "09f044afc0ca896b2e797bdd32dd27d4d849aef1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
