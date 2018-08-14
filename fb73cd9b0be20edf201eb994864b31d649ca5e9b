@@ -22,6 +22,121 @@
       "revId": "fb73cd9b0be20edf201eb994864b31d649ca5e9b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_b368bcf6",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-14T09:57:23Z",
+      "side": 1,
+      "message": "TBU when available",
+      "range": {
+        "startLine": 221,
+        "startChar": 48,
+        "endLine": 221,
+        "endChar": 52
+      },
+      "revId": "fb73cd9b0be20edf201eb994864b31d649ca5e9b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_136ec801",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-14T09:57:23Z",
+      "side": 1,
+      "message": "no info found for these tags",
+      "range": {
+        "startLine": 243,
+        "startChar": 44,
+        "endLine": 244,
+        "endChar": 54
+      },
+      "revId": "fb73cd9b0be20edf201eb994864b31d649ca5e9b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_f37234e4",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-14T09:57:23Z",
+      "side": 1,
+      "message": "no info found for these tags",
+      "range": {
+        "startLine": 246,
+        "startChar": 44,
+        "endLine": 246,
+        "endChar": 50
+      },
+      "revId": "fb73cd9b0be20edf201eb994864b31d649ca5e9b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_5377a0d4",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-14T09:57:23Z",
+      "side": 1,
+      "message": "no info found for version change",
+      "range": {
+        "startLine": 274,
+        "startChar": 3,
+        "endLine": 274,
+        "endChar": 17
+      },
+      "revId": "fb73cd9b0be20edf201eb994864b31d649ca5e9b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_737e24b0",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-14T09:57:23Z",
+      "side": 1,
+      "message": "TBU when available",
+      "range": {
+        "startLine": 306,
+        "startChar": 0,
+        "endLine": 306,
+        "endChar": 17
+      },
+      "revId": "fb73cd9b0be20edf201eb994864b31d649ca5e9b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
