@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_79e283a0",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-14T05:45:27Z",
+      "side": 1,
+      "message": "{HOME} is set or \"exported\" before, It is /root or /home?\nNow at https://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/userguide/testing_guide.html is  $ mkdir -p /home/dovetail",
+      "range": {
+        "startLine": 164,
+        "startChar": 15,
+        "endLine": 164,
+        "endChar": 21
+      },
+      "revId": "8a247f21e89a714d34d2b6e441db9917e8b13d83",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_79f9e34c",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-14T05:45:27Z",
+      "side": 1,
+      "message": "I think that this is confusing and it should be replaced, since at line above it is stated that \"The cacert file should be put at $DOVETAIL_HOME/pre_config\"",
+      "range": {
+        "startLine": 224,
+        "startChar": 20,
+        "endLine": 224,
+        "endChar": 40
+      },
+      "revId": "8a247f21e89a714d34d2b6e441db9917e8b13d83",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_99aaf717",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-14T05:45:27Z",
+      "side": 1,
+      "message": "Do you mean \"This is the IP of the node ....?",
+      "range": {
+        "startLine": 317,
+        "startChar": 9,
+        "endLine": 317,
+        "endChar": 31
+      },
+      "revId": "8a247f21e89a714d34d2b6e441db9917e8b13d83",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_39adab32",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-14T05:45:27Z",
+      "side": 1,
+      "message": "Below it is stated that \"The default attack host of all HA test cases is **node1*\" which is the correct?",
+      "range": {
+        "startLine": 353,
+        "startChar": 20,
+        "endLine": 353,
+        "endChar": 25
+      },
+      "revId": "8a247f21e89a714d34d2b6e441db9917e8b13d83",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_b9c1bbe6",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 365,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-14T05:45:27Z",
+      "side": 1,
+      "message": "wouldn\u0027t be better xx.xx.xx.xx like other cases above?",
+      "range": {
+        "startLine": 365,
+        "startChar": 11,
+        "endLine": 365,
+        "endChar": 20
+      },
+      "revId": "8a247f21e89a714d34d2b6e441db9917e8b13d83",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_59b05f8b",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-14T05:45:27Z",
+      "side": 1,
+      "message": "This paragraph refers to pod.yaml right? Why it located under configurationoof id_rsa file?",
+      "range": {
+        "startLine": 378,
+        "startChar": 0,
+        "endLine": 378,
+        "endChar": 18
+      },
+      "revId": "8a247f21e89a714d34d2b6e441db9917e8b13d83",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
