@@ -17,7 +17,7 @@ testsuite_supported:
   - proposed_tests
   - debug
   - healthcheck
-  - ovp.next
+  - ovp.2018.08
   - onap.1.0.0
 # testarea supported, should adjust accordingly
 testarea_supported:
