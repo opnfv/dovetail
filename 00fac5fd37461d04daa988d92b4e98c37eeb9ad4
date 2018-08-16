@@ -1,0 +1,234 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_0241505a",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-16T06:49:23Z",
+      "side": 1,
+      "message": "2018",
+      "range": {
+        "startLine": 38,
+        "startChar": 6,
+        "endLine": 38,
+        "endChar": 10
+      },
+      "revId": "00fac5fd37461d04daa988d92b4e98c37eeb9ad4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_6d263d18",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-16T06:49:23Z",
+      "side": 1,
+      "message": "In this patch, I rename it to be ovp.2018.08\nhttps://gerrit.opnfv.org/gerrit/#/c/60967/\nLet\u0027s keep this an open question.",
+      "range": {
+        "startLine": 71,
+        "startChar": 77,
+        "endLine": 71,
+        "endChar": 85
+      },
+      "revId": "00fac5fd37461d04daa988d92b4e98c37eeb9ad4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_4d237905",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-16T06:49:23Z",
+      "side": 1,
+      "message": "Suggest to remove these.\nFor 2018.01, the testareas can be divided into mandatory and optional.\nFor 2018.08, it\u0027s very hard to do that. Now they are group with test cases not test areas.",
+      "range": {
+        "startLine": 75,
+        "startChar": 1,
+        "endLine": 90,
+        "endChar": 9
+      },
+      "revId": "00fac5fd37461d04daa988d92b4e98c37eeb9ad4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_ad2055f8",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-16T06:49:23Z",
+      "side": 1,
+      "message": "cases",
+      "range": {
+        "startLine": 92,
+        "startChar": 23,
+        "endLine": 92,
+        "endChar": 28
+      },
+      "revId": "00fac5fd37461d04daa988d92b4e98c37eeb9ad4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_8d1d91c0",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-16T06:49:23Z",
+      "side": 1,
+      "message": "cases",
+      "range": {
+        "startLine": 94,
+        "startChar": 18,
+        "endLine": 94,
+        "endChar": 23
+      },
+      "revId": "00fac5fd37461d04daa988d92b4e98c37eeb9ad4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_ed79adfd",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-16T06:49:23Z",
+      "side": 1,
+      "message": "cases",
+      "range": {
+        "startLine": 95,
+        "startChar": 64,
+        "endLine": 95,
+        "endChar": 69
+      },
+      "revId": "00fac5fd37461d04daa988d92b4e98c37eeb9ad4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_cd7e69e4",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-16T06:49:23Z",
+      "side": 1,
+      "message": "cases",
+      "range": {
+        "startLine": 96,
+        "startChar": 15,
+        "endLine": 96,
+        "endChar": 19
+      },
+      "revId": "00fac5fd37461d04daa988d92b4e98c37eeb9ad4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_2d8445d3",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-16T06:49:23Z",
+      "side": 1,
+      "message": "(1)\nThere is also only 1 sub test case.",
+      "range": {
+        "startLine": 109,
+        "startChar": 22,
+        "endLine": 109,
+        "endChar": 25
+      },
+      "revId": "00fac5fd37461d04daa988d92b4e98c37eeb9ad4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_0d8981eb",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-16T06:49:23Z",
+      "side": 1,
+      "message": "(40)",
+      "range": {
+        "startLine": 117,
+        "startChar": 40,
+        "endLine": 117,
+        "endChar": 43
+      },
+      "revId": "00fac5fd37461d04daa988d92b4e98c37eeb9ad4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_2d5ba588",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-16T06:49:23Z",
+      "side": 1,
+      "message": "443",
+      "range": {
+        "startLine": 132,
+        "startChar": 21,
+        "endLine": 132,
+        "endChar": 25
+      },
+      "revId": "00fac5fd37461d04daa988d92b4e98c37eeb9ad4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
