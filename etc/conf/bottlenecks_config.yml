@@ -11,6 +11,7 @@ bottlenecks:
   envs: '-e DEPLOY_SCENARIO={{deploy_scenario}} -e Yardstick_TAG=stable -e OUTPUT_FILE={{testcase}}.out'
   volumes:
     - '-v /var/run/docker.sock:/var/run/docker.sock'
+    - '-v /tmp:/tmp'
   config:
     dir: '/home/opnfv/userconfig'
   pre_condition:
