@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_8ed8ddf0",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-25T22:54:58Z",
+      "side": 1,
+      "message": "You asked about of these number are final. We have a tool which generates a full list of test case names for validation by the webportal. Please check the latest version of this file - including this patch: https://gerrit.opnfv.org/gerrit/#/c/61389/",
+      "range": {
+        "startLine": 93,
+        "startChar": 0,
+        "endLine": 136,
+        "endChar": 52
+      },
+      "revId": "59cc703a634311ea07d982f8d83a0a7557b25f17",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
