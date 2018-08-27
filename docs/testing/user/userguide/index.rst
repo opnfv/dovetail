@@ -4,9 +4,9 @@
 
 .. _dovetail-testing_user_guide:
 
-********************************************************
-OPNFV Verified Program Testing User Guide
-********************************************************
+======================
+OVP Testing User Guide
+======================
 
 .. toctree::
    :maxdepth: 2
