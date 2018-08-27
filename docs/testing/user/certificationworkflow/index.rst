@@ -4,9 +4,9 @@
 
 .. _dovetail-certification_workflow:
 
-===============================
-OPNFV Verified Program Workflow
-===============================
+============
+OVP Workflow
+============
 
 Introduction
 ============

@@ -4,9 +4,9 @@
 
 .. _dovetail-test_case_specification:
 
-==================================================
-OPNFV Verified Program test specification
-==================================================
+=======================
+OVP Test Specifications
+=======================
 
 Introduction
 ============
