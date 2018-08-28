@@ -3,6 +3,7 @@
 {% set validate_testcase = validate_testcase or '' %}
 {% set testcase = testcase or '' %}
 {% set deploy_scenario = deploy_scenario or 'unknown' %}
+{% set dovetail_home = dovetail_home or '' %}
 
 bottlenecks:
   image_name: opnfv/bottlenecks
@@ -11,7 +12,7 @@ bottlenecks:
   envs: '-e DEPLOY_SCENARIO={{deploy_scenario}} -e Yardstick_TAG=stable -e OUTPUT_FILE={{testcase}}.out'
   volumes:
     - '-v /var/run/docker.sock:/var/run/docker.sock'
-    - '-v /tmp:/tmp'
+    - '-v {{dovetail_home}}/results/bottlenecks:/tmp'
   config:
     dir: '/home/opnfv/userconfig'
   pre_condition:
@@ -22,6 +23,7 @@ bottlenecks:
     - 'mkdir -p /home/opnfv/bottlenecks/results'
     - 'cp /tmp/bottlenecks.log /home/opnfv/bottlenecks/results'
     - 'cp /tmp/bottlenecks.stress.ping.out /home/opnfv/bottlenecks/results'
+    - 'rm /tmp/yardstick.img'
   result:
     dir: '/home/opnfv/bottlenecks/results'
   openrc: '/tmp/admin_rc.sh'
