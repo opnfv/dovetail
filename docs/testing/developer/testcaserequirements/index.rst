@@ -4,9 +4,9 @@
 
 .. _dovetail-test_case_requirements:
 
-==========================================================
-OPNFV Verified Program test case requirements
-==========================================================
+==========================
+OVP Test Case Requirements
+==========================
 
 .. toctree::
    :maxdepth: 2
@@ -16,10 +16,10 @@ OVP Test Suite Purpose and Goals
 ================================
 
 The OVP test suite is intended to provide a method for validating the
-interfaces and behaviors of an NFVi platform according to the expected
-capabilities exposed in OPNFV.  The behavioral foundation evaluated in these
+interfaces and behaviors of an NFVI platform according to the expected
+capabilities exposed in OPNFV. The behavioral foundation evaluated in these
 tests should serve to provide a functional baseline for VNF deployment and
-portability across NFVi instances.  All OVP tests are available in open source
+portability across NFVI instances. All OVP tests are available in open source
 and are executed in open source test frameworks.
 
 
@@ -29,7 +29,7 @@ Test case requirements
 The following requirements are mandatory for a test to be submitted for
 consideration in the OVP test suite:
 
-- All test cases must be fully documented, in a common format.  Please consider
+- All test cases must be fully documented, in a common format. Please consider
   the existing :ref:`dovetail-test_case_specification` as examples.
 
   - Clearly identifying the test procedure and expected results / metrics to
@@ -56,7 +56,7 @@ consideration in the OVP test suite:
 - Test cases must pass on applicable OPNFV reference deployments and release
   versions.
 
-  - Tests must not require a specific NFVi platform composition or installation
+  - Tests must not require a specific NFVI platform composition or installation
     tool.
 
     - Tests and test tools must run independently of the method of platform
@@ -120,21 +120,18 @@ Dovetail Test Suite Naming Convention
 Test case naming and structuring must comply with the following conventions.
 The fully qualified name of a test case must comprise three sections:
 
-`<community>.<test_area>.<test_case_name>`
+`<testproject>.<test_area>.<test_case_name>`
 
-- **community**: The fully qualified test case name must identify the community
-  or upstream project which developed and maintains the test case. For test
-  cases originating in OPNFV projects, the community identifier is 'opnfv'.
-  Test cases consumed from the OpenStack tempest test suite, are named
-  'tempest', for example.
+- **testproject**: The fully qualified test case name must identify the test
+  project which developed and maintains the test case.
 
 - **test_area**: The fully qualified test case name must identify the test case
-  area.  For test cases originating in OPNFV projects, the test case area must
-  identify the project name.
+  area. The test case area is a single word identifier describing the broader
+  functional scope of a test case, such as ha (high-availability), tempest, vnf,
+  etc.
 
 - **test_case_name**: The fully qualified test case name must include a concise
   description of the purpose of the test case.
 
-An example of a fully qualified test case name is
-`opnfv.sdnvpn.router_association_floating_ip`.
+An example of a fully qualified test case name is `functest.tempest.compute`.
 
