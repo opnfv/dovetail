@@ -145,6 +145,7 @@ class DockerRunner(object):
         config_item['os_insecure'] = os.getenv("OS_INSECURE")
         if 'DEPLOY_SCENARIO' in os.environ:
             config_item['deploy_scenario'] = os.environ['DEPLOY_SCENARIO']
+        config_item['dovetail_home'] = os.getenv("DOVETAIL_HOME")
         return config_item
 
     def _update_config(self, testcase):
