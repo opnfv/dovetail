@@ -3,7 +3,7 @@
 .. (c) Ericsson AB
 
 =============================================
-OPNFV Verified Program 2018.01 Reviewer Guide
+OPNFV Verified Program 2018.08 Reviewer Guide
 =============================================
 
 .. toctree::
@@ -14,173 +14,190 @@ Introduction
 ============
 
 This reviewer guide provides detailed guidance for reviewers on how to handle the result review
-process. Reviewers must follow the checklist below to ensure review consistency for the OPNFV
-Verified Program (OVP) 2018.01 (Danube) release at a minimum.
+process.
+
+The OPNFV Verified program provides the ability for users to upload test results in
+`OVP portal <https://verified.opnfv.org>`_ and request from OPV community for review.
+After the user submit for review the test results **Status** is changed from 'private' to 'review' (as shown in figure
+2).
+
+OVP administrator will ask for review volunteers using the verified@opnfv.org email alias.
+The incoming results for review will be identified by the administrator with particular **Test ID**
+and **Owner** values.
+
+Volunteers that will accept the review request can access the test results by login to the `OVP portal <https://verified.opnfv.org>`_
+and the click on the **My Results** tab in top-level navigation bar.
+
+.. image:: fraser/images/ovp_top_nav.png
+    :align: center
+    :scale: 100%
+
+Figure 1
+
+The corresponding OVP portal result will have a status of ‘review’.
+
+.. image:: fraser/images/ovp_result_review.png
+    :align: center
+    :scale: 100%
+
+Figure 2
+
+Reviewers must follow the checklist below to ensure review consistency for the OPNFV
+Verified Program (OVP) 2018.08 (Fraser) release at a minimum.
 
 #. **Mandatory Test Area Results** - Validate that results for all mandatory test areas are present.
 #. **Test-Case Count within Mandatory Test Area** - Check that the total number of test-cases are present in each mandatory test area.
 #. **Test-Case Pass Percentage** - Ensure all tests have passed (100% pass rate).
-#. **Log File Verification** - Inspect the log file for each test area (osinterop, ha, vping).
+#. **Log File Verification** - Inspect the log file for each test area.
 #. **SUT Info Verification** - Validate the system under test (SUT) hardware and software endpoint info is present.
+
 
 
 1. Mandatory Test Area Results
 ==============================
 
-Validate that results for all mandatory test areas are included in the overall test suite. The
-required mandatory test areas are:
- - **osinterop**
- - **vping**
- - **ha**
+Test results can be displayed by clicking on the hyperlink under the 'Test ID' column.
+User should validate that results for all mandatory test areas are included in the overall test suite. The required
+mandatory test areas are:
 
-Login to the OVP portal at:
-
-*https://verified.opnfv.org*
-
-Click on the 'My Results' tab in top-level navigation bar.
-
-.. image:: danube/images/ovp_top_nav.png
-    :align: center
-    :scale: 100%
-
-The OVP administrator will ask for review volunteers using the verified@opnfv.org email alias. The
-incoming results for review will be identified by the administrator with particular 'Test ID'
-and 'Owner' values. The corresponding OVP portal result will have a status of 'review'.
-
-.. image:: danube/images/ovp_result_review.png
-    :align: center
-    :scale: 100%
-
-In the example above, this information will be provided as:
-- Test ID: a00c47e8
-- Owner: jtaylor
-
-Click on the hyperlink within the 'Test ID' column.
+- **bottlenecks**
+- **functest**
+- **yardstick**
 
 *Note, that the 'Test ID' column in this view condenses the UUID used for 'Test ID' to
 eight characters even though the 'Test ID' is a longer UUID in the back-end.*
 
-.. image:: danube/images/ovp_result_overview.png
+.. image:: fraser/images/ovp_result_overview.png
     :align: center
     :scale: 100%
 
-The 'Test ID' hyperlink toggles the view to a top-level listing of the results displayed above.
-Validate that osinterop, vping and ha test area results are all present within the view.
-
+Figure 3
 
 2. Test-Case Count within Mandatory Test Area
 =============================================
 
-Validate the test-case count within each test area. For the OVP 2018.01 release, this must break
+Validate the test-case count within each test area. For the OVP 2018.08 release, this must break
 down as outlined in the table below.
 
-.. image:: danube/images/ovp_test_count.png
++-------------------------+---------------------+
+| **Mandatory Test Area** | **Test-Case Count** |
++-------------------------+---------------------+
+| bottlenecks             | 1                   |
++-------------------------+---------------------+
+| functest                | 427                 |
++-------------------------+---------------------+
+| yardstick               | 15                  |
++-------------------------+---------------------+
+| **Total**               | **443**             |
++-------------------------+---------------------+
+
+The numbers in brackets separated by "/" at the right of each test case is the number of pass/total tests.
+
+The figure below depicts an example that should flag a negative review. The mandatory
+functest.tempest.neutron_trunk_ports [39/43] test area states that total number of test cases are 43 but in fact
+there are 40.
+
+.. image:: fraser/images/ovp_wrong_num_of_tc.png
     :align: center
     :scale: 100%
 
-In the diagram above (from section 1), these counts can be gleaned from the numbers to the
-right of the test-cases. The total number is given for the osinterop (dovetail.osinterop.tc001)
-test area at 205. The vping (dovetail.vping.tc00x) and ha (dovetail.ha.tc00x) test-cases are
-broken down separately with a line for each test-case. Directly above the 'Test Result Overview'
-listing there's a summary labelled 'Test Run Results' shown below. For OVP 2018.01, a mandatory
-total of **215** test-cases must be present (205 osinterop + 8 ha + 2 vping).
-
-.. image:: danube/images/ovp_missing_ha.png
-    :align: center
-    :scale: 100%
-
-An example of a listing that should flag a negative review is shown above. The mandatory ha test
-area is missing one test case (dovetail.ha.tc008).
+Figure 4
 
 3. Test-Case Pass Percentage
 ============================
 
-All mandatory test-cases must pass. This can be validated in multiple ways. The below diagram of
-the 'Test Run Results' is one method and shows that 100% of the mandatory test-cases have passed.
+All mandatory test-cases have to run successfuly. The below diagram of the 'Test Run Results' is one method and
+shows that 94.39% of the mandatory test-cases have passed.
 This value must not be lower than 100%.
 
-.. image:: danube/images/ovp_pass_percentage.png
+.. image:: fraser/images/ovp_pass_percentage.png
     :align: center
     :width: 350 px
 
-Another method to check that all mandatory test-cases have passed is shown in the diagram below.
-The pass/total is given as a fraction and highlighted here in yellow. For the osinterop test area,
-the result must display [205/205] and for each of the test-cases under the vping and ha test areas
-[1/1] must be displayed.
+Figure 5
 
-.. image:: danube/images/ovp_pass_fraction.png
+Failed test cases can also be easy identified by the color of pass/total number. :
+
+- Green when all test-cases pass
+- Orange when at least one fails
+- Red when all test-cases fail
+
+.. image:: fraser/images/ovp_pass_fraction.png
     :align: center
-    :width: 270 px
+    :width: 350 px
+
+Figure 6
 
 4. Log File Verification
 ========================
 
-Three log files must be verified for content within each mandatory test area. The log files for
-each of the test areas is noted in the table below.
+Each log file of the three mandatory test areas has to be verified.
 
-.. image:: danube/images/ovp_log_files.png
+Log files can be displayed by clicking on the setup icon to the right of the results,
+as shown in figure below.
+
+.. image:: fraser/images/ovp_log_setup.png
     :align: center
     :scale: 100%
 
-The three log files can be displayed by clicking on the setup icon to the right of the results,
-as shown in the diagram below.
+Figure 7
 
-*Note, while the vping and ha test areas list multiple test-cases in the below diagram, there is
-a single log file for all test-cases within these test areas.*
+*Note, all log files can be found at results/ directory as shown at the following table.*
 
-.. image:: danube/images/ovp_log_setup.png
++------------------------+--------------------------+
+| **Mandatory Test Area**| **Location**             |
++------------------------+--------------------------+
+| bottlenecks            | results/stress_logs/     |
++------------------------+--------------------------+
+| functest.tempest       | results/tempest_logs/    |
++------------------------+--------------------------+
+| functest.security      | results/security_logs/   |
++------------------------+--------------------------+
+| yardstick              | results/ha_logs/         |
++------------------------+--------------------------+
+
+
+The dottlenecks log must contain the 'SUCCESS' result as shown in following example:
+
+  2018-08-28 10:41:18,482 [ERROR] yardstick.benchmark.core.task task.py:132 Testcase: "ping_bottlenecks" **SUCCESS**!!!
+
+Functest logs opens an html page that lists all test cases as shown in figure 8. All test cases must have run
+successfuly.
+
+.. image:: fraser/images/ovp_log_functest_image.png
     :align: center
     :scale: 100%
 
-Within the osinterop log (dovetail.osinterop.tc001.log), scroll down to the area of the log that
-begins to list the results of each test-case executed. This can be located by looking for lines
-prefaced with '**tempest.api**' and ending with '**... ok**'.
+Figure 8
 
-.. image:: danube/images/ovp_log_test_count.png
+For the vping test area log file (functest.log). The two entries displayed in the tables below must be present in
+this log file.
+
+**functest.vping_userdata**
+
+.. image:: fraser/images/ovp_vping_ssh.png
     :align: center
     :scale: 100%
 
-The number of lines within the osinterop log for test-cases must add up according to the table
-above, where test-cases are broken down according to compute, identity, image, network and volume,
-with respective counts given in the table. The ha log (yardstick.log) must contain the 'PASS'
-result for each of the eight test-cases within this test area. This can be verified by searching
-the log for the keyword 'PASS'.
+Figure 9
 
+**functest.vping_ssh**
 
-
-The eight lines to validate are listed below:
-
- - 017-10-16 05:07:49,158 yardstick.benchmark.scenarios.availability.serviceha serviceha.py:81
-   INFO The HA test case PASS the SLA
- - 2017-10-16 05:08:31,387 yardstick.benchmark.scenarios.availability.serviceha serviceha.py:81
-   INFO The HA test case PASS the SLA
- - 2017-10-16 05:09:13,669 yardstick.benchmark.scenarios.availability.serviceha serviceha.py:81
-   INFO The HA test case PASS the SLA
- - 2017-10-16 05:09:55,967 yardstick.benchmark.scenarios.availability.serviceha serviceha.py:81
-   INFO The HA test case PASS the SLA
- - 2017-10-16 05:10:38,407 yardstick.benchmark.scenarios.availability.serviceha serviceha.py:81
-   INFO The HA test case PASS the SLA
- - 2017-10-16 05:11:00,030 yardstick.benchmark.scenarios.availability.scenario_general
-   scenario_general.py:71 INFO [92m Congratulations, the HA test case PASS! [0m
- - 2017-10-16 05:11:22,536 yardstick.benchmark.scenarios.availability.scenario_general
-   scenario_general.py:71 INFO [92m Congratulations, the HA test case PASS! [0m
- - 2017-10-16 05:12:07,880 yardstick.benchmark.scenarios.availability.scenario_general
-   scenario_general.py:71 INFO [92m Congratulations, the HA test case PASS! [0m
-
-
-The final validation is for the vping test area log file (functest.log). The two entries
-displayed in the diagrams below must be present in this log file.
-
- - vping_userdata
- - vping_ssh
-
-.. image:: danube/images/ovp_vping_user.png
+.. image:: fraser/images/ovp_vping_user.png
     :align: center
     :scale: 100%
 
-.. image:: danube/images/ovp_vping_ssh.png
-    :align: center
-    :scale: 100%
+Figure 10
+
+The yardstick log  must contain the 'SUCCESS' result for each of the test-cases within this
+test area. This can be verified by searching the log for the keyword 'SUCCESS'.
+
+An example of a FAILED and a SUCCESS test case are listed below:
+
+ 2018-08-28 10:25:09,946 [ERROR] yardstick.benchmark.scenarios.availability.monitor.monitor_multi monitor_multi.py:78 SLA **failure**: 14.015082 > 5.000000
+
+ 2018-08-28 10:23:41,907 [INFO] yardstick.benchmark.core.task task.py:127 Testcase: "opnfv_yardstick_tc052" **SUCCESS**!!!
+
 
 5. SUT Info Verification
 ========================
@@ -189,17 +206,21 @@ SUT information must be present in the results to validate that all required end
 and at least two controllers were present during test execution. For the results shown below,
 click the '**info**' hyperlink in the **SUT** column to navigate to the SUT information page.
 
-.. image:: danube/images/sut_info.png
+.. image:: fraser/images/sut_info.png
     :align: center
     :scale: 100%
+
+Figure 11
 
 In the '**Endpoints**' listing shown below for the SUT VIM component, ensure that services are
 present for identify, compute, image, volume and network at a minimum by inspecting the
 '**Service Type**' column.
 
-.. image:: danube/images/sut_endpoints.png
+.. image:: fraser/images/sut_endpoints.png
     :align: center
     :scale: 100%
+
+Figure 12
 
 Inspect the '**Hosts**' listing found below the Endpoints secion of the SUT info page and ensure
 at least two hosts are present, as two controllers are required the for the mandatory HA
