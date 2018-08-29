@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_310f6d32",
+        "filename": "docs/testing/user/ovpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-29T12:41:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a561d44_7a237f05",
+      "range": {
+        "startLine": 83,
+        "startChar": 0,
+        "endLine": 83,
+        "endChar": 3
+      },
+      "revId": "6eb964f63945e55f88271537b8819c789dc0692c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_5a5b1b87",
         "filename": "docs/testing/user/ovpaddendum/index.rst",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2018-08-29T03:45:34Z",
       "side": 1,
       "message": "Now it is renamed to be \u0027stress\u0027 not \u0027resiliency\u0027.",
+      "range": {
+        "startLine": 230,
+        "startChar": 3,
+        "endLine": 230,
+        "endChar": 13
+      },
+      "revId": "6eb964f63945e55f88271537b8819c789dc0692c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_9113d95b",
+        "filename": "docs/testing/user/ovpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-29T12:41:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a561d44_5a5b1b87",
       "range": {
         "startLine": 230,
         "startChar": 3,
