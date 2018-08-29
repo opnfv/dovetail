@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_ee17d4a1",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-08-29T11:18:25Z",
+      "side": 1,
+      "message": "you could remove this double space",
+      "range": {
+        "startLine": 192,
+        "startChar": 17,
+        "endLine": 192,
+        "endChar": 18
+      },
+      "revId": "54777ad0bb7876b57ab0a8000c09acc4258cbf0b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
