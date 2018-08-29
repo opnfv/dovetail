@@ -68,6 +68,53 @@
       "revId": "6eb964f63945e55f88271537b8819c789dc0692c",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_ae315cee",
+        "filename": "docs/testing/user/ovpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-29T07:24:35Z",
+      "side": 1,
+      "message": "it is suppose to point to the note further down below",
+      "parentUuid": "9a561d44_9a549355",
+      "range": {
+        "startLine": 320,
+        "startChar": 30,
+        "endLine": 320,
+        "endChar": 32
+      },
+      "revId": "6eb964f63945e55f88271537b8819c789dc0692c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_0e4e886f",
+        "filename": "docs/testing/user/ovpaddendum/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-08-29T07:24:35Z",
+      "side": 1,
+      "message": "this is the note the * refers to",
+      "range": {
+        "startLine": 360,
+        "startChar": 0,
+        "endLine": 360,
+        "endChar": 12
+      },
+      "revId": "6eb964f63945e55f88271537b8819c789dc0692c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
