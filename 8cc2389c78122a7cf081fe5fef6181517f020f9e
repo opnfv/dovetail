@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_e431b5a3",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-30T09:59:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a561d44_c41d9168",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 15
+      },
+      "revId": "8cc2389c78122a7cf081fe5fef6181517f020f9e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_042789b7",
         "filename": "docs/testing/user/reviewerguide/index.rst",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_04d4a91e",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-30T09:59:40Z",
+      "side": 1,
+      "message": "In that case maybe this check is not needed? Because it is covered by step 3. What do you think if we remove it?",
+      "parentUuid": "9a561d44_042789b7",
+      "range": {
+        "startLine": 83,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 49
+      },
+      "revId": "8cc2389c78122a7cf081fe5fef6181517f020f9e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_6410054f",
         "filename": "docs/testing/user/reviewerguide/index.rst",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2018-08-30T01:47:50Z",
       "side": 1,
       "message": "The testcases.json file will be updated before the release, so this case will be fixed then. So maybe we don\u0027t need to say this here.",
+      "range": {
+        "startLine": 97,
+        "startChar": 71,
+        "endLine": 99,
+        "endChar": 13
+      },
+      "revId": "8cc2389c78122a7cf081fe5fef6181517f020f9e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_e4bff5ce",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-08-30T09:59:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a561d44_6410054f",
       "range": {
         "startLine": 97,
         "startChar": 71,
