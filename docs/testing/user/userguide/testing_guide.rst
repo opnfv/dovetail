@@ -194,9 +194,6 @@ this file should contain.
    # Project-level authentication scope (name or ID), recommend admin project.
    export OS_PROJECT_NAME=admin
 
-   # For identity v2, it uses OS_TENANT_NAME rather than OS_PROJECT_NAME.
-   export OS_TENANT_NAME=admin
-
    # Authentication username, belongs to the project above, recommend admin user.
    export OS_USERNAME=admin
 
