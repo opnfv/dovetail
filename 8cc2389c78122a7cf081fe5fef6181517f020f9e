@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_22d0bd4f",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-08-31T01:20:48Z",
+      "side": 1,
+      "message": "I also think it\u0027s better to remove it.",
+      "parentUuid": "9a561d44_04d4a91e",
+      "range": {
+        "startLine": 83,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 49
+      },
+      "revId": "8cc2389c78122a7cf081fe5fef6181517f020f9e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_6410054f",
         "filename": "docs/testing/user/reviewerguide/index.rst",
         "patchSetId": 3
