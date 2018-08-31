@@ -95,7 +95,6 @@ in parenthesis is shown below for the OVP 2018.08 release.
 - bottlenecks.stress.ping (1)
 - functest.tempest.osinterop (204)
 - functest.tempest.compute (12)
-- functest.tempest.identity_v2 (5)
 - functest.tempest.identity_v3 (11)
 - functest.tempest.image (2)
 - functest.tempest.network_api (14)

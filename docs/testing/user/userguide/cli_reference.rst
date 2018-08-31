@@ -141,7 +141,6 @@ Dovetail List Commands
        functest.vping.ssh
        functest.tempest.osinterop
        functest.tempest.compute
-       functest.tempest.identity_v2
        functest.tempest.identity_v3
        functest.tempest.image
        functest.tempest.network_api
