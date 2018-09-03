@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_e56d2a9b",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-09-03T22:13:18Z",
+      "side": 1,
+      "message": "I updated this value in my patch https://gerrit.opnfv.org/gerrit/#/c/61785/\nWe need to merge this in-order now.",
+      "range": {
+        "startLine": 117,
+        "startChar": 21,
+        "endLine": 117,
+        "endChar": 24
+      },
+      "revId": "c266472c9dea9f1a3d58e9a70f761d792ac798dd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
