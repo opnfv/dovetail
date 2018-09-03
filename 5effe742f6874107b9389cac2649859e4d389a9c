@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_a55cd2ee",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-09-03T22:12:06Z",
+      "side": 1,
+      "message": "This includes already Panos\u0027 deleted identity v2 test cases:\n434 \u003d 443 - 5 identity_v2 - 4 interop",
+      "range": {
+        "startLine": 118,
+        "startChar": 21,
+        "endLine": 118,
+        "endChar": 24
+      },
+      "revId": "5effe742f6874107b9389cac2649859e4d389a9c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
