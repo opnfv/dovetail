@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_1fc06b29",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-09-03T10:10:58Z",
+      "side": 0,
+      "message": "Also images have to be updated to be aligned with new test cases.\nI propose to remove the reviewer guide from here and updated it separately when the figures are avaliable.",
+      "range": {
+        "startLine": 68,
+        "startChar": 2,
+        "endLine": 68,
+        "endChar": 30
+      },
+      "revId": "0727b542015f7f3718eda435396d34aec5ac1c80",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
