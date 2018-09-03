@@ -93,7 +93,7 @@ in parenthesis is shown below for the OVP 2018.08 release.
 - functest.vping.userdata (1)
 - functest.vping.ssh (1)
 - bottlenecks.stress.ping (1)
-- functest.tempest.osinterop (204)
+- functest.tempest.osinterop (200)
 - functest.tempest.compute (12)
 - functest.tempest.identity_v2 (5)
 - functest.tempest.identity_v3 (11)
@@ -115,7 +115,7 @@ in parenthesis is shown below for the OVP 2018.08 release.
 - yardstick.ha.database  (1)
 
 
-There are a total of 443 mandatory test cases.
+There are a total of 434 mandatory test cases.
 
 **Optional**
 
