@@ -8,7 +8,6 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 
-import json
 import os_client_config
 import shade
 from shade import exc
@@ -21,10 +20,16 @@ class OS_Utils(object):
         self.images = []
         self.flavors = []
 
-    def list_endpoints(self):
+    def search_endpoints(self, interface='public'):
         try:
-            res = self.cloud.search_endpoints()
-            endpoints = json.dumps(res)
-            return True, endpoints
+            res = self.cloud.search_endpoints(filters={'interface': interface})
+            return True, res
+        except exc.OpenStackCloudException as o_exc:
+            return False, o_exc.orig_message
+
+    def search_services(self, service_id=None):
+        try:
+            res = self.cloud.search_services(name_or_id=service_id)
+            return True, res
         except exc.OpenStackCloudException as o_exc:
             return False, o_exc.orig_message
