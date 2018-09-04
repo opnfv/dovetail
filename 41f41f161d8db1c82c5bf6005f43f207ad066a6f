@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_05277e13",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-09-04T07:31:26Z",
+      "side": 1,
+      "message": "You could call the list_services after checking the result of list_endpoints. Because if the list_endpoints returns None there is no reason for a list_services call. For efficiency reasons",
+      "range": {
+        "startLine": 273,
+        "startChar": 4,
+        "endLine": 277,
+        "endChar": 19
+      },
+      "revId": "41f41f161d8db1c82c5bf6005f43f207ad066a6f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
