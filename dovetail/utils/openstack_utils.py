@@ -23,8 +23,16 @@ class OS_Utils(object):
 
     def list_endpoints(self):
         try:
-            res = self.cloud.search_endpoints()
+            res = self.cloud.search_endpoints(filters={'interface': 'public'})
             endpoints = json.dumps(res)
             return True, endpoints
+        except exc.OpenStackCloudException as o_exc:
+            return False, o_exc.orig_message
+
+    def list_services(self):
+        try:
+            res = self.cloud.list_services()
+            services = json.dumps(res)
+            return True, services
         except exc.OpenStackCloudException as o_exc:
             return False, o_exc.orig_message

@@ -269,19 +269,37 @@ def get_openstack_endpoint(logger=None):
         os_utils = OS_Utils(verify=False)
     else:
         os_utils = OS_Utils()
-    res, msg = os_utils.list_endpoints()
-    if not res:
-        logger.error("Failed to get admin endpoints. Exception message, {}"
-                     .format(msg))
+    res_endpoints, msg_endpoints = os_utils.list_endpoints()
+    if not res_endpoints:
+        logger.error("Failed to list endpoints. Exception message, {}"
+                     .format(msg_endpoints))
         return None
+    res_services, msg_services = os_utils.list_services()
+    if not res_services:
+        logger.error("Failed to list services. Exception message, {}"
+                     .format(msg_services))
+        return None
+    endpoints_info = []
+    for item in json.loads(msg_endpoints):
+        endpoint = {'URL': item['url'], 'Enabled': item['enabled']}
+        for service in json.loads(msg_services):
+            if service['id'] == item['service_id']:
+                endpoint['Service Type'] = service['service_type']
+                endpoint['Service Name'] = service['name']
+                break
+        else:
+            endpoint['Service Type'] = None
+            endpoint['Service Name'] = None
+        endpoints_info.append(endpoint)
+
     result_file = os.path.join(dt_cfg.dovetail_config['result_dir'],
                                'endpoint_info.json')
     try:
         with open(result_file, 'w') as f:
-            f.write(msg)
+            json.dump(endpoints_info, f)
             logger.debug("Record all endpoint info into file {}."
                          .format(result_file))
-            return msg
+            return endpoints_info
     except Exception:
         logger.exception("Failed to write endpoint info into file.")
         return None
