@@ -68,6 +68,30 @@
       "revId": "d7889d737c9822be374af0ca830b907714530f9f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_7351e00d",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2018-09-05T02:08:38Z",
+      "side": 1,
+      "message": "sorry, I know this clause now",
+      "parentUuid": "9a561d44_133b44d2",
+      "range": {
+        "startLine": 290,
+        "startChar": 8,
+        "endLine": 290,
+        "endChar": 13
+      },
+      "revId": "d7889d737c9822be374af0ca830b907714530f9f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
