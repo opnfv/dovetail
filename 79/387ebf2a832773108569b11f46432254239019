@@ -1,0 +1,7 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+2: Dan Xu <xudan16@huawei.com>
+Submitted-by: Dan Xu <xudan16@huawei.com>
+Submitted-at: Wed, 05 Sep 2018 02:56:51 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/61835
+Project: dovetail
+Branch: refs/heads/stable/fraser
