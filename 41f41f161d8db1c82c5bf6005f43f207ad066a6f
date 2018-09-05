@@ -22,6 +22,30 @@
       "revId": "41f41f161d8db1c82c5bf6005f43f207ad066a6f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_9300f402",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-09-05T01:35:13Z",
+      "side": 1,
+      "message": "Good suggestion.",
+      "parentUuid": "9a561d44_05277e13",
+      "range": {
+        "startLine": 273,
+        "startChar": 4,
+        "endLine": 277,
+        "endChar": 19
+      },
+      "revId": "41f41f161d8db1c82c5bf6005f43f207ad066a6f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
