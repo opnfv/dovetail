@@ -155,7 +155,7 @@ The bottlenecks log must contain the 'SUCCESS' result as shown in following exam
 Functest logs opens an html page that lists all test cases as shown in figure 7. All test cases must have run
 successfuly.
 
-.. image:: images/ovp_log_functest_image.png
+.. image:: images/ovp_log_files_functest_image.png
     :align: center
     :scale: 100%
 
