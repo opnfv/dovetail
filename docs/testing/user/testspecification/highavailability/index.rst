@@ -810,9 +810,10 @@ For second monitor is used a process monitor and the main purpose is to watch
 whether the database processes on the host node are killed properly.
 
 Therefore, in this test case, there are two metrics:
-- service_outage_time, which indicates the maximum outage time (seconds)
+
+* service_outage_time, which indicates the maximum outage time (seconds)
   of the specified OpenStack command request
-- process_recover_time, which indicates the maximum time (seconds) from the
+* process_recover_time, which indicates the maximum time (seconds) from the
   process being killed to recovered
 
 Test execution
@@ -1056,7 +1057,7 @@ Process recovery is verified by checking the existence of processes of
 Test execution
 ''''''''''''''
 * Test action 1: Two host VMs are booted, these two hosts are in two different
-networks, the networks are connected by a virtual router.
+  networks, the networks are connected by a virtual router.
 * Test action 2: Start monitors: each monitor will run with independently process.
   The monitor info will be collected.
 * Test action 3: Do attacker: Connect the host through SSH, and then execute the kill

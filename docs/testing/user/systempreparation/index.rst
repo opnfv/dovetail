@@ -52,7 +52,7 @@ The SUT is expected to be connected with high performance networks. These networ
 are expected in the SUT:
 
 - A management network by which the Test Node can reach all identity, image, network,
-and compute services in the SUT
+  and compute services in the SUT
 - A data network that supports the virtual network capabilities and data path testing
 
 Additional networks, such as Light Out Management or storage networks, may be
