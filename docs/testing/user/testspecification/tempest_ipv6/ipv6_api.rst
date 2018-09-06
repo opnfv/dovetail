@@ -161,10 +161,12 @@ Test preconditions
 ------------------
 
 1. The SUT has at least one external network.
-2. In the external network list, there is no network without external router, i.e.,
-all networks in this list are with external router.
+
+2. In the external network list, there is no network without external router,
+   i.e., all networks in this list are with external router.
+
 3. There is one external network with configured public network id and there is
-no subnet on this network
+   no subnet on this network
 
 Basic test flow execution description and pass/fail criteria
 ------------------------------------------------------------
