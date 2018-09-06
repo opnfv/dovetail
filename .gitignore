@@ -38,3 +38,4 @@ docs/_build
 pre_config/
 docs/index.rst
 docs/requirements.txt
+docs/_build/*
