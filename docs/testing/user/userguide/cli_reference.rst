@@ -72,7 +72,7 @@ Commands List
 | dovetail run --optional --testsuite <test_suite_name>                  | Run Dovetail with all optional test cases within test suite <test_suite_name>                     |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run --debug | -d                                              | Run Dovetail with debug mode and show all debug logs                                            |
+| dovetail run --debug | -d                                              | Run Dovetail with debug mode and show all debug logs                                              |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 | dovetail run --offline                                                 | Run Dovetail offline, use local docker images instead of download online                          |
