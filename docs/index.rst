@@ -10,7 +10,7 @@ Dovetail
 
 .. toctree::
    :numbered:
-   :maxdepth: 2
+   :maxdepth: 1
 
    testing/user/certificationworkflow/index
    testing/user/ovpaddendum/index

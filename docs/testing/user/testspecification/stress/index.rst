@@ -18,7 +18,7 @@ the SUT is able to absorb failures while providing an acceptable level of servic
 
 
 References
-================
+==========
 
 This test area references the following specifications, definitions and reviews:
 
@@ -96,7 +96,7 @@ Basic test flow execution description and pass/fail criteria
 ------------------------------------------------------------
 
 Methodology for validating capacity of the SUT
-'''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''
 Validating capacity of the SUT based on life-cycle ping test generally involves
 2 subtests which provides secondary validation for the SUT furnishing users with
 reliable capacity without being crushed.
