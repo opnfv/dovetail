@@ -89,7 +89,7 @@ Example: additional attributes per VM for HA policy
 ---------------------------------------------------
 
 This fictional example showcases the presence of an additional attribute in an
-API response. The example shows that the 'server details', i.e. the VM
+API response. The example shows that the 'server details' [3]_, i.e. the VM
 metadata, includes an additional attribute 'ha-policy' which is used to
 associate high-availability policies with a VM instance. This attribute is
 utilized by a proprietary add-on component to manage VM migration and recovery

@@ -25,24 +25,24 @@ All tests areas addressed in the OVP are covered in the following test
 specification documents.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-  ./highavailability/index.rst
-  ./tempest_osinterop/index.rst
-  ./vping/index.rst
-  ./tempest_trunk_ports/index.rst
-  ./security_patrole/index.rst
-  ./tempest_ipv6/index.rst
-  ./tempest_network_security/index.rst
-  ./tempest_network/network_scenario.rst
-  ./tempest_vm_lifecycle/index.rst
-  ./tempest_multi_node_scheduling/index.rst
-  ./vpn/index.rst
-  ./vnf/index.rst
-  ./stress/index.rst
-  ./snaps_smoke/index.rst
-  ./tempest_compute/index.rst
-  ./tempest_identity_v3/index.rst
-  ./tempest_image/index.rst
-  ./tempest_network/index.rst
-  ./tempest_volume/index.rst
+   highavailability/index
+   security_patrole/index
+   snaps_smoke/index
+   stress/index
+   tempest_compute/index
+   tempest_identity_v3/index
+   tempest_image/index
+   tempest_ipv6/index
+   tempest_multi_node_scheduling/index
+   tempest_network_api/index
+   tempest_network_scenario/index
+   tempest_network_security/index
+   tempest_osinterop/index
+   tempest_trunk_ports/index
+   tempest_vm_lifecycle/index
+   tempest_volume/index
+   vnf/index
+   vping/index
+   vpn/index

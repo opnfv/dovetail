@@ -36,7 +36,7 @@ test. For detailed information on the individual steps and assertions performed
 by the tests, review the Python source code accessible via the following links:
 
 - `Neutron Trunk API tests <https://github.com/openstack/neutron/blob/stable/pike/neutron/tests/tempest/api/test_trunk.py>`_
-- `Neutron Trunk API negative tests <https://github.com/openstack/neutron/blob/stable/pike/neutron/tests/tempest/api/test_trunk_details.py>`_
+- `Neutron Trunk API trunk details <https://github.com/openstack/neutron/blob/stable/pike/neutron/tests/tempest/api/test_trunk_details.py>`_
 - `Neutron Trunk API negative tests <https://github.com/openstack/neutron/blob/stable/pike/neutron/tests/tempest/api/test_trunk_negative.py>`_
 
 
@@ -117,7 +117,7 @@ These group of tests comprise negative tests which verify that invalid operation
 are handled correctly by the system under test.
 
 Implementation:
-`TrunkTestJSON <https://github.com/openstack/neutron/blob/stable/pike/neutron/tests/tempest/api/test_trunk_negative.py#L24>`_
+`TrunkTestNegative <https://github.com/openstack/neutron/blob/stable/pike/neutron/tests/tempest/api/test_trunk_negative.py#L24>`_
 
 - neutron.tests.tempest.api.test_trunk_negative.TrunkTestJSON.test_add_subport_duplicate_segmentation_details
 - neutron.tests.tempest.api.test_trunk_negative.TrunkTestJSON.test_add_subport_passing_dict

@@ -32,9 +32,5 @@ unittest_results.log
 
 # Sphinx documentation
 *.sw?
-docs_build/
-docs_output/
 docs/_build
-pre_config/
-docs/index.rst
-docs/requirements.txt
+docs/_build/*
