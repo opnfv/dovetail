@@ -20,6 +20,7 @@ Dovetail
    testing/user/systempreparation/index
    testing/user/testspecification/index
    testing/user/userguide/index
+   testing/user/instructionsperinstaller/index
 
    testing/developer/testcaserequirements/index
    testing/developer/testscope/index
