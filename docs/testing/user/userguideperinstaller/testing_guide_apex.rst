@@ -2,9 +2,9 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) OPNFV, Huawei Technologies Co.,Ltd and others.
 
-==========================================
-Conducting OVP Testing with Dovetail
-==========================================
+===========================================================
+Conducting OVP Testing with Dovetail using APEX installer
+===========================================================
 
 Overview
 ------------------------------
@@ -151,6 +151,10 @@ to install,
 Configuring the Test Host Environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+In order to run the test scenarios properly and having access to all OS components
+that each scenario needs, the undercloud credentials should be used and copied in the
+docker container along with ssh key.
+
 The Test Host needs a few environment variables set correctly in order to access the
 OpenStack API which is required to drive the Dovetail tests. For convenience and as a convention,
 we will also create a home directory for storing all Dovetail related config files and
@@ -161,7 +165,7 @@ results files:
    $ mkdir -p ${HOME}/dovetail
    $ export DOVETAIL_HOME=${HOME}/dovetail
 
-For example, Here we set dovetail home directory to be ``${HOME}/dovetail``.
+For example, here we set dovetail home directory to be ``${HOME}/dovetail``.
 Then create two directories named ``pre_config`` and ``images`` inside this directory
 to store all Dovetail related config files and all test images respectively:
 
@@ -170,6 +174,10 @@ to store all Dovetail related config files and all test images respectively:
    $ mkdir -p ${DOVETAIL_HOME}/pre_config
    $ mkdir -p ${DOVETAIL_HOME}/images
 
+The environment preparation should be applied on the Test Host environment.
+Therefore, the containers which are going to be used as part of this configuration,
+fetches the information, the files and the rest input from Test Host environment directly
+as part of the Docker command.
 
 Setting up Primary Configuration File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -232,6 +240,15 @@ this file should contain.
    # Otherwise, it will create a role 'Member' to do that.
    export NEW_USER_ROLE=xxx
 
+   # Set the name of the installer as environment variable (e.g. apex, fuel, etc)
+   # Optional parameter
+   export INSTALLER=xxxx
+
+   # Set the deployed scenario name (e.g. os-sdn-nofeature-noha)
+   # Optional parameter
+   export DEPLOY_SCENARIO=xxxx
+
+For the OS_PASSWORD, OpenStack password from undercloud environment should be used.
 
 The OS_AUTH_URL variable is key to configure correctly, as the other admin services
 are collected from the identity service. HTTPS should be configured in the SUT so
@@ -314,10 +331,11 @@ Below is a sample with the required syntax when password is employed by the cont
        ip: xx.xx.xx.xx
 
        # User name of the default user of this node. This user **must** have sudo privileges.
-       user: root
+       user: heat-admin
 
        # Password of the user.
-       password: root
+       #password: root
+       key_filename: /root/.ssh/id_rsa
 
    -
        # This can not be changed and must be node1.
@@ -330,10 +348,11 @@ Below is a sample with the required syntax when password is employed by the cont
        ip: xx.xx.xx.xx
 
        # User name of the default user of this node. This user **must** have sudo privileges.
-       user: root
+       user: heat-admin
 
        # Password of the user.
-       password: root
+       #password: root
+       key_filename: /root/.ssh/id_rsa
 
    process_info:
    -
@@ -370,6 +389,11 @@ A sample is provided below to show the required syntax when using a key file.
 Under nodes, repeat entries for name, role, ip, user and password or key file for each of the
 controller/compute nodes that comprise the SUT. Use a '-' to separate each of the entries.
 Specify the value for the role key to be either 'Controller' or 'Compute' for each node.
+The node IPs could be retrieved through OpenStack API with the following command:
+
+.. code-block:: bash
+
+   openstack server list
 
 Under process_info, repeat entries for testcase_name, attack_host and attack_process
 for each HA test case. Use a '-' to separate each of the entries.
@@ -552,8 +576,10 @@ and the ``-v`` options mounts files from the test host to the destination path
 inside the container. The latter option allows the Dovetail container to read
 the configuration files and write result files into DOVETAIL_HOME on the Test
 Host. The user should be within the Dovetail container shell, once the command
-above is executed.
+above is executed.d
 
+In case the 'key_filename' method has been chosen as authentication method in the pod.yaml file,
+the ssh key files should be copy in the dovetail container before running the test suite.
 
 Running the OVP Test Suite
 ----------------------------
@@ -711,7 +737,7 @@ Host by default within the directory specified below.
 
      * This kind of files need to be opened with a web browser.
 
-     * The skipped test cases are accompanied with the reason tag for the users to see why these test cases skipped.
+     * The skipped test cases are accompanied with a reason tag for the users to see why these test cases skipped.
 
      * The failed test cases have rich debug information for the users to see why these test cases failed.
 
@@ -775,7 +801,7 @@ until they are ready to submit results for peer community review.
        file from the hard-disk. Then click the *Upload* button and see a results ID once your
        upload succeeds.
 
-     * Results are remaining in status 'private' until they are submitted for review.
+     * Results are status 'private' until they are submitted for review.
 
      * Use the *Operation* column drop-down option 'submit to review', to expose results to
        OPNFV community peer reviewers. Use the 'withdraw submit' option to reverse this action.
