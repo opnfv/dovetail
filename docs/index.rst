@@ -18,6 +18,7 @@ Dovetail
    testing/user/systempreparation/index
    testing/user/testspecification/index
    testing/user/userguide/index
+   testing/user/userguideperinstaller/testing_guide_apex
 
    testing/developer/testcaserequirements/index
 
