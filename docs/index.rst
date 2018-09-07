@@ -14,6 +14,7 @@ Dovetail
 
    testing/user/certificationworkflow/ApplicationForm
    testing/user/certificationworkflow/index
+   testing/user/instructionsperinstaller/index
    testing/user/ovpaddendum/exemption-strict-API-validation
    testing/user/ovpaddendum/index
    testing/user/reviewerguide/index
