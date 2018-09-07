@@ -154,6 +154,10 @@ to install,
 Configuring the Test Host Environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+In order to run the test scenarios properly and having access to all OS components
+that each scenario is needed, the undercloud credentials should be used and copy in the
+docker container along with ssh key.
+
 The Test Host needs a few environment variables set correctly in order to access the
 OpenStack API required to drive the Dovetail tests. For convenience and as a convention,
 we will also create a home directory for storing all Dovetail related config files and
@@ -238,7 +242,15 @@ this file should contain.
    # Otherwise, it will create a role 'Member' to do that.
    export NEW_USER_ROLE=xxx
 
+   #Set the name of the installer as environment variable (e.g. apex, fuel, etc)
+   #Optional parameter
+   export INSTALLER=xxxx
 
+   #Set the deployed scenario name (e.g. os-sdn-nofeature-noha)
+   #Optional parameter
+   export DEPLOY_SCENARIO=xxxx
+
+The OS_PASSWORD, for apex installer, uses the password from undercloud environment.
 The OS_AUTH_URL variable is key to configure correctly, as the other admin services
 are gleaned from the identity service. HTTPS should be configured in the SUT so
 either OS_CACERT or OS_INSECURE should be uncommented.
@@ -375,6 +387,7 @@ A sample is provided below to show the required syntax when using a key file.
 Under nodes, repeat entries for name, role, ip, user and password or key file for each of the
 controller/compute nodes that comprise the SUT. Use a '-' to separate each of the entries.
 Specify the value for the role key to be either 'Controller' or 'Compute' for each node.
+The node IPs could be retrieved through OpenStack API, printing the Server list.
 
 Under process_info, repeat entries for testcase_name, attack_host and attack_process
 for each HA test case. Use a '-' to separate each of the entries.
