@@ -155,7 +155,7 @@ Configuring the Test Host Environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Test Host needs a few environment variables set correctly in order to access the
-Openstack API required to drive the Dovetail tests. For convenience and as a convention,
+OpenStack API required to drive the Dovetail tests. For convenience and as a convention,
 we will also create a home directory for storing all Dovetail related config files and
 results files:
 
@@ -173,14 +173,18 @@ to store all Dovetail related config files and all test images respectively:
    $ mkdir -p ${DOVETAIL_HOME}/pre_config
    $ mkdir -p ${DOVETAIL_HOME}/images
 
+The environment preparation should be applied on the Test Host environment.
+Therefore, the containers, that are going to be used as part of this configuration,
+fetch the information, the files and the rest input from Test Host environment directly.
+
 Setting up Primary Configuration File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-At this point, you will need to consult your SUT (Openstack) administrator to correctly set
+At this point, you will need to consult your SUT (OpenStack) administrator to correctly set
 the configurations in a file named ``env_config.sh``.
 The Openstack settings need to be configured such that the Dovetail client has all the necessary
 credentials and privileges to execute all test operations. If the SUT uses terms
-somewhat differently from the standard Openstack naming, you will need to adjust
+somewhat differently from the standard OpenStack naming, you will need to adjust
 this file accordingly.
 
 Create and edit the file ``${DOVETAIL_HOME}/pre_config/env_config.sh`` so that
@@ -234,7 +238,15 @@ this file should contain.
    # Otherwise, it will create a role 'Member' to do that.
    export NEW_USER_ROLE=xxx
 
+   #Set the name of the installer as environment variable (e.g. apex, fuel, etc)
+   #Optional parameter
+   export INSTALLER=xxxx
 
+   #Set the deployed scenario name (e.g. os-sdn-nofeature-noha)
+   #Optional parameter
+   export DEPLOY_SCENARIO=xxxx
+
+The OS_PASSWORD, for apex installer, uses the password from undercloud environment.
 The OS_AUTH_URL variable is key to configure correctly, as the other admin services
 are gleaned from the identity service. HTTPS should be configured in the SUT so
 either OS_CACERT or OS_INSECURE should be uncommented.
@@ -371,6 +383,7 @@ A sample is provided below to show the required syntax when using a key file.
 Under nodes, repeat entries for name, role, ip, user and password or key file for each of the
 controller/compute nodes that comprise the SUT. Use a '-' to separate each of the entries.
 Specify the value for the role key to be either 'Controller' or 'Compute' for each node.
+The node IPs could be retrieved through OpenStack API, printing the Server list.
 
 Under process_info, repeat entries for testcase_name, attack_host and attack_process
 for each HA test case. Use a '-' to separate each of the entries.
