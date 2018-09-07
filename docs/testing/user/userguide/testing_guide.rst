@@ -9,9 +9,9 @@ Conducting OVP Testing with Dovetail
 Overview
 ------------------------------
 
-The Dovetail testing framework for OVP consists of two major parts: the testing client that
+The Dovetail testing framework for OVP consists of two major parts: the testing client which
 executes all test cases in a lab (vendor self-testing or a third party lab),
-and the server system that is hosted by the OVP administrator to store and
+and the server system which is hosted by the OVP administrator to store and
 view test results based on a web API. The following diagram illustrates
 this overall framework.
 
@@ -25,10 +25,10 @@ the System Under Test (SUT) itself.
 The above diagram assumes that the tester's Test Host is situated in a DMZ, which
 has internal network access to the SUT and external access via the public Internet.
 The public Internet connection allows for easy installation of the Dovetail containers.
-A singular compressed file that includes all the underlying results can be pulled from
+A single compressed file that includes all the underlying results can be pulled from
 the Test Host and uploaded to the OPNFV OVP server.
 This arrangement may not be supported in some labs. Dovetail also supports an offline mode of
-installation that is illustrated in the next diagram.
+installation which is illustrated in the next diagram.
 
 .. image:: ../../../images/dovetail_offline_mode.png
     :align: center
@@ -44,8 +44,7 @@ The rest of this guide will describe how to install the Dovetail tool as a
 Docker container image, go over the steps of running the OVP test suite, and
 then discuss how to view test results and make sense of them.
 
-Readers interested
-in using Dovetail for its functionalities beyond OVP testing, e.g. for in-house
+Readers interested in using Dovetail for its functionalities beyond OVP testing, e.g. for in-house
 or extended testing, should consult the Dovetail developer's guide for additional
 information.
 
@@ -136,16 +135,13 @@ also work, but community support may be more available on Docker 17.03 CE or gre
 If your Test Host does not have Docker installed, or Docker is older than 1.12.3,
 or you have Docker version other than 17.03 CE and wish to change,
 you will need to install, upgrade, or re-install in order to run Dovetail.
-The Docker installation process
-can be more complex, you should refer to the official
+If you need further assistance with Docker installation process, you should refer to the official
 Docker installation guide that is relevant to your Test Host's operating system.
 
-The above installation steps assume that the Test Host is in the online mode. For offline
-testing, use the following offline installation steps instead.
-
-In order to install Docker offline, download Docker static binaries and copy the
-tar file to the Test Host, such as for Ubuntu14.04, you may follow the following link
-to install,
+The above installation steps assume that the Test Host is in the online mode.
+For offline testing, use the following offline installation steps instead.
+For instance, download Docker static binaries and copy the tar file to the
+Test Host, such as for Ubuntu14.04, you may follow the following link:
 
 .. code-block:: bash
 
@@ -155,7 +151,7 @@ Configuring the Test Host Environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Test Host needs a few environment variables set correctly in order to access the
-Openstack API required to drive the Dovetail tests. For convenience and as a convention,
+OpenStack API which is required to drive the Dovetail tests. For convenience and as a convention,
 we will also create a home directory for storing all Dovetail related config files and
 results files:
 
@@ -164,8 +160,8 @@ results files:
    $ mkdir -p ${HOME}/dovetail
    $ export DOVETAIL_HOME=${HOME}/dovetail
 
-Here we set dovetail home directory to be ``${HOME}/dovetail`` for an example.
-Then create 2 directories named ``pre_config`` and ``images`` in this directory
+For example, Here we set dovetail home directory to be ``${HOME}/dovetail``.
+Then create two directories named ``pre_config`` and ``images`` inside this directory
 to store all Dovetail related config files and all test images respectively:
 
 .. code-block:: bash
@@ -173,14 +169,15 @@ to store all Dovetail related config files and all test images respectively:
    $ mkdir -p ${DOVETAIL_HOME}/pre_config
    $ mkdir -p ${DOVETAIL_HOME}/images
 
+
 Setting up Primary Configuration File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-At this point, you will need to consult your SUT (Openstack) administrator to correctly set
+At this point, you will need to consult your SUT (OpenStack) administrator to correctly set
 the configurations in a file named ``env_config.sh``.
-The Openstack settings need to be configured such that the Dovetail client has all the necessary
+The OpenStack settings need to be configured such that the Dovetail client has all the necessary
 credentials and privileges to execute all test operations. If the SUT uses terms
-somewhat differently from the standard Openstack naming, you will need to adjust
+somewhat differently from the standard OpenStack naming, you will need to adjust
 this file accordingly.
 
 Create and edit the file ``${DOVETAIL_HOME}/pre_config/env_config.sh`` so that
@@ -191,17 +188,17 @@ this file should contain.
 
    $ cat ${DOVETAIL_HOME}/pre_config/env_config.sh
 
-   # Project-level authentication scope (name or ID), recommend admin project.
+   # Project-level authentication scope (name or ID), admin project is recommended.
    export OS_PROJECT_NAME=admin
 
-   # Authentication username, belongs to the project above, recommend admin user.
+   # Authentication username, belongs to the project above, admin user is recommended.
    export OS_USERNAME=admin
 
    # Authentication password. Use your own password
    export OS_PASSWORD=xxxxxxxx
 
    # Authentication URL, one of the endpoints of keystone service. If this is v3 version,
-   # there need some extra variables as follows.
+   # there needs some extra variables as follows.
    export OS_AUTH_URL='http://xxx.xxx.xxx.xxx:5000/v3'
 
    # Default is 2.0. If use keystone v3 API, this should be set as 3.
@@ -236,7 +233,7 @@ this file should contain.
 
 
 The OS_AUTH_URL variable is key to configure correctly, as the other admin services
-are gleaned from the identity service. HTTPS should be configured in the SUT so
+are collected from the identity service. HTTPS should be configured in the SUT so
 either OS_CACERT or OS_INSECURE should be uncommented.
 However, if SSL is disabled in the SUT, comment out both OS_CACERT and OS_INSECURE variables.
 Ensure the '/path/to/pre_config' directory in
@@ -291,9 +288,9 @@ name, role, ip, as well as the user and key_filename or password to login to the
 must create the file ``${DOVETAIL_HOME}/pre_config/pod.yaml`` to store the info.
 For some HA test cases, they will log in the controller node 'node1' and kill the specific processes.
 The names of the specific processes may be different with the actual ones of the SUTs.
-The process names can also be changed with file ``${DOVETAIL_HOME}/pre_config/pod.yaml``.
+The processes' names can also be changed with file ``${DOVETAIL_HOME}/pre_config/pod.yaml``.
 
-This file is also used as basis to collect SUT hardware information that is stored alongside results and
+This file is also used as a basis to collect SUT hardware information which is stored alongside results and
 uploaded to the OVP web portal. The SUT hardware information can be viewed within the
 'My Results' view in the OVP web portal by clicking the SUT column 'info' link. In order to
 collect SUT hardware information holistically, ensure this file has an entry for each of
@@ -311,10 +308,10 @@ Below is a sample with the required syntax when password is employed by the cont
        # This must be Jumpserver.
        role: Jumpserver
 
-       # This is the install IP of a node which has ipmitool installed.
+       # This is the instance IP of a node which has ipmitool installed.
        ip: xx.xx.xx.xx
 
-       # User name of this node. This user must have sudo privileges.
+       # User name of the user of this node. This user **must** have sudo privileges.
        user: root
 
        # Password of the user.
@@ -327,10 +324,10 @@ Below is a sample with the required syntax when password is employed by the cont
        # This must be controller.
        role: Controller
 
-       # This is the install IP of a controller node, which is the haproxy primary node
+       # This is the instance IP of a controller node, which is the haproxy primary node
        ip: xx.xx.xx.xx
 
-       # User name of this node. This user must have sudo privileges.
+       # User name of the user of this node. This user **must** have sudo privileges.
        user: root
 
        # Password of the user.
@@ -339,13 +336,13 @@ Below is a sample with the required syntax when password is employed by the cont
    process_info:
    -
        # The default attack process of yardstick.ha.rabbitmq is 'rabbitmq-server'.
-       # Here can reset it to be 'rabbitmq'.
+       # Here can be reset to 'rabbitmq'.
        testcase_name: yardstick.ha.rabbitmq
        attack_process: rabbitmq
 
    -
        # The default attack host for all HA test cases is 'node1'.
-       # Here can reset it to be any other node given in the section 'nodes'.
+       # Here can be reset to any other node given in the section 'nodes'.
        testcase_name: yardstick.ha.glance_api
        attack_host: node2
 
@@ -375,7 +372,7 @@ Specify the value for the role key to be either 'Controller' or 'Compute' for ea
 Under process_info, repeat entries for testcase_name, attack_host and attack_process
 for each HA test case. Use a '-' to separate each of the entries.
 The default attack host of all HA test cases is **node1**.
-The default attack processes of all HA test cases are list here,
+The default attack processes of all HA test cases are list here:
 
    +-------------------------------+-------------------------+
    |      Test Case Name           |  Attack Process Name    |
@@ -407,7 +404,7 @@ If your SUT uses a hosts file to translate hostnames into the IP of OS_AUTH_URL,
 to provide the hosts info in a file ``$DOVETAIL_HOME/pre_config/hosts.yaml``.
 
 Create and edit file ``$DOVETAIL_HOME/pre_config/hosts.yaml``. Below is an example of what
-this file should contain. Note, that multiple hostnames can be specified for each IP address,
+this file should contain. Note that multiple hostnames can be specified for each IP address,
 as shown in the generic syntax below the example.
 
 .. code-block:: bash
@@ -465,7 +462,7 @@ the SUT.
 Offline Test Host
 """""""""""""""""
 
-If the Test Host is offline, you will need to first pull the Dovetail Docker image, and all the
+If the Test Host is offline, you will need to first pull the Dovetail Docker image and all the
 dependent images that Dovetail uses, to a host that is online. The reason that you need
 to pull all dependent images is because Dovetail normally does dependency checking at run-time
 and automatically pulls images as needed, if the Test Host is online. If the Test Host is
@@ -492,7 +489,7 @@ The other Docker images and test images below are only used by optional test cas
    $ wget -nc https://cloud-images.ubuntu.com/releases/16.04/release/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P {ANY_DIR}
    $ wget -nc http://repository.cloudifysource.org/cloudify/4.0.1/sp-release/cloudify-manager-premium-4.0.1.qcow2 -P {ANY_DIR}
 
-Once all these images are pulled, save the images, copy to the Test Host, and then load
+Once all these images are pulled, save the images, copy them to the Test Host, and then load
 the Dovetail image and all dependent images at the Test Host.
 
 At the online host, save the images with the command below.
@@ -536,8 +533,8 @@ After copying and loading the Dovetail images at the Test Host, also copy the te
 Starting Dovetail Docker
 ------------------------
 
-Regardless of whether you pulled down the Dovetail image directly online, or loaded from
-a static image tar file, you are now ready to run Dovetail. Use the command below to
+Regardless of whether you pulled down the Dovetail image directly online, or loaded it from
+a static image tar file, you are now ready to run Dovetail.Use the command below to
 create a Dovetail container and get access to its shell.
 
 .. code-block:: bash
@@ -618,7 +615,7 @@ This is happening if the name of the scenario contains the substring "ovs".
 In this case, the flavor which is going to be used for the running test case has
 'hugepage' characteristics.
 
-Taking the above into our consideration and having in our mind that the DEPLOY_SCENARIO
+Taking the above into consideration and having in mind that the DEPLOY_SCENARIO
 environment parameter is not used by dovetail framework (the initial value is 'unknown'),
 we set as input, for the features that they are responsible for the test case execution,
 the DEPLOY_SCENARIO environment parameter having as substring the feature name "ovs"
@@ -636,7 +633,7 @@ Note for the users:
 By default, results are stored in local files on the Test Host at ``$DOVETAIL_HOME/results``.
 Each time the 'dovetail run' command is executed, the results in the aforementioned directory
 are overwritten. To create a singular compressed result file for upload to the OVP portal or
-for archival purposes, the tool provided an option '--report'.
+for archival purposes, the tool provides an option '--report'.
 
 .. code-block:: bash
 
@@ -681,7 +678,7 @@ When test execution is complete, a tar file with all result and log files is wri
 ``$DOVETAIL_HOME`` on the Test Host. An example filename is
 ``${DOVETAIL_HOME}/logs_20180105_0858.tar.gz``. The file is named using a
 timestamp that follows the convention 'YearMonthDay-HourMinute'. In this case, it was generated
-at 08:58 on January 5th, 2018. This tar file is used to upload to the OVP portal.
+at 08:58 on January 5th, 2018. This tar file is used for uploading the logs to the OVP portal.
 
 
 Making Sense of OVP Test Results
@@ -712,9 +709,9 @@ Host by default within the directory specified below.
 
      * This kind of files need to be opened with a web browser.
 
-     * The skipped test cases have the reason for the users to see why these test cases skipped.
+     * The skipped test cases are accompanied with the reason tag for the users to see why these test cases skipped.
 
-     * The failed test cases have rich debug information for the users to see why these test cases fail.
+     * The failed test cases have rich debug information for the users to see why these test cases failed.
 
    * Vping test cases
 
@@ -768,15 +765,15 @@ until they are ready to submit results for peer community review.
 
      * This page lists all results uploaded by you after signing in.
 
-     * You can also upload results on this page with the two steps below.
+     * Following the two steps below, the results are status uploaded and in status 'private'.
 
-     * Obtain results tar file located at ``${DOVETAIL_HOME}/``, example ``logs_20180105_0858.tar.gz``
+     * Obtain results tar file located at ``${DOVETAIL_HOME}/``, e.g. ``logs_20180105_0858.tar.gz``
 
      * Use the *Choose File* button where a file selection dialog allows you to choose your result
        file from the hard-disk. Then click the *Upload* button and see a results ID once your
        upload succeeds.
 
-     * Results are status 'private' until they are submitted for review.
+     * Results are remaining in status 'private' until they are submitted for review.
 
      * Use the *Operation* column drop-down option 'submit to review', to expose results to
        OPNFV community peer reviewers. Use the 'withdraw submit' option to reverse this action.
@@ -794,7 +791,7 @@ Updating Dovetail or a Test Suite
 ---------------------------------
 
 Follow the instructions in section `Installing Dovetail on the Test Host`_ and
-`Running the OVP Test Suite`_ by replacing the docker images with new_tags,
+`Running the OVP Test Suite`_ by replacing the docker images with new_tags:
 
 .. code-block:: bash
 
