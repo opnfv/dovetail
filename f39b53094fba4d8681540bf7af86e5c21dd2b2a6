@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_89264967",
+        "filename": "docs/testing/user/testspecification/tempest_volume/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-09-09T19:25:16Z",
+      "side": 1,
+      "message": "this points to master, but Functest uses Tempest v17.1. In this version, the name of the test also does not contain the \"V2\" you added below.",
+      "range": {
+        "startLine": 43,
+        "startChar": 91,
+        "endLine": 43,
+        "endChar": 97
+      },
+      "revId": "f39b53094fba4d8681540bf7af86e5c21dd2b2a6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_692bed30",
+        "filename": "docs/testing/user/testspecification/tempest_volume/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-09-09T19:25:16Z",
+      "side": 1,
+      "message": "see above",
+      "range": {
+        "startLine": 49,
+        "startChar": 47,
+        "endLine": 49,
+        "endChar": 49
+      },
+      "revId": "f39b53094fba4d8681540bf7af86e5c21dd2b2a6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
