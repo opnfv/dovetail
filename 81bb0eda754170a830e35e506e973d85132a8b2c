@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_efd7fdeb",
+        "filename": ".gitignore",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-09-11T10:05:19Z",
+      "side": 1,
+      "message": ".tox/ according to instructions",
+      "range": {
+        "startLine": 24,
+        "startChar": 1,
+        "endLine": 24,
+        "endChar": 4
+      },
+      "revId": "81bb0eda754170a830e35e506e973d85132a8b2c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_0fdb591c",
+        "filename": ".gitignore",
+        "patchSetId": 5
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-09-11T10:05:19Z",
+      "side": 1,
+      "message": "Is this really needed?\nFrom https://docs.opnfv.org/en/latest/how-to-use-docs/local-build-transition.html the instruction is to add:\n.tox/\ndocs/_build/*",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 11
+      },
+      "revId": "81bb0eda754170a830e35e506e973d85132a8b2c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_efeeddb3",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-09-11T10:05:19Z",
+      "side": 1,
+      "message": "Remove extra white space",
+      "range": {
+        "startLine": 48,
+        "startChar": 87,
+        "endLine": 48,
+        "endChar": 88
+      },
+      "revId": "81bb0eda754170a830e35e506e973d85132a8b2c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_4f2b91eb",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-09-11T10:05:19Z",
+      "side": 1,
+      "message": "Revisit after decision for identity v2 is final",
+      "range": {
+        "startLine": 90,
+        "startChar": 21,
+        "endLine": 90,
+        "endChar": 24
+      },
+      "revId": "81bb0eda754170a830e35e506e973d85132a8b2c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_2f30d555",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-09-11T10:05:19Z",
+      "side": 1,
+      "message": "Revisit after decision release date is final",
+      "range": {
+        "startLine": 148,
+        "startChar": 0,
+        "endLine": 148,
+        "endChar": 12
+      },
+      "revId": "81bb0eda754170a830e35e506e973d85132a8b2c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_8f35a948",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-09-11T10:05:19Z",
+      "side": 1,
+      "message": "Revisit after decision for release is final",
+      "range": {
+        "startLine": 220,
+        "startChar": 0,
+        "endLine": 220,
+        "endChar": 36
+      },
+      "revId": "81bb0eda754170a830e35e506e973d85132a8b2c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
