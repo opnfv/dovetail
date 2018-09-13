@@ -71,7 +71,7 @@ class Report(object):
         # egeokun: using a hardcoded string instead of pbr version for
         # versioning the result file. The version of the results.json is
         # logically independent of the release of Dovetail.
-        report_obj['version'] = '2018.08'
+        report_obj['version'] = '2018.09'
         report_obj['build_tag'] = dt_cfg.dovetail_config['build_tag']
         report_obj['test_date'] =\
             datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")

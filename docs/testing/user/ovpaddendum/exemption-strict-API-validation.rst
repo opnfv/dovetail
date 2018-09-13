@@ -168,7 +168,7 @@ responses is as follows:
    not.
 
 #. The exemption will be made available to participants of OVP as part of a
-   service release of OVP 2018.01.
+   service release of OVP 2018.01 and 2018.09.
 
 #. The C&C committee will monitor the situation around exemptions and may
    decide changes to the above process at any time, including the possibility

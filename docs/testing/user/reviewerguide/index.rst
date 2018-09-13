@@ -44,7 +44,7 @@ The corresponding OVP portal result will have a status of 'review'.
 Figure 2
 
 Reviewers must follow the checklist below to ensure review consistency for the OPNFV
-Verified Program (OVP) 2018.08 (Fraser) release at a minimum.
+Verified Program (OVP) 2018.09 (Fraser) release at a minimum.
 
 #. **Mandatory Test Area Results** - Validate that results for all mandatory test areas are present.
 #. **Test-Case Pass Percentage** - Ensure all tests have passed (100% pass rate).
@@ -65,7 +65,6 @@ mandatory test cases are:
 - bottlenecks.stress.ping
 - functest.tempest.osinterop
 - functest.tempest.compute
-- functest.tempest.identity_v2
 - functest.tempest.identity_v3
 - functest.tempest.image
 - functest.tempest.network_api

@@ -1,6 +1,6 @@
 ---
-ovp.2018.08:
-  name: ovp.2018.08
+ovp.2018.09:
+  name: ovp.2018.09
   testcases_list:
     mandatory:
       - functest.vping.userdata
