@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "5a682502_377e6be5",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-09-13T11:23:32Z",
+      "side": 1,
+      "message": "Don\u0027t know what the exact date yet.",
+      "parentUuid": "5a682502_7472a1e6",
+      "range": {
+        "startLine": 188,
+        "startChar": 41,
+        "endLine": 188,
+        "endChar": 52
+      },
+      "revId": "dac2c290648530222d8043cb50c53553ee37559e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a682502_54d32538",
         "filename": "docs/release/release-notes/dovetail-release.rst",
         "patchSetId": 2
