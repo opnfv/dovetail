@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_54d32538",
+        "filename": "docs/release/release-notes/dovetail-release.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-09-13T04:01:06Z",
+      "side": 1,
+      "message": "Apex and Compass are both the latest Fraser version.\nFuel Fraser CI Jobs haven\u0027t triggered for a long time. So don\u0027t know the exact version Dovetail test against.",
+      "range": {
+        "startLine": 260,
+        "startChar": 25,
+        "endLine": 260,
+        "endChar": 37
+      },
+      "revId": "dac2c290648530222d8043cb50c53553ee37559e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
