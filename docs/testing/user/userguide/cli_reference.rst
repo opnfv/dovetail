@@ -118,7 +118,7 @@ Dovetail Commands
 .. code-block:: bash
 
    root@1f230e719e44:~/dovetail/dovetail# dovetail --version
-   dovetail, version 2018.8.0
+   dovetail, version 2018.9.0
 
 Dovetail List Commands
 ----------------------
@@ -135,7 +135,7 @@ Dovetail List Commands
 
 .. code-block:: bash
 
-   root@1f230e719e44:~/dovetail/dovetail# dovetail list ovp.2018.08
+   root@1f230e719e44:~/dovetail/dovetail# dovetail list ovp.2018.09
    - mandatory
        functest.vping.userdata
        functest.vping.ssh
@@ -266,7 +266,7 @@ Dovetail Run Commands
 
    root@1f230e719e44:~/dovetail/dovetail# dovetail run --testcase functest.vping.ssh --offline -r --deploy-scenario os-nosdn-ovs-ha
    2017-10-12 14:57:51,278 - run - INFO - ================================================
-   2017-10-12 14:57:51,278 - run - INFO - Dovetail compliance: ovp.2018.08!
+   2017-10-12 14:57:51,278 - run - INFO - Dovetail compliance: ovp.2018.09!
    2017-10-12 14:57:51,278 - run - INFO - ================================================
    2017-10-12 14:57:51,278 - run - INFO - Build tag: daily-master-b80bca76-af5d-11e7-879a-0242ac110002
    2017-10-12 14:57:51,278 - run - INFO - DEPLOY_SCENARIO : os-nosdn-ovs-ha
@@ -278,7 +278,7 @@ Dovetail Run Commands
    2017-10-12 14:58:21,325 - report.Report - INFO -
 
    Dovetail Report
-   Version: 2018.08
+   Version: 2018.09
    Build Tag: daily-master-b80bca76-af5d-11e7-879a-0242ac110002
    Test Date: 2018-08-13 03:23:56 UTC
    Duration: 291.92 s

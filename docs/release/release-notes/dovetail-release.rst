@@ -11,7 +11,7 @@ You should have received a copy of the license along with this.
 If not, see http://creativecommons.org/licenses/by/4.0/.
 
 ==================================================================
-OPNFV Verified Program (OVP) 2018.08 / Dovetail 2.0.0 Release Note
+OPNFV Verified Program (OVP) 2018.09 / Dovetail 2.0.0 Release Note
 ==================================================================
 
 Abstract
@@ -30,18 +30,18 @@ Version History
 | 2018-01-21 | 1.0.0    | Dovetail for OVP 2018.01 |
 |            |          | Danube release           |
 +------------+----------+--------------------------+
-| 2018-08-09 | 2.0.0    | Dovetail for OVP 2018.08 |
+| 2018-08-09 | 2.0.0    | Dovetail for OVP 2018.09 |
 |            |          | Fraser release           |
 +------------+----------+--------------------------+
 
 
-OPNFV 2018.08 Release
+OPNFV 2018.09 Release
 =====================
 
 The OPNFV Verified Program (OVP) allows vendors and operators to obtain 'OPNFV Verified'
 status based on an agreed upon set of compliance verification test cases that align to OPNFV
 releases. The reference System under Test (SUT) are the NFV components deployed by the OPNFV
-installers for a given release, where OVP 2018.08 is based on the Fraser release. Participants
+installers for a given release, where OVP 2018.09 is based on the Fraser release. Participants
 of the program can verify commercial or open source offerings against an OVP release. This implies
 that the SUT used for verification has interfaces, components, functions and behaviors that align
 to OPNFV installer integrations.
@@ -68,17 +68,17 @@ Test Suites & Test Areas
 ------------------------
 
 OVP/Dovetail groups test cases into test suites and test areas. Test suites are currently a basic
-categorization around releases for the most part. Executing the test suite 'ovp.2018.08' without
-further specification will run all the test cases in the OVP 2018.08 release. Test suites are
+categorization around releases for the most part. Executing the test suite 'ovp.2018.09' without
+further specification will run all the test cases in the OVP 2018.09 release. Test suites are
 divided into test areas that can be executed separately.
 
-Test areas include a division into **'mandatory'** and **'optional'** in an overarching 
+Test areas include a division into **'mandatory'** and **'optional'** in an overarching
 categorization.
 
 All the mandatory test cases are required to be executed with passing results for all inclusive
 test cases for results to be reviewed and approved by the community made up of peer reviewers.
 The optional test cases are not required to be executed for the official compliance verification
-review in the OVP 2018.08 release. However, execution of these cases is encouraged, as some
+review in the OVP 2018.09 release. However, execution of these cases is encouraged, as some
 optional test cases may become mandatory in future releases.
 
 Test Cases and Sub Test Cases
@@ -86,7 +86,7 @@ Test Cases and Sub Test Cases
 
 Each test area consists of multiple test cases where each test case can be a single test or
 broken down into sub test cases. A listing of test cases with the number of sub test cases noted
-in parenthesis is shown below for the OVP 2018.08 release.
+in parenthesis is shown below for the OVP 2018.09 release.
 
 **Mandatory**
 
@@ -99,7 +99,7 @@ in parenthesis is shown below for the OVP 2018.08 release.
 - functest.tempest.image (2)
 - functest.tempest.network_api (14)
 - functest.tempest.volume (2)
-- functest.tempest.neutron_trunk_ports (40)
+- functest.tempest.neutron_trunk_ports (38)
 - functest.tempest.ipv6_api (21)
 - functest.security.patrole (119)
 - yardstick.ha.nova_api (1)
@@ -114,7 +114,7 @@ in parenthesis is shown below for the OVP 2018.08 release.
 - yardstick.ha.database  (1)
 
 
-There are a total of 434 mandatory test cases.
+There are a total of 432 mandatory test cases.
 
 **Optional**
 
@@ -150,19 +150,19 @@ The OPNFV test frameworks integrated into the Dovetail framework that deliver te
 Acceptence and Marketing
 ------------------------
 
-Upon successful community review of results for OVP 2018.08, the Linux Foundation Compliance
+Upon successful community review of results for OVP 2018.09, the Linux Foundation Compliance
 Verification Committee (LFN CVC) on behalf of the Board of Directors can award a product 'OPNFV
 Verified' status. Use of 'OPNFV Verified' Program Marks shall be awarded to the platform used
 for compliance verification. The category label of 'Infrastructure' is used within the Program
 Marks logo and limits the scope of this OVP release to a SUT consisting of NFVI and VIM components
 using ETSI terminology. It does not provide compliance verification for specific VNFs in any fashion.
-The date '2018.08' corresponds to a reference SUT that aligns to the OPNFV Fraser release and
+The date '2018.09' corresponds to a reference SUT that aligns to the OPNFV Fraser release and
 currently aligns to the Dovetail framework version 2.0.0.
 
 Organizations shall not use the Program Marks in any way that would associate it with any
 individual or company logo or brand, beyond the association to the specific platform to which it
 was awarded. While OpenStack RefStack interoperability and Tempest integration test cases are
-executed as part of the OVP 2018.08 compliance verification test suites, the OVP does not grant or
+executed as part of the OVP 2018.09 compliance verification test suites, the OVP does not grant or
 award OpenStack Marks in any fashion. 'OPNFV Verified' status does not assert readiness for
 commercial deployment.
 
@@ -183,12 +183,12 @@ Release Data
 |                                      |                                       |
 +--------------------------------------+---------------------------------------+
 | **Release designation**              | OPNFV Verified Program (OVP)          |
-|                                      | 2018.08 (Fraser)                      |
+|                                      | 2018.09 (Fraser)                      |
 +--------------------------------------+---------------------------------------+
 | **Release date**                     | August xxxx 2018                      |
 |                                      |                                       |
 +--------------------------------------+---------------------------------------+
-| **Purpose of the delivery**          | Support OVP 2018.08 release with      |
+| **Purpose of the delivery**          | Support OVP 2018.09 release with      |
 |                                      | OPNFV Fraser release as reference SUT |
 +--------------------------------------+---------------------------------------+
 
@@ -247,15 +247,15 @@ Documents
 Testing with OPNFV Fraser Installers
 ====================================
 
-OVP 2018.08 and Dovetail 2.0.0 are known to be have been tested with the following OPNFV
+OVP 2018.09 and Dovetail 2.0.0 are known to be have been tested with the following OPNFV
 Fraser installer versions.
 
 +-----------------+----------------------+
 |   Installer     |      Version         |
 +=================+======================+
-|   Apex          |      fraser.x.x      |
+|   Apex          |      opnfv-6.2.0     |
 +-----------------+----------------------+
-|   Compass       |      fraser.x.x      |
+|   Compass       |      opnfv-6.2.0     |
 +-----------------+----------------------+
 |   Fuel          |      fraser.x.x      |
 +-----------------+----------------------+
