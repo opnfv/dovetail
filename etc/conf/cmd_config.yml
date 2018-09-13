@@ -19,7 +19,7 @@ cli:
       testsuite:
         flags:
           - '--testsuite'
-        default: 'ovp.2018.08'
+        default: 'ovp.2018.09'
         help: 'compliance testsuite.'
       testarea:
         flags:
