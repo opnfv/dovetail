@@ -4,7 +4,7 @@
 .. (c) Intel and others
 
 =======================================
-Guidelines Addendum for 2018.08 release
+Guidelines Addendum for 2018.09 release
 =======================================
 
 .. toctree::
@@ -15,10 +15,10 @@ Introduction
 ============
 
 This addendum provides a high-level description of the testing scope and
-pass/fail criteria used in the OPNFV Verified Program (OVP) for the 2018.08
+pass/fail criteria used in the OPNFV Verified Program (OVP) for the 2018.09
 release. This information is intended as an overview for OVP testers and for
 the Dovetail Project to help guide test-tool and test-case development for the
-OVP 2018.08 release. The Dovetail project is responsible for documenting
+OVP 2018.09 release. The Dovetail project is responsible for documenting
 test-case specifications as well as implementing the OVP tool-chain through
 collaboration with the OPNFV testing community. OVP testing focuses on
 establishing the ability of the System Under Test (SUT) to perform NFVI and VIM
@@ -31,7 +31,7 @@ Meaning of Compliance
 
 OPNFV Compliance indicates adherence of an NFV platform to behaviors defined
 through specific platform capabilities, allowing to prepare, instantiate,
-operate and remove VNFs running on the NFVI. OVP 2018.08 compliance evaluates
+operate and remove VNFs running on the NFVI. OVP 2018.09 compliance evaluates
 the ability of a platform to support Service Provider network capabilities and
 workloads that are supported in the OPNFV platform as of this release.
 Compliance test cases are designated as compulsory or optional based on the
@@ -137,7 +137,7 @@ test scope.
 Analysis of Scope
 -----------------
 
-In order to define the scope of the 2018.08 release of the compliance and
+In order to define the scope of the 2018.09 release of the compliance and
 verification program, this section analyzes NFV-focused platform capabilities
 with respect to the high-level objectives and the general approach outlined in
 the previous section. The analysis determines which capabilities are suitable
@@ -169,7 +169,7 @@ including:
   suspend/resume, reboot, migrate)
 - simple virtual machine resource scheduling on multiple nodes
 
-OPNFV mainly supports OpenStack as the VIM up to the 2018.08 release. The VNFs
+OPNFV mainly supports OpenStack as the VIM up to the 2018.09 release. The VNFs
 used in the OVP program, and features in scope for the program which are
 considered to be basic to all VNFs, require commercial OpenStack distributions
 to support a common basic level of cloud capabilities, and to be compliant to a
@@ -198,7 +198,7 @@ feature requirements expand beyond common OpenStack (or other VIM)
 requirements. OPNFV OVP will incorporate test cases to verify compliance in
 these areas as they become mature. Because these extensions may impose new API
 demands, maturity and industry adoption is a prerequisite for making them a
-mandatory requirement for OPNFV compliance. At the time of the 2018.08 release,
+mandatory requirement for OPNFV compliance. At the time of the 2018.09 release,
 we have promoted tests of the OpenStack IPv6 API from optional to mandatory
 while keeping BGPVPN as optional test area. Passing optional tests will not be
 required to pass OPNFV compliance verification.
@@ -207,7 +207,7 @@ BGPVPNs are relevant due to the wide adoption of MPLS/BGP based VPNs in wide
 area networks, which makes it necessary for data centers hosting VNFs to be
 able to seamlessly interconnect with such networks. SFC is also an important
 NFV requirement, however its implementation has not yet been accepted or
-adopted in the upstream at the time of the 2018.08 release.
+adopted in the upstream at the time of the 2018.09 release.
 
 3. High availability
 
@@ -233,7 +233,7 @@ Resiliency testing involves stressing the SUT and verifying its ability to
 absorb stress conditions and still provide an acceptable level of service.
 Resiliency is an important requirement for end-users.
 
-The 2018.08 release of OVP includes a load test which spins up a number of VMs
+The 2018.09 release of OVP includes a load test which spins up a number of VMs
 pairs in parallel to assert that the system under test can process the workload
 spike in a stable and deterministic fashion.
 
@@ -248,12 +248,12 @@ capabilities expected of an end-user deployment. It is an area that we should
 address in the near future, to define a common set of requirements and develop
 test cases for verifying those requirements.
 
-The 2018.08 release includes new test cases which verify that the role-based
+The 2018.09 release includes new test cases which verify that the role-based
 access control (RBAC) functionality of the VIM is behaving as expected.
 
 Another common requirement is security vulnerability scanning. While the OPNFV
 security project integrated tools for security vulnerability scanning, this has
-not been fully analyzed or exercised in 2018.08 release. This area needs
+not been fully analyzed or exercised in 2018.09 release. This area needs
 further work to identify the required level of security for the purpose of
 OPNFV in order to be integrated into the OVP. End-user inputs on specific
 requirements in security is needed.
@@ -266,7 +266,7 @@ essential information and control mechanisms. These subsystems include
 telemetry, fault management (e.g. alarms), performance management, audits, and
 control mechanisms such as security and configuration policies.
 
-The current 2018.08 release implements some enabling capabilities in NFVI/VIM
+The current 2018.09 release implements some enabling capabilities in NFVI/VIM
 such as telemetry, policy, and fault management. However, the specification of
 expected system components, behavior and the test cases to verify them have not
 yet been adequately developed. We will therefore not be testing this area at
@@ -285,7 +285,7 @@ compliance because it validates design patterns and support for the types of
 NFVI features that users care about.
 
 There are a lot of projects in OPNFV developing use cases and sample VNFs. The
-2018.08 release of OVP features two such use-case tests, spawning and verifying
+2018.09 release of OVP features two such use-case tests, spawning and verifying
 a vIMS and a vEPC, correspondingly.
 
 8. Additional capabilities
@@ -307,10 +307,10 @@ OVP.
 
 
 
-Scope of the 2018.08 release of the OVP
+Scope of the 2018.09 release of the OVP
 ---------------------------------------
 
-Summarizing the results of the analysis above, the scope of the 2018.08 release
+Summarizing the results of the analysis above, the scope of the 2018.09 release
 of OVP is as follows:
 
 - Mandatory test scope:
@@ -374,7 +374,7 @@ Scope considerations for future OVP releases
 --------------------------------------------
 
 Based on the previous analysis, the following items are outside the scope of
-the 2018.08 release of OVP but are being considered for inclusion in future
+the 2018.09 release of OVP but are being considered for inclusion in future
 releases:
 
 - service assurance
