@@ -92,11 +92,11 @@ eight characters even though the 'Test ID' is a longer UUID in the back-end.*
 
 Figure 3
 
-3. Test-Case Pass Percentage
+2. Test-Case Pass Percentage
 ============================
 
 All mandatory test-cases have to run successfully. The below diagram of the 'Test Run Results' is one method and
-shows that 94.39% of the mandatory test-cases have passed.
+shows that 98.15% of the mandatory test-cases have passed.
 This value must not be lower than 100%.
 
 .. image:: images/ovp_pass_percentage.png
@@ -117,7 +117,7 @@ Failed test cases can also be easy identified by the color of pass/total number.
 
 Figure 5
 
-4. Log File Verification
+3. Log File Verification
 ========================
 
 Each log file of the mandatory test cases have to be verified for content.
@@ -190,7 +190,7 @@ An example of a FAILED and a SUCCESS test case are listed below:
  2018-08-28 10:23:41,907 [INFO] yardstick.benchmark.core.task task.py:127 Testcase: "opnfv_yardstick_tc052" **SUCCESS**!!!
 
 
-5. SUT Info Verification
+4. SUT Info Verification
 ========================
 
 SUT information must be present in the results to validate that all required endpoint services
