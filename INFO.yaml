@@ -51,6 +51,14 @@ committers:
       email: 'xudan16@huawei.com'
       company: 'huawei.com'
       id: 'xudan'
+    - name: 'Panagiotis Karalis'
+      email: 'pkaralis@intracom-telecom.com'
+      company: 'intracom-telecom.com'
+      id: 'pkaralis'
+    - name: 'Stamatis Katsaounis'
+      email: 'mokats@intracom-telecom.com'
+      company: 'intracom-telecom.com'
+      id: 'skatsaounis'
 tsc:
     approval: 'http//meetbot.opnfv.org/meetings/opnfv-meeting/2015/opnfv-meeting.2015-09-01-13.59.html'
     changes:
