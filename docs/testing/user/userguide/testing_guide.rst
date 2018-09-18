@@ -447,8 +447,8 @@ the SUT.
    $ wget -nc https://cloud-images.ubuntu.com/releases/16.04/release/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/images
    $ wget -nc http://repository.cloudifysource.org/cloudify/4.0.1/sp-release/cloudify-manager-premium-4.0.1.qcow2 -P ${DOVETAIL_HOME}/images
 
-   $ sudo docker pull opnfv/dovetail:latest
-   latest: Pulling from opnfv/dovetail
+   $ sudo docker pull opnfv/dovetail:ovp-2.0.0
+   ovp-2.0.0: Pulling from opnfv/dovetail
    324d088ce065: Pull complete
    2ab951b6c615: Pull complete
    9b01635313e2: Pull complete
@@ -460,9 +460,8 @@ the SUT.
    0ad9f4168266: Pull complete
    d949894f87f6: Pull complete
    Digest: sha256:7449601108ebc5c40f76a5cd9065ca5e18053be643a0eeac778f537719336c29
-   Status: Downloaded newer image for opnfv/dovetail:latest
+   Status: Downloaded newer image for opnfv/dovetail:ovp-2.0.0
 
-An example of the <tag> is **latest**.
 
 Offline Test Host
 """""""""""""""""
@@ -477,7 +476,7 @@ The Docker images and Cirros image below are necessary for all mandatory test ca
 
 .. code-block:: bash
 
-   $ sudo docker pull opnfv/dovetail:latest
+   $ sudo docker pull opnfv/dovetail:ovp-2.0.0
    $ sudo docker pull opnfv/functest-smoke:fraser
    $ sudo docker pull opnfv/yardstick:stable
    $ sudo docker pull opnfv/bottlenecks:stable
@@ -501,7 +500,7 @@ At the online host, save the images with the command below.
 
 .. code-block:: bash
 
-   $ sudo docker save -o dovetail.tar opnfv/dovetail:latest \
+   $ sudo docker save -o dovetail.tar opnfv/dovetail:ovp-2.0.0 \
      opnfv/functest-smoke:fraser opnfv/functest-healthcheck:fraser \
      opnfv/functest-features:fraser opnfv/functest-vnf:fraser \
      opnfv/yardstick:stable opnfv/bottlenecks:stable
@@ -519,7 +518,7 @@ Now check to see that all Docker images have been pulled or loaded properly.
 
    $ sudo docker images
    REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE
-   opnfv/dovetail                  latest              ac3b2d12b1b0        24 hours ago        784 MB
+   opnfv/dovetail                  ovp-2.0.0           ac3b2d12b1b0        24 hours ago        784 MB
    opnfv/functest-smoke            fraser              010aacb7c1ee        17 hours ago        594.2 MB
    opnfv/functest-healthcheck      fraser              2cfd4523f797        17 hours ago        234 MB
    opnfv/functest-features         fraser              b61d4abd56fd        17 hours ago        530.5 MB
@@ -548,7 +547,7 @@ create a Dovetail container and get access to its shell.
              -e DOVETAIL_HOME=$DOVETAIL_HOME \
              -v $DOVETAIL_HOME:$DOVETAIL_HOME \
              -v /var/run/docker.sock:/var/run/docker.sock \
-             opnfv/dovetail:<tag> /bin/bash
+             opnfv/dovetail:ovp-2.0.0 /bin/bash
 
 The ``-e`` option sets the DOVETAIL_HOME environment variable in the container and the
 ``-v`` options map files in the Test Host to files in the container. The latter option
