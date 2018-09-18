@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_8988fb23",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 450,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-09-18T11:26:25Z",
+      "side": 1,
+      "message": "It could be nice to have that version uploaded to dockerhub before merging this patch. For example, at the moment I can find only ovp-2.0.0-rc1.",
+      "range": {
+        "startLine": 450,
+        "startChar": 37,
+        "endLine": 450,
+        "endChar": 46
+      },
+      "revId": "6086689a1839e2641fb2a54b4f26388c295562d9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
