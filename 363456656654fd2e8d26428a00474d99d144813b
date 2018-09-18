@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_0cf8797b",
+        "filename": "docs/testing/user/reviewerguide/images/sut_info.png",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2018-09-18T16:15:09Z",
+      "side": 1,
+      "message": "in this figure, the \"logs\" links is highlighted, but it should actually be the \"info\" link. :-)",
+      "revId": "363456656654fd2e8d26428a00474d99d144813b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
