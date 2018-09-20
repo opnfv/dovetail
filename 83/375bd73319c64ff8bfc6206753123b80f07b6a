@@ -1,0 +1,7 @@
+Code-Review+2: Georg Kunz <georg.kunz@ericsson.com>
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Submitted-by: Dan Xu <xudan16@huawei.com>
+Submitted-at: Thu, 20 Sep 2018 09:32:06 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/62619
+Project: dovetail
+Branch: refs/heads/stable/fraser
