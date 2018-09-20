@@ -39,14 +39,16 @@ All these test cases are included in the test case dovetail.tempest.volume of
 OVP test suite.
 
 
-------------------------------------------------------------------------
-Test Case 1 - `Attach Detach Volume to Instance <https://github.com/openstack/tempest/blob/17.1.0/tempest/api/volume/test_volumes_actions.py>`_
-------------------------------------------------------------------------
+----------------------------------------------
+Test Case 1 - Attach Detach Volume to Instance
+----------------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.api.volume.test_volumes_actions.VolumesActionsTest.test_attach_detach_volume_to_instance
+Implementation: `Attach Detach Volume to Instance <https://github.com/openstack/tempest/blob/17.1.0/tempest/api/volume/test_volumes_actions.py>`_
+
+* tempest.api.volume.test_volumes_actions.VolumesActionsTest.test_attach_detach_volume_to_instance
 
 Test preconditions
 ------------------
@@ -79,14 +81,16 @@ Post conditions
 
 N/A
 
-------------------------------------------------------------------------
-Test Case 2 - `Volume Boot Pattern test <https://github.com/openstack/tempest/blob/17.1.0/tempest/scenario/test_volume_boot_pattern.py>`_
-------------------------------------------------------------------------
+--------------------------------------
+Test Case 2 - Volume Boot Pattern test
+--------------------------------------
 
 Test case specification
 -----------------------
 
-tempest.scenario.test_volume_boot_pattern.TestVolumeBootPattern.test_volume_boot_pattern
+Implementation: `Volume Boot Pattern test <https://github.com/openstack/tempest/blob/17.1.0/tempest/scenario/test_volume_boot_pattern.py>`_
+
+* tempest.scenario.test_volume_boot_pattern.TestVolumeBootPattern.test_volume_boot_pattern
 
 Test preconditions
 ------------------
