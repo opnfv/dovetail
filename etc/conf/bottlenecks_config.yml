@@ -7,7 +7,7 @@
 
 bottlenecks:
   image_name: opnfv/bottlenecks
-  docker_tag: stable
+  docker_tag: ovp-2.0.0
   opts: '-id --privileged=true'
   envs: '-e DEPLOY_SCENARIO={{deploy_scenario}} -e Yardstick_TAG=stable -e OUTPUT_FILE={{testcase}}.out'
   volumes:
