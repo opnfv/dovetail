@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_8f091698",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-09-21T01:59:40Z",
+      "side": 1,
+      "message": "Dovetail tag is ovp-2.0.0?",
+      "range": {
+        "startLine": 176,
+        "startChar": 67,
+        "endLine": 176,
+        "endChar": 77
+      },
+      "revId": "029c75401e14a8c53981430ebca409a3c4932c0b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_cf030e72",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 450,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-09-21T01:59:40Z",
+      "side": 1,
+      "message": "change this to be ovp-2.0.0?",
+      "range": {
+        "startLine": 450,
+        "startChar": 36,
+        "endLine": 450,
+        "endChar": 43
+      },
+      "revId": "029c75401e14a8c53981430ebca409a3c4932c0b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
