@@ -45,6 +45,30 @@
       "revId": "029c75401e14a8c53981430ebca409a3c4932c0b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_6ff2ba9b",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 450,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-09-21T02:01:48Z",
+      "side": 1,
+      "message": "It\u0027s ok. I saw another patch doing this already.",
+      "parentUuid": "5a682502_cf030e72",
+      "range": {
+        "startLine": 450,
+        "startChar": 36,
+        "endLine": 450,
+        "endChar": 43
+      },
+      "revId": "029c75401e14a8c53981430ebca409a3c4932c0b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
