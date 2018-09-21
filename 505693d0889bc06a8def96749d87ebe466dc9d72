@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_02483d2c",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 463,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-09-21T09:48:56Z",
+      "side": 1,
+      "message": "ovp-2.0.0",
+      "range": {
+        "startLine": 463,
+        "startChar": 53,
+        "endLine": 463,
+        "endChar": 59
+      },
+      "revId": "505693d0889bc06a8def96749d87ebe466dc9d72",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_224bb92c",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 465,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-09-21T09:48:56Z",
+      "side": 1,
+      "message": "This line can be omitted. (Example of which tag?)",
+      "range": {
+        "startLine": 465,
+        "startChar": 0,
+        "endLine": 465,
+        "endChar": 38
+      },
+      "revId": "505693d0889bc06a8def96749d87ebe466dc9d72",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_e241c10c",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 554,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-09-21T09:48:56Z",
+      "side": 1,
+      "message": "mounts files from the Test Host to the destination path of the container",
+      "range": {
+        "startLine": 554,
+        "startChar": 15,
+        "endLine": 554,
+        "endChar": 67
+      },
+      "revId": "505693d0889bc06a8def96749d87ebe466dc9d72",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
