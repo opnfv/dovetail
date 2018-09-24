@@ -121,4 +121,4 @@ for promotional purposes.
 
 .. References
 .. _`OVP web portal`: https://verified.opnfv.org
-.. _`OVP participation form`: https://na3.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=e5ac4719-9285-4e99-a49c-6b22c1cb02e6
+.. _`OVP participation form`: https://na3.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=dc24bf38-ea41-40d4-9e58-9babc6eec778 
