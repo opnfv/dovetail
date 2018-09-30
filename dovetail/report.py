@@ -324,7 +324,8 @@ class YardstickCrawler(Crawler):
             for jsonfile in f:
                 data = json.loads(jsonfile)
                 try:
-                    criteria = data['result']['criteria']
+                    criteria = dt_utils.get_value_from_dict("result.criteria",
+                                                            data)
                     if criteria == 'PASS':
                         valid_tc = testcase.validate_testcase()
                         details = data['result']['testcases'][valid_tc]
