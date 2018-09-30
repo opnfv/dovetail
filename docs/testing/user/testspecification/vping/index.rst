@@ -21,13 +21,9 @@ means of ICMP packets.
 References
 ==========
 
-- Neutron Client
+- OpenStack Shade
 
-  - https://docs.openstack.org/developer/python-neutronclient/usage/library.html
-
-- Nova Client
-
-  - https://docs.openstack.org/developer/python-novaclient/ref/v2/servers.html
+  - https://docs.openstack.org/shade/latest/user/index.html
 
 - SSHClient
 
