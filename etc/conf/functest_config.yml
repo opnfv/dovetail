@@ -10,7 +10,7 @@
 
 functest:
   image_name: opnfv/functest-smoke
-  docker_tag: opnfv-6.3.0
+  docker_tag: latest
   opts: '-id --privileged=true'
   envs: '{{os_verify}} -e INSTALLER_TYPE=unknown -e DEPLOY_SCENARIO={{deploy_scenario}} -e NODE_NAME=unknown
          -e TEST_DB_URL=file:///home/opnfv/functest/results/functest_results.txt'

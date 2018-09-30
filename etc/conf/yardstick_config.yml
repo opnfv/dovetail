@@ -12,7 +12,7 @@
 
 yardstick:
   image_name: opnfv/yardstick
-  docker_tag: ovp-2.0.0
+  docker_tag: latest
   opts: '-id --privileged=true'
   envs: "{{os_verify}} -e YARDSTICK_BRANCH=fraser"
   config:
