@@ -23,11 +23,11 @@ References
 
 - Neutron Client
 
-  - https://docs.openstack.org/developer/python-neutronclient/usage/library.html
+  - https://docs.openstack.org/python-neutronclient/latest/
 
 - Nova Client
 
-  - https://docs.openstack.org/developer/python-novaclient/ref/v2/servers.html
+  - https://docs.openstack.org/python-novaclient/latest/
 
 - SSHClient
 
