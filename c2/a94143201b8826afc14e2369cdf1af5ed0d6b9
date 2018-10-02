@@ -1,0 +1,7 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+2: Georg Kunz <georg.kunz@ericsson.com>
+Submitted-by: Georg Kunz <georg.kunz@ericsson.com>
+Submitted-at: Tue, 02 Oct 2018 13:26:26 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/63061
+Project: dovetail
+Branch: refs/heads/stable/fraser
