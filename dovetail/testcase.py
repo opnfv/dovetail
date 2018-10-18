@@ -89,10 +89,6 @@ class Testcase(object):
     def validate_testcase(self):
         return self.testcase['validate']['testcase']
 
-    def exceed_max_retry_times(self):
-        # logger.debug('retry times:%d' % self.testcase['retry'])
-        return self._exceed_max_retry_times(self.validate_testcase())
-
     def increase_retry(self):
         # self.testcase['retry'] = self.testcase['retry'] + 1
         # return self.testcase['retry']
@@ -108,9 +104,6 @@ class Testcase(object):
 
     def get_results(self):
         return self.results
-
-    def script_result_acquired(self, acquired=None):
-        return self._result_acquired(self.validate_testcase(), acquired)
 
     def pre_condition(self):
         try:
@@ -177,18 +170,6 @@ class Testcase(object):
     # testcase in dovetail
     testcase_list = {}
 
-    @classmethod
-    def prepared(cls, prepared=None):
-        if prepared is not None:
-            cls.validate_testcase_list['prepared'] = prepared
-        return cls.validate_testcase_list['prepared']
-
-    @classmethod
-    def cleaned(cls, cleaned=None):
-        if cleaned is not None:
-            cls.validate_testcase_list['cleaned'] = cleaned
-        return cls.validate_testcase_list['cleaned']
-
     @staticmethod
     def pre_condition_cls(validate_type):
         try:
@@ -203,30 +184,13 @@ class Testcase(object):
         except KeyError:
             return None
 
-    @classmethod
-    def update_validate_testcase(cls, testcase_name):
-        if testcase_name not in cls.validate_testcase_list:
-            cls.validate_testcase_list[testcase_name] = \
-                {'retry': 0, 'acquired': False}
-            cls.validate_testcase_list['prepared'] = False
-            cls.validate_testcase_list['cleaned'] = False
+    def update_validate_testcase(self, testcase_name):
+        if testcase_name not in self.validate_testcase_list:
+            self.validate_testcase_list[testcase_name] = {'retry': 0}
 
-    @classmethod
-    def _exceed_max_retry_times(cls, validate_testcase):
-        retry = cls.validate_testcase_list[validate_testcase]['retry']
-        return retry > 1
-
-    @classmethod
     def _increase_retry(cls, validate_testcase):
         cls.validate_testcase_list[validate_testcase]['retry'] += 1
         return cls.validate_testcase_list[validate_testcase]['retry']
-
-    @classmethod
-    def _result_acquired(cls, testcase, acquired=None):
-        if acquired is not None:
-            cls.validate_testcase_list[testcase]['acquired'] = \
-                acquired
-        return cls.validate_testcase_list[testcase]['acquired']
 
     @classmethod
     def load(cls):
@@ -250,8 +214,8 @@ class Testcase(object):
             return cls.testcase_list[testcase_name]
         return None
 
-    @classmethod
-    def check_testarea(cls, testarea):
+    @staticmethod
+    def check_testarea(testarea):
         area_no_duplicate = []
         area_full = ['full']
 
@@ -427,8 +391,6 @@ class Testsuite(object):
                 with open(os.path.join(root, testsuite_yaml)) as f:
                     testsuite_yaml = yaml.safe_load(f)
                     cls.testsuite_list.update(testsuite_yaml)
-
-        # cls.logger.debug(cls.testsuite_list)
 
     @classmethod
     def get(cls, testsuite_name):

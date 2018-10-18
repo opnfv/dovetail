@@ -52,12 +52,6 @@ def run_test(testcase_list, logger):
         testcase = Testcase.get(testcase_name)
         run_testcase = True
 
-        # if testcase.exceed_max_retry_times():
-        #    run_testcase = False
-
-        # if testcase.script_result_acquired():
-        #    run_testcase = False
-
         if run_testcase:
             testcase.run()
 
