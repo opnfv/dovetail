@@ -106,7 +106,6 @@ class DockerRunner(object):
         if cmds:
             for cmd in cmds:
                 ret, msg = container.exec_cmd(cmd)
-        self.testcase.cleaned(True)
 
         if not dt_cfg.dovetail_config['noclean']:
             container.clean()
@@ -229,18 +228,14 @@ class ShellRunner(object):
 
     def run(self):
         testcase_passed = 'PASS'
-        prepare_failed = False
         result = {'pass': 'PASS', 'results': []}
-        if not self.testcase.prepared():
-            cmds = self.testcase.pre_condition()
-            for cmd in cmds:
-                ret, msg = dt_utils.exec_cmd(cmd, self.logger)
-                result['results'].append((cmd, ret, msg))
-                if ret != 0:
-                    prepare_failed = True
-                    break
-            if not prepare_failed:
-                self.testcase.prepared(True)
+        cmds = self.testcase.pre_condition()
+        for cmd in cmds:
+            ret, msg = dt_utils.exec_cmd(cmd, self.logger)
+            result['results'].append((cmd, ret, msg))
+            if ret != 0:
+                self.logger.error('Failed to execute all pre_condition cmds.')
+                break
 
         if not self.testcase.prepare_cmd(self.type):
             self.logger.error(
