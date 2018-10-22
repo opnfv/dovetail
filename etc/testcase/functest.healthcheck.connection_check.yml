@@ -5,6 +5,7 @@ functest.healthcheck.connection_check:
   validate:
     type: functest
     testcase: connection_check
+    image_name: opnfv/functest-healthcheck
   report:
     source_archive_files:
       - functest.log

@@ -5,6 +5,7 @@ functest.vping.ssh:
   validate:
     type: functest
     testcase: vping_ssh
+    image_name: opnfv/functest-healthcheck
   report:
     source_archive_files:
       - functest.log

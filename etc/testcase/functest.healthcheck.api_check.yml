@@ -5,6 +5,7 @@ functest.healthcheck.api_check:
   validate:
     type: functest
     testcase: api_check
+    image_name: opnfv/functest-healthcheck
   report:
     source_archive_files:
       - functest.log
