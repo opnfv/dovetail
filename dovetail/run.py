@@ -61,7 +61,7 @@ def run_test(testcase_list, logger):
         if run_testcase:
             testcase.run()
 
-        stop_on_fail = Report.check_tc_result(testcase)
+        stop_on_fail = Report().check_tc_result(testcase)
         try:
             if (not stop_on_fail or stop_on_fail['criteria'] == "FAIL") \
                 and dt_cfg.dovetail_config['stop']:
@@ -282,11 +282,12 @@ def main(*args, **kwargs):
     if not testcase_list:
         raise SystemExit(EXIT_RUN_FAILED)
 
+    report = Report()
     duration = run_test(testcase_list, logger)
     if (duration != "stop_on_fail"):
-        Report.generate(testcase_list, duration)
+        report.generate(testcase_list, duration)
         if (kwargs['report']):
-            Report.save_logs()
+            report.save_logs()
 
 
 dt_cfg.load_config_files(constants.CONF_PATH)
