@@ -5,6 +5,7 @@ functest.healthcheck.snaps_health_check:
   validate:
     type: functest
     testcase: snaps_health_check
+    image_name: opnfv/functest-healthcheck
   report:
     source_archive_files:
       - functest.log

@@ -5,6 +5,7 @@ functest.vping.userdata:
   validate:
     type: functest
     testcase: vping_userdata
+    image_name: opnfv/functest-healthcheck
   report:
     source_archive_files:
       - functest.log

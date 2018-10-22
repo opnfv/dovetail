@@ -18,7 +18,7 @@ functest:
     dir: '/home/opnfv/userconfig'
     images: '/home/opnfv/functest/images'
   pre_condition:
-    - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+    - 'echo test for precondition in functest'
   cmds:
     - 'run_tests -t {{validate_testcase}} -r'
   post_condition:
