@@ -36,27 +36,26 @@ class Report(object):
     def create_log(cls):
         cls.logger = dt_logger.Logger(__name__ + '.Report').getLogger()
 
-    @classmethod
-    def check_tc_result(cls, testcase):
+    def check_tc_result(self, testcase):
         result_path = dt_cfg.dovetail_config['result_dir']
         check_results_file = dt_utils.get_value_from_dict(
             'report.check_results_file', testcase.testcase)
         if not check_results_file:
-            cls.logger.error("Failed to get 'check_results_file' from config "
-                             "file of test case {}".format(testcase.name()))
-            cls.check_result(testcase)
+            self.logger.error("Failed to get 'check_results_file' from config "
+                              "file of test case {}".format(testcase.name()))
+            self.check_result(testcase)
             return None
         result_file = os.path.join(result_path, check_results_file)
         if os.path.isfile(result_file):
-            cls.logger.info(
+            self.logger.info(
                 "Results have been stored with file {}.".format(result_file))
-            result = cls.get_result(testcase, result_file)
-            cls.check_result(testcase, result)
+            result = self.get_result(testcase, result_file)
+            self.check_result(testcase, result)
             return result
         else:
-            cls.logger.error(
+            self.logger.error(
                 "Failed to store results with file {}.".format(result_file))
-            cls.check_result(testcase)
+            self.check_result(testcase)
             return None
 
     @staticmethod
@@ -65,8 +64,7 @@ class Report(object):
         if checker is not None:
             checker.check(testcase, db_result)
 
-    @classmethod
-    def generate_json(cls, testcase_list, duration):
+    def generate_json(self, testcase_list, duration):
         report_obj = {}
         # egeokun: using a hardcoded string instead of pbr version for
         # versioning the result file. The version of the results.json is
@@ -103,13 +101,12 @@ class Report(object):
                         'result': testcase.sub_testcase_passed(sub_test)
                     })
             report_obj['testcases_list'].append(testcase_inreport)
-        cls.logger.debug(json.dumps(report_obj))
+        self.logger.debug(json.dumps(report_obj))
         return report_obj
 
-    @classmethod
-    def generate(cls, testcase_list, duration):
-        report_data = cls.generate_json(testcase_list, duration)
-        cls.save_json_results(report_data)
+    def generate(self, testcase_list, duration):
+        report_data = self.generate_json(testcase_list, duration)
+        self.save_json_results(report_data)
 
         report_txt = ''
         report_txt += '\n\nDovetail Report\n'
@@ -134,8 +131,8 @@ class Report(object):
                 '|'.join(dt_cfg.dovetail_config['testarea_supported']))
             area = pattern.findall(testcase['name'])
             if not area:
-                cls.logger.error("Test case {} not in supported testarea."
-                                 .format(testcase['name']))
+                self.logger.error("Test case {} not in supported testarea."
+                                  .format(testcase['name']))
                 return None
             area = area[0]
             testarea_scope.append(area)
@@ -172,11 +169,10 @@ class Report(object):
                 report_txt += '%-25s  all skipped\n' % key
                 report_txt += sub_report[key]
 
-        cls.logger.info(report_txt)
+        self.logger.info(report_txt)
         return report_txt
 
-    @classmethod
-    def save_json_results(cls, results):
+    def save_json_results(self, results):
         result_file = os.path.join(dt_cfg.dovetail_config['result_dir'],
                                    dt_cfg.dovetail_config['result_file'])
 
@@ -184,11 +180,11 @@ class Report(object):
             with open(result_file, 'w') as f:
                 f.write(json.dumps(results) + '\n')
         except Exception as e:
-            cls.logger.exception("Failed to add result to file {}, "
-                                 "exception: {}".format(result_file, e))
+            self.logger.exception("Failed to add result to file {}, "
+                                  "exception: {}".format(result_file, e))
 
-    @classmethod
-    def save_logs(cls):
+    @staticmethod
+    def save_logs():
         file_suffix = time.strftime('%Y%m%d_%H%M', time.localtime())
         logs_gz = "logs_{}.tar.gz".format(file_suffix)
         result_dir = dt_cfg.dovetail_config['result_dir']
@@ -203,25 +199,24 @@ class Report(object):
                     f_out.add(os.path.join('results', f))
         os.chdir(cwd)
 
-    @classmethod
-    def get_result(cls, testcase, check_results_file):
+    def get_result(self, testcase, check_results_file):
         validate_testcase = testcase.validate_testcase()
         type = testcase.validate_type()
         crawler = CrawlerFactory.create(type)
         if crawler is None:
-            cls.logger.error('Crawler is None: {}'.format(testcase.name()))
+            self.logger.error('Crawler is None: {}'.format(testcase.name()))
             return None
 
         result = crawler.crawl(testcase, check_results_file)
 
         if result is not None:
-            cls.results[type][validate_testcase] = result
-            cls.logger.debug(
+            self.results[type][validate_testcase] = result
+            self.logger.debug(
                 'Test case: {} -> result acquired'.format(validate_testcase))
         else:
             retry = testcase.increase_retry()
-            cls.logger.debug('Test case: {} -> result acquired retry: {}'
-                             .format(validate_testcase, retry))
+            self.logger.debug('Test case: {} -> result acquired retry: {}'
+                              .format(validate_testcase, retry))
         return result
 
 
