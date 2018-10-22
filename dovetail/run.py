@@ -40,11 +40,12 @@ def load_testsuite(testsuite):
     return Testsuite.get(testsuite)
 
 
-def run_test(testcase_list, logger):
+def run_test(testcase_list, report_flag, logger):
+    report = Report()
     duration = 0
     if not testcase_list:
         logger.warning("No test case will be executed.")
-        return duration
+        return
 
     start_time = time.time()
     for testcase_name in testcase_list:
@@ -55,17 +56,23 @@ def run_test(testcase_list, logger):
         if run_testcase:
             testcase.run()
 
-        stop_on_fail = Report.check_tc_result(testcase)
-        try:
-            if (not stop_on_fail or stop_on_fail['criteria'] == "FAIL") \
-                and dt_cfg.dovetail_config['stop']:
-                return "stop_on_fail"
-        except KeyError as e:
-            logger.error("There is no key {}.".format(e))
+        result = report.check_tc_result(testcase)
+        if dt_cfg.dovetail_config['stop']:
+            try:
+                if (not result or result['criteria'] == "FAIL"):
+                    logger.info("Stop because {} failed".format(testcase_name))
+                    return
+            except KeyError as e:
+                logger.error("There is no key {}.".format(e))
+                logger.info("Stop because {} failed".format(testcase_name))
+                return
 
     end_time = time.time()
     duration = end_time - start_time
-    return duration
+    report.generate(testcase_list, duration)
+    if report_flag:
+        report.save_logs()
+    return
 
 
 def filter_config(input_dict, logger):
@@ -276,11 +283,7 @@ def main(*args, **kwargs):
     if not testcase_list:
         raise SystemExit(EXIT_RUN_FAILED)
 
-    duration = run_test(testcase_list, logger)
-    if (duration != "stop_on_fail"):
-        Report.generate(testcase_list, duration)
-        if (kwargs['report']):
-            Report.save_logs()
+    run_test(testcase_list, kwargs['report'], logger)
 
 
 dt_cfg.load_config_files(constants.CONF_PATH)
