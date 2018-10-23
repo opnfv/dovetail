@@ -33,8 +33,11 @@ class DockerRunner(object):
     def create_log(cls):
         cls.logger = dt_logger.Logger(__name__ + '.DockerRunner').getLogger()
 
-    def pre_copy(self, container_id=None, dest_path=None,
+    def pre_copy(self, container=None, dest_path=None,
                  src_file=None, exist_file=None):
+        if not container:
+            self.logger.error("Container instance is None.")
+            return None
         if not dest_path:
             self.logger.error("There has no dest_path in {} config file."
                               .format(self.testcase.name()))
@@ -47,24 +50,24 @@ class DockerRunner(object):
             file_path = dt_cfg.dovetail_config[self.type]['config']['dir']
             src_path = os.path.join(file_path, 'pre_config', exist_file)
 
-        Container.copy_file(container_id, src_path, dest_path)
+        container.copy_file(src_path, dest_path)
         return dest_path
 
     def run(self):
-        docker_image = Container.get_docker_image(self.testcase)
+        container = Container(self.testcase.validate_type())
+        docker_image = container.get_docker_image(self.testcase)
         if dt_cfg.dovetail_config['offline']:
-            exist = Container.get_image_id(docker_image)
+            exist = container.get_image_id(docker_image)
             if not exist:
                 self.logger.error("{} image doesn't exist, can't run offline."
                                   .format(self.testcase.validate_type()))
                 return
         else:
-            if not Container.pull_image(docker_image):
+            if not container.pull_image(docker_image):
                 self.logger.error("Failed to pull the image.")
                 return
 
-        container_id = Container.create(self.testcase.validate_type(),
-                                        self.testcase.name(), docker_image)
+        container_id = container.create(self.testcase.name(), docker_image)
         if not container_id:
             self.logger.error('Failed to create container.')
             return
@@ -76,14 +79,14 @@ class DockerRunner(object):
         exist_file_name = self.testcase.pre_copy_path("exist_src_file")
 
         if src_file_name or exist_file_name:
-            if not self.pre_copy(container_id, dest_path, src_file_name,
+            if not self.pre_copy(container, dest_path, src_file_name,
                                  exist_file_name):
                 return
 
         cmds = self.testcase.pre_condition()
         if cmds:
             for cmd in cmds:
-                ret, msg = Container.exec_cmd(container_id, cmd)
+                ret, msg = container.exec_cmd(cmd)
                 if ret != 0:
                     self.logger.error("Failed to exec all pre_condition cmds.")
                     break
@@ -93,7 +96,7 @@ class DockerRunner(object):
                 'Failed to prepare test case: {}'.format(self.testcase.name()))
         else:
             for cmd in self.testcase.cmds:
-                ret, msg = Container.exec_cmd(container_id, cmd)
+                ret, msg = container.exec_cmd(cmd)
                 if ret != 0:
                     self.logger.error('Failed to exec {}, ret: {}, msg: {}'
                                       .format(cmd, ret, msg))
@@ -102,11 +105,11 @@ class DockerRunner(object):
         cmds = self.testcase.post_condition()
         if cmds:
             for cmd in cmds:
-                ret, msg = Container.exec_cmd(container_id, cmd)
+                ret, msg = container.exec_cmd(cmd)
         self.testcase.cleaned(True)
 
         if not dt_cfg.dovetail_config['noclean']:
-            Container.clean(container_id, self.type)
+            container.clean()
 
     def archive_logs(self):
         result_path = os.path.join(os.environ["DOVETAIL_HOME"], 'results')
