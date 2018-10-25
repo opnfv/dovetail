@@ -265,8 +265,7 @@ class FunctestCrawler(Crawler):
             for jsonfile in f:
                 try:
                     data = json.loads(jsonfile)
-                    if (testcase_name == data['case_name'] or
-                        data['project_name'] == "sdnvpn") and \
+                    if testcase_name == data['case_name'] and \
                         build_tag == data['build_tag']:
                         criteria = data['criteria']
                         timestart = data['start_date']
@@ -465,8 +464,8 @@ class FunctestChecker(object):
     def get_sub_testcase(sub_testcase, result):
         if not result:
             return False
-        sub_testcase = re.sub("\[.*?\]", "", sub_testcase)
-        reg = sub_testcase + '[\s+\d+]'
+        sub_testcase = re.sub(r"\[.*?\]", "", sub_testcase)
+        reg = sub_testcase + r'[\s+\d+]'
         find_reg = re.compile(reg)
         for tc in result:
             match = find_reg.findall(tc)

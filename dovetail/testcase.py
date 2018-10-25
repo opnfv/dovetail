@@ -298,8 +298,8 @@ class Testcase(object):
                                  "test suite {}".format(testsuite['name']))
             else:
                 selected_tests += optional
-        if (not dt_cfg.dovetail_config['mandatory'] and
-                not dt_cfg.dovetail_config['optional']):
+        if (not dt_cfg.dovetail_config['mandatory']
+                and not dt_cfg.dovetail_config['optional']):
             if mandatory:
                 selected_tests += mandatory
             if optional:
