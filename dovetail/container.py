@@ -161,10 +161,9 @@ class Container(object):
               '{hosts_config} {openrc} {cacert_volume} {config_volume} ' \
               '{result_volume} {images_volume} {docker_image} /bin/bash' \
               .format(**locals())
-        dt_utils.exec_cmd(cmd, cls.logger)
-        ret, container_id = \
-            dt_utils.exec_cmd("sudo docker ps | grep " + docker_image +
-                              " | awk '{print $1}' | head -1", cls.logger)
+        ret, container_id = dt_utils.exec_cmd(cmd, cls.logger)
+        if ret != 0:
+            return None
         cls.container_list[valid_type] = container_id
 
         if valid_type.lower() == 'vnftest':
