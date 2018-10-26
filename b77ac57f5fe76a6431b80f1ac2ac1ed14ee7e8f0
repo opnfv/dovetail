@@ -75,6 +75,30 @@
       "revId": "b77ac57f5fe76a6431b80f1ac2ac1ed14ee7e8f0",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_1796944c",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-10-26T08:49:42Z",
+      "side": 1,
+      "message": "Thanks Stamatis for the suggestion. I appreciate any suggestions and comments because I am not very good at coding.\nI will try with what you suggested and let you know then.",
+      "parentUuid": "5a682502_7730a89e",
+      "range": {
+        "startLine": 301,
+        "startChar": 8,
+        "endLine": 302,
+        "endChar": 51
+      },
+      "revId": "b77ac57f5fe76a6431b80f1ac2ac1ed14ee7e8f0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
