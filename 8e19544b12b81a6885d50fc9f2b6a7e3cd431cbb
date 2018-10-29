@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_89a564b7",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-10-29T09:41:52Z",
+      "side": 1,
+      "message": "Commented out code. Should be enabled or removed? Or it will be handled in another commit?",
+      "range": {
+        "startLine": 93,
+        "startChar": 8,
+        "endLine": 94,
+        "endChar": 39
+      },
+      "revId": "8e19544b12b81a6885d50fc9f2b6a7e3cd431cbb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}

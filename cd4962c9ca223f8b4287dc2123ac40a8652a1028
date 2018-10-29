@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_a9a2e0ab",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-10-29T09:41:52Z",
+      "side": 0,
+      "message": "Q: These lines here are removed because there is no use at the code now? In general, values \u0027prepared\u0027 and \u0027cleaned\u0027 are no longer used?",
+      "range": {
+        "startLine": 211,
+        "startChar": 12,
+        "endLine": 212,
+        "endChar": 57
+      },
+      "revId": "cd4962c9ca223f8b4287dc2123ac40a8652a1028",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
