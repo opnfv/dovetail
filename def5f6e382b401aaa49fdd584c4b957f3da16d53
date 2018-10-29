@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_2996d04c",
+        "filename": "dovetail/container.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-10-29T09:51:39Z",
+      "side": 1,
+      "message": "Suggestion: Why don\u0027t you pass the whole testcase to constructor? By doing this, it will save you some parameters from some functions of the class (e.g. testcase_name, testcase_type, testcase:L43, testcase_cfg)",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 23,
+        "endChar": 40
+      },
+      "revId": "def5f6e382b401aaa49fdd584c4b957f3da16d53",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
