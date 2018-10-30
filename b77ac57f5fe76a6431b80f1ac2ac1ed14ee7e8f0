@@ -147,6 +147,30 @@
       "revId": "b77ac57f5fe76a6431b80f1ac2ac1ed14ee7e8f0",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_ff848ab2",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-10-30T10:24:14Z",
+      "side": 1,
+      "message": "Well I just found out that there is a discussion back to 2016 that says it is better to break before binary operators. So my preferred style is not correct anymore.\n\nhttps://mail.python.org/pipermail/python-ideas/2016-April/039752.html\n\nAfter that change the correct thing to do is:\n...\nif (not dt_cfg.dovetail_config[\u0027mandatory\u0027]\n        and not dt_cfg.dovetail_config[\u0027optional\u0027]):\n    if mandatory:\n...\n\nBut this is causing W503 if you use it as it is. The W503 is faulty and you can see that here:\nhttps://lintlyci.github.io/Flake8Rules/rules/W503.html\n\nSo what about ignoring the W503 and use this form I am mentioning in this comment?",
+      "parentUuid": "5a682502_7c1c0878",
+      "range": {
+        "startLine": 301,
+        "startChar": 8,
+        "endLine": 302,
+        "endChar": 51
+      },
+      "revId": "b77ac57f5fe76a6431b80f1ac2ac1ed14ee7e8f0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
