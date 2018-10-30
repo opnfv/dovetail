@@ -123,6 +123,30 @@
       "revId": "b77ac57f5fe76a6431b80f1ac2ac1ed14ee7e8f0",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_7c1c0878",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-10-30T03:20:55Z",
+      "side": 1,
+      "message": "It seems that W504 is only a warning and won\u0027t affect the function. \nIf we agree, I can add an ignore action in the tox.ini to skip this failure.\nThen Stamatis\u0027s suggestion can work well.",
+      "parentUuid": "5a682502_dc3c3ce5",
+      "range": {
+        "startLine": 301,
+        "startChar": 8,
+        "endLine": 302,
+        "endChar": 51
+      },
+      "revId": "b77ac57f5fe76a6431b80f1ac2ac1ed14ee7e8f0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
