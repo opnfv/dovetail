@@ -6,6 +6,8 @@ functest.vnf.vims:
     type: functest
     testcase: cloudify_ims
     image_name: opnfv/functest-vnf
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/pre_config/vnf_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
   report:
     source_archive_files:
       - functest.log
