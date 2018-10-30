@@ -46,6 +46,30 @@
       "revId": "8e19544b12b81a6885d50fc9f2b6a7e3cd431cbb",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_bad4e020",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-10-30T12:24:08Z",
+      "side": 1,
+      "message": "Ok after that I will +2 this patch.",
+      "parentUuid": "5a682502_5c82ec94",
+      "range": {
+        "startLine": 93,
+        "startChar": 8,
+        "endLine": 94,
+        "endChar": 39
+      },
+      "revId": "8e19544b12b81a6885d50fc9f2b6a7e3cd431cbb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
