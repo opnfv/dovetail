@@ -22,6 +22,30 @@
       "revId": "8e19544b12b81a6885d50fc9f2b6a7e3cd431cbb",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_5c82ec94",
+        "filename": "dovetail/testcase.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-10-30T01:58:23Z",
+      "side": 1,
+      "message": "Will remove them since they are not used for a long time.",
+      "parentUuid": "5a682502_89a564b7",
+      "range": {
+        "startLine": 93,
+        "startChar": 8,
+        "endLine": 94,
+        "endChar": 39
+      },
+      "revId": "8e19544b12b81a6885d50fc9f2b6a7e3cd431cbb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
