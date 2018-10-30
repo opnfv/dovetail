@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5a682502_7c67e825",
+        "filename": "dovetail/run.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-10-30T01:56:03Z",
+      "side": 1,
+      "message": "I will remove them.",
+      "parentUuid": "5a682502_09caf46d",
+      "range": {
+        "startLine": 55,
+        "startChar": 8,
+        "endLine": 59,
+        "endChar": 33
+      },
+      "revId": "0fd87a5ba787da29bea5ad7c719adce4aa4814b0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a682502_69c9e877",
         "filename": "dovetail/run.py",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2018-10-29T09:36:14Z",
       "side": 1,
       "message": "As I did with another review, I am recommending to change the style here to:\n\nif (\n    cond1 and\n    cond2)\n):\n    do_stuff",
+      "range": {
+        "startLine": 66,
+        "startChar": 15,
+        "endLine": 67,
+        "endChar": 50
+      },
+      "revId": "0fd87a5ba787da29bea5ad7c719adce4aa4814b0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_dc6efc00",
+        "filename": "dovetail/run.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-10-30T01:56:03Z",
+      "side": 1,
+      "message": "Yes, will update it.",
+      "parentUuid": "5a682502_69c9e877",
       "range": {
         "startLine": 66,
         "startChar": 15,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "5a682502_bc7180e2",
+        "filename": "dovetail/run.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-10-30T01:56:03Z",
+      "side": 1,
+      "message": "It will be better if move all these report related lines below to run_tests function.",
+      "parentUuid": "5a682502_c9b8fce7",
+      "range": {
+        "startLine": 285,
+        "startChar": 4,
+        "endLine": 285,
+        "endChar": 21
+      },
+      "revId": "0fd87a5ba787da29bea5ad7c719adce4aa4814b0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a682502_29cff080",
         "filename": "dovetail/run.py",
         "patchSetId": 2
@@ -82,6 +154,30 @@
       "writtenOn": "2018-10-29T09:36:14Z",
       "side": 1,
       "message": "you can remove the parentheses to achieve more pythonic style",
+      "range": {
+        "startLine": 287,
+        "startChar": 7,
+        "endLine": 287,
+        "endChar": 8
+      },
+      "revId": "0fd87a5ba787da29bea5ad7c719adce4aa4814b0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_1c7874c3",
+        "filename": "dovetail/run.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-10-30T01:56:03Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "5a682502_29cff080",
       "range": {
         "startLine": 287,
         "startChar": 7,
