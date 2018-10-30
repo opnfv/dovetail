@@ -9,6 +9,8 @@ functest.bgpvpn.router_association_floating_ip:
     pre_copy:
       exist_src_file: sdnvpn_config_testcase8.yaml
       dest_path: /usr/lib/python2.7/site-packages/sdnvpn/test/functest/config.yaml
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/pre_config/bgpvpn_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
   report:
     source_archive_files:
       - functest.log
