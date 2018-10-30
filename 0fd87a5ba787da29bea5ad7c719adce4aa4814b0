@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "5a682502_1ae35406",
+        "filename": "dovetail/run.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-10-30T12:28:20Z",
+      "side": 1,
+      "message": "cool",
+      "parentUuid": "5a682502_7c67e825",
+      "range": {
+        "startLine": 55,
+        "startChar": 8,
+        "endLine": 59,
+        "endChar": 33
+      },
+      "revId": "0fd87a5ba787da29bea5ad7c719adce4aa4814b0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a682502_69c9e877",
         "filename": "dovetail/run.py",
         "patchSetId": 2
@@ -96,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "5a682502_3ae8d0e1",
+        "filename": "dovetail/run.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-10-30T12:28:20Z",
+      "side": 1,
+      "message": "Please take a look at my comment here: https://gerrit.opnfv.org/gerrit/#/c/63993/1/dovetail/testcase.py@302",
+      "parentUuid": "5a682502_dc6efc00",
+      "range": {
+        "startLine": 66,
+        "startChar": 15,
+        "endLine": 67,
+        "endChar": 50
+      },
+      "revId": "0fd87a5ba787da29bea5ad7c719adce4aa4814b0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a682502_c9b8fce7",
         "filename": "dovetail/run.py",
         "patchSetId": 2
@@ -131,6 +179,30 @@
       "side": 1,
       "message": "It will be better if move all these report related lines below to run_tests function.",
       "parentUuid": "5a682502_c9b8fce7",
+      "range": {
+        "startLine": 285,
+        "startChar": 4,
+        "endLine": 285,
+        "endChar": 21
+      },
+      "revId": "0fd87a5ba787da29bea5ad7c719adce4aa4814b0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_5aedccee",
+        "filename": "dovetail/run.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-10-30T12:28:20Z",
+      "side": 1,
+      "message": "ok, feel free",
+      "parentUuid": "5a682502_bc7180e2",
       "range": {
         "startLine": 285,
         "startChar": 4,
