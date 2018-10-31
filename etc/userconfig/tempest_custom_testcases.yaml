@@ -1,0 +1,25 @@
+---
+tiers:
+    -
+        name: smoke
+        order: 1
+        description: >-
+            Set of basic Functional tests to validate the OPNFV scenarios.
+        testcases:
+            -
+                case_name: tempest_custom
+                project_name: functest
+                criteria: 100
+                blocking: false
+                description: >-
+                    The test case allows running a customized list of tempest
+                    test cases defined in a file under
+                    <dir_functest_repo>/functest/opnfv_tests/openstack/
+                      /tempest/custom_tests/test_list.txt
+                    The file is empty and can be customized with the desired tests.
+                run:
+                    name: tempest_common
+                    args:
+                        mode: 'custom'
+                        option:
+                            - '--concurrency=4'
