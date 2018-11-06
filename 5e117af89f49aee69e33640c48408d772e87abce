@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_572ab97e",
+        "filename": "etc/userconfig/vnf_testcases.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-11-06T12:14:35Z",
+      "side": 1,
+      "message": "extra white space here. There is also a change in the order number. It is intentional or by mistake?",
+      "range": {
+        "startLine": 5,
+        "startChar": 16,
+        "endLine": 5,
+        "endChar": 17
+      },
+      "revId": "5e117af89f49aee69e33640c48408d772e87abce",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
