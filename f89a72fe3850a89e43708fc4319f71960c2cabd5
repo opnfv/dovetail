@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_9471efe2",
+        "filename": "dovetail/run.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-11-06T11:01:01Z",
+      "side": 1,
+      "message": "here the duration was return in order to be used for the if statement which was removed from the previous patch set. If that if case was removed on purpose there is no need to record duration. All in all, if you mistakenly removed it and you want to use it here, there is no reason to return it",
+      "range": {
+        "startLine": 75,
+        "startChar": 11,
+        "endLine": 75,
+        "endChar": 19
+      },
+      "revId": "f89a72fe3850a89e43708fc4319f71960c2cabd5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
