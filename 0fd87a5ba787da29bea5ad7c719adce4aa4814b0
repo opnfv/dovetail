@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "5a682502_f47783d2",
+        "filename": "dovetail/report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-11-06T11:01:01Z",
+      "side": 1,
+      "message": "IS there any reason for removing this? It was unnecessary?",
+      "range": {
+        "startLine": 264,
+        "startChar": 24,
+        "endLine": 264,
+        "endChar": 57
+      },
+      "revId": "0fd87a5ba787da29bea5ad7c719adce4aa4814b0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a682502_09caf46d",
         "filename": "dovetail/run.py",
         "patchSetId": 2
@@ -255,6 +278,29 @@
         "startChar": 7,
         "endLine": 287,
         "endChar": 8
+      },
+      "revId": "0fd87a5ba787da29bea5ad7c719adce4aa4814b0",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_b46eabff",
+        "filename": "dovetail/run.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-11-06T11:01:01Z",
+      "side": 1,
+      "message": "this if is absent from the last patch set. Is this happening on purpose?",
+      "range": {
+        "startLine": 287,
+        "startChar": 4,
+        "endLine": 287,
+        "endChar": 35
       },
       "revId": "0fd87a5ba787da29bea5ad7c719adce4aa4814b0",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
