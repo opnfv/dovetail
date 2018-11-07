@@ -22,6 +22,30 @@
       "revId": "5e117af89f49aee69e33640c48408d772e87abce",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_0a73f415",
+        "filename": "etc/userconfig/vnf_testcases.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-07T02:40:54Z",
+      "side": 1,
+      "message": "For Functest Gambia the vnf order is 5. keep them consistent.\nhttps://github.com/opnfv/functest/blob/stable/gambia/docker/vnf/testcases.yaml#L5",
+      "parentUuid": "5a682502_572ab97e",
+      "range": {
+        "startLine": 5,
+        "startChar": 16,
+        "endLine": 5,
+        "endChar": 17
+      },
+      "revId": "5e117af89f49aee69e33640c48408d772e87abce",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
