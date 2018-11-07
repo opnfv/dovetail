@@ -22,6 +22,30 @@
       "revId": "f89a72fe3850a89e43708fc4319f71960c2cabd5",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_aa5be085",
+        "filename": "dovetail/run.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-07T02:50:38Z",
+      "side": 1,
+      "message": "It is not removed by mistake. It has been moved to Line 60 to break the loop when one test case failed.\nI will remove all the return value since they are not used anywhere.",
+      "parentUuid": "5a682502_9471efe2",
+      "range": {
+        "startLine": 75,
+        "startChar": 11,
+        "endLine": 75,
+        "endChar": 19
+      },
+      "revId": "f89a72fe3850a89e43708fc4319f71960c2cabd5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
