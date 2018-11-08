@@ -64,6 +64,37 @@ class TestParser(unittest.TestCase):
                            "None -r")
         self.assertEqual(expected_output, output)
 
+    @mock.patch('dovetail.parser.jinja2')
+    def test_parse_cmd_exception(self, mock_jinja, mock_logger):
+        errorMSG = 'Exception was raised'
+        exception = Exception(errorMSG)
+        command = 'cmd'
+        undefined_obj = mock.Mock()
+        mock_jinja.StrictUndefined = undefined_obj
+        mock_jinja.Template.side_effect = exception
 
-if __name__ == '__main__':
-    unittest.main()
+        expected = None
+        dovetail_parser = parser.Parser()
+        exception_obj = mock.Mock()
+        dovetail_parser.logger.exception = exception_obj
+        result = dovetail_parser.parse_cmd(command, 'testcase')
+
+        mock_jinja.Template.assert_called_once_with(command,
+                                                    undefined=undefined_obj)
+        exception_obj.assert_called_once_with(
+            'Failed to parse cmd {}, exception: {}'.format(command, errorMSG))
+        self.assertEqual(expected, result)
+
+    @mock.patch('dovetail.parser.dt_logger.Logger')
+    def test_create_log(self, mock_dt_logger, mock_logger):
+        mock_dt_logger_obj = mock.Mock()
+        logger_obj = mock.Mock()
+        mock_dt_logger_obj.getLogger.return_value = logger_obj
+        mock_dt_logger.return_value = mock_dt_logger_obj
+
+        dovetail_parser = parser.Parser()
+        dovetail_parser.create_log()
+
+        mock_dt_logger.assert_called_once_with('dovetail.parser.Parser')
+        mock_dt_logger_obj.getLogger.assert_called_once_with()
+        self.assertEqual(dovetail_parser.logger, logger_obj)

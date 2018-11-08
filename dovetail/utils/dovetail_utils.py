@@ -8,6 +8,7 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 
+from __future__ import print_function
 import sys
 import os
 import re
@@ -35,8 +36,6 @@ def exec_log(verbose, logger, msg, level, flush=False):
             logger.error(msg)
         elif level == 'debug':
             logger.debug(msg)
-        else:
-            pass
     else:
         print(msg)
         if flush:
@@ -44,7 +43,8 @@ def exec_log(verbose, logger, msg, level, flush=False):
 
 
 def exec_cmd(cmd, logger=None, exit_on_error=False, info=False,
-             exec_msg_on=True, err_msg="", verbose=True):
+             exec_msg_on=True, err_msg="", verbose=True,
+             progress_bar=False):
     msg_err = ("The command '%s' failed." % cmd) if not err_msg else err_msg
     msg_exec = ("Executing command: '%s'" % cmd)
     level = 'info' if info else 'debug'
@@ -54,14 +54,15 @@ def exec_cmd(cmd, logger=None, exit_on_error=False, info=False,
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
                          stderr=subprocess.STDOUT)
     stdout = ''
-    # count = 1
-    # DEBUG = os.getenv('DEBUG')
+    if progress_bar:
+        count = 1
+        DEBUG = os.getenv('DEBUG')
     for line in iter(p.stdout.readline, b''):
         exec_log(verbose, logger, line.strip(), level, True)
         stdout += line
-        # if DEBUG is None or DEBUG.lower() != "true":
-        #    show_progress_bar(count)
-        #    count += 1
+        if progress_bar and (DEBUG is None or DEBUG.lower() != "true"):
+            show_progress_bar(count)
+            count += 1
     stdout = stdout.strip()
     returncode = p.wait()
     p.stdout.close()
@@ -109,6 +110,7 @@ def get_obj_by_path(obj, dst_path):
     for path, obj in objwalk(obj):
         if path == dst_path:
             return obj
+    return None
 
 
 def source_env(env_file):
@@ -324,22 +326,21 @@ def get_hosts_info(logger=None):
         if not hosts_yaml:
             logger.debug("File {} is empty.".format(hosts_config_file))
             return hosts_config
-        try:
-            if not hosts_yaml['hosts_info']:
-                return hosts_config
-            for ip, hostnames in hosts_yaml['hosts_info'].iteritems():
-                if not hostnames:
-                    continue
-                add_hosts_info(ip, hostnames)
-                names_str = ' '.join(hostname for hostname in hostnames
-                                     if hostname)
-                if not names_str:
-                    continue
-                hosts_config += ' --add-host=\'{}\':{} '.format(names_str, ip)
-                logger.debug('Get hosts info {}:{}.'.format(ip, names_str))
-        except KeyError as e:
-            logger.error("There is no key {} in file {}"
-                         .format(e, hosts_config_file))
+        hosts_info = hosts_yaml.get('hosts_info', None)
+        if not hosts_info:
+            logger.error("There is no key hosts_info in file {}"
+                         .format(hosts_config_file))
+            return hosts_config
+        for ip, hostnames in hosts_info.iteritems():
+            if not hostnames:
+                continue
+            add_hosts_info(ip, hostnames)
+            names_str = ' '.join(hostname for hostname in hostnames
+                                 if hostname)
+            if not names_str:
+                continue
+            hosts_config += ' --add-host=\'{}\':{} '.format(names_str, ip)
+            logger.debug('Get hosts info {}:{}.'.format(ip, names_str))
     return hosts_config
 
 
@@ -377,11 +378,9 @@ def get_value_from_dict(key_path, input_dict):
     key_path must be given in string format with dots
     Example: result.dir
     """
-    if not isinstance(key_path, str):
+    if not isinstance(key_path, str) or not isinstance(input_dict, dict):
         return None
     for key in key_path.split("."):
-        if not isinstance(input_dict, dict):
-            return None
         input_dict = input_dict.get(key)
         if not input_dict:
             return None
