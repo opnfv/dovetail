@@ -12,7 +12,9 @@ Dovetail
    :numbered:
    :maxdepth: 1
 
+   testing/user/certificationworkflow/ApplicationForm
    testing/user/certificationworkflow/index
+   testing/user/ovpaddendum/exemption-strict-API-validation
    testing/user/ovpaddendum/index
    testing/user/reviewerguide/index
    testing/user/systempreparation/index
@@ -20,5 +22,6 @@ Dovetail
    testing/user/userguide/index
 
    testing/developer/testcaserequirements/index
+   testing/developer/testscope/index
 
    release/release-notes/index
