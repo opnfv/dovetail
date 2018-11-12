@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_8a789b2c",
+        "filename": "docs/index.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-12T07:06:47Z",
+      "side": 1,
+      "message": "It\u0027s better to include userguideperinstaller/index. Then the index will include all guides for each instalelr including apex.",
+      "range": {
+        "startLine": 21,
+        "startChar": 38,
+        "endLine": 21,
+        "endChar": 56
+      },
+      "revId": "1bbe56ddf2e66fe800d12d585b6cb505629c0936",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_ca729348",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-12T07:06:47Z",
+      "side": 1,
+      "message": "user",
+      "range": {
+        "startLine": 195,
+        "startChar": 65,
+        "endLine": 195,
+        "endChar": 73
+      },
+      "revId": "1bbe56ddf2e66fe800d12d585b6cb505629c0936",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_2a918747",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-12T07:06:47Z",
+      "side": 1,
+      "message": "\u0027log in\u0027 here doesn\u0027t mean collect logs. It\u0027s ssh to node1 with the user name and password/key provided with pod.yaml.",
+      "range": {
+        "startLine": 290,
+        "startChar": 52,
+        "endLine": 290,
+        "endChar": 86
+      },
+      "revId": "1bbe56ddf2e66fe800d12d585b6cb505629c0936",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_0a948b35",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-12T07:06:47Z",
+      "side": 1,
+      "message": "What\u0027s default user? Here can be any user of nodes as long as it has sudo privileges.",
+      "range": {
+        "startLine": 316,
+        "startChar": 23,
+        "endLine": 316,
+        "endChar": 39
+      },
+      "revId": "1bbe56ddf2e66fe800d12d585b6cb505629c0936",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_8ac6db47",
+        "filename": "docs/testing/user/userguideperinstaller/testing_guide_apex.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-12T07:06:47Z",
+      "side": 1,
+      "message": "I suggest to comment out or remove this line and Line 230.\nBecause this guide is only for Apex and apex is always http not https. So there is no need to give the OS_CACERT or OS_INSECURE",
+      "range": {
+        "startLine": 227,
+        "startChar": 3,
+        "endLine": 227,
+        "endChar": 50
+      },
+      "revId": "1bbe56ddf2e66fe800d12d585b6cb505629c0936",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_eac5cf3c",
+        "filename": "docs/testing/user/userguideperinstaller/testing_guide_apex.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-12T07:06:47Z",
+      "side": 1,
+      "message": "For OPNFV, it\u0027s INSTALLER_TYPE",
+      "range": {
+        "startLine": 245,
+        "startChar": 10,
+        "endLine": 245,
+        "endChar": 19
+      },
+      "revId": "1bbe56ddf2e66fe800d12d585b6cb505629c0936",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
