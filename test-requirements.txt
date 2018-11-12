@@ -1,10 +1,7 @@
-coverage>=3.6
-pep8==1.5.7
-pyflakes==0.8.1
-flake8<3.0
-pytest
-pykwalify
-mock
-testrepository
-testscenarios
+coverage>=4.0,!=4.4  # Apache-2.0
+flake8<3.0  # MIT
+pytest  # MIT
+pytest-cov  # MIT
+yamllint
+mock  # BSD
 testtools
