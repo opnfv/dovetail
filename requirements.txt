@@ -1,7 +1,7 @@
 ansible==2.2.0
 click==6.6
 Jinja2==2.8
-keystoneauth1==2.12.3
+keystoneauth1==2.21.0
 openstacksdk==0.9.5
 os-client-config==1.28.0
 osc-lib==1.1.0
@@ -10,7 +10,7 @@ pbr==2.0.0
 python-cinderclient==1.9.0
 python-glanceclient==2.5.0
 python-hosts==0.4.1
-python-keystoneclient==3.5.1
+python-keystoneclient==3.8.0
 python-novaclient==6.0.2
 python-openstackclient==3.2.1
 pytz==2016.7
