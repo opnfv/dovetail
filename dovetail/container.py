@@ -68,11 +68,11 @@ class Container(object):
         dovetail_config = dt_cfg.dovetail_config
 
         log_vol = '-v %s:%s ' % (dovetail_config['result_dir'],
-                                 dovetail_config["vnftest"]['result']['log'])
+                                 dovetail_config['vnftest']['result']['log'])
 
         key_file = os.path.join(dovetail_config['config_dir'],
                                 dovetail_config['pri_key'])
-        key_container_path = dovetail_config["vnftest"]['result']['key_path']
+        key_container_path = dovetail_config['vnftest']['result']['key_path']
         if not os.path.isfile(key_file):
             self.logger.debug("Key file {} is not found".format(key_file))
             key_vol = ''
@@ -190,7 +190,7 @@ class Container(object):
 
     def pull_image_only(self, image_name):
         cmd = 'sudo docker pull %s' % (image_name)
-        ret, msg = dt_utils.exec_cmd(cmd, self.logger)
+        ret, _ = dt_utils.exec_cmd(cmd, self.logger)
         if ret != 0:
             self.logger.error(
                 'Failed to pull docker image {}!'.format(image_name))
