@@ -51,7 +51,7 @@ class CliTestcase(object):
         else:
             testsuite_json = Testsuite.get_all()
             if testsuite_json:
-                for key, value in testsuite_json.items():
+                for key in testsuite_json.keys():
                     click.echo("--------------------------")
                     click.echo("Test Suite {}".format(key))
                     click.echo("--------------------------")
