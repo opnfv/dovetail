@@ -225,9 +225,10 @@ class DovetailUtilsTesting(unittest.TestCase):
         dovetail_utils.dt_cfg.dovetail_config = {'config_dir': file_path}
         mock_path.join.return_value = file_complete_name
         mock_path.isfile.return_value = False
+        logger = Mock()
 
         expected = ''
-        result = dovetail_utils.get_hosts_info(file_path)
+        result = dovetail_utils.get_hosts_info(logger)
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
         mock_path.isfile.assert_called_once_with(file_complete_name)
