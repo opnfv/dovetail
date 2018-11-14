@@ -148,6 +148,9 @@ class DockerRunner(object):
         if 'DEPLOY_SCENARIO' in os.environ:
             config_item['deploy_scenario'] = os.environ['DEPLOY_SCENARIO']
         config_item['dovetail_home'] = os.getenv("DOVETAIL_HOME")
+        config_item['debug'] = os.getenv("DEBUG")
+        config_item['build_tag'] = dt_cfg.dovetail_config['build_tag']
+        config_item['cacert'] = os.getenv('OS_CACERT')
         return config_item
 
     def _update_config(self, testcase):
@@ -189,6 +192,16 @@ class FunctestRunner(DockerRunner):
     def __init__(self, testcase):
         self.type = 'functest'
         super(FunctestRunner, self).__init__(testcase)
+        self._update_config(testcase)
+
+
+class FunctestK8sRunner(DockerRunner):
+
+    config_file_name = 'functest-k8s_config.yml'
+
+    def __init__(self, testcase):
+        self.type = 'functest-k8s'
+        super(FunctestK8sRunner, self).__init__(testcase)
         self._update_config(testcase)
 
 
@@ -279,7 +292,8 @@ class TestRunnerFactory(object):
         "yardstick": YardstickRunner,
         "bottlenecks": BottlenecksRunner,
         "shell": ShellRunner,
-        "vnftest": VnftestRunner
+        "vnftest": VnftestRunner,
+        "functest-k8s": FunctestK8sRunner
     }
 
     @classmethod

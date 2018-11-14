@@ -49,21 +49,6 @@ class Container(object):
         tag = self._get_config('docker_tag', project_cfg, testcase_cfg)
         return "{}:{}".format(name, tag) if name and tag else None
 
-    # get the openrc_volume for creating the container
-    def openrc_volume(self):
-        dovetail_config = dt_cfg.dovetail_config
-        dovetail_config['openrc'] = os.path.join(dovetail_config['config_dir'],
-                                                 dovetail_config['env_file'])
-        if os.path.isfile(dovetail_config['openrc']):
-            openrc = " -v {}:{} " \
-                     .format(dovetail_config['openrc'],
-                             dovetail_config[self.valid_type]['openrc'])
-            return openrc
-        else:
-            self.logger.error(
-                "File {} doesn't exist.".format(dovetail_config['openrc']))
-            return None
-
     def set_vnftest_config(self):
         dovetail_config = dt_cfg.dovetail_config
 
@@ -84,27 +69,16 @@ class Container(object):
         dovetail_config = dt_cfg.dovetail_config
         project_cfg = dovetail_config[self.valid_type]
 
-        # credentials file openrc.sh is neccessary
-        openrc = self.openrc_volume()
-        if not openrc:
-            return None
-
         opts = dt_utils.get_value_from_dict('opts', project_cfg)
         envs = dt_utils.get_value_from_dict('envs', project_cfg)
-        volumes = dt_utils.get_value_from_dict('volumes', project_cfg)
+        volumes_list = dt_utils.get_value_from_dict('volumes', project_cfg)
         opts = ' ' if not opts else opts
         envs = ' ' if not envs else envs
-        volumes = ' ' if not volumes else ' '.join(volumes)
-
-        # CI_DEBUG is used for showing the debug logs of the upstream projects
-        # BUILD_TAG is the unique id for this test
-        DEBUG = os.getenv('DEBUG')
-        if DEBUG is not None and DEBUG.lower() == "true":
-            envs = envs + ' -e CI_DEBUG=true'
-        else:
-            envs = envs + ' -e CI_DEBUG=false'
-        envs = envs + ' -e BUILD_TAG=%s-%s' % (dovetail_config['build_tag'],
-                                               self.testcase.name())
+        volumes = ' '
+        if volumes_list:
+            for volume in volumes_list:
+                if volume:
+                    volumes += ' {} '.format(volume)
 
         hosts_config = dt_utils.get_hosts_info(self.logger)
 
@@ -119,40 +93,8 @@ class Container(object):
         if not config:
             return None
 
-        # for refstack, support user self_defined configuration
-        config_volume = \
-            ' -v %s:%s ' % (os.getenv("DOVETAIL_HOME"),
-                            project_cfg['config']['dir'])
-
-        cacert_volume = ""
-        https_enabled = dt_utils.check_https_enabled(self.logger)
-        cacert = os.getenv('OS_CACERT')
-        insecure = os.getenv('OS_INSECURE')
-        if cacert is not None:
-            if dt_utils.check_cacert_file(cacert, self.logger):
-                cacert_volume = ' -v %s:%s ' % (cacert, cacert)
-            else:
-                return None
-        elif https_enabled:
-            if insecure and insecure.lower() == 'true':
-                self.logger.debug("Use the insecure mode...")
-            else:
-                self.logger.error("https enabled, please set OS_CACERT or "
-                                  "insecure mode...")
-                return None
-
-        images_volume = ''
-        if project_cfg['config'].get('images', None):
-            images_volume = '-v {}:{}'.format(
-                dovetail_config['images_dir'],
-                project_cfg['config']['images'])
-
-        result_volume = ' -v %s:%s ' % (dovetail_config['result_dir'],
-                                        project_cfg['result']['dir'])
         cmd = 'sudo docker run {opts} {envs} {volumes} {config} ' \
-              '{hosts_config} {openrc} {cacert_volume} {config_volume} ' \
-              '{result_volume} {images_volume} {docker_image} /bin/bash' \
-              .format(**locals())
+              '{hosts_config} {docker_image} /bin/bash'.format(**locals())
         ret, container_id = dt_utils.exec_cmd(cmd, self.logger)
         if ret != 0:
             return None
