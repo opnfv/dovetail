@@ -4,29 +4,45 @@
 {% set testcase = testcase or '' %}
 {% set deploy_scenario = deploy_scenario or 'unknown' %}
 {% set dovetail_home = dovetail_home or '' %}
+{% set debug = debug or 'false' %}
+{% set build_tag = build_tag or '' %}
+{% set cacert_volume = '' %}
+{% if cacert %}
+    {% set cacert_volume = ' -v ' + cacert + ':' + cacert %}
+{% endif %}
+{% set openrc_file = '/tmp/admin_rc.sh' %}
+{% set result_dir = '/home/opnfv/bottlenecks/results' %}
+{% set config_dir = '/home/opnfv/userconfig' %}
+{% set image_file = '/tmp/yardstick.img' %}
 
 bottlenecks:
   image_name: opnfv/bottlenecks
   docker_tag: latest
   opts: '-id --privileged=true'
-  envs: '-e DEPLOY_SCENARIO={{deploy_scenario}} -e Yardstick_TAG=stable -e OUTPUT_FILE={{testcase}}.out'
+  envs: '-e DEPLOY_SCENARIO={{deploy_scenario}} -e Yardstick_TAG=stable
+         -e OUTPUT_FILE={{testcase}}.out -e CI_DEBUG={{debug}}
+         -e BUILD_TAG={{build_tag}}-{{testcase}}'
   volumes:
     - '-v /var/run/docker.sock:/var/run/docker.sock'
     - '-v {{dovetail_home}}/results/bottlenecks:/tmp'
+    - '-v {{dovetail_home}}/pre_config/env_config.sh:{{openrc_file}}'
+    - {{cacert_volume}}
+    - '-v {{dovetail_home}}:{{config_dir}}'
+    - '-v {{dovetail_home}}/results:{{result_dir}}'
   config:
-    dir: '/home/opnfv/userconfig'
+    dir: {{config_dir}}
   pre_condition:
-    - 'cp /home/opnfv/userconfig/images/ubuntu-16.04-server-cloudimg-amd64-disk1.img /tmp/yardstick.img'
+    - 'cp {{config_dir}}/images/ubuntu-16.04-server-cloudimg-amd64-disk1.img {{image_file}}'
   cmds:
     - 'python /home/opnfv/bottlenecks/testsuites/run_testsuite.py testcase {{validate_testcase}} False'
   post_condition:
-    - 'mkdir -p /home/opnfv/bottlenecks/results'
-    - 'cp /tmp/bottlenecks.log /home/opnfv/bottlenecks/results'
-    - 'cp /tmp/bottlenecks.stress.ping.out /home/opnfv/bottlenecks/results'
-    - 'rm /tmp/yardstick.img'
+    - 'mkdir -p {{result_dir}}'
+    - 'cp /tmp/bottlenecks.log {{result_dir}}'
+    - 'cp /tmp/bottlenecks.stress.ping.out {{result_dir}}'
+    - 'rm {{image_file}}'
   result:
-    dir: '/home/opnfv/bottlenecks/results'
-  openrc: '/tmp/admin_rc.sh'
+    dir: {{result_dir}}
+  openrc: {{openrc_file}}
   extra_container:
     - 'Bottlenecks-Yardstick'
     - 'Bottlenecks-ELK'

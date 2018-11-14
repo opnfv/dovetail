@@ -321,24 +321,6 @@ class RunTesting(unittest.TestCase):
         mock_utils.exec_cmd.assert_called_once_with(
             'sudo cp -a -r value/* value', logger, exit_on_error=False)
 
-    @patch('dovetail.run.dt_cfg')
-    @patch('dovetail.run.dt_utils')
-    @patch('dovetail.run.os')
-    def test_env_init(self, mock_os, mock_utils, mock_config):
-        mock_config.dovetail_config = {'config_dir': 'a', 'env_file': 'b'}
-        join_path = 'join_path'
-        mock_os.path.join.return_value = join_path
-        mock_os.path.isfile.return_value = False
-        logger = Mock()
-
-        dt_run.env_init(logger)
-
-        mock_os.path.join.assert_called_once_with('a', 'b')
-        mock_os.path.isfile.assert_called_once_with(join_path)
-        logger.error.assert_called_once_with(
-            "File {} does not exist.".format(join_path))
-        mock_utils.source_env.assert_called_once_with(join_path)
-
     @patch('dovetail.run.os')
     def test_update_deploy_scenario(self, mock_os):
         logger = Mock()
@@ -348,23 +330,6 @@ class RunTesting(unittest.TestCase):
 
         logger.info.assert_called_once_with('DEPLOY_SCENARIO : %s', 'a')
         self.assertEquals({'DEPLOY_SCENARIO': 'a'}, mock_os.environ)
-
-    @patch('dovetail.run.dt_cfg')
-    @patch('dovetail.run.os.path')
-    def test_check_hosts_file(self, mock_path, mock_config):
-        mock_config.dovetail_config = {'config_dir': 'value'}
-        hosts_file = 'h_file'
-        mock_path.join.return_value = hosts_file
-        mock_path.isfile.return_value = False
-        logger = Mock()
-
-        dt_run.check_hosts_file(logger)
-
-        mock_path.join.assert_called_once_with('value', 'hosts.yaml')
-        mock_path.isfile.assert_called_once_with(hosts_file)
-        logger.warn.assert_called_once_with(
-            'There is no hosts file {}, may be some issues with '
-            'domain name resolution.'.format(hosts_file))
 
     @patch('dovetail.run.dt_cfg')
     @patch.object(dt_run, 'filter_config')
@@ -517,17 +482,15 @@ class RunTesting(unittest.TestCase):
     @patch.object(dt_run, 'clean_results_dir')
     @patch.object(dt_run, 'parse_cli')
     @patch.object(dt_run, 'update_deploy_scenario')
-    @patch.object(dt_run, 'env_init')
     @patch.object(dt_run, 'copy_userconfig_files')
     @patch.object(dt_run, 'copy_patch_files')
-    @patch.object(dt_run, 'check_hosts_file')
     @patch.object(dt_run, 'get_testcase_list')
     @patch.object(dt_run, 'run_test')
     @patch.object(dt_run, 'create_logs')
-    def test_main(self, mock_create_logs, mock_run, mock_get_list, mock_check,
-                  mock_copy_patch, mock_copy_userconf, mock_env_init,
-                  mock_update, mock_parse, mock_clean, mock_get_result,
-                  mock_utils, mock_config, mock_logger, mock_uuid, mock_os):
+    def test_main(self, mock_create_logs, mock_run, mock_get_list,
+                  mock_copy_patch, mock_copy_userconf, mock_update, mock_parse,
+                  mock_clean, mock_get_result, mock_utils, mock_config,
+                  mock_logger, mock_uuid, mock_os):
         mock_config.dovetail_config = {}
         mock_os.environ = {}
         logger_obj = Mock()
@@ -566,13 +529,9 @@ class RunTesting(unittest.TestCase):
             call('Build tag: daily-master-42')])
         mock_parse.assert_called_once_with(logger_obj, **kwargs_dict)
         mock_update.assert_called_once_with(logger_obj, **kwargs_dict)
-        mock_env_init.assert_called_once_with(logger_obj)
         mock_copy_userconf.assert_called_once_with(logger_obj)
         mock_copy_patch.assert_called_once_with(logger_obj)
         mock_utils.check_docker_version.assert_called_once_with(logger_obj)
-        mock_utils.get_openstack_endpoint.assert_called_once_with(logger_obj)
-        mock_check.assert_called_once_with(logger_obj)
-        mock_utils.get_hardware_info.assert_called_once_with(logger_obj)
         mock_get_list.assert_called_once_with(logger_obj, **kwargs_dict)
         mock_run.assert_called_once_with(
             testcase_list, kwargs_dict['report'], logger_obj)
@@ -604,19 +563,16 @@ class RunTesting(unittest.TestCase):
     @patch('dovetail.run.dt_utils')
     @patch.object(dt_run, 'get_result_path')
     @patch.object(dt_run, 'clean_results_dir')
-    @patch.object(dt_run, 'parse_cli')
     @patch.object(dt_run, 'update_deploy_scenario')
-    @patch.object(dt_run, 'env_init')
     @patch.object(dt_run, 'copy_userconfig_files')
     @patch.object(dt_run, 'copy_patch_files')
-    @patch.object(dt_run, 'check_hosts_file')
     @patch.object(dt_run, 'get_testcase_list')
+    @patch.object(dt_run, 'parse_cli')
     @patch.object(dt_run, 'run_test')
     @patch.object(dt_run, 'create_logs')
-    def test_main_no_testcaselist(self, mock_create_logs, mock_run,
-                                  mock_get_list, mock_check, mock_copy_patch,
-                                  mock_copy_userconf, mock_env_init,
-                                  mock_update, mock_parse, mock_clean,
+    def test_main_no_testcaselist(self, mock_create_logs, mock_run, mock_parse,
+                                  mock_get_list, mock_copy_patch,
+                                  mock_copy_userconf, mock_update, mock_clean,
                                   mock_get_result, mock_utils, mock_config,
                                   mock_logger, mock_uuid, mock_os):
         mock_config.dovetail_config = {}
@@ -657,11 +613,7 @@ class RunTesting(unittest.TestCase):
             call('Build tag: daily-master-42')])
         mock_parse.assert_called_once_with(logger_obj, **kwargs_dict)
         mock_update.assert_called_once_with(logger_obj, **kwargs_dict)
-        mock_env_init.assert_called_once_with(logger_obj)
         mock_copy_userconf.assert_called_once_with(logger_obj)
         mock_copy_patch.assert_called_once_with(logger_obj)
         mock_utils.check_docker_version.assert_called_once_with(logger_obj)
-        mock_utils.get_openstack_endpoint.assert_called_once_with(logger_obj)
-        mock_check.assert_called_once_with(logger_obj)
-        mock_utils.get_hardware_info.assert_called_once_with(logger_obj)
         mock_get_list.assert_called_once_with(logger_obj, **kwargs_dict)

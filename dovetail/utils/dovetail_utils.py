@@ -43,7 +43,7 @@ def exec_log(verbose, logger, msg, level, flush=False):
 
 
 def exec_cmd(cmd, logger=None, exit_on_error=False, info=False,
-             exec_msg_on=True, err_msg="", verbose=True,
+             exec_msg_on=True, err_msg='', verbose=True,
              progress_bar=False):
     msg_err = ("The command '%s' failed." % cmd) if not err_msg else err_msg
     msg_exec = ("Executing command: '%s'" % cmd)
@@ -60,7 +60,7 @@ def exec_cmd(cmd, logger=None, exit_on_error=False, info=False,
     for line in iter(p.stdout.readline, b''):
         exec_log(verbose, logger, line.strip(), level, True)
         stdout += line
-        if progress_bar and (DEBUG is None or DEBUG.lower() != "true"):
+        if progress_bar and (DEBUG is None or DEBUG.lower() != 'true'):
             show_progress_bar(count)
             count += 1
     stdout = stdout.strip()
@@ -125,12 +125,12 @@ def source_env(env_file):
 
 
 def check_https_enabled(logger=None):
-    logger.debug("Checking if https enabled or not...")
+    logger.debug('Checking if https enabled or not...')
     os_auth_url = os.getenv('OS_AUTH_URL')
     if os_auth_url.startswith('https'):
-        logger.debug("https is enabled")
+        logger.debug('https is enabled')
         return True
-    logger.debug("https is not enabled")
+    logger.debug('https is not enabled')
     return False
 
 
@@ -140,10 +140,10 @@ def get_duration(start_date, stop_date, logger):
         datetime_start = datetime.strptime(start_date, fmt)
         datetime_stop = datetime.strptime(stop_date, fmt)
         delta = (datetime_stop - datetime_start).seconds
-        res = "%sm%ss" % (delta / 60, delta % 60)
+        res = '%sm%ss' % (delta / 60, delta % 60)
         return res
     except ValueError as e:
-        logger.exception("ValueError: {}".format(e))
+        logger.exception('ValueError: {}'.format(e))
         return None
 
 
@@ -162,12 +162,12 @@ def check_docker_version(logger=None):
     client_ret, client_ver = \
         exec_cmd("sudo docker version -f'{{.Client.Version}}'", logger=logger)
     if server_ret == 0:
-        logger.debug("docker server version: {}".format(server_ver))
+        logger.debug('docker server version: {}'.format(server_ver))
     if server_ret != 0 or (LooseVersion(server_ver) < LooseVersion('1.12.3')):
         logger.error("Don't support this Docker server version. "
                      "Docker server should be updated to at least 1.12.3.")
     if client_ret == 0:
-        logger.debug("docker client version: {}".format(client_ver))
+        logger.debug('docker client version: {}'.format(client_ver))
     if client_ret != 0 or (LooseVersion(client_ver) < LooseVersion('1.12.3')):
         logger.error("Don't support this Docker client version. "
                      "Docker client should be updated to at least 1.12.3.")
@@ -188,25 +188,25 @@ def add_hosts_info(ip, hostnames):
 def get_hardware_info(logger=None):
     pod_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
                             dt_cfg.dovetail_config['pod_file'])
-    logger.info("Get hardware info of all nodes list in file {} ..."
+    logger.info('Get hardware info of all nodes list in file {} ...'
                 .format(pod_file))
     result_dir = dt_cfg.dovetail_config['result_dir']
     info_file_path = os.path.join(result_dir, 'sut_hardware_info')
     all_info_file = os.path.join(result_dir, 'all_hosts_info.json')
     inventory_file = os.path.join(result_dir, 'inventory.ini')
     if not get_inventory_file(pod_file, inventory_file, logger):
-        logger.error("Failed to get SUT hardware info.")
+        logger.error('Failed to get SUT hardware info.')
         return None
-    ret, msg = exec_cmd("cd {} && ansible all -m setup -i {} --tree {}"
+    ret, msg = exec_cmd('cd {} && ansible all -m setup -i {} --tree {}'
                         .format(constants.USERCONF_PATH, inventory_file,
                                 info_file_path), verbose=False)
     if not os.path.exists(info_file_path) or ret != 0:
-        logger.error("Failed to get SUT hardware info.")
+        logger.error('Failed to get SUT hardware info.')
         return None
     if not combine_files(info_file_path, all_info_file, logger):
-        logger.error("Failed to get all hardware info.")
+        logger.error('Failed to get all hardware info.')
         return None
-    logger.info("Hardware info of all nodes are stored in file {}."
+    logger.info('Hardware info of all nodes are stored in file {}.'
                 .format(all_info_file))
     return all_info_file
 
@@ -234,13 +234,13 @@ def get_inventory_file(pod_file, inventory_file, logger=None):
                                  .format(pod_file))
                     return False
                 out_f.write(host_info)
-        logger.debug("Ansible inventory file is {}.".format(inventory_file))
+        logger.debug('Ansible inventory file is {}.'.format(inventory_file))
         return True
     except KeyError as e:
-        logger.exception("KeyError {}.".format(e))
+        logger.exception('KeyError {}.'.format(e))
         return False
     except Exception:
-        logger.exception("Failed to read file {}.".format(pod_file))
+        logger.exception('Failed to read file {}.'.format(pod_file))
         return False
 
 
@@ -253,13 +253,13 @@ def combine_files(file_path, result_file, logger=None):
             with open(absolute_file_path, 'r') as f:
                 all_info[info_file] = json.load(f)
         except Exception:
-            logger.error("Failed to read file {}.".format(absolute_file_path))
+            logger.error('Failed to read file {}.'.format(absolute_file_path))
             return None
     try:
         with open(result_file, 'w') as f:
             f.write(json.dumps(all_info))
     except Exception:
-        logger.exception("Failed to write file {}.".format(result_file))
+        logger.exception('Failed to write file {}.'.format(result_file))
         return None
     return result_file
 
@@ -267,13 +267,13 @@ def combine_files(file_path, result_file, logger=None):
 def get_openstack_endpoint(logger=None):
     https_enabled = check_https_enabled(logger)
     insecure = os.getenv('OS_INSECURE')
-    if https_enabled and insecure and insecure.lower() == "true":
+    if https_enabled and insecure and insecure.lower() == 'true':
         os_utils = OS_Utils(verify=False)
     else:
         os_utils = OS_Utils()
     res_endpoints, msg_endpoints = os_utils.search_endpoints()
     if not res_endpoints:
-        logger.error("Failed to list endpoints. Exception message, {}"
+        logger.error('Failed to list endpoints. Exception message, {}'
                      .format(msg_endpoints))
         return None
     endpoints_info = []
@@ -282,7 +282,7 @@ def get_openstack_endpoint(logger=None):
         res_services, msg_services = os_utils.search_services(
             service_id=item['service_id'])
         if not res_services:
-            logger.error("Failed to list services. Exception message, {}"
+            logger.error('Failed to list services. Exception message, {}'
                          .format(msg_services))
             return None
         endpoint['Service Type'] = msg_services[0]['service_type']
@@ -294,41 +294,43 @@ def get_openstack_endpoint(logger=None):
     try:
         with open(result_file, 'w') as f:
             json.dump(endpoints_info, f)
-            logger.debug("Record all endpoint info into file {}."
+            logger.debug('Record all endpoint info into file {}.'
                          .format(result_file))
             return endpoints_info
     except Exception:
-        logger.exception("Failed to write endpoint info into file.")
+        logger.exception('Failed to write endpoint info into file.')
         return None
 
 
 def check_cacert_file(cacert, logger=None):
     if not os.path.isfile(cacert):
-        logger.error("OS_CACERT is {}, but the file does not exist."
+        logger.error('OS_CACERT is {}, but the file does not exist.'
                      .format(cacert))
         return False
     if not dt_cfg.dovetail_config['config_dir'] == os.path.dirname(cacert):
-        logger.error("Credential file must be put under {}, "
-                     "which can be mounted into other container."
+        logger.error('Credential file must be put under {}, '
+                     'which can be mounted into other container.'
                      .format(dt_cfg.dovetail_config['config_dir']))
         return False
     return True
 
 
 def get_hosts_info(logger=None):
-    hosts_config = ""
+    hosts_config = ''
     hosts_config_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
                                      'hosts.yaml')
     if not os.path.isfile(hosts_config_file):
+        logger.warn('There is no hosts file {}, may be some issues with '
+                    'domain name resolution.'.format(hosts_config_file))
         return hosts_config
     with open(hosts_config_file) as f:
         hosts_yaml = yaml.safe_load(f)
         if not hosts_yaml:
-            logger.debug("File {} is empty.".format(hosts_config_file))
+            logger.debug('File {} is empty.'.format(hosts_config_file))
             return hosts_config
         hosts_info = hosts_yaml.get('hosts_info', None)
         if not hosts_info:
-            logger.error("There is no key hosts_info in file {}"
+            logger.error('There is no key hosts_info in file {}'
                          .format(hosts_config_file))
             return hosts_config
         for ip, hostnames in hosts_info.iteritems():
@@ -353,7 +355,7 @@ def read_yaml_file(file_path, logger=None):
             content = yaml.safe_load(f)
             return content
     except Exception as e:
-        logger.exception("Failed to read file {}, exception: {}"
+        logger.exception('Failed to read file {}, exception: {}'
                          .format(file_path, e))
         return None
 
@@ -367,7 +369,7 @@ def read_plain_file(file_path, logger=None):
             content = f.read()
             return content
     except Exception as e:
-        logger.exception("Failed to read file {}, exception: {}"
+        logger.exception('Failed to read file {}, exception: {}'
                          .format(file_path, e))
         return None
 
@@ -380,8 +382,26 @@ def get_value_from_dict(key_path, input_dict):
     """
     if not isinstance(key_path, str) or not isinstance(input_dict, dict):
         return None
-    for key in key_path.split("."):
+    for key in key_path.split('.'):
         input_dict = input_dict.get(key)
         if not input_dict:
             return None
     return input_dict
+
+
+def get_openstack_info(logger):
+    """
+    When the sut is an OpenStack deployment, its software and hardware info
+    are needed.
+    Software info is the endpoint list.
+    Hardware info is every node's cpu, disk ...
+    """
+    openrc = os.path.join(dt_cfg.dovetail_config['config_dir'],
+                          dt_cfg.dovetail_config['env_file'])
+    if not os.path.isfile(openrc):
+        logger.error('File {} does not exist.'.format(openrc))
+        return
+    source_env(openrc)
+    get_hosts_info(logger)
+    get_openstack_endpoint(logger)
+    get_hardware_info(logger)
