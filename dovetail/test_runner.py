@@ -74,9 +74,9 @@ class DockerRunner(object):
 
         self.logger.debug('container id: {}'.format(container_id))
 
-        dest_path = self.testcase.pre_copy_path("dest_path")
-        src_file_name = self.testcase.pre_copy_path("src_file")
-        exist_file_name = self.testcase.pre_copy_path("exist_src_file")
+        dest_path = self.testcase.pre_copy_path('dest_path')
+        src_file_name = self.testcase.pre_copy_path('src_file')
+        exist_file_name = self.testcase.pre_copy_path('exist_src_file')
 
         if src_file_name or exist_file_name:
             if not self.pre_copy(container, dest_path, src_file_name,
@@ -88,7 +88,7 @@ class DockerRunner(object):
             for cmd in cmds:
                 ret, msg = container.exec_cmd(cmd)
                 if ret != 0:
-                    self.logger.error("Failed to exec all pre_condition cmds.")
+                    self.logger.error('Failed to exec all pre_condition cmds.')
                     break
 
         if not self.testcase.prepare_cmd(self.type):
@@ -105,13 +105,13 @@ class DockerRunner(object):
         cmds = self.testcase.post_condition()
         if cmds:
             for cmd in cmds:
-                ret, msg = container.exec_cmd(cmd)
+                container.exec_cmd(cmd)
 
         if not dt_cfg.dovetail_config['noclean']:
             container.clean()
 
     def archive_logs(self):
-        result_path = os.path.join(os.environ["DOVETAIL_HOME"], 'results')
+        result_path = os.path.join(os.environ['DOVETAIL_HOME'], 'results')
         src_files = dt_utils.get_value_from_dict(
             'report.source_archive_files', self.testcase.testcase)
         dest_files = dt_utils.get_value_from_dict(
@@ -144,10 +144,10 @@ class DockerRunner(object):
             config_item = {}
         config_item['validate_testcase'] = testcase.validate_testcase()
         config_item['testcase'] = testcase.name()
-        config_item['os_insecure'] = os.getenv("OS_INSECURE")
+        config_item['os_insecure'] = os.getenv('OS_INSECURE')
         if 'DEPLOY_SCENARIO' in os.environ:
             config_item['deploy_scenario'] = os.environ['DEPLOY_SCENARIO']
-        config_item['dovetail_home'] = os.getenv("DOVETAIL_HOME")
+        config_item['dovetail_home'] = os.getenv('DOVETAIL_HOME')
         return config_item
 
     def _update_config(self, testcase):
