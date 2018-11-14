@@ -27,7 +27,7 @@ from testcase import Testcase
 
 class Report(object):
 
-    results = {'functest': {}, 'yardstick': {},
+    results = {'functest': {}, 'yardstick': {}, 'functest-k8s': {},
                'bottlenecks': {}, 'shell': {}, 'vnftest': {}}
 
     logger = None
@@ -293,6 +293,20 @@ class FunctestCrawler(Crawler):
         return json_results
 
 
+class FunctestK8sCrawler(FunctestCrawler):
+
+    logger = None
+
+    def __init__(self):
+        self.type = 'functest-k8s'
+        self.logger.debug('Create crawler: {}'.format(self.type))
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.FunctestK8sCrawler').getLogger()
+
+
 class YardstickCrawler(Crawler):
 
     logger = None
@@ -429,7 +443,8 @@ class CrawlerFactory(object):
                    'yardstick': YardstickCrawler,
                    'bottlenecks': BottlenecksCrawler,
                    'vnftest': VnftestCrawler,
-                   'shell': ShellCrawler}
+                   'shell': ShellCrawler,
+                   'functest-k8s': FunctestK8sCrawler}
 
     @classmethod
     def create(cls, type):
@@ -509,6 +524,16 @@ class FunctestChecker(object):
         testcase.passed(testcase_passed)
 
 
+class FunctestK8sChecker(FunctestChecker):
+
+    logger = None
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.FunctestK8sChecker').getLogger()
+
+
 class YardstickChecker(object):
 
     logger = None
@@ -579,7 +604,8 @@ class CheckerFactory(object):
                    'yardstick': YardstickChecker,
                    'bottlenecks': BottlenecksChecker,
                    'shell': ShellChecker,
-                   'vnftest': VnftestChecker}
+                   'vnftest': VnftestChecker,
+                   'functest-k8s': FunctestK8sChecker}
 
     @classmethod
     def create(cls, type):
