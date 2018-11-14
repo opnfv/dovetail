@@ -1,0 +1,15 @@
+---
+functest.k8s.conformance:
+  name: functest.k8s.conformance
+  objective: Validate the deployed k8s cluster is conformance.
+  validate:
+    type: functest-k8s
+    testcase: k8s_conformance
+    image_name: opnfv/functest-kubernetes-smoke
+  report:
+    source_archive_files:
+      - functest-kubernetes.log
+    dest_archive_files:
+      - k8s_logs/functest.k8s.conformance.log
+    check_results_file: 'functest_results.txt'
+    sub_testcase_list:

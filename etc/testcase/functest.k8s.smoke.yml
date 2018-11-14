@@ -1,0 +1,15 @@
+---
+functest.k8s.smoke:
+  name: functest.k8s.smoke
+  objective: Validate the deployed k8s cluster is accessible.
+  validate:
+    type: functest-k8s
+    testcase: k8s_smoke
+    image_name: opnfv/functest-kubernetes-healthcheck
+  report:
+    source_archive_files:
+      - functest-kubernetes.log
+    dest_archive_files:
+      - k8s_logs/functest.k8s.smoke.log
+    check_results_file: 'functest_results.txt'
+    sub_testcase_list:
