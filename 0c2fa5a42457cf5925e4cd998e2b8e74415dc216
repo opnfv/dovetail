@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_f6923ef5",
+        "filename": "docs/testing/user/instructionsperinstaller/testing_instructions_apex.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-14T09:22:02Z",
+      "side": 1,
+      "message": "No need to copy the ssh key file to dovetail container. There have some introduction about how to use the ssh key.\nhttps://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/userguide/testing_guide.html#configuration-for-running-ha-test-cases-mandatory",
+      "range": {
+        "startLine": 145,
+        "startChar": 4,
+        "endLine": 145,
+        "endChar": 87
+      },
+      "revId": "0c2fa5a42457cf5925e4cd998e2b8e74415dc216",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
