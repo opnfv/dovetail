@@ -5,3 +5,5 @@ proposed_tests:
   testcases_list:
     mandatory:
     optional:
+      - functest.k8s.conformance
+      - functest.k8s.smoke

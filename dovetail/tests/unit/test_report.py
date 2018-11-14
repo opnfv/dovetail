@@ -30,16 +30,18 @@ class ReportTesting(unittest.TestCase):
 
     def teardown_method(self, method):
         dt_report.FunctestCrawler.logger = None
+        dt_report.FunctestK8sCrawler.logger = None
         dt_report.YardstickCrawler.logger = None
         dt_report.BottlenecksCrawler.logger = None
         dt_report.VnftestCrawler.logger = None
         dt_report.FunctestChecker.logger = None
+        dt_report.FunctestK8sChecker.logger = None
         dt_report.YardstickChecker.logger = None
         dt_report.BottlenecksChecker.logger = None
         dt_report.VnftestChecker.logger = None
         dt_report.Report.logger = None
         dt_report.Report.results = {
-            'functest': {}, 'yardstick': {},
+            'functest': {}, 'yardstick': {}, 'functest-k8s': {},
             'bottlenecks': {}, 'shell': {}, 'vnftest': {}}
 
     def _produce_report_initial_text(self, report_data):
@@ -623,6 +625,36 @@ class ReportTesting(unittest.TestCase):
         self.assertEquals(None, result)
 
     @patch('dovetail.report.dt_logger')
+    def test_functestk8s_crawler_create_log(self, mock_logger):
+        getlogger_obj = Mock()
+        logger_obj = Mock()
+        logger_obj.getLogger.return_value = getlogger_obj
+        mock_logger.Logger.return_value = logger_obj
+
+        dt_report.FunctestK8sCrawler.create_log()
+
+        self.assertEquals(getlogger_obj, dt_report.FunctestK8sCrawler.logger)
+
+    @patch('dovetail.report.FunctestK8sCrawler.crawl_from_file')
+    @patch('dovetail.report.dt_cfg')
+    @patch('dovetail.report.os.path')
+    def test_functestk8s_crawler_crawl_none(self, mock_path, mock_config,
+                                            mock_crawl):
+        logger_obj = Mock()
+        dt_report.FunctestK8sCrawler.logger = logger_obj
+        mock_crawl.return_value = None
+        testcase = 'testcase'
+        file_path = 'file_path'
+
+        crawler = dt_report.FunctestK8sCrawler()
+
+        result = crawler.crawl(testcase, file_path)
+
+        dt_report.FunctestK8sCrawler.crawl_from_file.assert_called_once_with(
+            'testcase', 'file_path')
+        self.assertEquals(None, result)
+
+    @patch('dovetail.report.dt_logger')
     def test_yardstick_crawler_create_log(self, mock_logger):
         getlogger_obj = Mock()
         logger_obj = Mock()
@@ -1050,6 +1082,17 @@ class ReportTesting(unittest.TestCase):
             call('subt_c', 'FAIL'),
             call('subt_d', 'FAIL')])
         testcase_obj.passed.assert_has_calls([call('PASS'), call('FAIL')])
+
+    @patch('dovetail.report.dt_logger')
+    def test_functestk8s_checker_create_log(self, mock_logger):
+        getlogger_obj = Mock()
+        logger_obj = Mock()
+        logger_obj.getLogger.return_value = getlogger_obj
+        mock_logger.Logger.return_value = logger_obj
+
+        dt_report.FunctestK8sChecker.create_log()
+
+        self.assertEquals(getlogger_obj, dt_report.FunctestK8sChecker.logger)
 
     @patch('dovetail.report.dt_logger')
     def test_yardstick_checker_create_log(self, mock_logger):
