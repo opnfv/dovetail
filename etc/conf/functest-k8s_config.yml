@@ -1,0 +1,31 @@
+---
+
+{% set validate_testcase = validate_testcase or '' %}
+{% set testcase = testcase or '' %}
+{% set dovetail_home = dovetail_home or '' %}
+{% set debug = debug or 'false' %}
+{% set build_tag = build_tag or '' %}
+{% set openrc_file = '/home/opnfv/functest/conf/env_file' %}
+{% set kube_file = '/root/.kube/config' %}
+{% set result_dir = '/home/opnfv/functest/results' %}
+
+functest-k8s:
+  image_name: opnfv/functest-kubernetes-healthcheck
+  docker_tag: gambia
+  opts: '-id'
+  envs: '-e INSTALLER_TYPE=unknown -e DEPLOY_SCENARIO=k8-deploy -e NODE_NAME=unknown
+         -e TEST_DB_URL=file:///home/opnfv/functest/results/functest_results.txt
+         -e CI_DEBUG={{debug}} -e BUILD_TAG={{build_tag}}-{{testcase}}'
+  volumes:
+    - '-v {{dovetail_home}}/pre_config/k8.creds:{{openrc_file}}'
+    - '-v {{dovetail_home}}/pre_config/admin.conf:{{kube_file}}'
+    - '-v {{dovetail_home}}/results/:{{result_dir}}'
+  pre_condition:
+    - 'echo test for precondition in functest'
+  cmds:
+    - 'run_tests -t {{validate_testcase}} -r'
+  post_condition:
+    - 'echo test for postcondition in functest'
+  result:
+    dir: {{result_dir}}
+  openrc: {{openrc_file}}
