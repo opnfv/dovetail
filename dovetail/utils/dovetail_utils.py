@@ -320,6 +320,8 @@ def get_hosts_info(logger=None):
     hosts_config_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
                                      'hosts.yaml')
     if not os.path.isfile(hosts_config_file):
+        logger.warn("There is no hosts file {}, may be some issues with "
+                    "domain name resolution.".format(hosts_config_file))
         return hosts_config
     with open(hosts_config_file) as f:
         hosts_yaml = yaml.safe_load(f)
@@ -385,3 +387,20 @@ def get_value_from_dict(key_path, input_dict):
         if not input_dict:
             return None
     return input_dict
+
+
+def get_openstack_info(logger):
+    """
+    When the sut is OpenStack, it needs to get it's software and hardware info.
+    Software info is the endpoint list.
+    Hardware info is every node's cpu, disk ...
+    """
+    openrc = os.path.join(dt_cfg.dovetail_config['config_dir'],
+                          dt_cfg.dovetail_config['env_file'])
+    if not os.path.isfile(openrc):
+        logger.error("File {} does not exist.".format(openrc))
+        return
+    source_env(openrc)
+    get_hosts_info(logger)
+    get_openstack_endpoint(logger)
+    get_hardware_info(logger)

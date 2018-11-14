@@ -9,25 +9,41 @@
 {% if os_insecure == 'True' %}
     {% set os_verify = ' -e OS_VERIFY= ' %}
 {% endif %}
+{% set dovetail_home = dovetail_home or '' %}
+{% set debug = debug or 'false' %}
+{% set build_tag = build_tag or '' %}
+{% set cacert_volume = '' %}
+{% if cacert %}
+    {% set cacert_volume = ' -v ' + cacert + ':' + cacert %}
+{% endif %}
+{% set openrc_file = '/etc/yardstick/openstack.creds' %}
+{% set result_dir = '/tmp/yardstick' %}
+{% set config_dir = '/home/opnfv/userconfig' %}
 
 yardstick:
   image_name: opnfv/yardstick
   docker_tag: latest
   opts: '-id --privileged=true'
-  envs: "{{os_verify}} -e YARDSTICK_BRANCH=fraser"
+  envs: "{{os_verify}} -e YARDSTICK_BRANCH=fraser -e CI_DEBUG={{debug}}
+         -e BUILD_TAG={{build_tag}}-{{testcase}}"
+  volumes:
+    - '-v {{dovetail_home}}/pre_config/env_config.sh:{{openrc_file}}'
+    - {{cacert_volume}}
+    - '-v {{dovetail_home}}:{{config_dir}}'
+    - '-v {{dovetail_home}}/results:{{result_dir}}'
   config:
-    dir: '/home/opnfv/userconfig'
+    dir: {{config_dir}}
   pre_condition:
     - 'echo this is pre_condition'
   cmds:
-    - "cd /home/opnfv/repos/yardstick && source /etc/yardstick/openstack.creds &&
+    - "cd /home/opnfv/repos/yardstick && source {{openrc_file}} &&
          yardstick task start tests/opnfv/test_cases/{{validate_testcase}}.yaml
-         --output-file /tmp/yardstick/{{testcase}}.out
-         --task-args '{'file': '/home/opnfv/userconfig/pre_config/pod.yaml',
+         --output-file {{result_dir}}/{{testcase}}.out
+         --task-args '{'file': '{{config_dir}}/pre_config/pod.yaml',
                        'attack_host': {{attack_host}},
                        'attack_process': {{attack_process}}}'"
   post_condition:
     - 'echo this is post_condition'
   result:
-    dir: '/tmp/yardstick'
-  openrc: '/etc/yardstick/openstack.creds'
+    dir: {{result_dir}}
+  openrc: {{openrc_file}}

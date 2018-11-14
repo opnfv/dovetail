@@ -20,16 +20,17 @@ class TestRunnerTesting(unittest.TestCase):
 
     def setUp(self):
         self.patcher1 = patch.object(t_runner, 'dt_logger')
-        self.patcher2 = patch.object(t_runner.DockerRunner, '_update_config')
+        self.patcher2 = patch.object(t_runner.DockerRunner,
+                                     '_update_openstack_config')
 
         self.logger = self.patcher1.start().return_value
-        self._update_config = self.patcher2.start().return_value
+        self._update_openstack_config = self.patcher2.start().return_value
 
         self.testcase = Mock()
         self.testcase_name = 'testcase_name'
         self.testcase_type = 'functest'
         self.testcase_dict = {}
-        self.testcase_valid = True
+        self.testcase_valid = 'validate_testcase'
 
         self.testcase.testcase = self.testcase_dict
         self.testcase.name.return_value = self.testcase_name
@@ -40,8 +41,11 @@ class TestRunnerTesting(unittest.TestCase):
         self.patcher1.stop()
         self.patcher2.stop()
 
-    def test_pre_copy_no_container(self):
+    @patch('dovetail.test_runner.dt_utils')
+    @patch('dovetail.test_runner.dt_cfg')
+    def test_pre_copy_no_container(self, mock_config, mock_utils):
         t_runner.FunctestRunner.create_log()
+        mock_config.dovetail_config = {'result_dir': 'result_dir'}
         docker_runner = t_runner.FunctestRunner(self.testcase)
 
         result = docker_runner.pre_copy(
@@ -52,8 +56,11 @@ class TestRunnerTesting(unittest.TestCase):
             'Container instance is None.')
         self.assertEquals(None, result)
 
-    def test_pre_copy_no_dest_path(self):
+    @patch('dovetail.test_runner.dt_utils')
+    @patch('dovetail.test_runner.dt_cfg')
+    def test_pre_copy_no_dest_path(self, mock_config, mock_utils):
         t_runner.FunctestRunner.create_log()
+        mock_config.dovetail_config = {'result_dir': 'result_dir'}
         docker_runner = t_runner.FunctestRunner(self.testcase)
 
         result = docker_runner.pre_copy(
@@ -93,14 +100,17 @@ class TestRunnerTesting(unittest.TestCase):
         container_obj.copy_file.assert_called_once_with('join', 'dest_path')
         self.assertEquals('dest_path', result)
 
+    @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.Container')
-    def test_run_offline_not_exist(self, mock_container, mock_config):
+    def test_run_offline_not_exist(self, mock_container, mock_config,
+                                   mock_utils):
         t_runner.FunctestRunner.create_log()
-        docker_runner = t_runner.TestRunnerFactory.create(self.testcase)
         mock_config.dovetail_config = {
-            'offline': True
+            'offline': True, 'result_dir': 'result_dir'
         }
+        docker_runner = t_runner.TestRunnerFactory.create(self.testcase)
+
         container_obj = Mock()
         docker_img_obj = Mock()
         container_obj.get_docker_image.return_value = docker_img_obj
@@ -116,14 +126,17 @@ class TestRunnerTesting(unittest.TestCase):
             "{} image doesn't exist, can't run offline.".format(
                 self.testcase_type))
 
+    @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.Container')
-    def test_run__not_offline_no_pull(self, mock_container, mock_config):
+    def test_run__not_offline_no_pull(self, mock_container, mock_config,
+                                      mock_utils):
         t_runner.YardstickRunner.create_log()
-        docker_runner = t_runner.YardstickRunner(self.testcase)
         mock_config.dovetail_config = {
-            'offline': False
+            'offline': False, 'result_dir': 'result_dir'
         }
+        docker_runner = t_runner.YardstickRunner(self.testcase)
+
         container_obj = Mock()
         docker_img_obj = Mock()
         container_obj.get_docker_image.return_value = docker_img_obj
@@ -138,14 +151,17 @@ class TestRunnerTesting(unittest.TestCase):
         docker_runner.logger.error.assert_called_once_with(
             'Failed to pull the image.')
 
+    @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.Container')
-    def test_run__not_offline_no_create(self, mock_container, mock_config):
+    def test_run__not_offline_no_create(self, mock_container, mock_config,
+                                        mock_utils):
         t_runner.BottlenecksRunner.create_log()
-        docker_runner = t_runner.BottlenecksRunner(self.testcase)
         mock_config.dovetail_config = {
-            'offline': False
+            'offline': False, 'result_dir': 'result_dir'
         }
+        docker_runner = t_runner.BottlenecksRunner(self.testcase)
+
         container_obj = Mock()
         docker_img_obj = Mock()
         container_obj.get_docker_image.return_value = docker_img_obj
@@ -201,17 +217,20 @@ class TestRunnerTesting(unittest.TestCase):
         mock_precopy.assert_called_once_with(
             container_obj, dest_path, src_file_name, exist_file_name)
 
+    @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.Container')
     @patch.object(t_runner.DockerRunner, 'pre_copy')
     def test_run__not_offline_no_prepare(self, mock_precopy, mock_container,
-                                         mock_config):
+                                         mock_config, mock_utils):
         t_runner.FunctestRunner.create_log()
-        docker_runner = t_runner.FunctestRunner(self.testcase)
         mock_config.dovetail_config = {
             'offline': False,
-            'noclean': False
+            'noclean': False,
+            'result_dir': 'result_dir'
         }
+        docker_runner = t_runner.FunctestRunner(self.testcase)
+
         container_obj = Mock()
         docker_img_obj = Mock()
         container_obj.get_docker_image.return_value = docker_img_obj
@@ -249,17 +268,19 @@ class TestRunnerTesting(unittest.TestCase):
                  .format(self.testcase_name))])
         container_obj.clean.assert_called_once_with()
 
+    @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.Container')
     @patch.object(t_runner.DockerRunner, 'pre_copy')
     def test_run__not_offline_prepare(self, mock_precopy, mock_container,
-                                      mock_config):
+                                      mock_config, mock_utils):
         t_runner.FunctestRunner.create_log()
-        docker_runner = t_runner.FunctestRunner(self.testcase)
         mock_config.dovetail_config = {
             'offline': False,
-            'noclean': False
+            'noclean': False,
+            'result_dir': 'result_dir'
         }
+        docker_runner = t_runner.FunctestRunner(self.testcase)
         container_obj = Mock()
         docker_img_obj = Mock()
         container_obj.get_docker_image.return_value = docker_img_obj
@@ -298,33 +319,38 @@ class TestRunnerTesting(unittest.TestCase):
                  .format('cmd', 1, 'error'))])
         container_obj.clean.assert_called_once_with()
 
+    @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.os')
-    def test_archive_logs_no_files(self, mock_os, mock_utils):
+    def test_archive_logs_no_files(self, mock_os, mock_utils, mock_config):
         t_runner.FunctestRunner.create_log()
+        mock_config.dovetail_config = {'result_dir': 'result_dir'}
         docker_runner = t_runner.FunctestRunner(self.testcase)
         mock_os.environ = {'DOVETAIL_HOME': 'dovetail_home'}
         mock_utils.get_value_from_dict.return_value = []
 
         result = docker_runner.archive_logs()
 
-        mock_os.path.join.assert_called_once_with('dovetail_home', 'results')
+        mock_os.path.join.assert_has_calls([call('dovetail_home', 'results')])
         mock_utils.get_value_from_dict.assert_has_calls([
             call('report.source_archive_files', self.testcase_dict),
             call('report.dest_archive_files', self.testcase_dict)])
         self.assertEquals(True, result)
 
+    @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.os')
-    def test_archive_logs_difference_in_files(self, mock_os, mock_utils):
+    def test_archive_logs_difference_in_files(self, mock_os, mock_utils,
+                                              mock_config):
         t_runner.FunctestRunner.create_log()
+        mock_config.dovetail_config = {'result_dir': 'result_dir'}
         docker_runner = t_runner.FunctestRunner(self.testcase)
         mock_os.environ = {'DOVETAIL_HOME': 'dovetail_home'}
         mock_utils.get_value_from_dict.side_effect = [[], ['file']]
 
         result = docker_runner.archive_logs()
 
-        mock_os.path.join.assert_called_once_with('dovetail_home', 'results')
+        mock_os.path.join.assert_has_calls([call('dovetail_home', 'results')])
         mock_utils.get_value_from_dict.assert_has_calls([
             call('report.source_archive_files', self.testcase_dict),
             call('report.dest_archive_files', self.testcase_dict)])
@@ -334,10 +360,13 @@ class TestRunnerTesting(unittest.TestCase):
             .format(self.testcase_name))
         self.assertEquals(False, result)
 
+    @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.os')
-    def test_archive_logs_src_file_error(self, mock_os, mock_utils):
+    def test_archive_logs_src_file_error(self, mock_os, mock_utils,
+                                         mock_config):
         t_runner.FunctestRunner.create_log()
+        mock_config.dovetail_config = {'result_dir': 'result_dir'}
         docker_runner = t_runner.FunctestRunner(self.testcase)
         mock_os.environ = {'DOVETAIL_HOME': 'dovetail_home'}
         mock_utils.get_value_from_dict.side_effect = [['src_file'],
@@ -355,15 +384,18 @@ class TestRunnerTesting(unittest.TestCase):
         mock_utils.get_value_from_dict.assert_has_calls([
             call('report.source_archive_files', self.testcase_dict),
             call('report.dest_archive_files', self.testcase_dict)])
-        mock_os.path.isfile.assert_called_once_with('src_file_path')
+        mock_os.path.isfile.assert_has_calls([call('src_file_path')])
         docker_runner.logger.error.assert_called_once_with(
             "Can't find file {}.".format('src_file_path'))
         self.assertEquals(False, result)
 
+    @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.os')
-    def test_archive_logs_src_file_exists(self, mock_os, mock_utils):
+    def test_archive_logs_src_file_exists(self, mock_os, mock_utils,
+                                          mock_config):
         t_runner.FunctestRunner.create_log()
+        mock_config.dovetail_config = {'result_dir': 'result_dir'}
         docker_runner = t_runner.FunctestRunner(self.testcase)
         mock_os.environ = {'DOVETAIL_HOME': 'dovetail_home'}
         mock_utils.get_value_from_dict.side_effect = [['src_file'],
@@ -381,7 +413,7 @@ class TestRunnerTesting(unittest.TestCase):
         mock_utils.get_value_from_dict.assert_has_calls([
             call('report.source_archive_files', self.testcase_dict),
             call('report.dest_archive_files', self.testcase_dict)])
-        mock_os.path.isfile.assert_called_once_with('src_file_path')
+        mock_os.path.isfile.assert_has_calls([call('src_file_path')])
         mock_os.renames.assert_called_once_with(
             'src_file_path', 'dest_file_path')
         self.assertEquals(True, result)
@@ -399,39 +431,46 @@ class TestRunnerTesting(unittest.TestCase):
         template_obj.render.assert_called_with()
         self.assertEquals(render_obj, result)
 
+    @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.os')
-    def test_add_testcase_info(self, mock_os):
-        mock_os.getenv.side_effect = ['os_insecure', 'dovetail_home']
+    def test_add_testcase_info(self, mock_os, mock_config):
+        mock_os.getenv.side_effect = ['os_insecure', 'dovetail_home', 'debug',
+                                      'os_cacert']
         mock_os.environ = {'DEPLOY_SCENARIO': 'deploy_scenario'}
+        mock_config.dovetail_config = {'build_tag': 'build_tag'}
 
         expected = {
-            'os_insecure': 'os_insecure', 'dovetail_home': 'dovetail_home',
-            'testcase': 'testcase_name', 'validate_testcase': True,
-            'deploy_scenario': 'deploy_scenario'}
+            'validate_testcase': 'validate_testcase',
+            'testcase': 'testcase_name', 'os_insecure': 'os_insecure',
+            'deploy_scenario': 'deploy_scenario',
+            'dovetail_home': 'dovetail_home', 'debug': 'debug',
+            'build_tag': 'build_tag', 'cacert': 'os_cacert'}
         result = t_runner.FunctestRunner._add_testcase_info(self.testcase)
 
         self.testcase.validate_testcase.assert_called_once_with()
+        self.testcase.name.assert_called_once_with()
         mock_os.getenv.assert_has_calls([
-            call('OS_INSECURE'), call('DOVETAIL_HOME')])
+            call('OS_INSECURE'), call('DOVETAIL_HOME'), call('DEBUG'),
+            call('OS_CACERT')])
         self.assertEquals(expected, result)
 
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.os.path')
     @patch('dovetail.test_runner.constants')
-    def test_update_config_no_task_template(self, mock_const, mock_path,
-                                            mock_config, mock_utils):
+    def test_update_openstack_config_no_task_template(self, mock_const,
+                                                      mock_path, mock_config,
+                                                      mock_utils):
         t_runner.FunctestRunner.create_log()
         docker_runner = t_runner.FunctestRunner(self.testcase)
         mock_path.join.side_effect = ['pod_file', 'config_file']
-        mock_config.dovetail_config = {
-            'config_dir': 'one', 'pod_file': 'two'}
+        mock_config.dovetail_config = {'config_dir': 'one', 'pod_file': 'two'}
         mock_utils.read_yaml_file.return_value = 'pod_info'
         mock_utils.read_plain_file.return_value = None
         mock_const.CONF_PATH = 'conf_path'
 
         self.patcher2.stop()
-        result = docker_runner._update_config(self.testcase)
+        result = docker_runner._update_openstack_config(self.testcase)
         self.patcher2.start()
 
         mock_path.join.assert_has_calls([
@@ -450,14 +489,17 @@ class TestRunnerTesting(unittest.TestCase):
     @patch('dovetail.test_runner.constants')
     @patch.object(t_runner.DockerRunner, '_add_testcase_info')
     @patch.object(t_runner.DockerRunner, '_render')
-    def test_update_config_pod_info_key_err(self, mock_render, mock_add_info,
-                                            mock_const, mock_path, mock_config,
-                                            mock_utils, mock_load):
+    def test_update_openstack_config_pod_info_key_err(self, mock_render,
+                                                      mock_add_info,
+                                                      mock_const,
+                                                      mock_path,
+                                                      mock_config,
+                                                      mock_utils,
+                                                      mock_load):
         t_runner.FunctestRunner.create_log()
         docker_runner = t_runner.FunctestRunner(self.testcase)
         mock_path.join.side_effect = ['pod_file', 'config_file']
-        mock_config.dovetail_config = {
-            'config_dir': 'one', 'pod_file': 'two'}
+        mock_config.dovetail_config = {'config_dir': 'one', 'pod_file': 'two'}
         mock_utils.read_yaml_file.return_value = {'key': 'value'}
         mock_utils.read_plain_file.return_value = True
         mock_const.CONF_PATH = 'conf_path'
@@ -466,7 +508,7 @@ class TestRunnerTesting(unittest.TestCase):
         mock_load.return_value = {'full_task_yaml': 'full_value'}
 
         self.patcher2.stop()
-        result = docker_runner._update_config(self.testcase)
+        result = docker_runner._update_openstack_config(self.testcase)
         self.patcher2.start()
 
         mock_path.join.assert_has_calls([
@@ -488,9 +530,13 @@ class TestRunnerTesting(unittest.TestCase):
     @patch('dovetail.test_runner.constants')
     @patch.object(t_runner.DockerRunner, '_add_testcase_info')
     @patch.object(t_runner.DockerRunner, '_render')
-    def test_update_config_pod_info_no_info(self, mock_render, mock_add_info,
-                                            mock_const, mock_path, mock_config,
-                                            mock_utils, mock_load):
+    def test_update_openstack_config_pod_info_no_info(self, mock_render,
+                                                      mock_add_info,
+                                                      mock_const,
+                                                      mock_path,
+                                                      mock_config,
+                                                      mock_utils,
+                                                      mock_load):
         t_runner.FunctestRunner.create_log()
         docker_runner = t_runner.FunctestRunner(self.testcase)
         mock_path.join.side_effect = ['pod_file', 'config_file']
@@ -504,7 +550,7 @@ class TestRunnerTesting(unittest.TestCase):
         mock_load.return_value = {'full_task_yaml': 'full_value'}
 
         self.patcher2.stop()
-        result = docker_runner._update_config(self.testcase)
+        result = docker_runner._update_openstack_config(self.testcase)
         self.patcher2.start()
 
         mock_path.join.assert_has_calls([
@@ -526,9 +572,10 @@ class TestRunnerTesting(unittest.TestCase):
     @patch('dovetail.test_runner.constants')
     @patch.object(t_runner.DockerRunner, '_add_testcase_info')
     @patch.object(t_runner.DockerRunner, '_render')
-    def test_update_config_pod_info(self, mock_render, mock_add_info,
-                                    mock_const, mock_path, mock_config,
-                                    mock_utils, mock_load):
+    def test_update_openstack_config_pod_info(self, mock_render, mock_add_info,
+                                              mock_const, mock_path,
+                                              mock_config, mock_utils,
+                                              mock_load):
         t_runner.FunctestRunner.create_log()
         docker_runner = t_runner.FunctestRunner(self.testcase)
         mock_path.join.side_effect = ['pod_file', 'config_file']
@@ -545,7 +592,7 @@ class TestRunnerTesting(unittest.TestCase):
         mock_load.return_value = {'full_task_yaml': 'full_value'}
 
         self.patcher2.stop()
-        result = docker_runner._update_config(self.testcase)
+        result = docker_runner._update_openstack_config(self.testcase)
         self.patcher2.start()
 
         mock_path.join.assert_has_calls([
@@ -650,3 +697,57 @@ class TestRunnerTesting(unittest.TestCase):
         result = docker_runner.create(self.testcase)
 
         self.assertEquals(None, result)
+
+    @patch('dovetail.test_runner.constants')
+    @patch('dovetail.test_runner.dt_utils')
+    @patch('dovetail.test_runner.os.path')
+    def test_update_config_no_task_template(self, mock_path, mock_utils,
+                                            mock_const):
+        t_runner.FunctestK8sRunner.create_log()
+        mock_utils.read_plain_file.return_value = None
+        docker_runner = t_runner.FunctestK8sRunner(self.testcase)
+        mock_path.join.side_effect = ['config_file']
+        mock_const.CONF_PATH = 'conf_path'
+
+        result = docker_runner._update_config(self.testcase)
+
+        mock_path.join.assert_has_calls([
+            call('conf_path', docker_runner.config_file_name)])
+        mock_utils.read_plain_file.assert_has_calls([
+            call('config_file', docker_runner.logger)])
+        self.assertEquals(None, result)
+
+    @patch('dovetail.test_runner.yaml.safe_load')
+    @patch('dovetail.test_runner.constants')
+    @patch('dovetail.test_runner.dt_utils')
+    @patch('dovetail.test_runner.os.path')
+    @patch('dovetail.test_runner.dt_cfg')
+    @patch.object(t_runner.DockerRunner, '_add_testcase_info')
+    @patch.object(t_runner.DockerRunner, '_render')
+    def test_update_config(self, mock_render, mock_add_info, mock_config,
+                           mock_path, mock_utils, mock_const, mock_load):
+        t_runner.FunctestK8sRunner.create_log()
+        mock_utils.read_plain_file.return_value = True
+        mock_path.join.side_effect = ['config_file', 'config_file']
+        mock_const.CONF_PATH = 'conf_path'
+        mock_add_info.return_value = {'config_item': 'item'}
+        mock_render.return_value = 'full_task'
+        mock_load.return_value = {'full_task_yaml': 'full_value'}
+        mock_config.dovetail_config = {
+            'config_dir': 'one', 'pod_file': 'two'}
+
+        docker_runner = t_runner.FunctestK8sRunner(self.testcase)
+        result = docker_runner._update_config(self.testcase)
+
+        mock_path.join.assert_has_calls([
+            call('conf_path', docker_runner.config_file_name)])
+        mock_utils.read_plain_file.assert_has_calls([
+            call('config_file', docker_runner.logger)])
+        mock_add_info.assert_has_calls([call(self.testcase)])
+        mock_render.assert_has_calls([call(True, config_item='item')])
+        mock_load.assert_has_calls([call('full_task')])
+        self.assertEquals(
+            {'config_dir': 'one',
+             'pod_file': 'two',
+             'full_task_yaml': 'full_value'},
+            result)

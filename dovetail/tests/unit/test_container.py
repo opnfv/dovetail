@@ -397,49 +397,6 @@ class ContainerTesting(unittest.TestCase):
 
     @patch('dovetail.container.dt_cfg')
     @patch('dovetail.container.os.path')
-    def test_openrc_volume(self, mock_path, mock_config):
-        v_one = 'v_one'
-        v_two = 'v_two'
-        v_three = 'v_three'
-        v_four = 'v_four'
-        mock_path.join.return_value = '/'.join([v_one, v_two])
-        mock_path.isfile.return_value = True
-        mock_config.dovetail_config = {'config_dir': v_one,
-                                       'env_file': v_two,
-                                       'openrc': v_three,
-                                       'bottlenecks': {'openrc': v_four}}
-
-        expected = ' -v {}/{}:{} '.format(v_one, v_two, v_four)
-        result = self.container.openrc_volume()
-
-        mock_path.join.assert_called_once_with(v_one, v_two)
-        mock_path.isfile.assert_called_once_with('/'.join([v_one, v_two]))
-        self.assertEquals(expected, result)
-
-    @patch('dovetail.container.dt_cfg')
-    @patch('dovetail.container.os.path')
-    def test_openrc_volume_error(self, mock_path, mock_config):
-        v_one = 'v_one'
-        v_two = 'v_two'
-        v_three = 'v_three'
-        v_four = 'v_four'
-        mock_path.join.return_value = '/'.join([v_one, v_two])
-        mock_path.isfile.return_value = False
-        mock_config.dovetail_config = {'config_dir': v_one,
-                                       'env_file': v_two,
-                                       'openrc': v_three,
-                                       'bottlenecks': {'openrc': v_four}}
-
-        result = self.container.openrc_volume()
-
-        mock_path.join.assert_called_once_with(v_one, v_two)
-        mock_path.isfile.assert_called_once_with('/'.join([v_one, v_two]))
-        self.logger.error.assert_called_once_with(
-            "File {} doesn't exist.".format('/'.join([v_one, v_two])))
-        self.assertEquals(None, result)
-
-    @patch('dovetail.container.dt_cfg')
-    @patch('dovetail.container.os.path')
     def test_set_vnftest_config_no_file(self, mock_path, mock_config):
         v_one = 'v_one'
         v_two = 'v_two'
@@ -485,194 +442,99 @@ class ContainerTesting(unittest.TestCase):
         mock_path.isfile.assert_called_once_with('/'.join([v_two, v_three]))
         self.assertEquals(expected, result)
 
-    @patch('dovetail.container.dt_cfg')
-    @patch.object(Container, 'openrc_volume')
-    def test_create_no_openrc(self, mock_openrc, mock_config):
-        mock_openrc.return_value = None
-
-        result = self.container.create('docker_image')
-
-        mock_openrc.assert_called_once_with()
-        self.assertEquals(None, result)
-
     @patch('dovetail.container.dt_utils')
     @patch('dovetail.container.dt_cfg')
-    @patch('dovetail.container.os.getenv')
-    @patch.object(Container, 'openrc_volume')
-    def test_create(self, mock_openrc, mock_getenv, mock_config, mock_utils):
+    def test_create(self, mock_config, mock_utils):
         docker_image = 'docker_image'
         container_id = 'container_id'
-        mock_openrc.return_value = 'openrc'
         mock_utils.get_value_from_dict.side_effect = [
-            'opts', 'envs', ['volume_one']]
-        mock_getenv.side_effect = ['True', 'dovetail_home', 'cacert', 'True']
+            'opts', 'envs', ['volume_one', 'volume_two']]
         mock_utils.get_hosts_info.return_value = 'host_info'
-        mock_utils.check_cacert_file.return_value = True
         mock_utils.exec_cmd.return_value = (0, container_id)
-        v_one = 'v_one'
-        v_two = 'v_two'
-        v_three = 'v_three'
-        v_four = 'v_four'
-        v_five = 'v_five'
-        v_six = 'v_six'
-        project_config = {
-            'config': {'dir': v_one, 'images': v_two},
-            'result': {'dir': v_three}}
-        mock_config.dovetail_config = {
-            'bottlenecks': project_config,
-            'build_tag': v_four,
-            'images_dir': v_five,
-            'result_dir': v_six}
+        project_config = {}
+        mock_config.dovetail_config = {'bottlenecks': project_config}
 
         expected = container_id
         result = self.container.create(docker_image)
 
-        mock_openrc.assert_called_once_with()
         mock_utils.get_value_from_dict.assert_has_calls([
             call('opts', project_config),
             call('envs', project_config),
             call('volumes', project_config)])
-        mock_getenv.assert_has_calls([
-            call('DEBUG'),
-            call('DOVETAIL_HOME'),
-            call('OS_CACERT'),
-            call('OS_INSECURE')])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
-        mock_utils.check_https_enabled.assert_called_once_with(self.logger)
-        mock_utils.check_cacert_file.assert_called_once_with('cacert',
-                                                             self.logger)
         mock_utils.exec_cmd.assert_called_once_with(
-            'sudo docker run opts envs -e CI_DEBUG=true '
-            '-e BUILD_TAG=v_four-name volume_one   host_info openrc  '
-            '-v cacert:cacert   -v dovetail_home:v_one   -v v_six:v_three  '
-            '-v v_five:v_two docker_image /bin/bash',
-            self.logger)
+            'sudo docker run opts envs   volume_one  volume_two    host_info '
+            'docker_image /bin/bash', self.logger)
         self.assertEquals(expected, result)
 
     @patch('dovetail.container.dt_utils')
     @patch('dovetail.container.dt_cfg')
     @patch('dovetail.container.os.getenv')
-    @patch.object(Container, 'openrc_volume')
-    def test_create_error(self, mock_openrc, mock_getenv, mock_config,
-                          mock_utils):
+    def test_create_error(self, mock_getenv, mock_config, mock_utils):
         docker_image = 'docker_image'
-        mock_openrc.return_value = 'openrc'
         mock_utils.get_value_from_dict.side_effect = [
             'opts', 'envs', ['volume_one']]
         mock_getenv.side_effect = ['True', 'dovetail_home', None, 'True']
         mock_utils.get_hosts_info.return_value = 'host_info'
         mock_utils.check_https_enabled.return_value = True
         mock_utils.exec_cmd.return_value = (1, 'error')
-        v_one = 'v_one'
-        v_two = 'v_two'
-        v_three = 'v_three'
-        v_four = 'v_four'
-        v_five = 'v_five'
-        v_six = 'v_six'
-        project_config = {
-            'config': {'dir': v_one, 'images': v_two},
-            'result': {'dir': v_three}}
-        mock_config.dovetail_config = {
-            'bottlenecks': project_config,
-            'build_tag': v_four,
-            'images_dir': v_five,
-            'result_dir': v_six}
-
+        project_config = {}
+        mock_config.dovetail_config = {'bottlenecks': project_config}
         result = self.container.create(docker_image)
 
-        mock_openrc.assert_called_once_with()
         mock_utils.get_value_from_dict.assert_has_calls([
             call('opts', project_config),
             call('envs', project_config),
             call('volumes', project_config)])
-        mock_getenv.assert_has_calls([
-            call('DEBUG'),
-            call('DOVETAIL_HOME'),
-            call('OS_CACERT'),
-            call('OS_INSECURE')])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
-        mock_utils.check_https_enabled.assert_called_once_with(self.logger)
         mock_utils.exec_cmd.assert_called_once_with(
-            'sudo docker run opts envs -e CI_DEBUG=true '
-            '-e BUILD_TAG=v_four-name volume_one   host_info openrc   '
-            '-v dovetail_home:v_one   -v v_six:v_three  '
-            '-v v_five:v_two docker_image /bin/bash',
-            self.logger)
-        self.logger.debug.assert_called_once_with(
-            'Use the insecure mode...')
+            'sudo docker run opts envs   volume_one    host_info '
+            'docker_image /bin/bash', self.logger)
         self.assertEquals(None, result)
 
     @patch('dovetail.container.dt_utils')
     @patch('dovetail.container.dt_cfg')
     @patch('dovetail.container.os.getenv')
-    @patch.object(Container, 'openrc_volume')
     @patch.object(Container, 'set_vnftest_config')
     @patch.object(Container, 'set_vnftest_conf_file')
     def test_create_vnftest(self, mock_setvnffile, mock_setvnfconf,
-                            mock_openrc, mock_getenv, mock_config, mock_utils):
+                            mock_getenv, mock_config, mock_utils):
         docker_image = 'docker_image'
         container_id = 'container_id'
-        mock_openrc.return_value = 'openrc'
         mock_utils.get_value_from_dict.side_effect = [
             'opts', 'envs', ['volume_one']]
         mock_getenv.side_effect = ['False', 'dovetail_home', 'cacert', 'True']
         mock_setvnfconf.return_value = 'vnftest_config'
         mock_utils.get_hosts_info.return_value = 'host_info'
-        mock_utils.check_cacert_file.return_value = True
         mock_utils.exec_cmd.return_value = (0, container_id)
-        v_one = 'v_one'
-        v_two = 'v_two'
-        v_three = 'v_three'
-        v_four = 'v_four'
-        v_five = 'v_five'
-        v_six = 'v_six'
-        project_config = {
-            'config': {'dir': v_one, 'images': v_two},
-            'result': {'dir': v_three}}
-        mock_config.dovetail_config = {
-            'vnftest': project_config,
-            'build_tag': v_four,
-            'images_dir': v_five,
-            'result_dir': v_six}
+        project_config = {}
+        mock_config.dovetail_config = {'vnftest': project_config}
 
         expected = container_id
         self.container.valid_type = 'vnftest'
         result = self.container.create(docker_image)
         self.container.valid_type = 'bottlenecks'
 
-        mock_openrc.assert_called_once_with()
         mock_utils.get_value_from_dict.assert_has_calls([
             call('opts', project_config),
             call('envs', project_config),
             call('volumes', project_config)])
-        mock_getenv.assert_has_calls([
-            call('DEBUG'),
-            call('DOVETAIL_HOME'),
-            call('OS_CACERT'),
-            call('OS_INSECURE')])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
         mock_setvnfconf.assert_called_once_with()
         mock_setvnffile.assert_called_once_with(container_id)
-        mock_utils.check_https_enabled.assert_called_once_with(self.logger)
-        mock_utils.check_cacert_file.assert_called_once_with('cacert',
-                                                             self.logger)
         mock_utils.exec_cmd.assert_called_once_with(
-            'sudo docker run opts envs -e CI_DEBUG=false '
-            '-e BUILD_TAG=v_four-name volume_one vnftest_config host_info '
-            'openrc  -v cacert:cacert   -v dovetail_home:v_one   '
-            '-v v_six:v_three  -v v_five:v_two docker_image /bin/bash',
+            'sudo docker run opts envs   volume_one  vnftest_config host_info '
+            'docker_image /bin/bash',
             self.logger)
         self.assertEquals(expected, result)
 
     @patch('dovetail.container.dt_utils')
     @patch('dovetail.container.dt_cfg')
     @patch('dovetail.container.os.getenv')
-    @patch.object(Container, 'openrc_volume')
     @patch.object(Container, 'set_vnftest_config')
-    def test_create_vnftest_error(self, mock_setvnfconf, mock_openrc,
+    def test_create_vnftest_error(self, mock_setvnfconf,
                                   mock_getenv, mock_config, mock_utils):
         docker_image = 'docker_image'
-        mock_openrc.return_value = 'openrc'
         mock_utils.get_value_from_dict.side_effect = [
             'opts', 'envs', ['volume_one']]
         mock_getenv.return_value = 'True'
@@ -685,81 +547,10 @@ class ContainerTesting(unittest.TestCase):
         result = self.container.create(docker_image)
         self.container.valid_type = 'bottlenecks'
 
-        mock_openrc.assert_called_once_with()
         mock_utils.get_value_from_dict.assert_has_calls([
             call('opts', 'value'),
             call('envs', 'value'),
             call('volumes', 'value')])
-        mock_getenv.assert_called_once_with('DEBUG')
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
         mock_setvnfconf.assert_called_once_with()
-        self.assertEquals(None, result)
-
-    @patch('dovetail.container.dt_utils')
-    @patch('dovetail.container.dt_cfg')
-    @patch('dovetail.container.os.getenv')
-    @patch.object(Container, 'openrc_volume')
-    def test_create_https_enabled_error(self, mock_openrc, mock_getenv,
-                                        mock_config, mock_utils):
-        mock_openrc.return_value = 'openrc'
-        mock_utils.get_value_from_dict.side_effect = [
-            'opts', 'envs', ['volume_one']]
-        mock_getenv.side_effect = ['True', 'dovetail_home', None, 'False']
-        mock_utils.get_hosts_info.return_value = 'host_info'
-        project_config = {'config': {'dir': 'v_one'}}
-        mock_config.dovetail_config = {
-            'bottlenecks': project_config,
-            'build_tag': 'v_two'}
-
-        result = self.container.create('docker_image')
-
-        mock_openrc.assert_called_once_with()
-        mock_utils.get_value_from_dict.assert_has_calls([
-            call('opts', project_config),
-            call('envs', project_config),
-            call('volumes', project_config)])
-        mock_getenv.assert_has_calls([
-            call('DEBUG'),
-            call('DOVETAIL_HOME'),
-            call('OS_CACERT'),
-            call('OS_INSECURE')])
-        mock_utils.get_hosts_info.assert_called_once_with(self.logger)
-        mock_utils.check_https_enabled.assert_called_once_with(self.logger)
-        self.logger.error.assert_called_once_with(
-            'https enabled, please set OS_CACERT or insecure mode...')
-        self.assertEquals(None, result)
-
-    @patch('dovetail.container.dt_utils')
-    @patch('dovetail.container.dt_cfg')
-    @patch('dovetail.container.os.getenv')
-    @patch.object(Container, 'openrc_volume')
-    def test_create_cacert_error(self, mock_openrc, mock_getenv, mock_config,
-                                 mock_utils):
-        mock_openrc.return_value = 'openrc'
-        mock_utils.get_value_from_dict.side_effect = [
-            'opts', 'envs', ['volume_one']]
-        mock_getenv.side_effect = ['True', 'dovetail_home', 'cacert', 'True']
-        mock_utils.get_hosts_info.return_value = 'host_info'
-        mock_utils.check_cacert_file.return_value = False
-        project_config = {'config': {'dir': 'v_one'}}
-        mock_config.dovetail_config = {
-            'bottlenecks': project_config,
-            'build_tag': 'v_two'}
-
-        result = self.container.create('docker_image')
-
-        mock_openrc.assert_called_once_with()
-        mock_utils.get_value_from_dict.assert_has_calls([
-            call('opts', project_config),
-            call('envs', project_config),
-            call('volumes', project_config)])
-        mock_getenv.assert_has_calls([
-            call('DEBUG'),
-            call('DOVETAIL_HOME'),
-            call('OS_CACERT'),
-            call('OS_INSECURE')])
-        mock_utils.get_hosts_info.assert_called_once_with(self.logger)
-        mock_utils.check_https_enabled.assert_called_once_with(self.logger)
-        mock_utils.check_cacert_file.assert_called_once_with('cacert',
-                                                             self.logger)
         self.assertEquals(None, result)

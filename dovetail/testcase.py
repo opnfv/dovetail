@@ -308,6 +308,15 @@ class FunctestTestcase(Testcase):
         return True
 
 
+class FunctestK8sTestcase(Testcase):
+
+    validate_testcase_list = {}
+
+    def __init__(self, testcase_yaml):
+        super(FunctestK8sTestcase, self).__init__(testcase_yaml)
+        self.type = 'functest-k8s'
+
+
 class YardstickTestcase(Testcase):
 
     validate_testcase_list = {}
@@ -350,7 +359,8 @@ class TestcaseFactory(object):
         'yardstick': YardstickTestcase,
         'bottlenecks': BottlenecksTestcase,
         'shell': ShellTestcase,
-        'vnftest': VnftestTestcase
+        'vnftest': VnftestTestcase,
+        'functest-k8s': FunctestK8sTestcase
     }
 
     @classmethod
