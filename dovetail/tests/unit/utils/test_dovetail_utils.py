@@ -225,9 +225,10 @@ class DovetailUtilsTesting(unittest.TestCase):
         dovetail_utils.dt_cfg.dovetail_config = {'config_dir': file_path}
         mock_path.join.return_value = file_complete_name
         mock_path.isfile.return_value = False
+        logger = Mock()
 
         expected = ''
-        result = dovetail_utils.get_hosts_info(file_path)
+        result = dovetail_utils.get_hosts_info(logger)
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
         mock_path.isfile.assert_called_once_with(file_complete_name)
@@ -1316,3 +1317,41 @@ class DovetailUtilsTesting(unittest.TestCase):
         mock_getenv.assert_called_once_with('DEBUG')
         mock_bar.assert_called_once_with(1)
         mock_exit.assert_called_once_with(1)
+
+    @patch('os.path', autospec=True)
+    def test_get_openstack_info_no_openrc(self, mock_path):
+        logger = Mock()
+        config_dir = 'config_dir'
+        env_file = 'env_file'
+        dovetail_utils.dt_cfg.dovetail_config = {
+            'config_dir': config_dir, 'env_file': env_file}
+        mock_path.join.side_effect = ['openrc']
+        mock_path.isfile.return_value = False
+        dovetail_utils.get_openstack_info(logger)
+
+        mock_path.join.assert_called_once_with(config_dir, env_file)
+        mock_path.isfile.assert_called_once_with('openrc')
+        logger.error.assert_called_once_with('File openrc does not exist.')
+
+    @patch('dovetail.utils.dovetail_utils.source_env')
+    @patch('dovetail.utils.dovetail_utils.get_hosts_info')
+    @patch('dovetail.utils.dovetail_utils.get_openstack_endpoint')
+    @patch('dovetail.utils.dovetail_utils.get_hardware_info')
+    @patch('os.path', autospec=True)
+    def test_get_openstack_info(self, mock_path, mock_hardware, mock_endpoint,
+                                mock_host, mock_env):
+        logger = Mock()
+        config_dir = 'config_dir'
+        env_file = 'env_file'
+        dovetail_utils.dt_cfg.dovetail_config = {
+            'config_dir': config_dir, 'env_file': env_file}
+        mock_path.join.side_effect = ['openrc']
+        mock_path.isfile.return_value = True
+        dovetail_utils.get_openstack_info(logger)
+
+        mock_path.join.assert_called_once_with(config_dir, env_file)
+        mock_path.isfile.assert_called_once_with('openrc')
+        mock_env.assert_called_once()
+        mock_host.assert_called_once()
+        mock_endpoint.assert_called_once()
+        mock_hardware.assert_called_once()

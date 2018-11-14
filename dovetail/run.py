@@ -107,10 +107,12 @@ def create_logs():
     Parser.create_log()
     dt_report.Report.create_log()
     dt_report.FunctestCrawler.create_log()
+    dt_report.FunctestK8sCrawler.create_log()
     dt_report.YardstickCrawler.create_log()
     dt_report.VnftestCrawler.create_log()
     dt_report.BottlenecksCrawler.create_log()
     dt_report.FunctestChecker.create_log()
+    dt_report.FunctestK8sChecker.create_log()
     dt_report.YardstickChecker.create_log()
     dt_report.VnftestChecker.create_log()
     dt_report.BottlenecksChecker.create_log()
@@ -166,28 +168,10 @@ def copy_patch_files(logger):
     dt_utils.exec_cmd(cmd, logger, exit_on_error=False)
 
 
-# env_init can source some env variable used in dovetail, such as
-# when https+credential used, OS_CACERT
-def env_init(logger):
-    openrc = os.path.join(dt_cfg.dovetail_config['config_dir'],
-                          dt_cfg.dovetail_config['env_file'])
-    if not os.path.isfile(openrc):
-        logger.error('File {} does not exist.'.format(openrc))
-    dt_utils.source_env(openrc)
-
-
 def update_deploy_scenario(logger, **kwargs):
     if 'deploy_scenario' in kwargs and kwargs['deploy_scenario'] is not None:
         os.environ['DEPLOY_SCENARIO'] = kwargs['deploy_scenario']
         logger.info('DEPLOY_SCENARIO : %s', os.environ['DEPLOY_SCENARIO'])
-
-
-def check_hosts_file(logger):
-    hosts_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
-                              'hosts.yaml')
-    if not os.path.isfile(hosts_file):
-        logger.warn('There is no hosts file {}, may be some issues with '
-                    'domain name resolution.'.format(hosts_file))
 
 
 def parse_cli(logger=None, **kwargs):
@@ -267,13 +251,9 @@ def main(*args, **kwargs):
     logger.info('Build tag: {}'.format(dt_cfg.dovetail_config['build_tag']))
     parse_cli(logger, **kwargs)
     update_deploy_scenario(logger, **kwargs)
-    env_init(logger)
     copy_userconfig_files(logger)
     copy_patch_files(logger)
     dt_utils.check_docker_version(logger)
-    dt_utils.get_openstack_endpoint(logger)
-    check_hosts_file(logger)
-    dt_utils.get_hardware_info(logger)
 
     testcase_list = get_testcase_list(logger, **kwargs)
     if not testcase_list:

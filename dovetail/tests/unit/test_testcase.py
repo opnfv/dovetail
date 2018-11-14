@@ -600,6 +600,11 @@ class TestcaseTesting(unittest.TestCase):
                           tcase.TestcaseFactory.create('unknown',
                                                        self.testcase_yaml))
 
+    def test_testfactory_k8s(self):
+        k8s_testcase = tcase.TestcaseFactory.create('functest-k8s',
+                                                    self.testcase_yaml)
+        self.assertEquals('functest-k8s', k8s_testcase.type)
+
     @patch('dovetail.testcase.dt_logger')
     def test_testsuite_create_log(self, mock_logger):
         getlogger_obj = Mock()
