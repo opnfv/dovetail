@@ -272,7 +272,7 @@ class Testcase(object):
             for area in testarea:
                 if cls.check_testcase_area(value, area):
                     testcase_list.append(value)
-                    if value in mandatory:
+                    if mandatory and value in mandatory:
                         Testcase.testcase_list[value].is_mandatory = True
                     else:
                         Testcase.testcase_list[value].is_mandatory = False
@@ -306,6 +306,15 @@ class FunctestTestcase(Testcase):
                               'disabled API response validation: {}'
                               .format(self.cmds))
         return True
+
+
+class FunctestK8sTestcase(Testcase):
+
+    validate_testcase_list = {}
+
+    def __init__(self, testcase_yaml):
+        super(FunctestK8sTestcase, self).__init__(testcase_yaml)
+        self.type = 'functest-k8s'
 
 
 class YardstickTestcase(Testcase):
@@ -350,7 +359,8 @@ class TestcaseFactory(object):
         'yardstick': YardstickTestcase,
         'bottlenecks': BottlenecksTestcase,
         'shell': ShellTestcase,
-        'vnftest': VnftestTestcase
+        'vnftest': VnftestTestcase,
+        'functest-k8s': FunctestK8sTestcase
     }
 
     @classmethod

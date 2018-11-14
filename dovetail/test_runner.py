@@ -148,32 +148,37 @@ class DockerRunner(object):
         if 'DEPLOY_SCENARIO' in os.environ:
             config_item['deploy_scenario'] = os.environ['DEPLOY_SCENARIO']
         config_item['dovetail_home'] = os.getenv('DOVETAIL_HOME')
+        config_item['debug'] = os.getenv('DEBUG')
+        config_item['build_tag'] = dt_cfg.dovetail_config['build_tag']
+        config_item['cacert'] = os.getenv('OS_CACERT')
         return config_item
 
-    def _update_config(self, testcase):
+    def _update_config(self, testcase, update_pod=True):
         config_item = None
-        pod_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
-                                dt_cfg.dovetail_config['pod_file'])
         config_file = os.path.join(constants.CONF_PATH, self.config_file_name)
-        pod_info = dt_utils.read_yaml_file(pod_file, self.logger)
         task_template = dt_utils.read_plain_file(config_file, self.logger)
         if not task_template:
             return None
-        if pod_info:
-            try:
-                process_info = pod_info['process_info']
-            except KeyError as e:
-                process_info = None
-        else:
-            process_info = None
-        if process_info:
-            for item in process_info:
+        if update_pod:
+            pod_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
+                                    dt_cfg.dovetail_config['pod_file'])
+            pod_info = dt_utils.read_yaml_file(pod_file, self.logger)
+            if pod_info:
                 try:
-                    if item['testcase_name'] == testcase.name():
-                        config_item = self._add_testcase_info(testcase, item)
-                        break
+                    process_info = pod_info['process_info']
                 except KeyError as e:
-                    self.logger.error('Need key {} in {}'.format(e, item))
+                    process_info = None
+            else:
+                process_info = None
+            if process_info:
+                for item in process_info:
+                    try:
+                        if item['testcase_name'] == testcase.name():
+                            config_item = self._add_testcase_info(
+                                testcase, item)
+                        break
+                    except KeyError as e:
+                        self.logger.error('Need key {} in {}'.format(e, item))
         if not config_item:
             config_item = self._add_testcase_info(testcase)
         full_task = self._render(task_template, **config_item)
@@ -189,7 +194,21 @@ class FunctestRunner(DockerRunner):
     def __init__(self, testcase):
         self.type = 'functest'
         super(FunctestRunner, self).__init__(testcase)
+        endpoint_file = os.path.join(dt_cfg.dovetail_config['result_dir'],
+                                     'endpoint_info.json')
+        if not os.path.isfile(endpoint_file):
+            dt_utils.get_openstack_info(self.logger)
         self._update_config(testcase)
+
+
+class FunctestK8sRunner(DockerRunner):
+
+    config_file_name = 'functest-k8s_config.yml'
+
+    def __init__(self, testcase):
+        self.type = 'functest-k8s'
+        super(FunctestK8sRunner, self).__init__(testcase)
+        self._update_config(testcase, update_pod=False)
 
 
 class YardstickRunner(DockerRunner):
@@ -199,6 +218,10 @@ class YardstickRunner(DockerRunner):
     def __init__(self, testcase):
         self.type = 'yardstick'
         super(YardstickRunner, self).__init__(testcase)
+        endpoint_file = os.path.join(dt_cfg.dovetail_config['result_dir'],
+                                     'endpoint_info.json')
+        if not os.path.isfile(endpoint_file):
+            dt_utils.get_openstack_info(self.logger)
         self._update_config(testcase)
 
 
@@ -209,6 +232,10 @@ class BottlenecksRunner(DockerRunner):
     def __init__(self, testcase):
         self.type = 'bottlenecks'
         super(BottlenecksRunner, self).__init__(testcase)
+        endpoint_file = os.path.join(dt_cfg.dovetail_config['result_dir'],
+                                     'endpoint_info.json')
+        if not os.path.isfile(endpoint_file):
+            dt_utils.get_openstack_info(self.logger)
         self._update_config(testcase)
 
 
@@ -279,7 +306,8 @@ class TestRunnerFactory(object):
         "yardstick": YardstickRunner,
         "bottlenecks": BottlenecksRunner,
         "shell": ShellRunner,
-        "vnftest": VnftestRunner
+        "vnftest": VnftestRunner,
+        "functest-k8s": FunctestK8sRunner
     }
 
     @classmethod
