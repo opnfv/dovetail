@@ -42,7 +42,6 @@ class Testcase(object):
             cmd_lines = Parser.parse_cmd(cmd, self)
             if not cmd_lines:
                 return False
-            # self.logger.debug('cmd_lines:%s', cmd_lines)
             self.cmds.append(cmd_lines)
         self.logger.debug('cmds: {}'.format(self.cmds))
         return True
@@ -193,7 +192,7 @@ class Testcase(object):
     @classmethod
     def load(cls):
         abs_testcase_path = constants.TESTCASE_PATH
-        for root, dirs, files in os.walk(abs_testcase_path):
+        for root, _, files in os.walk(abs_testcase_path):
             for testcase_file in files:
                 with open(os.path.join(root, testcase_file)) as f:
                     testcase_yaml = yaml.safe_load(f)
