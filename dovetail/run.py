@@ -20,14 +20,9 @@ import click
 from container import Container
 from dovetail import constants
 from parser import Parser
-from report import BottlenecksChecker, FunctestChecker, YardstickChecker
-from report import VnftestChecker
-from report import BottlenecksCrawler, FunctestCrawler, YardstickCrawler
-from report import VnftestCrawler
-from report import Report
-from test_runner import DockerRunner, ShellRunner
-from testcase import Testcase
-from testcase import Testsuite
+import report as dt_report
+import test_runner as dt_test_runner
+import testcase as dt_testcase
 from utils.dovetail_config import DovetailConfig as dt_cfg
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
@@ -36,21 +31,21 @@ EXIT_RUN_FAILED = 2
 
 
 def load_testsuite(testsuite):
-    Testsuite.load()
-    return Testsuite.get(testsuite)
+    dt_testcase.Testsuite.load()
+    return dt_testcase.Testsuite.get(testsuite)
 
 
 def run_test(testcase_list, report_flag, logger):
-    report = Report()
+    report = dt_report.Report()
     duration = 0
     if not testcase_list:
-        logger.warning("No test case will be executed.")
+        logger.warning('No test case will be executed.')
         return
 
     start_time = time.time()
     for testcase_name in testcase_list:
         logger.info('>>[testcase]: {}'.format(testcase_name))
-        testcase = Testcase.get(testcase_name)
+        testcase = dt_testcase.Testcase.get(testcase_name)
         run_testcase = True
 
         if run_testcase:
@@ -59,12 +54,12 @@ def run_test(testcase_list, report_flag, logger):
         result = report.check_tc_result(testcase)
         if dt_cfg.dovetail_config['stop']:
             try:
-                if (not result or result['criteria'] == "FAIL"):
-                    logger.info("Stop because {} failed".format(testcase_name))
+                if (not result or result['criteria'] == 'FAIL'):
+                    logger.info('Stop because {} failed'.format(testcase_name))
                     return
             except KeyError as e:
-                logger.error("There is no key {}.".format(e))
-                logger.info("Stop because {} failed".format(testcase_name))
+                logger.error('There is no key {}.'.format(e))
+                logger.info('Stop because {} failed'.format(testcase_name))
                 return
 
     end_time = time.time()
@@ -110,48 +105,50 @@ def filter_config(input_dict, logger):
 def create_logs():
     Container.create_log()
     Parser.create_log()
-    Report.create_log()
-    FunctestCrawler.create_log()
-    YardstickCrawler.create_log()
-    VnftestCrawler.create_log()
-    BottlenecksCrawler.create_log()
-    FunctestChecker.create_log()
-    YardstickChecker.create_log()
-    VnftestChecker.create_log()
-    BottlenecksChecker.create_log()
-    Testcase.create_log()
-    Testsuite.create_log()
-    DockerRunner.create_log()
-    ShellRunner.create_log()
+    dt_report.Report.create_log()
+    dt_report.FunctestCrawler.create_log()
+    dt_report.YardstickCrawler.create_log()
+    dt_report.VnftestCrawler.create_log()
+    dt_report.BottlenecksCrawler.create_log()
+    dt_report.FunctestChecker.create_log()
+    dt_report.YardstickChecker.create_log()
+    dt_report.VnftestChecker.create_log()
+    dt_report.BottlenecksChecker.create_log()
+    dt_testcase.Testcase.create_log()
+    dt_testcase.Testsuite.create_log()
+    dt_test_runner.DockerRunner.create_log()
+    dt_test_runner.ShellRunner.create_log()
 
 
-def clean_results_dir():
+def clean_results_dir(logger):
     result_path = dt_cfg.dovetail_config['result_dir']
     if os.path.exists(result_path):
         if os.path.isdir(result_path):
             cmd = 'sudo rm -rf %s/*' % (result_path)
             dt_utils.exec_cmd(cmd, exit_on_error=False, exec_msg_on=False)
         else:
-            print("result_dir in dovetail_config.yml is not a directory.")
+            logger.error(
+                'result_dir in dovetail_config.yml is not a directory.')
             raise SystemExit(EXIT_RUN_FAILED)
 
 
-def get_result_path():
+def get_result_path(logger):
     try:
-        dovetail_home = os.environ["DOVETAIL_HOME"]
+        dovetail_home = os.environ['DOVETAIL_HOME']
     except Exception:
-        print("ERROR: mandatory env variable 'DOVETAIL_HOME' is not found, "
-              "please set in env_config.sh and source this file before "
-              "running.")
+        logger.error(
+            "Mandatory env variable 'DOVETAIL_HOME' is not found, "
+            "please set in env_config.sh and source this file before "
+            "running.")
         return None
-    result_path = os.path.join(dovetail_home, 'results')
-    dt_cfg.dovetail_config['result_dir'] = result_path
+    dt_cfg.dovetail_config['result_dir'] = os.path.join(dovetail_home,
+                                                        'results')
     dt_cfg.dovetail_config['images_dir'] = os.path.join(dovetail_home,
                                                         'images')
-    pre_config_path = os.path.join(dovetail_home, 'pre_config')
-    patch_set_path = os.path.join(dovetail_home, 'patches')
-    dt_cfg.dovetail_config['config_dir'] = pre_config_path
-    dt_cfg.dovetail_config['patch_dir'] = patch_set_path
+    dt_cfg.dovetail_config['config_dir'] = os.path.join(dovetail_home,
+                                                        'pre_config')
+    dt_cfg.dovetail_config['patch_dir'] = os.path.join(dovetail_home,
+                                                       'patches')
     return dovetail_home
 
 
@@ -177,22 +174,22 @@ def env_init(logger):
     openrc = os.path.join(dt_cfg.dovetail_config['config_dir'],
                           dt_cfg.dovetail_config['env_file'])
     if not os.path.isfile(openrc):
-        logger.error("File {} does not exist.".format(openrc))
+        logger.error('File {} does not exist.'.format(openrc))
     dt_utils.source_env(openrc)
 
 
 def update_deploy_scenario(logger, **kwargs):
     if 'deploy_scenario' in kwargs and kwargs['deploy_scenario'] is not None:
         os.environ['DEPLOY_SCENARIO'] = kwargs['deploy_scenario']
-        logger.info("DEPLOY_SCENARIO : %s", os.environ['DEPLOY_SCENARIO'])
+        logger.info('DEPLOY_SCENARIO : %s', os.environ['DEPLOY_SCENARIO'])
 
 
 def check_hosts_file(logger):
     hosts_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
                               'hosts.yaml')
     if not os.path.isfile(hosts_file):
-        logger.warn("There is no hosts file {}, may be some issues with "
-                    "domain name resolution.".format(hosts_file))
+        logger.warn('There is no hosts file {}, may be some issues with '
+                    'domain name resolution.'.format(hosts_file))
 
 
 def parse_cli(logger=None, **kwargs):
@@ -214,16 +211,16 @@ def parse_cli(logger=None, **kwargs):
 def check_testcase_list(testcase_list, logger=None):
     if testcase_list:
         for tc in testcase_list:
-            if tc not in Testcase.testcase_list:
+            if tc not in dt_testcase.Testcase.testcase_list:
                 logger.error('Test case {} is not defined.'.format(tc))
                 return None
         return testcase_list
-    logger.error("There is no test case to be executed.")
+    logger.error('There is no test case to be executed.')
     return None
 
 
 def get_testcase_list(logger=None, **kwargs):
-    Testcase.load()
+    dt_testcase.Testcase.load()
     testcase_list = kwargs['testcase']
 
     # If specify 'testcase' on the CLI, ignore 'testsuite' and 'testarea'. In
@@ -239,12 +236,13 @@ def get_testcase_list(logger=None, **kwargs):
     if testsuite in dt_cfg.dovetail_config['testsuite_supported']:
         testsuite_validation = True
     origin_testarea = kwargs['testarea']
-    testarea_validation, testarea = Testcase.check_testarea(origin_testarea)
+    testarea_validation, testarea = dt_testcase.Testcase.check_testarea(
+        origin_testarea)
 
     if testsuite_validation and testarea_validation:
         testsuite_yaml = load_testsuite(testsuite)
-        testcase_list = Testcase.get_testcases_for_testsuite(testsuite_yaml,
-                                                             testarea)
+        testcase_list = dt_testcase.Testcase.get_testcases_for_testsuite(
+            testsuite_yaml, testarea)
         return check_testcase_list(testcase_list, logger)
     elif not testsuite_validation:
         logger.error('Test suite {} is not defined.'.format(testsuite))
@@ -255,15 +253,15 @@ def get_testcase_list(logger=None, **kwargs):
 
 def main(*args, **kwargs):
     """Dovetail compliance test entry!"""
-    build_tag = "daily-master-%s" % str(uuid.uuid1())
+    logger = dt_logger.Logger('run').getLogger()
+    build_tag = 'daily-master-%s' % str(uuid.uuid1())
     dt_cfg.dovetail_config['build_tag'] = build_tag
-    if not get_result_path():
+    if not get_result_path(logger):
         return
-    clean_results_dir()
+    clean_results_dir(logger)
     if kwargs['debug']:
         os.environ['DEBUG'] = 'true'
     create_logs()
-    logger = dt_logger.Logger('run').getLogger()
 
     logger.info('================================================')
     logger.info('Dovetail compliance: {}!'.format(kwargs['testsuite']))
@@ -292,20 +290,20 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 if dovetail_config['cli']['options'] is not None:
     for key, value in dovetail_config['cli']['options'].items():
         if value is not None:
-            for k, v in value.items():
+            for _, v in value.items():
                 flags = v['flags']
                 v.pop('flags')
                 v.pop('path', None)
-                main = click.option(*flags, **v)(main)
+                # main = click.option(*flags, **v)(main)
 if dovetail_config['cli']['arguments'] is not None:
     for key, value in dovetail_config['cli']['arguments'].items():
         if value is not None:
-            for k, v in value.items():
+            for _, v in value.items():
                 flags = v['flags']
                 v.pop('flags')
                 v.pop('path', None)
-                main = click.argument(flags, **v)(main)
-main = click.command(context_settings=CONTEXT_SETTINGS)(main)
+                # main = click.argument(flags, **v)(main)
+# main = click.command(context_settings=CONTEXT_SETTINGS)(main)
 
 
 if __name__ == '__main__':
