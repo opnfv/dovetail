@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_3c881522",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 7169
+      },
+      "writtenOn": "2018-11-16T11:06:31Z",
+      "side": 1,
+      "message": "Replace \"to install,\" with \":\"",
+      "range": {
+        "startLine": 145,
+        "startChar": 0,
+        "endLine": 145,
+        "endChar": 11
+      },
+      "revId": "8b68755e745d68634fa406429ab4e3938839968c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
