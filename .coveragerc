@@ -1,0 +1,6 @@
+[run]
+omit = dovetail/tests/*
+[report]
+exclude_lines =
+    pass
+    main()
