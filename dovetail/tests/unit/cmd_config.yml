@@ -1,0 +1,24 @@
+---
+cli:
+  arguments:
+    config:
+      docker_tag:
+        flags: 'docker_tag'
+        path:
+          - 'functest/docker_tag'
+    control:
+
+  options:
+    config:
+    control:
+      testsuite:
+        flags:
+          - '--testsuite'
+      debug:
+        flags:
+          - '--debug'
+        is_flag: 'True'
+      report:
+        flags:
+          - '--report'
+        is_flag: 'True'
