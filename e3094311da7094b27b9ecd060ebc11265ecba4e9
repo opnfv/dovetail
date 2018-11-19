@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_e83097ea",
+        "filename": "docs/index.rst",
+        "patchSetId": 15
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-11-19T21:19:59Z",
+      "side": 1,
+      "message": "Minor: Should it be sorted in alphabetical order?",
+      "range": {
+        "startLine": 23,
+        "startChar": 3,
+        "endLine": 23,
+        "endChar": 46
+      },
+      "revId": "e3094311da7094b27b9ecd060ebc11265ecba4e9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_48742b9c",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 15
+      },
+      "lineNbr": 537,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-11-19T21:19:59Z",
+      "side": 1,
+      "message": "Whitespace is missing here",
+      "range": {
+        "startLine": 537,
+        "startChar": 58,
+        "endLine": 537,
+        "endChar": 59
+      },
+      "revId": "e3094311da7094b27b9ecd060ebc11265ecba4e9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_2879ef93",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 15
+      },
+      "lineNbr": 804,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-11-19T21:19:59Z",
+      "side": 1,
+      "message": "extra unwanted new lines.",
+      "range": {
+        "startLine": 803,
+        "startChar": 0,
+        "endLine": 804,
+        "endChar": 0
+      },
+      "revId": "e3094311da7094b27b9ecd060ebc11265ecba4e9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
