@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_625f8873",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 465,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-19T07:27:28Z",
+      "side": 0,
+      "message": "Sorry for misunderstanding the offline guide you mean.\nThis offline guide is useful and different from the offline scripts I removed.\nHere is an guide for users about how to prepare test images offline manually step by step. The scripts I removed are a small tool for users to automatically do all these steps.\nI thought you are planning to remove the guide about how to use the scripts.\nSo couldn\u0027t remove this section and sorry again.\nIs seems that the \u0027offline\u0027 causes many confusions. Will add an topic to this week\u0027s meeting to explain and clarify them.",
+      "range": {
+        "startLine": 465,
+        "startChar": 0,
+        "endLine": 465,
+        "endChar": 17
+      },
+      "revId": "4ef204b5156b31bc2beae614765d53d9dcf5ea16",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
