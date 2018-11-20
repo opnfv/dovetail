@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_c8dcbb77",
+        "filename": "dovetail/run.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-20T01:59:46Z",
+      "side": 1,
+      "message": "Need to put this after get_result_path() because the logger needs to get the result_dir.",
+      "range": {
+        "startLine": 256,
+        "startChar": 4,
+        "endLine": 256,
+        "endChar": 48
+      },
+      "revId": "f9050d796c7b54ae92a886a0f5f0c3de6f3d2679",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
