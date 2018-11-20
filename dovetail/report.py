@@ -11,6 +11,7 @@
 
 from __future__ import division
 
+import collections
 import json
 import re
 import os
@@ -48,13 +49,13 @@ class Report(object):
         result_file = os.path.join(result_path, check_results_file)
         if os.path.isfile(result_file):
             self.logger.info(
-                "Results have been stored with file {}.".format(result_file))
+                'Results have been stored with file {}.'.format(result_file))
             result = self.get_result(testcase, result_file)
             self.check_result(testcase, result)
             return result
         else:
             self.logger.error(
-                "Failed to store results with file {}.".format(result_file))
+                'Failed to store results with file {}.'.format(result_file))
             self.check_result(testcase)
             return None
 
@@ -72,7 +73,7 @@ class Report(object):
         report_obj['version'] = '2018.09'
         report_obj['build_tag'] = dt_cfg.dovetail_config['build_tag']
         report_obj['test_date'] =\
-            datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+            datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
         report_obj['duration'] = duration
 
         report_obj['testcases_list'] = []
@@ -117,7 +118,7 @@ class Report(object):
 
         total_num = 0
         pass_num = 0
-        sub_report = {}
+        sub_report = collections.OrderedDict()
         testcase_num = {}
         testcase_passnum = {}
         for area in dt_cfg.dovetail_config['testarea_supported']:
@@ -127,11 +128,11 @@ class Report(object):
 
         testarea_scope = []
         for testcase in report_data['testcases_list']:
-            pattern = re.compile(
-                '|'.join(dt_cfg.dovetail_config['testarea_supported']))
+            supported_areas = dt_cfg.dovetail_config['testarea_supported']
+            pattern = re.compile('|'.join(supported_areas))
             area = pattern.findall(testcase['name'])
-            if not area:
-                self.logger.error("Test case {} not in supported testarea."
+            if not supported_areas or not area:
+                self.logger.error('Test case {} not in supported testarea.'
                                   .format(testcase['name']))
                 return None
             area = area[0]
@@ -180,19 +181,19 @@ class Report(object):
             with open(result_file, 'w') as f:
                 f.write(json.dumps(results) + '\n')
         except Exception as e:
-            self.logger.exception("Failed to add result to file {}, "
-                                  "exception: {}".format(result_file, e))
+            self.logger.exception('Failed to add result to file {}, '
+                                  'exception: {}'.format(result_file, e))
 
     @staticmethod
     def save_logs():
         file_suffix = time.strftime('%Y%m%d_%H%M', time.localtime())
-        logs_gz = "logs_{}.tar.gz".format(file_suffix)
+        logs_gz = 'logs_{}.tar.gz'.format(file_suffix)
         result_dir = dt_cfg.dovetail_config['result_dir']
 
         cwd = os.getcwd()
         os.chdir(os.path.join(result_dir, '..'))
         tar_file = os.path.join(result_dir, '..', logs_gz)
-        with tarfile.open(tar_file, "w:gz") as f_out:
+        with tarfile.open(tar_file, 'w:gz') as f_out:
             files = os.listdir(result_dir)
             for f in files:
                 if f not in ['workspace']:
@@ -273,11 +274,11 @@ class FunctestCrawler(Crawler):
                             success_case = data['details']['success']
                             error_case = data['details']['failures']
                             skipped_case = data['details']['skipped']
-                            details = {"tests": tests,
-                                       "failures": failed_num,
-                                       "success": success_case,
-                                       "errors": error_case,
-                                       "skipped": skipped_case}
+                            details = {'tests': tests,
+                                       'failures': failed_num,
+                                       'success': success_case,
+                                       'errors': error_case,
+                                       'skipped': skipped_case}
                 except KeyError as e:
                     self.logger.exception(
                         "Result data don't have key {}.".format(e))
@@ -318,7 +319,7 @@ class YardstickCrawler(Crawler):
             for jsonfile in f:
                 data = json.loads(jsonfile)
                 try:
-                    criteria = dt_utils.get_value_from_dict("result.criteria",
+                    criteria = dt_utils.get_value_from_dict('result.criteria',
                                                             data)
                     if criteria == 'PASS':
                         valid_tc = testcase.validate_testcase()
@@ -359,7 +360,7 @@ class BottlenecksCrawler(Crawler):
             for jsonfile in f:
                 data = json.loads(jsonfile)
                 try:
-                    if 'PASS' == data["data_body"]["result"]:
+                    if 'PASS' == data['data_body']['result']:
                         criteria = 'PASS'
                     else:
                         criteria = 'FAIL'
