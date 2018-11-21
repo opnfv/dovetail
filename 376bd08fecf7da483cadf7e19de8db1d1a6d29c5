@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_5f885e22",
+        "filename": "dovetail/utils/dovetail_utils.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-11-21T08:22:55Z",
+      "side": 1,
+      "message": "ok I agree to \"There is no hosts file {}. This may cause some issues with domain name resolution.\"",
+      "parentUuid": "1a622d24_1f9f0661",
+      "range": {
+        "startLine": 323,
+        "startChar": 46,
+        "endLine": 323,
+        "endChar": 59
+      },
+      "revId": "376bd08fecf7da483cadf7e19de8db1d1a6d29c5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_88b003df",
         "filename": "dovetail/utils/dovetail_utils.py",
         "patchSetId": 6
