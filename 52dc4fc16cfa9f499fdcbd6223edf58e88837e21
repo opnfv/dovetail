@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_929f8d03",
+        "filename": "dovetail/container.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-11-22T07:19:28Z",
+      "side": 1,
+      "message": "Oops. This should be removed after inserting lines 77-78",
+      "range": {
+        "startLine": 79,
+        "startChar": 8,
+        "endLine": 83,
+        "endChar": 52
+      },
+      "revId": "52dc4fc16cfa9f499fdcbd6223edf58e88837e21",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
