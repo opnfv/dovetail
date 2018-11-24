@@ -32,6 +32,7 @@ testarea_supported:
   - vnf
   - vping
   - k8s
+  - validate
 
 # used for testcase cmd template in jinja2 format
 # we have two variables available now
