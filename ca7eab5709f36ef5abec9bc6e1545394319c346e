@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_8b72b8e3",
+        "filename": "dovetail/report.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 465,
+      "author": {
+        "id": 5887
+      },
+      "writtenOn": "2018-11-24T08:41:44Z",
+      "side": 1,
+      "message": "ok. thx",
+      "parentUuid": "1a622d24_cbacb038",
+      "range": {
+        "startLine": 465,
+        "startChar": 20,
+        "endLine": 465,
+        "endChar": 61
+      },
+      "revId": "ca7eab5709f36ef5abec9bc6e1545394319c346e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_2b93a4fb",
         "filename": "dovetail/report.py",
         "patchSetId": 1
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "The criteria here is used by Dovetail Checker. No matter what criteria each project used (PASS, pass or PASSED, FAIL, FAILED or FAILURE), here will transfer them into PASS and FAIL.",
       "parentUuid": "1a622d24_2b93a4fb",
+      "range": {
+        "startLine": 468,
+        "startChar": 35,
+        "endLine": 468,
+        "endChar": 40
+      },
+      "revId": "ca7eab5709f36ef5abec9bc6e1545394319c346e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_eb76ccd7",
+        "filename": "dovetail/report.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 468,
+      "author": {
+        "id": 5887
+      },
+      "writtenOn": "2018-11-24T08:41:44Z",
+      "side": 1,
+      "message": "ok. thx",
+      "parentUuid": "1a622d24_2baa8419",
       "range": {
         "startLine": 468,
         "startChar": 35,
@@ -143,6 +191,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_cb7310e6",
+        "filename": "etc/conf/onap-vtp_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 5887
+      },
+      "writtenOn": "2018-11-24T08:41:44Z",
+      "side": 1,
+      "message": "It should work by using the envs at line 14. so can you please move the OPEN_CLI_PRODUCT_IN_USE\u003donap-vtp to the same line.",
+      "parentUuid": "1a622d24_0ba7c850",
+      "range": {
+        "startLine": 22,
+        "startChar": 6,
+        "endLine": 22,
+        "endChar": 7
+      },
+      "revId": "ca7eab5709f36ef5abec9bc6e1545394319c346e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_4bc1c0e3",
         "filename": "etc/testcase/onap-vtp.validate.csar.yml",
         "patchSetId": 1
@@ -190,6 +262,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_2b81e48f",
+        "filename": "etc/testcase/onap-vtp.validate.csar.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5887
+      },
+      "writtenOn": "2018-11-24T08:41:44Z",
+      "side": 1,
+      "message": "ok. thanks. yes it should load from the config file. \ncurrently there will be only one host-url. But in future. it may vary based on the test cases. so for now. I think it should be ok with current change. thanks",
+      "parentUuid": "1a622d24_6b63dc1a",
+      "range": {
+        "startLine": 6,
+        "startChar": 4,
+        "endLine": 6,
+        "endChar": 7
+      },
+      "revId": "ca7eab5709f36ef5abec9bc6e1545394319c346e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_6bbc7c6d",
         "filename": "etc/testcase/onap-vtp.validate.csar.yml",
         "patchSetId": 1
@@ -225,6 +321,30 @@
       "side": 1,
       "message": "So the csar file here is an input from user, right?",
       "parentUuid": "1a622d24_6bbc7c6d",
+      "range": {
+        "startLine": 8,
+        "startChar": 15,
+        "endLine": 8,
+        "endChar": 28
+      },
+      "revId": "ca7eab5709f36ef5abec9bc6e1545394319c346e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_0b7ea8ae",
+        "filename": "etc/testcase/onap-vtp.validate.csar.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5887
+      },
+      "writtenOn": "2018-11-24T08:41:44Z",
+      "side": 1,
+      "message": "yes",
+      "parentUuid": "1a622d24_4b68a0f5",
       "range": {
         "startLine": 8,
         "startChar": 15,
