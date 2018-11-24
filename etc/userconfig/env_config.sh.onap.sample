@@ -1,0 +1,4 @@
+export HOST_URL="HOST_URL"
+
+# CSAR file name, and should be present under $DOVETAIL_HOME/pre_config/ directory.
+export CSAR_FILE="test.csar"

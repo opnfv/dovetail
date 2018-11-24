@@ -77,7 +77,7 @@ def exec_cmd(cmd, logger=None, exit_on_error=False, info=False,
 
 # walkthrough the object, yield path and value
 
-# dual python 2/3 compatability, inspired by the "six" library
+# dual python 2/3 compatibility, inspired by the "six" library
 string_types = (str, unicode) if str is bytes else (str, bytes)
 # iteritems = lambda mapping: getattr(mapping, 'iteritems', mapping.items)()
 
