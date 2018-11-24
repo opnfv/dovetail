@@ -144,6 +144,7 @@ class DockerRunner(object):
             config_item = {}
         config_item['validate_testcase'] = testcase.validate_testcase()
         config_item['testcase'] = testcase.name()
+        config_item['csar_file'] = testcase.csar_file()
         config_item['os_insecure'] = os.getenv('OS_INSECURE')
         if 'DEPLOY_SCENARIO' in os.environ:
             config_item['deploy_scenario'] = os.environ['DEPLOY_SCENARIO']
@@ -151,6 +152,7 @@ class DockerRunner(object):
         config_item['debug'] = os.getenv('DEBUG')
         config_item['build_tag'] = dt_cfg.dovetail_config['build_tag']
         config_item['cacert'] = os.getenv('OS_CACERT')
+        config_item['host_url'] = os.getenv("HOST_URL")
         return config_item
 
     def _update_config(self, testcase, update_pod=True):
@@ -299,6 +301,22 @@ class VnftestRunner(DockerRunner):
         super(VnftestRunner, self).__init__(testcase)
 
 
+class OnapVtpRunner(DockerRunner):
+
+    config_file_name = 'onap-vtp_config.yml'
+
+    def __init__(self, testcase):
+        self.type = 'onap-vtp'
+        super(OnapVtpRunner, self).__init__(testcase)
+        env_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
+                                dt_cfg.dovetail_config['env_file'])
+        if not os.path.isfile(env_file):
+            self.logger.error('File {} does not exist.'.format(env_file))
+            return
+        dt_utils.source_env(env_file)
+        self._update_config(testcase, update_pod=False)
+
+
 class TestRunnerFactory(object):
 
     TEST_RUNNER_MAP = {
@@ -307,7 +325,8 @@ class TestRunnerFactory(object):
         "bottlenecks": BottlenecksRunner,
         "shell": ShellRunner,
         "vnftest": VnftestRunner,
-        "functest-k8s": FunctestK8sRunner
+        "functest-k8s": FunctestK8sRunner,
+        "onap-vtp": OnapVtpRunner
     }
 
     @classmethod

@@ -1,0 +1,15 @@
+---
+onap-vtp.validate.csar:
+  name: onap-vtp.validate.csar
+  objective: onap csar validation
+  validate:
+    type: onap-vtp
+    testcase: csar-validate
+    csar_file: '/VoLTE.csar'
+  report:
+    source_archive_files:
+      - onap-vtp.validate.csar.out
+    dest_archive_files:
+      - onap-vtp_logs/onap-vtp.validate.csar.out
+    check_results_file: onap-vtp_logs/onap-vtp.validate.csar.out
+    sub_testcase_list:

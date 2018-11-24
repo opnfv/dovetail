@@ -31,11 +31,13 @@ class TestRunnerTesting(unittest.TestCase):
         self.testcase_type = 'functest'
         self.testcase_dict = {}
         self.testcase_valid = 'validate_testcase'
+        self.csar_file = 'csar_file'
 
         self.testcase.testcase = self.testcase_dict
         self.testcase.name.return_value = self.testcase_name
         self.testcase.validate_testcase.return_value = self.testcase_valid
         self.testcase.validate_type.return_value = self.testcase_type
+        self.testcase.csar_file.return_value = self.csar_file
 
     def tearDown(self):
         self.patcher1.stop()
@@ -435,16 +437,18 @@ class TestRunnerTesting(unittest.TestCase):
     @patch('dovetail.test_runner.os')
     def test_add_testcase_info(self, mock_os, mock_config):
         mock_os.getenv.side_effect = ['os_insecure', 'dovetail_home', 'debug',
-                                      'os_cacert']
+                                      'os_cacert', 'host_url']
         mock_os.environ = {'DEPLOY_SCENARIO': 'deploy_scenario'}
         mock_config.dovetail_config = {'build_tag': 'build_tag'}
 
         expected = {
             'validate_testcase': 'validate_testcase',
-            'testcase': 'testcase_name', 'os_insecure': 'os_insecure',
+            'testcase': 'testcase_name', 'csar_file': 'csar_file',
+            'os_insecure': 'os_insecure',
             'deploy_scenario': 'deploy_scenario',
             'dovetail_home': 'dovetail_home', 'debug': 'debug',
-            'build_tag': 'build_tag', 'cacert': 'os_cacert'}
+            'build_tag': 'build_tag', 'cacert': 'os_cacert',
+            'host_url': 'host_url'}
         result = t_runner.FunctestRunner._add_testcase_info(self.testcase)
 
         self.testcase.validate_testcase.assert_called_once_with()
