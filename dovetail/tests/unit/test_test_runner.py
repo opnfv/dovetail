@@ -435,7 +435,7 @@ class TestRunnerTesting(unittest.TestCase):
     @patch('dovetail.test_runner.os')
     def test_add_testcase_info(self, mock_os, mock_config):
         mock_os.getenv.side_effect = ['os_insecure', 'dovetail_home', 'debug',
-                                      'os_cacert']
+                                      'os_cacert', 'host_url', 'csar_file']
         mock_os.environ = {'DEPLOY_SCENARIO': 'deploy_scenario'}
         mock_config.dovetail_config = {'build_tag': 'build_tag'}
 
@@ -444,7 +444,8 @@ class TestRunnerTesting(unittest.TestCase):
             'testcase': 'testcase_name', 'os_insecure': 'os_insecure',
             'deploy_scenario': 'deploy_scenario',
             'dovetail_home': 'dovetail_home', 'debug': 'debug',
-            'build_tag': 'build_tag', 'cacert': 'os_cacert'}
+            'build_tag': 'build_tag', 'cacert': 'os_cacert',
+            'host_url': 'host_url', 'csar_file': 'csar_file'}
         result = t_runner.FunctestRunner._add_testcase_info(self.testcase)
 
         self.testcase.validate_testcase.assert_called_once_with()
