@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_cbacb038",
+        "filename": "dovetail/report.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 465,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-24T08:32:18Z",
+      "side": 1,
+      "message": "Good suggestions. will update.",
+      "parentUuid": "1a622d24_eb888cc8",
+      "range": {
+        "startLine": 465,
+        "startChar": 20,
+        "endLine": 465,
+        "endChar": 61
+      },
+      "revId": "ca7eab5709f36ef5abec9bc6e1545394319c346e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_2b93a4fb",
         "filename": "dovetail/report.py",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2018-11-24T07:07:16Z",
       "side": 1,
       "message": "pls use FAILED instead of FAIL",
+      "range": {
+        "startLine": 468,
+        "startChar": 35,
+        "endLine": 468,
+        "endChar": 40
+      },
+      "revId": "ca7eab5709f36ef5abec9bc6e1545394319c346e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_2baa8419",
+        "filename": "dovetail/report.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 468,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-24T08:32:18Z",
+      "side": 1,
+      "message": "The criteria here is used by Dovetail Checker. No matter what criteria each project used (PASS, pass or PASSED, FAIL, FAILED or FAILURE), here will transfer them into PASS and FAIL.",
+      "parentUuid": "1a622d24_2b93a4fb",
       "range": {
         "startLine": 468,
         "startChar": 35,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_0ba7c850",
+        "filename": "etc/conf/onap-vtp_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-24T08:32:18Z",
+      "side": 1,
+      "message": "This is also the question I am considering.\nHow ONAP VTP accept BUILD_TAG?\nI have passed it to the contaienr\u0027s ENV with Line 14 when creating the container. Won\u0027t like work?",
+      "parentUuid": "1a622d24_0b9068eb",
+      "range": {
+        "startLine": 22,
+        "startChar": 6,
+        "endLine": 22,
+        "endChar": 7
+      },
+      "revId": "ca7eab5709f36ef5abec9bc6e1545394319c346e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_4bc1c0e3",
         "filename": "etc/testcase/onap-vtp.validate.csar.yml",
         "patchSetId": 1
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_6b63dc1a",
+        "filename": "etc/testcase/onap-vtp.validate.csar.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-24T08:32:18Z",
+      "side": 1,
+      "message": "Will the host-url be different for different test cases?\nIf I understand correctly, the host-url is only related to the host machine not the test cases? Am I right?\nFor users, they should provide a env file to set host_url.\n$cat ${DOVETAIL_HOME}/pre_config/env_config.sh\nexport HOST_URL\u003dxxx\nThen Dovetail will get host_url when loading file onap-vtp_config.yml",
+      "parentUuid": "1a622d24_4bc1c0e3",
+      "range": {
+        "startLine": 6,
+        "startChar": 4,
+        "endLine": 6,
+        "endChar": 7
+      },
+      "revId": "ca7eab5709f36ef5abec9bc6e1545394319c346e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_6bbc7c6d",
         "filename": "etc/testcase/onap-vtp.validate.csar.yml",
         "patchSetId": 1
@@ -105,6 +201,30 @@
       "writtenOn": "2018-11-24T07:07:16Z",
       "side": 1,
       "message": "VOLTE is sample csar file name and this csar file will be provided when running the test case. so please update this field to generic csar file name something like xxx.csar.",
+      "range": {
+        "startLine": 8,
+        "startChar": 15,
+        "endLine": 8,
+        "endChar": 28
+      },
+      "revId": "ca7eab5709f36ef5abec9bc6e1545394319c346e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_4b68a0f5",
+        "filename": "etc/testcase/onap-vtp.validate.csar.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-11-24T08:32:18Z",
+      "side": 1,
+      "message": "So the csar file here is an input from user, right?",
+      "parentUuid": "1a622d24_6bbc7c6d",
       "range": {
         "startLine": 8,
         "startChar": 15,
