@@ -113,7 +113,7 @@ class TestcaseTesting(unittest.TestCase):
         self.assertEquals(True, result)
 
     def test_str(self):
-        testcase = tcase.Testcase(self.testcase_yaml)
+        testcase = tcase.OnapVtpTestcase(self.testcase_yaml)
 
         result = testcase.__str__()
 
