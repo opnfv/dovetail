@@ -1,0 +1,25 @@
+---
+
+{% set validate_testcase = validate_testcase or '' %}
+{% set testcase = testcase or '' %}
+{% set build_tag = build_tag or '' %}
+{% set csar_file = csar_file or '' %}
+{% set host_url = host_url or '' %}
+{% set result_dir = '/tmp/onap' %}
+
+onap-vtp:
+  image_name: nexus3.onap.org:10001/onap/cli
+  docker_tag: 2.0.5
+  opts: '-td '
+  envs: '-e OPEN_CLI_MODE=daemon -e BUILD_TAG={{build_tag}}-{{testcase}}
+         -e OPEN_CLI_PRODUCT_IN_USE=onap-vtp'
+  volumes:
+    - '-v {{dovetail_home}}/pre_config/{{csar_file}}:/{{csar_file}}'
+    - '-v {{dovetail_home}}/results:{{result_dir}}'
+  pre_condition:
+    - 'echo this is pre_condition'
+  cmds:
+    - "oclip vnftest-run --name {{validate_testcase}} --param csar=/{{csar_file}}
+       --host-url {{host_url}} --format json > {{result_dir}}/{{testcase}}.out"
+  post_condition:
+    - 'echo this is post_condition'

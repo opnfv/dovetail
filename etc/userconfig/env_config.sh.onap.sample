@@ -1,0 +1,4 @@
+export HOST_URL="http://<docker host ip>:8702"
+
+# Absolute path of CSAR file, and should be copied to vtp container.
+export CSAR_FILE="/opt/test.csar"
