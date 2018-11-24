@@ -34,15 +34,17 @@ class ReportTesting(unittest.TestCase):
         dt_report.YardstickCrawler.logger = None
         dt_report.BottlenecksCrawler.logger = None
         dt_report.VnftestCrawler.logger = None
+        dt_report.OnapVtpCrawler.logger = None
         dt_report.FunctestChecker.logger = None
         dt_report.FunctestK8sChecker.logger = None
         dt_report.YardstickChecker.logger = None
         dt_report.BottlenecksChecker.logger = None
         dt_report.VnftestChecker.logger = None
+        dt_report.OnapVtpChecker.logger = None
         dt_report.Report.logger = None
         dt_report.Report.results = {
             'functest': {}, 'yardstick': {}, 'functest-k8s': {},
-            'bottlenecks': {}, 'shell': {}, 'vnftest': {}}
+            'bottlenecks': {}, 'shell': {}, 'vnftest': {}, 'onap-vtp': {}}
 
     def _produce_report_initial_text(self, report_data):
         report_txt = ''
@@ -987,6 +989,179 @@ class ReportTesting(unittest.TestCase):
             "Pass flag not found 'result'")
         self.assertEquals(expected, result)
 
+    @patch('dovetail.report.dt_logger')
+    def test_onapvtp_crawler_create_log(self, mock_logger):
+        getlogger_obj = Mock()
+        logger_obj = Mock()
+        logger_obj.getLogger.return_value = getlogger_obj
+        mock_logger.Logger.return_value = logger_obj
+
+        dt_report.OnapVtpCrawler.create_log()
+
+        self.assertEquals(getlogger_obj, dt_report.OnapVtpCrawler.logger)
+
+    @patch('dovetail.report.os.path')
+    def test_onapvtp_crawler_crawl_not_exists(self, mock_path):
+        logger_obj = Mock()
+        dt_report.OnapVtpCrawler.logger = logger_obj
+        mock_path.exists.return_value = False
+        file_path = 'file_path'
+
+        crawler = dt_report.OnapVtpCrawler()
+        result = crawler.crawl(None, file_path)
+
+        mock_path.exists.assert_called_once_with(file_path)
+        logger_obj.error.assert_called_once_with(
+            'Result file not found: {}'.format(file_path))
+        self.assertEquals(None, result)
+
+    @patch('__builtin__.open')
+    @patch('dovetail.report.json.loads')
+    @patch('dovetail.report.os.path')
+    def test_onapvtp_crawler_crawl_pass(self, mock_path, mock_loads,
+                                        mock_open):
+        dt_report.OnapVtpCrawler.logger = Mock()
+        mock_path.exists.return_value = True
+        file_path = 'file_path'
+        testcase_obj = Mock()
+        file_obj = Mock()
+        mock_open.return_value.__enter__.return_value = [file_obj]
+        data_dict = {
+            'results': [
+                {"property": "results", "value": "{value=SUCCESS}"},
+                {"property": "build_tag", "value": "test-name"},
+                {"property": "criteria", "value": "PASS"}
+            ]
+        }
+        mock_loads.return_value = data_dict
+
+        crawler = dt_report.OnapVtpCrawler()
+        result = crawler.crawl(testcase_obj, file_path)
+        expected = {'criteria': 'PASS'}
+
+        mock_path.exists.assert_called_once_with(file_path)
+        mock_open.assert_called_once_with(file_path, 'r')
+        mock_loads.assert_called_once_with(file_obj)
+        testcase_obj.set_results.assert_called_once_with(expected)
+        self.assertEquals(expected, result)
+
+    @patch('__builtin__.open')
+    @patch('dovetail.report.json.loads')
+    @patch('dovetail.report.os.path')
+    def test_onapvtp_crawler_crawl_fail(self, mock_path, mock_loads,
+                                        mock_open):
+        dt_report.OnapVtpCrawler.logger = Mock()
+        mock_path.exists.return_value = True
+        file_path = 'file_path'
+        testcase_obj = Mock()
+        file_obj = Mock()
+        mock_open.return_value.__enter__.return_value = [file_obj]
+        data_dict = {
+            'results': [
+                {"property": "results", "value": "{value=file doesn't exist}"},
+                {"property": "build_tag", "value": "test-name"},
+                {"property": "criteria", "value": "FAILED"}
+            ]
+        }
+        mock_loads.return_value = data_dict
+
+        crawler = dt_report.OnapVtpCrawler()
+        result = crawler.crawl(testcase_obj, file_path)
+        expected = {'criteria': 'FAIL'}
+
+        mock_path.exists.assert_called_once_with(file_path)
+        mock_open.assert_called_once_with(file_path, 'r')
+        mock_loads.assert_called_once_with(file_obj)
+        testcase_obj.set_results.assert_called_once_with(expected)
+        self.assertEquals(expected, result)
+
+    @patch('__builtin__.open')
+    @patch('dovetail.report.json.loads')
+    @patch('dovetail.report.os.path')
+    def test_onapvtp_crawler_crawl_no_criteria(self, mock_path, mock_loads,
+                                               mock_open):
+        dt_report.OnapVtpCrawler.logger = Mock()
+        mock_path.exists.return_value = True
+        file_path = 'file_path'
+        testcase_obj = Mock()
+        file_obj = Mock()
+        mock_open.return_value.__enter__.return_value = [file_obj]
+        data_dict = {
+            'results': [
+                {"property": "results", "value": "{value=file doesn't exist}"},
+                {"property": "build_tag", "value": "test-name"},
+                {"property": "error_criteria", "value": "FAILED"}
+            ]
+        }
+        mock_loads.return_value = data_dict
+
+        crawler = dt_report.OnapVtpCrawler()
+        result = crawler.crawl(testcase_obj, file_path)
+        expected = {'criteria': 'FAIL'}
+
+        mock_path.exists.assert_called_once_with(file_path)
+        mock_open.assert_called_once_with(file_path, 'r')
+        mock_loads.assert_called_once_with(file_obj)
+        dt_report.OnapVtpCrawler.logger.error.assert_called_once_with(
+            'There is no property criteria.')
+        testcase_obj.set_results.assert_called_once_with(expected)
+        self.assertEquals(expected, result)
+
+    @patch('__builtin__.open')
+    @patch('dovetail.report.json.loads')
+    @patch('dovetail.report.os.path')
+    def test_onapvtp_crawler_crawl_exception(self, mock_path, mock_loads,
+                                             mock_open):
+        dt_report.OnapVtpCrawler.logger = Mock()
+        mock_path.exists.return_value = True
+        file_path = 'file_path'
+        testcase_obj = Mock()
+        file_obj = Mock()
+        mock_open.return_value.__enter__.return_value = [file_obj]
+        data_dict = {
+            'error_results': [
+                {"property": "results", "value": "{value=file doesn't exist}"},
+                {"property": "build_tag", "value": "test-name"},
+                {"property": "error_criteria", "value": "FAILED"}
+            ]
+        }
+        mock_loads.return_value = data_dict
+
+        crawler = dt_report.OnapVtpCrawler()
+        result = crawler.crawl(testcase_obj, file_path)
+        expected = {'criteria': 'FAIL'}
+
+        mock_path.exists.assert_called_once_with(file_path)
+        mock_open.assert_called_once_with(file_path, 'r')
+        mock_loads.assert_called_once_with(file_obj)
+        dt_report.OnapVtpCrawler.logger.exception.assert_called_once_with(
+            "Pass flag not found 'results'")
+        testcase_obj.set_results.assert_called_once_with(expected)
+        self.assertEquals(expected, result)
+
+    @patch('__builtin__.open')
+    @patch('dovetail.report.json.loads')
+    @patch('dovetail.report.os.path')
+    def test_onapvtp_crawler_crawl_value_error(self, mock_path, mock_loads,
+                                               mock_open):
+        dt_report.OnapVtpCrawler.logger = Mock()
+        mock_path.exists.return_value = True
+        file_path = 'file_path'
+        testcase_obj = Mock()
+        file_obj = Mock()
+        mock_open.return_value.__enter__.return_value = [file_obj]
+        mock_loads.side_effect = ValueError('No JSON object could be decoded')
+
+        crawler = dt_report.OnapVtpCrawler()
+        result = crawler.crawl(testcase_obj, file_path)
+        expected = {'criteria': 'FAIL'}
+
+        mock_path.exists.assert_called_once_with(file_path)
+        mock_open.assert_called_once_with(file_path, 'r')
+        mock_loads.assert_called_once_with(file_obj)
+        testcase_obj.set_results.assert_called_once_with(expected)
+        self.assertEquals(expected, result)
+
     def test_crawler_factory(self):
         result = dt_report.CrawlerFactory.create('shell')
         self.assertEquals(dt_report.ShellCrawler, result.__class__)
@@ -1197,3 +1372,30 @@ class ReportTesting(unittest.TestCase):
 
     def test_checker_factory_none(self):
         self.assertEquals(None, dt_report.CheckerFactory.create('other'))
+
+    @patch('dovetail.report.dt_logger')
+    def test_onapvtp_checker_create_log(self, mock_logger):
+        getlogger_obj = Mock()
+        logger_obj = Mock()
+        logger_obj.getLogger.return_value = getlogger_obj
+        mock_logger.Logger.return_value = logger_obj
+
+        dt_report.OnapVtpChecker.create_log()
+
+        self.assertEquals(getlogger_obj, dt_report.OnapVtpChecker.logger)
+
+    def test_onapvtp_check_result_none(self):
+        testcase_obj = Mock()
+        result = {}
+
+        dt_report.OnapVtpChecker.check(testcase_obj, result)
+
+        testcase_obj.passed.assert_called_once_with('FAIL')
+
+    def test_onapvtp_check_result(self):
+        testcase_obj = Mock()
+        result = {'criteria': 'PASS'}
+
+        dt_report.OnapVtpChecker.check(testcase_obj, result)
+
+        testcase_obj.passed.assert_called_once_with('PASS')
