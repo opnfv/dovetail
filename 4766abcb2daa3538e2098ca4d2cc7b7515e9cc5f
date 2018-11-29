@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_0bb0638a",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-11-29T07:14:59Z",
+      "side": 1,
+      "message": "Minor for better readability: Use single quotes like all the other os.getenv calls",
+      "range": {
+        "startLine": 154,
+        "startChar": 44,
+        "endLine": 154,
+        "endChar": 54
+      },
+      "revId": "4766abcb2daa3538e2098ca4d2cc7b7515e9cc5f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ebac0738",
+        "filename": "dovetail/test_runner.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-11-29T07:14:59Z",
+      "side": 1,
+      "message": "same thing here",
+      "range": {
+        "startLine": 155,
+        "startChar": 45,
+        "endLine": 155,
+        "endChar": 56
+      },
+      "revId": "4766abcb2daa3538e2098ca4d2cc7b7515e9cc5f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_cb6dcb06",
+        "filename": "etc/userconfig/env_config.sh.onap.sample",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-11-29T07:14:59Z",
+      "side": 1,
+      "message": ". CSAR file should be present under $DOVETAIL_HOME/pre_config/ directory.",
+      "range": {
+        "startLine": 3,
+        "startChar": 16,
+        "endLine": 3,
+        "endChar": 49
+      },
+      "revId": "4766abcb2daa3538e2098ca4d2cc7b7515e9cc5f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
