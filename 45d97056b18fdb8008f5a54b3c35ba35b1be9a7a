@@ -22,6 +22,30 @@
       "revId": "45d97056b18fdb8008f5a54b3c35ba35b1be9a7a",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_1417e0ee",
+        "filename": "etc/testcase/functest.security.patrole_vxlan_dependent.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-12-04T12:11:17Z",
+      "side": 1,
+      "message": "For the test list which used by tempest_custom, their should be square brackets following the test case name. Please refer to https://github.com/opnfv/dovetail/blob/master/etc/testcase/functest.tempest.network_api.yml\nThe content in the square brackets is test case\u0027s id and category. While for these 2 test case, it only needs category \u0027admin\u0027 according to Functest. Otherwise, the test cases couldn\u0027t be recognized by tempest.",
+      "parentUuid": "1a622d24_34e77c42",
+      "range": {
+        "startLine": 25,
+        "startChar": 126,
+        "endLine": 25,
+        "endChar": 133
+      },
+      "revId": "45d97056b18fdb8008f5a54b3c35ba35b1be9a7a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
