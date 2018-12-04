@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_34e77c42",
+        "filename": "etc/testcase/functest.security.patrole_vxlan_dependent.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-12-04T10:23:03Z",
+      "side": 1,
+      "message": "Only one question here. Why do you use [admin]? What is the purpose of it?",
+      "range": {
+        "startLine": 25,
+        "startChar": 126,
+        "endLine": 25,
+        "endChar": 133
+      },
+      "revId": "45d97056b18fdb8008f5a54b3c35ba35b1be9a7a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
