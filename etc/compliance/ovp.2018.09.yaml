@@ -32,6 +32,7 @@ ovp.2018.09:
       - functest.tempest.vm_lifecycle
       - functest.tempest.network_scenario
       - functest.tempest.bgpvpn
+      - functest.security.patrole_vxlan_dependent
       - functest.bgpvpn.subnet_connectivity
       - functest.bgpvpn.tenant_separation
       - functest.bgpvpn.router_association

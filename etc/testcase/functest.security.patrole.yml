@@ -66,8 +66,6 @@ functest.security.patrole:
       - patrole_tempest_plugin.tests.api.network.test_floating_ips_rbac.FloatingIpsRbacTest.test_update_floating_ip
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_provider_network_type
-      - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_provider_segmentation_id
-      - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_router_external
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_shared
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_subnet
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_delete_network
