@@ -29,6 +29,7 @@ specification documents.
 
    highavailability/index
    security_patrole/index
+   security_patrole_vxlan_dependent/index
    snaps_smoke/index
    stress/index
    tempest_compute/index
