@@ -176,8 +176,6 @@ Implementation:
 `NetworksRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/network/test_networks_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network
-- patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_provider_network_type
-- patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_provider_segmentation_id
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_router_external
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_shared
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_subnet
