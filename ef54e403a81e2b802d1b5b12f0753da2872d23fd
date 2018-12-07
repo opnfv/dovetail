@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a622d24_3a4923d1",
+        "filename": "dovetail/report.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2018-12-07T12:57:15Z",
+      "side": 1,
+      "message": "Question: Are we going to use this for the ONAP results? Or 2019.01? or something else?",
+      "range": {
+        "startLine": 73,
+        "startChar": 32,
+        "endLine": 73,
+        "endChar": 41
+      },
+      "revId": "ef54e403a81e2b802d1b5b12f0753da2872d23fd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_ff883dc8",
         "filename": "etc/userconfig/env_config.sh.onap.sample",
         "patchSetId": 5
