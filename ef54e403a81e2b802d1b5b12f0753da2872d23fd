@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_2e5e0846",
+        "filename": "dovetail/report.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-12-10T02:23:49Z",
+      "side": 1,
+      "message": "Good catch. Now ONAP seems don\u0027t have the version as Dovetail uses its latest docker image. When it decides the version name, let\u0027s do some further modification.",
+      "parentUuid": "1a622d24_3a4923d1",
+      "range": {
+        "startLine": 73,
+        "startChar": 32,
+        "endLine": 73,
+        "endChar": 41
+      },
+      "revId": "ef54e403a81e2b802d1b5b12f0753da2872d23fd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_ff883dc8",
         "filename": "etc/userconfig/env_config.sh.onap.sample",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2018-12-06T13:12:54Z",
       "side": 1,
       "message": "\"Name of CSAR file. The CSAR file should be present....\"\n\n(, and is not a correct syntax)",
+      "range": {
+        "startLine": 3,
+        "startChar": 2,
+        "endLine": 3,
+        "endChar": 83
+      },
+      "revId": "ef54e403a81e2b802d1b5b12f0753da2872d23fd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_0e5b4c55",
+        "filename": "etc/userconfig/env_config.sh.onap.sample",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-12-10T02:23:49Z",
+      "side": 1,
+      "message": "will change this. Thanks.",
+      "parentUuid": "1a622d24_ff883dc8",
       "range": {
         "startLine": 3,
         "startChar": 2,
