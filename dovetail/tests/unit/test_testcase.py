@@ -411,20 +411,12 @@ class TestcaseTesting(unittest.TestCase):
                           tcase.Testcase.check_testarea(None))
 
     @patch('dovetail.testcase.dt_cfg')
-    def test_check_testarea_not_in_config(self, mock_config):
-        mock_config.dovetail_config = {'testarea_supported': []}
-        self.assertEquals((False, None),
-                          tcase.Testcase.check_testarea(['area']))
-
-    @patch('dovetail.testcase.dt_cfg')
     def test_check_testarea_full(self, mock_config):
-        mock_config.dovetail_config = {'testarea_supported': ['full']}
         self.assertEquals((True, ['full']),
                           tcase.Testcase.check_testarea(['full']))
 
     @patch('dovetail.testcase.dt_cfg')
     def test_check_testarea(self, mock_config):
-        mock_config.dovetail_config = {'testarea_supported': ['area']}
         self.assertEquals((True, ['area']),
                           tcase.Testcase.check_testarea(['area']))
 

@@ -19,19 +19,6 @@ testsuite_supported:
   - healthcheck
   - ovp.2018.09
   - onap.1.0.0
-# testarea supported, should adjust accordingly
-testarea_supported:
-  - ha
-  - healthcheck
-  - onap
-  - bgpvpn
-  - security
-  - snaps
-  - stress
-  - tempest
-  - vnf
-  - vping
-  - k8s
 
 # used for testcase cmd template in jinja2 format
 # we have two variables available now
