@@ -221,8 +221,6 @@ class Testcase(object):
             return True, area_full
 
         for area in testarea:
-            if area not in dt_cfg.dovetail_config['testarea_supported']:
-                return False, None
             if area == 'full':
                 return True, area_full
             area_no_duplicate.append(area)

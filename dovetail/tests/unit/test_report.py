@@ -173,7 +173,7 @@ class ReportTesting(unittest.TestCase):
         logger_obj = Mock()
         report = dt_report.Report()
         report.logger = logger_obj
-        testcase_list = ['t_a', 't_b']
+        testcase_list = ['ta.tb.tc', 'td.te.tf']
         duration = 42
         mock_config.dovetail_config = {
             'build_tag': 'build_tag'
@@ -197,7 +197,7 @@ class ReportTesting(unittest.TestCase):
             'duration': duration,
             'testcases_list': [
                 {
-                    'name': 't_a',
+                    'name': 'ta.tb.tc',
                     'result': 'PASS',
                     'objective': 'objective',
                     'mandatory': True,
@@ -207,7 +207,7 @@ class ReportTesting(unittest.TestCase):
                     }]
                 },
                 {
-                    'name': 't_b',
+                    'name': 'td.te.tf',
                     'result': 'Undefined',
                     'objective': '',
                     'mandatory': False,
@@ -250,10 +250,7 @@ class ReportTesting(unittest.TestCase):
         logger_obj = Mock()
         report = dt_report.Report()
         report.logger = logger_obj
-        testcase_list = ['t_a', 't_b']
-        mock_config.dovetail_config = {
-            'testarea_supported': testcase_list
-        }
+        testcase_list = ['ta.tb.tc', 'td.te.tf']
         duration = 42
         report_data = {
             'version': 'v2',
@@ -262,7 +259,7 @@ class ReportTesting(unittest.TestCase):
             'duration': 42.42,
             'testcases_list': [
                 {
-                    'name': 't_a',
+                    'name': 'ta.tb.tc',
                     'result': 'PASS',
                     'sub_testcase': [{
                         'name': 'subt_a',
@@ -270,7 +267,7 @@ class ReportTesting(unittest.TestCase):
                     }]
                 },
                 {
-                    'name': 't_b',
+                    'name': 'td.te.tf',
                     'result': 'SKIP'
                 }
             ]
@@ -280,11 +277,11 @@ class ReportTesting(unittest.TestCase):
         result = report.generate(testcase_list, duration)
         expected = self._produce_report_initial_text(report_data)
         expected += 'Pass Rate: 100.00% (1/1)\n'
-        expected += '%-25s  pass rate %.2f%%\n' % ('t_a:', 100)
-        expected += '-%-25s %s\n' % ('t_a', 'PASS')
+        expected += '%-25s  pass rate %.2f%%\n' % ('tb:', 100)
+        expected += '-%-25s %s\n' % ('ta.tb.tc', 'PASS')
         expected += '\t%-110s %s\n' % ('subt_a', 'PASS')
-        expected += '%-25s  all skipped\n' % 't_b'
-        expected += '-%-25s %s\n' % ('t_b', 'SKIP')
+        expected += '%-25s  all skipped\n' % 'te'
+        expected += '-%-25s %s\n' % ('td.te.tf', 'SKIP')
 
         mock_generate.assert_called_once_with(testcase_list, duration)
         mock_save.assert_called_once_with(report_data)
@@ -294,47 +291,10 @@ class ReportTesting(unittest.TestCase):
     @patch('dovetail.report.dt_cfg')
     @patch.object(dt_report.Report, 'generate_json')
     @patch.object(dt_report.Report, 'save_json_results')
-    def test_generate_error(self, mock_save, mock_generate, mock_config):
-        logger_obj = Mock()
-        report = dt_report.Report()
-        report.logger = logger_obj
-        mock_config.dovetail_config = {
-            'testarea_supported': []
-        }
-        testcase_list = ['t_a']
-        duration = 42
-        report_data = {
-            'version': 'v2',
-            'build_tag': '2.0.0',
-            'test_date': '2018-01-13 13:13:13 UTC',
-            'duration': 42.42,
-            'testcases_list': [{
-                'name': 't_a',
-                'result': 'PASS'
-            }]
-        }
-        mock_generate.return_value = report_data
-
-        result = report.generate(testcase_list, duration)
-        expected = None
-
-        mock_generate.assert_called_once_with(testcase_list, duration)
-        mock_save.assert_called_once_with(report_data)
-        report.logger.error.assert_called_once_with(
-            'Test case {} not in supported testarea.'
-            .format(report_data['testcases_list'][0]['name']))
-        self.assertEquals(expected, result)
-
-    @patch('dovetail.report.dt_cfg')
-    @patch.object(dt_report.Report, 'generate_json')
-    @patch.object(dt_report.Report, 'save_json_results')
     def test_generate_no_cases(self, mock_save, mock_generate, mock_config):
         logger_obj = Mock()
         report = dt_report.Report()
         report.logger = logger_obj
-        mock_config.dovetail_config = {
-            'testarea_supported': []
-        }
         duration = 42
         report_data = {
             'version': 'v2',

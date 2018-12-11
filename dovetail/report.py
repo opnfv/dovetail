@@ -121,22 +121,15 @@ class Report(object):
         sub_report = collections.OrderedDict()
         testcase_num = {}
         testcase_passnum = {}
-        for area in dt_cfg.dovetail_config['testarea_supported']:
-            sub_report[area] = ''
-            testcase_num[area] = 0
-            testcase_passnum[area] = 0
 
         testarea_scope = []
         for testcase in report_data['testcases_list']:
-            supported_areas = dt_cfg.dovetail_config['testarea_supported']
-            pattern = re.compile('|'.join(supported_areas))
-            area = pattern.findall(testcase['name'])
-            if not supported_areas or not area:
-                self.logger.error('Test case {} not in supported testarea.'
-                                  .format(testcase['name']))
-                return None
-            area = area[0]
-            testarea_scope.append(area)
+            area = testcase['name'].split('.')[1]
+            if area not in testarea_scope:
+                testarea_scope.append(area)
+                sub_report[area] = ''
+                testcase_num[area] = 0
+                testcase_passnum[area] = 0
             sub_report[area] += '-%-25s %s\n' %\
                 (testcase['name'], testcase['result'])
             if 'sub_testcase' in testcase:

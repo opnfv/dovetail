@@ -21,13 +21,43 @@ import utils.dovetail_utils as dt_utils
 import utils.dovetail_logger as dt_logger
 
 
-class DockerRunner(object):
+class Runner(object):
 
     logger = None
 
     def __init__(self, testcase):
         self.testcase = testcase
         self.logger.debug('Create runner: {}'.format(self.type))
+
+    def archive_logs(self):
+        result_path = os.path.join(os.environ['DOVETAIL_HOME'], 'results')
+        src_files = dt_utils.get_value_from_dict(
+            'report.source_archive_files', self.testcase.testcase)
+        dest_files = dt_utils.get_value_from_dict(
+            'report.dest_archive_files', self.testcase.testcase)
+        if not src_files and not dest_files:
+            return True
+        if not (src_files and dest_files) or len(src_files) != len(dest_files):
+            self.logger.error("Can't find corresponding 'result_dest_files' "
+                              "for 'result_source_files' with testcase {}"
+                              .format(self.testcase.name()))
+            return False
+        res = True
+        for index in range(0, len(src_files)):
+            src_file_path = os.path.join(result_path, src_files[index])
+            dest_file_path = os.path.join(result_path, dest_files[index])
+            if os.path.isfile(src_file_path):
+                os.renames(src_file_path, dest_file_path)
+            else:
+                self.logger.error("Can't find file {}.".format(src_file_path))
+                res = False
+        return res
+
+
+class DockerRunner(Runner):
+
+    def __init__(self, testcase):
+        super(DockerRunner, self).__init__(testcase)
 
     @classmethod
     def create_log(cls):
@@ -109,30 +139,6 @@ class DockerRunner(object):
 
         if not dt_cfg.dovetail_config['noclean']:
             container.clean()
-
-    def archive_logs(self):
-        result_path = os.path.join(os.environ['DOVETAIL_HOME'], 'results')
-        src_files = dt_utils.get_value_from_dict(
-            'report.source_archive_files', self.testcase.testcase)
-        dest_files = dt_utils.get_value_from_dict(
-            'report.dest_archive_files', self.testcase.testcase)
-        if not src_files and not dest_files:
-            return True
-        if not (src_files and dest_files) or len(src_files) != len(dest_files):
-            self.logger.error("Can't find corresponding 'result_dest_files' "
-                              "for 'result_source_files' with testcase {}"
-                              .format(self.testcase.name()))
-            return False
-        res = True
-        for index in range(0, len(src_files)):
-            src_file_path = os.path.join(result_path, src_files[index])
-            dest_file_path = os.path.join(result_path, dest_files[index])
-            if os.path.isfile(src_file_path):
-                os.renames(src_file_path, dest_file_path)
-            else:
-                self.logger.error("Can't find file {}.".format(src_file_path))
-                res = False
-        return res
 
     @staticmethod
     def _render(task_template, **kwargs):
@@ -239,19 +245,15 @@ class BottlenecksRunner(DockerRunner):
         self._update_config(testcase)
 
 
-class ShellRunner(object):
-
-    logger = None
+class ShellRunner(Runner):
 
     @classmethod
     def create_log(cls):
         cls.logger = dt_logger.Logger(__name__ + '.ShellRunner').getLogger()
 
     def __init__(self, testcase):
-        super(ShellRunner, self).__init__()
-        self.testcase = testcase
         self.type = 'shell'
-        self.logger.debug('Create runner: {}'.format(self.type))
+        super(ShellRunner, self).__init__(testcase)
 
     def run(self):
         testcase_passed = 'PASS'
