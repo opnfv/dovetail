@@ -168,13 +168,14 @@ class Container(object):
     def clean(self):
         cmd = ('sudo docker rm -f {}'.format(self.container_id))
         dt_utils.exec_cmd(cmd, self.logger)
-        if self.valid_type.lower() == 'bottlenecks':
-            containers = dt_utils.get_value_from_dict(
-                'extra_container', dt_cfg.dovetail_config[self.valid_type])
-            for container in containers:
-                if self.check_container_exist(container):
-                    cmd = ('sudo docker rm -f {}'.format(container))
-                    dt_utils.exec_cmd(cmd, self.logger)
+        extra_containers = dt_utils.get_value_from_dict(
+            'extra_container', dt_cfg.dovetail_config[self.valid_type])
+        if not extra_containers:
+            return
+        for container in extra_containers:
+            if self.check_container_exist(container):
+                cmd = ('sudo docker rm -f {}'.format(container))
+                dt_utils.exec_cmd(cmd, self.logger)
 
     def exec_cmd(self, sub_cmd, exit_on_error=False):
         if sub_cmd == "":

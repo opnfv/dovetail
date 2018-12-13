@@ -154,6 +154,13 @@ class ContainerTesting(unittest.TestCase):
             call('sudo docker rm -f None', self.logger),
             call('sudo docker rm -f container', self.logger)])
 
+    @patch('dovetail.container.dt_cfg')
+    @patch('dovetail.container.dt_utils')
+    def test_clean_no_extra_container(self, mock_utils, mock_config):
+        mock_utils.get_value_from_dict.return_value = None
+        self.container.clean()
+        mock_utils.get_value_from_dict.assert_called_once()
+
     @patch('dovetail.container.dt_utils')
     def test_check_container_exist_true(self, mock_utils):
         container_name = 'container'
