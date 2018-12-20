@@ -6,11 +6,9 @@ functest.tempest.ipv6_api:
     type: functest
     testcase: tempest_custom
     pre_condition:
-      - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
-      - 'cp /home/opnfv/userconfig/pre_config/tempest_custom_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
-    pre_copy:
-      src_file: tempest_custom.txt
-      dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
+      - 'cp /home/opnfv/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
+      - 'cp /home/opnfv/userconfig/tempest_custom_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+      - 'cp /home/opnfv/functest/results/tempest_custom.txt /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt'
   report:
     source_archive_files:
       - functest.log

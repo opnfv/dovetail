@@ -43,65 +43,6 @@ class TestRunnerTesting(unittest.TestCase):
 
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.dt_cfg')
-    def test_pre_copy_no_container(self, mock_config, mock_utils):
-        t_runner.FunctestRunner.create_log()
-        mock_config.dovetail_config = {'result_dir': 'result_dir'}
-        docker_runner = t_runner.FunctestRunner(self.testcase)
-
-        result = docker_runner.pre_copy(
-            container=None, dest_path=None,
-            src_file=None, exist_file=None)
-
-        docker_runner.logger.error.assert_called_once_with(
-            'Container instance is None.')
-        self.assertEquals(None, result)
-
-    @patch('dovetail.test_runner.dt_utils')
-    @patch('dovetail.test_runner.dt_cfg')
-    def test_pre_copy_no_dest_path(self, mock_config, mock_utils):
-        t_runner.FunctestRunner.create_log()
-        mock_config.dovetail_config = {'result_dir': 'result_dir'}
-        docker_runner = t_runner.FunctestRunner(self.testcase)
-
-        result = docker_runner.pre_copy(
-            container='container', dest_path=None,
-            src_file=None, exist_file=None)
-
-        docker_runner.logger.error.assert_called_once_with(
-            'There has no dest_path in {} config file.'.format(
-                self.testcase_name))
-        self.assertEquals(None, result)
-
-    @patch('dovetail.test_runner.dt_cfg')
-    @patch('dovetail.test_runner.os.path')
-    def test_pre_copy(self, mock_path, mock_config):
-        t_runner.FunctestRunner.create_log()
-        docker_runner = t_runner.FunctestRunner(self.testcase)
-        mock_config.dovetail_config = {
-            'functest': {
-                'result': {
-                    'dir': 'result_dir'
-                },
-                'config': {
-                    'dir': 'config_dir'
-                }
-            }
-        }
-        container_obj = Mock()
-        mock_path.join.return_value = 'join'
-
-        result = docker_runner.pre_copy(
-            container=container_obj, dest_path='dest_path',
-            src_file='src_file', exist_file='exist_file')
-
-        mock_path.join.assert_has_calls([
-            call('result_dir', 'src_file'),
-            call('config_dir', 'pre_config', 'exist_file')])
-        container_obj.copy_file.assert_called_once_with('join', 'dest_path')
-        self.assertEquals('dest_path', result)
-
-    @patch('dovetail.test_runner.dt_utils')
-    @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.Container')
     def test_run_offline_not_exist(self, mock_container, mock_config,
                                    mock_utils):
@@ -178,50 +119,10 @@ class TestRunnerTesting(unittest.TestCase):
         docker_runner.logger.error.assert_called_once_with(
             'Failed to create container.')
 
-    @patch('dovetail.test_runner.dt_cfg')
-    @patch('dovetail.test_runner.Container')
-    @patch.object(t_runner.DockerRunner, 'pre_copy')
-    def test_run__not_offline_src_file_no_precopy(self, mock_precopy,
-                                                  mock_container, mock_config):
-        t_runner.VnftestRunner.create_log()
-        docker_runner = t_runner.VnftestRunner(self.testcase)
-        mock_config.dovetail_config = {
-            'offline': False
-        }
-        container_obj = Mock()
-        docker_img_obj = Mock()
-        container_obj.get_docker_image.return_value = docker_img_obj
-        container_obj.pull_image.return_value = True
-        container_id = '12345'
-        container_obj.create.return_value = container_id
-        mock_container.return_value = container_obj
-        dest_path = 'dest_path'
-        src_file_name = 'src_file'
-        exist_file_name = 'exist_src_file'
-        self.testcase.pre_copy_path.side_effect = [
-            dest_path, src_file_name, exist_file_name]
-        mock_precopy.return_value = False
-
-        docker_runner.run()
-
-        mock_container.assert_called_once_with(self.testcase)
-        container_obj.get_docker_image.assert_called_once_with()
-        container_obj.pull_image.assert_called_once_with(docker_img_obj)
-        container_obj.create.assert_called_once_with(docker_img_obj)
-        docker_runner.logger.debug.assert_called_with(
-            'container id: {}'.format(container_id))
-        self.testcase.pre_copy_path.assert_has_calls([
-            call(dest_path),
-            call(src_file_name),
-            call(exist_file_name)])
-        mock_precopy.assert_called_once_with(
-            container_obj, dest_path, src_file_name, exist_file_name)
-
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.Container')
-    @patch.object(t_runner.DockerRunner, 'pre_copy')
-    def test_run__not_offline_no_prepare(self, mock_precopy, mock_container,
+    def test_run__not_offline_no_prepare(self, mock_container,
                                          mock_config, mock_utils):
         t_runner.FunctestRunner.create_log()
         mock_config.dovetail_config = {
@@ -238,12 +139,10 @@ class TestRunnerTesting(unittest.TestCase):
         container_id = '12345'
         container_obj.create.return_value = container_id
         mock_container.return_value = container_obj
-        self.testcase.pre_copy_path.return_value = None
         self.testcase.pre_condition.return_value = ['cmd']
         self.testcase.prepare_cmd.return_value = False
         self.testcase.post_condition.return_value = ['cmd']
         container_obj.exec_cmd.return_value = (1, 'error')
-        mock_precopy.return_value = False
 
         docker_runner.run()
 
@@ -253,10 +152,6 @@ class TestRunnerTesting(unittest.TestCase):
         container_obj.create.assert_called_once_with(docker_img_obj)
         docker_runner.logger.debug.assert_called_with(
             'container id: {}'.format(container_id))
-        self.testcase.pre_copy_path.assert_has_calls([
-            call('dest_path'),
-            call('src_file'),
-            call('exist_src_file')])
         self.testcase.pre_condition.assert_called_once_with()
         container_obj.exec_cmd.assert_has_calls([
             call('cmd'), call('cmd')])
@@ -271,8 +166,7 @@ class TestRunnerTesting(unittest.TestCase):
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.Container')
-    @patch.object(t_runner.DockerRunner, 'pre_copy')
-    def test_run__not_offline_prepare(self, mock_precopy, mock_container,
+    def test_run__not_offline_prepare(self, mock_container,
                                       mock_config, mock_utils):
         t_runner.FunctestRunner.create_log()
         mock_config.dovetail_config = {
@@ -288,13 +182,11 @@ class TestRunnerTesting(unittest.TestCase):
         container_id = '12345'
         container_obj.create.return_value = container_id
         mock_container.return_value = container_obj
-        self.testcase.pre_copy_path.return_value = None
         self.testcase.pre_condition.return_value = ['cmd']
         self.testcase.prepare_cmd.return_value = True
         self.testcase.post_condition.return_value = ['cmd']
         self.testcase.cmds = ['cmd']
         container_obj.exec_cmd.return_value = (1, 'error')
-        mock_precopy.return_value = False
 
         docker_runner.run()
 
@@ -304,10 +196,6 @@ class TestRunnerTesting(unittest.TestCase):
         container_obj.create.assert_called_once_with(docker_img_obj)
         docker_runner.logger.debug.assert_called_with(
             'container id: {}'.format(container_id))
-        self.testcase.pre_copy_path.assert_has_calls([
-            call('dest_path'),
-            call('src_file'),
-            call('exist_src_file')])
         self.testcase.pre_condition.assert_called_once_with()
         container_obj.exec_cmd.assert_has_calls([
             call('cmd'), call('cmd'), call('cmd')])
@@ -323,9 +211,9 @@ class TestRunnerTesting(unittest.TestCase):
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.os')
     def test_archive_logs_no_files(self, mock_os, mock_utils, mock_config):
-        t_runner.FunctestRunner.create_log()
+        t_runner.VnftestRunner.create_log()
         mock_config.dovetail_config = {'result_dir': 'result_dir'}
-        docker_runner = t_runner.FunctestRunner(self.testcase)
+        docker_runner = t_runner.VnftestRunner(self.testcase)
         mock_os.environ = {'DOVETAIL_HOME': 'dovetail_home'}
         mock_utils.get_value_from_dict.return_value = []
 

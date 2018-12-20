@@ -259,7 +259,8 @@ class RunTesting(unittest.TestCase):
         dovetail_home = 'dovetail_home'
         mock_os.environ = {'DOVETAIL_HOME': dovetail_home}
         mock_os.path.join.side_effect = [
-            'result_path', 'images_dir', 'pre_config_path', 'patch_set_path']
+            'result_path', 'images_dir', 'pre_config_path', 'patch_set_path',
+            'userconfig_dir']
         mock_config.dovetail_config = {}
 
         result = dt_run.get_result_path()
@@ -268,12 +269,14 @@ class RunTesting(unittest.TestCase):
             call(dovetail_home, 'results'),
             call(dovetail_home, 'images'),
             call(dovetail_home, 'pre_config'),
-            call(dovetail_home, 'patches')])
+            call(dovetail_home, 'patches'),
+            call(dovetail_home, 'userconfig')])
         expected_dict = {
             'result_dir': 'result_path',
             'images_dir': 'images_dir',
             'config_dir': 'pre_config_path',
-            'patch_dir': 'patch_set_path'}
+            'patch_dir': 'patch_set_path',
+            'userconfig_dir': 'userconfig_dir'}
         self.assertEquals(expected_dict, mock_config.dovetail_config)
         self.assertEquals(dovetail_home, result)
 
@@ -291,7 +294,7 @@ class RunTesting(unittest.TestCase):
     @patch('dovetail.run.os')
     def test_copy_userconfig_files(self, mock_os, mock_utils, mock_config,
                                    mock_constants):
-        mock_config.dovetail_config = {'config_dir': 'value'}
+        mock_config.dovetail_config = {'userconfig_dir': 'value'}
         mock_os.path.isdir.return_value = False
         mock_constants.USERCONF_PATH = 'value'
         logger = Mock()

@@ -239,9 +239,8 @@ class TestcaseTesting(unittest.TestCase):
     @patch('__builtin__.open')
     @patch('dovetail.testcase.os.path')
     @patch('dovetail.testcase.dt_cfg')
-    @patch.object(tcase.Testcase, 'pre_copy_path')
     @patch.object(tcase.Testcase, 'sub_testcase')
-    def test_mk_src_file(self, mock_sub_testcase, mock_pre_copy, mock_config,
+    def test_mk_src_file(self, mock_sub_testcase, mock_config,
                          mock_path, mock_open):
         testcase = tcase.Testcase(self.testcase_yaml)
         logger_obj = Mock()
@@ -249,8 +248,6 @@ class TestcaseTesting(unittest.TestCase):
         mock_config.dovetail_config = {'result_dir': 'value'}
         sub_test = 'sub_test'
         file_path = 'file_path'
-        testcase_src_file = 'testcase_src_file'
-        mock_pre_copy.return_value = testcase_src_file
         mock_path.join.return_value = file_path
         mock_sub_testcase.return_value = [sub_test]
         file_obj = Mock()
@@ -258,8 +255,7 @@ class TestcaseTesting(unittest.TestCase):
 
         result = testcase.mk_src_file()
 
-        mock_pre_copy.assert_called_once_with('src_file')
-        mock_path.join.assert_called_once_with('value', testcase_src_file)
+        mock_path.join.assert_called_once_with('value', 'tempest_custom.txt')
         mock_open.assert_called_once_with(file_path, 'w+')
         file_obj.write.assert_called_once_with(sub_test + '\n')
         logger_obj.debug.assert_has_calls([
@@ -270,9 +266,8 @@ class TestcaseTesting(unittest.TestCase):
     @patch('__builtin__.open')
     @patch('dovetail.testcase.os.path')
     @patch('dovetail.testcase.dt_cfg')
-    @patch.object(tcase.Testcase, 'pre_copy_path')
     @patch.object(tcase.Testcase, 'sub_testcase')
-    def test_mk_src_file_exception(self, mock_sub_testcase, mock_pre_copy,
+    def test_mk_src_file_exception(self, mock_sub_testcase,
                                    mock_config, mock_path, mock_open):
         testcase = tcase.Testcase(self.testcase_yaml)
         logger_obj = Mock()
@@ -280,16 +275,13 @@ class TestcaseTesting(unittest.TestCase):
         mock_config.dovetail_config = {'result_dir': 'value'}
         sub_test = 'sub_test'
         file_path = 'file_path'
-        testcase_src_file = 'testcase_src_file'
-        mock_pre_copy.return_value = testcase_src_file
         mock_path.join.return_value = file_path
         mock_sub_testcase.return_value = [sub_test]
         mock_open.return_value.__enter__.side_effect = Exception()
 
         result = testcase.mk_src_file()
 
-        mock_pre_copy.assert_called_once_with('src_file')
-        mock_path.join.assert_called_once_with('value', testcase_src_file)
+        mock_path.join.assert_called_once_with('value', 'tempest_custom.txt')
         mock_open.assert_called_once_with(file_path, 'w+')
         logger_obj.exception('Failed to save: {}'.format(file_path))
         self.assertEquals(None, result)
@@ -572,14 +564,13 @@ class TestcaseTesting(unittest.TestCase):
         mock_prepare.return_value = True
         mock_config.dovetail_config = {
             'no_api_validation': True,
-            'functest': {'config': {'dir': 'value'}}}
+            'functest': {'patches_dir': 'value'}}
         mock_path.join.return_value = 'patch_cmd'
 
         result = testcase.prepare_cmd('type')
 
         mock_path.join.assert_called_once_with(
-            'value', 'patches', 'functest', 'disable-api-validation',
-            'apply.sh')
+            'value', 'functest', 'disable-api-validation', 'apply.sh')
         logger_obj.debug.assert_called_once_with(
             'Updated list of commands for test run with '
             'disabled API response validation: {}'

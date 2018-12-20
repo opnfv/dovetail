@@ -136,21 +136,20 @@ class Testcase(object):
         return post_condition
 
     def mk_src_file(self):
-        testcase_src_file = self.pre_copy_path('src_file')
-        try:
-            file_path = os.path.join(dt_cfg.dovetail_config['result_dir'],
-                                     testcase_src_file)
-            with open(file_path, 'w+') as src_file:
-                if self.sub_testcase() is not None:
+        test_list = os.path.join(dt_cfg.dovetail_config['result_dir'],
+                                 'tempest_custom.txt')
+        if self.sub_testcase() is not None:
+            try:
+                with open(test_list, 'w+') as src_file:
                     for sub_test in self.sub_testcase():
                         self.logger.debug(
                             'Save test cases {}'.format(sub_test))
                         src_file.write(sub_test + '\n')
-            self.logger.debug('Save test cases to {}'.format(file_path))
-            return file_path
-        except Exception:
-            self.logger.exception('Failed to save: {}'.format(file_path))
-            return None
+                self.logger.debug('Save test cases to {}'.format(test_list))
+                return test_list
+            except Exception:
+                self.logger.exception('Failed to save: {}'.format(test_list))
+                return None
 
     def run(self):
         runner = TestRunnerFactory.create(self)
@@ -294,8 +293,7 @@ class FunctestTestcase(Testcase):
         # patch inside the functest container
         if dt_cfg.dovetail_config['no_api_validation']:
             patch_cmd = os.path.join(
-                dt_cfg.dovetail_config['functest']['config']['dir'],
-                'patches',
+                dt_cfg.dovetail_config['functest']['patches_dir'],
                 'functest',
                 'disable-api-validation',
                 'apply.sh')

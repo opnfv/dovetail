@@ -26,6 +26,4 @@ functest-k8s:
     - 'run_tests -t {{validate_testcase}} -r'
   post_condition:
     - 'echo test for postcondition in functest'
-  result:
-    dir: {{result_dir}}
   openrc: {{openrc_file}}
