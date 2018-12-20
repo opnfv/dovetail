@@ -17,8 +17,8 @@
     {% set cacert_volume = ' -v ' + cacert + ':' + cacert %}
 {% endif %}
 {% set openrc_file = '/etc/yardstick/openstack.creds' %}
+{% set pod_file = '/etc/yardstick/pod.yaml' %}
 {% set result_dir = '/tmp/yardstick' %}
-{% set config_dir = '/home/opnfv/userconfig' %}
 
 yardstick:
   image_name: opnfv/yardstick
@@ -29,21 +29,18 @@ yardstick:
   volumes:
     - '-v {{dovetail_home}}/pre_config/env_config.sh:{{openrc_file}}'
     - {{cacert_volume}}
-    - '-v {{dovetail_home}}:{{config_dir}}'
+    - '-v {{dovetail_home}}/pre_config/pod.yaml:{{pod_file}}'
+    - '-v {{dovetail_home}}/images:/home/opnfv/images'
     - '-v {{dovetail_home}}/results:{{result_dir}}'
-  config:
-    dir: {{config_dir}}
   pre_condition:
     - 'echo this is pre_condition'
   cmds:
     - "cd /home/opnfv/repos/yardstick && source {{openrc_file}} &&
          yardstick task start tests/opnfv/test_cases/{{validate_testcase}}.yaml
          --output-file {{result_dir}}/{{testcase}}.out
-         --task-args '{'file': '{{config_dir}}/pre_config/pod.yaml',
+         --task-args '{'file': '{{pod_file}}',
                        'attack_host': {{attack_host}},
                        'attack_process': {{attack_process}}}'"
   post_condition:
     - 'echo this is post_condition'
-  result:
-    dir: {{result_dir}}
   openrc: {{openrc_file}}

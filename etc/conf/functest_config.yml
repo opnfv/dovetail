@@ -17,7 +17,8 @@
 {% endif %}
 {% set openrc_file = '/home/opnfv/functest/conf/env_file' %}
 {% set result_dir = '/home/opnfv/functest/results' %}
-{% set config_dir = '/home/opnfv/userconfig' %}
+{% set userconfig_dir = '/home/opnfv/userconfig' %}
+{% set patches_dir = '/home/opnfv/patches' %}
 {% set images_dir = '/home/opnfv/functest/images' %}
 
 functest:
@@ -30,17 +31,16 @@ functest:
   volumes:
     - '-v {{dovetail_home}}/pre_config/env_config.sh:{{openrc_file}}'
     - {{cacert_volume}}
-    - '-v {{dovetail_home}}:{{config_dir}}'
+    - '-v {{dovetail_home}}/pre_config:/home/opnfv/pre_config'
+    - '-v {{dovetail_home}}/userconfig:{{userconfig_dir}}'
+    - '-v {{dovetail_home}}/patches:{{patches_dir}}'
     - '-v {{dovetail_home}}/results:{{result_dir}}'
     - '-v {{dovetail_home}}/images:{{images_dir}}'
-  config:
-    dir: {{config_dir}}
+  patches_dir: {{patches_dir}}
   pre_condition:
     - 'echo test for precondition in functest'
   cmds:
     - 'run_tests -t {{validate_testcase}} -r'
   post_condition:
     - 'echo test for postcondition in functest'
-  result:
-    dir: {{result_dir}}
   openrc: {{openrc_file}}

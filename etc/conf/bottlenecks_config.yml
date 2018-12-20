@@ -12,6 +12,7 @@
 {% endif %}
 {% set openrc_file = '/tmp/admin_rc.sh' %}
 {% set result_dir = '/home/opnfv/bottlenecks/results' %}
+{% set images_dir = '/home/opnfv/images' %}
 {% set config_dir = '/home/opnfv/userconfig' %}
 {% set image_file = '/tmp/yardstick.img' %}
 
@@ -24,15 +25,13 @@ bottlenecks:
          -e BUILD_TAG={{build_tag}}-{{testcase}}'
   volumes:
     - '-v /var/run/docker.sock:/var/run/docker.sock'
-    - '-v {{dovetail_home}}/results/bottlenecks:/tmp'
+  #  - '-v {{dovetail_home}}/results/bottlenecks:/tmp'
     - '-v {{dovetail_home}}/pre_config/env_config.sh:{{openrc_file}}'
     - {{cacert_volume}}
-    - '-v {{dovetail_home}}:{{config_dir}}'
+    - '-v {{dovetail_home}}/images:{{images_dir}}'
     - '-v {{dovetail_home}}/results:{{result_dir}}'
-  config:
-    dir: {{config_dir}}
   pre_condition:
-    - 'cp {{config_dir}}/images/ubuntu-16.04-server-cloudimg-amd64-disk1.img {{image_file}}'
+    - 'cp {{images_dir}}/ubuntu-16.04-server-cloudimg-amd64-disk1.img {{image_file}}'
   cmds:
     - 'python /home/opnfv/bottlenecks/testsuites/run_testsuite.py testcase {{validate_testcase}} False'
   post_condition:
@@ -40,8 +39,6 @@ bottlenecks:
     - 'cp /tmp/bottlenecks.log {{result_dir}}'
     - 'cp /tmp/bottlenecks.stress.ping.out {{result_dir}}'
     - 'rm {{image_file}}'
-  result:
-    dir: {{result_dir}}
   openrc: {{openrc_file}}
   extra_container:
     - 'Bottlenecks-Yardstick'

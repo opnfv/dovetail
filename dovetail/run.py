@@ -149,14 +149,16 @@ def get_result_path():
                                                         'pre_config')
     dt_cfg.dovetail_config['patch_dir'] = os.path.join(dovetail_home,
                                                        'patches')
+    dt_cfg.dovetail_config['userconfig_dir'] = os.path.join(dovetail_home,
+                                                            'userconfig')
     return dovetail_home
 
 
 def copy_userconfig_files(logger):
-    pre_config_path = dt_cfg.dovetail_config['config_dir']
-    if not os.path.isdir(pre_config_path):
-        os.makedirs(pre_config_path)
-    cmd = 'sudo cp -r %s/* %s' % (constants.USERCONF_PATH, pre_config_path)
+    userconfig_path = dt_cfg.dovetail_config['userconfig_dir']
+    if not os.path.isdir(userconfig_path):
+        os.makedirs(userconfig_path)
+    cmd = 'sudo cp -r %s/* %s' % (constants.USERCONF_PATH, userconfig_path)
     dt_utils.exec_cmd(cmd, logger, exit_on_error=False)
 
 
