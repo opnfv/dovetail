@@ -184,6 +184,9 @@ def update_deploy_scenario(logger, **kwargs):
     if 'deploy_scenario' in kwargs and kwargs['deploy_scenario'] is not None:
         os.environ['DEPLOY_SCENARIO'] = kwargs['deploy_scenario']
         logger.info("DEPLOY_SCENARIO : %s", os.environ['DEPLOY_SCENARIO'])
+    if 'ram_num' in kwargs and kwargs['ram_num'] is not None:
+        os.environ['RAM_NUM'] = kwargs['ram_num']
+        logger.info("RAM_NUM : {}".format(os.environ['RAM_NUM']))
 
 
 def check_hosts_file(logger):

@@ -1,0 +1,30 @@
+From f0443e9921efa7570dd3da1687ae94a8b442f5c2 Mon Sep 17 00:00:00 2001
+From: Dovetail <verified@opnfv.org>
+Date: Wed, 26 Dec 2018 03:36:36 +0000
+Subject: [PATCH] Allow change ram_num when enable DPDK
+
+Signed-off-by: Dovetail <verified@opnfv.org>
+---
+ utils/infra_setup/runner/yardstick.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/utils/infra_setup/runner/yardstick.py b/utils/infra_setup/runner/yardstick.py
+index 562e918..6071585 100644
+--- a/utils/infra_setup/runner/yardstick.py
++++ b/utils/infra_setup/runner/yardstick.py
+@@ -46,9 +46,12 @@ def yardstick_command_parser(debug, cidr, outfile, parameter):
+     image_name = config.bottlenecks_config["yardstick_image_name"]
+     parameter["image_name"] = image_name
+     DEPLOY_SCENARIO = os.getenv("DEPLOY_SCENARIO")
++    RAM_NUM = os.getenv("RAM_NUM")
+     if DEPLOY_SCENARIO:
+         if "ovs" in DEPLOY_SCENARIO:
+             parameter["dpdk_enabled"] = True
++            if RAM_NUM:
++                parameter["ram_num"] = RAM_NUM
+     LOG.info(parameter)
+     if parameter is not None:
+         cmd += " --task-args " + '"' + str(parameter) + '"'
+--
+2.7.4
+

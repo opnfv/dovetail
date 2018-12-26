@@ -3,29 +3,33 @@
 {% set validate_testcase = validate_testcase or '' %}
 {% set testcase = testcase or '' %}
 {% set deploy_scenario = deploy_scenario or 'unknown' %}
+{% set ram_num = ram_num or '512' %}
 {% set dovetail_home = dovetail_home or '' %}
 
 bottlenecks:
   image_name: opnfv/bottlenecks
   docker_tag: ovp-2.0.0
   opts: '-id --privileged=true'
-  envs: '-e DEPLOY_SCENARIO={{deploy_scenario}} -e Yardstick_TAG=stable -e OUTPUT_FILE={{testcase}}.out'
+  envs: '-e DEPLOY_SCENARIO={{deploy_scenario}} -e RAM_NUM={{ram_num}}
+         -e Yardstick_TAG=stable -e OUTPUT_FILE={{testcase}}.out'
   volumes:
     - '-v /var/run/docker.sock:/var/run/docker.sock'
+    - '-v {{dovetail_home}}/patches:/home/patches'
     - '-v {{dovetail_home}}/results/bottlenecks:/tmp'
   config:
     dir: '/home/opnfv/userconfig'
   pre_condition:
     - 'cp /home/opnfv/userconfig/images/ubuntu-16.04-server-cloudimg-amd64-disk1.img /tmp/yardstick.img'
+    - '/home/patches/bottlenecks/make-ram_num-configurable/apply.sh'
   cmds:
     - 'python /home/opnfv/bottlenecks/testsuites/run_testsuite.py testcase {{validate_testcase}} False'
   post_condition:
-    - 'mkdir -p /home/opnfv/bottlenecks/results'
-    - 'cp /tmp/bottlenecks.log /home/opnfv/bottlenecks/results'
-    - 'cp /tmp/bottlenecks.stress.ping.out /home/opnfv/bottlenecks/results'
+    - 'mkdir -p /home/opnfv/results'
+    - 'cp /tmp/bottlenecks.log /home/opnfv/results'
+    - 'cp /tmp/bottlenecks.stress.ping.out /home/opnfv/results'
     - 'rm /tmp/yardstick.img'
   result:
-    dir: '/home/opnfv/bottlenecks/results'
+    dir: '/home/opnfv/results'
   openrc: '/tmp/admin_rc.sh'
   extra_container:
     - 'Bottlenecks-Yardstick'
