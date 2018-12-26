@@ -626,12 +626,12 @@ the DEPLOY_SCENARIO environment parameter having as substring the feature name "
 
 Note for the users:
  - if their system uses DPDK, they should run with --deploy-scenario <xx-yy-ovs-zz>
-   (e.g. os-nosdn-ovs-ha)
- - this is an experimental feature
+   (e.g. os-nosdn-ovs-ha) and --ram-num <number>
+ - deploy-scenario is an experimental feature
 
 .. code-block:: bash
 
-   $ dovetail run --testcase functest.tempest.osinterop --deploy-scenario os-nosdn-ovs-ha
+   $ dovetail run --testcase functest.tempest.osinterop --deploy-scenario os-nosdn-ovs-ha --ram-num 1024
 
 By default, results are stored in local files on the Test Host at ``$DOVETAIL_HOME/results``.
 Each time the 'dovetail run' command is executed, the results in the aforementioned directory

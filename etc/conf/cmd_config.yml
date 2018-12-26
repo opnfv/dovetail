@@ -69,6 +69,10 @@ cli:
         flags:
           - '--deploy-scenario'
         help: 'Specify the DEPLOY_SCENARIO which will be used as input by each testcase respectively'
+      ramnum:
+        flags:
+          - '--ram-num'
+        help: "Specify the RAM_NUM if it's DPDK scenario. The default value is 512 if not set."
       mandatory:
         flags:
           - '--mandatory'

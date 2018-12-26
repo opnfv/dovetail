@@ -81,7 +81,7 @@ Commands List
 | dovetail run --report | -r <db_url>                                    | Package the results directory which can be used to upload to OVP web portal                       |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| dovetail run --deploy-scenario <deploy_scenario_name>                  | Specify the deploy scenario having as project name 'ovs'                                          |
+| dovetail run --deploy-scenario <scenario> --ram-num <number>           | Specify the deploy scenario having as project name 'ovs' following the RAM number of flavors.     |
 |                                                                        |                                                                                                   |
 +------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 | dovetail run --no-api-validation                                       | Disable strict API response validation                                                            |
@@ -255,6 +255,7 @@ Dovetail Run Commands
    -d, --debug             Flag for showing debug log on screen.
    --testcase TEXT         Compliance testcase. Specify option multiple times to include multiple test cases.
    --testarea TEXT         Compliance testarea within testsuite. Specify option multiple times to include multiple test areas.
+   --ram-num TEXT          Specify the RAM_NUM if it's DPDK scenario. The default value is 512 if not set.
    -s, --stop              Flag for stopping on test case failure.
    -n, --no-clean          Keep all Containers created for debuging.
    --no-api-validation     disable strict API response validation
@@ -264,12 +265,13 @@ Dovetail Run Commands
 
 .. code-block:: bash
 
-   root@1f230e719e44:~/dovetail/dovetail# dovetail run --testcase functest.vping.ssh --offline -r --deploy-scenario os-nosdn-ovs-ha
+   root@1f230e719e44:~/dovetail/dovetail# dovetail run --testcase functest.vping.ssh --offline -r --deploy-scenario os-nosdn-ovs-ha --ram-num 1024
    2017-10-12 14:57:51,278 - run - INFO - ================================================
    2017-10-12 14:57:51,278 - run - INFO - Dovetail compliance: ovp.2018.09!
    2017-10-12 14:57:51,278 - run - INFO - ================================================
    2017-10-12 14:57:51,278 - run - INFO - Build tag: daily-master-b80bca76-af5d-11e7-879a-0242ac110002
    2017-10-12 14:57:51,278 - run - INFO - DEPLOY_SCENARIO : os-nosdn-ovs-ha
+   2017-10-12 14:57:51,278 - run - INFO - RAM_NUM : 1024
    2017-10-12 14:57:51,336 - run - WARNING - There is no hosts file /home/dovetail/pre_config/hosts.yaml, may be some issues with domain name resolution.
    2017-10-12 14:57:51,336 - run - INFO - Get hardware info of all nodes list in file /home/cvp/pre_config/pod.yaml ...
    2017-10-12 14:57:51,336 - run - INFO - Hardware info of all nodes are stored in file /home/cvp/results/all_hosts_info.json.
