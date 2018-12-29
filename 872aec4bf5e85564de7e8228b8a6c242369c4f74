@@ -22,6 +22,30 @@
       "revId": "872aec4bf5e85564de7e8228b8a6c242369c4f74",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_d1d8c855",
+        "filename": "etc/conf/onap-vtp_config.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2018-12-29T01:29:47Z",
+      "side": 1,
+      "message": "I tried to pull it with tag 2.0.5, but couldn\u0027t find that image.",
+      "parentUuid": "1a622d24_1126c0b7",
+      "range": {
+        "startLine": 12,
+        "startChar": 13,
+        "endLine": 12,
+        "endChar": 19
+      },
+      "revId": "872aec4bf5e85564de7e8228b8a6c242369c4f74",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
