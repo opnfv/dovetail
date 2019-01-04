@@ -94,6 +94,30 @@
       "revId": "872aec4bf5e85564de7e8228b8a6c242369c4f74",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_e087ef0d",
+        "filename": "etc/conf/onap-vtp_config.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5887
+      },
+      "writtenOn": "2019-01-04T02:26:27Z",
+      "side": 1,
+      "message": "Hi Xudan, today the 2.0.5 tag is released for cli. can you please check and revert the tag to 2.0.5. thanks",
+      "parentUuid": "1a622d24_2c21e39f",
+      "range": {
+        "startLine": 12,
+        "startChar": 13,
+        "endLine": 12,
+        "endChar": 19
+      },
+      "revId": "872aec4bf5e85564de7e8228b8a6c242369c4f74",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
