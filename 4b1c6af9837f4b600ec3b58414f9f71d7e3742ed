@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_12050f7a",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2019-01-23T20:09:30Z",
+      "side": 1,
+      "message": "We should include some descriptions about testing of HEAT vs. TOSCA templates and make the user aware the commands from Dovetail are different (I\u0027m assuming that will be the case).",
+      "range": {
+        "startLine": 119,
+        "startChar": 4,
+        "endLine": 119,
+        "endChar": 54
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
