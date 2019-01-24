@@ -132,6 +132,7 @@ class DockerRunner(Runner):
         config_item['cacert'] = os.getenv('OS_CACERT')
         config_item['host_url'] = os.getenv('HOST_URL')
         config_item['csar_file'] = os.getenv('CSAR_FILE')
+        config_item['heat_templates_dir'] = os.getenv('VNF_DIRECTORY')
         return config_item
 
     def _update_config(self, testcase, update_pod=True):
@@ -292,6 +293,22 @@ class OnapVtpRunner(DockerRunner):
         self._update_config(testcase, update_pod=False)
 
 
+class OnapVvpRunner(DockerRunner):
+
+    config_file_name = 'onap-vvp_config.yml'
+
+    def __init__(self, testcase):
+        self.type = 'onap-vvp'
+        super(OnapVvpRunner, self).__init__(testcase)
+        env_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
+                                dt_cfg.dovetail_config['env_file'])
+        if not os.path.isfile(env_file):
+            self.logger.error('File {} does not exist.'.format(env_file))
+            return
+        dt_utils.source_env(env_file)
+        self._update_config(testcase, update_pod=False)
+
+
 class TestRunnerFactory(object):
 
     TEST_RUNNER_MAP = {
@@ -301,7 +318,8 @@ class TestRunnerFactory(object):
         "shell": ShellRunner,
         "vnftest": VnftestRunner,
         "functest-k8s": FunctestK8sRunner,
-        "onap-vtp": OnapVtpRunner
+        "onap-vtp": OnapVtpRunner,
+        "onap-vvp": OnapVvpRunner
     }
 
     @classmethod

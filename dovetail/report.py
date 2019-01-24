@@ -29,7 +29,8 @@ from testcase import Testcase
 class Report(object):
 
     results = {'functest': {}, 'yardstick': {}, 'functest-k8s': {},
-               'bottlenecks': {}, 'shell': {}, 'vnftest': {}, 'onap-vtp': {}}
+               'bottlenecks': {}, 'shell': {}, 'vnftest': {}, 'onap-vtp': {},
+               'onap-vvp': {}}
 
     logger = None
 
@@ -488,15 +489,48 @@ class OnapVtpCrawler(Crawler):
         return json_results
 
 
+class OnapVvpCrawler(Crawler):
+
+    logger = None
+
+    def __init__(self):
+        self.type = 'onap-vvp'
+        self.logger.debug('Create crawler: {}'.format(self.type))
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = dt_logger.Logger(__name__ + '.OnapVvpCrawler').getLogger()
+
+    def crawl(self, testcase, file_path):
+        return self.crawl_from_file(testcase, file_path)
+
+    def crawl_from_file(self, testcase, file_path):
+        if not os.path.exists(file_path):
+            self.logger.error('Result file not found: {}'.format(file_path))
+            return None
+        criteria = 'PASS'
+        with open(file_path, 'r') as f:
+            status = int(f.read())
+            if status == 1:
+                criteria = 'FAIL'
+        json_results = {'criteria': criteria}
+
+        testcase.set_results(json_results)
+        return json_results
+
+
 class CrawlerFactory(object):
 
-    CRAWLER_MAP = {'functest': FunctestCrawler,
-                   'yardstick': YardstickCrawler,
-                   'bottlenecks': BottlenecksCrawler,
-                   'vnftest': VnftestCrawler,
-                   'shell': ShellCrawler,
-                   'functest-k8s': FunctestK8sCrawler,
-                   'onap-vtp': OnapVtpCrawler}
+    CRAWLER_MAP = {
+        'functest': FunctestCrawler,
+        'yardstick': YardstickCrawler,
+        'bottlenecks': BottlenecksCrawler,
+        'vnftest': VnftestCrawler,
+        'shell': ShellCrawler,
+        'functest-k8s': FunctestK8sCrawler,
+        'onap-vtp': OnapVtpCrawler,
+        'onap-vvp': OnapVvpCrawler
+    }
 
     @classmethod
     def create(cls, type):
@@ -667,15 +701,35 @@ class OnapVtpChecker(object):
         return
 
 
+class OnapVvpChecker(object):
+
+    logger = None
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = dt_logger.Logger(__name__ + '.OnapVvpChecker').getLogger()
+
+    @staticmethod
+    def check(testcase, result):
+        if not result:
+            testcase.passed('FAIL')
+        else:
+            testcase.passed(result['criteria'])
+        return
+
+
 class CheckerFactory(object):
 
-    CHECKER_MAP = {'functest': FunctestChecker,
-                   'yardstick': YardstickChecker,
-                   'bottlenecks': BottlenecksChecker,
-                   'shell': ShellChecker,
-                   'vnftest': VnftestChecker,
-                   'functest-k8s': FunctestK8sChecker,
-                   'onap-vtp': OnapVtpChecker}
+    CHECKER_MAP = {
+        'functest': FunctestChecker,
+        'yardstick': YardstickChecker,
+        'bottlenecks': BottlenecksChecker,
+        'shell': ShellChecker,
+        'vnftest': VnftestChecker,
+        'functest-k8s': FunctestK8sChecker,
+        'onap-vtp': OnapVtpChecker,
+        'onap-vvp': OnapVvpChecker
+    }
 
     @classmethod
     def create(cls, type):

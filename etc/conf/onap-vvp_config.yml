@@ -1,0 +1,19 @@
+---
+
+{% set build_tag = build_tag or '' %}
+{% set heat_templates_dir = heat_templates_dir or '' %}
+{% set result_dir = '/output' %}
+
+onap-vvp:
+  image_name: morganrol/onap-vvp-lint
+  docker_tag: latest
+  opts: '-td '
+  volumes:
+    - '-v {{dovetail_home}}/pre_config/{{heat_templates_dir}}:/heat_files'
+    - '-v {{dovetail_home}}/results:{{result_dir}}'
+  pre_condition:
+    - 'echo this is pre_condition'
+  cmds:
+    - '/run_vvp.sh /heat_files'
+  post_condition:
+    - 'echo this is post_condition'
