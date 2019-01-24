@@ -358,6 +358,15 @@ class OnapVtpTestcase(Testcase):
         self.type = 'onap-vtp'
 
 
+class OnapVvpTestcase(Testcase):
+
+    validate_testcase_list = {}
+
+    def __init__(self, testcase_yaml):
+        super(OnapVvpTestcase, self).__init__(testcase_yaml)
+        self.type = 'onap-vvp'
+
+
 class TestcaseFactory(object):
     TESTCASE_TYPE_MAP = {
         'functest': FunctestTestcase,
@@ -366,7 +375,8 @@ class TestcaseFactory(object):
         'shell': ShellTestcase,
         'vnftest': VnftestTestcase,
         'functest-k8s': FunctestK8sTestcase,
-        'onap-vtp': OnapVtpTestcase
+        'onap-vtp': OnapVtpTestcase,
+        'onap-vvp': OnapVvpTestcase
     }
 
     @classmethod

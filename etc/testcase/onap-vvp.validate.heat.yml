@@ -1,0 +1,16 @@
+---
+onap-vvp.validate.heat:
+  name: onap-vvp.validate.heat
+  objective: onap heat template validation
+  validate:
+    type: onap-vvp
+    testcase: ice_validator
+  report:
+    source_archive_files:
+      - failures
+      - report.json
+    dest_archive_files:
+      - onap-vvp_logs/failures
+      - onap-vvp_logs/report.json
+    check_results_file: onap-vvp_logs/report.json
+    sub_testcase_list:

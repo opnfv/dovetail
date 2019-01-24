@@ -323,7 +323,8 @@ class TestRunnerTesting(unittest.TestCase):
     @patch('dovetail.test_runner.os')
     def test_add_testcase_info(self, mock_os, mock_config):
         mock_os.getenv.side_effect = ['os_insecure', 'dovetail_home', 'debug',
-                                      'os_cacert', 'host_url', 'csar_file']
+                                      'os_cacert', 'host_url', 'csar_file',
+                                      'heat_templates_dir']
         mock_os.environ = {'DEPLOY_SCENARIO': 'deploy_scenario'}
         mock_config.dovetail_config = {'build_tag': 'build_tag'}
 
@@ -333,14 +334,17 @@ class TestRunnerTesting(unittest.TestCase):
             'deploy_scenario': 'deploy_scenario',
             'dovetail_home': 'dovetail_home', 'debug': 'debug',
             'build_tag': 'build_tag', 'cacert': 'os_cacert',
-            'host_url': 'host_url', 'csar_file': 'csar_file'}
+            'host_url': 'host_url', 'csar_file': 'csar_file',
+            'heat_templates_dir': 'heat_templates_dir'
+        }
         result = t_runner.FunctestRunner._add_testcase_info(self.testcase)
 
         self.testcase.validate_testcase.assert_called_once_with()
         self.testcase.name.assert_called_once_with()
         mock_os.getenv.assert_has_calls([
             call('OS_INSECURE'), call('DOVETAIL_HOME'), call('DEBUG'),
-            call('OS_CACERT')])
+            call('OS_CACERT'), call('HOST_URL'), call('CSAR_FILE'),
+            call('VNF_DIRECTORY')])
         self.assertEquals(expected, result)
 
     @patch('dovetail.test_runner.dt_utils')
@@ -668,6 +672,38 @@ class TestRunnerTesting(unittest.TestCase):
         mock_path.isfile.return_value = True
 
         t_runner.OnapVtpRunner(self.testcase)
+
+        mock_path.join.assert_has_calls([call('one', 'two')])
+        mock_path.isfile.assert_called_once()
+        mock_utils.source_env.assert_called_once_with('env_file')
+
+    @patch('dovetail.test_runner.dt_utils')
+    @patch('dovetail.test_runner.os.path')
+    @patch('dovetail.test_runner.dt_cfg')
+    def test_init_onapvvprunner_no_env_file(self, mock_config, mock_path,
+                                            mock_utils):
+        t_runner.OnapVvpRunner.create_log()
+        mock_path.join.side_effect = ['env_file']
+        mock_config.dovetail_config = {'config_dir': 'one', 'env_file': 'two'}
+        mock_path.isfile.return_value = False
+
+        docker_runner = t_runner.OnapVvpRunner(self.testcase)
+
+        mock_path.join.assert_has_calls([call('one', 'two')])
+        mock_path.isfile.assert_called_once()
+        docker_runner.logger.error.assert_called_once_with(
+            'File env_file does not exist.')
+
+    @patch('dovetail.test_runner.dt_utils')
+    @patch('dovetail.test_runner.os.path')
+    @patch('dovetail.test_runner.dt_cfg')
+    def test_init_onapvvprunner(self, mock_config, mock_path, mock_utils):
+        t_runner.OnapVvpRunner.create_log()
+        mock_path.join.side_effect = ['env_file']
+        mock_config.dovetail_config = {'config_dir': 'one', 'env_file': 'two'}
+        mock_path.isfile.return_value = True
+
+        t_runner.OnapVvpRunner(self.testcase)
 
         mock_path.join.assert_has_calls([call('one', 'two')])
         mock_path.isfile.assert_called_once()

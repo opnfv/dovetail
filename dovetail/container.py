@@ -90,8 +90,11 @@ class Container(object):
         if not config:
             return None
 
+        shell_bin = '' \
+            if self.valid_type.lower() == "onap-vvp" else '/bin/bash'
+
         cmd = 'sudo docker run {opts} {envs} {volumes} {config} ' \
-              '{hosts_config} {docker_image} /bin/bash'.format(**locals())
+              '{hosts_config} {docker_image} {shell_bin}'.format(**locals())
         ret, container_id = dt_utils.exec_cmd(cmd, self.logger)
         if ret != 0:
             return None
@@ -177,10 +180,12 @@ class Container(object):
                     dt_utils.exec_cmd(cmd, self.logger)
 
     def exec_cmd(self, sub_cmd, exit_on_error=False):
+        shell_bin = '/bin/ash' \
+            if self.valid_type.lower() == "onap-vvp" else '/bin/bash'
         if sub_cmd == "":
             return (1, 'sub_cmd is empty')
-        cmd = 'sudo docker exec {} /bin/bash -c "{}"'.format(self.container_id,
-                                                             sub_cmd)
+        cmd = 'sudo docker exec {} {} -c "{}"'.format(self.container_id,
+                                                      shell_bin, sub_cmd)
         return dt_utils.exec_cmd(cmd, self.logger, exit_on_error)
 
     def copy_file(self, src_path, dest_path, exit_on_error=False):

@@ -120,7 +120,7 @@ class TestcaseTesting(unittest.TestCase):
         self.assertEquals(testcase.testcase, result)
 
     def test_objective(self):
-        testcase = tcase.Testcase(self.testcase_yaml)
+        testcase = tcase.OnapVvpTestcase(self.testcase_yaml)
         testcase.testcase['objective'] = 'objective'
 
         result = testcase.objective()

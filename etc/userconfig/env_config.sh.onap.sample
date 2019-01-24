@@ -2,3 +2,7 @@ export HOST_URL="http://<docker host ip>:8702"
 
 # Absolute path of CSAR file, and should be copied to vtp container.
 export CSAR_FILE="/opt/test.csar"
+
+# Absolute path of VNF directory, considering DOVETAIL_HOME as root.
+# This path must be present inside the DOVETAIL_HOME in order to run vvp validation scripts.
+export VNF_DIRECTORY="/opt/vnf_dir"
