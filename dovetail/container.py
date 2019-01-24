@@ -70,6 +70,9 @@ class Container(object):
         project_cfg = dovetail_config[self.valid_type]
 
         opts = dt_utils.get_value_from_dict('opts', project_cfg)
+        shell = dt_utils.get_value_from_dict('shell', project_cfg)
+        if not shell:
+            return None
         envs = dt_utils.get_value_from_dict('envs', project_cfg)
         volumes_list = dt_utils.get_value_from_dict('volumes', project_cfg)
         opts = ' ' if not opts else opts
@@ -91,7 +94,7 @@ class Container(object):
             return None
 
         cmd = 'sudo docker run {opts} {envs} {volumes} {config} ' \
-              '{hosts_config} {docker_image} /bin/bash'.format(**locals())
+              '{hosts_config} {docker_image} {shell}'.format(**locals())
         ret, container_id = dt_utils.exec_cmd(cmd, self.logger)
         if ret != 0:
             return None
@@ -179,8 +182,13 @@ class Container(object):
     def exec_cmd(self, sub_cmd, exit_on_error=False):
         if sub_cmd == "":
             return (1, 'sub_cmd is empty')
-        cmd = 'sudo docker exec {} /bin/bash -c "{}"'.format(self.container_id,
-                                                             sub_cmd)
+        dovetail_config = dt_cfg.dovetail_config
+        project_cfg = dovetail_config[self.valid_type]
+        shell = dt_utils.get_value_from_dict('shell', project_cfg)
+        if not shell:
+            return (1, 'shell is empty')
+        cmd = 'sudo docker exec {} {} -c "{}"'.format(self.container_id, shell,
+                                                      sub_cmd)
         return dt_utils.exec_cmd(cmd, self.logger, exit_on_error)
 
     def copy_file(self, src_path, dest_path, exit_on_error=False):

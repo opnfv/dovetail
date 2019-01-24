@@ -1,0 +1,20 @@
+---
+
+{% set build_tag = build_tag or '' %}
+{% set heat_templates_dir = heat_templates_dir or '' %}
+{% set result_dir = '/reports' %}
+
+onap-vvp:
+  image_name: nexus3.onap.org:10001/onap/vvp/validation-scripts
+  docker_tag: latest
+  opts: '-td --entrypoint=""'
+  shell: '/bin/ash'
+  volumes:
+    - '-v {{heat_templates_dir}}:/template'
+    - '-v {{dovetail_home}}/results:{{result_dir}}'
+  pre_condition:
+    - 'echo this is pre_condition'
+  cmds:
+    - 'pytest --template-directory=/template --output-directory=/reports --report-format=json --continue-on-failure'
+  post_condition:
+    - 'echo this is post_condition'

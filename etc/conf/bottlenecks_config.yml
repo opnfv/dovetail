@@ -20,6 +20,7 @@ bottlenecks:
   image_name: opnfv/bottlenecks
   docker_tag: latest
   opts: '-id --privileged=true'
+  shell: '/bin/bash'
   envs: '-e DEPLOY_SCENARIO={{deploy_scenario}} -e Yardstick_TAG=stable
          -e OUTPUT_FILE={{testcase}}.out -e CI_DEBUG={{debug}}
          -e BUILD_TAG={{build_tag}}-{{testcase}}'
