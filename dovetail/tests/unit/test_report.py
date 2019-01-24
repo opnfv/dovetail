@@ -44,7 +44,8 @@ class ReportTesting(unittest.TestCase):
         dt_report.Report.logger = None
         dt_report.Report.results = {
             'functest': {}, 'yardstick': {}, 'functest-k8s': {},
-            'bottlenecks': {}, 'shell': {}, 'vnftest': {}, 'onap-vtp': {}}
+            'bottlenecks': {}, 'shell': {}, 'vnftest': {}, 'onap-vtp': {},
+            'onap-vvp': {}}
 
     def _produce_report_initial_text(self, report_data):
         report_txt = ''
