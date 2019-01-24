@@ -1,4 +1,12 @@
+## Special environment parameters for TOSCA validation tests.
+
+# The url under which the VNF SDK container is accessible through the host.
 export HOST_URL="http://<docker host ip>:8702"
 
 # Absolute path of CSAR file, and should be copied to vtp container.
 export CSAR_FILE="/opt/test.csar"
+
+## Special environment parameters for Heat validation tests.
+
+# The VNF directory should be put at $DOVETAIL_HOME/pre_config.
+export VNF_DIRECTORY="/path/to/pre_config/vnf_dir"

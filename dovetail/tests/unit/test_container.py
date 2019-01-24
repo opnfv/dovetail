@@ -126,14 +126,28 @@ class ContainerTesting(unittest.TestCase):
 
         self.assertEqual(expected, result)
 
+    @patch('dovetail.container.dt_cfg')
     @patch('dovetail.container.dt_utils')
-    def test_exec_cmd(self, mock_utils):
+    def test_exec_cmd(self, mock_utils, mock_config):
         expected = (0, 'success')
         mock_utils.exec_cmd.return_value = expected
+        mock_utils.get_value_from_dict.return_value = 'shell'
+        mock_config.dovetail_config = {'bottlenecks': 'value'}
         result = self.container.exec_cmd('command')
 
         mock_utils.exec_cmd.assert_called_once_with(
-            'sudo docker exec None /bin/bash -c "command"', self.logger, False)
+            'sudo docker exec None shell -c "command"', self.logger, False)
+        self.assertEqual(expected, result)
+
+    @patch('dovetail.container.dt_cfg')
+    @patch('dovetail.container.dt_utils')
+    def test_exec_cmd_no_shell(self, mock_utils, mock_config):
+        expected = (1, 'shell is empty')
+        mock_utils.exec_cmd.return_value = expected
+        mock_utils.get_value_from_dict.return_value = None
+        mock_config.dovetail_config = {'bottlenecks': 'value'}
+        result = self.container.exec_cmd('command')
+
         self.assertEqual(expected, result)
 
     @patch('dovetail.container.dt_cfg')
@@ -455,7 +469,7 @@ class ContainerTesting(unittest.TestCase):
         docker_image = 'docker_image'
         container_id = 'container_id'
         mock_utils.get_value_from_dict.side_effect = [
-            'opts', 'envs', ['volume_one', 'volume_two']]
+            'opts', 'shell', 'envs', ['volume_one', 'volume_two']]
         mock_utils.get_hosts_info.return_value = 'host_info'
         mock_utils.exec_cmd.return_value = (0, container_id)
         project_config = {}
@@ -466,13 +480,29 @@ class ContainerTesting(unittest.TestCase):
 
         mock_utils.get_value_from_dict.assert_has_calls([
             call('opts', project_config),
+            call('shell', project_config),
             call('envs', project_config),
             call('volumes', project_config)])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
         mock_utils.exec_cmd.assert_called_once_with(
             'sudo docker run opts envs volume_one volume_two   host_info '
-            'docker_image /bin/bash', self.logger)
+            'docker_image shell', self.logger)
         self.assertEquals(expected, result)
+
+    @patch('dovetail.container.dt_utils')
+    @patch('dovetail.container.dt_cfg')
+    def test_create_no_shell(self, mock_config, mock_utils):
+        docker_image = 'docker_image'
+        mock_config.dovetail_config = {'bottlenecks': 'value'}
+        mock_utils.get_value_from_dict.side_effect = ['opts', None]
+        mock_utils.get_hosts_info.return_value = 'host_info'
+
+        result = self.container.create(docker_image)
+
+        mock_utils.get_value_from_dict.assert_has_calls([
+            call('opts', 'value'),
+            call('shell', 'value')])
+        self.assertEquals(None, result)
 
     @patch('dovetail.container.dt_utils')
     @patch('dovetail.container.dt_cfg')
@@ -480,7 +510,7 @@ class ContainerTesting(unittest.TestCase):
     def test_create_error(self, mock_getenv, mock_config, mock_utils):
         docker_image = 'docker_image'
         mock_utils.get_value_from_dict.side_effect = [
-            'opts', 'envs', ['volume_one']]
+            'opts', 'shell', 'envs', ['volume_one']]
         mock_getenv.side_effect = ['True', 'dovetail_home', None, 'True']
         mock_utils.get_hosts_info.return_value = 'host_info'
         mock_utils.check_https_enabled.return_value = True
@@ -491,12 +521,13 @@ class ContainerTesting(unittest.TestCase):
 
         mock_utils.get_value_from_dict.assert_has_calls([
             call('opts', project_config),
+            call('shell', project_config),
             call('envs', project_config),
             call('volumes', project_config)])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
         mock_utils.exec_cmd.assert_called_once_with(
             'sudo docker run opts envs volume_one   host_info '
-            'docker_image /bin/bash', self.logger)
+            'docker_image shell', self.logger)
         self.assertEquals(None, result)
 
     @patch('dovetail.container.dt_utils')
@@ -509,7 +540,7 @@ class ContainerTesting(unittest.TestCase):
         docker_image = 'docker_image'
         container_id = 'container_id'
         mock_utils.get_value_from_dict.side_effect = [
-            'opts', 'envs', ['volume_one']]
+            'opts', 'shell', 'envs', ['volume_one']]
         mock_getenv.side_effect = ['False', 'dovetail_home', 'cacert', 'True']
         mock_setvnfconf.return_value = 'vnftest_config'
         mock_utils.get_hosts_info.return_value = 'host_info'
@@ -524,6 +555,7 @@ class ContainerTesting(unittest.TestCase):
 
         mock_utils.get_value_from_dict.assert_has_calls([
             call('opts', project_config),
+            call('shell', project_config),
             call('envs', project_config),
             call('volumes', project_config)])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
@@ -531,7 +563,7 @@ class ContainerTesting(unittest.TestCase):
         mock_setvnffile.assert_called_once_with(container_id)
         mock_utils.exec_cmd.assert_called_once_with(
             'sudo docker run opts envs volume_one vnftest_config host_info '
-            'docker_image /bin/bash',
+            'docker_image shell',
             self.logger)
         self.assertEquals(expected, result)
 
@@ -543,7 +575,7 @@ class ContainerTesting(unittest.TestCase):
                                   mock_getenv, mock_config, mock_utils):
         docker_image = 'docker_image'
         mock_utils.get_value_from_dict.side_effect = [
-            'opts', 'envs', ['volume_one']]
+            'opts', 'shell', 'envs', ['volume_one']]
         mock_getenv.return_value = 'True'
         mock_setvnfconf.return_value = None
         mock_config.dovetail_config = {
@@ -556,6 +588,7 @@ class ContainerTesting(unittest.TestCase):
 
         mock_utils.get_value_from_dict.assert_has_calls([
             call('opts', 'value'),
+            call('shell', 'value'),
             call('envs', 'value'),
             call('volumes', 'value')])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)

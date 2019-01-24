@@ -11,6 +11,7 @@ onap-vtp:
   image_name: nexus3.onap.org:10001/onap/cli
   docker_tag: 2.0.5
   opts: '-td '
+  shell: '/bin/bash'
   envs: '-e OPEN_CLI_MODE=daemon -e BUILD_TAG={{build_tag}}-{{testcase}}
          -e OPEN_CLI_PRODUCT_IN_USE=onap-vtp'
   volumes:

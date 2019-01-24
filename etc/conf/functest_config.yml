@@ -25,6 +25,7 @@ functest:
   image_name: opnfv/functest-smoke
   docker_tag: gambia
   opts: '-id --privileged=true'
+  shell: '/bin/bash'
   envs: '{{os_verify}} -e INSTALLER_TYPE=unknown -e DEPLOY_SCENARIO={{deploy_scenario}} -e NODE_NAME=unknown
          -e TEST_DB_URL=file://{{result_dir}}/functest_results.txt
          -e CI_DEBUG={{debug}} -e BUILD_TAG={{build_tag}}-{{testcase}}'

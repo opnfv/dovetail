@@ -3,6 +3,7 @@ vnftest:
   image_name: onap/vnfsdk/vnftest
   docker_tag: latest
   opts: '-id --privileged=true'
+  shell: '/bin/bash'
   config:
     dir: '/home/onap/userconfig'
   pre_condition:

@@ -13,6 +13,7 @@ functest-k8s:
   image_name: opnfv/functest-kubernetes-healthcheck
   docker_tag: gambia
   opts: '-id'
+  shell: '/bin/bash'
   envs: '-e INSTALLER_TYPE=unknown -e DEPLOY_SCENARIO=k8-deploy -e NODE_NAME=unknown
          -e TEST_DB_URL=file:///home/opnfv/functest/results/functest_results.txt
          -e CI_DEBUG={{debug}} -e BUILD_TAG={{build_tag}}-{{testcase}}'

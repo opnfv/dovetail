@@ -24,6 +24,7 @@ yardstick:
   image_name: opnfv/yardstick
   docker_tag: latest
   opts: '-id --privileged=true'
+  shell: '/bin/bash'
   envs: "{{os_verify}} -e YARDSTICK_BRANCH=fraser -e CI_DEBUG={{debug}}
          -e BUILD_TAG={{build_tag}}-{{testcase}}"
   volumes:
