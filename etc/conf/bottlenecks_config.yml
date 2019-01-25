@@ -11,7 +11,7 @@ bottlenecks:
   docker_tag: ovp-2.0.0
   opts: '-id --privileged=true'
   envs: '-e DEPLOY_SCENARIO={{deploy_scenario}} -e RAM_NUM={{ram_num}}
-         -e Yardstick_TAG=stable -e OUTPUT_FILE={{testcase}}.out'
+         -e Yardstick_TAG=ovp-2.0.0 -e OUTPUT_FILE={{testcase}}.out'
   volumes:
     - '-v /var/run/docker.sock:/var/run/docker.sock'
     - '-v {{dovetail_home}}/patches:/home/patches'
