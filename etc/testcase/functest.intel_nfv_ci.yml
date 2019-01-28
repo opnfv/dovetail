@@ -1,0 +1,19 @@
+---
+functest.intel_nfv_ci:
+  name: functest.intel_nfv_ci
+  objective: >-
+    Run Intel NFV CI to test Nova functionality of hugepages support, cpu
+    pinning, thread isolation and NUMA topologies
+  validate:
+    type: functest
+    testcase: intel-nfv-ci
+  report:
+    source_archive_files:
+      - functest.log
+      - intel-nfv-ci/tempest.log
+      - intel-nfv-ci/tempest-report.html
+    dest_archive_files:
+      - intel-nfv-ci/functest.intel-nfv-ci.functest.log
+      - intel-nfv-ci/functest.intel-nfv-ci.log
+      - intel-nfv-ci/functest.intel-nfv-ci.html
+    check_results_file: 'functest_results.txt'

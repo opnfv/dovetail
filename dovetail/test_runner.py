@@ -130,6 +130,8 @@ class DockerRunner(Runner):
         config_item['debug'] = os.getenv('DEBUG')
         config_item['build_tag'] = dt_cfg.dovetail_config['build_tag']
         config_item['cacert'] = os.getenv('OS_CACERT')
+        config_item['libvirt_user'] = os.getenv('LIBVIRT_USER')
+        config_item['libvirt_key_path'] = os.getenv('LIBVIRT_KEY_PATH')
         config_item['host_url'] = os.getenv('HOST_URL')
         config_item['csar_file'] = os.getenv('CSAR_FILE')
         return config_item

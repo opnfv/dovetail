@@ -30,3 +30,9 @@ export OS_PROJECT_DOMAIN_NAME=default
 # If using https + no cacert, should add OS_INSECURE environment parameter.
 #export OS_INSECURE=True
 
+# Libvirt user of compute nodes.
+#export LIBVIRT_USER=ubuntu
+
+# SSH key for connecting to libvirt of compute nodes.
+# The libvirt key file should be put at $DOVETAIL_HOME/pre_config.
+#export LIBVIRT_KEY_PATH=/path/to/pre_config/libvirt_key
