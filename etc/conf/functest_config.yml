@@ -20,6 +20,12 @@
 {% set userconfig_dir = '/home/opnfv/userconfig' %}
 {% set patches_dir = '/home/opnfv/patches' %}
 {% set images_dir = '/home/opnfv/functest/images' %}
+{% set libvirt_env = '' %}
+{% set libvirt_key_volume = '' %}
+{% if libvirt_user and libvirt_key_path %}
+    {% set libvirt_env = '-e LIBVIRT_USER=' + libvirt_user + ' -e LIBVIRT_KEY_PATH=' + libvirt_key_path %}
+    {% set libvirt_key_volume = ' -v ' + libvirt_key_path + ':/home/opnfv/functest/conf/libvirt_key'%}
+{% endif %}
 
 functest:
   image_name: opnfv/functest-smoke
@@ -27,7 +33,7 @@ functest:
   opts: '-id --privileged=true'
   envs: '{{os_verify}} -e INSTALLER_TYPE=unknown -e DEPLOY_SCENARIO={{deploy_scenario}} -e NODE_NAME=unknown
          -e TEST_DB_URL=file://{{result_dir}}/functest_results.txt
-         -e CI_DEBUG={{debug}} -e BUILD_TAG={{build_tag}}-{{testcase}}'
+         -e CI_DEBUG={{debug}} -e BUILD_TAG={{build_tag}}-{{testcase}} {{libvirt_env}}'
   volumes:
     - '-v {{dovetail_home}}/pre_config/env_config.sh:{{openrc_file}}'
     - {{cacert_volume}}
@@ -36,6 +42,7 @@ functest:
     - '-v {{dovetail_home}}/patches:{{patches_dir}}'
     - '-v {{dovetail_home}}/results:{{result_dir}}'
     - '-v {{dovetail_home}}/images:{{images_dir}}'
+    - {{libvirt_key_volume}}
   patches_dir: {{patches_dir}}
   pre_condition:
     - 'echo test for precondition in functest'
