@@ -1,0 +1,688 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_8b89eacc",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "requirements exist,",
+      "range": {
+        "startLine": 42,
+        "startChar": 16,
+        "endLine": 42,
+        "endChar": 29
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_6b860ebb",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "projects based",
+      "range": {
+        "startLine": 47,
+        "startChar": 25,
+        "endLine": 47,
+        "endChar": 48
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_cb93e2f8",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "test case runs",
+      "range": {
+        "startLine": 50,
+        "startChar": 63,
+        "endLine": 50,
+        "endChar": 81
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ab9026ed",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "are used as",
+      "range": {
+        "startLine": 55,
+        "startChar": 66,
+        "endLine": 55,
+        "endChar": 72
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_0bbdda68",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "remove \"the\"",
+      "range": {
+        "startLine": 56,
+        "startChar": 29,
+        "endLine": 56,
+        "endChar": 33
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ebc17ee5",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "unified",
+      "range": {
+        "startLine": 60,
+        "startChar": 12,
+        "endLine": 60,
+        "endChar": 17
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_4bb7d286",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "their",
+      "range": {
+        "startLine": 62,
+        "startChar": 11,
+        "endLine": 62,
+        "endChar": 14
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_2bbc1669",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "project",
+      "range": {
+        "startLine": 65,
+        "startChar": 7,
+        "endLine": 65,
+        "endChar": 15
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_8bb0ca8c",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "Everyone who is interested in developing Dovetail framework ti integrate new upstream test cases will face one of the two following scenarios:",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 67
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_6bad6e31",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "This scenario is a little more complicated.",
+      "range": {
+        "startLine": 82,
+        "startChar": 61,
+        "endLine": 83,
+        "endChar": 53
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_cbaac218",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "Functest",
+      "range": {
+        "startLine": 91,
+        "startChar": 44,
+        "endLine": 91,
+        "endChar": 52
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_eb685ef7",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "Below you can find detailed description for each of the configuration options.",
+      "range": {
+        "startLine": 129,
+        "startChar": 61,
+        "endLine": 130,
+        "endChar": 20
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_2b7376ea",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "Functest",
+      "range": {
+        "startLine": 151,
+        "startChar": 21,
+        "endLine": 151,
+        "endChar": 29
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_6b744ecf",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "change it to \u0027A\u0027",
+      "range": {
+        "startLine": 171,
+        "startChar": 33,
+        "endLine": 171,
+        "endChar": 40
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_cb812291",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "Functest",
+      "range": {
+        "startLine": 177,
+        "startChar": 67,
+        "endLine": 177,
+        "endChar": 75
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ab7e66ac",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "\u0027,\u0027 can be removed",
+      "range": {
+        "startLine": 178,
+        "startChar": 45,
+        "endLine": 178,
+        "endChar": 46
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_0b4b1a88",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "environments",
+      "range": {
+        "startLine": 180,
+        "startChar": 19,
+        "endLine": 180,
+        "endChar": 30
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_eb4fbe90",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "A",
+      "range": {
+        "startLine": 182,
+        "startChar": 25,
+        "endLine": 182,
+        "endChar": 31
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_4b45126f",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "A",
+      "range": {
+        "startLine": 184,
+        "startChar": 35,
+        "endLine": 184,
+        "endChar": 41
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_2b4a5680",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "should",
+      "range": {
+        "startLine": 203,
+        "startChar": 33,
+        "endLine": 203,
+        "endChar": 39
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_8b5e0a44",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "Functest",
+      "range": {
+        "startLine": 208,
+        "startChar": 7,
+        "endLine": 208,
+        "endChar": 15
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_cb580259",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "tested",
+      "range": {
+        "startLine": 213,
+        "startChar": 70,
+        "endLine": 213,
+        "endChar": 74
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_6b5bae54",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "Functest",
+      "range": {
+        "startLine": 213,
+        "startChar": 18,
+        "endLine": 213,
+        "endChar": 26
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ab55c61e",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "integration of",
+      "range": {
+        "startLine": 230,
+        "startChar": 14,
+        "endLine": 230,
+        "endChar": 26
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_0b32fa0f",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "blank character needs t be removed",
+      "range": {
+        "startLine": 241,
+        "startChar": 0,
+        "endLine": 241,
+        "endChar": 1
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_eb369e02",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 250,
+        "startChar": 0,
+        "endLine": 250,
+        "endChar": 1
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_4b3cf2e2",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "Below you can find detailed description for each of the configuration options.",
+      "range": {
+        "startLine": 273,
+        "startChar": 59,
+        "endLine": 274,
+        "endChar": 20
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_2b41b65a",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "Functest",
+      "range": {
+        "startLine": 313,
+        "startChar": 8,
+        "endLine": 313,
+        "endChar": 16
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_8b256ac4",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "Test Host",
+      "range": {
+        "startLine": 346,
+        "startChar": 68,
+        "endLine": 346,
+        "endChar": 77
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_6b228eba",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T10:41:13Z",
+      "side": 1,
+      "message": "Step 4 (optional) update unit tests..... (if we apply acceptance check then a patch is not going to be verified without 100% coverage)",
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
