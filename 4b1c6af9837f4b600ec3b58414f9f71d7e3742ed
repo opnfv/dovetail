@@ -2,6 +2,397 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a622d24_6b3c4e30",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "run",
+      "range": {
+        "startLine": 13,
+        "startChar": 55,
+        "endLine": 13,
+        "endChar": 57
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_cb4922d2",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "Preparing",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 8
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ab4666bd",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "do not (it is more formal in my opinion)",
+      "range": {
+        "startLine": 30,
+        "startChar": 61,
+        "endLine": 30,
+        "endChar": 66
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_0b131ab9",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "As a result,",
+      "range": {
+        "startLine": 31,
+        "startChar": 17,
+        "endLine": 31,
+        "endChar": 19
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_eb17bea1",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "You can also refer to this link: https://docs.docker.com/install/",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 80
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_4b0d1290",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "which runs",
+      "range": {
+        "startLine": 44,
+        "startChar": 47,
+        "endLine": 44,
+        "endChar": 53
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_2b1256b1",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": ":",
+      "range": {
+        "startLine": 45,
+        "startChar": 44,
+        "endLine": 45,
+        "endChar": 45
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ab1dc6bf",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "needs sudo if user does not belong to docker group",
+      "range": {
+        "startLine": 54,
+        "startChar": 5,
+        "endLine": 54,
+        "endChar": 25
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_0b7afaf0",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 64,
+        "startChar": 5,
+        "endLine": 64,
+        "endChar": 50
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_eb7e9ee3",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "Afterwards, we will",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 5
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_4b84f2d3",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "config related",
+      "range": {
+        "startLine": 81,
+        "startChar": 9,
+        "endLine": 81,
+        "endChar": 23
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_2b89b6eb",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "to provide",
+      "range": {
+        "startLine": 88,
+        "startChar": 61,
+        "endLine": 88,
+        "endChar": 73
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_8b6d6a35",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": ":",
+      "range": {
+        "startLine": 97,
+        "startChar": 80,
+        "endLine": 97,
+        "endChar": 81
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_6b6a8e1b",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "mount",
+      "range": {
+        "startLine": 109,
+        "startChar": 23,
+        "endLine": 109,
+        "endChar": 29
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_cb776201",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "Test Host",
+      "range": {
+        "startLine": 109,
+        "startChar": 45,
+        "endLine": 109,
+        "endChar": 54
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ab74a6fd",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "In order to run ONAP VNF tests \u0027latest\u0027 \u003ctag\u003e must be used",
+      "range": {
+        "startLine": 113,
+        "startChar": 19,
+        "endLine": 113,
+        "endChar": 71
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_0b615a39",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "with the following command",
+      "range": {
+        "startLine": 115,
+        "startChar": 14,
+        "endLine": 115,
+        "endChar": 26
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_12050f7a",
         "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
         "patchSetId": 1
@@ -18,6 +409,98 @@
         "startChar": 4,
         "endLine": 119,
         "endChar": 54
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_4b5b5287",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "and try (remove the)",
+      "range": {
+        "startLine": 122,
+        "startChar": 53,
+        "endLine": 122,
+        "endChar": 65
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_eb65fe45",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "If Dovetail run fails,",
+      "range": {
+        "startLine": 122,
+        "startChar": 6,
+        "endLine": 122,
+        "endChar": 22
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_2b609631",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "sudo docker",
+      "range": {
+        "startLine": 126,
+        "startChar": 5,
+        "endLine": 126,
+        "endChar": 12
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_8b544a55",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-28T07:54:42Z",
+      "side": 1,
+      "message": "Add \u0027#\u0027 after \u0027$\u0027 to indicate comment",
+      "range": {
+        "startLine": 130,
+        "startChar": 5,
+        "endLine": 130,
+        "endChar": 36
       },
       "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
