@@ -416,6 +416,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_0bef9a88",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-01-28T09:00:31Z",
+      "side": 1,
+      "message": "Currently, there are only VNFSDK test cases (TOSCA templates) in Dovetail. So this doc aims at giving users a simple guide of using Dovetail to do the VNF package (TOSCA based) validation tests. When finishing the discussion of how to integrate VVP tests with CVC, this doc should be updated as well as adding more description of both the ONAP projects and VNF requirements.",
+      "parentUuid": "1a622d24_12050f7a",
+      "range": {
+        "startLine": 119,
+        "startChar": 4,
+        "endLine": 119,
+        "endChar": 54
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_4b5b5287",
         "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
         "patchSetId": 1
@@ -496,6 +520,30 @@
       "writtenOn": "2019-01-28T07:54:42Z",
       "side": 1,
       "message": "Add \u0027#\u0027 after \u0027$\u0027 to indicate comment",
+      "range": {
+        "startLine": 130,
+        "startChar": 5,
+        "endLine": 130,
+        "endChar": 36
+      },
+      "revId": "4b1c6af9837f4b600ec3b58414f9f71d7e3742ed",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ebf33e71",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-01-28T09:00:31Z",
+      "side": 1,
+      "message": "Very appreciate all the comments. Will update this soon.",
+      "parentUuid": "1a622d24_8b544a55",
       "range": {
         "startLine": 130,
         "startChar": 5,
