@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_bcc4ea40",
+        "filename": "dovetail/container.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-01-30T02:53:26Z",
+      "side": 1,
+      "message": "Could we try to make this to be configurable with the conf files rather than in the source code?",
+      "range": {
+        "startLine": 93,
+        "startChar": 7,
+        "endLine": 94,
+        "endChar": 69
+      },
+      "revId": "018a31d3a5870b8320c2940cf774886273e50df7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_fcddc215",
+        "filename": "dovetail/report.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 520,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-01-30T02:53:26Z",
+      "side": 1,
+      "message": "It still needs to discuss with VVP team about the result data. There seem to be more than one hundred sub test cases within this \u0027ice_validator\u0027 test case. Should we further check the sub test cases?",
+      "range": {
+        "startLine": 520,
+        "startChar": 8,
+        "endLine": 520,
+        "endChar": 45
+      },
+      "revId": "018a31d3a5870b8320c2940cf774886273e50df7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_5cc79645",
+        "filename": "etc/conf/onap-vvp_config.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-01-30T02:53:26Z",
+      "side": 1,
+      "message": "I would suggest making {{heat_templates_dir}} to be absolute path, then here can be \u0027-v {{heat_templates_dir}}:/template\u0027.",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 12,
+        "endChar": 61
+      },
+      "revId": "018a31d3a5870b8320c2940cf774886273e50df7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_7cca5250",
+        "filename": "etc/conf/onap-vvp_config.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-01-30T02:53:26Z",
+      "side": 1,
+      "message": "Should we remove this pre_conditin command because there is an email from VVP team to say that they have updated the docker image and remove the .pyc files?",
+      "range": {
+        "startLine": 15,
+        "startChar": 6,
+        "endLine": 15,
+        "endChar": 38
+      },
+      "revId": "018a31d3a5870b8320c2940cf774886273e50df7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_fcb662db",
+        "filename": "etc/userconfig/env_config.sh.onap.sample",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-01-30T02:53:26Z",
+      "side": 1,
+      "message": "Is this only needed by VNF SDK? If so, suggest adding some comments here to let users know how to set this file.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 33
+      },
+      "revId": "018a31d3a5870b8320c2940cf774886273e50df7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_3cb1fae1",
+        "filename": "etc/userconfig/env_config.sh.onap.sample",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-01-30T02:53:26Z",
+      "side": 1,
+      "message": "It will be better to take the $HOME/dovetail/ as the example to make it consistent with the one mentioned in the user guide.",
+      "range": {
+        "startLine": 6,
+        "startChar": 63,
+        "endLine": 6,
+        "endChar": 68
+      },
+      "revId": "018a31d3a5870b8320c2940cf774886273e50df7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_dcbba6c2",
+        "filename": "etc/userconfig/env_config.sh.onap.sample",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-01-30T02:53:26Z",
+      "side": 1,
+      "message": "Can this be set to be inside DOVETAIL_HOME/pre_config? Because all files provided by users are designed to be put inside this \u0027pre_config\u0027 directory.",
+      "range": {
+        "startLine": 7,
+        "startChar": 28,
+        "endLine": 7,
+        "endChar": 52
+      },
+      "revId": "018a31d3a5870b8320c2940cf774886273e50df7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_1cb6bed9",
+        "filename": "etc/userconfig/env_config.sh.onap.sample",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-01-30T02:53:26Z",
+      "side": 1,
+      "message": "It\u0027s a little confusing that here the VNF_DIRECTORY is the absolute path, but in the onap-vvp config file, it should be the relative path of DOVETAIL_HOME/pre_config.",
+      "range": {
+        "startLine": 8,
+        "startChar": 22,
+        "endLine": 8,
+        "endChar": 35
+      },
+      "revId": "018a31d3a5870b8320c2940cf774886273e50df7",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
