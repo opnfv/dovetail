@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_57adb130",
+        "filename": "etc/userconfig/env_config.sh.onap.sample",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-01-31T08:43:21Z",
+      "side": 1,
+      "message": "replacing the project name with the VNF template may be better for users.",
+      "range": {
+        "startLine": 1,
+        "startChar": 38,
+        "endLine": 1,
+        "endChar": 46
+      },
+      "revId": "673036469bce7614968a173a8f73baf91098c491",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
