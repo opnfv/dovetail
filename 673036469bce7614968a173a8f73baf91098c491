@@ -22,6 +22,30 @@
       "revId": "673036469bce7614968a173a8f73baf91098c491",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_5722d1b9",
+        "filename": "etc/userconfig/env_config.sh.onap.sample",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-01-31T10:09:41Z",
+      "side": 1,
+      "message": "Excuse me but I cannot understand this comment completely. Do you mean you preffer \"Tosca validation tests and Heat validation tests\" instead of \"VNF SDK validation tests and VVP validation tests\"?",
+      "parentUuid": "1a622d24_57adb130",
+      "range": {
+        "startLine": 1,
+        "startChar": 38,
+        "endLine": 1,
+        "endChar": 46
+      },
+      "revId": "673036469bce7614968a173a8f73baf91098c491",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
