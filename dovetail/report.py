@@ -29,8 +29,8 @@ from testcase import Testcase
 class Report(object):
 
     results = {'functest': {}, 'yardstick': {}, 'functest-k8s': {},
-               'bottlenecks': {}, 'shell': {}, 'vnftest': {}, 'onap-vtp': {},
-               'onap-vvp': {}}
+               'functest-rally': {}, 'bottlenecks': {}, 'shell': {},
+               'vnftest': {}, 'onap-vtp': {}, 'onap-vvp': {}}
 
     logger = None
 
@@ -285,7 +285,8 @@ class FunctestCrawler(Crawler):
         testcase.set_results(json_results)
         return json_results
 
-    def get_details(self, data):
+    @staticmethod
+    def get_details(data):
         tests = data['details']['tests_number']
         failed_num = data['details']['failures_number']
         success_case = data['details']['success']
@@ -311,6 +312,32 @@ class FunctestK8sCrawler(FunctestCrawler):
     def create_log(cls):
         cls.logger = \
             dt_logger.Logger(__name__ + '.FunctestK8sCrawler').getLogger()
+
+
+class FunctestRallyCrawler(FunctestCrawler):
+
+    logger = None
+
+    def __init__(self):
+        self.type = 'functest-rally'
+        self.logger.debug('Create crawler: {}'.format(self.type))
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.FunctestRallyCrawler').getLogger()
+
+    @staticmethod
+    def get_details(data):
+        t_details = data['details'][0]['details']
+        details = {
+            'tests': len(t_details['success']) + len(t_details['failures']),
+            'failures': len(t_details['failures']),
+            'success': t_details['success'],
+            'errors': t_details['failures'],
+            'skipped': []
+        }
+        return details
 
 
 class YardstickCrawler(Crawler):
@@ -543,6 +570,7 @@ class CrawlerFactory(object):
         'vnftest': VnftestCrawler,
         'shell': ShellCrawler,
         'functest-k8s': FunctestK8sCrawler,
+        'functest-rally': FunctestRallyCrawler,
         'onap-vtp': OnapVtpCrawler,
         'onap-vvp': OnapVvpCrawler
     }
@@ -633,6 +661,16 @@ class FunctestK8sChecker(FunctestChecker):
     def create_log(cls):
         cls.logger = \
             dt_logger.Logger(__name__ + '.FunctestK8sChecker').getLogger()
+
+
+class FunctestRallyChecker(FunctestChecker):
+
+    logger = None
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.FunctestRallyChecker').getLogger()
 
 
 class YardstickChecker(object):
@@ -742,6 +780,7 @@ class CheckerFactory(object):
         'shell': ShellChecker,
         'vnftest': VnftestChecker,
         'functest-k8s': FunctestK8sChecker,
+        'functest-rally': FunctestRallyChecker,
         'onap-vtp': OnapVtpChecker,
         'onap-vvp': OnapVvpChecker
     }
