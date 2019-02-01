@@ -1,0 +1,32 @@
+---
+functest.rally.glance:
+  name: functest.rally.glance
+  objective: Run all Functest Rally Glance test cases
+  validate:
+    type: functest-rally
+    testcase: rally_full
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/rally_glance_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+  report:
+    source_archive_files:
+      - functest.log
+      - rally_full/glance.json
+      - rally_full/rally_full.html
+      - rally_full/rally_full.xml
+    dest_archive_files:
+      - rally_glance_logs/functest.rally.glance.functest.log
+      - rally_glance_logs/glance.json
+      - rally_glance_logs/glance.html
+      - rally_glance_logs/glance.xml
+    check_results_files:
+      - 'functest_results.txt'
+      - 'rally_glance_logs/glance.json'
+    sub_testcase_list:
+      - 'GlanceImages.create_and_delete_image'
+      - 'GlanceImages.create_and_list_image'
+      - 'GlanceImages.list_images'
+      - 'GlanceImages.create_image_and_boot_instances'
+      - 'GlanceImages.create_and_deactivate_image'
+      - 'GlanceImages.create_and_download_image'
+      - 'GlanceImages.create_and_get_image'
+      - 'GlanceImages.create_and_update_image'

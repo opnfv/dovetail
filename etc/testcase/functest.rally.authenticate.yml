@@ -1,0 +1,30 @@
+---
+functest.rally.authenticate:
+  name: functest.rally.authenticate
+  objective: Run all Functest Rally Authenticate test cases
+  validate:
+    type: functest-rally
+    testcase: rally_full
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/rally_authenticate_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+  report:
+    source_archive_files:
+      - functest.log
+      - rally_full/authenticate.json
+      - rally_full/rally_full.html
+      - rally_full/rally_full.xml
+    dest_archive_files:
+      - rally_authenticate_logs/functest.rally.authenticate.functest.log
+      - rally_authenticate_logs/authenticate.json
+      - rally_authenticate_logs/authenticate.html
+      - rally_authenticate_logs/authenticate.xml
+    check_results_files:
+      - 'functest_results.txt'
+      - 'rally_authenticate_logs/authenticate.json'
+    sub_testcase_list:
+      - 'Authenticate.keystone'
+      - 'Authenticate.validate_cinder'
+      - 'Authenticate.validate_glance'
+      - 'Authenticate.validate_heat'
+      - 'Authenticate.validate_neutron'
+      - 'Authenticate.validate_nova'

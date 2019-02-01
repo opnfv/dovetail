@@ -1,0 +1,35 @@
+---
+functest.rally.keystone:
+  name: functest.rally.keystone
+  objective: Run all Functest Rally Keystone test cases
+  validate:
+    type: functest-rally
+    testcase: rally_full
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/rally_keystone_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+  report:
+    source_archive_files:
+      - functest.log
+      - rally_full/keystone.json
+      - rally_full/rally_full.html
+      - rally_full/rally_full.xml
+    dest_archive_files:
+      - rally_keystone_logs/functest.rally.keystone.functest.log
+      - rally_keystone_logs/keystone.json
+      - rally_keystone_logs/keystone.html
+      - rally_keystone_logs/keystone.xml
+    check_results_files:
+      - 'functest_results.txt'
+      - 'rally_keystone_logs/keystone.json'
+    sub_testcase_list:
+      - 'KeystoneBasic.add_and_remove_user_role'
+      - 'KeystoneBasic.create_add_and_list_user_roles'
+      - 'KeystoneBasic.create_and_list_tenants'
+      - 'KeystoneBasic.create_and_delete_role'
+      - 'KeystoneBasic.create_and_delete_service'
+      - 'KeystoneBasic.get_entities'
+      - 'KeystoneBasic.create_update_and_delete_tenant'
+      - 'KeystoneBasic.create_user'
+      - 'KeystoneBasic.create_tenant'
+      - 'KeystoneBasic.create_and_list_users'
+      - 'KeystoneBasic.create_tenant_with_users'
