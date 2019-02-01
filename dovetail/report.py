@@ -270,7 +270,10 @@ class FunctestCrawler(Crawler):
                         duration = dt_utils.get_duration(timestart, timestop,
                                                          self.logger)
                         if complex_testcase:
-                            details = self.get_details(data)
+                            if testcase_name == 'rally_full':
+                                details = self.get_rally_details(data)
+                            else:
+                                details = self.get_details(data)
                 except KeyError as e:
                     self.logger.exception(
                         "Result data don't have key {}.".format(e))
@@ -285,17 +288,28 @@ class FunctestCrawler(Crawler):
         testcase.set_results(json_results)
         return json_results
 
-    def get_details(self, data):
-        tests = data['details']['tests_number']
-        failed_num = data['details']['failures_number']
-        success_case = data['details']['success']
-        error_case = data['details']['failures']
-        skipped_case = data['details']['skipped']
-        details = {'tests': tests,
-                   'failures': failed_num,
-                   'success': success_case,
-                   'errors': error_case,
-                   'skipped': skipped_case}
+    @staticmethod
+    def get_details(data):
+        t_details = data['details']
+        details = {
+            'tests': t_details['tests_number'],
+            'failures': t_details['failures_number'],
+            'success': t_details['success'],
+            'errors': t_details['failures'],
+            'skipped': t_details['skipped']
+        }
+        return details
+
+    @staticmethod
+    def get_rally_details(data):
+        t_details = data['details'][0]['details']
+        details = {
+            'tests': len(t_details['success']) + len(t_details['failures']),
+            'failures': len(t_details['failures']),
+            'success': t_details['success'],
+            'errors': t_details['failures'],
+            'skipped': []
+        }
         return details
 
 

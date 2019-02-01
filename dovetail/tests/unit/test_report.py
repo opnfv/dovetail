@@ -558,6 +558,61 @@ class ReportTesting(unittest.TestCase):
         self.assertEquals(expected, result)
 
     @patch('__builtin__.open')
+    @patch('dovetail.report.json')
+    @patch('dovetail.report.dt_cfg')
+    @patch('dovetail.report.dt_utils')
+    @patch('dovetail.report.os.path')
+    def test_functest_rally_crawler_crawl(self, mock_path, mock_utils,
+                                          mock_config, mock_json, mock_open):
+        logger_obj = Mock()
+        mock_config.dovetail_config = {'build_tag': 'tag'}
+        dt_report.FunctestCrawler.logger = logger_obj
+        mock_path.exists.return_value = True
+        file_path = 'file_path'
+        testcase_obj = Mock()
+        testcase_obj.validate_testcase.return_value = 'rally_full'
+        testcase_obj.name.return_value = 'name'
+        testcase_obj.sub_testcase.return_value = ['subt_a', 'subt_b', 'subt_c']
+        file_obj = Mock()
+        mock_open.return_value.__enter__.side_effect = [[file_obj], file_obj]
+        data_dict = {
+            'case_name': 'rally_full',
+            'build_tag': 'tag-name',
+            'criteria': 'criteria',
+            'start_date': 'start_date',
+            'stop_date': 'stop_date',
+            'details': [{
+                'details': {
+                    'success': ['subt_a'],
+                    'failures': ['subt_b', 'subt_c']
+                }
+            }]
+        }
+
+        mock_json.loads.return_value = data_dict
+        mock_utils.get_duration.return_value = 'duration'
+
+        crawler = dt_report.FunctestCrawler()
+        result = crawler.crawl(testcase_obj, [file_path, file_path])
+        expected = {'criteria': 'criteria', 'timestart': 'start_date',
+                    'timestop': 'stop_date', 'duration': 'duration',
+                    'details': {
+                        'tests': 3, 'failures': 2,
+                        'success': ['subt_a'], 'errors': ['subt_b', 'subt_c'],
+                        'skipped': []}}
+
+        mock_path.exists.assert_called_once_with(file_path)
+        mock_open.assert_called_with(file_path, 'r')
+        mock_json.loads.assert_called_with(file_obj)
+        mock_utils.get_duration.assert_called_once_with(
+            'start_date', 'stop_date', logger_obj)
+        testcase_obj.set_results.assert_called_with(expected)
+        testcase_obj.validate_testcase.assert_called_once_with()
+        testcase_obj.sub_testcase.assert_called_once_with()
+        testcase_obj.name.assert_called_once_with()
+        self.assertEquals(expected, result)
+
+    @patch('__builtin__.open')
     @patch('dovetail.report.json.loads')
     @patch('dovetail.report.dt_cfg')
     @patch('dovetail.report.dt_utils')
