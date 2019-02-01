@@ -697,6 +697,21 @@ class TestRunnerTesting(unittest.TestCase):
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.os.path')
     @patch('dovetail.test_runner.dt_cfg')
+    def test_init_functestrallyrunner(self, mock_config, mock_path,
+                                      mock_utils):
+        t_runner.FunctestRallyRunner.create_log()
+        mock_path.join.side_effect = ['env_file']
+        mock_config.dovetail_config = {'result_dir': 'one'}
+        mock_path.isfile.return_value = True
+
+        t_runner.FunctestRallyRunner(self.testcase)
+
+        mock_path.join.assert_has_calls([call('one', 'endpoint_info.json')])
+        mock_path.isfile.assert_called_once()
+
+    @patch('dovetail.test_runner.dt_utils')
+    @patch('dovetail.test_runner.os.path')
+    @patch('dovetail.test_runner.dt_cfg')
     def test_init_onapvvprunner(self, mock_config, mock_path, mock_utils):
         t_runner.OnapVvpRunner.create_log()
         mock_path.join.side_effect = ['env_file']
@@ -708,3 +723,19 @@ class TestRunnerTesting(unittest.TestCase):
         mock_path.join.assert_has_calls([call('one', 'two')])
         mock_path.isfile.assert_called_once()
         mock_utils.source_env.assert_called_once_with('env_file')
+
+    @patch('dovetail.test_runner.dt_utils')
+    @patch('dovetail.test_runner.os.path')
+    @patch('dovetail.test_runner.dt_cfg')
+    def test_init_functestrallyrunner_no_file(self, mock_config, mock_path,
+                                              mock_utils):
+        t_runner.FunctestRallyRunner.create_log()
+        mock_path.join.side_effect = ['env_file']
+        mock_config.dovetail_config = {'result_dir': 'one'}
+        mock_path.isfile.return_value = False
+
+        t_runner.FunctestRallyRunner(self.testcase)
+
+        mock_path.join.assert_has_calls([call('one', 'endpoint_info.json')])
+        mock_path.isfile.assert_called_once()
+        mock_utils.get_openstack_info.assert_called_once()

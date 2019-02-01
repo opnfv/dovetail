@@ -1,0 +1,29 @@
+---
+functest.rally.heat:
+  name: functest.rally.heat
+  objective: Run all Functest Rally Heat test cases
+  validate:
+    type: functest-rally
+    testcase: rally_full
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/rally_heat_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+  report:
+    source_archive_files:
+      - functest.log
+      - rally_full/heat.json
+      - rally_full/rally_full.html
+      - rally_full/rally_full.xml
+    dest_archive_files:
+      - rally_heat_logs/functest.rally.heat.functest.log
+      - rally_heat_logs/heat.json
+      - rally_heat_logs/heat.html
+      - rally_heat_logs/heat.xml
+    check_results_files:
+      - 'functest_results.txt'
+    sub_testcase_list:
+      - 'HeatStacks.create_and_delete_stack'
+      - 'HeatStacks.create_and_list_stack'
+      - 'HeatStacks.create_update_delete_stack'
+      - 'HeatStacks.create_check_delete_stack'
+      - 'HeatStacks.create_suspend_resume_delete_stack'
+      - 'HeatStacks.list_stacks_and_resources'

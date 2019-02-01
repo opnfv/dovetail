@@ -102,7 +102,7 @@ class TestcaseTesting(unittest.TestCase):
     @patch('dovetail.testcase.dt_cfg')
     @patch.object(tcase.Testcase, 'parse_cmd')
     def test_prepare_cmd_config_cmd(self, mock_parse, mock_config):
-        testcase = tcase.TestcaseFactory.create('yardstick',
+        testcase = tcase.TestcaseFactory.create('functest-rally',
                                                 self.testcase_yaml)
         mock_config.dovetail_config = {'type': {'cmds': ['cmd']}}
         mock_parse.return_value = True

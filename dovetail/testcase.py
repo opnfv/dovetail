@@ -313,6 +313,15 @@ class FunctestK8sTestcase(Testcase):
         self.type = 'functest-k8s'
 
 
+class FunctestRallyTestcase(Testcase):
+
+    validate_testcase_list = {}
+
+    def __init__(self, testcase_yaml):
+        super(FunctestRallyTestcase, self).__init__(testcase_yaml)
+        self.type = 'functest-rally'
+
+
 class YardstickTestcase(Testcase):
 
     validate_testcase_list = {}
@@ -365,6 +374,7 @@ class TestcaseFactory(object):
         'bottlenecks': BottlenecksTestcase,
         'shell': ShellTestcase,
         'functest-k8s': FunctestK8sTestcase,
+        'functest-rally': FunctestRallyTestcase,
         'onap-vtp': OnapVtpTestcase,
         'onap-vvp': OnapVvpTestcase
     }
