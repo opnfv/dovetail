@@ -1,0 +1,42 @@
+---
+functest.rally.neutron:
+  name: functest.rally.neutron
+  objective: Run all Functest Rally Neutron test cases
+  validate:
+    type: functest-rally
+    testcase: rally_full
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/rally_neutron_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+  report:
+    source_archive_files:
+      - functest.log
+      - rally_full/neutron.json
+      - rally_full/neutron.html
+    dest_archive_files:
+      - rally_neutron_logs/functest.rally.neutron.functest.log
+      - rally_neutron_logs/neutron.json
+      - rally_neutron_logs/neutron.html
+    check_results_files:
+      - 'functest_results.txt'
+      - 'rally_neutron_logs/neutron.json'
+    sub_testcase_list:
+      - 'NeutronNetworks.create_and_update_networks'
+      - 'NeutronNetworks.create_and_update_ports'
+      - 'NeutronNetworks.create_and_update_routers'
+      - 'NeutronNetworks.create_and_update_subnets'
+      - 'NeutronNetworks.create_and_delete_networks'
+      - 'NeutronNetworks.create_and_delete_ports'
+      - 'NeutronNetworks.create_and_delete_routers'
+      - 'NeutronNetworks.create_and_delete_subnets'
+      - 'NeutronNetworks.create_and_list_networks'
+      - 'NeutronNetworks.create_and_list_ports'
+      - 'NeutronNetworks.create_and_list_routers'
+      - 'NeutronNetworks.create_and_list_subnets'
+      - 'NeutronSecurityGroup.create_and_delete_security_groups'
+      - 'NeutronSecurityGroup.create_and_delete_security_group_rule'
+      - 'NeutronSecurityGroup.create_and_list_security_group_rules'
+      - 'NeutronSecurityGroup.create_and_show_security_group'
+      - 'NeutronNetworks.set_and_clear_router_gateway'
+      - 'NeutronNetworks.create_and_show_ports'
+      - 'NeutronNetworks.create_and_show_routers'
+      - 'NeutronNetworks.create_and_show_subnets'

@@ -1,0 +1,46 @@
+---
+
+{% set validate_testcase = validate_testcase or '' %}
+{% set testcase = testcase or '' %}
+{% set deploy_scenario = deploy_scenario or 'unknown' %}
+{% set os_insecure = os_insecure or 'False' %}
+{% set os_verify = '' %}
+{% if os_insecure == 'True' %}
+    {% set os_verify = ' -e OS_VERIFY= ' %}
+{% endif %}
+{% set dovetail_home = dovetail_home or '' %}
+{% set debug = debug or 'false' %}
+{% set build_tag = build_tag or '' %}
+{% set cacert_volume = '' %}
+{% if cacert %}
+    {% set cacert_volume = ' -v ' + cacert + ':' + cacert %}
+{% endif %}
+{% set openrc_file = '/home/opnfv/functest/conf/env_file' %}
+{% set result_dir = '/home/opnfv/functest/results' %}
+{% set userconfig_dir = '/home/opnfv/userconfig' %}
+{% set patches_dir = '/home/opnfv/patches' %}
+{% set images_dir = '/home/opnfv/functest/images' %}
+
+functest-rally:
+  image_name: opnfv/functest-components
+  docker_tag: gambia
+  opts: '-id --privileged=true'
+  envs: '{{os_verify}} -e INSTALLER_TYPE=unknown -e DEPLOY_SCENARIO={{deploy_scenario}} -e NODE_NAME=unknown
+         -e TEST_DB_URL=file://{{result_dir}}/functest_results.txt
+         -e CI_DEBUG={{debug}} -e BUILD_TAG={{build_tag}}-{{testcase}}'
+  volumes:
+    - '-v {{dovetail_home}}/pre_config/env_config.sh:{{openrc_file}}'
+    - {{cacert_volume}}
+    - '-v {{dovetail_home}}/pre_config:/home/opnfv/pre_config'
+    - '-v {{dovetail_home}}/userconfig:{{userconfig_dir}}'
+    - '-v {{dovetail_home}}/patches:{{patches_dir}}'
+    - '-v {{dovetail_home}}/results:{{result_dir}}'
+    - '-v {{dovetail_home}}/images:{{images_dir}}'
+  patches_dir: {{patches_dir}}
+  pre_condition:
+    - 'echo test for precondition in functest'
+  cmds:
+    - 'run_tests -t {{validate_testcase}} -r'
+  post_condition:
+    - 'echo test for postcondition in functest'
+  openrc: {{openrc_file}}

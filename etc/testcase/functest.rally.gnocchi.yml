@@ -1,0 +1,38 @@
+---
+functest.rally.gnocchi:
+  name: functest.rally.gnocchi
+  objective: Run all Functest Rally Gnocchi test cases
+  validate:
+    type: functest-rally
+    testcase: rally_full
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/rally_gnocchi_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+  report:
+    source_archive_files:
+      - functest.log
+      - rally_full/gnocchi.json
+      - rally_full/gnocchi.html
+    dest_archive_files:
+      - rally_gnocchi_logs/functest.rally.gnocchi.functest.log
+      - rally_gnocchi_logs/gnocchi.json
+      - rally_gnocchi_logs/gnocchi.html
+    check_results_files:
+      - 'functest_results.txt'
+      - 'rally_gnocchi_logs/gnocchi.json'
+    sub_testcase_list:
+      - 'Gnocchi.list_capabilities'
+      - 'Gnocchi.get_status'
+      - 'GnocchiArchivePolicyRule.list_archive_policy_rule'
+      - 'GnocchiArchivePolicyRule.create_archive_policy_rule'
+      - 'GnocchiArchivePolicyRule.create_delete_archive_policy_rule'
+      - 'GnocchiArchivePolicy.list_archive_policy'
+      - 'GnocchiArchivePolicy.create_archive_policy'
+      - 'GnocchiArchivePolicy.create_delete_archive_policy'
+      - 'GnocchiResourceType.list_resource_type'
+      - 'GnocchiResourceType.create_resource_type'
+      - 'GnocchiResourceType.create_delete_resource_type'
+      - 'GnocchiMetric.list_metric'
+      - 'GnocchiMetric.create_metric'
+      - 'GnocchiMetric.create_delete_metric'
+      - 'GnocchiResource.create_resource'
+      - 'GnocchiResource.create_delete_resource'
