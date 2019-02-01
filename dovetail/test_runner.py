@@ -182,6 +182,20 @@ class FunctestRunner(DockerRunner):
         self._update_config(testcase)
 
 
+class FunctestRallyRunner(DockerRunner):
+
+    config_file_name = 'functest_config.yml'
+
+    def __init__(self, testcase):
+        self.type = 'functest-rally'
+        super(FunctestRallyRunner, self).__init__(testcase)
+        endpoint_file = os.path.join(dt_cfg.dovetail_config['result_dir'],
+                                     'endpoint_info.json')
+        if not os.path.isfile(endpoint_file):
+            dt_utils.get_openstack_info(self.logger)
+        self._update_config(testcase)
+
+
 class FunctestK8sRunner(DockerRunner):
 
     config_file_name = 'functest-k8s_config.yml'
@@ -301,6 +315,7 @@ class TestRunnerFactory(object):
         "shell": ShellRunner,
         "vnftest": VnftestRunner,
         "functest-k8s": FunctestK8sRunner,
+        "functest-rally": FunctestRallyRunner,
         "onap-vtp": OnapVtpRunner
     }
 

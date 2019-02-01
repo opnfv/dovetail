@@ -309,6 +309,84 @@ class FunctestK8sCrawler(FunctestCrawler):
             dt_logger.Logger(__name__ + '.FunctestK8sCrawler').getLogger()
 
 
+class FunctestRallyCrawler(FunctestCrawler):
+
+    logger = None
+
+    def __init__(self):
+        self.type = 'functest-rally'
+        self.logger.debug('Create crawler: {}'.format(self.type))
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.FunctestRallyCrawler').getLogger()
+
+    def crawl(self, testcase, file_paths):
+        json_results = \
+            super(FunctestRallyCrawler, self).crawl_from_file(testcase,
+                                                              file_paths[0])
+        return self.crawl_rally_file(testcase, file_paths[1], json_results)
+
+    def get_details(self, data):
+        details = {
+            'tests': 0,
+            'failures': 0,
+            'success': [],
+            'errors': [],
+            'skipped': []
+        }
+        return details
+
+    def crawl_rally_file(self, testcase, file_path, json_results):
+        with open(file_path, 'r') as f:
+            for jsonfile in f:
+                try:
+                    data = json.loads(jsonfile)
+                    tests, success, errors, failures = \
+                        self.get_rally_details(data)
+                    json_results['details']['tests'] = tests
+                    json_results['details']['failures'] = failures
+                    json_results['details']['success'] = success
+                    json_results['details']['errors'] = errors
+                except KeyError as e:
+                    self.logger.exception(
+                        "Result data don't have key {}.".format(e))
+                    return None
+                except ValueError:
+                    continue
+        testcase.set_results(json_results)
+        return json_results
+
+    @staticmethod
+    def get_rally_details(data):
+        failures = 0
+        success = []
+        errors = []
+        task = data['tasks'][0]
+        tests = len(task['subtasks'])
+        for subtask in task['subtasks']:
+            error_found = False
+            name = subtask['title']
+            status = subtask['status']
+            if status != 'finished':
+                error_found = True
+            for workload in subtask['workloads']:
+                if error_found:
+                    break
+                else:
+                    for result in workload['data']:
+                        if result['error']:
+                            error_found = True
+                            break
+            if error_found:
+                errors.append(name)
+                failures += 1
+            else:
+                success.append(name)
+        return tests, success, errors, failures
+
+
 class YardstickCrawler(Crawler):
 
     logger = None
@@ -504,6 +582,7 @@ class CrawlerFactory(object):
                    'vnftest': VnftestCrawler,
                    'shell': ShellCrawler,
                    'functest-k8s': FunctestK8sCrawler,
+                   'functest-rally': FunctestRallyCrawler,
                    'onap-vtp': OnapVtpCrawler}
 
     @classmethod
@@ -592,6 +671,16 @@ class FunctestK8sChecker(FunctestChecker):
     def create_log(cls):
         cls.logger = \
             dt_logger.Logger(__name__ + '.FunctestK8sChecker').getLogger()
+
+
+class FunctestRallyChecker(FunctestChecker):
+
+    logger = None
+
+    @classmethod
+    def create_log(cls):
+        cls.logger = \
+            dt_logger.Logger(__name__ + '.FunctestRallyChecker').getLogger()
 
 
 class YardstickChecker(object):
@@ -683,6 +772,7 @@ class CheckerFactory(object):
                    'shell': ShellChecker,
                    'vnftest': VnftestChecker,
                    'functest-k8s': FunctestK8sChecker,
+                   'functest-rally': FunctestRallyChecker,
                    'onap-vtp': OnapVtpChecker}
 
     @classmethod

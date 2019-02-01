@@ -1,0 +1,14 @@
+---
+scenario:
+    -
+        scenarios:
+            - '^.*'  # all scenarios, unknown included
+        tests:
+            - '^Authenticate'
+            - '^Keystone'
+            - '^Quotas'
+            - '^Glance'
+            - '^Gnocchi'
+            - '^Heat'
+            - '^Neutron'
+            - '^Nova'
