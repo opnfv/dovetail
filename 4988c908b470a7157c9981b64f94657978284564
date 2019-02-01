@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_1b2b6395",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2019-02-01T15:37:49Z",
+      "side": 1,
+      "message": "and VVP",
+      "range": {
+        "startLine": 92,
+        "startChar": 15,
+        "endLine": 92,
+        "endChar": 33
+      },
+      "revId": "4988c908b470a7157c9981b64f94657978284564",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_fe3ad5cb",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2019-02-01T15:37:49Z",
+      "side": 1,
+      "message": "just a style thing: avoid addressing the reader directly. For example: \n\nIn order to add a test case belonging to one of these tools, only...",
+      "range": {
+        "startLine": 94,
+        "startChar": 3,
+        "endLine": 94,
+        "endChar": 6
+      },
+      "revId": "4988c908b470a7157c9981b64f94657978284564",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_de3559dc",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2019-02-01T15:37:49Z",
+      "side": 1,
+      "message": "onap-vvp",
+      "range": {
+        "startLine": 149,
+        "startChar": 28,
+        "endLine": 149,
+        "endChar": 29
+      },
+      "revId": "4988c908b470a7157c9981b64f94657978284564",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
