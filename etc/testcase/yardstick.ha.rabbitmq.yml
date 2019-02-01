@@ -12,5 +12,6 @@ yardstick.ha.rabbitmq:
     dest_archive_files:
       - ha_logs/yardstick.ha.rabbitmq.log
       - ha_logs/yardstick.ha.rabbitmq.out
-    check_results_file: ha_logs/yardstick.ha.rabbitmq.out
+    check_results_files:
+      - ha_logs/yardstick.ha.rabbitmq.out
     sub_testcase_list:

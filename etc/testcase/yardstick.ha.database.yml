@@ -14,5 +14,6 @@ yardstick.ha.database:
     dest_archive_files:
       - ha_logs/yardstick.ha.database.log
       - ha_logs/yardstick.ha.database.out
-    check_results_file: ha_logs/yardstick.ha.database.out
+    check_results_files:
+      - ha_logs/yardstick.ha.database.out
     sub_testcase_list:

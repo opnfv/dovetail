@@ -28,5 +28,6 @@ yardstick.ha.neutron_l3_agent:
     dest_archive_files:
       - ha_logs/yardstick.ha.neutron_l3_agent.log
       - ha_logs/yardstick.ha.neutron_l3_agent.out
-    check_results_file: ha_logs/yardstick.ha.neutron_l3_agent.out
+    check_results_files:
+      - ha_logs/yardstick.ha.neutron_l3_agent.out
     sub_testcase_list:

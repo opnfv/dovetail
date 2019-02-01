@@ -40,25 +40,29 @@ class Report(object):
 
     def check_tc_result(self, testcase):
         result_path = dt_cfg.dovetail_config['result_dir']
-        check_results_file = dt_utils.get_value_from_dict(
-            'report.check_results_file', testcase.testcase)
-        if not check_results_file:
-            self.logger.error("Failed to get 'check_results_file' from config "
-                              "file of test case {}".format(testcase.name()))
+        check_results_files = dt_utils.get_value_from_dict(
+            'report.check_results_files', testcase.testcase)
+        if not check_results_files:
+            self.logger.error("Failed to get 'check_results_files' from config"
+                              " file of test case {}".format(testcase.name()))
             self.check_result(testcase)
             return None
-        result_file = os.path.join(result_path, check_results_file)
-        if os.path.isfile(result_file):
-            self.logger.info(
-                'Results have been stored with file {}.'.format(result_file))
-            result = self.get_result(testcase, result_file)
-            self.check_result(testcase, result)
-            return result
-        else:
-            self.logger.error(
-                'Failed to store results with file {}.'.format(result_file))
-            self.check_result(testcase)
-            return None
+        result_files = []
+        for check_results_file in check_results_files:
+            result_file = os.path.join(result_path, check_results_file)
+            if not os.path.isfile(result_file):
+                self.logger.error(
+                    'Failed to store results with file {}.'.
+                    format(result_file))
+                self.check_result(testcase)
+                return None
+            else:
+                result_files.append(result_file)
+        self.logger.info(
+            'Results have been stored with files: {}.'.format(result_files))
+        result = self.get_result(testcase, result_files)
+        self.check_result(testcase, result)
+        return result
 
     @staticmethod
     def check_result(testcase, db_result=None):
@@ -197,7 +201,7 @@ class Report(object):
                     f_out.add(os.path.join('results', f))
         os.chdir(cwd)
 
-    def get_result(self, testcase, check_results_file):
+    def get_result(self, testcase, check_results_files):
         validate_testcase = testcase.validate_testcase()
         type = testcase.validate_type()
         crawler = CrawlerFactory.create(type)
@@ -205,7 +209,7 @@ class Report(object):
             self.logger.error('Crawler is None: {}'.format(testcase.name()))
             return None
 
-        result = crawler.crawl(testcase, check_results_file)
+        result = crawler.crawl(testcase, check_results_files)
 
         if result is not None:
             self.results[type][validate_testcase] = result
@@ -235,8 +239,8 @@ class FunctestCrawler(Crawler):
         cls.logger = \
             dt_logger.Logger(__name__ + '.FunctestCrawler').getLogger()
 
-    def crawl(self, testcase, file_path):
-        return self.crawl_from_file(testcase, file_path)
+    def crawl(self, testcase, file_paths):
+        return self.crawl_from_file(testcase, file_paths[0])
 
     def crawl_from_file(self, testcase, file_path):
         dovetail_config = dt_cfg.dovetail_config
@@ -266,16 +270,7 @@ class FunctestCrawler(Crawler):
                         duration = dt_utils.get_duration(timestart, timestop,
                                                          self.logger)
                         if complex_testcase:
-                            tests = data['details']['tests_number']
-                            failed_num = data['details']['failures_number']
-                            success_case = data['details']['success']
-                            error_case = data['details']['failures']
-                            skipped_case = data['details']['skipped']
-                            details = {'tests': tests,
-                                       'failures': failed_num,
-                                       'success': success_case,
-                                       'errors': error_case,
-                                       'skipped': skipped_case}
+                            details = self.get_details(data)
                 except KeyError as e:
                     self.logger.exception(
                         "Result data don't have key {}.".format(e))
@@ -289,6 +284,19 @@ class FunctestCrawler(Crawler):
 
         testcase.set_results(json_results)
         return json_results
+
+    def get_details(self, data):
+        tests = data['details']['tests_number']
+        failed_num = data['details']['failures_number']
+        success_case = data['details']['success']
+        error_case = data['details']['failures']
+        skipped_case = data['details']['skipped']
+        details = {'tests': tests,
+                   'failures': failed_num,
+                   'success': success_case,
+                   'errors': error_case,
+                   'skipped': skipped_case}
+        return details
 
 
 class FunctestK8sCrawler(FunctestCrawler):
@@ -318,8 +326,8 @@ class YardstickCrawler(Crawler):
         cls.logger = \
             dt_logger.Logger(__name__ + '.YardstickCrawler').getLogger()
 
-    def crawl(self, testcase, file_path):
-        return self.crawl_from_file(testcase, file_path)
+    def crawl(self, testcase, file_paths):
+        return self.crawl_from_file(testcase, file_paths[0])
 
     def crawl_from_file(self, testcase, file_path):
         if not os.path.exists(file_path):
@@ -359,8 +367,8 @@ class BottlenecksCrawler(Crawler):
         cls.logger = \
             dt_logger.Logger(__name__ + '.BottlenecksCrawler').getLogger()
 
-    def crawl(self, testcase, file_path):
-        return self.crawl_from_file(testcase, file_path)
+    def crawl(self, testcase, file_paths):
+        return self.crawl_from_file(testcase, file_paths[0])
 
     def crawl_from_file(self, testcase, file_path):
         if not os.path.exists(file_path):
@@ -389,8 +397,8 @@ class ShellCrawler(Crawler):
     def __init__(self):
         self.type = 'shell'
 
-    def crawl(self, testcase, file_path):
-        return self.crawl_from_file(testcase, file_path)
+    def crawl(self, testcase, file_paths):
+        return self.crawl_from_file(testcase, file_paths[0])
 
     def crawl_from_file(self, testcase, file_path):
         if not os.path.exists(file_path):
@@ -415,8 +423,8 @@ class OnapVtpCrawler(Crawler):
     def create_log(cls):
         cls.logger = dt_logger.Logger(__name__ + '.OnapVtpCrawler').getLogger()
 
-    def crawl(self, testcase, file_path):
-        return self.crawl_from_file(testcase, file_path)
+    def crawl(self, testcase, file_paths):
+        return self.crawl_from_file(testcase, file_paths[0])
 
     # The pass result looks like
     # {
