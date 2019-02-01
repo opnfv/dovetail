@@ -1,0 +1,28 @@
+---
+functest.rally.quotas:
+  name: functest.rally.quotas
+  objective: Run all Functest Rally Quotas test cases
+  validate:
+    type: functest
+    testcase: rally_full
+    image_name: opnfv/functest-components
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/rally_quotas_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+  report:
+    source_archive_files:
+      - functest.log
+      - rally_full/quotas.json
+      - rally_full/rally_full.html
+      - rally_full/rally_full.xml
+    dest_archive_files:
+      - rally_quotas_logs/functest.rally.quotas.functest.log
+      - rally_quotas_logs/quotas.json
+      - rally_quotas_logs/quotas.html
+      - rally_quotas_logs/quotas.xml
+    check_results_files:
+      - 'functest_results.txt'
+    sub_testcase_list:
+      - 'Quotas.cinder_update_and_delete'
+      - 'Quotas.cinder_update'
+      - 'Quotas.neutron_update'
+      - 'Quotas.nova_update'
