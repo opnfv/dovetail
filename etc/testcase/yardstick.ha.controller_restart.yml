@@ -12,5 +12,6 @@ yardstick.ha.controller_restart:
     dest_archive_files:
       - ha_logs/yardstick.ha.controller_restart.log
       - ha_logs/yardstick.ha.controller_restart.out
-    check_results_file: ha_logs/yardstick.ha.controller_restart.out
+    check_results_files:
+      - ha_logs/yardstick.ha.controller_restart.out
     sub_testcase_list:

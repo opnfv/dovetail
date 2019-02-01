@@ -14,5 +14,6 @@ yardstick.ha.nova_api:
     dest_archive_files:
       - ha_logs/yardstick.ha.nova_api.log
       - ha_logs/yardstick.ha.nova_api.out
-    check_results_file: ha_logs/yardstick.ha.nova_api.out
+    check_results_files:
+      - ha_logs/yardstick.ha.nova_api.out
     sub_testcase_list:

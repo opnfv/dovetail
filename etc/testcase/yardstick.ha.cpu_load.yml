@@ -17,5 +17,6 @@ yardstick.ha.cpu_load:
     dest_archive_files:
       - ha_logs/yardstick.ha.cpu_load.log
       - ha_logs/yardstick.ha.cpu_load.out
-    check_results_file: ha_logs/yardstick.ha.cpu_load.out
+    check_results_files:
+      - ha_logs/yardstick.ha.cpu_load.out
     sub_testcase_list:

@@ -18,7 +18,8 @@ functest.tempest.ipv6_api:
       - tempest_logs/functest.tempest.ipv6_api.functest.log
       - tempest_logs/functest.tempest.ipv6_api.log
       - tempest_logs/functest.tempest.ipv6_api.html
-    check_results_file: 'functest_results.txt'
+    check_results_files:
+      - 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_network[id-d4f9024d-1e28-4fc1-a6b1-25dbc6fa11e2,smoke]
       - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_port[id-48037ff2-e889-4c3b-b86a-8e3f34d2d060,smoke]

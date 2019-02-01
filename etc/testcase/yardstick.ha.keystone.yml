@@ -14,5 +14,6 @@ yardstick.ha.keystone:
     dest_archive_files:
       - ha_logs/yardstick.ha.keystone.log
       - ha_logs/yardstick.ha.keystone.out
-    check_results_file: ha_logs/yardstick.ha.keystone.out
+    check_results_files:
+      - ha_logs/yardstick.ha.keystone.out
     sub_testcase_list:

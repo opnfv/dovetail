@@ -14,5 +14,6 @@ bottlenecks.stress.ping:
     dest_archive_files:
       - stress_logs/bottlenecks.stress.ping.log
       - stress_logs/bottlenecks.stress.ping.out
-    check_results_file: stress_logs/bottlenecks.stress.ping.out
+    check_results_files:
+      - stress_logs/bottlenecks.stress.ping.out
     sub_testcase_list:

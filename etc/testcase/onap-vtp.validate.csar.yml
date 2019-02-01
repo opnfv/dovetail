@@ -10,5 +10,6 @@ onap-vtp.validate.csar:
       - onap-vtp.validate.csar.out
     dest_archive_files:
       - onap-vtp_logs/onap-vtp.validate.csar.out
-    check_results_file: onap-vtp_logs/onap-vtp.validate.csar.out
+    check_results_files:
+      - onap-vtp_logs/onap-vtp.validate.csar.out
     sub_testcase_list:

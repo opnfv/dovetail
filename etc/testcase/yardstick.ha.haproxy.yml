@@ -17,5 +17,6 @@ yardstick.ha.haproxy:
     dest_archive_files:
       - ha_logs/yardstick.ha.haproxy.log
       - ha_logs/yardstick.ha.haproxy.out
-    check_results_file: ha_logs/yardstick.ha.haproxy.out
+    check_results_files:
+      - ha_logs/yardstick.ha.haproxy.out
     sub_testcase_list:
