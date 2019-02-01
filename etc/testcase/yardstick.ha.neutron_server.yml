@@ -14,5 +14,6 @@ yardstick.ha.neutron_server:
     dest_archive_files:
       - ha_logs/yardstick.ha.neutron_server.log
       - ha_logs/yardstick.ha.neutron_server.out
-    check_results_file: ha_logs/yardstick.ha.neutron_server.out
+    check_results_files:
+      - ha_logs/yardstick.ha.neutron_server.out
     sub_testcase_list:

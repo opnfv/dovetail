@@ -18,7 +18,8 @@ functest.tempest.ipv6_scenario:
       - tempest_logs/functest.tempest.ipv6_scenario.functest.log
       - tempest_logs/functest.tempest.ipv6_scenario.log
       - tempest_logs/functest.tempest.ipv6_scenario.html
-    check_results_file: 'functest_results.txt'
+    check_results_files:
+      - 'functest_results.txt'
     sub_testcase_list:
       - tempest.scenario.test_network_v6.TestGettingAddress.test_dhcp6_stateless_from_os[compute,id-d7e1f858-187c-45a6-89c9-bdafde619a9f,network,slow]
       - tempest.scenario.test_network_v6.TestGettingAddress.test_dualnet_dhcp6_stateless_from_os[compute,id-76f26acd-9688-42b4-bc3e-cd134c4cb09e,network,slow]
