@@ -14,5 +14,6 @@ yardstick.ha.glance_api:
     dest_archive_files:
       - ha_logs/yardstick.ha.glance_api.log
       - ha_logs/yardstick.ha.glance_api.out
-    check_results_file: ha_logs/yardstick.ha.glance_api.out
+    check_results_files:
+      - ha_logs/yardstick.ha.glance_api.out
     sub_testcase_list:

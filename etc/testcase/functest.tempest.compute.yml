@@ -18,7 +18,8 @@ functest.tempest.compute:
       - tempest_logs/functest.tempest.compute.functest.log
       - tempest_logs/functest.tempest.compute.log
       - tempest_logs/functest.tempest.compute.html
-    check_results_file: 'functest_results.txt'
+    check_results_files:
+      - 'functest_results.txt'
     sub_testcase_list:
       - tempest.api.compute.flavors.test_flavors.FlavorsV2TestJSON.test_get_flavor[id-1f12046b-753d-40d2-abb6-d8eb8b30cb2f,smoke]
       - tempest.api.compute.flavors.test_flavors.FlavorsV2TestJSON.test_list_flavors[id-e36c0eaa-dff5-4082-ad1f-3f9a80aa3f59,smoke]

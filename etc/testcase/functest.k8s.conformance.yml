@@ -11,5 +11,6 @@ functest.k8s.conformance:
       - functest-kubernetes.log
     dest_archive_files:
       - k8s_logs/functest.k8s.conformance.log
-    check_results_file: 'functest_results.txt'
+    check_results_files:
+      - 'functest_results.txt'
     sub_testcase_list:
