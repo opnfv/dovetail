@@ -7,3 +7,12 @@ proposed_tests:
     optional:
       - functest.k8s.conformance
       - functest.k8s.smoke
+      - functest.rally.authenticate
+      - functest.rally.cinder
+      - functest.rally.glance
+      - functest.rally.gnocchi
+      - functest.rally.heat
+      - functest.rally.keystone
+      - functest.rally.neutron
+      - functest.rally.nova
+      - functest.rally.quotas
