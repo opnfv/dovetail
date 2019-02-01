@@ -1,0 +1,48 @@
+---
+functest.rally.cinder:
+  name: functest.rally.cinder
+  objective: Run all Functest Rally Cinder test cases
+  validate:
+    type: functest
+    testcase: rally_full
+    image_name: opnfv/functest-components
+    pre_condition:
+      - 'cp /home/opnfv/userconfig/rally_cinder_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+  report:
+    source_archive_files:
+      - functest.log
+      - rally_full/cinder.json
+      - rally_full/rally_full.html
+      - rally_full/rally_full.xml
+    dest_archive_files:
+      - rally_cinder_logs/functest.rally.cinder.functest.log
+      - rally_cinder_logs/cinder.json
+      - rally_cinder_logs/cinder.html
+      - rally_cinder_logs/cinder.xml
+    check_results_files:
+      - 'functest_results.txt'
+    sub_testcase_list:
+      - 'CinderVolumes.create_and_attach_volume'
+      - 'CinderVolumes.create_and_list_snapshots'
+      - 'CinderVolumes.create_and_list_volume'
+      - 'CinderVolumes.create_and_list_volume-2'
+      - 'CinderVolumes.create_and_upload_volume_to_image'
+      - 'CinderVolumes.create_nested_snapshots_and_attach_volume'
+      - 'CinderVolumes.create_snapshot_and_attach_volume'
+      - 'CinderVolumes.create_volume'
+      - 'CinderVolumes.create_volume-2'
+      - 'CinderVolumes.list_volumes'
+      - 'CinderVolumes.create_and_delete_snapshot'
+      - 'CinderVolumes.create_and_delete_volume'
+      - 'CinderVolumes.create_and_delete_volume-2'
+      - 'CinderVolumes.create_and_delete_volume-3'
+      - 'CinderVolumes.create_and_extend_volume'
+      - 'CinderVolumes.create_from_volume_and_delete_volume'
+      - 'CinderQos.create_and_get_qos'
+      - 'CinderQos.create_and_list_qos'
+      - 'CinderQos.create_and_set_qos'
+      - 'CinderVolumeTypes.create_and_get_volume_type'
+      - 'CinderVolumeTypes.create_and_list_volume_types'
+      - 'CinderVolumeTypes.create_and_update_volume_type'
+      - 'CinderVolumeTypes.create_volume_type_and_encryption_type'
+      - 'CinderVolumeTypes.create_volume_type_add_and_list_type_access'
