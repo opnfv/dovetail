@@ -18,7 +18,8 @@ functest.tempest.vm_lifecycle:
       - tempest_logs/functest.tempest.vm_lifecycle.functest.log
       - tempest_logs/functest.tempest.vm_lifecycle.log
       - tempest_logs/functest.tempest.vm_lifecycle.html
-    check_results_file: 'functest_results.txt'
+    check_results_files:
+      - 'functest_results.txt'
     sub_testcase_list:
       - tempest.scenario.test_minimum_basic.TestMinimumBasicScenario.test_minimum_basic_scenario[compute,id-bdbb5441-9204-419d-a225-b4fdbfb1a1a8,image,network,volume]
       - tempest.scenario.test_network_advanced_server_ops.TestNetworkAdvancedServerOps.test_server_connectivity_cold_migration[compute,id-a4858f6c-401e-4155-9a49-d5cd053d1a2f,network,slow]

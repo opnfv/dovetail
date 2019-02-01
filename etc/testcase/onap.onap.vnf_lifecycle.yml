@@ -12,5 +12,6 @@ onap.onap.vnf_lifecycle:
     dest_archive_files:
       - onap_logs/onap.onap.vnf_lifecycle.log
       - onap_logs/onap.onap.vnf_lifecycle.out
-    check_results_file: onap_logs/onap.onap.vnf_lifecycle.out
+    check_results_files:
+      - onap_logs/onap.onap.vnf_lifecycle.out
     sub_testcase_list:

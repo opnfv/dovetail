@@ -80,7 +80,7 @@ class ReportTesting(unittest.TestCase):
         inner_testcase_obj = Mock()
         testcase_obj.testcase = inner_testcase_obj
         mock_config.dovetail_config = {'result_dir': 'result_dir'}
-        mock_utils.get_value_from_dict.return_value = 'check_results_file'
+        mock_utils.get_value_from_dict.return_value = ['check_results_file']
         mock_path.join.return_value = 'results_file'
         mock_path.isfile.return_value = True
         mock_get.return_value = 'result'
@@ -88,13 +88,13 @@ class ReportTesting(unittest.TestCase):
         result = report.check_tc_result(testcase_obj)
 
         mock_utils.get_value_from_dict.assert_called_once_with(
-            'report.check_results_file', inner_testcase_obj)
+            'report.check_results_files', inner_testcase_obj)
         mock_path.join.assert_called_once_with(
             'result_dir', 'check_results_file')
         mock_path.isfile.assert_called_once_with('results_file')
         logger_obj.info.assert_called_once_with(
-            'Results have been stored with file results_file.')
-        mock_get.assert_called_once_with(testcase_obj, 'results_file')
+            'Results have been stored with files: [\'results_file\'].')
+        mock_get.assert_called_once_with(testcase_obj, ['results_file'])
         mock_check.assert_called_once_with(testcase_obj, 'result')
         self.assertEquals('result', result)
 
@@ -112,14 +112,14 @@ class ReportTesting(unittest.TestCase):
         inner_testcase_obj = Mock()
         testcase_obj.testcase = inner_testcase_obj
         mock_config.dovetail_config = {'result_dir': 'result_dir'}
-        mock_utils.get_value_from_dict.return_value = 'check_results_file'
+        mock_utils.get_value_from_dict.return_value = ['check_results_file']
         mock_path.join.return_value = 'results_file'
         mock_path.isfile.return_value = False
 
         result = report.check_tc_result(testcase_obj)
 
         mock_utils.get_value_from_dict.assert_called_once_with(
-            'report.check_results_file', inner_testcase_obj)
+            'report.check_results_files', inner_testcase_obj)
         mock_path.join.assert_called_once_with(
             'result_dir', 'check_results_file')
         mock_path.isfile.assert_called_once_with('results_file')
@@ -148,9 +148,9 @@ class ReportTesting(unittest.TestCase):
         result = report.check_tc_result(testcase_obj)
 
         mock_utils.get_value_from_dict.assert_called_once_with(
-            'report.check_results_file', inner_testcase_obj)
+            'report.check_results_files', inner_testcase_obj)
         logger_obj.error.assert_called_once_with(
-            "Failed to get 'check_results_file' from config "
+            "Failed to get 'check_results_files' from config "
             "file of test case name")
         mock_check.assert_called_once_with(testcase_obj)
         self.assertEquals(None, result)
@@ -405,13 +405,13 @@ class ReportTesting(unittest.TestCase):
         mock_crawler.create.return_value = crawler_obj
         crawler_obj.crawl.return_value = 'result'
 
-        result = report.get_result(testcase_obj, 'check_results_file')
+        result = report.get_result(testcase_obj, 'check_results_files')
 
         testcase_obj.validate_testcase.assert_called_once_with()
         testcase_obj.validate_type.assert_called_once_with()
         mock_crawler.create.assert_called_once_with('functest')
         crawler_obj.crawl.assert_called_once_with(
-            testcase_obj, 'check_results_file')
+            testcase_obj, 'check_results_files')
         logger_obj.debug.assert_called_once_with(
             'Test case: validate -> result acquired')
         self.assertEquals({'validate': 'result'},
@@ -431,13 +431,13 @@ class ReportTesting(unittest.TestCase):
         mock_crawler.create.return_value = crawler_obj
         crawler_obj.crawl.return_value = None
 
-        result = report.get_result(testcase_obj, 'check_results_file')
+        result = report.get_result(testcase_obj, 'check_results_files')
 
         testcase_obj.validate_testcase.assert_called_once_with()
         testcase_obj.validate_type.assert_called_once_with()
         mock_crawler.create.assert_called_once_with('functest')
         crawler_obj.crawl.assert_called_once_with(
-            testcase_obj, 'check_results_file')
+            testcase_obj, 'check_results_files')
         testcase_obj.increase_retry.assert_called_once_with()
         logger_obj.debug.assert_called_once_with(
             'Test case: validate -> result acquired retry: retry')
@@ -454,7 +454,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.validate_type.return_value = 'functest'
         mock_crawler.create.return_value = None
 
-        result = report.get_result(testcase_obj, 'check_results_file')
+        result = report.get_result(testcase_obj, 'check_results_files')
 
         testcase_obj.validate_testcase.assert_called_once_with()
         testcase_obj.validate_type.assert_called_once_with()
@@ -487,7 +487,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.name.return_value = 'name'
 
         crawler = dt_report.FunctestCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
 
         mock_path.exists.assert_called_once_with(file_path)
         testcase_obj.validate_testcase.assert_called_once_with()
@@ -532,7 +532,7 @@ class ReportTesting(unittest.TestCase):
         mock_utils.get_duration.return_value = 'duration'
 
         crawler = dt_report.FunctestCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'criteria', 'timestart': 'start_date',
                     'timestop': 'stop_date', 'duration': 'duration',
                     'details': {
@@ -574,7 +574,7 @@ class ReportTesting(unittest.TestCase):
         mock_utils.get_duration.return_value = 'duration'
 
         crawler = dt_report.FunctestCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
 
         mock_path.exists.assert_called_once_with(file_path)
         mock_open.assert_called_once_with(file_path, 'r')
@@ -610,7 +610,7 @@ class ReportTesting(unittest.TestCase):
 
         crawler = dt_report.FunctestK8sCrawler()
 
-        result = crawler.crawl(testcase, file_path)
+        result = crawler.crawl(testcase, [file_path])
 
         dt_report.FunctestK8sCrawler.crawl_from_file.assert_called_once_with(
             'testcase', 'file_path')
@@ -635,7 +635,7 @@ class ReportTesting(unittest.TestCase):
         file_path = 'file_path'
 
         crawler = dt_report.YardstickCrawler()
-        result = crawler.crawl(None, file_path)
+        result = crawler.crawl(None, [file_path])
 
         mock_path.exists.assert_called_once_with(file_path)
         logger_obj.error.assert_called_once_with(
@@ -672,7 +672,7 @@ class ReportTesting(unittest.TestCase):
         mock_utils.get_value_from_dict.return_value = 'PASS'
 
         crawler = dt_report.YardstickCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'FAIL'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -703,7 +703,7 @@ class ReportTesting(unittest.TestCase):
         mock_utils.get_value_from_dict.return_value = 'PASS'
 
         crawler = dt_report.YardstickCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'PASS'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -736,7 +736,7 @@ class ReportTesting(unittest.TestCase):
         file_path = 'file_path'
 
         crawler = dt_report.BottlenecksCrawler()
-        result = crawler.crawl(None, file_path)
+        result = crawler.crawl(None, [file_path])
 
         mock_path.exists.assert_called_once_with(file_path)
         logger_obj.error.assert_called_once_with(
@@ -762,7 +762,7 @@ class ReportTesting(unittest.TestCase):
         mock_loads.return_value = data_dict
 
         crawler = dt_report.BottlenecksCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'PASS'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -790,7 +790,7 @@ class ReportTesting(unittest.TestCase):
         mock_loads.return_value = data_dict
 
         crawler = dt_report.BottlenecksCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'FAIL'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -815,7 +815,7 @@ class ReportTesting(unittest.TestCase):
         mock_loads.return_value = {}
 
         crawler = dt_report.BottlenecksCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'FAIL'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -832,7 +832,7 @@ class ReportTesting(unittest.TestCase):
         file_path = 'file_path'
 
         crawler = dt_report.ShellCrawler()
-        result = crawler.crawl(None, file_path)
+        result = crawler.crawl(None, [file_path])
 
         mock_path.exists.assert_called_once_with(file_path)
         self.assertEquals(None, result)
@@ -845,7 +845,7 @@ class ReportTesting(unittest.TestCase):
         mock_open.return_value.__enter__.return_value = Exception()
 
         crawler = dt_report.ShellCrawler()
-        result = crawler.crawl(None, file_path)
+        result = crawler.crawl(None, [file_path])
 
         mock_path.exists.assert_called_once_with(file_path)
         mock_open.assert_called_once_with(file_path, 'r')
@@ -863,7 +863,7 @@ class ReportTesting(unittest.TestCase):
         mock_load.return_value = 'result'
 
         crawler = dt_report.ShellCrawler()
-        result = crawler.crawl(None, file_path)
+        result = crawler.crawl(None, [file_path])
 
         mock_path.exists.assert_called_once_with(file_path)
         mock_open.assert_called_once_with(file_path, 'r')
@@ -889,7 +889,7 @@ class ReportTesting(unittest.TestCase):
         file_path = 'file_path'
 
         crawler = dt_report.VnftestCrawler()
-        result = crawler.crawl(None, file_path)
+        result = crawler.crawl(None, [file_path])
 
         mock_path.exists.assert_called_once_with(file_path)
         logger_obj.error.assert_called_once_with(
@@ -915,7 +915,7 @@ class ReportTesting(unittest.TestCase):
         mock_loads.return_value = data_dict
 
         crawler = dt_report.VnftestCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'PASS'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -939,7 +939,7 @@ class ReportTesting(unittest.TestCase):
         mock_loads.return_value = {}
 
         crawler = dt_report.VnftestCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'FAIL'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -968,7 +968,7 @@ class ReportTesting(unittest.TestCase):
         file_path = 'file_path'
 
         crawler = dt_report.OnapVtpCrawler()
-        result = crawler.crawl(None, file_path)
+        result = crawler.crawl(None, [file_path])
 
         mock_path.exists.assert_called_once_with(file_path)
         logger_obj.error.assert_called_once_with(
@@ -996,7 +996,7 @@ class ReportTesting(unittest.TestCase):
         mock_loads.return_value = data_dict
 
         crawler = dt_report.OnapVtpCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'PASS'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -1026,7 +1026,7 @@ class ReportTesting(unittest.TestCase):
         mock_loads.return_value = data_dict
 
         crawler = dt_report.OnapVtpCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'FAIL'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -1056,7 +1056,7 @@ class ReportTesting(unittest.TestCase):
         mock_loads.return_value = data_dict
 
         crawler = dt_report.OnapVtpCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'FAIL'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -1088,7 +1088,7 @@ class ReportTesting(unittest.TestCase):
         mock_loads.return_value = data_dict
 
         crawler = dt_report.OnapVtpCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'FAIL'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -1113,7 +1113,7 @@ class ReportTesting(unittest.TestCase):
         mock_loads.side_effect = ValueError('No JSON object could be decoded')
 
         crawler = dt_report.OnapVtpCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'FAIL'}
 
         mock_path.exists.assert_called_once_with(file_path)
