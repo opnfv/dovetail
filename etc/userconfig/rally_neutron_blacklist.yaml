@@ -1,0 +1,21 @@
+---
+scenario:
+    -
+        scenarios:
+            - '^.*'  # all scenarios, unknown included
+        tests:
+            - '^Authenticate'
+            - '^Keystone'
+            - '^Quotas'
+            - '^Cinder'
+            - '^Glance'
+            - '^Gnocchi'
+            - '^Heat'
+            - '^Nova'
+
+functionality:
+    -
+        functions:
+            - no_net_trunk_service
+        tests:
+            - '^NeutronTrunk'

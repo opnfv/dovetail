@@ -31,12 +31,14 @@ class ReportTesting(unittest.TestCase):
     def teardown_method(self, method):
         dt_report.FunctestCrawler.logger = None
         dt_report.FunctestK8sCrawler.logger = None
+        dt_report.FunctestRallyCrawler.logger = None
         dt_report.YardstickCrawler.logger = None
         dt_report.BottlenecksCrawler.logger = None
         dt_report.VnftestCrawler.logger = None
         dt_report.OnapVtpCrawler.logger = None
         dt_report.FunctestChecker.logger = None
         dt_report.FunctestK8sChecker.logger = None
+        dt_report.FunctestRallyChecker.logger = None
         dt_report.YardstickChecker.logger = None
         dt_report.BottlenecksChecker.logger = None
         dt_report.VnftestChecker.logger = None
@@ -44,7 +46,8 @@ class ReportTesting(unittest.TestCase):
         dt_report.Report.logger = None
         dt_report.Report.results = {
             'functest': {}, 'yardstick': {}, 'functest-k8s': {},
-            'bottlenecks': {}, 'shell': {}, 'vnftest': {}, 'onap-vtp': {}}
+            'functest-rally': {}, 'bottlenecks': {}, 'shell': {},
+            'vnftest': {}, 'onap-vtp': {}}
 
     def _produce_report_initial_text(self, report_data):
         report_txt = ''
@@ -550,6 +553,117 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.sub_testcase.assert_called_once_with()
         testcase_obj.name.assert_called_once_with()
         self.assertEquals(expected, result)
+
+    @patch('__builtin__.open')
+    @patch('dovetail.report.json')
+    @patch('dovetail.report.dt_cfg')
+    @patch('dovetail.report.dt_utils')
+    @patch('dovetail.report.os.path')
+    def test_functest_rally_crawler_crawl(self, mock_path, mock_utils,
+                                          mock_config, mock_json, mock_open):
+        logger_obj = Mock()
+        mock_config.dovetail_config = {'build_tag': 'tag'}
+        dt_report.FunctestRallyCrawler.logger = logger_obj
+        mock_path.exists.return_value = True
+        file_path = 'file_path'
+        testcase_obj = Mock()
+        testcase_obj.validate_testcase.return_value = 'name'
+        testcase_obj.name.return_value = 'name'
+        testcase_obj.sub_testcase.return_value = ['subt_a', 'subt_b', 'subt_c']
+        file_obj = Mock()
+        mock_open.return_value.__enter__.return_value = [file_obj]
+        data_dict = {
+            'case_name': 'name',
+            'build_tag': 'tag-name',
+            'criteria': 'criteria',
+            'start_date': 'start_date',
+            'stop_date': 'stop_date'
+        }
+
+        rally_dict = {
+            'tasks': [{
+                'subtasks': [{
+                    'title': 'subt_a',
+                    'status': 'finished',
+                    'workloads': [{
+                        'data': [{
+                            'error': []
+                        }]
+                    }]
+                }, {
+                    'title': 'subt_b',
+                    'status': 'running',
+                    'workloads': [{
+                        'data': [{
+                            'error': []
+                        }]
+                    }]
+                }, {
+                    'title': 'subt_c',
+                    'status': 'finished',
+                    'workloads': [{
+                        'data': [{
+                            'error': ['error']
+                        }]
+                    }]
+                }]
+            }]
+        }
+
+        mock_json.loads.side_effect = [data_dict, rally_dict]
+        mock_utils.get_duration.return_value = 'duration'
+
+        crawler = dt_report.FunctestRallyCrawler()
+        result = crawler.crawl(testcase_obj, [file_path, file_path])
+        expected = {'criteria': 'criteria', 'timestart': 'start_date',
+                    'timestop': 'stop_date', 'duration': 'duration',
+                    'details': {
+                        'tests': 3, 'failures': 2,
+                        'success': ['subt_a'], 'errors': ['subt_b', 'subt_c'],
+                        'skipped': []}}
+
+        mock_path.exists.assert_called_once_with(file_path)
+        mock_open.assert_called_with(file_path, 'r')
+        mock_json.loads.assert_called_with(file_obj)
+        mock_utils.get_duration.assert_called_once_with(
+            'start_date', 'stop_date', logger_obj)
+        testcase_obj.set_results.assert_called_with(expected)
+        testcase_obj.validate_testcase.assert_called_once_with()
+        testcase_obj.sub_testcase.assert_called_once_with()
+        testcase_obj.name.assert_called_once_with()
+        self.assertEquals(expected, result)
+
+    @patch('dovetail.report.dt_logger')
+    def test_functest_rally_crawler_create_log(self, mock_logger):
+        getlogger_obj = Mock()
+        logger_obj = Mock()
+        logger_obj.getLogger.return_value = getlogger_obj
+        mock_logger.Logger.return_value = logger_obj
+
+        dt_report.FunctestRallyCrawler.create_log()
+
+        self.assertEquals(getlogger_obj, dt_report.FunctestRallyCrawler.logger)
+
+    @patch('__builtin__.open')
+    @patch('dovetail.report.json.loads')
+    def test_functest_rally_crawler_crawl_errors(self, mock_load, mock_open):
+        logger_obj = Mock()
+        dt_report.FunctestRallyCrawler.logger = logger_obj
+        file_path = 'file_path'
+        testcase_obj = Mock()
+        file_a = Mock()
+        file_b = Mock()
+        mock_open.return_value.__enter__.return_value = [file_a, file_b]
+        mock_load.side_effect = [ValueError(), {}]
+
+        crawler = dt_report.FunctestRallyCrawler()
+        result = crawler.crawl_rally_file(testcase_obj, file_path, {})
+
+        mock_open.assert_called_once_with(file_path, 'r')
+        mock_load.assert_has_calls([call(file_a), call(file_b)])
+        logger_obj.exception.assert_called_once_with(
+            "Result data don't have key 'tasks'.")
+        self.assertEquals(None, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json.loads')
@@ -1228,6 +1342,17 @@ class ReportTesting(unittest.TestCase):
         dt_report.FunctestK8sChecker.create_log()
 
         self.assertEquals(getlogger_obj, dt_report.FunctestK8sChecker.logger)
+
+    @patch('dovetail.report.dt_logger')
+    def test_functest_rally_checker_create_log(self, mock_logger):
+        getlogger_obj = Mock()
+        logger_obj = Mock()
+        logger_obj.getLogger.return_value = getlogger_obj
+        mock_logger.Logger.return_value = logger_obj
+
+        dt_report.FunctestRallyChecker.create_log()
+
+        self.assertEquals(getlogger_obj, dt_report.FunctestRallyChecker.logger)
 
     @patch('dovetail.report.dt_logger')
     def test_yardstick_checker_create_log(self, mock_logger):

@@ -1,0 +1,49 @@
+---
+functest.rally.nova:
+  name: functest.rally.nova
+  objective: Run all Functest Rally Nova test cases
+  validate:
+    type: functest-rally
+    testcase: rally_full
+    pre_condition:
+      - 'cp /home/opnfv/pre_config/rally_nova_blacklist.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/rally/blacklist.yaml'
+  report:
+    source_archive_files:
+      - functest.log
+      - rally_full/nova.json
+      - rally_full/nova.html
+    dest_archive_files:
+      - rally_nova_logs/functest.rally.nova.functest.log
+      - rally_nova_logs/nova.json
+      - rally_nova_logs/nova.html
+    check_results_files:
+      - 'functest_results.txt'
+      - 'rally_nova_logs/nova.json'
+    sub_testcase_list:
+      - 'NovaKeypair.create_and_delete_keypair'
+      - 'NovaKeypair.create_and_list_keypairs'
+      - 'NovaServers.boot_and_bounce_server'
+      - 'NovaServers.boot_and_delete_server'
+      - 'NovaServers.boot_and_list_server'
+      - 'NovaServers.boot_and_rebuild_server'
+      - 'NovaServers.snapshot_server'
+      - 'NovaServers.boot_server_from_volume'
+      - 'NovaServers.boot_server'
+      - 'NovaServers.list_servers'
+      - 'NovaServers.resize_server'
+      - 'NovaServers.boot_and_live_migrate_server'
+      - 'NovaServers.boot_server_attach_created_volume_and_live_migrate'
+      - 'NovaServers.boot_server_from_volume_and_live_migrate'
+      - 'NovaKeypair.boot_and_delete_server_with_keypair'
+      - 'NovaServers.boot_server_from_volume_and_delete'
+      - 'NovaServers.pause_and_unpause_server'
+      - 'NovaServers.boot_and_migrate_server'
+      - 'NovaServers.boot_server_and_list_interfaces'
+      - 'NovaServers.boot_and_get_console_url'
+      - 'NovaServers.boot_server_and_attach_interface'
+      - 'NovaServers.boot_server_attach_volume_and_list_attachments'
+      - 'NovaServers.boot_server_associate_and_dissociate_floating_ip'
+      - 'NovaServers.boot_and_associate_floating_ip'
+      - 'NovaServerGroups.create_and_delete_server_group'
+      - 'NovaServerGroups.create_and_get_server_group'
+      - 'NovaServerGroups.create_and_list_server_groups'
