@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_41f32e9e",
+        "filename": "etc/conf/onap-vvp_config.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2019-02-05T14:09:29Z",
+      "side": 1,
+      "message": "i assume pre and post conditions are for debug purpose?",
+      "revId": "6b9e62527829867f52a8d18efb09d85b76b35436",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
