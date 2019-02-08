@@ -5,6 +5,7 @@ onap.onap.vnf_lifecycle:
   validate:
     type: vnftest
     testcase: onap_vnftest_tc001
+    vnf_type: tosca
   report:
     source_archive_files:
       - vnftest.log

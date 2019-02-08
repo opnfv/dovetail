@@ -178,7 +178,8 @@ class ReportTesting(unittest.TestCase):
         testcase_list = ['ta.tb.tc', 'td.te.tf']
         duration = 42
         mock_config.dovetail_config = {
-            'build_tag': 'build_tag'
+            'build_tag': 'build_tag',
+            'version': '2018.09'
         }
         utc_obj = Mock()
         utc_obj.strftime.return_value = '2018-01-13 13:13:13 UTC'
@@ -228,7 +229,9 @@ class ReportTesting(unittest.TestCase):
         report.logger = logger_obj
         duration = 42
         mock_config.dovetail_config = {
-            'build_tag': 'build_tag'
+            'build_tag': 'build_tag',
+            'version': '2018.09',
+            'vnf_type': 'tosca'
         }
         utc_obj = Mock()
         utc_obj.strftime.return_value = '2018-01-13 13:13:13 UTC'
@@ -238,6 +241,7 @@ class ReportTesting(unittest.TestCase):
         expected = {
             'version': '2018.09',
             'build_tag': 'build_tag',
+            'vnf_type': 'tosca',
             'test_date': '2018-01-13 13:13:13 UTC',
             'duration': duration,
             'testcases_list': []
