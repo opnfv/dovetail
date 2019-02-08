@@ -18,6 +18,7 @@ testsuite_supported:
   - debug
   - healthcheck
   - ovp.2018.09
+  - onap.tosca.2019.04
   - onap.1.0.0
 
 # used for testcase cmd template in jinja2 format
