@@ -1,6 +1,8 @@
 ---
 onap.1.0.0:
   name: onap.1.0.0
+  version: '1.0.0'
+  vnf_type: tosca
   testcases_list:
     optional:
       - onap.lifecycle.tc001
