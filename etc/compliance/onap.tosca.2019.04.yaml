@@ -1,0 +1,7 @@
+---
+onap.tosca.2019.04:
+  name: onap.tosca.2019.04
+  version: '2019.04'
+  testcases_list:
+    mandatory:
+      - onap-vtp.validate.csar

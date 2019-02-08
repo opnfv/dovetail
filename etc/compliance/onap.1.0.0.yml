@@ -1,6 +1,7 @@
 ---
 onap.1.0.0:
   name: onap.1.0.0
+  version: '1.0.0'
   testcases_list:
     optional:
       - onap.lifecycle.tc001
