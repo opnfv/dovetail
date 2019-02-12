@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_358c687f",
+        "filename": "etc/compliance/onap.1.0.0.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-02-12T07:04:43Z",
+      "side": 1,
+      "message": "It should be better if removing this lifecycle test case and the whole onap lifecycle tests added a long time ago by Moshe. Because now all onap vnf test cases are from vvp and vnf sdk. And this lifecycle test case may not work now because there\u0027s no one to maintain it since it was added in. Also, users may be confused why there is one onap lifecycle test cases when launching the onap 2019.04 release.\nI will send an email to Moshe to ask his opinion about this.",
+      "range": {
+        "startLine": 8,
+        "startChar": 9,
+        "endLine": 8,
+        "endChar": 28
+      },
+      "revId": "3697570860f458baf136a4b944c8656e76861a6d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
