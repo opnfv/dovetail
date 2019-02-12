@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_15732c81",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-12T08:29:05Z",
+      "side": 1,
+      "message": "For heat validation there is no need for a VVP Backend. Validation tests are python tests run from pytest inside vvp container",
+      "range": {
+        "startLine": 73,
+        "startChar": 27,
+        "endLine": 73,
+        "endChar": 90
+      },
+      "revId": "259a002ed191a84a89e45386ca02ff9ee5406c45",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_b55cf8ee",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-12T08:29:05Z",
+      "side": 1,
+      "message": "export VNF_DIRECTORY\u003d\"/path/to/pre_config/vnf_dir\"",
+      "range": {
+        "startLine": 112,
+        "startChar": 3,
+        "endLine": 112,
+        "endChar": 35
+      },
+      "revId": "259a002ed191a84a89e45386ca02ff9ee5406c45",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_d559b4ff",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-12T08:29:05Z",
+      "side": 1,
+      "message": "onap-vvp.validate.heat",
+      "range": {
+        "startLine": 141,
+        "startChar": 39,
+        "endLine": 141,
+        "endChar": 75
+      },
+      "revId": "259a002ed191a84a89e45386ca02ff9ee5406c45",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
