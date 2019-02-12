@@ -16,6 +16,24 @@
       "revId": "6b9e62527829867f52a8d18efb09d85b76b35436",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_753b809c",
+        "filename": "etc/conf/onap-vvp_config.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-12T08:03:35Z",
+      "side": 1,
+      "message": "Hi Morgan,\n\nAs you can see in config directory:\nhttps://github.com/opnfv/dovetail/tree/master/etc/conf\n\nevery config file contains such commands. I decided to use the same pattern for convenience.\n\nOf course, an echo does not change the behavior of the container and is not either a requirement to run the tests.\n\nIf we wish to remove these commands I am up for it but let it happen in a separate patch which removes them for every config file.\n\nAs far as I know, they can be omitted without any problem.\n\nBest regards,\nStamatis",
+      "parentUuid": "1a622d24_41f32e9e",
+      "revId": "6b9e62527829867f52a8d18efb09d85b76b35436",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
