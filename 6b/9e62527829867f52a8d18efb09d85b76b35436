@@ -1,0 +1,10 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Georg Kunz <georg.kunz@ericsson.com>
+Code-Review+1: Mika Rautakumpu <mika.rautakumpu@nokia.com>
+Code-Review+1: Morgan Richomme <morgan.richomme@orange.com>
+Code-Review+2: Dan Xu <xudan16@huawei.com>
+Submitted-by: Dan Xu <xudan16@huawei.com>
+Submitted-at: Wed, 13 Feb 2019 13:36:48 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/66619
+Project: dovetail
+Branch: refs/heads/master
