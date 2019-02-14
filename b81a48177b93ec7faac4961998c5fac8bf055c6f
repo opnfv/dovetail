@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_04c65f49",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 6769
+      },
+      "writtenOn": "2019-02-14T14:39:13Z",
+      "side": 1,
+      "message": "Consider rewording this to\n\nThe command `docker ps` can be used to check if the 2 containers named \u0027refrepo\u0027 and \u0027postgres\u0027 are running.",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 33
+      },
+      "revId": "b81a48177b93ec7faac4961998c5fac8bf055c6f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_64c5933b",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 6769
+      },
+      "writtenOn": "2019-02-14T14:39:13Z",
+      "side": 1,
+      "message": "The VNF package to be tested should be copied to the container \u0027refrepo\u0027.",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 63,
+        "endChar": 69
+      },
+      "revId": "b81a48177b93ec7faac4961998c5fac8bf055c6f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
