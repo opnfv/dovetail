@@ -211,9 +211,9 @@ class TestRunnerTesting(unittest.TestCase):
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.os')
     def test_archive_logs_no_files(self, mock_os, mock_utils, mock_config):
-        t_runner.VnftestRunner.create_log()
+        t_runner.FunctestRunner.create_log()
         mock_config.dovetail_config = {'result_dir': 'result_dir'}
-        docker_runner = t_runner.VnftestRunner(self.testcase)
+        docker_runner = t_runner.FunctestRunner(self.testcase)
         mock_os.environ = {'DOVETAIL_HOME': 'dovetail_home'}
         mock_utils.get_value_from_dict.return_value = []
 

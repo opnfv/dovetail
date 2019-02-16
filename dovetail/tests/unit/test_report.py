@@ -34,20 +34,18 @@ class ReportTesting(unittest.TestCase):
         dt_report.FunctestK8sCrawler.logger = None
         dt_report.YardstickCrawler.logger = None
         dt_report.BottlenecksCrawler.logger = None
-        dt_report.VnftestCrawler.logger = None
         dt_report.OnapVtpCrawler.logger = None
         dt_report.OnapVvpCrawler.logger = None
         dt_report.FunctestChecker.logger = None
         dt_report.FunctestK8sChecker.logger = None
         dt_report.YardstickChecker.logger = None
         dt_report.BottlenecksChecker.logger = None
-        dt_report.VnftestChecker.logger = None
         dt_report.OnapVtpChecker.logger = None
         dt_report.OnapVvpChecker.logger = None
         dt_report.Report.logger = None
         dt_report.Report.results = {
             'functest': {}, 'yardstick': {}, 'functest-k8s': {},
-            'bottlenecks': {}, 'shell': {}, 'vnftest': {}, 'onap-vtp': {},
+            'bottlenecks': {}, 'shell': {}, 'onap-vtp': {},
             'onap-vvp': {}}
 
     def _produce_report_initial_text(self, report_data):
@@ -879,85 +877,6 @@ class ReportTesting(unittest.TestCase):
         self.assertEquals('result', result)
 
     @patch('dovetail.report.dt_logger')
-    def test_vnftest_crawler_create_log(self, mock_logger):
-        getlogger_obj = Mock()
-        logger_obj = Mock()
-        logger_obj.getLogger.return_value = getlogger_obj
-        mock_logger.Logger.return_value = logger_obj
-
-        dt_report.VnftestCrawler.create_log()
-
-        self.assertEquals(getlogger_obj, dt_report.VnftestCrawler.logger)
-
-    @patch('dovetail.report.os.path')
-    def test_vnftest_crawler_crawl_not_exists(self, mock_path):
-        logger_obj = Mock()
-        dt_report.VnftestCrawler.logger = logger_obj
-        mock_path.exists.return_value = False
-        file_path = 'file_path'
-
-        crawler = dt_report.VnftestCrawler()
-        result = crawler.crawl(None, file_path)
-
-        mock_path.exists.assert_called_once_with(file_path)
-        logger_obj.error.assert_called_once_with(
-            'Result file not found: {}'.format(file_path))
-        self.assertEquals(None, result)
-
-    @patch('__builtin__.open')
-    @patch('dovetail.report.json.loads')
-    @patch('dovetail.report.os.path')
-    def test_vnftest_crawler_crawl(self, mock_path, mock_loads,
-                                   mock_open):
-        dt_report.VnftestCrawler.logger = Mock()
-        mock_path.exists.return_value = True
-        file_path = 'file_path'
-        testcase_obj = Mock()
-        file_obj = Mock()
-        mock_open.return_value.__enter__.return_value = [file_obj]
-        data_dict = {
-            'result': {
-                'criteria': 'PASS'
-            }
-        }
-        mock_loads.return_value = data_dict
-
-        crawler = dt_report.VnftestCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
-        expected = {'criteria': 'PASS'}
-
-        mock_path.exists.assert_called_once_with(file_path)
-        mock_open.assert_called_once_with(file_path, 'r')
-        mock_loads.assert_called_once_with(file_obj)
-        self.assertEquals(expected, result)
-
-    @patch('__builtin__.open')
-    @patch('dovetail.report.json.loads')
-    @patch('dovetail.report.os.path')
-    def test_vnftest_crawler_crawl_key_error(self, mock_path, mock_loads,
-                                             mock_open):
-        logger_obj = Mock()
-        dt_report.VnftestCrawler.logger = logger_obj
-        mock_path.exists.return_value = True
-        file_path = 'file_path'
-        testcase_obj = Mock()
-        file_obj = Mock()
-        mock_open.return_value.__enter__.return_value = [file_obj]
-
-        mock_loads.return_value = {}
-
-        crawler = dt_report.VnftestCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
-        expected = {'criteria': 'FAIL'}
-
-        mock_path.exists.assert_called_once_with(file_path)
-        mock_open.assert_called_once_with(file_path, 'r')
-        mock_loads.assert_called_once_with(file_obj)
-        logger_obj.exception.assert_called_once_with(
-            "Pass flag not found 'result'")
-        self.assertEquals(expected, result)
-
-    @patch('dovetail.report.dt_logger')
     def test_onapvtp_crawler_create_log(self, mock_logger):
         getlogger_obj = Mock()
         logger_obj = Mock()
@@ -1424,33 +1343,6 @@ class ReportTesting(unittest.TestCase):
         dt_report.ShellChecker.check(testcase_obj, result)
 
         testcase_obj.passed.assert_called_once_with(False)
-
-    @patch('dovetail.report.dt_logger')
-    def test_vnftest_checker_create_log(self, mock_logger):
-        getlogger_obj = Mock()
-        logger_obj = Mock()
-        logger_obj.getLogger.return_value = getlogger_obj
-        mock_logger.Logger.return_value = logger_obj
-
-        dt_report.VnftestChecker.create_log()
-
-        self.assertEquals(getlogger_obj, dt_report.VnftestChecker.logger)
-
-    def test_vnftest_check_result(self):
-        testcase_obj = Mock()
-        result = {'criteria': 'PASS'}
-
-        dt_report.VnftestChecker.check(testcase_obj, result)
-
-        testcase_obj.passed.assert_called_once_with('PASS')
-
-    def test_vnftest_check_result_none(self):
-        testcase_obj = Mock()
-        result = {}
-
-        dt_report.VnftestChecker.check(testcase_obj, result)
-
-        testcase_obj.passed.assert_called_once_with('FAIL')
 
     def test_checker_factory(self):
         result = dt_report.CheckerFactory.create('shell')

@@ -9,8 +9,6 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 
-import os
-
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
 from utils.dovetail_config import DovetailConfig as dt_cfg
@@ -49,22 +47,6 @@ class Container(object):
         tag = self._get_config('docker_tag', project_cfg, testcase_cfg)
         return "{}:{}".format(name, tag) if name and tag else None
 
-    def set_vnftest_config(self):
-        dovetail_config = dt_cfg.dovetail_config
-
-        log_vol = '-v %s:%s ' % (dovetail_config['result_dir'],
-                                 dovetail_config['vnftest']['result']['log'])
-
-        key_file = os.path.join(dovetail_config['config_dir'],
-                                dovetail_config['pri_key'])
-        key_container_path = dovetail_config['vnftest']['result']['key_path']
-        if not os.path.isfile(key_file):
-            self.logger.debug("Key file {} is not found".format(key_file))
-            key_vol = ''
-        else:
-            key_vol = '-v %s:%s ' % (key_file, key_container_path)
-        return "%s %s" % (log_vol, key_vol)
-
     def create(self, docker_image):
         dovetail_config = dt_cfg.dovetail_config
         project_cfg = dovetail_config[self.valid_type]
@@ -82,24 +64,11 @@ class Container(object):
 
         hosts_config = dt_utils.get_hosts_info(self.logger)
 
-        # This part will be totally removed after remove the 4 functions
-        # set_functest_config has been removed
-        # set_yardstick_config has been removed
-        # set_bottlenecks_config has been removed
-        # set_vnftest_config
-        config = " "
-        if self.valid_type.lower() == "vnftest":
-            config = self.set_vnftest_config()
-        if not config:
-            return None
-
-        cmd = 'sudo docker run {opts} {envs} {volumes} {config} ' \
+        cmd = 'sudo docker run {opts} {envs} {volumes} ' \
               '{hosts_config} {docker_image} {shell}'.format(**locals())
         ret, container_id = dt_utils.exec_cmd(cmd, self.logger)
         if ret != 0:
             return None
-        if self.valid_type.lower() == 'vnftest':
-            self.set_vnftest_conf_file(container_id)
 
         self.container_id = container_id
         return container_id
@@ -213,10 +182,3 @@ class Container(object):
             return
         for item in project_config['copy_file_in_container']:
             self.copy_file(item['src_file'], item['dest_file'])
-
-    def set_vnftest_conf_file(self):
-        valid_type = 'vnftest'
-        for conf_file in dt_cfg.dovetail_config[valid_type]['vnftest_conf']:
-            src = conf_file['src_file']
-            dest = conf_file['dest_file']
-            self.docker_copy(src, dest)
