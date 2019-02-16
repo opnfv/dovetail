@@ -1,0 +1,8 @@
+---
+onap.heat.2019.04:
+  name: onap.heat.2019.04
+  version: '2019.04'
+  vnf_type: heat
+  testcases_list:
+    mandatory:
+      - onap-vvp.validate.heat
