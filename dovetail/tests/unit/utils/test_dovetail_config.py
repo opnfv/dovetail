@@ -9,7 +9,7 @@
 ##
 
 import unittest
-from mock import patch
+from mock import patch, Mock
 
 from dovetail.utils.dovetail_config import DovetailConfig
 
@@ -51,3 +51,22 @@ class DovetailConfigTesting(unittest.TestCase):
         dovetail_cfg.update_non_envs(path, value)
 
         mock_set_leaf.assert_called_once_with(mock_cfg, path, value)
+
+    @patch('__builtin__.open')
+    @patch('dovetail.utils.dovetail_config.yaml.safe_load')
+    @patch('dovetail.utils.dovetail_config.os.path')
+    def test_load_config_files(self, mock_path, mock_load, mock_open):
+        mock_open.return_value.__enter__.return_value = Mock()
+        mock_load.side_effect = [{
+            'include_config': ['f_a'],
+            'cli_file_name': 'f_b'
+        }, {'k_a': 'v_a'}, {'k_b': 'v_b'}]
+
+        expected = {
+            'cli': 'v_b',
+            'cli_file_name': 'f_b',
+            'include_config': ['f_a'],
+            'k_a': 'v_a'}
+        DovetailConfig.load_config_files('mock_path')
+
+        self.assertEquals(expected, DovetailConfig.dovetail_config)
