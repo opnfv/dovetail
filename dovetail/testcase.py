@@ -340,15 +340,6 @@ class ShellTestcase(Testcase):
         self.type = 'shell'
 
 
-class VnftestTestcase(Testcase):
-
-    validate_testcase_list = {}
-
-    def __init__(self, testcase_yaml):
-        super(VnftestTestcase, self).__init__(testcase_yaml)
-        self.type = 'vnftest'
-
-
 class OnapVtpTestcase(Testcase):
 
     validate_testcase_list = {}
@@ -373,7 +364,6 @@ class TestcaseFactory(object):
         'yardstick': YardstickTestcase,
         'bottlenecks': BottlenecksTestcase,
         'shell': ShellTestcase,
-        'vnftest': VnftestTestcase,
         'functest-k8s': FunctestK8sTestcase,
         'onap-vtp': OnapVtpTestcase,
         'onap-vvp': OnapVvpTestcase

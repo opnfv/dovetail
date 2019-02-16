@@ -19,7 +19,6 @@ testsuite_supported:
   - healthcheck
   - ovp.2018.09
   - onap.tosca.2019.04
-  - onap.1.0.0
 
 # used for testcase cmd template in jinja2 format
 # we have two variables available now
@@ -32,4 +31,3 @@ parameters:
     path: '("validate", "testcase")'
 
 include_config:
-  - vnftest_config.yml
