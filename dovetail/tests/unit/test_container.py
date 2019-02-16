@@ -36,22 +36,6 @@ class ContainerTesting(unittest.TestCase):
         pass
 
     @patch('dovetail.container.dt_cfg')
-    @patch.object(Container, 'docker_copy')
-    def test_set_vnftest_conf_file(self, mock_copy, mock_config):
-        source_file = 'source'
-        destination_file = 'destination_file'
-        mock_config.dovetail_config = {
-            'vnftest': {
-                'vnftest_conf': [{
-                    'src_file': source_file,
-                    'dest_file': destination_file}]}}
-
-        self.container.set_vnftest_conf_file()
-
-        mock_copy.assert_called_once_with(
-            source_file, destination_file)
-
-    @patch('dovetail.container.dt_cfg')
     @patch.object(Container, 'copy_file')
     def test_copy_files_in_container(self, mock_copy, mock_config):
         source_file = 'source'
@@ -416,53 +400,6 @@ class ContainerTesting(unittest.TestCase):
 
         self.assertEquals(self.logger, self.container.logger)
 
-    @patch('dovetail.container.dt_cfg')
-    @patch('dovetail.container.os.path')
-    def test_set_vnftest_config_no_file(self, mock_path, mock_config):
-        v_one = 'v_one'
-        v_two = 'v_two'
-        v_three = 'v_three'
-        v_four = 'v_four'
-        v_five = 'v_five'
-        mock_path.join.return_value = '/'.join([v_two, v_three])
-        mock_path.isfile.return_value = False
-        mock_config.dovetail_config = {
-            'result_dir': v_one, 'config_dir': v_two,
-            'pri_key': v_three, 'vnftest': {
-                'result': {'log': v_four, 'key_path': v_five}}}
-
-        expected = '-v {}:{}  '.format(v_one, v_four)
-        result = self.container.set_vnftest_config()
-
-        mock_path.join.assert_called_once_with(v_two, v_three)
-        mock_path.isfile.assert_called_once_with('/'.join([v_two, v_three]))
-        self.logger.debug.assert_called_once_with(
-            'Key file {} is not found'.format('/'.join([v_two, v_three])))
-        self.assertEquals(expected, result)
-
-    @patch('dovetail.container.dt_cfg')
-    @patch('dovetail.container.os.path')
-    def test_set_vnftest_config(self, mock_path, mock_config):
-        v_one = 'v_one'
-        v_two = 'v_two'
-        v_three = 'v_three'
-        v_four = 'v_four'
-        v_five = 'v_five'
-        mock_path.join.return_value = '/'.join([v_two, v_three])
-        mock_path.isfile.return_value = True
-        mock_config.dovetail_config = {
-            'result_dir': v_one, 'config_dir': v_two,
-            'pri_key': v_three, 'vnftest': {
-                'result': {'log': v_four, 'key_path': v_five}}}
-
-        expected = '-v {}:{}  -v {}/{}:{} '.format(v_one, v_four, v_two,
-                                                   v_three, v_five)
-        result = self.container.set_vnftest_config()
-
-        mock_path.join.assert_called_once_with(v_two, v_three)
-        mock_path.isfile.assert_called_once_with('/'.join([v_two, v_three]))
-        self.assertEquals(expected, result)
-
     @patch('dovetail.container.dt_utils')
     @patch('dovetail.container.dt_cfg')
     def test_create(self, mock_config, mock_utils):
@@ -485,7 +422,7 @@ class ContainerTesting(unittest.TestCase):
             call('volumes', project_config)])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
         mock_utils.exec_cmd.assert_called_once_with(
-            'sudo docker run opts envs volume_one volume_two   host_info '
+            'sudo docker run opts envs volume_one volume_two host_info '
             'docker_image shell', self.logger)
         self.assertEquals(expected, result)
 
@@ -506,12 +443,10 @@ class ContainerTesting(unittest.TestCase):
 
     @patch('dovetail.container.dt_utils')
     @patch('dovetail.container.dt_cfg')
-    @patch('dovetail.container.os.getenv')
-    def test_create_error(self, mock_getenv, mock_config, mock_utils):
+    def test_create_error(self, mock_config, mock_utils):
         docker_image = 'docker_image'
         mock_utils.get_value_from_dict.side_effect = [
             'opts', 'shell', 'envs', ['volume_one']]
-        mock_getenv.side_effect = ['True', 'dovetail_home', None, 'True']
         mock_utils.get_hosts_info.return_value = 'host_info'
         mock_utils.check_https_enabled.return_value = True
         mock_utils.exec_cmd.return_value = (1, 'error')
@@ -526,71 +461,6 @@ class ContainerTesting(unittest.TestCase):
             call('volumes', project_config)])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
         mock_utils.exec_cmd.assert_called_once_with(
-            'sudo docker run opts envs volume_one   host_info '
+            'sudo docker run opts envs volume_one host_info '
             'docker_image shell', self.logger)
-        self.assertEquals(None, result)
-
-    @patch('dovetail.container.dt_utils')
-    @patch('dovetail.container.dt_cfg')
-    @patch('dovetail.container.os.getenv')
-    @patch.object(Container, 'set_vnftest_config')
-    @patch.object(Container, 'set_vnftest_conf_file')
-    def test_create_vnftest(self, mock_setvnffile, mock_setvnfconf,
-                            mock_getenv, mock_config, mock_utils):
-        docker_image = 'docker_image'
-        container_id = 'container_id'
-        mock_utils.get_value_from_dict.side_effect = [
-            'opts', 'shell', 'envs', ['volume_one']]
-        mock_getenv.side_effect = ['False', 'dovetail_home', 'cacert', 'True']
-        mock_setvnfconf.return_value = 'vnftest_config'
-        mock_utils.get_hosts_info.return_value = 'host_info'
-        mock_utils.exec_cmd.return_value = (0, container_id)
-        project_config = {}
-        mock_config.dovetail_config = {'vnftest': project_config}
-
-        expected = container_id
-        self.container.valid_type = 'vnftest'
-        result = self.container.create(docker_image)
-        self.container.valid_type = 'bottlenecks'
-
-        mock_utils.get_value_from_dict.assert_has_calls([
-            call('opts', project_config),
-            call('shell', project_config),
-            call('envs', project_config),
-            call('volumes', project_config)])
-        mock_utils.get_hosts_info.assert_called_once_with(self.logger)
-        mock_setvnfconf.assert_called_once_with()
-        mock_setvnffile.assert_called_once_with(container_id)
-        mock_utils.exec_cmd.assert_called_once_with(
-            'sudo docker run opts envs volume_one vnftest_config host_info '
-            'docker_image shell',
-            self.logger)
-        self.assertEquals(expected, result)
-
-    @patch('dovetail.container.dt_utils')
-    @patch('dovetail.container.dt_cfg')
-    @patch('dovetail.container.os.getenv')
-    @patch.object(Container, 'set_vnftest_config')
-    def test_create_vnftest_error(self, mock_setvnfconf,
-                                  mock_getenv, mock_config, mock_utils):
-        docker_image = 'docker_image'
-        mock_utils.get_value_from_dict.side_effect = [
-            'opts', 'shell', 'envs', ['volume_one']]
-        mock_getenv.return_value = 'True'
-        mock_setvnfconf.return_value = None
-        mock_config.dovetail_config = {
-            'vnftest': 'value',
-            'build_tag': 'v_one'}
-
-        self.container.valid_type = 'vnftest'
-        result = self.container.create(docker_image)
-        self.container.valid_type = 'bottlenecks'
-
-        mock_utils.get_value_from_dict.assert_has_calls([
-            call('opts', 'value'),
-            call('shell', 'value'),
-            call('envs', 'value'),
-            call('volumes', 'value')])
-        mock_utils.get_hosts_info.assert_called_once_with(self.logger)
-        mock_setvnfconf.assert_called_once_with()
         self.assertEquals(None, result)

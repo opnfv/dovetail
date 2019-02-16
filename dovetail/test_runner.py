@@ -270,13 +270,6 @@ class ShellRunner(Runner):
                                   'exception: {}'.format(result_filename, e))
 
 
-class VnftestRunner(DockerRunner):
-
-    def __init__(self, testcase):
-        self.type = 'vnftest'
-        super(VnftestRunner, self).__init__(testcase)
-
-
 class OnapVtpRunner(DockerRunner):
 
     config_file_name = 'onap-vtp_config.yml'
@@ -316,7 +309,6 @@ class TestRunnerFactory(object):
         "yardstick": YardstickRunner,
         "bottlenecks": BottlenecksRunner,
         "shell": ShellRunner,
-        "vnftest": VnftestRunner,
         "functest-k8s": FunctestK8sRunner,
         "onap-vtp": OnapVtpRunner,
         "onap-vvp": OnapVvpRunner

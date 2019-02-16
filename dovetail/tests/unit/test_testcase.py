@@ -89,7 +89,7 @@ class TestcaseTesting(unittest.TestCase):
     @patch('dovetail.testcase.dt_cfg')
     @patch.object(tcase.Testcase, 'parse_cmd')
     def test_prepare_cmd_testcase_cmd(self, mock_parse, mock_config):
-        testcase = tcase.VnftestTestcase(self.testcase_yaml)
+        testcase = tcase.ShellTestcase(self.testcase_yaml)
         testcase.testcase['validate']['cmds'] = ['cmd']
         mock_config.dovetail_config = {}
         mock_parse.return_value = True

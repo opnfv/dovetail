@@ -22,12 +22,6 @@ class DovetailConfig(object):
         with open(os.path.join(conf_path, 'dovetail_config.yml')) as f:
             cls.dovetail_config = yaml.safe_load(f)
 
-        for extra_config_file in cls.dovetail_config['include_config']:
-            file_path = os.path.join(conf_path, extra_config_file)
-            with open(file_path) as f:
-                extra_config = yaml.safe_load(f)
-                cls.dovetail_config.update(extra_config)
-
         path = os.path.join(conf_path, cls.dovetail_config['cli_file_name'])
         with open(path) as f:
             cmd_yml = yaml.safe_load(f)

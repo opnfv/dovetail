@@ -29,7 +29,7 @@ from testcase import Testcase
 class Report(object):
 
     results = {'functest': {}, 'yardstick': {}, 'functest-k8s': {},
-               'bottlenecks': {}, 'shell': {}, 'vnftest': {}, 'onap-vtp': {},
+               'bottlenecks': {}, 'shell': {}, 'onap-vtp': {},
                'onap-vvp': {}}
 
     logger = None
@@ -403,38 +403,6 @@ class ShellCrawler(Crawler):
             return None
 
 
-class VnftestCrawler(Crawler):
-
-    logger = None
-
-    def __init__(self):
-        self.type = 'vnftest'
-        self.logger.debug('Create crawler: {}'.format(self.type))
-
-    @classmethod
-    def create_log(cls):
-        cls.logger = \
-            dt_logger.Logger(__name__ + '.VnftestCrawler').getLogger()
-
-    def crawl(self, testcase, file_path):
-        return self.crawl_from_file(testcase, file_path)
-
-    def crawl_from_file(self, testcase, file_path):
-        if not os.path.exists(file_path):
-            self.logger.error('Result file not found: {}'.format(file_path))
-            return None
-        criteria = 'FAIL'
-        with open(file_path, 'r') as f:
-            for jsonfile in f:
-                data = json.loads(jsonfile)
-                try:
-                    criteria = data['result']['criteria']
-                except KeyError as e:
-                    self.logger.exception('Pass flag not found {}'.format(e))
-        json_results = {'criteria': criteria}
-        return json_results
-
-
 class OnapVtpCrawler(Crawler):
 
     logger = None
@@ -532,7 +500,6 @@ class CrawlerFactory(object):
         'functest': FunctestCrawler,
         'yardstick': YardstickCrawler,
         'bottlenecks': BottlenecksCrawler,
-        'vnftest': VnftestCrawler,
         'shell': ShellCrawler,
         'functest-k8s': FunctestK8sCrawler,
         'onap-vtp': OnapVtpCrawler,
@@ -673,24 +640,6 @@ class ShellChecker(object):
             testcase.passed(False)
 
 
-class VnftestChecker(object):
-
-    logger = None
-
-    @classmethod
-    def create_log(cls):
-        cls.logger = \
-            dt_logger.Logger(__name__ + '.VnftestCheckers').getLogger()
-
-    @staticmethod
-    def check(testcase, result):
-        if not result:
-            testcase.passed('FAIL')
-        else:
-            testcase.passed(result['criteria'])
-        return
-
-
 class OnapVtpChecker(object):
 
     logger = None
@@ -732,7 +681,6 @@ class CheckerFactory(object):
         'yardstick': YardstickChecker,
         'bottlenecks': BottlenecksChecker,
         'shell': ShellChecker,
-        'vnftest': VnftestChecker,
         'functest-k8s': FunctestK8sChecker,
         'onap-vtp': OnapVtpChecker,
         'onap-vvp': OnapVvpChecker
