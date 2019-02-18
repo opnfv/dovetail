@@ -13,7 +13,7 @@ functest.tempest.osinterop:
   report:
     source_archive_files:
       - functest.log
-      - refstack_defcore/tempest.log
+      - refstack_defcore/rally.log
       - refstack_defcore/tempest-report.html
     dest_archive_files:
       - tempest_logs/functest.tempest.osinterop.functest.log
@@ -221,3 +221,20 @@ functest.tempest.osinterop:
       - tempest.api.compute.servers.test_servers_negative.ServersNegativeTestJSON.test_create_numeric_server_name[id-fd57f159-68d6-4c2a-902b-03070828a87e,negative]
       - tempest.api.network.test_ports.PortsTestJSON.test_create_bulk_port[id-67f1b811-f8db-43e2-86bd-72c074d4a42c]
       - tempest.api.volume.test_volumes_list.VolumesListTestJSON.test_volume_list_with_detail_param_display_name_and_status[id-856ab8ca-6009-4c37-b691-be1065528ad4]
+      - tempest.api.network.test_networks.NetworksTest.test_external_network_visibility[id-af774677-42a9-4e4b-bb58-16fe6a5bc1ec,smoke]
+      - tempest.api.network.test_ports.PortsTestJSON.test_port_list_filter_by_router_id[id-5ad01ed0-0e6e-4c5d-8194-232801b15c72]
+      - tempest.api.network.test_routers_negative.RoutersNegativeTest.test_add_router_interfaces_on_overlapping_subnets_returns_400[id-957751a3-3c68-4fa2-93b6-eb52ea10db6e,negative]
+      - tempest.api.network.test_routers_negative.RoutersNegativeTest.test_delete_non_existent_router_returns_404[id-c7edc5ad-d09d-41e6-a344-5c0c31e2e3e4,negative]
+      - tempest.api.network.test_routers_negative.RoutersNegativeTest.test_router_add_gateway_invalid_network_returns_404[id-37a94fc0-a834-45b9-bd23-9a81d2fd1e22,negative]
+      - tempest.api.network.test_routers_negative.RoutersNegativeTest.test_router_add_gateway_net_not_external_returns_400[id-11836a18-0b15-4327-a50b-f0d9dc66bddd,negative]
+      - tempest.api.network.test_routers_negative.RoutersNegativeTest.test_router_remove_interface_in_use_returns_409[id-04df80f9-224d-47f5-837a-bf23e33d1c20,negative]
+      - tempest.api.network.test_routers_negative.RoutersNegativeTest.test_show_non_existent_router_returns_404[id-c2a70d72-8826-43a7-8208-0209e6360c47,negative]
+      - tempest.api.network.test_routers_negative.RoutersNegativeTest.test_update_non_existent_router_returns_404[id-b23d1569-8b0c-4169-8d4b-6abd34fad5c7,negative]
+      - tempest.api.network.test_routers.RoutersTest.test_add_multiple_router_interfaces[id-802c73c9-c937-4cef-824b-2191e24a6aab,smoke]
+      - tempest.api.network.test_routers.RoutersTest.test_add_remove_router_interface_with_port_id[id-2b7d2f37-6748-4d78-92e5-1d590234f0d5,smoke]
+      - tempest.api.network.test_routers.RoutersTest.test_add_remove_router_interface_with_subnet_id[id-b42e6e39-2e37-49cc-a6f4-8467e940900a,smoke]
+      - tempest.api.network.test_routers.RoutersTest.test_create_show_list_update_delete_router[id-f64403e2-8483-4b34-8ccd-b09a87bcc68c,smoke]
+      - tempest.api.network.test_routers.RoutersTest.test_update_delete_extra_route[id-c86ac3a8-50bd-4b00-a6b8-62af84a0765c]
+      - tempest.api.network.test_routers.RoutersTest.test_update_router_admin_state[id-a8902683-c788-4246-95c7-ad9c6d63a4d9]
+      - tempest.api.network.test_versions.NetworksApiDiscovery.test_api_version_resources[id-cac8a836-c2e0-4304-b556-cd299c7281d1,smoke]
+      - tempest.api.volume.test_versions.VersionsTest.test_list_versions[id-77838fc4-b49b-4c64-9533-166762517369,smoke]
