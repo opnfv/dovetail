@@ -1,7 +1,7 @@
 ---
 
 {% set build_tag = build_tag or '' %}
-{% set heat_templates_dir = heat_templates_dir or '' %}
+{% set heat_templates_archive = heat_templates_archive or '' %}
 {% set result_dir = '/reports' %}
 
 onap-vvp:
@@ -10,11 +10,11 @@ onap-vvp:
   opts: '-td --entrypoint=""'
   shell: '/bin/ash'
   volumes:
-    - '-v {{heat_templates_dir}}:/template'
+    - '-v {{dovetail_home}}/pre_config/{{heat_templates_archive}}.tar.gz:/tmp/{{heat_templates_archive}}.tar.gz'
     - '-v {{dovetail_home}}/results:{{result_dir}}'
   pre_condition:
-    - 'echo this is pre_condition'
+    - 'tar xf /tmp/{{heat_templates_archive}}.tar.gz -C /vvp'
   cmds:
-    - 'pytest --template-directory=/template --output-directory=/reports --report-format=json --continue-on-failure'
+    - 'pytest tests --template-directory=/vvp/{{heat_templates_archive}} --output-directory=/vvp/reports --report-format=json --continue-on-failure'
   post_condition:
     - 'echo this is post_condition'
