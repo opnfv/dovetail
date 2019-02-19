@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_3882f152",
+        "filename": "etc/testcase/functest.rally.authenticate.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-19T12:51:12Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "fafc7978_95d766bf",
+      "revId": "b2394b17e45d25d7f1fffb27cf3fee231299357b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fafc7978_7583e2cc",
         "filename": "etc/testcase/functest.rally.authenticate.yml",
         "patchSetId": 5
@@ -137,6 +155,24 @@
       "side": 1,
       "message": "Here Dovetail should simply read Functest exit codes.\nFor the time being I don\u0027t see any reason to interpret intermediate status.",
       "parentUuid": "fafc7978_35603a35",
+      "revId": "b2394b17e45d25d7f1fffb27cf3fee231299357b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_9892fd9d",
+        "filename": "etc/testcase/functest.rally.authenticate.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-19T12:51:12Z",
+      "side": 1,
+      "message": "Actually, this is needed for the portal to be able to show further details of the uploaded results, like it does with other functest tests. In the end, user can find all functest related logs file inside the results tarball, in case he wants to clarify why this test case is marked as FAIL in the portal.",
+      "parentUuid": "fafc7978_f5e4f2ad",
       "revId": "b2394b17e45d25d7f1fffb27cf3fee231299357b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
