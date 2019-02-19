@@ -99,20 +99,17 @@ For TOSCA based VNFs, it should look like this:
    export CSAR_FILE="/path/to/VNF/copied/in/container/name.csar"
 
 
-For HEAT based VNFs, it should create `vnf_dir` under `pre_config` and copy all
-HEAT template VNF packages to `vnf_dir`.
-
-.. code-block:: bash
-
-   $ mkdir -p ${DOVETAIL_HOME}/pre_config/vnf_dir
-
+For HEAT based VNFs, user should copy an archive of the HEAT template VNF
+packages to `pre_config`. The archive must be in gzip tar (tar.gz) format.
+In addition, the archive must contain only a directory with the same name
+(e.g. vnf_a.tar.gz must only include a directory named vnf_a).
 
 Configuration file `env_config.sh` should look like this for HEAT based VNFs:
 
 .. code-block:: bash
 
    $ cat ${DOVETAIL_HOME}/pre_config/env_config.sh
-   export VNF_DIRECTORY="/path/to/pre_config/vnf_dir"
+   export VNF_ARCHIVE_NAME="vnf_archive_name"
 
 
 Use the command below to create a Dovetail container and get access to its shell:
