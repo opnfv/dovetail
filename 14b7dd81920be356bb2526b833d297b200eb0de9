@@ -46,6 +46,30 @@
       "revId": "14b7dd81920be356bb2526b833d297b200eb0de9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_180a8dd2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2019-02-19T20:26:39Z",
+      "side": 1,
+      "message": "For a TOSCA VNF, the check sum is on the single CSAR file, which assuming the pyton code is doing MD5sum, a user would see this value in the portal and say, \"ah, let me check my CSAR file, ...\u0027md5sum /path/myfile.csar\u0027.   However for the HEAT VNF, the checksum is a \"combination\" of checksums, created by python, of all the files in the directory, so the only way for a user to check it would be to either run that bit of python or rerun Dovetail.  That makes the checksum \"type\" different between the two VNF types.  I don\u0027t think we want to do that in the testing or portal.  If you required the user to provide the an archive file for the HEAT VNF, and did a single checksum on that one file (like is done on the csar file), they become the \"same\" for both VNF types and the user gets expected behavior when they try to check the hash on their copy of a VNF.",
+      "parentUuid": "fafc7978_d868058a",
+      "range": {
+        "startLine": 10,
+        "startChar": 61,
+        "endLine": 11,
+        "endChar": 41
+      },
+      "revId": "14b7dd81920be356bb2526b833d297b200eb0de9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
