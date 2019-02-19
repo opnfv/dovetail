@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_7841190b",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2019-02-19T15:54:00Z",
+      "side": 1,
+      "message": "The link to VVP documentation is: https://docs.onap.org/en/latest/submodules/vvp/documentation.git/docs/index.html",
+      "parentUuid": "fafc7978_5514def4",
+      "range": {
+        "startLine": 16,
+        "startChar": 14,
+        "endLine": 16,
+        "endChar": 40
+      },
+      "revId": "059a34a606f85faedf616819764327580d511532",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fafc7978_95f5a6cd",
         "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
         "patchSetId": 4
