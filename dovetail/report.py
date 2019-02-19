@@ -12,6 +12,7 @@
 from __future__ import division
 
 import collections
+import hashlib
 import json
 import re
 import os
@@ -66,6 +67,25 @@ class Report(object):
         if checker is not None:
             checker.check(testcase, db_result)
 
+    @staticmethod
+    def get_checksum(vnf_type):
+        if vnf_type == 'tosca':
+            path = os.path.join(dt_cfg.dovetail_config['config_dir'],
+                                os.getenv('CSAR_FILE'))
+        elif vnf_type == 'heat':
+            path = os.path.join(
+                dt_cfg.dovetail_config['config_dir'],
+                os.getenv('VNF_ARCHIVE_NAME') + '.tar.gz')
+
+        checksum = hashlib.sha1()
+
+        if os.path.isfile(path):
+            with open(path, 'rb') as f:
+                for chunk in iter(lambda: f.read(4096), b''):
+                    checksum.update(chunk)
+
+        return checksum.hexdigest()
+
     def generate_json(self, testcase_list, duration):
         report_obj = {}
         # egeokun: using a hardcoded string instead of pbr version for
@@ -79,6 +99,7 @@ class Report(object):
         vnf_type = dt_cfg.dovetail_config.get('vnf_type')
         if vnf_type:
             report_obj['vnf_type'] = vnf_type
+            report_obj['vnf_checksum'] = self.get_checksum(vnf_type)
 
         report_obj['testcases_list'] = []
         if not testcase_list:
