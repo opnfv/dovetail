@@ -132,7 +132,7 @@ class DockerRunner(Runner):
         config_item['cacert'] = os.getenv('OS_CACERT')
         config_item['host_url'] = os.getenv('HOST_URL')
         config_item['csar_file'] = os.getenv('CSAR_FILE')
-        config_item['heat_templates_dir'] = os.getenv('VNF_DIRECTORY')
+        config_item['heat_templates_archive'] = os.getenv('VNF_ARCHIVE_NAME')
         return config_item
 
     def _update_config(self, testcase, update_pod=True):
