@@ -227,7 +227,9 @@ class ReportTesting(unittest.TestCase):
 
     @patch('dovetail.report.datetime.datetime')
     @patch('dovetail.report.dt_cfg')
-    def test_generate_json_no_list(self, mock_config, mock_datetime):
+    @patch.object(dt_report.Report, 'get_checksum')
+    def test_generate_json_no_list(self, mock_checksum, mock_config,
+                                   mock_datetime):
         logger_obj = Mock()
         report = dt_report.Report()
         report.logger = logger_obj
@@ -240,12 +242,14 @@ class ReportTesting(unittest.TestCase):
         utc_obj = Mock()
         utc_obj.strftime.return_value = '2018-01-13 13:13:13 UTC'
         mock_datetime.utcnow.return_value = utc_obj
+        mock_checksum.return_value = 'da39a3ee5e6b4b0d3255bfef95601890afd80709'
 
         result = report.generate_json([], duration)
         expected = {
             'version': '2018.09',
             'build_tag': 'build_tag',
             'vnf_type': 'tosca',
+            'vnf_checksum': 'da39a3ee5e6b4b0d3255bfef95601890afd80709',
             'test_date': '2018-01-13 13:13:13 UTC',
             'duration': duration,
             'testcases_list': []
@@ -1512,3 +1516,41 @@ class ReportTesting(unittest.TestCase):
         dt_report.OnapVvpChecker.check(testcase_obj, result)
 
         testcase_obj.passed.assert_called_once_with('PASS')
+
+    @patch('dovetail.report.dt_cfg')
+    @patch('dovetail.report.os.path')
+    @patch('__builtin__.open')
+    def test_get_checksum_tosca(self, mock_open, mock_path, mock_config):
+        mock_config.dovetail_config = {
+            'config_dir': 'config_dir',
+            'csar_file': 'csar_file'
+        }
+        file_obj = Mock()
+        file_obj.read.return_value = 'info'
+        file_obj.__exit__ = Mock()
+        file_obj.__enter__ = Mock()
+        mock_open.return_value = file_obj
+        mock_path.isdir.return_value = False
+        mock_path.isfile.return_value = True
+
+        dt_report.Report.get_checksum('tosca')
+
+    @patch('dovetail.report.dt_cfg')
+    @patch('dovetail.report.os.path')
+    @patch('dovetail.report.os.walk')
+    @patch('__builtin__.open')
+    def test_get_checksum_heat(self, mock_open, mock_walk, mock_path,
+                               mock_config):
+        mock_config.dovetail_config = {
+            'config_dir': 'config_dir',
+            'heat_templates_dir': 'heat_templates_dir'
+        }
+        file_obj = Mock()
+        file_obj.read.return_value = 'info'
+        file_obj.__exit__ = Mock()
+        file_obj.__enter__ = Mock()
+        mock_open.return_value = file_obj
+        mock_path.isdir.return_value = True
+        mock_walk.return_value = [('root', ['dir'], ['file'])]
+
+        dt_report.Report.get_checksum('heat')
