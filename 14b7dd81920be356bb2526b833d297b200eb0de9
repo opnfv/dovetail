@@ -22,6 +22,30 @@
       "revId": "14b7dd81920be356bb2526b833d297b200eb0de9",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_d868058a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-19T19:43:10Z",
+      "side": 1,
+      "message": "Can you please elaborate more on this because I am confused?\n\nAt the moment, user provides a directory path where Heat Templates exist and all of them form a VNF (VVP).\n\nOr, user provides a path where a CSAR file, written in Tosca, exists, which itself is a VNF (VNF SDK).\n\nThis patch produces a checksum from all the files of the input VNF (apparently the CSAR is one file but still forms a VNF) and then writes it inside the results.json file. Later, this file along with tests output files are packed in a tar.gz ready to be uploaded to the portal.\n\nIn conclusion, right now we do not require the user to provide a VNF archive file but a path where we can find the VNF. Do we want to change that? Furthermore, if we suppose Dovetail accepts only an archive file which includes a VNF, what else should it include? A specific file named e.g. \"checksum\" which writes down the checksum of the VNF files? And in that case, what do we want from Dovetail? To calculate the checksum of the VNF files and then compare it with the checksum written in this file?\n\nSorry for the length of my comment but I am really confused and I am not sure I understand exactly what is the goal. Any help will be appreciated.",
+      "parentUuid": "fafc7978_383791b2",
+      "range": {
+        "startLine": 10,
+        "startChar": 61,
+        "endLine": 11,
+        "endChar": 41
+      },
+      "revId": "14b7dd81920be356bb2526b833d297b200eb0de9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
