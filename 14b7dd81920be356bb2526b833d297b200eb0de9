@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_383791b2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2019-02-19T15:47:24Z",
+      "side": 1,
+      "message": "I\u0027m not sure we should take this approach.  Thinking about this from a portal / program user prospective, this means the checksum will be different for a TOSCA or HEAT VNF.  I think we might want to make / require the testing always start from the VNF archive file, which can be unpacked by Dovetail.  This will ensure the listed checksum is always on that file, and would be well understood by the user.",
+      "range": {
+        "startLine": 10,
+        "startChar": 61,
+        "endLine": 11,
+        "endChar": 41
+      },
+      "revId": "14b7dd81920be356bb2526b833d297b200eb0de9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
