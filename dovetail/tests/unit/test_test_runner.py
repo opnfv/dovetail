@@ -324,7 +324,7 @@ class TestRunnerTesting(unittest.TestCase):
     def test_add_testcase_info(self, mock_os, mock_config):
         mock_os.getenv.side_effect = ['os_insecure', 'dovetail_home', 'debug',
                                       'os_cacert', 'host_url', 'csar_file',
-                                      'heat_templates_dir']
+                                      'heat_templates_archive']
         mock_os.environ = {'DEPLOY_SCENARIO': 'deploy_scenario'}
         mock_config.dovetail_config = {'build_tag': 'build_tag'}
 
@@ -335,7 +335,7 @@ class TestRunnerTesting(unittest.TestCase):
             'dovetail_home': 'dovetail_home', 'debug': 'debug',
             'build_tag': 'build_tag', 'cacert': 'os_cacert',
             'host_url': 'host_url', 'csar_file': 'csar_file',
-            'heat_templates_dir': 'heat_templates_dir'
+            'heat_templates_archive': 'heat_templates_archive'
         }
         result = t_runner.FunctestRunner._add_testcase_info(self.testcase)
 
@@ -344,7 +344,7 @@ class TestRunnerTesting(unittest.TestCase):
         mock_os.getenv.assert_has_calls([
             call('OS_INSECURE'), call('DOVETAIL_HOME'), call('DEBUG'),
             call('OS_CACERT'), call('HOST_URL'), call('CSAR_FILE'),
-            call('VNF_DIRECTORY')])
+            call('VNF_ARCHIVE')])
         self.assertEquals(expected, result)
 
     @patch('dovetail.test_runner.dt_utils')
