@@ -8,5 +8,5 @@ export CSAR_FILE="/opt/test.csar"
 
 ## Special environment parameters for Heat validation tests.
 
-# The VNF directory should be put at $DOVETAIL_HOME/pre_config.
-export VNF_DIRECTORY="/path/to/pre_config/vnf_dir"
+# The VNF archive should be put at $DOVETAIL_HOME/pre_config.
+export VNF_ARCHIVE_NAME="vnf_archive_name"
