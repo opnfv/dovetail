@@ -10,7 +10,7 @@ functest.tempest.neutron_trunk_ports:
   report:
     source_archive_files:
       - functest.log
-      - neutron_trunk/tempest.log
+      - neutron_trunk/rally.log
       - neutron_trunk/tempest-report.html
     dest_archive_files:
       - tempest_logs/functest.tempest.neutron_trunk_ports.functest.log
