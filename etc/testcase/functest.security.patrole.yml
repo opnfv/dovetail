@@ -10,7 +10,7 @@ functest.security.patrole:
   report:
     source_archive_files:
       - functest.log
-      - patrole/tempest.log
+      - patrole/rally.log
       - patrole/tempest-report.html
     dest_archive_files:
       - security_logs/functest.security.patrole.functest.log

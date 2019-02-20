@@ -12,7 +12,7 @@ functest.tempest.multi_node_scheduling:
   report:
     source_archive_files:
       - functest.log
-      - tempest_custom/tempest.log
+      - tempest_custom/rally.log
       - tempest_custom/tempest-report.html
     dest_archive_files:
       - tempest_logs/functest.tempest.multi_node_scheduling.functest.log
