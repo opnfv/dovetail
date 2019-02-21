@@ -137,6 +137,7 @@ Dovetail List Commands
 
    root@1f230e719e44:~/dovetail/dovetail# dovetail list ovp.2018.09
    - mandatory
+       functest.neutron-tempest-plugin-api
        functest.vping.userdata
        functest.vping.ssh
        functest.tempest.osinterop

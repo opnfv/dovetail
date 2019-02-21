@@ -63,6 +63,7 @@ in parenthesis is shown below for the OVP 2018.09 release.
 
 **Mandatory**
 
+- funtest.neutron-tempest-plugin-api(5xx)
 - functest.vping.userdata (1)
 - functest.vping.ssh (1)
 - bottlenecks.stress.ping (1)

@@ -315,6 +315,7 @@ of OVP is as follows:
 
 - Mandatory test scope:
 
+  - functest.neutron-tempest-plugin-api
   - functest.vping.userdata
   - functest.vping.ssh
   - functest.tempest.osinterop\*

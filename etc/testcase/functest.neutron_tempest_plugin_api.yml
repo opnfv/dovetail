@@ -1,0 +1,16 @@
+---
+functest.neutron-tempest-plugin-api:
+  name: functest.neutron-tempest-plugin-api
+  objective: Run Neutron Tempest pluging api tests
+  validate:
+    type: functest
+    testcase: neutron-tempest-plugin-api
+  report:
+    source_archive_files:
+      - functest.log
+    dest_archive_files:
+      - neutron_tempest_plugin_api_logs/functest.tempest.neutron_tempest_plugin_api.functest.log
+      - neutron_tempest_plugin_api_logs/functest.tempest.neutron_tempest_plugin_api.log
+      - neutron_tempest_plugin_api_logs/functest.tempest.neutron_tempest_plugin_api.html
+    check_results_file: 'functest_results.txt'
+    sub_testcase_list:

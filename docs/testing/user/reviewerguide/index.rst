@@ -60,6 +60,7 @@ Test results can be displayed by clicking on the hyperlink under the 'Test ID' c
 User should validate that results for all mandatory test areas are included in the overall test suite. The required
 mandatory test cases are:
 
+- functest.neutron-tempest-plugin-api
 - functest.vping.userdata
 - functest.vping.ssh
 - bottlenecks.stress.ping
