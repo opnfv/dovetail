@@ -7,3 +7,4 @@ proposed_tests:
     optional:
       - functest.k8s.conformance
       - functest.k8s.smoke
+      - functest.tempest.neutron_tempest_plugin_api
