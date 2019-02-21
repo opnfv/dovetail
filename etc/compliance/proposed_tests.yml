@@ -16,3 +16,4 @@ proposed_tests:
       - functest.rally.neutron
       - functest.rally.nova
       - functest.rally.quotas
+      - functest.tempest.neutron_tempest_plugin_api
