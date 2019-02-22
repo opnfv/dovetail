@@ -255,6 +255,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_9cd80e1f",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-02-22T06:20:59Z",
+      "side": 1,
+      "message": "I thought the name of it defined in the community is FuncTest. But now it\u0027s Functest everywhere. Will change all to be Functest.",
+      "parentUuid": "1a622d24_cbaac218",
+      "range": {
+        "startLine": 91,
+        "startChar": 44,
+        "endLine": 91,
+        "endChar": 52
+      },
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_eb685ef7",
         "filename": "docs/testing/developer/genericframework/index.rst",
         "patchSetId": 5
@@ -680,6 +704,24 @@
       "writtenOn": "2019-01-28T10:41:13Z",
       "side": 1,
       "message": "Step 4 (optional) update unit tests..... (if we apply acceptance check then a patch is not going to be verified without 100% coverage)",
+      "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_fc04a27f",
+        "filename": "docs/testing/developer/genericframework/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-02-22T06:20:59Z",
+      "side": 1,
+      "message": "good reminder. And it still needs to add the unit test coverage check to the jenkins-ci job. If it\u0027s less than 100%, will get -1 automatically.",
+      "parentUuid": "1a622d24_6b228eba",
       "revId": "adf30c0a699002953ab02ec9d1f1d78956b89f6b",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
