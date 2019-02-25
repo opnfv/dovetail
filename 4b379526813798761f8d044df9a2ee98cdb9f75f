@@ -46,6 +46,30 @@
       "revId": "4b379526813798761f8d044df9a2ee98cdb9f75f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_f76b5883",
+        "filename": "etc/testcase/functest.rally.cinder.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-02-25T09:28:34Z",
+      "side": 1,
+      "message": "I think I know the reason why these 2 lists are different.\nTake \u0027CinderVolumes.create_and_delete_volume\u0027 as the example. There are 3 sections of this test case with different configurations. So there are actually 3 sub test cases generated in the results yaml files (i.e. CinderVolumes.create_and_delete_volume, CinderVolumes.create_and_delete_volume-2, CinderVolumes.create_and_delete_volume-3).\nFor the check list, there should list all sub test cases run.",
+      "parentUuid": "da01753e_f78fd873",
+      "range": {
+        "startLine": 24,
+        "startChar": 5,
+        "endLine": 24,
+        "endChar": 22
+      },
+      "revId": "4b379526813798761f8d044df9a2ee98cdb9f75f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
