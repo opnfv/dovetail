@@ -22,6 +22,30 @@
       "revId": "4b379526813798761f8d044df9a2ee98cdb9f75f",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_f78fd873",
+        "filename": "etc/testcase/functest.rally.cinder.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-25T07:31:19Z",
+      "side": 1,
+      "message": "This list is extracted from the yaml file of rally_full test. You can find them all at this file:\n\nhttps://github.com/opnfv/functest/blob/stable/gambia/functest/opnfv_tests/openstack/rally/scenario/full/opnfv-cinder.yaml",
+      "parentUuid": "da01753e_776e48cb",
+      "range": {
+        "startLine": 24,
+        "startChar": 5,
+        "endLine": 24,
+        "endChar": 22
+      },
+      "revId": "4b379526813798761f8d044df9a2ee98cdb9f75f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
