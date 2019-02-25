@@ -22,6 +22,30 @@
       "revId": "7a3a23ed53f2586d0bbe858ffd2a6188f59006d1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_173c1c93",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-25T08:32:06Z",
+      "side": 1,
+      "message": "Sure, why not? Do you think the overall approach here is the right thing to do? It does not affect what we have so far and I believe it addresses the common behavior between tosca and heat. That is, one file input (csar or tar.gz) and a same procedure for producing the checksum.",
+      "parentUuid": "da01753e_d4ee12b4",
+      "range": {
+        "startLine": 102,
+        "startChar": 33,
+        "endLine": 102,
+        "endChar": 73
+      },
+      "revId": "7a3a23ed53f2586d0bbe858ffd2a6188f59006d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
