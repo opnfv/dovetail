@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da01753e_776e48cb",
+        "filename": "etc/testcase/functest.rally.cinder.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-02-25T06:50:12Z",
+      "side": 1,
+      "message": "How did you get the sub test case list here? I checked the Functest CI results and found there are some differences.\nRefer to https://build.opnfv.org/ci/job/functest-fuel-baremetal-daily-gambia/279/console",
+      "range": {
+        "startLine": 24,
+        "startChar": 5,
+        "endLine": 24,
+        "endChar": 22
+      },
+      "revId": "4b379526813798761f8d044df9a2ee98cdb9f75f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
