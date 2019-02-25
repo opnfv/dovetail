@@ -46,6 +46,30 @@
       "revId": "7a3a23ed53f2586d0bbe858ffd2a6188f59006d1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_57b504cc",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2019-02-25T14:16:01Z",
+      "side": 1,
+      "message": "Yes, I think this is the right thing to do.  I would add the following after \u0027pre_config\u0027.  \"The HEAT template VNF archive must be in a Gzip tar (.tar.gz) file type.\"",
+      "parentUuid": "da01753e_173c1c93",
+      "range": {
+        "startLine": 102,
+        "startChar": 33,
+        "endLine": 102,
+        "endChar": 73
+      },
+      "revId": "7a3a23ed53f2586d0bbe858ffd2a6188f59006d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
