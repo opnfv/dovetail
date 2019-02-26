@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da01753e_9a0f912e",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-02-26T08:03:30Z",
+      "side": 1,
+      "message": "It will be better to add the postfix \u0027tar.gz\u0027 here",
+      "range": {
+        "startLine": 110,
+        "startChar": 43,
+        "endLine": 110,
+        "endChar": 54
+      },
+      "revId": "4de15671dadf8b9e043fe74121cc6f488158bdad",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_ba125556",
+        "filename": "etc/conf/onap-vvp_config.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-02-26T08:03:30Z",
+      "side": 1,
+      "message": "Here set the directory to be \u0027/template\u0027 when running all VVP tests. And Line 16 decompresses the tarball file to \u0027/\u0027. So in order to run this test case correctly, users need to name the folder to be \u0027template\u0027 and put all VNF package files under this \u0027template\u0027 folder.\nIt will be better if can decompress that tar file directly to /template with \u0027pre_condition\u0027.",
+      "range": {
+        "startLine": 18,
+        "startChar": 35,
+        "endLine": 18,
+        "endChar": 44
+      },
+      "revId": "4de15671dadf8b9e043fe74121cc6f488158bdad",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
