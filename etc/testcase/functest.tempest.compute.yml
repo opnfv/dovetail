@@ -25,7 +25,7 @@ functest.tempest.compute:
       - tempest.api.compute.security_groups.test_security_group_rules.SecurityGroupRulesTestJSON.test_security_group_rules_create[id-850795d7-d4d3-4e55-b527-a774c0123d3a,smoke]
       - tempest.api.compute.security_groups.test_security_group_rules.SecurityGroupRulesTestJSON.test_security_group_rules_list[id-a6154130-5a55-4850-8be4-5e9e796dbf17,smoke]
       - tempest.api.compute.security_groups.test_security_groups.SecurityGroupsTestJSON.test_security_groups_create_list_delete[id-eb2b087d-633d-4d0d-a7bd-9e6ba35b32de,smoke]
-      - tempest.api.compute.servers.test_attach_interfaces.AttachInterfacesTestJSON.test_add_remove_fixed_ip[id-c7e0e60b-ee45-43d0-abeb-8596fd42a2f9,network,smoke]
+      - tempest.api.compute.servers.test_attach_interfaces.AttachInterfacesUnderV243Test.test_add_remove_fixed_ip[id-c7e0e60b-ee45-43d0-abeb-8596fd42a2f9,network,smoke]
       - tempest.api.compute.servers.test_server_addresses.ServerAddressesTestJSON.test_list_server_addresses[id-6eb718c0-02d9-4d5e-acd1-4e0c269cef39,network,smoke]
       - tempest.api.compute.servers.test_server_addresses.ServerAddressesTestJSON.test_list_server_addresses_by_network[id-87bbc374-5538-4f64-b673-2b0e4443cc30,network,smoke]
       - tempest.api.compute.test_versions.TestVersions.test_get_version_details[id-b953a29e-929c-4a8e-81be-ec3a7e03cb76,smoke]
