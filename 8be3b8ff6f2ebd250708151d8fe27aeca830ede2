@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da01753e_faacdd8e",
+        "filename": "etc/testcase/functest.tempest.compute.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-27T08:16:21Z",
+      "side": 1,
+      "message": "With the chance of the patch... Can you remind me why this part is necessary? I believe we could remove this and still have the matching from functest results.\n\nThe same for all sub test cases of tempest.",
+      "range": {
+        "startLine": 23,
+        "startChar": 82,
+        "endLine": 23,
+        "endChar": 129
+      },
+      "revId": "8be3b8ff6f2ebd250708151d8fe27aeca830ede2",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
