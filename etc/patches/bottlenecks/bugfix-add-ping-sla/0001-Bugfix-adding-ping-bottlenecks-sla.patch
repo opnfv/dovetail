@@ -1,0 +1,47 @@
+From 6ce4dbf96eb2e6b0b4c4681d51473cb151601ddf Mon Sep 17 00:00:00 2001
+From: Dovetail <verified@opnfv.org>
+Date: Tue, 26 Feb 2019 12:05:20 +0000
+Subject: [PATCH] Bugfix adding ping bottlenecks sla
+
+Signed-off-by: Dovetail <verified@opnfv.org>
+---
+ samples/ping_bottlenecks.yaml | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/samples/ping_bottlenecks.yaml b/samples/ping_bottlenecks.yaml
+index 6a586cb..895ec78 100644
+--- a/samples/ping_bottlenecks.yaml
++++ b/samples/ping_bottlenecks.yaml
+@@ -27,12 +27,14 @@ scenarios:
+   type: Ping
+   options:
+     packetsize: 100
+-  host: demo1.demo{{num}}
+-  target: demo2.demo{{num}}
++  host: demo2.demo{{num}}
++  target: demo1.demo{{num}}
+   runner:
+     type: Duration
+     duration: 60
+     interval: 1
++  sla:
++    max_rtt: 10
+ {% endfor %}
+
+ contexts:
+@@ -67,10 +69,10 @@ contexts:
+       policy: "availability"
+
+   servers:
+-    demo1:
++    demo2:
+       floating_ip: true
+       placement: "pgrp1"
+-    demo2:
++    demo1:
+       placement: "pgrp1"
+
+   networks:
+--
+2.7.4
+

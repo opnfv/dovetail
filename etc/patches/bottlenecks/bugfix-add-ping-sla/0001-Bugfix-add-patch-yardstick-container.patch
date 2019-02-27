@@ -1,0 +1,46 @@
+From ad1bcede4a1961209a2972e2776027273b965bac Mon Sep 17 00:00:00 2001
+From: Dovetail <verified@opnfv.org>
+Date: Wed, 27 Feb 2019 04:08:38 +0000
+Subject: [PATCH] Bugfix add patch yardstick container
+
+Signed-off-by: Dovetail <verified@opnfv.org>
+---
+ testsuites/run_testsuite.py | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+diff --git a/testsuites/run_testsuite.py b/testsuites/run_testsuite.py
+index 0f03d3e..d05c1b7 100644
+--- a/testsuites/run_testsuite.py
++++ b/testsuites/run_testsuite.py
+@@ -104,6 +104,20 @@ def docker_env_prepare(config):
+     return
+
+
++def patch_yardstick_container():
++    LOG.info("Begin to patch yardstick container")
++    client = docker_env.get_client()
++    yardstick_container = docker_env.yardstick_info["container"]
++    cmd = "/bin/bash -c 'cd /home/opnfv/repos/yardstick && \
++           git config --global user.email verified@opnfv.org && \
++           git config --global user.name Dovetail && \
++           git am /home/patches/bottlenecks/bugfix-add-ping-sla/0001-Bugfix-adding-ping-bottlenecks-sla.patch'"
++    try:
++        yardstick_container.exec_run(cmd=cmd, privileged=True, tty=True, detach=True)
++    except docker_env.docker.errors.APIError:
++        LOG.error("Failed to patch yardstick container.")
++
++
+ def testsuite_run(test_level, test_name, REPORT="False"):
+     tester_parser = test_name.split("_")
+     if test_level == "testcase":
+@@ -117,6 +131,7 @@ def testsuite_run(test_level, test_name, REPORT="False"):
+         start_date = datetime.datetime.now()
+         docker_env_prepare(config[testcase])
+         copy_hosts_file()
++        patch_yardstick_container()
+         #try:
+         #    posca_testcase_run(tester_parser[0], testcase, config[testcase])
+         #except Exception, e:
+--
+2.7.4
+
