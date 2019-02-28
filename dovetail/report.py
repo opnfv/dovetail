@@ -547,6 +547,12 @@ class FunctestChecker(object):
             match = find_reg.findall(tc)
             if match:
                 return True
+        reg = sub_testcase.rsplit('.', 1)[0]
+        find_reg = re.compile(reg)
+        for tc in result:
+            match = find_reg.findall(tc)
+            if match:
+                return True
         return False
 
     def check(self, testcase, db_result):
