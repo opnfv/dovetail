@@ -1204,6 +1204,13 @@ class ReportTesting(unittest.TestCase):
             dt_report.FunctestChecker.get_sub_testcase('subt_a',
                                                        ['subt_b', 'subt_a+']))
 
+    def test_functest_get_sub_testcase_class_match(self):
+        self.assertEquals(
+            True,
+            dt_report.FunctestChecker.get_sub_testcase('subclass_a',
+                                                       ['subclass_a.subt_a',
+                                                        'subclass_b.subt_b']))
+
     def test_functest_get_sub_no_match(self):
         self.assertEquals(
             False,
