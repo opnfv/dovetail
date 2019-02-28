@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da01753e_45042a7e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-28T13:34:18Z",
+      "side": 1,
+      "message": "these \"test cases\"* are part of Functest",
+      "range": {
+        "startLine": 9,
+        "startChar": 32,
+        "endLine": 9,
+        "endChar": 64
+      },
+      "revId": "a626622e6516f9410bf65af6ac99d3542e4e0406",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_05db421c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-28T13:34:18Z",
+      "side": 1,
+      "message": "Dovetail",
+      "range": {
+        "startLine": 9,
+        "startChar": 11,
+        "endLine": 9,
+        "endChar": 19
+      },
+      "revId": "a626622e6516f9410bf65af6ac99d3542e4e0406",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_25092696",
+        "filename": "etc/testcase/functest.neutron_tempest_plugin_api.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-28T13:34:18Z",
+      "side": 1,
+      "message": "either change this to \"API\" or all \"API\" to \"api\"",
+      "range": {
+        "startLine": 4,
+        "startChar": 41,
+        "endLine": 4,
+        "endChar": 44
+      },
+      "revId": "a626622e6516f9410bf65af6ac99d3542e4e0406",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_65032e74",
+        "filename": "etc/testcase/functest.neutron_tempest_plugin_api.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-02-28T13:34:18Z",
+      "side": 1,
+      "message": "This is wrong: every n-th source archive file is renamed to n-th dest archive file. Here you have only 1 source and 3 dests",
+      "range": {
+        "startLine": 9,
+        "startChar": 4,
+        "endLine": 14,
+        "endChar": 88
+      },
+      "revId": "a626622e6516f9410bf65af6ac99d3542e4e0406",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
