@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da01753e_20875463",
+        "filename": "dovetail/report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 555,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-03-01T12:55:23Z",
+      "side": 1,
+      "message": "This check needs to be done only for \u0027SKIP\u0027 result.",
+      "range": {
+        "startLine": 550,
+        "startChar": 8,
+        "endLine": 555,
+        "endChar": 27
+      },
+      "revId": "8b8f4060eb47fb6f7a7e70c0efb141904a909362",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
