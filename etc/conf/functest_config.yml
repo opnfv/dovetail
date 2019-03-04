@@ -6,14 +6,14 @@
 {% set os_insecure = os_insecure or 'False' %}
 {% set os_verify = '' %}
 {% if os_insecure == 'True' %}
-    {% set os_verify = ' -e OS_VERIFY= ' %}
+    {% set os_verify = '  - OS_VERIFY=' %}
 {% endif %}
 {% set dovetail_home = dovetail_home or '' %}
 {% set debug = debug or 'false' %}
 {% set build_tag = build_tag or '' %}
 {% set cacert_volume = '' %}
 {% if cacert %}
-    {% set cacert_volume = ' -v ' + cacert + ':' + cacert %}
+    {% set cacert_volume = '  - ' + cacert + ':' + cacert %}
 {% endif %}
 {% set openrc_file = '/home/opnfv/functest/conf/env_file' %}
 {% set result_dir = '/home/opnfv/functest/results' %}
@@ -24,19 +24,27 @@
 functest:
   image_name: opnfv/functest-smoke
   docker_tag: gambia
-  opts: '-id --privileged=true'
+  opts:
+    detach: true
+    stdin_open: true
+    privileged: true
   shell: '/bin/bash'
-  envs: '{{os_verify}} -e INSTALLER_TYPE=unknown -e DEPLOY_SCENARIO={{deploy_scenario}} -e NODE_NAME=unknown
-         -e TEST_DB_URL=file://{{result_dir}}/functest_results.txt
-         -e CI_DEBUG={{debug}} -e BUILD_TAG={{build_tag}}-{{testcase}}'
+  envs:
+    {{os_verify}}
+    - 'INSTALLER_TYPE=unknown'
+    - 'DEPLOY_SCENARIO={{deploy_scenario}}'
+    - 'NODE_NAME=unknown'
+    - 'TEST_DB_URL=file://{{result_dir}}/functest_results.txt'
+    - 'CI_DEBUG={{debug}}'
+    - 'BUILD_TAG={{build_tag}}-{{testcase}}'
   volumes:
-    - '-v {{dovetail_home}}/pre_config/env_config.sh:{{openrc_file}}'
-    - {{cacert_volume}}
-    - '-v {{dovetail_home}}/pre_config:/home/opnfv/pre_config'
-    - '-v {{dovetail_home}}/userconfig:{{userconfig_dir}}'
-    - '-v {{dovetail_home}}/patches:{{patches_dir}}'
-    - '-v {{dovetail_home}}/results:{{result_dir}}'
-    - '-v {{dovetail_home}}/images:{{images_dir}}'
+    - '{{dovetail_home}}/pre_config/env_config.sh:{{openrc_file}}'
+    {{cacert_volume}}
+    - '{{dovetail_home}}/pre_config:/home/opnfv/pre_config'
+    - '{{dovetail_home}}/userconfig:{{userconfig_dir}}'
+    - '{{dovetail_home}}/patches:{{patches_dir}}'
+    - '{{dovetail_home}}/results:{{result_dir}}'
+    - '{{dovetail_home}}/images:{{images_dir}}'
   patches_dir: {{patches_dir}}
   pre_condition:
     - 'echo test for precondition in functest'

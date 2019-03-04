@@ -10,13 +10,17 @@
 onap-vtp:
   image_name: nexus3.onap.org:10001/onap/cli
   docker_tag: 2.0.5
-  opts: '-td '
+  opts:
+    detach: true
+    tty: true
   shell: '/bin/bash'
-  envs: '-e OPEN_CLI_MODE=daemon -e BUILD_TAG={{build_tag}}-{{testcase}}
-         -e OPEN_CLI_PRODUCT_IN_USE=onap-vtp'
+  envs:
+    - 'OPEN_CLI_MODE=daemon'
+    - 'BUILD_TAG={{build_tag}}-{{testcase}}'
+    - 'OPEN_CLI_PRODUCT_IN_USE=onap-vtp'
   volumes:
-    - '-v {{dovetail_home}}/pre_config/{{csar_file}}:/{{csar_file}}'
-    - '-v {{dovetail_home}}/results:{{result_dir}}'
+    - '{{dovetail_home}}/pre_config/{{csar_file}}:/{{csar_file}}'
+    - '{{dovetail_home}}/results:{{result_dir}}'
   pre_condition:
     - 'echo this is pre_condition'
   cmds:

@@ -12,15 +12,21 @@
 functest-k8s:
   image_name: opnfv/functest-kubernetes-healthcheck
   docker_tag: gambia
-  opts: '-id'
+  opts:
+    detach: true
+    stdin_open: true
   shell: '/bin/bash'
-  envs: '-e INSTALLER_TYPE=unknown -e DEPLOY_SCENARIO=k8-deploy -e NODE_NAME=unknown
-         -e TEST_DB_URL=file:///home/opnfv/functest/results/functest_results.txt
-         -e CI_DEBUG={{debug}} -e BUILD_TAG={{build_tag}}-{{testcase}}'
+  envs:
+    - 'INSTALLER_TYPE=unknown'
+    - 'DEPLOY_SCENARIO=k8-deploy'
+    - 'NODE_NAME=unknown'
+    - 'TEST_DB_URL=file:///home/opnfv/functest/results/functest_results.txt'
+    - 'CI_DEBUG={{debug}}'
+    - 'BUILD_TAG={{build_tag}}-{{testcase}}'
   volumes:
-    - '-v {{dovetail_home}}/pre_config/k8.creds:{{openrc_file}}'
-    - '-v {{dovetail_home}}/pre_config/admin.conf:{{kube_file}}'
-    - '-v {{dovetail_home}}/results/:{{result_dir}}'
+    - '{{dovetail_home}}/pre_config/k8.creds:{{openrc_file}}'
+    - '{{dovetail_home}}/pre_config/admin.conf:{{kube_file}}'
+    - '{{dovetail_home}}/results/:{{result_dir}}'
   pre_condition:
     - 'echo test for precondition in functest'
   cmds:
