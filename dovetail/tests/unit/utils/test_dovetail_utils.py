@@ -227,7 +227,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         mock_path.isfile.return_value = False
         logger = Mock()
 
-        expected = ''
+        expected = {}
         result = dovetail_utils.get_hosts_info(logger)
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
@@ -248,7 +248,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         mock_load.return_value = None
         logger = Mock()
 
-        expected = ''
+        expected = {}
         result = dovetail_utils.get_hosts_info(logger)
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
@@ -274,7 +274,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         mock_load.return_value = {'a': 'b'}
         logger = Mock()
 
-        expected = ''
+        expected = {}
         result = dovetail_utils.get_hosts_info(logger)
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
@@ -299,7 +299,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         mock_open.return_value.__enter__.return_value = file_obj
         mock_load.return_value = {'hosts_info': {'127.0.0.1': []}}
 
-        expected = ''
+        expected = {}
         result = dovetail_utils.get_hosts_info()
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
@@ -324,7 +324,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         hosts_info = {'127.0.0.1': [None]}
         mock_load.return_value = {'hosts_info': hosts_info}
 
-        expected = ''
+        expected = {}
         result = dovetail_utils.get_hosts_info()
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
@@ -353,7 +353,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         logger = Mock()
 
         names_str = ' '.join(hostnames)
-        expected = ' --add-host=\'{}\':{} '.format(names_str, hosts_ip)
+        expected = {names_str: hosts_ip}
         result = dovetail_utils.get_hosts_info(logger)
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
@@ -547,66 +547,45 @@ class DovetailUtilsTesting(unittest.TestCase):
         mock_open.assert_called_once_with(file_path, 'r')
         mock_env.update.assert_called_once_with({env_name: env_value})
 
-    @patch('dovetail.utils.dovetail_utils.exec_cmd')
-    def test_check_docker_version(self, mock_exec):
-        server_version = client_version = '1.12.3'
-        server_ret = client_ret = 0
-        mock_exec.side_effect = [(server_ret, server_version),
-                                 (client_ret, client_version)]
+    @patch('dovetail.utils.dovetail_utils.docker')
+    def test_check_docker_version(self, mock_docker):
+        server_version = '1.12.3'
+        client_obj = Mock()
+        mock_docker.from_env.return_value = client_obj
+        client_obj.version.return_value = {'Version': server_version}
         logger = Mock()
 
         dovetail_utils.check_docker_version(logger)
 
-        mock_exec.assert_has_calls(
-            [call("sudo docker version -f'{{.Server.Version}}'",
-                  logger=logger),
-             call("sudo docker version -f'{{.Client.Version}}'",
-                  logger=logger)])
         logger.debug.assert_has_calls(
-            [call('docker server version: {}'.format(server_version)),
-             call('docker client version: {}'.format(client_version))])
+            [call('Docker server version: {}'.format(server_version))])
 
-    @patch('dovetail.utils.dovetail_utils.exec_cmd')
-    def test_check_docker_version_error(self, mock_exec):
-        server_version = client_version = '1.12.3'
-        server_ret = client_ret = 1
-        mock_exec.side_effect = [(server_ret, server_version),
-                                 (client_ret, client_version)]
+    @patch('dovetail.utils.dovetail_utils.docker')
+    def test_check_docker_version_error(self, mock_docker):
+        client_obj = Mock()
+        mock_docker.from_env.return_value = client_obj
+        client_obj.version.return_value = {}
         logger = Mock()
 
         dovetail_utils.check_docker_version(logger)
 
-        mock_exec.assert_has_calls(
-            [call("sudo docker version -f'{{.Server.Version}}'",
-                  logger=logger),
-             call("sudo docker version -f'{{.Client.Version}}'",
-                  logger=logger)])
         logger.error.assert_has_calls(
             [call("Don't support this Docker server version. "
-                  "Docker server should be updated to at least 1.12.3."),
-             call("Don't support this Docker client version. "
-                  "Docker client should be updated to at least 1.12.3.")])
+                  "Docker server should be updated to at least 1.12.3.")])
 
-    @patch('dovetail.utils.dovetail_utils.exec_cmd')
-    def test_check_docker_version_less_than(self, mock_exec):
-        server_version = client_version = '1.12.1'
-        server_ret = client_ret = 0
-        mock_exec.side_effect = [(server_ret, server_version),
-                                 (client_ret, client_version)]
+    @patch('dovetail.utils.dovetail_utils.docker')
+    def test_check_docker_version_less_than(self, mock_docker):
+        server_version = '1.12.1'
+        client_obj = Mock()
+        mock_docker.from_env.return_value = client_obj
+        client_obj.version.return_value = {'Version': server_version}
         logger = Mock()
 
         dovetail_utils.check_docker_version(logger)
 
-        mock_exec.assert_has_calls(
-            [call("sudo docker version -f'{{.Server.Version}}'",
-                  logger=logger),
-             call("sudo docker version -f'{{.Client.Version}}'",
-                  logger=logger)])
         logger.error.assert_has_calls(
             [call("Don't support this Docker server version. "
-                  "Docker server should be updated to at least 1.12.3."),
-             call("Don't support this Docker client version. "
-                  "Docker client should be updated to at least 1.12.3.")])
+                  "Docker server should be updated to at least 1.12.3.")])
 
     @patch('__builtin__.open')
     @patch('os.path')
