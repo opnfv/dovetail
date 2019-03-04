@@ -10,6 +10,7 @@
 
 import unittest
 from mock import patch, call, Mock
+import docker
 
 from dovetail.container import Container
 
@@ -19,6 +20,7 @@ __author__ = 'Stamatis Katsaounis <mokats@intracom-telecom.com>'
 class ContainerTesting(unittest.TestCase):
 
     def setUp(self):
+        self.patcher1 = patch.object(docker, 'from_env')
         testcase = patch.object(Container, 'testcase')
         testcase.testcase = {'validate': {
             'type': 'bottlenecks'}}
@@ -28,12 +30,13 @@ class ContainerTesting(unittest.TestCase):
         val_type_obj = Mock()
         val_type_obj.return_value = 'bottlenecks'
         testcase.validate_type = val_type_obj
+        self.client = self.patcher1.start().return_value
         self.container = Container(testcase)
         self.logger = Mock()
         self.container.logger = self.logger
 
     def tearDown(self):
-        pass
+        self.patcher1.stop()
 
     @patch('dovetail.container.dt_cfg')
     @patch.object(Container, 'copy_file')
@@ -72,22 +75,6 @@ class ContainerTesting(unittest.TestCase):
 
         mock_copy.assert_not_called()
 
-    def test_docker_copy_error(self):
-        expected = (1, 'src_path or dest_path is empty')
-        result = self.container.docker_copy(None, None)
-
-        self.assertEqual(expected, result)
-
-    @patch('dovetail.container.dt_utils')
-    def test_docker_copy(self, mock_utils):
-        expected = (0, 'success')
-        mock_utils.exec_cmd.return_value = expected
-        result = self.container.docker_copy('source', 'dest')
-
-        mock_utils.exec_cmd.assert_called_once_with(
-            'docker cp source None:dest', self.logger)
-        self.assertEqual(expected, result)
-
     def test_copy_file_error(self):
         expected = (1, 'src_path or dest_path is empty')
         result = self.container.copy_file(None, None)
@@ -114,14 +101,34 @@ class ContainerTesting(unittest.TestCase):
     @patch('dovetail.container.dt_utils')
     def test_exec_cmd(self, mock_utils, mock_config):
         expected = (0, 'success')
-        mock_utils.exec_cmd.return_value = expected
         mock_utils.get_value_from_dict.return_value = 'shell'
         mock_config.dovetail_config = {'bottlenecks': 'value'}
+        container_obj = Mock()
+        container_obj.exec_run.return_value = expected
+        self.container.container = container_obj
+
         result = self.container.exec_cmd('command')
 
-        mock_utils.exec_cmd.assert_called_once_with(
-            'sudo docker exec None shell -c "command"', self.logger, False)
         self.assertEqual(expected, result)
+
+    @patch('dovetail.container.dt_cfg')
+    @patch('dovetail.container.dt_utils')
+    @patch('sys.exit')
+    def test_exec_cmd_exception(self, mock_exit, mock_utils, mock_config):
+        mock_utils.get_value_from_dict.return_value = 'shell'
+        mock_config.dovetail_config = {'bottlenecks': 'value'}
+        container_obj = Mock()
+        response_obj = Mock()
+        response_obj.status_code = 1
+        container_obj.exec_run.side_effect = \
+            docker.errors.APIError('error', response=response_obj)
+        self.container.container = container_obj
+
+        expected = (1, 'error')
+        result = self.container.exec_cmd('command', exit_on_error=True)
+
+        self.assertEqual(expected, result)
+        mock_exit.assert_called_once_with(1)
 
     @patch('dovetail.container.dt_cfg')
     @patch('dovetail.container.dt_utils')
@@ -136,50 +143,65 @@ class ContainerTesting(unittest.TestCase):
 
     @patch('dovetail.container.dt_cfg')
     @patch('dovetail.container.dt_utils')
-    @patch.object(Container, 'check_container_exist')
+    @patch.object(Container, 'get_container')
     def test_clean(self, mock_check, mock_utils, mock_config):
         container_name = 'container'
         mock_config.dovetail_config = {'bottlenecks': 'value'}
         mock_utils.get_value_from_dict.return_value = [container_name]
-        mock_check.return_value = True
+        self.container.container = Mock()
+        mock_check.return_value = Mock()
 
         self.container.clean()
 
         mock_utils.get_value_from_dict.assert_called_once_with(
             'extra_container', 'value')
         mock_check.assert_called_once_with(container_name)
-        mock_utils.exec_cmd.assert_has_calls([
-            call('sudo docker rm -f None', self.logger),
-            call('sudo docker rm -f container', self.logger)])
+
+    @patch('dovetail.container.dt_cfg')
+    @patch('dovetail.container.dt_utils')
+    @patch.object(Container, 'get_container')
+    def test_clean_extra_error(self, mock_check, mock_utils, mock_config):
+        container_name = 'container'
+        mock_config.dovetail_config = {'bottlenecks': 'value'}
+        mock_utils.get_value_from_dict.return_value = [container_name]
+        container_obj = Mock()
+        container_obj.remove.side_effect = docker.errors.APIError('error')
+        self.container.container = Mock()
+        mock_check.return_value = container_obj
+
+        self.container.clean()
+
+        mock_utils.get_value_from_dict.assert_called_once_with(
+            'extra_container', 'value')
+        mock_check.assert_called_once_with(container_name)
 
     @patch('dovetail.container.dt_cfg')
     @patch('dovetail.container.dt_utils')
     def test_clean_no_extra_container(self, mock_utils, mock_config):
         mock_utils.get_value_from_dict.return_value = None
+        container_obj = Mock()
+        container_obj.remove.side_effect = docker.errors.APIError('error')
+        self.container.container = container_obj
         self.container.clean()
         mock_utils.get_value_from_dict.assert_called_once()
 
-    @patch('dovetail.container.dt_utils')
-    def test_check_container_exist_true(self, mock_utils):
+    def test_get_container_exist_true(self):
         container_name = 'container'
-        cmd = ('sudo docker ps -aq -f name={}'.format(container_name))
-        mock_utils.exec_cmd.return_value = (0, 'msg')
+        expected = Mock()
+        self.client.containers.get.return_value = expected
 
-        result = self.container.check_container_exist(container_name)
+        result = self.container.get_container(container_name)
 
-        mock_utils.exec_cmd.assert_called_once_with(cmd, self.logger)
-        self.assertEquals(True, result)
+        self.assertEquals(expected, result)
 
-    @patch('dovetail.container.dt_utils')
-    def test_check_container_exist_false(self, mock_utils):
+    def test_get_container_none(self):
         container_name = 'container'
-        cmd = ('sudo docker ps -aq -f name={}'.format(container_name))
-        mock_utils.exec_cmd.return_value = (1, 'msg')
+        self.client.containers.get.side_effect = \
+            docker.errors.APIError('error')
 
-        result = self.container.check_container_exist(container_name)
+        result = self.container.get_container(container_name)
 
-        mock_utils.exec_cmd.assert_called_once_with(cmd, self.logger)
-        self.assertEquals(False, result)
+        self.assertEquals(None, result)
 
     def test_pull_image_none(self):
         result = self.container.pull_image(None)
@@ -260,98 +282,78 @@ class ContainerTesting(unittest.TestCase):
         mock_remove.assert_called_once_with(old_obj)
         self.assertEquals(docker_image, result)
 
-    @patch('dovetail.container.dt_utils')
-    def test_pull_image_only(self, mock_utils):
+    def test_pull_image_only(self):
         docker_image = 'image'
-        mock_utils.exec_cmd.return_value = (0, 'msg')
 
         result = self.container.pull_image_only(docker_image)
 
-        cmd = 'sudo docker pull %s' % (docker_image)
-        mock_utils.exec_cmd.assert_called_once_with(cmd, self.logger)
         self.logger.debug.assert_called_once_with(
             'Success to pull docker image {}!'.format(docker_image))
         self.assertEquals(True, result)
 
-    @patch('dovetail.container.dt_utils')
-    def test_pull_image_only_error(self, mock_utils):
+    def test_pull_image_only_error(self):
         docker_image = 'image'
-        mock_utils.exec_cmd.return_value = (1, 'error')
+        self.client.images.pull.side_effect = docker.errors.APIError('error')
 
         result = self.container.pull_image_only(docker_image)
 
-        cmd = 'sudo docker pull %s' % (docker_image)
-        mock_utils.exec_cmd.assert_called_once_with(cmd, self.logger)
         self.logger.error.assert_called_once_with(
             'Failed to pull docker image {}!'.format(docker_image))
         self.assertEquals(False, result)
 
-    @patch('dovetail.container.dt_utils')
-    def test_remove_image(self, mock_utils):
+    def test_remove_image(self):
         image_id = 'image_id'
-        mock_utils.exec_cmd.side_effect = [(1, 'error'), (0, 'msg')]
+        self.client.containers.list.side_effect = \
+            docker.errors.APIError('error')
 
         result = self.container.remove_image(image_id)
 
-        mock_utils.exec_cmd.assert_has_calls([
-            call("sudo docker ps -aq -f 'ancestor=%s'" % (image_id),
-                 self.logger),
-            call('sudo docker rmi %s' % (image_id), self.logger)])
         self.logger.debug.assert_has_calls([
             call('Remove image {}.'.format(image_id)),
             call('Remove image {} successfully.'.format(image_id))])
         self.assertEquals(True, result)
 
-    @patch('dovetail.container.dt_utils')
-    def test_remove_image_ancestors(self, mock_utils):
+    def test_remove_image_ancestors(self):
         image_id = 'image_id'
-        mock_utils.exec_cmd.return_value = (0, 'msg')
+        self.client.containers.list.return_value = ['cont_a']
 
         result = self.container.remove_image(image_id)
 
-        cmd = "sudo docker ps -aq -f 'ancestor=%s'" % (image_id)
-        mock_utils.exec_cmd.assert_called_once_with(cmd, self.logger)
         self.logger.debug.assert_called_once_with(
             'Image {} has containers, skip.'.format(image_id))
         self.assertEquals(True, result)
 
-    @patch('dovetail.container.dt_utils')
-    def test_remove_image_error(self, mock_utils):
+    def test_remove_image_error(self):
         image_id = 'image_id'
-        mock_utils.exec_cmd.return_value = (1, 'error')
+        self.client.containers.list.return_value = []
+        self.client.images.remove.side_effect = \
+            docker.errors.ImageNotFound('error')
 
         result = self.container.remove_image(image_id)
 
-        mock_utils.exec_cmd.assert_has_calls([
-            call("sudo docker ps -aq -f 'ancestor=%s'" % (image_id),
-                 self.logger),
-            call('sudo docker rmi %s' % (image_id), self.logger)])
         self.logger.debug.assert_called_once_with(
             'Remove image {}.'.format(image_id))
         self.logger.error.assert_called_once_with(
             'Failed to remove image {}.'.format(image_id))
         self.assertEquals(False, result)
 
-    @patch('dovetail.container.dt_utils')
-    def test_get_image_id(self, mock_utils):
+    def test_get_image_id(self):
         image_name = 'image_id'
-        mock_utils.exec_cmd.return_value = (0, image_name)
+        mock_img = Mock()
+        mock_img.id = image_name
+        self.client.images.get.return_value = mock_img
 
         result = self.container.get_image_id(image_name)
 
-        cmd = 'sudo docker images -q %s' % (image_name)
-        mock_utils.exec_cmd.assert_called_once_with(cmd, self.logger)
         self.assertEquals(image_name, result)
 
-    @patch('dovetail.container.dt_utils')
-    def test_get_image_id_error(self, mock_utils):
+    def test_get_image_id_error(self):
         image_name = 'image_id'
-        mock_utils.exec_cmd.return_value = (1, 'error')
+        self.client.images.get.side_effect = \
+            docker.errors.ImageNotFound('error')
 
         result = self.container.get_image_id(image_name)
 
-        cmd = 'sudo docker images -q %s' % (image_name)
-        mock_utils.exec_cmd.assert_called_once_with(cmd, self.logger)
         self.assertEquals(None, result)
 
     @patch('dovetail.container.dt_utils')
@@ -406,9 +408,11 @@ class ContainerTesting(unittest.TestCase):
         docker_image = 'docker_image'
         container_id = 'container_id'
         mock_utils.get_value_from_dict.side_effect = [
-            'opts', 'shell', 'envs', ['volume_one', 'volume_two']]
+            {'key': 'value'}, 'shell', 'envs', ['volume_one', 'volume_two']]
         mock_utils.get_hosts_info.return_value = 'host_info'
-        mock_utils.exec_cmd.return_value = (0, container_id)
+        container_obj = Mock()
+        container_obj.id = container_id
+        self.client.containers.run.return_value = container_obj
         project_config = {}
         mock_config.dovetail_config = {'bottlenecks': project_config}
 
@@ -421,9 +425,6 @@ class ContainerTesting(unittest.TestCase):
             call('envs', project_config),
             call('volumes', project_config)])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
-        mock_utils.exec_cmd.assert_called_once_with(
-            'sudo docker run opts envs volume_one volume_two host_info '
-            'docker_image shell', self.logger)
         self.assertEquals(expected, result)
 
     @patch('dovetail.container.dt_utils')
@@ -446,10 +447,11 @@ class ContainerTesting(unittest.TestCase):
     def test_create_error(self, mock_config, mock_utils):
         docker_image = 'docker_image'
         mock_utils.get_value_from_dict.side_effect = [
-            'opts', 'shell', 'envs', ['volume_one']]
+            {'key': 'value'}, 'shell', ['envs'], ['volume_one']]
         mock_utils.get_hosts_info.return_value = 'host_info'
         mock_utils.check_https_enabled.return_value = True
-        mock_utils.exec_cmd.return_value = (1, 'error')
+        self.client.containers.run.side_effect = \
+            docker.errors.ImageNotFound('error')
         project_config = {}
         mock_config.dovetail_config = {'bottlenecks': project_config}
         result = self.container.create(docker_image)
@@ -460,7 +462,4 @@ class ContainerTesting(unittest.TestCase):
             call('envs', project_config),
             call('volumes', project_config)])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
-        mock_utils.exec_cmd.assert_called_once_with(
-            'sudo docker run opts envs volume_one host_info '
-            'docker_image shell', self.logger)
         self.assertEquals(None, result)
