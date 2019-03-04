@@ -227,7 +227,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         mock_path.isfile.return_value = False
         logger = Mock()
 
-        expected = ''
+        expected = {}
         result = dovetail_utils.get_hosts_info(logger)
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
@@ -248,7 +248,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         mock_load.return_value = None
         logger = Mock()
 
-        expected = ''
+        expected = {}
         result = dovetail_utils.get_hosts_info(logger)
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
@@ -274,7 +274,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         mock_load.return_value = {'a': 'b'}
         logger = Mock()
 
-        expected = ''
+        expected = {}
         result = dovetail_utils.get_hosts_info(logger)
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
@@ -299,7 +299,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         mock_open.return_value.__enter__.return_value = file_obj
         mock_load.return_value = {'hosts_info': {'127.0.0.1': []}}
 
-        expected = ''
+        expected = {}
         result = dovetail_utils.get_hosts_info()
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
@@ -324,7 +324,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         hosts_info = {'127.0.0.1': [None]}
         mock_load.return_value = {'hosts_info': hosts_info}
 
-        expected = ''
+        expected = {}
         result = dovetail_utils.get_hosts_info()
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
@@ -353,7 +353,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         logger = Mock()
 
         names_str = ' '.join(hostnames)
-        expected = ' --add-host=\'{}\':{} '.format(names_str, hosts_ip)
+        expected = {names_str: hosts_ip}
         result = dovetail_utils.get_hosts_info(logger)
 
         mock_path.join.assert_called_once_with(file_path, 'hosts.yaml')
