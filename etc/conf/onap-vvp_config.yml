@@ -7,11 +7,14 @@
 onap-vvp:
   image_name: nexus3.onap.org:10001/onap/vvp/validation-scripts
   docker_tag: latest
-  opts: '-td --entrypoint=""'
+  opts:
+    detach: true
+    tty: true
+    entrypoint: ''
   shell: '/bin/ash'
   volumes:
-    - '-v {{heat_templates_dir}}:/template'
-    - '-v {{dovetail_home}}/results:{{result_dir}}'
+    - '{{heat_templates_dir}}:/template'
+    - '{{dovetail_home}}/results:{{result_dir}}'
   pre_condition:
     - 'echo this is pre_condition'
   cmds:
