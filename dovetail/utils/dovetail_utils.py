@@ -316,7 +316,7 @@ def check_cacert_file(cacert, logger=None):
 
 
 def get_hosts_info(logger=None):
-    hosts_config = ''
+    hosts_config = {}
     hosts_config_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
                                      'hosts.yaml')
     if not os.path.isfile(hosts_config_file):
@@ -341,7 +341,7 @@ def get_hosts_info(logger=None):
                                  if hostname)
             if not names_str:
                 continue
-            hosts_config += ' --add-host=\'{}\':{} '.format(names_str, ip)
+            hosts_config[names_str] = ip
             logger.debug('Get hosts info {}:{}.'.format(ip, names_str))
     return hosts_config
 

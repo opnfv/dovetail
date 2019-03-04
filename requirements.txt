@@ -6,3 +6,4 @@ pbr==3.1.1
 python-hosts==0.4.1
 PyYAML==3.12
 shade==1.27.2
+docker==3.4.1
