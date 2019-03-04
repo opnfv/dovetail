@@ -15,7 +15,8 @@ python-novaclient==6.0.2
 python-openstackclient==3.2.1
 pytz==2016.7
 PyYAML==3.12
-requests==2.18.0
+requests==2.18.4
 six==1.10.0
 stevedore==1.20.0
 shade==1.22.2
+docker==3.7.0
