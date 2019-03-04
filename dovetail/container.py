@@ -9,6 +9,9 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 
+import docker
+import sys
+
 import utils.dovetail_logger as dt_logger
 import utils.dovetail_utils as dt_utils
 from utils.dovetail_config import DovetailConfig as dt_cfg
@@ -19,9 +22,10 @@ class Container(object):
     logger = None
 
     def __init__(self, testcase):
-        self.container_id = None
+        self.container = None
         self.testcase = testcase
         self.valid_type = self.testcase.validate_type()
+        self.client = docker.from_env(timeout=None)
 
     def __str__(self):
         pass
@@ -45,70 +49,69 @@ class Container(object):
 
         name = self._get_config('image_name', project_cfg, testcase_cfg)
         tag = self._get_config('docker_tag', project_cfg, testcase_cfg)
-        return "{}:{}".format(name, tag) if name and tag else None
+        return '{}:{}'.format(name, tag) if name and tag else None
 
     def create(self, docker_image):
         dovetail_config = dt_cfg.dovetail_config
         project_cfg = dovetail_config[self.valid_type]
 
-        opts = dt_utils.get_value_from_dict('opts', project_cfg)
+        kwargs = dt_utils.get_value_from_dict('opts', project_cfg)
         shell = dt_utils.get_value_from_dict('shell', project_cfg)
         if not shell:
             return None
-        envs = dt_utils.get_value_from_dict('envs', project_cfg)
-        volumes_list = dt_utils.get_value_from_dict('volumes', project_cfg)
-        opts = ' ' if not opts else opts
-        envs = ' ' if not envs else envs
-        volumes = ' '.join(volume for volume in volumes_list if volume) \
-            if volumes_list else ' '
+        env_list = dt_utils.get_value_from_dict('envs', project_cfg)
+        kwargs['environment'] = [env for env in env_list if env is not None]
+        volume_list = dt_utils.get_value_from_dict('volumes', project_cfg)
+        kwargs['volumes'] = [vol for vol in volume_list if vol is not None]
+        kwargs['extra_hosts'] = dt_utils.get_hosts_info(self.logger)
 
-        hosts_config = dt_utils.get_hosts_info(self.logger)
-
-        cmd = 'sudo docker run {opts} {envs} {volumes} ' \
-              '{hosts_config} {docker_image} {shell}'.format(**locals())
-        ret, container_id = dt_utils.exec_cmd(cmd, self.logger)
-        if ret != 0:
+        try:
+            self.container = self.client.containers.run(
+                docker_image, shell, **kwargs)
+        except (docker.errors.ContainerError, docker.errors.ImageNotFound,
+                docker.errors.APIError):
             return None
 
-        self.container_id = container_id
-        return container_id
+        return self.container.id
 
     def get_image_id(self, image_name):
-        cmd = 'sudo docker images -q %s' % (image_name)
-        ret, image_id = dt_utils.exec_cmd(cmd, self.logger)
-        if ret == 0:
-            return image_id
-        else:
-            return None
+        try:
+            image_id = self.client.images.get(image_name).id
+        except (docker.errors.ImageNotFound, docker.errors.APIError):
+            image_id = None
+        return image_id
 
     # remove the image according to the image_id
     # if there exists containers using this image, then skip
     def remove_image(self, image_id):
-        cmd = "sudo docker ps -aq -f 'ancestor=%s'" % (image_id)
-        ret, msg = dt_utils.exec_cmd(cmd, self.logger)
-        if msg and ret == 0:
+        try:
+            containers = self.client.containers.list(
+                filters={'ancestor': image_id})
+        except docker.errors.APIError:
+            containers = []
+        if containers:
             self.logger.debug('Image {} has containers, skip.'
                               .format(image_id))
             return True
-        cmd = 'sudo docker rmi %s' % (image_id)
         self.logger.debug('Remove image {}.'.format(image_id))
-        ret, msg = dt_utils.exec_cmd(cmd, self.logger)
-        if ret == 0:
+        try:
+            self.client.images.remove(image_id)
             self.logger.debug('Remove image {} successfully.'.format(image_id))
             return True
-        self.logger.error('Failed to remove image {}.'.format(image_id))
-        return False
+        except (docker.errors.ImageNotFound, docker.errors.APIError):
+            self.logger.error('Failed to remove image {}.'.format(image_id))
+            return False
 
     def pull_image_only(self, image_name):
-        cmd = 'sudo docker pull %s' % (image_name)
-        ret, _ = dt_utils.exec_cmd(cmd, self.logger)
-        if ret != 0:
+        try:
+            self.client.images.pull(image_name)
+            self.logger.debug(
+                'Success to pull docker image {}!'.format(image_name))
+            return True
+        except docker.errors.APIError:
             self.logger.error(
                 'Failed to pull docker image {}!'.format(image_name))
             return False
-        self.logger.debug('Success to pull docker image {}!'
-                          .format(image_name))
-        return True
 
     def pull_image(self, docker_image):
         if not docker_image:
@@ -119,7 +122,7 @@ class Container(object):
         new_image_id = self.get_image_id(docker_image)
         if not new_image_id:
             self.logger.error(
-                "Failed to get the id of image {}.".format(docker_image))
+                'Failed to get the id of image {}.'.format(docker_image))
             return None
         if not old_image_id:
             return docker_image
@@ -130,49 +133,56 @@ class Container(object):
             self.remove_image(old_image_id)
         return docker_image
 
-    def check_container_exist(self, container_name):
-        cmd = ('sudo docker ps -aq -f name={}'.format(container_name))
-        ret, msg = dt_utils.exec_cmd(cmd, self.logger)
-        if ret == 0 and msg:
-            return True
-        return False
+    def get_container(self, container_name):
+        try:
+            container = self.client.containers.get(container_name)
+        except (docker.errors.NotFound, docker.errors.APIError):
+            container = None
+        return container
 
     def clean(self):
-        cmd = ('sudo docker rm -f {}'.format(self.container_id))
-        dt_utils.exec_cmd(cmd, self.logger)
+        try:
+            self.container.remove(force=True)
+            self.logger.debug(
+                'container: {} was removed'.format(self.container.name))
+        except docker.errors.APIError as e:
+            self.logger.error(e)
         extra_containers = dt_utils.get_value_from_dict(
             'extra_container', dt_cfg.dovetail_config[self.valid_type])
         if extra_containers:
-            for container in extra_containers:
-                if self.check_container_exist(container):
-                    cmd = ('sudo docker rm -f {}'.format(container))
-                    dt_utils.exec_cmd(cmd, self.logger)
+            for container_name in extra_containers:
+                container = self.get_container(container_name)
+                if container:
+                    try:
+                        container.remove(force=True)
+                        self.logger.debug(
+                            'container: {} was removed'.format(container_name))
+                    except docker.errors.APIError as e:
+                        self.logger.error(e)
 
     def exec_cmd(self, sub_cmd, exit_on_error=False):
-        if sub_cmd == "":
+        if not sub_cmd:
             return (1, 'sub_cmd is empty')
-        dovetail_config = dt_cfg.dovetail_config
-        project_cfg = dovetail_config[self.valid_type]
-        shell = dt_utils.get_value_from_dict('shell', project_cfg)
+        shell = dt_utils.get_value_from_dict(
+            'shell', dt_cfg.dovetail_config[self.valid_type])
         if not shell:
             return (1, 'shell is empty')
-        cmd = 'sudo docker exec {} {} -c "{}"'.format(self.container_id, shell,
-                                                      sub_cmd)
-        return dt_utils.exec_cmd(cmd, self.logger, exit_on_error)
+        cmd = '{} -c "{}"'.format(shell, sub_cmd)
+        try:
+            result = self.container.exec_run(cmd)
+        except docker.errors.APIError as e:
+            result = (e.response.status_code, str(e))
+            self.logger.error(e)
+            if exit_on_error:
+                sys.exit(1)
+
+        return result
 
     def copy_file(self, src_path, dest_path, exit_on_error=False):
         if not src_path or not dest_path:
             return (1, 'src_path or dest_path is empty')
         cmd = 'cp %s %s' % (src_path, dest_path)
         return self.exec_cmd(cmd, exit_on_error)
-
-    def docker_copy(self, src_path, dest_path):
-        if not src_path or not dest_path:
-            return (1, 'src_path or dest_path is empty')
-        cmd = 'docker cp {} {}:{}'.format(src_path,
-                                          self.container_id,
-                                          dest_path)
-        return dt_utils.exec_cmd(cmd, self.logger)
 
     def copy_files_in_container(self):
         project_config = dt_cfg.dovetail_config[self.valid_type]

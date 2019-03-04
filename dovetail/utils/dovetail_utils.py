@@ -19,6 +19,7 @@ from datetime import datetime
 from distutils.version import LooseVersion
 import yaml
 import python_hosts
+import docker
 
 from dovetail import constants
 from dovetail_config import DovetailConfig as dt_cfg
@@ -157,20 +158,17 @@ def show_progress_bar(length):
 
 
 def check_docker_version(logger=None):
-    server_ret, server_ver = \
-        exec_cmd("sudo docker version -f'{{.Server.Version}}'", logger=logger)
-    client_ret, client_ver = \
-        exec_cmd("sudo docker version -f'{{.Client.Version}}'", logger=logger)
-    if server_ret == 0:
-        logger.debug('docker server version: {}'.format(server_ver))
-    if server_ret != 0 or (LooseVersion(server_ver) < LooseVersion('1.12.3')):
+    client = docker.from_env()
+    server_ver = None
+    try:
+        server_ver = client.version()['Version']
+    except Exception:
+        logger.error('Failed to get Docker server version')
+    if server_ver and (LooseVersion(server_ver) >= LooseVersion('1.12.3')):
+        logger.debug('Docker server version: {}'.format(server_ver))
+    else:
         logger.error("Don't support this Docker server version. "
                      "Docker server should be updated to at least 1.12.3.")
-    if client_ret == 0:
-        logger.debug('docker client version: {}'.format(client_ver))
-    if client_ret != 0 or (LooseVersion(client_ver) < LooseVersion('1.12.3')):
-        logger.error("Don't support this Docker client version. "
-                     "Docker client should be updated to at least 1.12.3.")
 
 
 def add_hosts_info(ip, hostnames):
@@ -316,7 +314,7 @@ def check_cacert_file(cacert, logger=None):
 
 
 def get_hosts_info(logger=None):
-    hosts_config = ''
+    hosts_config = {}
     hosts_config_file = os.path.join(dt_cfg.dovetail_config['config_dir'],
                                      'hosts.yaml')
     if not os.path.isfile(hosts_config_file):
@@ -341,7 +339,7 @@ def get_hosts_info(logger=None):
                                  if hostname)
             if not names_str:
                 continue
-            hosts_config += ' --add-host=\'{}\':{} '.format(names_str, ip)
+            hosts_config[names_str] = ip
             logger.debug('Get hosts info {}:{}.'.format(ip, names_str))
     return hosts_config
 

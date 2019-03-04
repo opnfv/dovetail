@@ -7,11 +7,14 @@
 onap-vvp:
   image_name: nexus3.onap.org:10001/onap/vvp/validation-scripts
   docker_tag: latest
-  opts: '-td --entrypoint=""'
+  opts:
+    detach: true
+    tty: true
+    entrypoint: ''
   shell: '/bin/ash'
   volumes:
-    - '-v {{dovetail_home}}/pre_config/{{heat_templates_archive}}.tar.gz:/tmp/{{heat_templates_archive}}.tar.gz'
-    - '-v {{dovetail_home}}/results:{{result_dir}}'
+    - '{{dovetail_home}}/pre_config/{{heat_templates_archive}}.tar.gz:/tmp/{{heat_templates_archive}}.tar.gz'
+    - '{{dovetail_home}}/results:{{result_dir}}'
   pre_condition:
     - 'tar xf /tmp/{{heat_templates_archive}}.tar.gz -C /vvp'
   cmds:
