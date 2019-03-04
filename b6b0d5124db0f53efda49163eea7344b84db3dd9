@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da01753e_6072fce6",
+        "filename": "etc/testcase/functest.neutron_tempest_plugin_api.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-03-04T06:51:18Z",
+      "side": 1,
+      "message": "The test case should be named as xxx.xxx.xxx.\nthe second section should be the test area. Here should be tempest.",
+      "range": {
+        "startLine": 3,
+        "startChar": 8,
+        "endLine": 3,
+        "endChar": 43
+      },
+      "revId": "b6b0d5124db0f53efda49163eea7344b84db3dd9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_c07648d8",
+        "filename": "etc/testcase/functest.neutron_tempest_plugin_api.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-03-04T06:51:18Z",
+      "side": 1,
+      "message": "plugin",
+      "range": {
+        "startLine": 4,
+        "startChar": 33,
+        "endLine": 4,
+        "endChar": 41
+      },
+      "revId": "b6b0d5124db0f53efda49163eea7344b84db3dd9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_a07344e6",
+        "filename": "etc/testcase/functest.neutron_tempest_plugin_api.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-03-04T06:51:18Z",
+      "side": 1,
+      "message": "functest log should be archived as functest log.\nPlease also archive the rally.log and tempest-report.html which are needed to upload for review.",
+      "range": {
+        "startLine": 10,
+        "startChar": 8,
+        "endLine": 10,
+        "endChar": 20
+      },
+      "revId": "b6b0d5124db0f53efda49163eea7344b84db3dd9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_e07d4cb3",
+        "filename": "etc/testcase/functest.neutron_tempest_plugin_api.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-03-04T06:51:18Z",
+      "side": 1,
+      "message": "The number of the sub test cases here is 547 according to the community results  http://testresults.opnfv.org/test/api/v1/results?case_name\u003dneutron-tempest-plugin-api\u0026last\u003d2\u0026version\u003dgambia\nHowever, there are 558 sub test cases here.",
+      "range": {
+        "startLine": 14,
+        "startChar": 4,
+        "endLine": 14,
+        "endChar": 22
+      },
+      "revId": "b6b0d5124db0f53efda49163eea7344b84db3dd9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_0081708f",
+        "filename": "etc/testcase/functest.neutron_tempest_plugin_api.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-03-04T06:51:18Z",
+      "side": 1,
+      "message": "What are the \u0027(ingress)\u0027 and \u0027(egress)\u0027 here for? Will they confuse the check of the sub test case results?",
+      "range": {
+        "startLine": 26,
+        "startChar": 134,
+        "endLine": 26,
+        "endChar": 141
+      },
+      "revId": "b6b0d5124db0f53efda49163eea7344b84db3dd9",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
