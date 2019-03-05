@@ -1,7 +1,6 @@
-coverage>=4.0,!=4.4  # Apache-2.0
 flake8<3.0  # MIT
 pytest  # MIT
 pytest-cov  # MIT
 yamllint
 mock  # BSD
-testtools
+munch  # MIT
