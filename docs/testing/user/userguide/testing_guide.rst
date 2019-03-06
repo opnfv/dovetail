@@ -444,8 +444,8 @@ the SUT.
    $ wget -nc https://cloud-images.ubuntu.com/releases/16.04/release/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/images
    $ wget -nc http://repository.cloudifysource.org/cloudify/4.0.1/sp-release/cloudify-manager-premium-4.0.1.qcow2 -P ${DOVETAIL_HOME}/images
 
-   $ sudo docker pull opnfv/dovetail:ovp-2.0.0
-   ovp-2.0.0: Pulling from opnfv/dovetail
+   $ sudo docker pull opnfv/dovetail:ovp-2.2.0
+   ovp-2.2.0: Pulling from opnfv/dovetail
    324d088ce065: Pull complete
    2ab951b6c615: Pull complete
    9b01635313e2: Pull complete
@@ -457,7 +457,7 @@ the SUT.
    0ad9f4168266: Pull complete
    d949894f87f6: Pull complete
    Digest: sha256:7449601108ebc5c40f76a5cd9065ca5e18053be643a0eeac778f537719336c29
-   Status: Downloaded newer image for opnfv/dovetail:ovp-2.0.0
+   Status: Downloaded newer image for opnfv/dovetail:ovp-2.2.0
 
 Offline Test Host
 """""""""""""""""
@@ -472,7 +472,7 @@ The Docker images and Cirros image below are necessary for all mandatory test ca
 
 .. code-block:: bash
 
-   $ sudo docker pull opnfv/dovetail:ovp-2.0.0
+   $ sudo docker pull opnfv/dovetail:ovp-2.2.0
    $ sudo docker pull opnfv/functest-smoke:opnfv-6.3.0
    $ sudo docker pull opnfv/yardstick:ovp-2.0.0
    $ sudo docker pull opnfv/bottlenecks:ovp-2.0.0
@@ -496,7 +496,7 @@ At the online host, save the images with the command below.
 
 .. code-block:: bash
 
-   $ sudo docker save -o dovetail.tar opnfv/dovetail:ovp-2.0.0 \
+   $ sudo docker save -o dovetail.tar opnfv/dovetail:ovp-2.2.0 \
      opnfv/functest-smoke:opnfv-6.3.0 opnfv/functest-healthcheck:opnfv-6.3.0 \
      opnfv/functest-features:opnfv-6.3.0 opnfv/functest-vnf:opnfv-6.3.0 \
      opnfv/yardstick:ovp-2.0.0 opnfv/bottlenecks:ovp-2.0.0
@@ -514,7 +514,7 @@ Now check to see that all Docker images have been pulled or loaded properly.
 
    $ sudo docker images
    REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE
-   opnfv/dovetail                  ovp-2.0.0           ac3b2d12b1b0        24 hours ago        784 MB
+   opnfv/dovetail                  ovp-2.2.0           ac3b2d12b1b0        24 hours ago        784 MB
    opnfv/functest-smoke            opnfv-6.3.0         010aacb7c1ee        17 hours ago        594.2 MB
    opnfv/functest-healthcheck      opnfv-6.3.0         2cfd4523f797        17 hours ago        234 MB
    opnfv/functest-features         opnfv-6.3.0         b61d4abd56fd        17 hours ago        530.5 MB
