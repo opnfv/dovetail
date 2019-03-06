@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da01753e_4b60b935",
+        "filename": "etc/testcase/functest.neutron_tempest_plugin_api.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-03-06T09:43:58Z",
+      "side": 1,
+      "message": "as a good practice we use the same name",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 51
+      },
+      "revId": "957b51878c05a440204ff937b69a3f9422377397",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_2b657545",
+        "filename": "etc/testcase/functest.neutron_tempest_plugin_api.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-03-06T09:43:58Z",
+      "side": 1,
+      "message": "Here you use underscores and at the name you use dash. Can xudan suggests what is the proper name to be used?",
+      "range": {
+        "startLine": 14,
+        "startChar": 57,
+        "endLine": 14,
+        "endChar": 83
+      },
+      "revId": "957b51878c05a440204ff937b69a3f9422377397",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
