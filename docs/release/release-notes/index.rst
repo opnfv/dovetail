@@ -4,7 +4,7 @@
 .. _dovetail-releasenotes:
 
 ==================================================================
-OPNFV Verified Program (OVP) 2018.09 / Dovetail 2.0.0 Release Note
+OPNFV Verified Program (OVP) 2018.09 / Dovetail 2.2.0 Release Note
 ==================================================================
 
 
@@ -74,7 +74,7 @@ in parenthesis is shown below for the OVP 2018.09 release.
 - functest.tempest.volume (2)
 - functest.tempest.neutron_trunk_ports (38)
 - functest.tempest.ipv6_api (21)
-- functest.security.patrole (119)
+- functest.security.patrole (117)
 - yardstick.ha.nova_api (1)
 - yardstick.ha.neutron_server (1)
 - yardstick.ha.keystone (1)
@@ -106,7 +106,7 @@ There are a total of 432 mandatory test cases.
 - functest.bgpvpn.tenant_separation (1)
 - functest.bgpvpn.router_association (1)
 - functest.bgpvpn.router_association_floating_ip (1)
-
+- functest.security.patrole_vxlan_dependent (2)
 
 There are a total of 61 optional test cases.
 
@@ -130,7 +130,7 @@ for compliance verification. The category label of 'Infrastructure' is used with
 Marks logo and limits the scope of this OVP release to a SUT consisting of NFVI and VIM components
 using ETSI terminology. It does not provide compliance verification for specific VNFs in any fashion.
 The date '2018.09' corresponds to a reference SUT that aligns to the OPNFV Fraser release and
-currently aligns to the Dovetail framework version 2.0.0.
+currently aligns to the Dovetail framework version 2.2.0.
 
 Organizations shall not use the Program Marks in any way that would associate it with any
 individual or company logo or brand, beyond the association to the specific platform to which it
@@ -152,7 +152,7 @@ Release Data
 | **Project**                          | Dovetail                              |
 |                                      |                                       |
 +--------------------------------------+---------------------------------------+
-| **Repo tag**                         | ovp.2.0.0                             |
+| **Repo tag**                         | ovp-2.0.0                             |
 |                                      |                                       |
 +--------------------------------------+---------------------------------------+
 | **Release designation**              | OPNFV Verified Program (OVP)          |
@@ -165,6 +165,27 @@ Release Data
 |                                      | OPNFV Fraser release as reference SUT |
 +--------------------------------------+---------------------------------------+
 
+There is a patch version of Dovetail after the above release.
+
++------------------------------+--------------------------------------------------------------------------------+
+| **Project**                  | Dovetail                                                                       |
+|                              |                                                                                |
++------------------------------+--------------------------------------------------------------------------------+
+| **Repo tag**                 | ovp-2.2.0                                                                      |
+|                              |                                                                                |
++------------------------------+--------------------------------------------------------------------------------+
+| **Release date**             | March 2019                                                                     |
+|                              |                                                                                |
++------------------------------+--------------------------------------------------------------------------------+
+| **Purpose of the delivery**  | - Test scope update                                                            |
+|                              |    - Move 2 sub-test cases in functest.security.patrole to optional            |
+|                              |    - These 2 sub-test cases rely on vxlan as virtual networking implementation |
+|                              | - Three bug fixes                                                              |
+|                              |    - Yardstick: Add SLA check and reverse the creation order of servers        |
+|                              |    - Dovetail: Set Yardstick_TAG to be ovp-2.0.0 instead of stable             |
+|                              |    - Bottlenecks: Make ram_num configurable for DPDK                           |
++------------------------------+--------------------------------------------------------------------------------+
+
 Deliverables
 ============
 
@@ -173,7 +194,7 @@ Software
 +-------------------------+-----------------------------------+----------------+
 |  **Docker Container**   | **Docker Image**                  | **Tag**        |
 +-------------------------+-----------------------------------+----------------+
-|   dovetail              |    opnfv/dovetail                 |    ovp-2.0.0   |
+|   dovetail              |    opnfv/dovetail                 |    ovp-2.2.0   |
 +-------------------------+-----------------------------------+----------------+
 |   functest              |    opnfv/functest-smoke           |    opnfv-6.3.0 |
 +-------------------------+-----------------------------------+----------------+
@@ -220,7 +241,7 @@ Documents
 Testing with OPNFV Fraser Installers
 ====================================
 
-OVP 2018.09 and Dovetail 2.0.0 are known to be have been tested with the following OPNFV
+OVP 2018.09 and Dovetail 2.2.0 are known to be have been tested with the following OPNFV
 Fraser installer versions.
 
 +-----------------+----------------------+
