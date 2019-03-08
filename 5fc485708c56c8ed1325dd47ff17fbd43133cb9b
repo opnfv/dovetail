@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da01753e_3aee6023",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-03-08T10:56:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da01753e_060348b9",
+      "range": {
+        "startLine": 104,
+        "startChar": 21,
+        "endLine": 104,
+        "endChar": 25
+      },
+      "revId": "5fc485708c56c8ed1325dd47ff17fbd43133cb9b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da01753e_e6ff24a9",
         "filename": "dovetail/report.py",
         "patchSetId": 8
@@ -36,6 +60,30 @@
       "writtenOn": "2019-03-07T12:59:07Z",
       "side": 1,
       "message": "sha256?",
+      "range": {
+        "startLine": 80,
+        "startChar": 27,
+        "endLine": 80,
+        "endChar": 31
+      },
+      "revId": "5fc485708c56c8ed1325dd47ff17fbd43133cb9b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_9af30c0a",
+        "filename": "dovetail/report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-03-08T10:56:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da01753e_e6ff24a9",
       "range": {
         "startLine": 80,
         "startChar": 27,
