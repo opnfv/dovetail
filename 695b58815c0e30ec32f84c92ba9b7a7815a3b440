@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da01753e_70e2c904",
+        "filename": "etc/conf/yardstick_config.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-03-13T14:54:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da01753e_306321b3",
+      "range": {
+        "startLine": 32,
+        "startChar": 4,
+        "endLine": 32,
+        "endChar": 17
+      },
+      "revId": "695b58815c0e30ec32f84c92ba9b7a7815a3b440",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da01753e_705da9e9",
         "filename": "etc/conf/yardstick_config.yml",
         "patchSetId": 6
@@ -36,6 +60,30 @@
       "writtenOn": "2019-03-13T12:58:26Z",
       "side": 1,
       "message": "The same as below.",
+      "range": {
+        "startLine": 38,
+        "startChar": 3,
+        "endLine": 38,
+        "endChar": 21
+      },
+      "revId": "695b58815c0e30ec32f84c92ba9b7a7815a3b440",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_d0e61516",
+        "filename": "etc/conf/yardstick_config.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-03-13T14:54:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da01753e_705da9e9",
       "range": {
         "startLine": 38,
         "startChar": 3,
