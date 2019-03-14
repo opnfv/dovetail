@@ -128,7 +128,7 @@ def clean_results_dir():
     result_path = dt_cfg.dovetail_config['result_dir']
     if os.path.exists(result_path):
         if os.path.isdir(result_path):
-            cmd = 'sudo rm -rf %s/*' % (result_path)
+            cmd = 'rm -rf %s/*' % (result_path)
             dt_utils.exec_cmd(cmd, exit_on_error=False, exec_msg_on=False)
         else:
             print('result_dir in dovetail_config.yml is not a directory.')
@@ -160,7 +160,7 @@ def copy_userconfig_files(logger):
     userconfig_path = dt_cfg.dovetail_config['userconfig_dir']
     if not os.path.isdir(userconfig_path):
         os.makedirs(userconfig_path)
-    cmd = 'sudo cp -r %s/* %s' % (constants.USERCONF_PATH, userconfig_path)
+    cmd = 'cp -r %s/* %s' % (constants.USERCONF_PATH, userconfig_path)
     dt_utils.exec_cmd(cmd, logger, exit_on_error=False)
 
 
@@ -168,7 +168,7 @@ def copy_patch_files(logger):
     patch_set_path = dt_cfg.dovetail_config['patch_dir']
     if not os.path.isdir(patch_set_path):
         os.makedirs(patch_set_path)
-    cmd = 'sudo cp -a -r %s/* %s' % (constants.PATCH_PATH, patch_set_path)
+    cmd = 'cp -a -r %s/* %s' % (constants.PATCH_PATH, patch_set_path)
     dt_utils.exec_cmd(cmd, logger, exit_on_error=False)
 
 
