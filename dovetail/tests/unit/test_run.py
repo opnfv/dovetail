@@ -233,7 +233,7 @@ class RunTesting(unittest.TestCase):
         mock_os.path.exists.assert_called_once_with('value')
         mock_os.path.isdir.assert_called_once_with('value')
         mock_utils.exec_cmd.assert_called_once_with(
-            'sudo rm -rf value/*', exit_on_error=False, exec_msg_on=False)
+            'rm -rf value/*', exit_on_error=False, exec_msg_on=False)
 
     @patch('dovetail.run.dt_utils')
     @patch('dovetail.run.dt_cfg')
@@ -302,7 +302,7 @@ class RunTesting(unittest.TestCase):
         mock_os.path.isdir.assert_called_once_with('value')
         mock_os.makedirs.assert_called_once_with('value')
         mock_utils.exec_cmd.assert_called_once_with(
-            'sudo cp -r value/* value', logger, exit_on_error=False)
+            'cp -r value/* value', logger, exit_on_error=False)
 
     @patch('dovetail.run.constants')
     @patch('dovetail.run.dt_cfg')
@@ -320,7 +320,7 @@ class RunTesting(unittest.TestCase):
         mock_os.path.isdir.assert_called_once_with('value')
         mock_os.makedirs.assert_called_once_with('value')
         mock_utils.exec_cmd.assert_called_once_with(
-            'sudo cp -a -r value/* value', logger, exit_on_error=False)
+            'cp -a -r value/* value', logger, exit_on_error=False)
 
     @patch('dovetail.run.os')
     def test_update_deploy_scenario(self, mock_os):
