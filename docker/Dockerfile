@@ -1,5 +1,5 @@
-FROM ubuntu:14.04
-MAINTAINER Leo Wang <grakiss.wanglei@huawei.com>
+FROM ubuntu:18.04
+MAINTAINER Stamatis Katsaounis <mokats@intracom-telecom.com>
 LABEL version="0.1" description="OPNFV Dovetail Docker Container"
 
 ARG BRANCH=master
@@ -8,41 +8,35 @@ RUN \
     apt-get update \
 && \
     apt-get install -y \
-        build-essential \
         gcc \
+        make \
         git \
         libssl-dev \
         libffi-dev \
         vim \
         python-dev \
-        python-mock \
         python-pip \
-        apt-transport-https \
-        wget \
         --no-install-recommends \
 && \
-    apt-get update
+    rm -rf /var/lib/apt/lists/*
 
-RUN easy_install -U setuptools==30.0.0
-
-RUN wget -qO- https://get.docker.com/ \
-| \
-    sed 's/-q docker-ce/-q docker-ce=17.03.0~ce-0~ubuntu-trusty/' \
-| \
-    sed 's/edge/stable/' \
-| \
-    sh
+RUN pip install -U setuptools wheel
 
 ENV HOME /home/opnfv
 ENV REPOS_DIR ${HOME}/dovetail
-WORKDIR /home/opnfv
+WORKDIR $HOME
 
 RUN \
     mkdir -p ${REPOS_DIR} \
 && \
-    git config --global http.sslVerify false \
+    git init /tmp/dovetail \
 && \
-    pip install git+https://git.opnfv.org/dovetail@$BRANCH#egg=dovetail \
+    (cd /tmp/dovetail && \
+        git fetch --tags https://gerrit.opnfv.org/gerrit/dovetail $BRANCH && \
+        git checkout FETCH_HEAD && \
+        pip install .) \
+&& \
+    rm -rf /tmp/dovetail \
 && \
     ln -s /usr/local/lib/python2.7/dist-packages/dovetail ${REPOS_DIR}/dovetail
 
