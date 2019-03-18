@@ -1,0 +1,23 @@
+---
+functest.sfc:
+  name: functest.sfc
+  objective: validate SFC tests from functest-odl-sfc repository
+  validate:
+    type: functest
+    testcase: functest-odl-sfc
+    image_name: opnfv/functest-features
+    pre_condition:
+      - 'mkdir -p /root/.ssh/'
+      - 'cp /home/opnfv/pre_config/id_rsa /root/.ssh/id_rsa'
+  report:
+    source_archive_files:
+      - functest.log
+      - tempest_custom/rally.log
+      - tempest_custom/tempest-report.html
+    dest_archive_files:
+      - tempest_sfc/functest.tempest.sfc.functest.log
+      - tempest_sfc/functest.tempest.sfc.log
+      - tempest_sfc/functest.tempest.sfc.html
+    check_results_files:
+      - 'functest_results.txt'
+    sub_testcase_list:

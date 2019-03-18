@@ -17,3 +17,4 @@ proposed_tests:
       - functest.rally.nova
       - functest.rally.quotas
       - functest.tempest.neutron_tempest_plugin_api
+      - functest.sfc
