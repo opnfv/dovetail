@@ -46,6 +46,30 @@
       "revId": "5f6b1d605f7dc3a374d97783ede33c52b8608a74",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_6ebae6e2",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-03-18T10:09:37Z",
+      "side": 1,
+      "message": "good question.\nI think it\u0027s a tradition to keep the code under /home/opnfv/\u003cproject name\u003e in OPNFV.\nSince it\u0027s make it eaiser to build a customer docker image, then we can do like this.\nIs it better to remove the code under ${REPOS_DIR}/dovetail and make the WORKDIR to be \u0027/usr/local/lib/python2.7/dist-packages/dovetail\u0027 to avoid keeping 2 repos which may make users confused.",
+      "parentUuid": "da01753e_2e03beb9",
+      "range": {
+        "startLine": 29,
+        "startChar": 4,
+        "endLine": 37,
+        "endChar": 17
+      },
+      "revId": "5f6b1d605f7dc3a374d97783ede33c52b8608a74",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
