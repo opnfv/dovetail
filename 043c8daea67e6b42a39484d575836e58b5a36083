@@ -22,6 +22,30 @@
       "revId": "043c8daea67e6b42a39484d575836e58b5a36083",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_cef5d2cc",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-03-18T09:05:08Z",
+      "side": 0,
+      "message": "Typically, every time I want to debug something inside a container I am installing the packages I want myself. (net-tools, vim, etc.)\n\nThe only reason I would agree is if I was aware that our users do not have internet connectivity and they cannot install vim inside the container.",
+      "parentUuid": "da01753e_4ed56242",
+      "range": {
+        "startLine": 16,
+        "startChar": 8,
+        "endLine": 16,
+        "endChar": 13
+      },
+      "revId": "043c8daea67e6b42a39484d575836e58b5a36083",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }

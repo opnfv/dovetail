@@ -22,6 +22,30 @@
       "revId": "5f6b1d605f7dc3a374d97783ede33c52b8608a74",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_2e03beb9",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-03-18T09:05:08Z",
+      "side": 1,
+      "message": "Actually there is a reason. In case the developer wants to test a new feature, by this way he can build an image with BRANCH\u003dgerrit/ref/change to include his change.\n\nWhen you pip install directly, pip cannot handle ref/changes as a BRANCH. Or it can but I do not know how.\n\nBecause I tried to do it and I could not.\n\nQuestion: Why the soft link or even the code is actually needed to be at /home/opnfv/dovetail after pip installing?",
+      "parentUuid": "da01753e_8ecf4ab0",
+      "range": {
+        "startLine": 29,
+        "startChar": 4,
+        "endLine": 37,
+        "endChar": 17
+      },
+      "revId": "5f6b1d605f7dc3a374d97783ede33c52b8608a74",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
