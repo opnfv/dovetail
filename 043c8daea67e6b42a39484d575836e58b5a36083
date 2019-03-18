@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da01753e_4ed56242",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-03-18T03:34:50Z",
+      "side": 0,
+      "message": "I suggest keeping this because users need to exec dovetail container to do the test. Sometimes they need to edit the sub test case list to do some debug.",
+      "range": {
+        "startLine": 16,
+        "startChar": 8,
+        "endLine": 16,
+        "endChar": 13
+      },
+      "revId": "043c8daea67e6b42a39484d575836e58b5a36083",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da01753e_8ecf4ab0",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-03-18T03:34:50Z",
+      "side": 1,
+      "message": "Is there any reason to must change the install way like this?\nThe previous method may be better which only links to the installed code under /usr/local/lib/... rather than keep a copy.",
+      "range": {
+        "startLine": 29,
+        "startChar": 4,
+        "endLine": 37,
+        "endChar": 17
+      },
+      "revId": "5f6b1d605f7dc3a374d97783ede33c52b8608a74",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
