@@ -980,7 +980,7 @@ class ReportTesting(unittest.TestCase):
         file_path = 'file_path'
 
         crawler = dt_report.OnapVvpCrawler()
-        result = crawler.crawl(None, file_path)
+        result = crawler.crawl(None, [file_path])
 
         mock_path.exists.assert_called_once_with(file_path)
         logger_obj.error.assert_called_once_with(
@@ -1000,7 +1000,7 @@ class ReportTesting(unittest.TestCase):
         mock_open.return_value.__enter__.return_value = file_obj
 
         crawler = dt_report.OnapVvpCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'PASS'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -1022,7 +1022,7 @@ class ReportTesting(unittest.TestCase):
         mock_open.return_value.__enter__.return_value = file_obj
 
         crawler = dt_report.OnapVvpCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'FAIL'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -1044,7 +1044,7 @@ class ReportTesting(unittest.TestCase):
         mock_open.return_value.__enter__.return_value = file_obj
 
         crawler = dt_report.OnapVvpCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'FAIL'}
 
         mock_path.exists.assert_called_once_with(file_path)
@@ -1068,7 +1068,7 @@ class ReportTesting(unittest.TestCase):
         mock_open.return_value.__enter__.return_value = file_obj
 
         crawler = dt_report.OnapVvpCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, [file_path])
         expected = {'criteria': 'FAIL'}
 
         mock_path.exists.assert_called_once_with(file_path)

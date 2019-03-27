@@ -515,8 +515,8 @@ class OnapVvpCrawler(Crawler):
     def create_log(cls):
         cls.logger = dt_logger.Logger(__name__ + '.OnapVvpCrawler').getLogger()
 
-    def crawl(self, testcase, file_path):
-        return self.crawl_from_file(testcase, file_path)
+    def crawl(self, testcase, file_paths):
+        return self.crawl_from_file(testcase, file_paths[0])
 
     def crawl_from_file(self, testcase, file_path):
         if not os.path.exists(file_path):
