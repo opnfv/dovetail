@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da01753e_8860d936",
+        "filename": "etc/conf/onap-vvp_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 585
+      },
+      "writtenOn": "2019-03-27T10:43:03Z",
+      "side": 1,
+      "message": "Still does not solve the problem for me because \u0027[]\u0027 is evaluated to false [1].\n\nInstead, we need to check at [2] for empty lists.\n\n[1] https://github.com/opnfv/dovetail/blob/master/dovetail/utils/dovetail_utils.py#L385\n[2] https://github.com/opnfv/dovetail/blob/master/dovetail/container.py#L62",
+      "range": {
+        "startLine": 15,
+        "startChar": 2,
+        "endLine": 15,
+        "endChar": 10
+      },
+      "revId": "710e65523073020ce0907f5bdba42768239e3d41",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
