@@ -22,6 +22,30 @@
       "revId": "710e65523073020ce0907f5bdba42768239e3d41",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_48fc313f",
+        "filename": "etc/conf/onap-vvp_config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 7381
+      },
+      "writtenOn": "2019-03-27T12:05:14Z",
+      "side": 1,
+      "message": "I changed that to make it work. Please consider to completely change this utils function in the future because it is so ugly and not pythonic at all.",
+      "parentUuid": "da01753e_8860d936",
+      "range": {
+        "startLine": 15,
+        "startChar": 2,
+        "endLine": 15,
+        "endChar": 10
+      },
+      "revId": "710e65523073020ce0907f5bdba42768239e3d41",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
