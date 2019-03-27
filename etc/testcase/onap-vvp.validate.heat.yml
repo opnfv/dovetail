@@ -12,5 +12,6 @@ onap-vvp.validate.heat:
     dest_archive_files:
       - onap-vvp_logs/failures
       - onap-vvp_logs/report.json
-    check_results_file: onap-vvp_logs/report.json
+    check_results_files:
+      - onap-vvp_logs/report.json
     sub_testcase_list:

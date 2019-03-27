@@ -12,6 +12,7 @@ onap-vvp:
     tty: true
     entrypoint: ''
   shell: '/bin/ash'
+  envs: []
   volumes:
     - '{{dovetail_home}}/pre_config/{{heat_templates_archive}}.tar.gz:/tmp/{{heat_templates_archive}}.tar.gz'
     - '{{dovetail_home}}/results:{{result_dir}}'
