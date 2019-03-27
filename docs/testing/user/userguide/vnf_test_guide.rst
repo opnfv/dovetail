@@ -89,6 +89,7 @@ test results are going to be saved:
 
    $ mkdir -p ${DOVETAIL_HOME}/pre_config
    $ mkdir -p ${DOVETAIL_HOME}/results
+   $ chmod 777 ${DOVETAIL_HOME}/results
 
 
 There should be a file `env_config.sh` inside this directory to provide some info.

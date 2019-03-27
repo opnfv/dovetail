@@ -977,14 +977,14 @@ class ReportTesting(unittest.TestCase):
         logger_obj = Mock()
         dt_report.OnapVvpCrawler.logger = logger_obj
         mock_path.exists.return_value = False
-        file_path = 'file_path'
+        file_paths = ['file_path']
 
         crawler = dt_report.OnapVvpCrawler()
-        result = crawler.crawl(None, file_path)
+        result = crawler.crawl(None, file_paths)
 
-        mock_path.exists.assert_called_once_with(file_path)
+        mock_path.exists.assert_called_once_with(file_paths[0])
         logger_obj.error.assert_called_once_with(
-            'Result file not found: {}'.format(file_path))
+            'Result file not found: {}'.format(file_paths[0]))
         self.assertEquals(None, result)
 
     @patch('__builtin__.open')
@@ -993,18 +993,18 @@ class ReportTesting(unittest.TestCase):
                                         mock_open):
         dt_report.OnapVvpCrawler.logger = Mock()
         mock_path.exists.return_value = True
-        file_path = 'file_path'
+        file_paths = ['file_path']
         testcase_obj = Mock()
         file_obj = Mock()
         file_obj.read.return_value = json.dumps({'outcome': 'PASS'})
         mock_open.return_value.__enter__.return_value = file_obj
 
         crawler = dt_report.OnapVvpCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, file_paths)
         expected = {'criteria': 'PASS'}
 
-        mock_path.exists.assert_called_once_with(file_path)
-        mock_open.assert_called_once_with(file_path, 'r')
+        mock_path.exists.assert_called_once_with(file_paths[0])
+        mock_open.assert_called_once_with(file_paths[0], 'r')
         file_obj.read.assert_called_once_with()
         testcase_obj.set_results.assert_called_once_with(expected)
         self.assertEquals(expected, result)
@@ -1015,18 +1015,18 @@ class ReportTesting(unittest.TestCase):
                                         mock_open):
         dt_report.OnapVvpCrawler.logger = Mock()
         mock_path.exists.return_value = True
-        file_path = 'file_path'
+        file_paths = ['file_path']
         testcase_obj = Mock()
         file_obj = Mock()
         file_obj.read.return_value = json.dumps({'outcome': 'FAIL'})
         mock_open.return_value.__enter__.return_value = file_obj
 
         crawler = dt_report.OnapVvpCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, file_paths)
         expected = {'criteria': 'FAIL'}
 
-        mock_path.exists.assert_called_once_with(file_path)
-        mock_open.assert_called_once_with(file_path, 'r')
+        mock_path.exists.assert_called_once_with(file_paths[0])
+        mock_open.assert_called_once_with(file_paths[0], 'r')
         file_obj.read.assert_called_once_with()
         testcase_obj.set_results.assert_called_once_with(expected)
         self.assertEquals(expected, result)
@@ -1037,18 +1037,18 @@ class ReportTesting(unittest.TestCase):
                                                    mock_open):
         dt_report.OnapVvpCrawler.logger = Mock()
         mock_path.exists.return_value = True
-        file_path = 'file_path'
+        file_paths = ['file_path']
         testcase_obj = Mock()
         file_obj = Mock()
         file_obj.read.return_value = 'error'
         mock_open.return_value.__enter__.return_value = file_obj
 
         crawler = dt_report.OnapVvpCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, file_paths)
         expected = {'criteria': 'FAIL'}
 
-        mock_path.exists.assert_called_once_with(file_path)
-        mock_open.assert_called_once_with(file_path, 'r')
+        mock_path.exists.assert_called_once_with(file_paths[0])
+        mock_open.assert_called_once_with(file_paths[0], 'r')
         file_obj.read.assert_called_once_with()
         dt_report.OnapVvpCrawler.logger.exception.assert_called_once_with(
             'Result file has invalid format')
@@ -1061,18 +1061,18 @@ class ReportTesting(unittest.TestCase):
                                                  mock_open):
         dt_report.OnapVvpCrawler.logger = Mock()
         mock_path.exists.return_value = True
-        file_path = 'file_path'
+        file_paths = ['file_path']
         testcase_obj = Mock()
         file_obj = Mock()
         file_obj.read.return_value = json.dumps({'key': 'value'})
         mock_open.return_value.__enter__.return_value = file_obj
 
         crawler = dt_report.OnapVvpCrawler()
-        result = crawler.crawl(testcase_obj, file_path)
+        result = crawler.crawl(testcase_obj, file_paths)
         expected = {'criteria': 'FAIL'}
 
-        mock_path.exists.assert_called_once_with(file_path)
-        mock_open.assert_called_once_with(file_path, 'r')
+        mock_path.exists.assert_called_once_with(file_paths[0])
+        mock_open.assert_called_once_with(file_paths[0], 'r')
         file_obj.read.assert_called_once_with()
         dt_report.OnapVvpCrawler.logger.exception.assert_called_once_with(
             "Outcome field not found 'outcome'")
