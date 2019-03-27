@@ -60,7 +60,9 @@ class Container(object):
         if not shell:
             return None
         env_list = dt_utils.get_value_from_dict('envs', project_cfg)
-        kwargs['environment'] = [env for env in env_list if env is not None]
+        if env_list:
+            kwargs['environment'] = \
+                [env for env in env_list if env is not None]
         volume_list = dt_utils.get_value_from_dict('volumes', project_cfg)
         kwargs['volumes'] = [vol for vol in volume_list if vol is not None]
         kwargs['extra_hosts'] = dt_utils.get_hosts_info(self.logger)
