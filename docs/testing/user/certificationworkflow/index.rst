@@ -11,49 +11,51 @@ OVP Workflow
 Introduction
 ============
 
-This document provides guidance for prospective participants on how to obtain 'OPNFV Verified'
-status. The OPNFV Verified Program (OVP) is administered by the OPNFV Compliance and Certification
-(C&C) committee.
+This document provides guidance for prospective participants on how to
+obtain "OPNFV Verified" for products and services. The OPNFV
+Verification Program (OVP) is administered by the LF Networking
+Compliance and Verification (C&V) Committee.
 
-For further information about the workflow and general inquiries about the
-program, please check out the `OVP web portal`_, or contact
-the C&C committee by email address verified@opnfv.org. This email address should be used
-for all communication with the OVP.
+For further information about the workflow and general inquiries about
+the program, please check out the `OVP landing page`_, or contact the
+C&V committee by email address verified@opnfv.org. This email address
+should be used for all communication with the OVP.
 
 Step 1: Participation Form Submission
 =====================================
 
-A participant should start the process by submitting an online participation form. The participation
-form can found on the `OVP web portal`_ or directly at `OVP participation form`_ and the
-following information must be provided:
+A participant should start the process by submitting an online
+participation form. The participation form can be found on the `OVP
+landing page`_. Submitters are asked for the following information:
 
 - Organization name
-- Organization website (if public)
-- Product name and/or identifier
-- Product specifications
-- Product public documentation
-- Product categories, choose one: (i) software and hardware (ii) software
-  and third party hardware (please specify)
-- Primary contact name, business email, postal address and phone number
-  Only the primary contact email address should be used for
-  official communication with OPNFV OVP.
-- User ID for OVP web portal
-  The OVP web portal supports the Linux Foundation user ID in the current release.
-  If a new user ID is needed, visit https://identity.linuxfoundation.org.
-- Location where the verification testing is to be conducted. Choose one:
-  (internal vendor lab, third-party lab)
-- If the test is to be conducted by a third-party lab, please specify
-  name and contact information of the third-party lab, including email, address and
-  phone number.
-- OVP software version for compliance verification
-- Testing date
+- Contact name
+- Contact address
+- Contact telephone
+- Contact email
+- Membership status in LF Networking
+- Qualifying Offerings Information
+- Testing Category
+- Product Category
+- User ID
+- Version of Testing Tools
+- Testing Date
+- Testing Location
+- Third-party lab information (if any)
+- Signature
 
-Once the participation form information is received and in order, an email response will be
-sent to the primary contact with confirmation and information to proceed. The primary contact
-specified in the participation form will be entered into OVP web portal back-end by the program
-administrator and will be permitted to submit results for review on behalf of their organization.
+Once the participation form information is received and in order, an
+email response will be sent to the primary contact with confirmation and
+information to proceed. The primary contact specified in the
+participation form will be entered into the corresponding OVP web portal
+back-end by the program administrator and will be permitted to submit
+results for review on behalf of their organization. The OVP NFVI Portal
+can be found here (https://nfvi-verified.lfnetworking.org) and the OVP
+VNF Portal can be found here (https://vnf-verified.lfnetworking.org).
 
-There is no fee at this time for participation in the OVP.
+There is no fee at this time for participation in the OVP for LF
+Networking (LFN) members or non-profit organizations. If not a member of
+LFN, please contact `LF Networking`_ for participation fee information.
 
 Step 2: Testing
 ===============
@@ -72,7 +74,7 @@ Step 3: Submitting Test Results
 
 Users/testers other than the primary contact may use the OVP web portal as a resource to upload,
 evaluate and share results in a private manner. Testers can upload the test results to the
-`OVP web portal`_. By default, the results are visible only to the tester who uploaded the data.
+OVP web portal (either NFVI or VNF). By default, the results are visible only to the tester who uploaded the data.
 
 Testers can self-review the test results through the portal until they are ready to ask
 for OVP review. They may also add new test results as needed.
@@ -97,28 +99,28 @@ organizations will not be part of the reviewers.
 
 The primary contact may be asked via email for any missing information or clarification of the
 test results. The reviewers will make a determination and recommend compliance or non-compliance
-to the C&C Committee. A positive review requires a minimum of two approvals from two distinct
-organizations without any negative reviews. The program administrator sends an email to OVP/C&C
+to the C&V Committee. A positive review requires a minimum of two approvals from two distinct
+organizations without any negative reviews. The program administrator sends an email to OVP/C&V
 emails announcing a positive review. A one week limit is given for issues to be raised. If no
-issue is raised, the C&C Committee approves the result and the program administrator sends an
-email to OVP/C&C emails stating the result is approved.
+issue is raised, the C&V Committee approves the result and the program administrator sends an
+email to OVP/C&V emails stating the result is approved.
 
 Normally, the outcome of the review should be communicated to the primary contact within 10
 business days after all required information is in order.
 
-If a test result is denied, an appeal can be made to the C&C Committee for arbitration.
+If a test result is denied, an appeal can be made to the C&V Committee for arbitration.
 
 Step 5: Grant of Use of Program Marks
 =====================================
 
 If an application is approved, further information will be communicated to the primary contact
-on the guidelines of using OVP Program Marks (including OVP logo) and the status of compliance
-for promotional purposes.
+that includes badges and on the guidelines of using OVP Program Marks for marketing and promotional purposes.
 
 .. toctree::
    :maxdepth: 2
 
 
 .. References
-.. _`OVP web portal`: https://verified.opnfv.org
+.. _`OVP landing page`: https://lfnetworking.org/ovp
+.. _`LF Networking`: https://www.lfnetworking.org/join/inquiry/
 .. _`OVP participation form`: https://na3.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=dc24bf38-ea41-40d4-9e58-9babc6eec778
