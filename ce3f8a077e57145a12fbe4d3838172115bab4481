@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da01753e_142c04ab",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2019-04-03T09:37:02Z",
+      "side": 1,
+      "message": "This link is not valid.\nPlease update or activate the link accordingly.\n(This is the reason of -1 from jenkins-ci)",
+      "range": {
+        "startLine": 124,
+        "startChar": 24,
+        "endLine": 124,
+        "endChar": 52
+      },
+      "revId": "ce3f8a077e57145a12fbe4d3838172115bab4481",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
