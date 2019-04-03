@@ -22,3 +22,7 @@ cli:
         flags:
           - '--report'
         is_flag: 'True'
+      opnfvci:
+        flags:
+          - '--opnfv-ci'
+        is_flag: 'True'

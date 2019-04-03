@@ -12,6 +12,7 @@ from __future__ import print_function
 import sys
 import os
 import re
+import requests
 import subprocess
 from collections import Mapping, Set, Sequence
 import json
@@ -403,3 +404,30 @@ def get_openstack_info(logger):
     get_hosts_info(logger)
     get_openstack_endpoint(logger)
     get_hardware_info(logger)
+
+
+def push_results_to_db(case_name, details, start_date, stop_date, logger):
+    """
+    Push results to OPNFV TestAPI DB when running with OPNFV CI jobs.
+    All results can be filtered with TestAPI.
+    http://testresults.opnfv.org/test/#/results
+    """
+    try:
+        url = os.getenv('TEST_DB_URL')
+        data = {'project_name': 'dovetail', 'case_name': case_name,
+                'details': details, 'start_date': start_date,
+                'stop_date': stop_date}
+        data['criteria'] = details['criteria'] if details else 'FAIL'
+        data['installer'] = os.getenv('INSTALLER_TYPE')
+        data['scenario'] = os.getenv('DEPLOY_SCENARIO')
+        data['pod_name'] = os.getenv('NODE_NAME')
+        data['build_tag'] = os.getenv('BUILD_TAG')
+        data['version'] = os.getenv('VERSION')
+        req = requests.post(url, data=json.dumps(data, sort_keys=True),
+                            headers={'Content-Type': 'application/json'})
+        req.raise_for_status()
+        logger.debug('The results were successfully pushed to DB.')
+        return True
+    except Exception:
+        logger.exception('The results cannot be pushed to DB.')
+        return False
