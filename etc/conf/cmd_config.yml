@@ -79,3 +79,8 @@ cli:
           - '--optional'
         is_flag: 'True'
         help: 'Run all optional test cases.'
+      opnfvci:
+        flags:
+          - '--opnfv-ci'
+        is_flag: 'True'
+        help: 'Only enabled when running with OPNFV CI jobs and pushing results to TestAPI DB'

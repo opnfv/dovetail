@@ -1334,3 +1334,52 @@ class DovetailUtilsTesting(unittest.TestCase):
         mock_host.assert_called_once()
         mock_endpoint.assert_called_once()
         mock_hardware.assert_called_once()
+
+    @patch('json.dumps')
+    @patch('dovetail.utils.dovetail_utils.requests')
+    @patch('os.getenv')
+    def test_push_results_to_db(self, mock_getenv, mock_requests, mock_dumps):
+        logger = Mock()
+        case_name = 'case_name'
+        details = {'criteria': 'PASS'}
+        start_date = 'start_date'
+        stop_date = 'stop_date'
+        mock_getenv.side_effect = [
+            'url', 'installer', 'scenario', 'pod_name', 'build_tag', 'version']
+        post_req = Mock()
+        post_req.raise_for_status.return_value = None
+        mock_requests.post.return_value = post_req
+        mock_dumps.return_value = {"project_name": "dovetail"}
+
+        dovetail_utils.push_results_to_db(
+            case_name, details, start_date, stop_date, logger)
+
+        mock_requests.post.assert_called_once_with(
+            'url',
+            data={"project_name": "dovetail"},
+            headers={"Content-Type": "application/json"})
+        logger.debug.assert_called_once_with(
+            "The results were successfully pushed to DB.")
+
+    @patch('json.dumps')
+    @patch('dovetail.utils.dovetail_utils.requests')
+    @patch('os.getenv')
+    def test_push_results_to_db_exception(self, mock_getenv, mock_requests,
+                                          mock_dumps):
+        logger = Mock()
+        case_name = 'case_name'
+        details = {'criteria': 'PASS'}
+        start_date = 'start_date'
+        stop_date = 'stop_date'
+        mock_getenv.side_effect = [
+            'url', 'installer', 'scenario', 'pod_name', 'build_tag', 'version']
+        post_req = Mock()
+        post_req.raise_for_status.side_effect = Exception()
+        mock_requests.post.return_value = post_req
+        mock_dumps.return_value = {"project_name": "dovetail"}
+        dovetail_utils.push_results_to_db(
+            case_name, details, start_date, stop_date, logger)
+
+        logger.debug.assert_not_called()
+        logger.exception.assert_called_once_with(
+            "The results cannot be pushed to DB.")

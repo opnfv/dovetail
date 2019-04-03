@@ -11,6 +11,7 @@
 
 
 import copy
+from datetime import datetime
 import os
 import time
 import uuid
@@ -48,10 +49,20 @@ def run_test(testcase_list, report_flag, logger):
         testcase = dt_testcase.Testcase.get(testcase_name)
         run_testcase = True
 
+        tc_start_time = datetime.fromtimestamp(
+            time.time()).strftime('%Y-%m-%d %H:%M:%S')
         if run_testcase:
             testcase.run()
+        tc_stop_time = datetime.fromtimestamp(
+            time.time()).strftime('%Y-%m-%d %H:%M:%S')
 
         result = report.check_tc_result(testcase)
+        if os.getenv('OPNFV_CI') == 'true':
+            dt_utils.push_results_to_db(case_name=testcase_name,
+                                        start_date=tc_start_time,
+                                        stop_date=tc_stop_time,
+                                        details=result,
+                                        logger=logger)
         if dt_cfg.dovetail_config['stop']:
             try:
                 if (not result or result['criteria'] == 'FAIL'):
@@ -248,8 +259,8 @@ def main(*args, **kwargs):
     if not get_result_path():
         return
     clean_results_dir()
-    if kwargs['debug']:
-        os.environ['DEBUG'] = 'true'
+    os.environ['DEBUG'] = 'true' if kwargs['debug'] else 'false'
+    os.environ['OPNFV_CI'] = 'true' if kwargs['opnfv_ci'] else 'false'
     create_logs()
     logger = dt_logger.Logger('run').getLogger()
 

@@ -57,30 +57,45 @@ class RunTesting(unittest.TestCase):
         logger.warning.assert_called_once_with(
             "No test case will be executed.")
 
+    @patch('dovetail.run.datetime')
+    @patch('dovetail.run.dt_utils')
     @patch('dovetail.run.dt_cfg')
     @patch('dovetail.run.dt_report.Report')
     @patch('dovetail.run.dt_testcase.Testcase')
     @patch('dovetail.run.time')
-    def test_run_test(self, mock_time, mock_testcase, mock_report,
-                      mock_config):
+    @patch('os.getenv')
+    def test_run_test(self, mock_getenv, mock_time, mock_testcase, mock_report,
+                      mock_config, mock_utils, mock_datetime):
         logger = Mock()
         report_obj = Mock()
         mock_report.return_value = report_obj
-        mock_time.time.side_effect = [42, 84]
+        mock_time.time.side_effect = [42, 43, 83, 84]
+        datetime_obj = Mock()
+        mock_datetime.fromtimestamp.return_value = datetime_obj
+        datetime_obj.strftime.side_effect = ['1969-12-31 19:00:43',
+                                             '1969-12-31 19:01:23']
         testcase_name = 'testcase'
         testcase_obj = Mock()
         mock_testcase.get.return_value = testcase_obj
         mock_config.dovetail_config = {'stop': True}
+        mock_getenv.return_value = 'true'
         report_obj.check_tc_result.return_value = {'criteria': 'PASS'}
+        mock_utils.push_results_to_db.return_value = True
 
         dt_run.run_test([testcase_name], True, logger)
 
-        mock_time.time.assert_has_calls([call(), call()])
+        mock_time.time.assert_has_calls([call(), call(), call(), call()])
         logger.info.assert_called_once_with(
             '>>[testcase]: {}'.format(testcase_name))
         mock_testcase.get.assert_called_once_with(testcase_name)
         testcase_obj.run.assert_called_once_with()
         report_obj.check_tc_result.assert_called_once_with(testcase_obj)
+        mock_utils.push_results_to_db.assert_called_once_with(
+            case_name=testcase_name,
+            start_date='1969-12-31 19:00:43',
+            stop_date='1969-12-31 19:01:23',
+            details={'criteria': 'PASS'},
+            logger=logger)
         report_obj.generate.assert_called_once_with([testcase_name], 42)
         report_obj.save_logs.assert_called_once_with()
 
@@ -101,7 +116,8 @@ class RunTesting(unittest.TestCase):
 
         dt_run.run_test([testcase_name], True, logger)
 
-        mock_time.time.assert_called_once_with()
+        mock_time.time.assert_has_calls([call(), call(), call().__float__(),
+                                        call(), call().__float__()])
         logger.info.assert_has_calls([
             call('>>[testcase]: {}'.format(testcase_name)),
             call('Stop because {} failed'.format(testcase_name))])
@@ -127,7 +143,7 @@ class RunTesting(unittest.TestCase):
 
         dt_run.run_test([testcase_name], True, logger)
 
-        mock_time.time.assert_called_once_with()
+        mock_time.time.assert_has_calls([call(), call(), call()])
         logger.info.assert_has_calls([
             call('>>[testcase]: {}'.format(testcase_name)),
             call('Stop because {} failed'.format(testcase_name))])
@@ -504,14 +520,15 @@ class RunTesting(unittest.TestCase):
         mock_get_list.return_value = testcase_list
         kwargs_dict = {
             'debug': True,
+            'opnfv_ci': True,
             'report': True,
             'testsuite': 'testsuite',
             'docker_tag': '2.0.0'
         }
 
         with self.assertRaises(SystemExit) as cm:
-            dt_run.main([
-                '--testsuite=testsuite', '--debug', '--report', '2.0.0'])
+            dt_run.main(['--testsuite=testsuite', '--debug', '--report',
+                         '2.0.0', '--opnfv-ci'])
         expected = cm.exception
 
         logger_temp_obj.getLogger.assert_called_once_with()
@@ -521,7 +538,8 @@ class RunTesting(unittest.TestCase):
                           mock_config.dovetail_config)
         mock_get_result.assert_called_once_with()
         mock_clean.assert_called_once_with()
-        self.assertEquals({'DEBUG': 'true'}, mock_os.environ)
+        self.assertEquals({'DEBUG': 'true', 'OPNFV_CI': 'true'},
+                          mock_os.environ)
         mock_create_logs.assert_called_once_with()
         logger_obj.info.assert_has_calls([
             call('================================================'),
@@ -587,6 +605,7 @@ class RunTesting(unittest.TestCase):
         mock_get_list.return_value = None
         kwargs_dict = {
             'debug': True,
+            'opnfv_ci': False,
             'report': True,
             'testsuite': 'testsuite',
             'docker_tag': '2.0.0'
@@ -605,7 +624,8 @@ class RunTesting(unittest.TestCase):
                           mock_config.dovetail_config)
         mock_get_result.assert_called_once_with()
         mock_clean.assert_called_once_with()
-        self.assertEquals({'DEBUG': 'true'}, mock_os.environ)
+        self.assertEquals({'DEBUG': 'true', 'OPNFV_CI': 'false'},
+                          mock_os.environ)
         mock_create_logs.assert_called_once_with()
         logger_obj.info.assert_has_calls([
             call('================================================'),
