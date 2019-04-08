@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "da01753e_8b528e11",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-04-08T08:16:29Z",
+      "side": 1,
+      "message": "If I remember correctly, this step is now after \u0027Step 3: Submitting Test Results\u0027. And there is a button of the uploaded results to submit the participation form.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 37
+      },
+      "revId": "ce3f8a077e57145a12fbe4d3838172115bab4481",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_eb57da00",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-04-08T08:16:29Z",
+      "side": 1,
+      "message": "Is the company logo uploaded at this step?",
+      "range": {
+        "startLine": 29,
+        "startChar": 46,
+        "endLine": 29,
+        "endChar": 67
+      },
+      "revId": "ce3f8a077e57145a12fbe4d3838172115bab4481",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da01753e_142c04ab",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 1
