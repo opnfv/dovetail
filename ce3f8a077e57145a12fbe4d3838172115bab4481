@@ -96,6 +96,29 @@
     },
     {
       "key": {
+        "uuid": "da01753e_7e044a15",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2019-04-09T14:36:35Z",
+      "side": 1,
+      "message": "Refer also that the Users/testers should complete the application form, which is appeared once press \u0027submit to review\u0027 button during the upload result step.",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 77,
+        "endChar": 114
+      },
+      "revId": "ce3f8a077e57145a12fbe4d3838172115bab4481",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da01753e_142c04ab",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 1
