@@ -119,6 +119,53 @@
     },
     {
       "key": {
+        "uuid": "da01753e_5e6ce69c",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-04-10T03:20:20Z",
+      "side": 1,
+      "message": "So the workflow now is,\nstep1. submit the participation form with docusign\nstep2. upload results tarball file with NFVI/VNF portal\nstep3. submit results to review and will be requested to complete the application form\nIs that right? I agree with this workflow and what we need to do is to clarify it clearly here as Panos comments.",
+      "parentUuid": "da01753e_7e044a15",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 77,
+        "endChar": 114
+      },
+      "revId": "ce3f8a077e57145a12fbe4d3838172115bab4481",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_1ef9bec8",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-04-10T03:20:20Z",
+      "side": 1,
+      "message": "Then there are some other things that we need to consider from the portal development side.\n1. Add a hyperlink of the docusign in the homepage to let users easily find that. I can do this.\n2. As Lincoln said, should make sure that users can\u0027t submit to review until they have done step1, submit the docusign legal. OPNFV portal used to do like this, but now it seems doesn\u0027t check that. Could Panos help to enhance that for both nfvi and vnf portals?\n3. Do we need to combine the 2 forms submitted with step1 and step3? These 2 forms should both be the info of one product participating verification.",
+      "range": {
+        "startLine": 79,
+        "startChar": 1,
+        "endLine": 79,
+        "endChar": 24
+      },
+      "revId": "ce3f8a077e57145a12fbe4d3838172115bab4481",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da01753e_142c04ab",
         "filename": "docs/testing/user/certificationworkflow/index.rst",
         "patchSetId": 1
@@ -130,6 +177,29 @@
       "writtenOn": "2019-04-03T09:37:02Z",
       "side": 1,
       "message": "This link is not valid.\nPlease update or activate the link accordingly.\n(This is the reason of -1 from jenkins-ci)",
+      "range": {
+        "startLine": 124,
+        "startChar": 24,
+        "endLine": 124,
+        "endChar": 52
+      },
+      "revId": "ce3f8a077e57145a12fbe4d3838172115bab4481",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_de0f36e0",
+        "filename": "docs/testing/user/certificationworkflow/index.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-04-10T03:20:20Z",
+      "side": 1,
+      "message": "should we change this url to be \u0027https://www.lfnetworking.org/ovp/\u0027",
       "range": {
         "startLine": 124,
         "startChar": 24,
