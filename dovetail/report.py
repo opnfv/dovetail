@@ -79,7 +79,7 @@ class Report(object):
         elif vnf_type == 'heat':
             path = os.path.join(
                 dt_cfg.dovetail_config['config_dir'],
-                os.getenv('VNF_ARCHIVE_NAME') + '.tar.gz')
+                '{}.zip'.format(os.getenv('VNF_ARCHIVE_NAME')))
 
         checksum = hashlib.sha256()
 
