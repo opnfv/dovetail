@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da01753e_1e6d3e33",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2019-04-10T13:53:21Z",
+      "side": 1,
+      "message": "This is actually a violation of the Heat requirements.  A zip of Heat templates must be a flat collection of files.  There should be no top-level directory and no sub-directories.",
+      "revId": "8d07c4e320feaf7fae6c91746349e3e81225e1af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da01753e_be5fd271",
+        "filename": "etc/conf/onap-vvp_config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2019-04-10T13:53:21Z",
+      "side": 1,
+      "message": "Per my other comment, you might want to change this to no longer require a top level directory in the zip file itself as that violates the Heat requirements.  \n\nInstead that directory could be created here:\n\n- \u0027unzip -o -d /vvp/{{heat_templates_archive}} /tmp/{{heat_templates_archive}}.zip\u0027",
+      "revId": "8d07c4e320feaf7fae6c91746349e3e81225e1af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
