@@ -13,10 +13,10 @@ onap-vvp:
     entrypoint: ''
   shell: '/bin/ash'
   volumes:
-    - '{{dovetail_home}}/pre_config/{{heat_templates_archive}}.tar.gz:/tmp/{{heat_templates_archive}}.tar.gz'
+    - '{{dovetail_home}}/pre_config/{{heat_templates_archive}}.zip:/tmp/{{heat_templates_archive}}.zip'
     - '{{dovetail_home}}/results:{{result_dir}}'
   pre_condition:
-    - 'tar xf /tmp/{{heat_templates_archive}}.tar.gz -C /vvp'
+    - 'unzip -o -d /vvp /tmp/{{heat_templates_archive}}.zip'
   cmds:
     - 'pytest tests --template-directory=/vvp/{{heat_templates_archive}} --output-directory={{result_dir}} --report-format=json --continue-on-failure'
   post_condition:

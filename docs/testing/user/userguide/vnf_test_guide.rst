@@ -99,13 +99,13 @@ For TOSCA based VNFs, it should look like this:
 
    $ cat ${DOVETAIL_HOME}/pre_config/env_config.sh
    export HOST_URL="http://<docker host ip>:8702"
-   export CSAR_FILE="/path/to/VNF/copied/in/container/name.csar"
+   export CSAR_FILE="/opt/name.csar"
 
 
 For HEAT based VNFs, the user should copy an archive of the HEAT template VNF
-packages to `pre_config`. The archive must be in gzip tar (tar.gz) format.
+packages to `pre_config`. The archive must be in zip (.zip) format.
 In addition, the archive must contain only a directory with the same name
-(e.g. vnf_a.tar.gz must only include a directory named vnf_a).
+(e.g. vnf_a.zip must only include a directory named vnf_a).
 
 Configuration file `env_config.sh` should look like this for HEAT based VNFs:
 

@@ -3,10 +3,11 @@
 # The url under which the VNF SDK container is accessible through the host.
 export HOST_URL="http://<docker host ip>:8702"
 
-# Absolute path of CSAR file, and should be copied to vtp container.
+# Absolute path of the CSAR file in container 'refrepo'.
 export CSAR_FILE="/opt/test.csar"
 
 ## Special environment parameters for Heat validation tests.
 
-# The VNF archive should be put at $DOVETAIL_HOME/pre_config.
+# The VNF archive should be zip file and put at $DOVETAIL_HOME/pre_config.
+# Here should give the name without postfix which is also the name of the folder after unzip.
 export VNF_ARCHIVE_NAME="vnf_archive_name"
