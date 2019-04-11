@@ -2,6 +2,7 @@
 onap-vtp.validate.csar:
   name: onap-vtp.validate.csar
   objective: onap csar validation
+  vnf_type: tosca
   validate:
     type: onap-vtp
     testcase: csar-validate
