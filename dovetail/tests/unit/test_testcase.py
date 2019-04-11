@@ -163,6 +163,13 @@ class TestcaseTesting(unittest.TestCase):
 
         self.assertEquals('tempest_smoke_serial', result)
 
+    def test_vnf_type(self):
+        testcase = tcase.OnapVtpTestcase(self.testcase_yaml)
+
+        result = testcase.vnf_type()
+
+        self.assertEquals('tosca', result)
+
     def test_passed(self):
         testcase = tcase.Testcase(self.testcase_yaml)
 

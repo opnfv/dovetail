@@ -2,6 +2,7 @@
 dovetail.ipv6.tc001:
   name: dovetail.ipv6.tc001
   objective: VIM ipv6 operations, to create/delete network, port and subnet in bulk operation
+  vnf_type: tosca
   validate:
     type: functest
     testcase: tempest_smoke_serial
