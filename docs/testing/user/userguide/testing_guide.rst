@@ -2,12 +2,12 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) OPNFV, Huawei Technologies Co.,Ltd and others.
 
-==========================================
+====================================
 Conducting OVP Testing with Dovetail
-==========================================
+====================================
 
 Overview
-------------------------------
+--------
 
 The Dovetail testing framework for OVP consists of two major parts: the testing client which
 executes all test cases in a lab (vendor self-testing or a third party lab),
@@ -749,7 +749,7 @@ until they are ready to submit results for peer community review.
 
    * Web Site URL
 
-     * https://verified.opnfv.org
+     * https://nfvi-verified.lfnetworking.org
 
    * Sign In / Sign Up Links
 

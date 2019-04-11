@@ -69,7 +69,10 @@ The VNF package to be tested should be copied to the container 'refrepo'.
 
 
 Run Tests with Dovetail
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
+
+Setting up Configuration Files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For convenience and as a convention, we will create a home directory for storing
 all Dovetail related config files and results files:
@@ -92,7 +95,9 @@ test results are going to be saved:
    $ chmod 777 ${DOVETAIL_HOME}/results
 
 
-There should be a file `env_config.sh` inside this directory to provide some info.
+There should be a file `env_config.sh` inside ``pre_config`` directory to provide
+some info needed by test cases.
+
 For TOSCA based VNFs, it should look like this:
 
 .. code-block:: bash
@@ -115,6 +120,9 @@ Configuration file `env_config.sh` should look like this for HEAT based VNFs:
    export VNF_ARCHIVE_NAME="vnf_archive_name"
 
 
+Starting Dovetail Docker
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 Use the command below to create a Dovetail container and get access to its shell:
 
 .. code-block:: bash
@@ -133,16 +141,26 @@ the configuration files and write result files into DOVETAIL_HOME on the Test
 Host. The user should be within the Dovetail container shell, once the command
 above is executed. In order to run ONAP VNF tests 'latest' <tag> must be used.
 
+
+Running OVP Test Suites
+^^^^^^^^^^^^^^^^^^^^^^^
+
 Run VNF tests with the following command:
 
 .. code-block:: bash
 
-   $ dovetail run --testsuite <suite name> -d
+   $ dovetail run --testsuite <suite name> -d -r
 
 
 For TOSCA based VNFs, `<suite name>` is `onap.tosca.2019.04` and for
 HEAT based ones, it is `onap.heat.2019.04`.
 
+When test execution is complete, a tar file with all result and log files is
+written in ``$DOVETAIL_HOME`` on the Test Host. An example filename is
+``${DOVETAIL_HOME}/logs_20180105_0858.tar.gz``. The file is named using a
+timestamp that follows the convention ‘YearMonthDay-HourMinute’. In this case,
+it was generated at 08:58 on January 5th, 2018. This tar file is used for
+uploading the logs to `OVP VNF portal`_.
 
 NOTE: If Dovetail run fails when testing `onap-vtp.validate.csar`, then follow the
 below guidelines to run the test again.
@@ -154,3 +172,7 @@ below guidelines to run the test again.
    $ cd $OPEN_CLI_HOME/bin
    $ ./oclip-grpc-server.sh
    $ #Exit docker by running CTRL+p+q
+
+
+.. References
+.. _`OVP VNF portal`: https://vnf-verified.lfnetworking.org
