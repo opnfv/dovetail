@@ -85,6 +85,9 @@ class Testcase(object):
     def validate_type(self):
         return self.testcase['validate']['type']
 
+    def vnf_type(self):
+        return self.testcase['vnf_type']
+
     def validate_testcase(self):
         return self.testcase['validate']['testcase']
 

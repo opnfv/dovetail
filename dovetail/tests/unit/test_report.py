@@ -170,10 +170,70 @@ class ReportTesting(unittest.TestCase):
         mock_factory.create.assert_called_once_with('type')
         checker_obj.check.assert_called_once_with(testcase_obj, None)
 
+    @patch.object(dt_report.Report, 'get_checksum')
     @patch('dovetail.report.Testcase')
     @patch('dovetail.report.datetime.datetime')
     @patch('dovetail.report.dt_cfg')
-    def test_generate_json(self, mock_config, mock_datetime, mock_testcase):
+    def test_generate_json(self, mock_config, mock_datetime, mock_testcase,
+                           mock_checksum):
+        logger_obj = Mock()
+        report = dt_report.Report()
+        report.logger = logger_obj
+        testcase_list = ['ta.tb.tc', 'td.te.tf']
+        duration = 42
+        mock_config.dovetail_config = {
+            'build_tag': 'build_tag',
+            'version': '2018.09'
+        }
+        utc_obj = Mock()
+        utc_obj.strftime.return_value = '2018-01-13 13:13:13 UTC'
+        mock_datetime.utcnow.return_value = utc_obj
+        testcase_obj = Mock()
+        testcase_obj.passed.return_value = 'PASS'
+        testcase_obj.objective.return_value = 'objective'
+        mock_checksum.return_value = 'da39a3ee5e6b4b0d3255bfef95601890afd80709'
+        testcase_obj.is_mandatory = True
+        testcase_obj.vnf_type.return_value = 'tosca'
+        testcase_obj.sub_testcase.return_value = ['subt_a']
+        testcase_obj.sub_testcase_passed.return_value = 'PASS'
+        mock_testcase.get.side_effect = [testcase_obj, None]
+
+        result = report.generate_json(testcase_list, duration)
+        expected = {
+            'version': '2018.09',
+            'build_tag': 'build_tag',
+            'vnf_type': 'tosca',
+            'vnf_checksum': 'da39a3ee5e6b4b0d3255bfef95601890afd80709',
+            'test_date': '2018-01-13 13:13:13 UTC',
+            'duration': duration,
+            'testcases_list': [
+                {
+                    'name': 'ta.tb.tc',
+                    'result': 'PASS',
+                    'objective': 'objective',
+                    'mandatory': True,
+                    'sub_testcase': [{
+                        'name': 'subt_a',
+                        'result': 'PASS'
+                    }]
+                },
+                {
+                    'name': 'td.te.tf',
+                    'result': 'Undefined',
+                    'objective': '',
+                    'mandatory': False,
+                    'sub_testcase': []
+                }
+            ]
+        }
+
+        self.assertEquals(expected, result)
+
+    @patch('dovetail.report.Testcase')
+    @patch('dovetail.report.datetime.datetime')
+    @patch('dovetail.report.dt_cfg')
+    def test_generate_json_noVNF(self, mock_config, mock_datetime,
+                                 mock_testcase):
         logger_obj = Mock()
         report = dt_report.Report()
         report.logger = logger_obj
@@ -190,6 +250,62 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.passed.return_value = 'PASS'
         testcase_obj.objective.return_value = 'objective'
         testcase_obj.is_mandatory = True
+        testcase_obj.vnf_type.return_value = None
+        testcase_obj.sub_testcase.return_value = ['subt_a']
+        testcase_obj.sub_testcase_passed.return_value = 'PASS'
+        mock_testcase.get.side_effect = [testcase_obj, None]
+
+        result = report.generate_json(testcase_list, duration)
+        expected = {
+            'version': '2018.09',
+            'build_tag': 'build_tag',
+            'test_date': '2018-01-13 13:13:13 UTC',
+            'duration': duration,
+            'testcases_list': [
+                {
+                    'name': 'ta.tb.tc',
+                    'result': 'PASS',
+                    'objective': 'objective',
+                    'mandatory': True,
+                    'sub_testcase': [{
+                        'name': 'subt_a',
+                        'result': 'PASS'
+                    }]
+                },
+                {
+                    'name': 'td.te.tf',
+                    'result': 'Undefined',
+                    'objective': '',
+                    'mandatory': False,
+                    'sub_testcase': []
+                }
+            ]
+        }
+
+        self.assertEquals(expected, result)
+
+    @patch('dovetail.report.Testcase')
+    @patch('dovetail.report.datetime.datetime')
+    @patch('dovetail.report.dt_cfg')
+    def test_generate_json_noVNF_inTestCase(self, mock_config, mock_datetime,
+                                            mock_testcase):
+        logger_obj = Mock()
+        report = dt_report.Report()
+        report.logger = logger_obj
+        testcase_list = ['ta.tb.tc', 'td.te.tf']
+        duration = 42
+        mock_config.dovetail_config = {
+            'build_tag': 'build_tag',
+            'version': '2018.09'
+        }
+        utc_obj = Mock()
+        utc_obj.strftime.return_value = '2018-01-13 13:13:13 UTC'
+        mock_datetime.utcnow.return_value = utc_obj
+        testcase_obj = Mock()
+        testcase_obj.passed.return_value = 'PASS'
+        testcase_obj.objective.return_value = 'objective'
+        testcase_obj.is_mandatory = True
+        testcase_obj.vnf_type.side_effect = Exception()
         testcase_obj.sub_testcase.return_value = ['subt_a']
         testcase_obj.sub_testcase_passed.return_value = 'PASS'
         mock_testcase.get.side_effect = [testcase_obj, None]
