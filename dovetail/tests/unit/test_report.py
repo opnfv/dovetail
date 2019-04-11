@@ -189,6 +189,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj = Mock()
         testcase_obj.passed.return_value = 'PASS'
         testcase_obj.objective.return_value = 'objective'
+        testcase_obj.vnf_type.return_value = 'heat'
         testcase_obj.is_mandatory = True
         testcase_obj.sub_testcase.return_value = ['subt_a']
         testcase_obj.sub_testcase_passed.return_value = 'PASS'
@@ -200,6 +201,7 @@ class ReportTesting(unittest.TestCase):
             'build_tag': 'build_tag',
             'test_date': '2018-01-13 13:13:13 UTC',
             'duration': duration,
+            'vnf_type': 'heat',
             'testcases_list': [
                 {
                     'name': 'ta.tb.tc',
