@@ -122,6 +122,13 @@ class Report(object):
 
             testcase_inreport['result'] = testcase.passed()
             testcase_inreport['objective'] = testcase.objective()
+            try:
+                vnf_type = testcase.vnf_type()
+            except Exception:
+                vnf_type = None
+            if vnf_type:
+                report_obj['vnf_type'] = vnf_type
+                report_obj['vnf_checksum'] = self.get_checksum(vnf_type)
             testcase_inreport['mandatory'] = testcase.is_mandatory
             testcase_inreport['sub_testcase'] = []
             if testcase.sub_testcase() is not None:
