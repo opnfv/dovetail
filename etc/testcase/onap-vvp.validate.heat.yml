@@ -2,6 +2,7 @@
 onap-vvp.validate.heat:
   name: onap-vvp.validate.heat
   objective: onap heat template validation
+  vnf_type: heat
   validate:
     type: onap-vvp
     testcase: ice_validator

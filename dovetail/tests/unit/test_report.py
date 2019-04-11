@@ -170,10 +170,12 @@ class ReportTesting(unittest.TestCase):
         mock_factory.create.assert_called_once_with('type')
         checker_obj.check.assert_called_once_with(testcase_obj, None)
 
+    @patch.object(dt_report.Report, 'get_checksum')
     @patch('dovetail.report.Testcase')
     @patch('dovetail.report.datetime.datetime')
     @patch('dovetail.report.dt_cfg')
-    def test_generate_json(self, mock_config, mock_datetime, mock_testcase):
+    def test_generate_json(self, mock_config, mock_datetime, mock_testcase,
+                           mock_checksum):
         logger_obj = Mock()
         report = dt_report.Report()
         report.logger = logger_obj
@@ -189,7 +191,9 @@ class ReportTesting(unittest.TestCase):
         testcase_obj = Mock()
         testcase_obj.passed.return_value = 'PASS'
         testcase_obj.objective.return_value = 'objective'
+        mock_checksum.return_value = 'da39a3ee5e6b4b0d3255bfef95601890afd80709'
         testcase_obj.is_mandatory = True
+        testcase_obj.vnf_type.return_value = 'tosca'
         testcase_obj.sub_testcase.return_value = ['subt_a']
         testcase_obj.sub_testcase_passed.return_value = 'PASS'
         mock_testcase.get.side_effect = [testcase_obj, None]
@@ -198,6 +202,8 @@ class ReportTesting(unittest.TestCase):
         expected = {
             'version': '2018.09',
             'build_tag': 'build_tag',
+            'vnf_type': 'tosca',
+            'vnf_checksum': 'da39a3ee5e6b4b0d3255bfef95601890afd80709',
             'test_date': '2018-01-13 13:13:13 UTC',
             'duration': duration,
             'testcases_list': [
