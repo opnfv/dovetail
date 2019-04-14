@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "da01753e_bcbb5a71",
+        "filename": "dovetail/report.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 3405
+      },
+      "writtenOn": "2019-04-14T16:15:29Z",
+      "side": 1,
+      "message": "please use format instead.",
+      "revId": "8d07c4e320feaf7fae6c91746349e3e81225e1af",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da01753e_be5fd271",
         "filename": "etc/conf/onap-vvp_config.yml",
         "patchSetId": 1
