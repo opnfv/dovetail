@@ -22,6 +22,30 @@
       "revId": "dc925f6cd3adc8a6070a38840e5e42313151faa4",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "47eb8fd7_3dc99176",
+        "filename": "dovetail/report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2019-04-17T09:23:54Z",
+      "side": 1,
+      "message": "I\u0027 m thinking to add a flag.\nThis should be initialized to False and if the vnf_type parameter is included in the testcase yaml file, the respective values will be written in the results.json once. The flag will turn to True and the \u0027if\u0027 along with \u0027try...except\u0027 statements will be skipped next time.\nDo you agree with something like this?",
+      "parentUuid": "bbe8e645_7a2ae405",
+      "range": {
+        "startLine": 129,
+        "startChar": 12,
+        "endLine": 131,
+        "endChar": 72
+      },
+      "revId": "dc925f6cd3adc8a6070a38840e5e42313151faa4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
