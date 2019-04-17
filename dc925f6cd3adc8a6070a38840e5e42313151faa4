@@ -46,6 +46,30 @@
       "revId": "dc925f6cd3adc8a6070a38840e5e42313151faa4",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e8e537ed_03e414e9",
+        "filename": "dovetail/report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-04-17T12:41:53Z",
+      "side": 1,
+      "message": "You\u0027ve convinced me. Now it looks good because there are only 2 vnf test cases.\nI will give a +2.",
+      "parentUuid": "47eb8fd7_3dc99176",
+      "range": {
+        "startLine": 129,
+        "startChar": 12,
+        "endLine": 131,
+        "endChar": 72
+      },
+      "revId": "dc925f6cd3adc8a6070a38840e5e42313151faa4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
