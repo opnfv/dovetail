@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bbe8e645_7a2ae405",
+        "filename": "dovetail/report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-04-17T08:51:07Z",
+      "side": 1,
+      "message": "Could we check the value first to avoid repeating this for every test cases in the loop?",
+      "range": {
+        "startLine": 129,
+        "startChar": 12,
+        "endLine": 131,
+        "endChar": 72
+      },
+      "revId": "dc925f6cd3adc8a6070a38840e5e42313151faa4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
