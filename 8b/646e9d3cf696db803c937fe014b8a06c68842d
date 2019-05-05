@@ -1,0 +1,8 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Trevor Lovett <trevor.lovett@att.com>
+Code-Review+2: Dan Xu <xudan16@huawei.com>
+Submitted-by: Dan Xu <xudan16@huawei.com>
+Submitted-at: Sun, 05 May 2019 03:32:42 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/67517
+Project: dovetail
+Branch: refs/heads/master
