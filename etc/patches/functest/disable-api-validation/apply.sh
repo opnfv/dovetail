@@ -12,7 +12,7 @@ set -e
 set -u
 
 # without setting the user, git does not allow to create a commit
-git config --global user.email "verified@opnfv.org"
+git config --global user.email "ovp-support@lfnetworking.org"
 git config --global user.name "Dovetail"
 
 cd /src/tempest

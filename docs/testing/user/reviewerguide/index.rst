@@ -21,7 +21,7 @@ The OPNFV Verified program (OVP) provides the ability for users to upload test r
 After the user submit for review the test results **Status** is changed from 'private' to 'review'
 (as shown in figure 2).
 
-OVP administrator will ask for review volunteers using the verified@opnfv.org email alias.
+OVP administrator will ask for review volunteers using the ovp-support@lfnetworking.org email alias.
 The incoming results for review will be identified by the administrator with particular **Test ID**
 and **Owner** values.
 

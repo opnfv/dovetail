@@ -18,8 +18,7 @@ Compliance and Verification (C&V) Committee.
 
 For further information about the workflow and general inquiries about
 the program, please check out the `OVP landing page`_, or contact the
-C&V committee by email address verified@opnfv.org. This email address
-should be used for all communication with the OVP.
+C&V committee by email address ovp-support@lfnetworking.org. This email address
 
 Step 1: Participation Form Submission
 =====================================
@@ -86,7 +85,7 @@ Then the test result is identified by the unique Test ID and becomes visible to 
 comprised of OPNFV community members.
 
 When a test result is made visible to the reviewers, the program administrator will ask for
-volunteers from the review group using the verified@opnfv.org email and CC the primary contact
+volunteers from the review group using the ovp-support@lfnetworking.org email and CC the primary contact
 email that a review request has been made. The program administrator will supply the Test ID
 and owner field (primary contact user ID) to the reviewers to identify the results.
 
