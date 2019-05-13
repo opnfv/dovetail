@@ -23,6 +23,6 @@ Dovetail
    testing/user/userguide/index
 
    testing/developer/testcaserequirements/index
-   testing/developer/testscope/index
+   testing/developer/genericframework/index
 
    release/release-notes/index
