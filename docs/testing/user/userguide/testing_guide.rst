@@ -733,10 +733,6 @@ Host by default within the directory specified below.
 
      * Its log is stored in ``vnf_logs/functest.vnf.XXX.log``.
 
-   * Bgpvpn test cases
-
-     * Can see the log details in ``bgpvpn_logs/functest.bgpvpn.XXX.log``.
-
 
 OVP Portal Web Interface
 ------------------------
