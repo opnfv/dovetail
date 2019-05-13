@@ -166,10 +166,6 @@ Dovetail List Commands
        functest.tempest.vm_lifecycle
        functest.tempest.network_scenario
        functest.tempest.bgpvpn
-       functest.bgpvpn.subnet_connectivity
-       functest.bgpvpn.tenant_separation
-       functest.bgpvpn.router_association
-       functest.bgpvpn.router_association_floating_ip
        yardstick.ha.neutron_l3_agent
        yardstick.ha.controller_restart
        functest.vnf.vims

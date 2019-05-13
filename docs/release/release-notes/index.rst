@@ -102,13 +102,9 @@ There are a total of 432 mandatory test cases.
 - functest.tempest.vm_lifecycle (12)
 - functest.tempest.network_scenario (5)
 - functest.tempest.bgpvpn (15)
-- functest.bgpvpn.subnet_connectivity (1)
-- functest.bgpvpn.tenant_separation (1)
-- functest.bgpvpn.router_association (1)
-- functest.bgpvpn.router_association_floating_ip (1)
 - functest.security.patrole_vxlan_dependent (2)
 
-There are a total of 61 optional test cases.
+There are a total of 57 optional test cases.
 
 OPNFV Test Projects and Components
 ----------------------------------
