@@ -1,9 +1,11 @@
 ansible==2.2.0
 click==6.7
+docker==3.4.1
+flask==1.0.2
+gunicorn==19.9.0
 Jinja2==2.10
 os-client-config==1.29.0
 pbr==3.1.1
 python-hosts==0.4.1
 PyYAML==3.12
 shade==1.27.2
-docker==3.4.1

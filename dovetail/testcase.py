@@ -206,6 +206,7 @@ class Testcase(object):
                     else:
                         cls.logger.error('Failed to create test case: {}'
                                          .format(testcase_file))
+        return cls.testcase_list
 
     @classmethod
     def get(cls, testcase_name):
@@ -407,6 +408,7 @@ class Testsuite(object):
                 with open(os.path.join(root, testsuite_yaml)) as f:
                     testsuite_yaml = yaml.safe_load(f)
                     cls.testsuite_list.update(testsuite_yaml)
+        return cls.testsuite_list
 
     @classmethod
     def get(cls, testsuite_name):
