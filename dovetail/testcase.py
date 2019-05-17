@@ -77,8 +77,6 @@ class Testcase(object):
 
     def sub_testcase_passed(self, name, passed=None):
         if passed is not None:
-            self.logger.debug(
-                'sub_testcase_passed: {} {}'.format(name, passed))
             self.sub_testcase_status[name] = passed
         return self.sub_testcase_status[name]
 
@@ -145,8 +143,6 @@ class Testcase(object):
             try:
                 with open(test_list, 'w+') as src_file:
                     for sub_test in self.sub_testcase():
-                        self.logger.debug(
-                            'Save test cases {}'.format(sub_test))
                         src_file.write(sub_test + '\n')
                 self.logger.debug('Save test cases to {}'.format(test_list))
                 return test_list

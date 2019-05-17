@@ -1440,16 +1440,6 @@ class ReportTesting(unittest.TestCase):
         checker.check(testcase_obj, db_result)
 
         testcase_obj.sub_testcase.assert_called_once_with()
-        logger_obj.debug.assert_has_calls([
-            call('Check sub_testcase: subt_a'),
-            call('Check sub_testcase: subt_b'),
-            call('Check sub_testcase: subt_c'),
-            call('Check sub_testcase: subt_d')])
-        testcase_obj.sub_testcase_passed.assert_has_calls([
-            call('subt_a', 'PASS'),
-            call('subt_b', 'SKIP'),
-            call('subt_c', 'FAIL'),
-            call('subt_d', 'FAIL')])
         testcase_obj.passed.assert_has_calls([call('PASS'), call('FAIL')])
 
     @patch('dovetail.report.dt_logger')
