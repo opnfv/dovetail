@@ -138,7 +138,6 @@ class Report(object):
                         'result': testcase.sub_testcase_passed(sub_test)
                     })
             report_obj['testcases_list'].append(testcase_inreport)
-        self.logger.debug(json.dumps(report_obj))
         return report_obj
 
     def generate(self, testcase_list, duration):
@@ -621,7 +620,6 @@ class FunctestChecker(object):
 
         testcase_passed = 'PASS'
         for sub_testcase in sub_testcase_list:
-            self.logger.debug('Check sub_testcase: {}'.format(sub_testcase))
             try:
                 if self.get_sub_testcase(sub_testcase,
                                          db_result['details']['success']):

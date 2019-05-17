@@ -145,8 +145,6 @@ class TestcaseTesting(unittest.TestCase):
 
         result = testcase.sub_testcase_passed('name', 'passed')
 
-        logger_obj.debug.assert_called_once_with(
-            'sub_testcase_passed: name passed')
         self.assertEquals('passed', result)
 
     def test_validate_type(self):
@@ -265,9 +263,8 @@ class TestcaseTesting(unittest.TestCase):
         mock_path.join.assert_called_once_with('value', 'tempest_custom.txt')
         mock_open.assert_called_once_with(file_path, 'w+')
         file_obj.write.assert_called_once_with(sub_test + '\n')
-        logger_obj.debug.assert_has_calls([
-            call('Save test cases {}'.format(sub_test)),
-            call('Save test cases to {}'.format(file_path))])
+        logger_obj.debug.assert_called_once_with(
+            'Save test cases to {}'.format(file_path))
         self.assertEquals(file_path, result)
 
     @patch('__builtin__.open')

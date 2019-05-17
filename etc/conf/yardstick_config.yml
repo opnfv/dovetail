@@ -48,6 +48,7 @@ yardstick:
     - '{{dovetail_home}}/pre_config/pod.yaml:{{pod_file}}'
     - '{{dovetail_home}}/images:/home/opnfv/images'
     - '{{dovetail_home}}/results:{{result_dir}}'
+    - '{{dovetail_home}}/pre_config:{{dovetail_home}}/pre_config'
   pre_condition:
     - 'echo this is pre_condition'
   cmds:

@@ -360,10 +360,9 @@ A sample is provided below to show the required syntax when using a key file.
        user: root
 
        # Private ssh key for accessing the controller nodes. If a keyfile is
-       # being used, the path specified **must** be as shown below as this
-       # is the location of the user-provided private ssh key inside the
-       # Yardstick container.
-       key_filename: /home/opnfv/userconfig/pre_config/id_rsa
+       # being used instead of password, it **must** be put under
+       # ``$DOVETAIL_HOME/pre_config/.
+       key_filename: /home/dovetail/pre_config/id_rsa
 
 Under nodes, repeat entries for name, role, ip, user and password or key file for each of the
 controller/compute nodes that comprise the SUT. Use a '-' to separate each of the entries.
