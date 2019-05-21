@@ -20,7 +20,7 @@
 
 functest-k8s:
   image_name: opnfv/functest-kubernetes-healthcheck
-  docker_tag: gambia
+  docker_tag: hunter
   opts:
     detach: true
     stdin_open: true
