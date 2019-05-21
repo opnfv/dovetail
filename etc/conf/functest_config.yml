@@ -32,7 +32,7 @@
 
 functest:
   image_name: opnfv/functest-smoke
-  docker_tag: gambia
+  docker_tag: hunter
   opts:
     detach: true
     stdin_open: true
