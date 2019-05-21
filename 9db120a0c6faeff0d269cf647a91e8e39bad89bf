@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "758c56ed_6598d7b3",
+        "filename": "etc/testcase/functest.sfc.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2019-05-21T14:47:37Z",
+      "side": 1,
+      "message": "As much as I\u0027ve understand after code reading, this variable will be used in order for the deploy_scenario variable to be set [1].\nAfterwards, the default variable [2] will be updated accordingly.\n\nI\u0027m not very familiar with jenkins jobs, so I\u0027m not sure whether I have missed something or not.\n\nAssuming that a separately job will be created for the SFC test set, I have changed the HA to noHA. The reason behind (as far as I remember) is that the HA environment for SFC scenarios is not so stable.  In case  the \u0027(no)HA\u0027 will also affect the other dovetail tests, I\u0027ll change it back to \u0027HA\u0027.\n\n\n[1] https://github.com/opnfv/dovetail/blob/47559a6afe2c66ff536c45f61be730991042b68d/etc/conf/functest_config.yml#L14\n[2] https://github.com/opnfv/releng/blob/0f37513479346d80b3c4f80c2eed6b9e38ead0c9/jjb/dovetail/dovetail-ci-jobs.yaml#L262",
+      "range": {
+        "startLine": 5,
+        "startChar": 2,
+        "endLine": 5,
+        "endChar": 34
+      },
+      "revId": "9db120a0c6faeff0d269cf647a91e8e39bad89bf",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
