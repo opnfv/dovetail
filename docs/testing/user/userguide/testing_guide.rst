@@ -568,7 +568,7 @@ for the details of the CLI.
 The '--testsuite' option is used to control the set of tests intended for execution
 at a high level. For the purposes of running the OVP test suite, the test suite name follows
 the following format, ``ovp.<major>.<minor>.<patch>``. The latest and default test suite is
-ovp.2018.09.
+ovp.2019.0x.
 
 .. code-block:: bash
 
@@ -578,10 +578,10 @@ This command is equal to
 
 .. code-block:: bash
 
-   $ dovetail run --testsuite ovp.2018.09
+   $ dovetail run --testsuite ovp.2019.0x
 
 Without any additional options, the above command will attempt to execute all mandatory and
-optional test cases with test suite ovp.2018.09.
+optional test cases with test suite ovp.2019.0x.
 To restrict the breadth of the test scope, it can also be specified using options
 '--mandatory' or '--optional'.
 
@@ -653,7 +653,7 @@ result file on the Test Host.
 
    $ dovetail run --offline --testcase functest.vping.userdata --report
    2018-05-22 08:16:16,353 - run - INFO - ================================================
-   2018-05-22 08:16:16,353 - run - INFO - Dovetail compliance: ovp.2018.09!
+   2018-05-22 08:16:16,353 - run - INFO - Dovetail compliance: ovp.2019.0x!
    2018-05-22 08:16:16,353 - run - INFO - ================================================
    2018-05-22 08:16:16,353 - run - INFO - Build tag: daily-master-660de986-5d98-11e8-b635-0242ac110001
    2018-05-22 08:19:31,595 - run - WARNING - There is no hosts file /home/dovetail/pre_config/hosts.yaml, may be some issues with domain name resolution.

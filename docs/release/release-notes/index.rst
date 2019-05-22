@@ -41,7 +41,7 @@ Test Suites & Test Areas
 ------------------------
 
 OVP/Dovetail groups test cases into test suites and test areas. Test suites are currently a basic
-categorization around releases for the most part. Executing the test suite 'ovp.2018.09' without
+categorization around releases for the most part. Executing the test suite 'ovp.2019.0x' without
 further specification will run all the test cases in the OVP 2018.09 release. Test suites are
 divided into test areas that can be executed separately.
 
