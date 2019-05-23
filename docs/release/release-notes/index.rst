@@ -279,4 +279,4 @@ Useful Links
 
  - Dovetail IRC Channel: #opnfv-dovetail
 
- - `Dovetail Test Configuration <https://git.opnfv.org/dovetail/tree/etc/compliance/ovp.2018.09.yaml>`_
+ - `Dovetail Test Configuration <https://git.opnfv.org/dovetail/tree/etc/compliance/ovp.2019.0x.yaml>`_
