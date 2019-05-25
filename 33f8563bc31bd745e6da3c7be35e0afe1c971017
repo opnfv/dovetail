@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b692dbd6_7026db14",
+        "filename": "etc/compliance/proposed_tests.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-05-25T06:24:51Z",
+      "side": 1,
+      "message": "I suggest to keep the name the same as others, which is with 3 parts, \u003cproject\u003e.\u003ctestarea\u003e.\u003ctestcase\u003e",
+      "range": {
+        "startLine": 29,
+        "startChar": 8,
+        "endLine": 29,
+        "endChar": 20
+      },
+      "revId": "33f8563bc31bd745e6da3c7be35e0afe1c971017",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2acd627b_5f6fbc96",
+        "filename": "etc/testcase/functest.sfc.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-05-25T06:24:51Z",
+      "side": 1,
+      "message": "I have checked all scripts in releng to find out which installer still deploy sfc scenario.\nOnly fuel still has odl-sfc-noha scenario deploy virtually with both Hunter and master.\nSo the good news is that we can have fuel environment to run this test. The only thing need to do is to add Dovetail jobs back to fuel deploy and test loop because fuel has removed all Dovetail jobs several days ago.",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 30
+      },
+      "revId": "33f8563bc31bd745e6da3c7be35e0afe1c971017",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
