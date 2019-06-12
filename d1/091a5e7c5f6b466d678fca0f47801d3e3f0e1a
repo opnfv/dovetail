@@ -1,0 +1,9 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Eddy Raineri <eddy.raineri@windriver.com>
+Code-Review+2: Dan Xu <xudan16@huawei.com>
+Code-Review+1: Panagiotis Karalis <pkaralis@intracom-telecom.com>
+Submitted-by: Dan Xu <xudan16@huawei.com>
+Submitted-at: Wed, 12 Jun 2019 01:33:40 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/67869
+Project: dovetail
+Branch: refs/heads/master
