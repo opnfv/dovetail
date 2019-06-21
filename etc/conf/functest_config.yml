@@ -10,6 +10,7 @@
 ---
 
 {% set validate_testcase = validate_testcase or '' %}
+{% set validate_image_name = validate_image_name or 'opnfv/functest-smoke' %}
 {% set testcase = testcase or '' %}
 {% set deploy_scenario = deploy_scenario or 'unknown' %}
 {% set os_insecure = os_insecure or 'False' %}
@@ -31,7 +32,7 @@
 {% set images_dir = '/home/opnfv/functest/images' %}
 
 functest:
-  image_name: opnfv/functest-smoke
+  image_name: {{ validate_image_name }}
   docker_tag: hunter
   opts:
     detach: true
