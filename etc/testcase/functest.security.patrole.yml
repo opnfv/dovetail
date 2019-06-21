@@ -16,6 +16,7 @@ functest.security.patrole:
     testcase: patrole
     pre_condition:
       - 'cp /home/opnfv/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
+      - 'cp /home/opnfv/userconfig/patrole_blacklist.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/blacklist.yaml'
   report:
     source_archive_files:
       - functest.log
@@ -37,7 +38,6 @@ functest.security.patrole:
       - patrole_tempest_plugin.tests.api.image.test_image_namespace_property_rbac.NamespacesPropertyRbacTest.test_get_md_property
       - patrole_tempest_plugin.tests.api.image.test_image_namespace_property_rbac.NamespacesPropertyRbacTest.test_modify_md_properties
       - patrole_tempest_plugin.tests.api.image.test_image_namespace_rbac.ImageNamespacesRbacTest.test_create_metadef_namespace
-      - patrole_tempest_plugin.tests.api.image.test_image_namespace_rbac.ImageNamespacesRbacTest.test_list_metadef_namespaces
       - patrole_tempest_plugin.tests.api.image.test_image_namespace_rbac.ImageNamespacesRbacTest.test_modify_metadef_namespace
       - patrole_tempest_plugin.tests.api.image.test_image_namespace_tags_rbac.NamespaceTagsRbacTest.test_create_namespace_tag
       - patrole_tempest_plugin.tests.api.image.test_image_namespace_tags_rbac.NamespaceTagsRbacTest.test_create_namespace_tags
@@ -68,28 +68,35 @@ functest.security.patrole:
       - patrole_tempest_plugin.tests.api.network.test_agents_rbac.DHCPAgentSchedulersRbacTest.test_add_dhcp_agent_to_network
       - patrole_tempest_plugin.tests.api.network.test_agents_rbac.DHCPAgentSchedulersRbacTest.test_delete_network_from_dhcp_agent
       - patrole_tempest_plugin.tests.api.network.test_agents_rbac.DHCPAgentSchedulersRbacTest.test_list_networks_hosted_by_one_dhcp_agent
+      - patrole_tempest_plugin.tests.api.network.test_flavors_rbac.FlavorsPluginRbacTest.test_create_flavor
+      - patrole_tempest_plugin.tests.api.network.test_flavors_rbac.FlavorsPluginRbacTest.test_delete_flavor
+      - patrole_tempest_plugin.tests.api.network.test_flavors_rbac.FlavorsPluginRbacTest.test_list_flavors
+      - patrole_tempest_plugin.tests.api.network.test_flavors_rbac.FlavorsPluginRbacTest.test_show_flavor
+      - patrole_tempest_plugin.tests.api.network.test_flavors_rbac.FlavorsPluginRbacTest.test_update_flavor
       - patrole_tempest_plugin.tests.api.network.test_floating_ips_rbac.FloatingIpsRbacTest.test_create_floating_ip
       - patrole_tempest_plugin.tests.api.network.test_floating_ips_rbac.FloatingIpsRbacTest.test_create_floating_ip_floatingip_address
       - patrole_tempest_plugin.tests.api.network.test_floating_ips_rbac.FloatingIpsRbacTest.test_delete_floating_ip
       - patrole_tempest_plugin.tests.api.network.test_floating_ips_rbac.FloatingIpsRbacTest.test_show_floating_ip
       - patrole_tempest_plugin.tests.api.network.test_floating_ips_rbac.FloatingIpsRbacTest.test_update_floating_ip
+      - patrole_tempest_plugin.tests.api.network.test_network_segments_rbac.NetworkSegmentsRbacTest.test_create_network_segments
+      - patrole_tempest_plugin.tests.api.network.test_network_segments_rbac.NetworkSegmentsRbacTest.test_show_network_segments
+      - patrole_tempest_plugin.tests.api.network.test_network_segments_rbac.NetworkSegmentsRbacTest.test_update_network_segments
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network
+      - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_is_default
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_router_external
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_shared
-      - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_subnet
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_delete_network
-      - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_delete_subnet
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_list_dhcp_agents_on_hosting_network
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_show_network
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_show_network_provider_network_type
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_show_network_provider_physical_network
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_show_network_provider_segmentation_id
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_show_network_router_external
-      - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_show_subnet
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_update_network
+      - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_update_network_provider_physical_network
+      - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_update_network_provider_segmentation_id
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_update_network_router_external
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_update_network_shared
-      - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_update_subnet
       - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_create_port
       - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_create_port_allowed_address_pairs
       - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_create_port_binding_host_id
@@ -118,6 +125,7 @@ functest.security.patrole:
       - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_create_router_external_fixed_ips
       - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_delete_router
       - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_remove_router_interface
+      - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_show_high_availability_router
       - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_show_router
       - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_update_router
       - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_update_router_enable_snat
@@ -131,7 +139,7 @@ functest.security.patrole:
       - patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_list_security_group_rules
       - patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_list_security_groups
       - patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_show_security_group_rule
-      - patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_show_security_groups
+      - patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_show_security_group
       - patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_update_security_group
       - patrole_tempest_plugin.tests.api.network.test_service_providers_rbac.ServiceProvidersRbacTest.test_list_service_providers
       - patrole_tempest_plugin.tests.api.network.test_subnetpools_rbac.SubnetPoolsRbacTest.test_create_subnetpool

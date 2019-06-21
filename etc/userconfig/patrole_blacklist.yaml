@@ -1,0 +1,38 @@
+---
+-
+    scenarios:
+        - unknown
+        - os-nosdn-ovs-ha
+    tests:
+        # need metering extension, otherwise the following 6 sub test cases will skip
+        - patrole_tempest_plugin.tests.api.network.test_metering_label_rules_rbac.MeteringLabelRulesRbacTest.test_create_metering_label_rule
+        - patrole_tempest_plugin.tests.api.network.test_metering_label_rules_rbac.MeteringLabelRulesRbacTest.test_delete_metering_label_rule
+        - patrole_tempest_plugin.tests.api.network.test_metering_label_rules_rbac.MeteringLabelRulesRbacTest.test_show_metering_label_rule
+        - patrole_tempest_plugin.tests.api.network.test_metering_labels_rbac.MeteringLabelsRbacTest.test_create_metering_label
+        - patrole_tempest_plugin.tests.api.network.test_metering_labels_rbac.MeteringLabelsRbacTest.test_delete_metering_label
+        - patrole_tempest_plugin.tests.api.network.test_metering_labels_rbac.MeteringLabelsRbacTest.test_show_metering_label
+        # need image type 'shared' and 'community' which were added in the Image API v2.5
+        - patrole_tempest_plugin.tests.api.image.test_images_member_rbac.ImagesMemberRbacTest.test_update_image_member
+        - patrole_tempest_plugin.tests.api.image.test_images_rbac.BasicOperationsImagesRbacTest.test_communitize_image
+        # need l3_agent_scheduler extension which may not enabled on some SUTs with odl
+        - patrole_tempest_plugin.tests.api.network.test_agents_rbac.L3AgentSchedulerRbacTest.test_create_router_on_l3_agent
+        - patrole_tempest_plugin.tests.api.network.test_agents_rbac.L3AgentSchedulerRbacTest.test_delete_router_from_l3_agent
+        - patrole_tempest_plugin.tests.api.network.test_agents_rbac.L3AgentSchedulerRbacTest.test_list_routers_on_l3_agent
+        # need network extension: dvr, otherwise the following 3 sub test cases will skip
+        - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_create_distributed_router
+        - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_show_distributed_router
+        - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_update_distributed_router
+        # need network extension: l3-ha which may not enabled on some SUTs with odl
+        - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_create_high_availability_router
+        - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_update_high_availability_router
+        # need segment extension, otherwise the following 4 sub test cases will skip
+        - patrole_tempest_plugin.tests.api.network.test_segments_rbac.SegmentsPluginRbacTest.test_create_segment
+        - patrole_tempest_plugin.tests.api.network.test_segments_rbac.SegmentsPluginRbacTest.test_delete_segment
+        - patrole_tempest_plugin.tests.api.network.test_segments_rbac.SegmentsPluginRbacTest.test_show_segment
+        - patrole_tempest_plugin.tests.api.network.test_segments_rbac.SegmentsPluginRbacTest.test_update_segment
+        # need flat provider network type
+        - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_provider_physical_network
+        # need vxlan provider network type
+        - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_update_network_provider_network_type
+        - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_provider_network_type
+        - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_provider_segmentation_id
