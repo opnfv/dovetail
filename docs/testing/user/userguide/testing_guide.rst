@@ -231,6 +231,13 @@ this file should contain.
    # Otherwise, it will create a role 'Member' to do that.
    export NEW_USER_ROLE=xxx
 
+   # For XCI installer the following environment parameters should be added in
+   # this file. Otherwise, those parameters could be ignored.
+   export INSTALLER_TYPE=osa
+   export DEPLOY_SCENARIO=os-nosdn-nofeature
+   export XCI_FLAVOR=noha
+
+
 
 The OS_AUTH_URL variable is key to configure correctly, as the other admin services
 are collected from the identity service. HTTPS should be configured in the SUT so
