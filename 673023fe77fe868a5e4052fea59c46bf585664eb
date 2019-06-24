@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f74a5aec_5d2caa60",
+        "filename": "etc/conf/functest_config.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-06-24T03:05:15Z",
+      "side": 1,
+      "message": "Not quite understand why changing this default image name.\nFor each validate type, there is a default docker image defined in this conf file which is used by most test cases.\nHowever, for other test cases, they may need other docker images such as functest-vnf, functest-healthcheck, functest-feature. Dovetail supports to override this image name in each test case yaml file.\nPlease refer to https://github.com/opnfv/dovetail/blob/master/etc/testcase/functest.healthcheck.connection_check.yml#L17 and https://github.com/opnfv/dovetail/blob/master/etc/testcase/functest.vnf.vims.yml#L17",
+      "range": {
+        "startLine": 35,
+        "startChar": 14,
+        "endLine": 35,
+        "endChar": 39
+      },
+      "revId": "673023fe77fe868a5e4052fea59c46bf585664eb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
