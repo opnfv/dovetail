@@ -1,0 +1,29 @@
+---
+-
+    scenarios:
+        - unknown
+        - os-nosdn-ovs-ha
+    tests:
+        # need VLAN type driver, otherwise the following 1 sub test case will skip
+        - neutron_tempest_plugin.api.test_trunk.TrunkTestInheritJSONBase.test_add_subport
+        # need vxlan type driver, otherwise the following 1 sub test case will skip
+        - neutron_tempest_plugin.api.test_trunk_negative.TrunkTestJSON.test_create_subport_invalid_inherit_network_segmentation_type
+        # need vxlan or gre type driver, otherwise the following 6 sub test case will skip
+        - neutron_tempest_plugin.api.test_trunk.TrunkTestMtusJSON.test_add_subport_with_mtu_equal_to_trunk
+        - neutron_tempest_plugin.api.test_trunk.TrunkTestMtusJSON.test_add_subport_with_mtu_greater_than_subport
+        - neutron_tempest_plugin.api.test_trunk.TrunkTestMtusJSON.test_create_trunk_with_mtu_equal_to_subport
+        - neutron_tempest_plugin.api.test_trunk.TrunkTestMtusJSON.test_create_trunk_with_mtu_greater_than_subport
+        - neutron_tempest_plugin.api.test_trunk_negative.TrunkTestMtusJSON.test_add_subport_with_mtu_greater_than_trunk
+        - neutron_tempest_plugin.api.test_trunk_negative.TrunkTestMtusJSON.test_create_trunk_with_mtu_smaller_than_subport
+        # advanced image is required to run this test, otherwise the following 2 sub test case will skip
+        - neutron_tempest_plugin.scenario.test_trunk.TrunkTest.test_parent_port_connectivity_after_trunk_deleted_lb
+        - neutron_tempest_plugin.scenario.test_trunk.TrunkTest.test_subport_connectivity
+        # key 'revision_number' is a new extension for Newton and not support by Mitaka
+        - neutron_tempest_plugin.api.test_trunk.TrunkTestJSON.test_create_update_trunk
+        # extension 'project-id' is a new extension for Newton
+        - neutron_tempest_plugin.api.test_trunk.TrunkTestJSON.test_show_trunk_has_project_id
+        # Can not work correctly on Mitaka
+        - neutron_tempest_plugin.api.test_trunk.TrunkTestJSON.test_create_update_trunk_with_description
+        # Remove neutron trunk test cases with href links
+        - neutron_tempest_plugin.api.test_trunk.TrunksSearchCriteriaTest.test_list_pagination_page_reverse_with_href_links
+        - neutron_tempest_plugin.api.test_trunk.TrunksSearchCriteriaTest.test_list_pagination_with_href_links
