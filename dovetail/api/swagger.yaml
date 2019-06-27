@@ -1,0 +1,54 @@
+swagger: "2.0"
+info:
+  description: "This is the dovetail API."
+  version: "1.0.0"
+  title: "Dovetail API"
+  contact:
+    email: "xudan16@huawei.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: localhost:8888
+basePath: "/api/v1/scenario/nfvi"
+tags:
+- name: "testsuites"
+  description: "Operations about testsuites"
+- name: "testcases"
+  description: "Operations about test cases"
+schemes:
+- "http"
+paths:
+  /testsuites:
+    get:
+      tags:
+      - "testsuites"
+      summary: "Get all testsuites"
+      description: ""
+      operationId: "getTestsuites"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "successful operation"
+        default:
+          description: Unexpected error
+  /testcases:
+    get:
+      tags:
+      - "testcases"
+      summary: "Get all test cases"
+      description: ""
+      operationId: "getTestcases"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "successful operation"
+        default:
+          description: Unexpected error
