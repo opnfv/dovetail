@@ -12,11 +12,13 @@ MAINTAINER Stamatis Katsaounis <mokats@intracom-telecom.com>
 LABEL version="0.1" description="OPNFV Dovetail Docker Container"
 
 ARG BRANCH=master
+ARG SWAGGER_UI_TAG=v3.22.3
 
 RUN \
     apt-get update \
 && \
     apt-get install -y \
+        apache2 \
         gcc \
         make \
         git \
@@ -42,7 +44,8 @@ RUN \
     git init /tmp/dovetail \
 && \
     (cd /tmp/dovetail && \
-        git fetch --tags https://gerrit.opnfv.org/gerrit/dovetail $BRANCH && \
+#        git fetch --tags https://gerrit.opnfv.org/gerrit/dovetail $BRANCH && \
+        git fetch --tags https://github.com/xudan2189/dovetail.git $BRANCH && \
         git checkout FETCH_HEAD && \
         pip install .) \
 && \
@@ -50,8 +53,14 @@ RUN \
 && \
     ln -s /usr/local/lib/python2.7/dist-packages/dovetail ${REPOS_DIR}/dovetail
 
+RUN \
+    git clone https://github.com/swagger-api/swagger-ui.git \
+&& \
+    cd swagger-ui && git checkout $SWAGGER_UI_TAG
+
 WORKDIR ${REPOS_DIR}/dovetail
 
 ENV FLASK_APP ${API_DIR}/app/routes.py
 EXPOSE 5000
-CMD ${API_DIR}/boot.sh
+EXPOSE 80
+CMD bash ${API_DIR}/boot.sh
