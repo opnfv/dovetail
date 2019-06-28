@@ -52,7 +52,7 @@ Test Descriptions
 API Used and Reference
 ----------------------
 
-Network: http://developer.openstack.org/api-ref/networking/v2/index.html
+Network: https://developer.openstack.org/api-ref/network/v2/index.html
 
 - create network
 - update network

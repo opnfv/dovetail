@@ -175,11 +175,11 @@ responses is as follows:
    to stop issuing exemptions.
 
 
-.. [1] https://review.openstack.org/#/c/156130/
+.. [1] https://review.opendev.org/#/c/156130/
 .. [2] https://github.com/openstack/tempest/tree/master/tempest/lib/api_schema/response/compute
 .. [3] https://developer.openstack.org/api-ref/compute/#show-server-details
 .. [4] https://wiki.openstack.org/wiki/Governance/InteropWG
 .. [5] https://www.openstack.org/brand/interop/
 .. [6] http://lists.openstack.org/pipermail/openstack-dev/2016-June/097349.html
-.. [7] https://review.openstack.org/#/c/333067/
-.. [8] https://review.openstack.org/#/c/512447/
+.. [7] https://review.opendev.org/#/c/333067/
+.. [8] https://review.opendev.org/#/c/512447/

@@ -68,7 +68,7 @@ Security Groups: https://developer.openstack.org/api-ref/network/v2/index.html#s
 - create security group
 - delete security group
 
-Networks: https://developer.openstack.org/api-ref/networking/v2/index.html#networks
+Networks: https://developer.openstack.org/api-ref/network/v2/index.html#networks
 
 - create network
 - delete network
@@ -76,14 +76,14 @@ Networks: https://developer.openstack.org/api-ref/networking/v2/index.html#netwo
 - create floating ip
 - delete floating ip
 
-Routers and interface: https://developer.openstack.org/api-ref/networking/v2/index.html#routers-routers
+Routers and interface: https://developer.openstack.org/api-ref/network/v2/index.html#routers-routers
 
 - create router
 - delete router
 - list routers
 - add interface to router
 
-Subnets: https://developer.openstack.org/api-ref/networking/v2/index.html#subnets
+Subnets: https://developer.openstack.org/api-ref/network/v2/index.html#subnets
 
 - create subnet
 - list subnets
@@ -96,7 +96,7 @@ Servers: https://developer.openstack.org/api-ref/compute/
 - delete server
 - add/assign floating ip
 
-Ports: https://developer.openstack.org/api-ref/networking/v2/index.html#ports
+Ports: https://developer.openstack.org/api-ref/network/v2/index.html#ports
 
 - update port
 - list ports

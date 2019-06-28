@@ -34,14 +34,14 @@ References
 - create network
 - delete network
 
-`Routers and interface: <https://developer.openstack.org/api-ref/networking/v2/index.html#routers-routers>`_
+`Routers and interface: <https://developer.openstack.org/api-ref/network/v2/index.html#routers-routers>`_
 
 - create router
 - update router
 - delete router
 - add interface to router
 
-`Subnets: <https://developer.openstack.org/api-ref/networking/v2/index.html#subnets>`_
+`Subnets: <https://developer.openstack.org/api-ref/network/v2/index.html#subnets>`_
 
 - create subnet
 - update subnet
@@ -53,13 +53,13 @@ References
 - update subnetpool
 - delete subnetpool
 
-`Ports: <https://developer.openstack.org/api-ref/networking/v2/index.html#ports>`_
+`Ports: <https://developer.openstack.org/api-ref/network/v2/index.html#ports>`_
 
 - create port
 - update port
 - delete port
 
-`Floating IPs: <https://developer.openstack.org/api-ref/networking/v2/index.html#floating-ips-floatingips>`_
+`Floating IPs: <https://developer.openstack.org/api-ref/network/v2/index.html#floating-ips-floatingips>`_
 
 - create floating IP
 - delete floating IP

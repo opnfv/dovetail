@@ -33,7 +33,7 @@ This test area references the following specifications and guides:
 
 - 3GPP LTE
 
-  - http://www.3gpp.org/technologies/keywords-acronyms/98-lte
+  - https://www.3gpp.org/technologies/keywords-acronyms/98-lte
 
 - ETSI -  TS 24.301
 
@@ -41,7 +41,7 @@ This test area references the following specifications and guides:
 
 - ABoT : Test Orchestration Solution
 
-  - https://www.rebaca.com/abot-test-orchestration-tool/
+  - https://www.rebaca.com/what-we-do/abot-5g-network-simulator/
 
 - Cloudify clearwater: opnfv-cloudify-clearwater [1]
 

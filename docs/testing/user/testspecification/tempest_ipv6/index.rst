@@ -23,7 +23,7 @@ References
 
 - upstream openstack API reference
 
-  - http://developer.openstack.org/api-ref
+  - https://developer.openstack.org/api-ref/
 
 - upstream openstack IPv6 reference
 
@@ -68,7 +68,7 @@ Test Descriptions
 API Used and Reference
 ----------------------
 
-Networks: https://developer.openstack.org/api-ref/networking/v2/index.html#networks
+Networks: https://developer.openstack.org/api-ref/network/v2/index.html#networks
 
 - show network details
 - update network
@@ -77,7 +77,7 @@ Networks: https://developer.openstack.org/api-ref/networking/v2/index.html#netwo
 - create netowrk
 - bulk create networks
 
-Subnets: https://developer.openstack.org/api-ref/networking/v2/index.html#subnets
+Subnets: https://developer.openstack.org/api-ref/network/v2/index.html#subnets
 
 - list subnets
 - create subnet
@@ -86,7 +86,7 @@ Subnets: https://developer.openstack.org/api-ref/networking/v2/index.html#subnet
 - update subnet
 - delete subnet
 
-Routers and interface: https://developer.openstack.org/api-ref/networking/v2/index.html#routers-routers
+Routers and interface: https://developer.openstack.org/api-ref/network/v2/index.html#routers-routers
 
 - list routers
 - create router
@@ -96,7 +96,7 @@ Routers and interface: https://developer.openstack.org/api-ref/networking/v2/ind
 - add interface to router
 - remove interface from router
 
-Ports: https://developer.openstack.org/api-ref/networking/v2/index.html#ports
+Ports: https://developer.openstack.org/api-ref/network/v2/index.html#ports
 
 - show port details
 - update port
@@ -105,7 +105,7 @@ Ports: https://developer.openstack.org/api-ref/networking/v2/index.html#ports
 - create port
 - bulk create ports
 
-Security groups: https://developer.openstack.org/api-ref/networking/v2/index.html#security-groups-security-groups
+Security groups: https://developer.openstack.org/api-ref/network/v2/index.html#security-groups-security-groups
 
 - list security groups
 - create security groups
@@ -113,7 +113,7 @@ Security groups: https://developer.openstack.org/api-ref/networking/v2/index.htm
 - update security group
 - delete security group
 
-Security groups rules: https://developer.openstack.org/api-ref/networking/v2/index.html#security-group-rules-security-group-rules
+Security groups rules: https://developer.openstack.org/api-ref/network/v2/index.html#security-group-rules-security-group-rules
 
 - list security group rules
 - create security group rule
