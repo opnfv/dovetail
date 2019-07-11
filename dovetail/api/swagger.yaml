@@ -15,6 +15,8 @@ tags:
   description: "Operations about testsuites"
 - name: "testcases"
   description: "Operations about test cases"
+- name: "execution"
+  description: "Operations about running test cases"
 schemes:
 - "http"
 paths:
@@ -52,3 +54,292 @@ paths:
           description: "successful operation"
         default:
           description: Unexpected error
+  /execution:
+    post:
+      tags:
+      - "execution"
+      summary: "Run test cases"
+      description: ""
+      operationId: "runTestCases"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "All info used to run tests"
+        required: false
+        schema:
+          $ref: "#/definitions/RunInfo"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/StatusResponse"
+        500:
+          description: "internal error"
+        default:
+          description: Unexpected error
+  /execution/{exec_id}:
+    post:
+      tags:
+      - "execution"
+      summary: "Run test cases with exec_id"
+      description: ""
+      operationId: "runTestCasesWithID"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "exec_id"
+        in: "path"
+        description: "ID of this run, will generate randomly if not given"
+        required: true
+        schema:
+          type: "integer"
+          format: "uuid"
+      - name: "body"
+        in: "body"
+        description: "All info used to run tests"
+        required: false
+        schema:
+          $ref: "#/definitions/RunInfo"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/StatusResponse"
+        500:
+          description: "internal error"
+        default:
+          description: Unexpected error
+  /execution/status/{exec_id}:
+    post:
+      tags:
+      - "execution/status"
+      summary: "Get status of running test cases"
+      description: ""
+      operationId: "getTestCasesStatus"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "exec_id"
+        in: "path"
+        description: "exec_id used to get the status of test cases"
+        required: true
+        schema:
+          type: "integer"
+          format: "uuid"
+      - name: "body"
+        in: "body"
+        description: "Test case list used to get status"
+        required: true
+        schema:
+          $ref: "#/definitions/TestCaseList"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/StatusResponse"
+        500:
+          description: "internal error"
+        default:
+          description: Unexpected error
+definitions:
+  TestCaseList:
+    type: "object"
+    properties:
+      testcase:
+        type: "array"
+        items:
+          type: "string"
+        example:
+        - "functest.vping.ssh"
+        - "yardstick.ha.rabbitmq"
+  Node:
+    type: "object"
+    required:
+    - "name"
+    - "role"
+    - "ip"
+    - "user"
+    properties:
+      name:
+        type: "string"
+        example: "node1"
+      role:
+        type: "string"
+        enum:
+        - "Controller"
+        - "Compute"
+        - "Jumpserver"
+      ip:
+        type: "string"
+        example: "192.168.117.222"
+      user:
+        type: "string"
+        example: "root"
+      password:
+        type: "string"
+        example: "root"
+      key_filename:
+        type: "string"
+        example: "/home/ovp/pre_config/id_rsa"
+  ProcessInfo:
+    type: "object"
+    required:
+    - "testcase_name"
+    properties:
+      testcase_name:
+        type: "string"
+        example: "yardstick.ha.rabbitmq"
+      attack_host:
+        type: "string"
+        example: "node1"
+      attack_process:
+        type: "string"
+        example: "rabbitmq"
+  Pods:
+    type: "object"
+    properties:
+      nodes:
+        type: "array"
+        items:
+          $ref: '#/definitions/Node'
+      process_info:
+        type: "array"
+        items:
+          $ref: "#/definitions/ProcessInfo"
+  tempestconf:
+    type: "object"
+    additionalProperties:
+      type: string
+  TempestConf:
+    type: "object"
+    additionalProperties:
+      $ref: "#/definitions/tempestconf"
+  Hosts:
+    type: "object"
+    additionalProperties:
+      type: "array"
+      items:
+        type: "string"
+  Envs:
+    type: "object"
+    additionalProperties:
+      type: string
+    example:
+      OS_USERNAME: "admin"
+      OS_PASSWORD: "admin"
+      OS_AUTH_URL: "https://192.168.117.222:5000/v3"
+      EXTERNAL_NETWORK: "ext-net"
+  Conf:
+    type: "object"
+    properties:
+      vm_images:
+        type: "string"
+        example: "/home/ovp/images"
+      pods:
+        $ref: "#/definitions/Pods"
+      tempest_conf:
+        $ref: "#/definitions/TempestConf"
+      hosts:
+        $ref: "#/definitions/Hosts"
+      envs:
+        $ref: "#/definitions/Envs"
+  RunInfo:
+    type: "object"
+    properties:
+      conf:
+        $ref: "#/definitions/Conf"
+      testcase:
+        type: "array"
+        items:
+          type: "string"
+        example:
+        - "functest.vping.ssh"
+        - "yardstick.ha.rabbitmq"
+      testsuite:
+        type: "string"
+        example: "ovp.2019.0x"
+      testarea:
+        type: "array"
+        items:
+          type: "string"
+        example:
+        - "vping"
+        - "ha"
+      deploy_scenario:
+        type: "string"
+        example: "os-nosdn-ovs-ha"
+      options:
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - "opnfv-ci"
+          - "optional"
+          - "offline"
+          - "report"
+          - "debug"
+          - "stop"
+          - "no-clean"
+          - "no-api-validation"
+          - "mandatory"
+        example:
+        - "debug"
+        - "report"
+  Results:
+    type: "object"
+    properties:
+      criteria:
+        type: "string"
+        enum:
+        - "PASS"
+        - "FAIL"
+      timestart:
+        type: "string"
+        format: "date-time"
+      timestop:
+        type: "string"
+        format: "date-time"
+  TestCaseStatus:
+    type: "object"
+    properties:
+      endTime:
+        type: "string"
+        format: "date-time"
+      executionId:
+        type: "string"
+        format: "uuid"
+      results:
+        $ref: "#/definitions/Results"
+      scenario:
+        type: "string"
+        example: "nfvi"
+      status:
+        type: "string"
+        enum:
+        - "IN_PROGRESS"
+        - "COMPLETED"
+        - "FAILED"
+      testCaseName:
+        type: "string"
+        example: "functest.vping.ssh"
+      testSuiteName:
+        type: "string"
+        example: "ovp.2019.0x"
+      timestart:
+        type: "string"
+        format: "date-time"
+  StatusResponse:
+    type: "object"
+    properties:
+      result:
+        type: "array"
+        items:
+          $ref: "#/definitions/TestCaseStatus"

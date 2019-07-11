@@ -12,6 +12,7 @@
 
 import copy
 from datetime import datetime
+import json
 import os
 import time
 import uuid
@@ -275,6 +276,13 @@ def main(*args, **kwargs):
     dt_utils.check_docker_version(logger)
 
     testcase_list = get_testcase_list(logger, **kwargs)
+
+    dovetail_home = os.environ['DOVETAIL_HOME']
+    testcases_file = os.path.join(dovetail_home, 'results', 'testcases.json')
+    with open(testcases_file, "w") as f:
+        data = {'testsuite': kwargs['testsuite'], 'testcases': testcase_list}
+        f.write(json.dumps(data) + '\n')
+
     if not testcase_list:
         raise SystemExit(EXIT_RUN_FAILED)
 
