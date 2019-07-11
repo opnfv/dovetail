@@ -44,7 +44,8 @@ RUN \
     git init /tmp/dovetail \
 && \
     (cd /tmp/dovetail && \
-        git fetch --tags https://gerrit.opnfv.org/gerrit/dovetail $BRANCH && \
+#        git fetch --tags https://gerrit.opnfv.org/gerrit/dovetail $BRANCH && \
+        git fetch --tags https://github.com/xudan2189/dovetail.git $BRANCH && \
         git checkout FETCH_HEAD && \
         pip install .) \
 && \

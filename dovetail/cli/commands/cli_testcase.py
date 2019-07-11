@@ -19,12 +19,13 @@ import dovetail.utils.dovetail_utils as dt_utils
 
 class CliTestcase(object):
 
-    @classmethod
-    def testsuite_load(cls):
+    @staticmethod
+    def testsuite_load():
         dt_cfg.load_config_files(constants.CONF_PATH)
         Testsuite.load()
 
-    def list_one_testsuite(self, testsuite):
+    @staticmethod
+    def list_one_testsuite(testsuite):
         testsuite_stream = Testsuite.get(testsuite)
         if testsuite_stream:
             mandatory = dt_utils.get_value_from_dict(
@@ -59,7 +60,8 @@ class CliTestcase(object):
             else:
                 click.echo("No testsuite defined yet in dovetail!!!")
 
-    def show_testcase(self, name):
+    @staticmethod
+    def show_testcase(name):
         tc_path = os.path.join(constants.TESTCASE_PATH, "{}.yml".format(name))
         if os.path.isfile(tc_path):
             with open(tc_path, 'r') as stream:
@@ -70,7 +72,8 @@ class CliTestcase(object):
         else:
             click.echo("testcase %s not exist or not supported" % name)
 
-    def run(self, args_str):
+    @staticmethod
+    def run(args_str):
         options = ''
         if args_str:
             options = options + args_str
