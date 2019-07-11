@@ -490,7 +490,9 @@ class RunTesting(unittest.TestCase):
             'Test area area is not defined.')
         self.assertEquals(None, result)
 
+    @patch('__builtin__.open')
     @patch('dovetail.run.os')
+    @patch('dovetail.run.json')
     @patch('dovetail.run.uuid')
     @patch('dovetail.run.dt_logger')
     @patch('dovetail.run.dt_cfg')
@@ -507,13 +509,16 @@ class RunTesting(unittest.TestCase):
     def test_main(self, mock_create_logs, mock_run, mock_get_list,
                   mock_copy_patch, mock_copy_userconf, mock_update, mock_parse,
                   mock_clean, mock_get_result, mock_utils, mock_config,
-                  mock_logger, mock_uuid, mock_os):
+                  mock_logger, mock_uuid, mock_json, mock_os, mock_open):
         mock_config.dovetail_config = {}
-        mock_os.environ = {}
+        mock_os.environ = {'DOVETAIL_HOME': 'dovetail_home'}
         logger_obj = Mock()
         logger_temp_obj = Mock()
+        file_obj = Mock()
         logger_temp_obj.getLogger.return_value = logger_obj
         mock_logger.Logger.return_value = logger_temp_obj
+        mock_open.return_value.__enter__.return_value = file_obj
+        mock_json.dumps.return_value = 'results text'
         mock_uuid.uuid1.return_value = 42
         mock_get_result.return_value = True
         testcase_list = ['testcase']
@@ -538,8 +543,8 @@ class RunTesting(unittest.TestCase):
                           mock_config.dovetail_config)
         mock_get_result.assert_called_once_with()
         mock_clean.assert_called_once_with()
-        self.assertEquals({'DEBUG': 'true', 'OPNFV_CI': 'true'},
-                          mock_os.environ)
+        self.assertEquals({'DOVETAIL_HOME': 'dovetail_home', 'DEBUG': 'true',
+                           'OPNFV_CI': 'true'}, mock_os.environ)
         mock_create_logs.assert_called_once_with()
         logger_obj.info.assert_has_calls([
             call('================================================'),
@@ -575,6 +580,8 @@ class RunTesting(unittest.TestCase):
         mock_get_result.assert_called_once_with()
         self.assertEquals(expected.code, 0)
 
+    @patch('__builtin__.open')
+    @patch('dovetail.run.json')
     @patch('dovetail.run.os')
     @patch('dovetail.run.uuid')
     @patch('dovetail.run.dt_logger')
@@ -593,13 +600,17 @@ class RunTesting(unittest.TestCase):
                                   mock_get_list, mock_copy_patch,
                                   mock_copy_userconf, mock_update, mock_clean,
                                   mock_get_result, mock_utils, mock_config,
-                                  mock_logger, mock_uuid, mock_os):
+                                  mock_logger, mock_uuid, mock_os, mock_json,
+                                  mock_open):
         mock_config.dovetail_config = {}
-        mock_os.environ = {}
+        mock_os.environ = {'DOVETAIL_HOME': 'dovetail_home'}
         logger_obj = Mock()
         logger_temp_obj = Mock()
+        file_obj = Mock()
         logger_temp_obj.getLogger.return_value = logger_obj
         mock_logger.Logger.return_value = logger_temp_obj
+        mock_open.return_value.__enter__.return_value = file_obj
+        mock_json.dumps.return_value = 'results text'
         mock_uuid.uuid1.return_value = 42
         mock_get_result.return_value = True
         mock_get_list.return_value = None
@@ -624,8 +635,8 @@ class RunTesting(unittest.TestCase):
                           mock_config.dovetail_config)
         mock_get_result.assert_called_once_with()
         mock_clean.assert_called_once_with()
-        self.assertEquals({'DEBUG': 'true', 'OPNFV_CI': 'false'},
-                          mock_os.environ)
+        self.assertEquals({'DOVETAIL_HOME': 'dovetail_home', 'DEBUG': 'true',
+                           'OPNFV_CI': 'false'}, mock_os.environ)
         mock_create_logs.assert_called_once_with()
         logger_obj.info.assert_has_calls([
             call('================================================'),
