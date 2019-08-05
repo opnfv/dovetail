@@ -724,10 +724,6 @@ Host by default within the directory specified below.
 
      * Its log is stored in ``stress_logs/bottlenecks.stress.XXX.log``.
 
-   * Snaps test cases
-
-     * Its log is stored in ``snaps_logs/functest.snaps.smoke.log``.
-
    * VNF test cases
 
      * Its log is stored in ``vnf_logs/functest.vnf.XXX.log``.

@@ -575,7 +575,7 @@ Test Case 10 - Resize volume backed server
 Test case specification
 -----------------------
 
-tempest.scenario.test_server_advanced_ops.TestServerAdvancedOps.test_resize_volume_backed_server_confirm
+tempest.api.compute.servers.test_server_actions.ServerActionsTestJSON.test_resize_volume_backed_server_confirm
 
 Test preconditions
 ------------------

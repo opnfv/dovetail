@@ -170,7 +170,6 @@ Dovetail List Commands
        yardstick.ha.controller_restart
        functest.vnf.vims
        functest.vnf.vepc
-       functest.snaps.smoke
 
 Dovetail Show Commands
 ----------------------

@@ -14,7 +14,7 @@ functest.rally.authenticate:
   validate:
     type: functest
     testcase: rally_full
-    image_name: opnfv/functest-components
+    image_name: opnfv/functest-benchmarking
     pre_condition:
       - 'cp /home/opnfv/userconfig/rally_authenticate_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
   report:

@@ -350,7 +350,6 @@ of OVP is as follows:
   - yardstick.ha.controller_restart
   - functest.vnf.vims
   - functest.vnf.vepc
-  - functest.snaps.smoke
 
 \* The OPNFV OVP utilizes the same set of test cases as the OpenStack
 interoperability program *OpenStack Powered Compute*. Passing the OPNFV OVP

@@ -53,7 +53,7 @@ OVP test suite.
     - tempest.api.identity.admin.v3.test_credentials.CredentialsTestJSON.test_credentials_create_get_update_delete
 
 - `Create and Verify Domain <https://github.com/openstack/tempest/blob/12.2.0/tempest/api/identity/admin/v3/test_domains.py#L159>`_
-    - tempest.api.identity.admin.v3.test_domains.DefaultDomainTestJSON.test_default_domain_exists
+    - tempest.api.identity.v3.test_domains.DefaultDomainTestJSON.test_default_domain_exists
 
 - `Create, Update and Delete Domain <https://github.com/openstack/tempest/blob/12.2.0/tempest/api/identity/admin/v3/test_domains.py>`_
     - tempest.api.identity.admin.v3.test_domains.DomainsTestJSON.test_create_update_delete_domain
