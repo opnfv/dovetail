@@ -93,7 +93,6 @@ There are a total of 432 mandatory test cases.
 
 - functest.vnf.vims (1)
 - functest.vnf.vepc (1)
-- functest.snaps.smoke  (1)
 - yardstick.ha.neutron_l3_agent  (1)
 - yardstick.ha.controller_restart (1)
 - functest.tempest.ipv6_scenario (8)
@@ -104,7 +103,7 @@ There are a total of 432 mandatory test cases.
 - functest.tempest.bgpvpn (15)
 - functest.security.patrole_vxlan_dependent (2)
 
-There are a total of 57 optional test cases.
+There are a total of 58 optional test cases.
 
 OPNFV Test Projects and Components
 ----------------------------------

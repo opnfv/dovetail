@@ -47,4 +47,3 @@ ovp.2019.0x:
       - yardstick.ha.controller_restart
       - functest.vnf.vims
       - functest.vnf.vepc
-      - functest.snaps.smoke
