@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ea32c78_8ca1aa0f",
+        "filename": "docs/testing/user/instructionsperinstaller/testing_instructions_xci.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-08-05T06:26:36Z",
+      "side": 1,
+      "message": "Here should specify that it needs to set the following into tempest_conf.yaml.\nservice_available:\n    cinder: True",
+      "range": {
+        "startLine": 101,
+        "startChar": 1,
+        "endLine": 101,
+        "endChar": 56
+      },
+      "revId": "218664897f22eaa622026b0545b3a788db236d2f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    }
+  ]
+}
