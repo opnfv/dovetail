@@ -23,8 +23,8 @@ import python_hosts
 import docker
 
 from dovetail import constants
-from dovetail_config import DovetailConfig as dt_cfg
-from openstack_utils import OS_Utils
+from dovetail.utils.dovetail_config import DovetailConfig as dt_cfg
+from dovetail.utils.openstack_utils import OS_Utils
 
 
 def exec_log(verbose, logger, msg, level, flush=False):

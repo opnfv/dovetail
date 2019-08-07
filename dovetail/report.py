@@ -20,11 +20,11 @@ import datetime
 import tarfile
 import time
 
-import utils.dovetail_logger as dt_logger
+import dovetail.utils.dovetail_logger as dt_logger
 
-from utils.dovetail_config import DovetailConfig as dt_cfg
-import utils.dovetail_utils as dt_utils
-from testcase import Testcase
+from dovetail.utils.dovetail_config import DovetailConfig as dt_cfg
+import dovetail.utils.dovetail_utils as dt_utils
+from dovetail.testcase import Testcase
 
 
 class Report(object):
