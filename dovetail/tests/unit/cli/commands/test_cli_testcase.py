@@ -34,7 +34,7 @@ class CliTestcaseTesting(unittest.TestCase):
         testcase.run(options)
 
         mock_path.dirname.assert_called_once()
-        cmd = 'python %s/run.py %s' % (repo_dir, options)
+        cmd = 'python3 %s/run.py %s' % (repo_dir, options)
         mock_utils.exec_cmd.assert_called_once_with(
             cmd, exit_on_error=True, exec_msg_on=False, info=True)
 
