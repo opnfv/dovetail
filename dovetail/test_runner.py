@@ -14,7 +14,7 @@ import jinja2
 import jinja2.meta
 import yaml
 
-from container import Container
+from dovetail.container import Container
 from dovetail import constants
 from utils.dovetail_config import DovetailConfig as dt_cfg
 import utils.dovetail_utils as dt_utils
