@@ -25,7 +25,7 @@ class DovetailConfig(object):
         path = os.path.join(conf_path, cls.dovetail_config['cli_file_name'])
         with open(path) as f:
             cmd_yml = yaml.safe_load(f)
-            cls.dovetail_config['cli'] = cmd_yml[cmd_yml.keys()[0]]
+            cls.dovetail_config['cli'] = cmd_yml[cmd_yml.keys()]
 
     # update dovetail_config dict with the giving path.
     # if path is in the dovetail_config dict, its value will be replaced.

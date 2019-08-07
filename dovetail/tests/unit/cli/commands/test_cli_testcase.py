@@ -34,7 +34,7 @@ class CliTestcaseTesting(unittest.TestCase):
         testcase.run(options)
 
         mock_path.dirname.assert_called_once()
-        cmd = 'python %s/run.py %s' % (repo_dir, options)
+        cmd = 'python3 %s/run.py %s' % (repo_dir, options)
         mock_utils.exec_cmd.assert_called_once_with(
             cmd, exit_on_error=True, exec_msg_on=False, info=True)
 
@@ -60,7 +60,7 @@ class CliTestcaseTesting(unittest.TestCase):
         mock_click.echo.assert_called_once_with(
             'testcase %s not exist or not supported' % testcase_name)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.cli.commands.cli_testcase.constants')
     @patch('os.path')
     @patch('dovetail.cli.commands.cli_testcase.click')
@@ -85,7 +85,7 @@ class CliTestcaseTesting(unittest.TestCase):
         mock_path.isfile.assert_called_once_with(testcase_whole_path)
         mock_click.echo.assert_called_once_with(file_data)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.cli.commands.cli_testcase.constants')
     @patch('os.path')
     @patch('dovetail.cli.commands.cli_testcase.click')
