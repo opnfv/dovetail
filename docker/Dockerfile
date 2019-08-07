@@ -25,13 +25,13 @@ RUN \
         libssl-dev \
         libffi-dev \
         vim \
-        python-dev \
-        python-pip \
+        python3-dev \
+        python3-pip \
         --no-install-recommends \
 && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install -U setuptools wheel
+RUN pip3 install -U setuptools wheel
 
 ENV HOME /home/opnfv
 ENV REPOS_DIR ${HOME}/dovetail
@@ -46,7 +46,7 @@ RUN \
     (cd /tmp/dovetail && \
         git fetch --tags https://gerrit.opnfv.org/gerrit/dovetail $BRANCH && \
         git checkout FETCH_HEAD && \
-        pip install .) \
+        pip3 install .) \
 && \
     rm -rf /tmp/dovetail \
 && \
