@@ -25,14 +25,16 @@ RUN \
         libssl-dev \
         libffi-dev \
         vim \
-        python-dev \
-        python-pip \
+        python3-dev \
+        python3-pip \
         --no-install-recommends \
 && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install -U setuptools wheel
+RUN pip3 install -U setuptools wheel
 
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
 ENV HOME /home/opnfv
 ENV REPOS_DIR ${HOME}/dovetail
 ENV API_DIR ${REPOS_DIR}/dovetail/api
@@ -46,11 +48,11 @@ RUN \
     (cd /tmp/dovetail && \
         git fetch --tags https://gerrit.opnfv.org/gerrit/dovetail $BRANCH && \
         git checkout FETCH_HEAD && \
-        pip install .) \
+        pip3 install .) \
 && \
     rm -rf /tmp/dovetail \
 && \
-    ln -s /usr/local/lib/python2.7/dist-packages/dovetail ${REPOS_DIR}/dovetail
+    ln -s /usr/local/lib/python3.6/dist-packages/dovetail ${REPOS_DIR}/dovetail
 
 RUN \
     git clone https://github.com/swagger-api/swagger-ui.git \

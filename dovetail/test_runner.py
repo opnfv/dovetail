@@ -14,11 +14,11 @@ import jinja2
 import jinja2.meta
 import yaml
 
-from container import Container
+from dovetail.container import Container
 from dovetail import constants
-from utils.dovetail_config import DovetailConfig as dt_cfg
-import utils.dovetail_utils as dt_utils
-import utils.dovetail_logger as dt_logger
+from dovetail.utils.dovetail_config import DovetailConfig as dt_cfg
+import dovetail.utils.dovetail_utils as dt_utils
+import dovetail.utils.dovetail_logger as dt_logger
 
 
 class Runner(object):
