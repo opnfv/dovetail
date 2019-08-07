@@ -32,9 +32,9 @@ index c5239db..b4fd9f7 100644
  RUN \
      apt-get update \
 @@ -17,21 +25,11 @@ RUN \
-         python-dev \
-         python-mock \
-         python-pip \
+         python3-dev \
+         python3-mock \
+         python3-pip \
 -        apt-transport-https \
          wget \
 +        sudo \
@@ -59,10 +59,10 @@ index c5239db..b4fd9f7 100644
  RUN \
      mkdir -p ${REPOS_DIR} \
  && \
-+    pip install -U setuptools --upgrade \
++    pip3 install -U setuptools --upgrade \
 +&& \
-+    pip install -U wheel \
++    pip3 install -U wheel \
 +&& \
      git config --global http.sslVerify false \
  && \
-     pip install git+https://git.opnfv.org/dovetail@$BRANCH#egg=dovetail \
+     pip3 install git+https://git.opnfv.org/dovetail@$BRANCH#egg=dovetail \

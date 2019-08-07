@@ -12,9 +12,9 @@
 import docker
 import sys
 
-import utils.dovetail_logger as dt_logger
-import utils.dovetail_utils as dt_utils
-from utils.dovetail_config import DovetailConfig as dt_cfg
+import dovetail.utils.dovetail_logger as dt_logger
+import dovetail.utils.dovetail_utils as dt_utils
+from dovetail.utils.dovetail_config import DovetailConfig as dt_cfg
 
 
 class Container(object):
