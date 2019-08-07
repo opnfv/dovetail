@@ -39,7 +39,7 @@ class TestParser(unittest.TestCase):
 
     def test_parser_cmd(self, mock_logger):
         """Test whether the command is correctly parsed."""
-        mock_cmd = "python /functest/ci/run_tests.py "\
+        mock_cmd = "python3 /functest/ci/run_tests.py "\
                    "-t {{validate_testcase}} -r"
         with open(os.path.join(self.test_path, 'test_testcase.yaml')) as f:
             mock_testcase_yaml = yaml.safe_load(f)
@@ -47,20 +47,20 @@ class TestParser(unittest.TestCase):
         mock_testcase = MockTestcase()
         mock_testcase.testcase = mock_testcase_yaml.values()[0]
         output = parser.Parser.parse_cmd(mock_cmd, mock_testcase)
-        expected_output = ("python /functest/ci/run_tests.py -t "
+        expected_output = ("python3 /functest/ci/run_tests.py -t "
                            "tempest_smoke_serial -r")
         self.assertEqual(expected_output, output)
 
     def test_parser_cmd_fail(self, mock_logger):
         """Test whether the command is correctly parsed."""
-        mock_cmd = "python /functest/ci/run_tests.py "\
+        mock_cmd = "python3 /functest/ci/run_tests.py "\
                    "-t {{validate_testcase}} -r"
         mock_testcase_yaml = {}
         MockTestcase = type('Testcase', (object,), {})
         mock_testcase = MockTestcase()
         mock_testcase.testcase = mock_testcase_yaml.values()
         output = parser.Parser.parse_cmd(mock_cmd, mock_testcase)
-        expected_output = ("python /functest/ci/run_tests.py -t "
+        expected_output = ("python3 /functest/ci/run_tests.py -t "
                            "None -r")
         self.assertEqual(expected_output, output)
 
