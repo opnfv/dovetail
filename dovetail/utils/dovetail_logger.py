@@ -26,7 +26,7 @@ import logging
 import os
 import sys
 
-from dovetail_config import DovetailConfig as dt_cfg
+from dovetail.utils.dovetail_config import DovetailConfig as dt_cfg
 
 
 class Logger(object):

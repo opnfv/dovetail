@@ -14,7 +14,7 @@ LABEL version="0.1" description="OPNFV Dovetail Docker Container"
 ARG BRANCH=master
 
 RUN yum update -y && yum install -y sudo iproute epel-release && \
-        yum install -y python-pip git docker && \
+        yum install -y python3-pip git docker && \
         sed -ie 's/requiretty/!requiretty/g' /etc/sudoers
 
 ENV HOME /home/opnfv
@@ -23,9 +23,9 @@ WORKDIR /home/opnfv
 
 RUN git config --global http.sslVerify false && \
     git clone --depth 1 -b $BRANCH https://git.opnfv.org/dovetail ${REPOS_DIR} && \
-    pip install -U pip && \
-    pip install -r ${REPOS_DIR}/requirements.txt && \
-    pip install -e . && \
+    pip3 install -U pip3 && \
+    pip3 install -r ${REPOS_DIR}/requirements.txt && \
+    pip3 install -e . && \
     mkdir -p ${REPOS_DIR}/results
 
 WORKDIR ${REPOS_DIR}/dovetail

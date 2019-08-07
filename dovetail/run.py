@@ -19,15 +19,15 @@ import uuid
 
 import click
 
-from container import Container
+from dovetail.container import Container
 from dovetail import constants
-from parser import Parser
-import report as dt_report
-import test_runner as dt_test_runner
-import testcase as dt_testcase
-from utils.dovetail_config import DovetailConfig as dt_cfg
-import utils.dovetail_logger as dt_logger
-import utils.dovetail_utils as dt_utils
+from dovetail.parser import Parser
+import dovetail.report as dt_report
+import dovetail.test_runner as dt_test_runner
+import dovetail.testcase as dt_testcase
+from dovetail.utils.dovetail_config import DovetailConfig as dt_cfg
+import dovetail.utils.dovetail_logger as dt_logger
+import dovetail.utils.dovetail_utils as dt_utils
 
 EXIT_RUN_FAILED = 2
 
