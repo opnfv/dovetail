@@ -460,7 +460,7 @@ class ReportTesting(unittest.TestCase):
         report.logger.info.assert_called_once_with(expected)
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json')
     @patch('dovetail.report.os.path')
     @patch('dovetail.report.dt_cfg')
@@ -483,7 +483,7 @@ class ReportTesting(unittest.TestCase):
         mock_json.dumps.assert_called_once_with('results')
         file_obj.write.assert_called_once_with('results text\n')
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json')
     @patch('dovetail.report.os.path')
     @patch('dovetail.report.dt_cfg')
@@ -640,7 +640,7 @@ class ReportTesting(unittest.TestCase):
             'Result file not found: {}'.format(file_path))
         self.assertEqual(None, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json')
     @patch('dovetail.report.dt_cfg')
     @patch('dovetail.report.dt_utils')
@@ -695,7 +695,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.name.assert_called_once_with()
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json')
     @patch('dovetail.report.dt_cfg')
     @patch('dovetail.report.dt_utils')
@@ -750,7 +750,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.name.assert_called_once_with()
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json.loads')
     @patch('dovetail.report.dt_cfg')
     @patch('dovetail.report.dt_utils')
@@ -841,7 +841,7 @@ class ReportTesting(unittest.TestCase):
             'Result file not found: {}'.format(file_path))
         self.assertEqual(None, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json.loads')
     @patch('dovetail.report.dt_utils')
     @patch('dovetail.report.os.path')
@@ -883,7 +883,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.set_results.assert_called_once_with(expected)
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json.loads')
     @patch('dovetail.report.dt_utils')
     @patch('dovetail.report.os.path')
@@ -942,7 +942,7 @@ class ReportTesting(unittest.TestCase):
             'Result file not found: {}'.format(file_path))
         self.assertEqual(None, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json.loads')
     @patch('dovetail.report.os.path')
     def test_bottlenecks_crawler_crawl_pass(self, mock_path, mock_loads,
@@ -970,7 +970,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.set_results.assert_called_once_with(expected)
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json.loads')
     @patch('dovetail.report.os.path')
     def test_bottlenecks_crawler_crawl_fail(self, mock_path, mock_loads,
@@ -998,7 +998,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.set_results.assert_called_once_with(expected)
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json.loads')
     @patch('dovetail.report.os.path')
     def test_bottlenecks_crawler_crawl_key_error(self, mock_path, mock_loads,
@@ -1036,7 +1036,7 @@ class ReportTesting(unittest.TestCase):
         mock_path.exists.assert_called_once_with(file_path)
         self.assertEqual(None, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.os.path')
     def test_shell_crawler_crawl_exception(self, mock_path, mock_open):
         mock_path.exists.return_value = True
@@ -1050,7 +1050,7 @@ class ReportTesting(unittest.TestCase):
         mock_open.assert_called_once_with(file_path, 'r')
         self.assertEqual(None, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json.load')
     @patch('dovetail.report.os.path')
     def test_shell_crawler_crawl(self, mock_path, mock_load,
@@ -1121,7 +1121,7 @@ class ReportTesting(unittest.TestCase):
             'Result file not found: {}'.format(file_path))
         self.assertEqual(None, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.os.path')
     def test_onapvvp_crawler_crawl_pass(self, mock_path,
                                         mock_open):
@@ -1143,7 +1143,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.set_results.assert_called_once_with(expected)
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.os.path')
     def test_onapvvp_crawler_crawl_fail(self, mock_path,
                                         mock_open):
@@ -1165,7 +1165,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.set_results.assert_called_once_with(expected)
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.os.path')
     def test_onapvvp_crawler_crawl_value_exception(self, mock_path,
                                                    mock_open):
@@ -1189,7 +1189,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.set_results.assert_called_once_with(expected)
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.os.path')
     def test_onapvvp_crawler_crawl_key_exception(self, mock_path,
                                                  mock_open):
@@ -1213,7 +1213,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.set_results.assert_called_once_with(expected)
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json.loads')
     @patch('dovetail.report.os.path')
     def test_onapvtp_crawler_crawl_pass(self, mock_path, mock_loads,
@@ -1243,7 +1243,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.set_results.assert_called_once_with(expected)
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json.loads')
     @patch('dovetail.report.os.path')
     def test_onapvtp_crawler_crawl_fail(self, mock_path, mock_loads,
@@ -1273,7 +1273,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.set_results.assert_called_once_with(expected)
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json.loads')
     @patch('dovetail.report.os.path')
     def test_onapvtp_crawler_crawl_no_criteria(self, mock_path, mock_loads,
@@ -1305,7 +1305,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.set_results.assert_called_once_with(expected)
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json.loads')
     @patch('dovetail.report.os.path')
     def test_onapvtp_crawler_crawl_exception(self, mock_path, mock_loads,
@@ -1337,7 +1337,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.set_results.assert_called_once_with(expected)
         self.assertEqual(expected, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.json.loads')
     @patch('dovetail.report.os.path')
     def test_onapvtp_crawler_crawl_value_error(self, mock_path, mock_loads,
@@ -1604,7 +1604,7 @@ class ReportTesting(unittest.TestCase):
 
     @patch('dovetail.report.dt_cfg')
     @patch('dovetail.report.os.path')
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.os.getenv')
     def test_get_checksum_tosca(self, mock_env, mock_open, mock_path,
                                 mock_config):
@@ -1625,7 +1625,7 @@ class ReportTesting(unittest.TestCase):
     @patch('dovetail.report.dt_cfg')
     @patch('dovetail.report.os.path')
     @patch('dovetail.report.os.walk')
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.report.os.getenv')
     def test_get_checksum_heat(self, mock_env, mock_open, mock_walk, mock_path,
                                mock_config):
