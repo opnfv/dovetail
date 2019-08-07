@@ -490,7 +490,7 @@ class RunTesting(unittest.TestCase):
             'Test area area is not defined.')
         self.assertEqual(None, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.run.os')
     @patch('dovetail.run.json')
     @patch('dovetail.run.uuid')
@@ -582,7 +582,7 @@ class RunTesting(unittest.TestCase):
         mock_get_result.assert_called_once_with()
         self.assertEqual(expected.code, 0)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.run.json')
     @patch('dovetail.run.os')
     @patch('dovetail.run.uuid')
