@@ -248,7 +248,7 @@ class TestcaseTesting(unittest.TestCase):
             'Test case: {} post_condition is empty.'.format(testcase.name()))
         self.assertEqual(False, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.testcase.os.path')
     @patch('dovetail.testcase.dt_cfg')
     @patch.object(tcase.Testcase, 'sub_testcase')
@@ -274,7 +274,7 @@ class TestcaseTesting(unittest.TestCase):
             'Save test cases to {}'.format(file_path))
         self.assertEqual(file_path, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.testcase.os.path')
     @patch('dovetail.testcase.dt_cfg')
     @patch.object(tcase.Testcase, 'sub_testcase')
@@ -351,7 +351,7 @@ class TestcaseTesting(unittest.TestCase):
             result = testcase.increase_retry()
         self.assertEqual(42, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.testcase.yaml')
     @patch('dovetail.testcase.os')
     @patch('dovetail.testcase.TestcaseFactory')
@@ -378,7 +378,7 @@ class TestcaseTesting(unittest.TestCase):
         mock_factory.create.assert_called_once_with('value', yaml_dict)
         self.assertEqual(runner_obj, tcase.Testcase.get('key'))
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.testcase.yaml')
     @patch('dovetail.testcase.os')
     @patch('dovetail.testcase.TestcaseFactory')
@@ -624,7 +624,7 @@ class TestcaseTesting(unittest.TestCase):
 
         self.assertEqual(None, result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.testcase.yaml')
     @patch('dovetail.testcase.os')
     @patch('dovetail.testcase.constants')

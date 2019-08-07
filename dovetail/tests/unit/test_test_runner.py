@@ -499,7 +499,7 @@ class TestRunnerTesting(unittest.TestCase):
              'result_dir': 'three'},
             result)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.test_runner.json')
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.dt_utils')
@@ -544,7 +544,7 @@ class TestRunnerTesting(unittest.TestCase):
              'pass': 'FAIL'})
         file_obj.write.assert_called_once_with(dump_obj)
 
-    @patch('__builtin__.open')
+    @patch('builtins.open')
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.os.path')

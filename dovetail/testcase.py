@@ -13,11 +13,11 @@ import os
 import yaml
 
 from dovetail import constants
-from parser import Parser
-from test_runner import TestRunnerFactory
-from utils.dovetail_config import DovetailConfig as dt_cfg
-import utils.dovetail_logger as dt_logger
-import utils.dovetail_utils as dt_utils
+from dovetail.parser import Parser
+from dovetail.test_runner import TestRunnerFactory
+from dovetail.utils.dovetail_config import DovetailConfig as dt_cfg
+import dovetail.utils.dovetail_logger as dt_logger
+import dovetail.utils.dovetail_utils as dt_utils
 
 
 class Testcase(object):
@@ -25,7 +25,7 @@ class Testcase(object):
     logger = None
 
     def __init__(self, testcase_yaml):
-        self.testcase = testcase_yaml.values()[0]
+        self.testcase = list(testcase_yaml.values())[0]
         self.testcase['passed'] = 'FAIL'
         self.cmds = []
         self.sub_testcase_status = {}
@@ -197,10 +197,11 @@ class Testcase(object):
             for testcase_file in files:
                 with open(os.path.join(root, testcase_file)) as f:
                     testcase_yaml = yaml.safe_load(f)
-                    case_type = testcase_yaml.values()[0]['validate']['type']
+                    case_type = \
+                        list(testcase_yaml.values())[0]['validate']['type']
                     testcase = TestcaseFactory.create(case_type, testcase_yaml)
                     if testcase is not None:
-                        cls.testcase_list[next(testcase_yaml.iterkeys())] = \
+                        cls.testcase_list[next(iter(testcase_yaml.keys()))] = \
                             testcase
                     else:
                         cls.logger.error('Failed to create test case: {}'

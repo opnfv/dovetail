@@ -23,8 +23,8 @@ import python_hosts
 import docker
 
 from dovetail import constants
-from dovetail_config import DovetailConfig as dt_cfg
-from openstack_utils import OS_Utils
+from dovetail.utils.dovetail_config import DovetailConfig as dt_cfg
+from dovetail.utils.openstack_utils import OS_Utils
 
 
 def exec_log(verbose, logger, msg, level, flush=False):
@@ -80,12 +80,12 @@ def exec_cmd(cmd, logger=None, exit_on_error=False, info=False,
 # walkthrough the object, yield path and value
 
 # dual python 2/3 compatibility, inspired by the "six" library
-string_types = (str, unicode) if str is bytes else (str, bytes)
-# iteritems = lambda mapping: getattr(mapping, 'iteritems', mapping.items)()
+string_types = (str, 'unicode') if str is bytes else (str, bytes)
+# items = lambda mapping: getattr(mapping, 'items', mapping.items)()
 
 
-def iteritems(mapping):
-    return getattr(mapping, 'iteritems', mapping.items)()
+def items(mapping):
+    return getattr(mapping, 'items', mapping.items)()
 
 
 def objwalk(obj, path=(), memo=None):
@@ -93,7 +93,7 @@ def objwalk(obj, path=(), memo=None):
         memo = set()
     iterator = None
     if isinstance(obj, Mapping):
-        iterator = iteritems
+        iterator = items
     elif isinstance(obj, (Sequence, Set)) and not isinstance(obj,
                                                              string_types):
         iterator = enumerate
@@ -332,7 +332,7 @@ def get_hosts_info(logger=None):
             logger.error('There is no key hosts_info in file {}'
                          .format(hosts_config_file))
             return hosts_config
-        for ip, hostnames in hosts_info.iteritems():
+        for ip, hostnames in hosts_info.items():
             if not hostnames:
                 continue
             add_hosts_info(ip, hostnames)
