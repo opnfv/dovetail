@@ -39,10 +39,6 @@ This test area references the following specifications and guides:
 
   - https://www.etsi.org/deliver/etsi_ts/124300_124399/124301/10.03.00_60/ts_124301v100300p.pdf
 
-- ABoT : Test Orchestration Solution
-
-  - https://www.rebaca.com/abot-test-orchestration-tool/
-
 - Cloudify clearwater: opnfv-cloudify-clearwater [1]
 
   - https://github.com/Orange-OpenSource/opnfv-cloudify-clearwater

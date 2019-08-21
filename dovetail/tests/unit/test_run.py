@@ -528,7 +528,8 @@ class RunTesting(unittest.TestCase):
             'opnfv_ci': True,
             'report': True,
             'testsuite': 'testsuite',
-            'docker_tag': '2.0.0'
+            'docker_tag': '2.0.0',
+            'no_api_validation': False
         }
 
         with self.assertRaises(SystemExit) as cm:
@@ -544,7 +545,8 @@ class RunTesting(unittest.TestCase):
         mock_get_result.assert_called_once_with()
         mock_clean.assert_called_once_with()
         self.assertEquals({'DOVETAIL_HOME': 'dovetail_home', 'DEBUG': 'true',
-                           'OPNFV_CI': 'true'}, mock_os.environ)
+                           'OPNFV_CI': 'true', 'validation': 'enabled'},
+                          mock_os.environ)
         mock_create_logs.assert_called_once_with()
         logger_obj.info.assert_has_calls([
             call('================================================'),
@@ -619,7 +621,8 @@ class RunTesting(unittest.TestCase):
             'opnfv_ci': False,
             'report': True,
             'testsuite': 'testsuite',
-            'docker_tag': '2.0.0'
+            'docker_tag': '2.0.0',
+            'no_api_validation': False
         }
 
         with self.assertRaises(SystemExit) as cm:
@@ -636,7 +639,8 @@ class RunTesting(unittest.TestCase):
         mock_get_result.assert_called_once_with()
         mock_clean.assert_called_once_with()
         self.assertEquals({'DOVETAIL_HOME': 'dovetail_home', 'DEBUG': 'true',
-                           'OPNFV_CI': 'false'}, mock_os.environ)
+                           'OPNFV_CI': 'false', 'validation': 'enabled'},
+                          mock_os.environ)
         mock_create_logs.assert_called_once_with()
         logger_obj.info.assert_has_calls([
             call('================================================'),

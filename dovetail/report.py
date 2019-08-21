@@ -104,6 +104,8 @@ class Report(object):
         if vnf_type:
             report_obj['vnf_type'] = vnf_type
             report_obj['vnf_checksum'] = self.get_checksum(vnf_type)
+        else:
+            report_obj['validation'] = os.getenv('validation')
 
         report_obj['testcases_list'] = []
         if not testcase_list:
