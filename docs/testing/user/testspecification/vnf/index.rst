@@ -41,7 +41,7 @@ This test area references the following specifications and guides:
 
 - ABoT : Test Orchestration Solution
 
-  - https://www.rebaca.com/abot-test-orchestration-tool/
+  - https://www.rebaca.com/what-we-do/abot-5g-network-simulator/
 
 - Cloudify clearwater: opnfv-cloudify-clearwater [1]
 

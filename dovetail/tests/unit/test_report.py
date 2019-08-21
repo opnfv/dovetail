@@ -170,12 +170,13 @@ class ReportTesting(unittest.TestCase):
         mock_factory.create.assert_called_once_with('type')
         checker_obj.check.assert_called_once_with(testcase_obj, None)
 
+    @patch('dovetail.report.os.getenv')
     @patch.object(dt_report.Report, 'get_checksum')
     @patch('dovetail.report.Testcase')
     @patch('dovetail.report.datetime.datetime')
     @patch('dovetail.report.dt_cfg')
     def test_generate_json(self, mock_config, mock_datetime, mock_testcase,
-                           mock_checksum):
+                           mock_checksum, mock_env):
         logger_obj = Mock()
         report = dt_report.Report()
         report.logger = logger_obj
@@ -185,6 +186,7 @@ class ReportTesting(unittest.TestCase):
             'build_tag': 'build_tag',
             'version': '2018.09'
         }
+        mock_env.return_value = 'enabled'
         utc_obj = Mock()
         utc_obj.strftime.return_value = '2018-01-13 13:13:13 UTC'
         mock_datetime.utcnow.return_value = utc_obj
@@ -206,6 +208,7 @@ class ReportTesting(unittest.TestCase):
             'vnf_checksum': 'da39a3ee5e6b4b0d3255bfef95601890afd80709',
             'test_date': '2018-01-13 13:13:13 UTC',
             'duration': duration,
+            'validation': 'enabled',
             'testcases_list': [
                 {
                     'name': 'ta.tb.tc',
@@ -229,11 +232,12 @@ class ReportTesting(unittest.TestCase):
 
         self.assertEquals(expected, result)
 
+    @patch('dovetail.report.os.getenv')
     @patch('dovetail.report.Testcase')
     @patch('dovetail.report.datetime.datetime')
     @patch('dovetail.report.dt_cfg')
     def test_generate_json_noVNF(self, mock_config, mock_datetime,
-                                 mock_testcase):
+                                 mock_testcase, mock_env):
         logger_obj = Mock()
         report = dt_report.Report()
         report.logger = logger_obj
@@ -243,6 +247,7 @@ class ReportTesting(unittest.TestCase):
             'build_tag': 'build_tag',
             'version': '2018.09'
         }
+        mock_env.return_value = 'disabled'
         utc_obj = Mock()
         utc_obj.strftime.return_value = '2018-01-13 13:13:13 UTC'
         mock_datetime.utcnow.return_value = utc_obj
@@ -261,6 +266,7 @@ class ReportTesting(unittest.TestCase):
             'build_tag': 'build_tag',
             'test_date': '2018-01-13 13:13:13 UTC',
             'duration': duration,
+            'validation': 'disabled',
             'testcases_list': [
                 {
                     'name': 'ta.tb.tc',
@@ -284,11 +290,12 @@ class ReportTesting(unittest.TestCase):
 
         self.assertEquals(expected, result)
 
+    @patch('dovetail.report.os.getenv')
     @patch('dovetail.report.Testcase')
     @patch('dovetail.report.datetime.datetime')
     @patch('dovetail.report.dt_cfg')
     def test_generate_json_noVNF_inTestCase(self, mock_config, mock_datetime,
-                                            mock_testcase):
+                                            mock_testcase, mock_env):
         logger_obj = Mock()
         report = dt_report.Report()
         report.logger = logger_obj
@@ -298,6 +305,7 @@ class ReportTesting(unittest.TestCase):
             'build_tag': 'build_tag',
             'version': '2018.09'
         }
+        mock_env.return_value = 'enabled'
         utc_obj = Mock()
         utc_obj.strftime.return_value = '2018-01-13 13:13:13 UTC'
         mock_datetime.utcnow.return_value = utc_obj
@@ -316,6 +324,7 @@ class ReportTesting(unittest.TestCase):
             'build_tag': 'build_tag',
             'test_date': '2018-01-13 13:13:13 UTC',
             'duration': duration,
+            'validation': 'enabled',
             'testcases_list': [
                 {
                     'name': 'ta.tb.tc',
