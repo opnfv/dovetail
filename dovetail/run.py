@@ -261,6 +261,8 @@ def main(*args, **kwargs):
     clean_results_dir()
     os.environ['DEBUG'] = 'true' if kwargs['debug'] else 'false'
     os.environ['OPNFV_CI'] = 'true' if kwargs['opnfv_ci'] else 'false'
+    os.environ['validation'] = 'disabled' \
+        if kwargs['no_api_validation'] else 'enabled'
     create_logs()
     logger = dt_logger.Logger('run').getLogger()
 

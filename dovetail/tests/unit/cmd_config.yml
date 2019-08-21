@@ -35,3 +35,7 @@ cli:
         flags:
           - '--opnfv-ci'
         is_flag: 'True'
+      noapivalidation:
+        flags:
+          - '--no-api-validation'
+        is_flag: 'True'
