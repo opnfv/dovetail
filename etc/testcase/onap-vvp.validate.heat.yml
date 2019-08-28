@@ -24,4 +24,5 @@ onap-vvp.validate.heat:
       - onap-vvp_logs/report.json
     check_results_files:
       - onap-vvp_logs/report.json
+    portal_key_file: onap-vvp_logs/report.json
     sub_testcase_list:

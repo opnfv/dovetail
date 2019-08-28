@@ -22,4 +22,5 @@ functest.healthcheck.connection_check:
       - healthcheck_logs/functest.healthcheck.connection_check.log
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: healthcheck_logs/functest.healthcheck.connection_check.log
     sub_testcase_list:

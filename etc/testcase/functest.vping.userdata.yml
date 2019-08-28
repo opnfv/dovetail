@@ -22,4 +22,5 @@ functest.vping.userdata:
       - vping_logs/functest.vping.userdata.log
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: vping_logs/functest.vping.userdata.log
     sub_testcase_list:

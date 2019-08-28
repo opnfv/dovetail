@@ -28,6 +28,7 @@ functest.tempest.neutron_trunk_ports:
       - tempest_logs/functest.tempest.neutron_trunk_ports.html
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: tempest_logs/functest.tempest.neutron_trunk_ports.html
     sub_testcase_list:
       - neutron_tempest_plugin.api.test_trunk.TrunkTestJSON.test_add_subports
       - neutron_tempest_plugin.api.test_trunk.TrunkTestJSON.test_create_show_delete_trunk

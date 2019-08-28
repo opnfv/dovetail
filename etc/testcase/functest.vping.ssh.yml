@@ -22,4 +22,5 @@ functest.vping.ssh:
       - vping_logs/functest.vping.ssh.log
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: vping_logs/functest.vping.ssh.log
     sub_testcase_list:

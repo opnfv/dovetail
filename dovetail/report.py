@@ -119,6 +119,7 @@ class Report(object):
                 testcase_inreport['objective'] = ''
                 testcase_inreport['sub_testcase'] = []
                 testcase_inreport['mandatory'] = False
+                testcase_inreport['portal_key_file'] = ''
                 report_obj['testcases_list'].append(testcase_inreport)
                 continue
 
@@ -132,6 +133,7 @@ class Report(object):
                 report_obj['vnf_type'] = vnf_type
                 report_obj['vnf_checksum'] = self.get_checksum(vnf_type)
             testcase_inreport['mandatory'] = testcase.is_mandatory
+            testcase_inreport['portal_key_file'] = testcase.portal_key_file()
             testcase_inreport['sub_testcase'] = []
             if testcase.sub_testcase() is not None:
                 for sub_test in testcase.sub_testcase():

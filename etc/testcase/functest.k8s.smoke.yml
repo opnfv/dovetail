@@ -22,4 +22,5 @@ functest.k8s.smoke:
       - k8s_logs/functest.k8s.smoke.log
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: k8s_logs/functest.k8s.smoke.log
     sub_testcase_list:

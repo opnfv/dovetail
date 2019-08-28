@@ -23,4 +23,5 @@ yardstick.ha.controller_restart:
       - ha_logs/yardstick.ha.controller_restart.out
     check_results_files:
       - ha_logs/yardstick.ha.controller_restart.out
+    portal_key_file: ha_logs/yardstick.ha.controller_restart.log
     sub_testcase_list:

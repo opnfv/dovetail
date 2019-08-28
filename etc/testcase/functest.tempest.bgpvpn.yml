@@ -27,6 +27,7 @@ functest.tempest.bgpvpn:
       - tempest_logs/functest.tempest.bgpvpn.html
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: tempest_logs/functest.tempest.bgpvpn.html
     sub_testcase_list:
       - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_associate_disassociate_network
       - networking_bgpvpn_tempest.tests.api.test_bgpvpn.BgpvpnTest.test_associate_disassociate_router

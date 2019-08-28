@@ -22,4 +22,5 @@ onap-vtp.validate.csar:
       - onap-vtp_logs/onap-vtp.validate.csar.out
     check_results_files:
       - onap-vtp_logs/onap-vtp.validate.csar.out
+    portal_key_file: onap-vtp_logs/onap-vtp.validate.csar.out
     sub_testcase_list:

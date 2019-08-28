@@ -28,4 +28,5 @@ yardstick.ha.cpu_load:
       - ha_logs/yardstick.ha.cpu_load.out
     check_results_files:
       - ha_logs/yardstick.ha.cpu_load.out
+    portal_key_file: ha_logs/yardstick.ha.cpu_load.log
     sub_testcase_list:

@@ -89,6 +89,9 @@ class Testcase(object):
     def validate_testcase(self):
         return self.testcase['validate']['testcase']
 
+    def portal_key_file(self):
+        return self.testcase['report']['portal_key_file']
+
     def increase_retry(self):
         return self._increase_retry(self.validate_testcase())
 

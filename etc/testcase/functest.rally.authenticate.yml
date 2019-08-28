@@ -30,6 +30,7 @@ functest.rally.authenticate:
       - rally_authenticate_logs/authenticate.xml
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: rally_authenticate_logs/functest.rally.authenticate.functest.log
     sub_testcase_list:
       - 'Authenticate.keystone'
       - 'Authenticate.validate_cinder'

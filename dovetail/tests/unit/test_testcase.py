@@ -161,6 +161,13 @@ class TestcaseTesting(unittest.TestCase):
 
         self.assertEquals('tempest_smoke_serial', result)
 
+    def test_portal_key_file(self):
+        testcase = tcase.Testcase(self.testcase_yaml)
+
+        result = testcase.portal_key_file()
+
+        self.assertEquals('tempest_logs/tempest_smoke_serial.html', result)
+
     def test_vnf_type(self):
         testcase = tcase.OnapVtpTestcase(self.testcase_yaml)
 

@@ -25,4 +25,5 @@ bottlenecks.stress.ping:
       - stress_logs/bottlenecks.stress.ping.out
     check_results_files:
       - stress_logs/bottlenecks.stress.ping.out
+    portal_key_file: stress_logs/bottlenecks.stress.ping.log
     sub_testcase_list:
