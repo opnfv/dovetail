@@ -30,6 +30,7 @@ functest.rally.gnocchi:
       - rally_gnocchi_logs/gnocchi.xml
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: rally_gnocchi_logs/functest.rally.gnocchi.functest.log
     sub_testcase_list:
       - 'Gnocchi.list_capabilities'
       - 'Gnocchi.get_status'

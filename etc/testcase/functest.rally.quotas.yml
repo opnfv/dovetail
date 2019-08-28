@@ -30,6 +30,7 @@ functest.rally.quotas:
       - rally_quotas_logs/quotas.xml
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: rally_quotas_logs/functest.rally.quotas.functest.log
     sub_testcase_list:
       - 'Quotas.cinder_update_and_delete'
       - 'Quotas.cinder_update'

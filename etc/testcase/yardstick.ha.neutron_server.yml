@@ -25,4 +25,5 @@ yardstick.ha.neutron_server:
       - ha_logs/yardstick.ha.neutron_server.out
     check_results_files:
       - ha_logs/yardstick.ha.neutron_server.out
+    portal_key_file: ha_logs/yardstick.ha.neutron_server.log
     sub_testcase_list:

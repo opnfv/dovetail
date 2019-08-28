@@ -30,6 +30,7 @@ functest.rally.keystone:
       - rally_keystone_logs/keystone.xml
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: rally_keystone_logs/functest.rally.keystone.functest.log
     sub_testcase_list:
       - 'KeystoneBasic.add_and_remove_user_role'
       - 'KeystoneBasic.create_add_and_list_user_roles'

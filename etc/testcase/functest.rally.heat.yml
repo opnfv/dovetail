@@ -30,6 +30,7 @@ functest.rally.heat:
       - rally_heat_logs/heat.xml
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: rally_heat_logs/functest.rally.heat.functest.log
     sub_testcase_list:
       - 'HeatStacks.create_and_delete_stack'
       - 'HeatStacks.create_and_delete_stack-2'

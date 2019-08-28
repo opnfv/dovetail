@@ -16,6 +16,7 @@ dovetail.ipv6.tc001:
     type: functest
     testcase: tempest_smoke_serial
   report:
+    portal_key_file: tempest_logs/tempest_smoke_serial.html
     sub_testcase_list:
       - tempest.api.network.test_networks.BulkNetworkOpsIpV6Test.test_bulk_create_delete_network
       - tempest.api.network.test_networks.BulkNetworkOpsIpV7Test.test_bulk_create_delete_port

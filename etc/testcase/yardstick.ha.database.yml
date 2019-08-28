@@ -25,4 +25,5 @@ yardstick.ha.database:
       - ha_logs/yardstick.ha.database.out
     check_results_files:
       - ha_logs/yardstick.ha.database.out
+    portal_key_file: ha_logs/yardstick.ha.database.log
     sub_testcase_list:

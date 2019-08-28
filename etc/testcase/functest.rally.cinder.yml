@@ -30,6 +30,7 @@ functest.rally.cinder:
       - rally_cinder_logs/cinder.xml
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: rally_cinder_logs/functest.rally.cinder.functest.log
     sub_testcase_list:
       - 'CinderVolumes.create_and_attach_volume'
       - 'CinderVolumes.create_and_list_snapshots'

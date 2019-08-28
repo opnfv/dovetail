@@ -25,6 +25,7 @@ functest.tempest.neutron_tempest_plugin_api:
       - neutron_tempest_plugin_api_logs/functest.tempest.neutron_tempest_plugin_api.html
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: neutron_tempest_plugin_api_logs/functest.tempest.neutron_tempest_plugin_api.html
     sub_testcase_list:
       - neutron_tempest_plugin.api.test_qos.QosBandwidthLimitRuleTestJSON.test_rule_create
       - neutron_tempest_plugin.api.test_qos.QosBandwidthLimitRuleTestJSON.test_get_rules_by_policy

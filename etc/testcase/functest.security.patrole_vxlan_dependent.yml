@@ -29,6 +29,7 @@ functest.security.patrole_vxlan_dependent:
       - security_logs/functest.security.patrole_vxlan_dependent.html
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: security_logs/functest.security.patrole_vxlan_dependent.html
     sub_testcase_list:
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_provider_network_type[id-3c42f7b8-b80c-44ef-8fa4-69ec4b1836bc]
       - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_provider_segmentation_id[id-b9decb7b-68ef-4504-b99b-41edbf7d2af5]

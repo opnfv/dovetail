@@ -29,6 +29,7 @@ functest.tempest.network_security:
       - tempest_logs/functest.tempest.network_security.html
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: tempest_logs/functest.tempest.network_security.html
     sub_testcase_list:
       - tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_port_security_macspoofing_port[compute,id-7c0bb1a2-d053-49a4-98f9-ca1a1d849f63,network,slow]
       - tempest.scenario.test_security_groups_basic_ops.TestSecurityGroupsBasicOps.test_cross_tenant_traffic[compute,id-e79f879e-debb-440c-a7e4-efeda05b6848,network]

@@ -24,4 +24,5 @@ functest.vnf.vepc:
       - vnf_logs/functest.vnf.vepc.log
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: vnf_logs/functest.vnf.vepc.log
     sub_testcase_list:

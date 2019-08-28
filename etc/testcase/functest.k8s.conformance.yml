@@ -22,4 +22,5 @@ functest.k8s.conformance:
       - k8s_logs/functest.k8s.conformance.log
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: k8s_logs/functest.k8s.conformance.log
     sub_testcase_list:

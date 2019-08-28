@@ -30,6 +30,7 @@ functest.rally.neutron:
       - rally_neutron_logs/neutron.xml
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: rally_neutron_logs/functest.rally.neutron.functest.log
     sub_testcase_list:
       - 'NeutronNetworks.create_and_update_networks'
       - 'NeutronNetworks.create_and_update_ports'
