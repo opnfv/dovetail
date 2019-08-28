@@ -25,4 +25,5 @@ yardstick.ha.keystone:
       - ha_logs/yardstick.ha.keystone.out
     check_results_files:
       - ha_logs/yardstick.ha.keystone.out
+    portal_key_file: ha_logs/yardstick.ha.keystone.log
     sub_testcase_list:

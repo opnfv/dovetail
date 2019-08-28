@@ -29,6 +29,7 @@ functest.tempest.volume:
       - tempest_logs/functest.tempest.volume.html
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: tempest_logs/functest.tempest.volume.html
     sub_testcase_list:
       - tempest.api.volume.test_volumes_actions.VolumesActionsTest.test_attach_detach_volume_to_instance[compute,id-fff42874-7db5-4487-a8e1-ddda5fb5288d,smoke]
       - tempest.scenario.test_volume_boot_pattern.TestVolumeBootPattern.test_volume_boot_pattern[compute,id-557cd2c2-4eb8-4dce-98be-f86765ff311b,image,slow,volume]

@@ -24,4 +24,5 @@ functest.vnf.vims:
       - vnf_logs/functest.vnf.vims.log
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: vnf_logs/functest.vnf.vims.log
     sub_testcase_list:

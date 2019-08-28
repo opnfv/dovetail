@@ -193,6 +193,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.objective.return_value = 'objective'
         mock_checksum.return_value = 'da39a3ee5e6b4b0d3255bfef95601890afd80709'
         testcase_obj.is_mandatory = True
+        testcase_obj.portal_key_file.return_value = 'a/b.log'
         testcase_obj.vnf_type.return_value = 'tosca'
         testcase_obj.sub_testcase.return_value = ['subt_a']
         testcase_obj.sub_testcase_passed.return_value = 'PASS'
@@ -212,6 +213,7 @@ class ReportTesting(unittest.TestCase):
                     'result': 'PASS',
                     'objective': 'objective',
                     'mandatory': True,
+                    'portal_key_file': 'a/b.log',
                     'sub_testcase': [{
                         'name': 'subt_a',
                         'result': 'PASS'
@@ -222,6 +224,7 @@ class ReportTesting(unittest.TestCase):
                     'result': 'Undefined',
                     'objective': '',
                     'mandatory': False,
+                    'portal_key_file': '',
                     'sub_testcase': []
                 }
             ]
@@ -251,6 +254,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.objective.return_value = 'objective'
         testcase_obj.is_mandatory = True
         testcase_obj.vnf_type.return_value = None
+        testcase_obj.portal_key_file.return_value = 'a/b.log'
         testcase_obj.sub_testcase.return_value = ['subt_a']
         testcase_obj.sub_testcase_passed.return_value = 'PASS'
         mock_testcase.get.side_effect = [testcase_obj, None]
@@ -267,6 +271,7 @@ class ReportTesting(unittest.TestCase):
                     'result': 'PASS',
                     'objective': 'objective',
                     'mandatory': True,
+                    'portal_key_file': 'a/b.log',
                     'sub_testcase': [{
                         'name': 'subt_a',
                         'result': 'PASS'
@@ -277,6 +282,7 @@ class ReportTesting(unittest.TestCase):
                     'result': 'Undefined',
                     'objective': '',
                     'mandatory': False,
+                    'portal_key_file': '',
                     'sub_testcase': []
                 }
             ]
@@ -305,6 +311,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.passed.return_value = 'PASS'
         testcase_obj.objective.return_value = 'objective'
         testcase_obj.is_mandatory = True
+        testcase_obj.portal_key_file.return_value = 'a/b.log'
         testcase_obj.vnf_type.side_effect = Exception()
         testcase_obj.sub_testcase.return_value = ['subt_a']
         testcase_obj.sub_testcase_passed.return_value = 'PASS'
@@ -322,6 +329,7 @@ class ReportTesting(unittest.TestCase):
                     'result': 'PASS',
                     'objective': 'objective',
                     'mandatory': True,
+                    'portal_key_file': 'a/b.log',
                     'sub_testcase': [{
                         'name': 'subt_a',
                         'result': 'PASS'
@@ -332,6 +340,7 @@ class ReportTesting(unittest.TestCase):
                     'result': 'Undefined',
                     'objective': '',
                     'mandatory': False,
+                    'portal_key_file': '',
                     'sub_testcase': []
                 }
             ]

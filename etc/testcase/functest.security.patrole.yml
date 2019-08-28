@@ -28,6 +28,7 @@ functest.security.patrole:
       - security_logs/functest.security.patrole.html
     check_results_files:
       - 'functest_results.txt'
+    portal_key_file: security_logs/functest.security.patrole.html
     sub_testcase_list:
       - patrole_tempest_plugin.tests.api.image.test_image_namespace_objects_rbac.ImageNamespacesObjectsRbacTest.test_create_metadef_object_in_namespace
       - patrole_tempest_plugin.tests.api.image.test_image_namespace_objects_rbac.ImageNamespacesObjectsRbacTest.test_list_metadef_objects_in_namespace

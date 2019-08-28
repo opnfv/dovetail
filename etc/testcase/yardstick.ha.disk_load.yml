@@ -27,4 +27,5 @@ yardstick.ha.disk_load:
       - ha_logs/yardstick.ha.disk_load.out
     check_results_files:
       - ha_logs/yardstick.ha.disk_load.out
+    portal_key_file: ha_logs/yardstick.ha.disk_load.log
     sub_testcase_list:

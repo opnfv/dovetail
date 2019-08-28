@@ -39,4 +39,5 @@ yardstick.ha.neutron_l3_agent:
       - ha_logs/yardstick.ha.neutron_l3_agent.out
     check_results_files:
       - ha_logs/yardstick.ha.neutron_l3_agent.out
+    portal_key_file: ha_logs/yardstick.ha.neutron_l3_agent.log
     sub_testcase_list:

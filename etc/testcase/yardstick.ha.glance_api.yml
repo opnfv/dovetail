@@ -25,4 +25,5 @@ yardstick.ha.glance_api:
       - ha_logs/yardstick.ha.glance_api.out
     check_results_files:
       - ha_logs/yardstick.ha.glance_api.out
+    portal_key_file: ha_logs/yardstick.ha.glance_api.log
     sub_testcase_list:

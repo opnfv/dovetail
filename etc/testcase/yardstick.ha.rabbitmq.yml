@@ -23,4 +23,5 @@ yardstick.ha.rabbitmq:
       - ha_logs/yardstick.ha.rabbitmq.out
     check_results_files:
       - ha_logs/yardstick.ha.rabbitmq.out
+    portal_key_file: ha_logs/yardstick.ha.rabbitmq.log
     sub_testcase_list:
