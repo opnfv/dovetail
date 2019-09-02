@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c14cffab_8fab4289",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-09-02T01:32:01Z",
+      "side": 1,
+      "message": "should also change this to be /usr/local/lib/python3.6/dist-packages/dovetail",
+      "range": {
+        "startLine": 53,
+        "startChar": 11,
+        "endLine": 53,
+        "endChar": 57
+      },
+      "revId": "7b5dbddd676452f6db0cc559ef12531a99ea5920",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e6eace96_d076147a",
+        "filename": "dovetail/parser.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-09-02T01:32:01Z",
+      "side": 1,
+      "message": "Besides these, should update all files like this.",
+      "range": {
+        "startLine": 14,
+        "startChar": 7,
+        "endLine": 16,
+        "endChar": 14
+      },
+      "revId": "7b5dbddd676452f6db0cc559ef12531a99ea5920",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    }
+  ]
+}
