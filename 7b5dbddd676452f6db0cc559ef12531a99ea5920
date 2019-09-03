@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "02418534_022091c5",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-09-03T04:00:28Z",
+      "side": 1,
+      "message": "In order to use click for python3, it should add 2 additional envs.\nexport LC_ALL\u003dC.UTF-8\nexport LANG\u003dC.UTF-8\nRefer to https://click.palletsprojects.com/en/7.x/python3/#python-3-surrogate-handling",
+      "range": {
+        "startLine": 36,
+        "startChar": 1,
+        "endLine": 36,
+        "endChar": 3
+      },
+      "revId": "7b5dbddd676452f6db0cc559ef12531a99ea5920",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c14cffab_8fab4289",
         "filename": "docker/Dockerfile",
         "patchSetId": 4
