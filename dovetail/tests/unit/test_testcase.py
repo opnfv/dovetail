@@ -43,7 +43,7 @@ class TestcaseTesting(unittest.TestCase):
 
         tcase.Testcase.create_log()
 
-        self.assertEquals(getlogger_obj, tcase.Testcase.logger)
+        self.assertEqual(getlogger_obj, tcase.Testcase.logger)
 
     @patch('dovetail.testcase.Parser')
     def test_parse_cmd_no_lines(self, mock_parser):
@@ -55,7 +55,7 @@ class TestcaseTesting(unittest.TestCase):
 
         mock_parser.parse_cmd.assert_called_once_with(
             'cmd', testcase)
-        self.assertEquals(False, result)
+        self.assertEqual(False, result)
 
     @patch('dovetail.testcase.Parser')
     def test_parse_cmd(self, mock_parser):
@@ -70,8 +70,8 @@ class TestcaseTesting(unittest.TestCase):
         mock_parser.parse_cmd.assert_called_once_with(
             'cmd', testcase)
         logger_obj.debug.assert_called_once_with("cmds: ['cmd_lines']")
-        self.assertEquals(['cmd_lines'], testcase.cmds)
-        self.assertEquals(True, result)
+        self.assertEqual(['cmd_lines'], testcase.cmds)
+        self.assertEqual(True, result)
 
     @patch('dovetail.testcase.dt_cfg')
     def test_prepare_cmd_no_cmds(self, mock_config):
@@ -84,7 +84,7 @@ class TestcaseTesting(unittest.TestCase):
 
         logger_obj.error.assert_called_once_with(
             'Test case {} has no cmds.'.format(testcase.name()))
-        self.assertEquals(False, result)
+        self.assertEqual(False, result)
 
     @patch('dovetail.testcase.dt_cfg')
     @patch.object(tcase.Testcase, 'parse_cmd')
@@ -97,7 +97,7 @@ class TestcaseTesting(unittest.TestCase):
         result = testcase.prepare_cmd('type')
 
         mock_parse.assert_called_once_with(['cmd'])
-        self.assertEquals(True, result)
+        self.assertEqual(True, result)
 
     @patch('dovetail.testcase.dt_cfg')
     @patch.object(tcase.Testcase, 'parse_cmd')
@@ -110,14 +110,14 @@ class TestcaseTesting(unittest.TestCase):
         result = testcase.prepare_cmd('type')
 
         mock_parse.assert_called_once_with(['cmd'])
-        self.assertEquals(True, result)
+        self.assertEqual(True, result)
 
     def test_str(self):
         testcase = tcase.OnapVtpTestcase(self.testcase_yaml)
 
         result = testcase.__str__()
 
-        self.assertEquals(testcase.testcase, result)
+        self.assertEqual(testcase.testcase, result)
 
     def test_objective(self):
         testcase = tcase.OnapVvpTestcase(self.testcase_yaml)
@@ -125,7 +125,7 @@ class TestcaseTesting(unittest.TestCase):
 
         result = testcase.objective()
 
-        self.assertEquals('objective', result)
+        self.assertEqual('objective', result)
 
     @patch('dovetail.testcase.dt_utils')
     def test_sub_testcase(self, mock_utils):
@@ -136,7 +136,7 @@ class TestcaseTesting(unittest.TestCase):
 
         mock_utils.get_value_from_dict.assert_called_once_with(
             'report.sub_testcase_list', testcase.testcase)
-        self.assertEquals('value', result)
+        self.assertEqual('value', result)
 
     def test_sub_testcase_passed(self):
         testcase = tcase.Testcase(self.testcase_yaml)
@@ -145,49 +145,49 @@ class TestcaseTesting(unittest.TestCase):
 
         result = testcase.sub_testcase_passed('name', 'passed')
 
-        self.assertEquals('passed', result)
+        self.assertEqual('passed', result)
 
     def test_validate_type(self):
         testcase = tcase.Testcase(self.testcase_yaml)
 
         result = testcase.validate_type()
 
-        self.assertEquals('functest', result)
+        self.assertEqual('functest', result)
 
     def test_validate_testcase(self):
         testcase = tcase.Testcase(self.testcase_yaml)
 
         result = testcase.validate_testcase()
 
-        self.assertEquals('tempest_smoke_serial', result)
+        self.assertEqual('tempest_smoke_serial', result)
 
     def test_portal_key_file(self):
         testcase = tcase.Testcase(self.testcase_yaml)
 
         result = testcase.portal_key_file()
 
-        self.assertEquals('tempest_logs/tempest_smoke_serial.html', result)
+        self.assertEqual('tempest_logs/tempest_smoke_serial.html', result)
 
     def test_vnf_type(self):
         testcase = tcase.OnapVtpTestcase(self.testcase_yaml)
 
         result = testcase.vnf_type()
 
-        self.assertEquals('tosca', result)
+        self.assertEqual('tosca', result)
 
     def test_passed(self):
         testcase = tcase.Testcase(self.testcase_yaml)
 
         result = testcase.passed('passed')
 
-        self.assertEquals('passed', result)
+        self.assertEqual('passed', result)
 
     def test_set_get_results(self):
         testcase = tcase.Testcase(self.testcase_yaml)
 
         testcase.set_results('results')
 
-        self.assertEquals('results', testcase.get_results())
+        self.assertEqual('results', testcase.get_results())
 
     def test_pre_condition_exists(self):
         testcase = tcase.Testcase(self.testcase_yaml)
@@ -195,7 +195,7 @@ class TestcaseTesting(unittest.TestCase):
 
         result = testcase.pre_condition()
 
-        self.assertEquals('pre_condition', result)
+        self.assertEqual('pre_condition', result)
 
     @patch.object(tcase.Testcase, 'pre_condition_cls')
     def test_pre_condition_not_exists(self, mock_pre_condition):
@@ -209,7 +209,7 @@ class TestcaseTesting(unittest.TestCase):
         mock_pre_condition.assert_called_once_with('functest')
         logger_obj.debug.assert_called_once_with(
             'Test case: {} pre_condition is empty.'.format(testcase.name()))
-        self.assertEquals(False, result)
+        self.assertEqual(False, result)
 
     def test_pre_copy_path(self):
         testcase = tcase.Testcase(self.testcase_yaml)
@@ -217,14 +217,14 @@ class TestcaseTesting(unittest.TestCase):
 
         result = testcase.pre_copy_path('key')
 
-        self.assertEquals('value', result)
+        self.assertEqual('value', result)
 
     def test_pre_copy_path_error(self):
         testcase = tcase.Testcase(self.testcase_yaml)
 
         result = testcase.pre_copy_path('key')
 
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     def test_post_condition_exists(self):
         testcase = tcase.Testcase(self.testcase_yaml)
@@ -232,7 +232,7 @@ class TestcaseTesting(unittest.TestCase):
 
         result = testcase.post_condition()
 
-        self.assertEquals('post_condition', result)
+        self.assertEqual('post_condition', result)
 
     @patch.object(tcase.Testcase, 'post_condition_cls')
     def test_post_condition_not_exists(self, mock_post_condition):
@@ -246,7 +246,7 @@ class TestcaseTesting(unittest.TestCase):
         mock_post_condition.assert_called_once_with('functest')
         logger_obj.debug.assert_called_once_with(
             'Test case: {} post_condition is empty.'.format(testcase.name()))
-        self.assertEquals(False, result)
+        self.assertEqual(False, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.testcase.os.path')
@@ -319,28 +319,28 @@ class TestcaseTesting(unittest.TestCase):
         mock_config.dovetail_config = {'type': {'pre_condition': 'value'}}
 
         result = tcase.Testcase.pre_condition_cls('type')
-        self.assertEquals('value', result)
+        self.assertEqual('value', result)
 
     @patch('dovetail.testcase.dt_cfg')
     def test_pre_condition_cls_key_error(self, mock_config):
         mock_config.dovetail_config = {}
 
         result = tcase.Testcase.pre_condition_cls('type')
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.testcase.dt_cfg')
     def test_post_condition_cls(self, mock_config):
         mock_config.dovetail_config = {'type': {'post_condition': 'value'}}
 
         result = tcase.Testcase.post_condition_cls('type')
-        self.assertEquals('value', result)
+        self.assertEqual('value', result)
 
     @patch('dovetail.testcase.dt_cfg')
     def test_post_condition_cls_key_error(self, mock_config):
         mock_config.dovetail_config = {}
 
         result = tcase.Testcase.post_condition_cls('type')
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     def test_increase_retry(self):
         testcase = tcase.Testcase(self.testcase_yaml)
@@ -349,7 +349,7 @@ class TestcaseTesting(unittest.TestCase):
 
         for _ in range(0, 42):
             result = testcase.increase_retry()
-        self.assertEquals(42, result)
+        self.assertEqual(42, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.testcase.yaml')
@@ -407,32 +407,32 @@ class TestcaseTesting(unittest.TestCase):
             'Failed to create test case: file')
 
     def test_get_none(self):
-        self.assertEquals(None, tcase.Testcase.get('unknown'))
+        self.assertEqual(None, tcase.Testcase.get('unknown'))
 
     def test_check_testarea_none(self):
-        self.assertEquals((True, ['full']),
+        self.assertEqual((True, ['full']),
                           tcase.Testcase.check_testarea(None))
 
     @patch('dovetail.testcase.dt_cfg')
     def test_check_testarea_full(self, mock_config):
-        self.assertEquals((True, ['full']),
+        self.assertEqual((True, ['full']),
                           tcase.Testcase.check_testarea(['full']))
 
     @patch('dovetail.testcase.dt_cfg')
     def test_check_testarea(self, mock_config):
-        self.assertEquals((True, ['area']),
+        self.assertEqual((True, ['area']),
                           tcase.Testcase.check_testarea(['area']))
 
     def test_check_testcase_area(self):
-        self.assertEquals(False,
+        self.assertEqual(False,
                           tcase.Testcase.check_testcase_area(None, None))
 
     def test_check_testcase_area_full_or_in_testcase(self):
-        self.assertEquals(True,
+        self.assertEqual(True,
                           tcase.Testcase.check_testcase_area(['full'], 'full'))
 
     def test_check_testcase_area_not_in_testcase_or_full(self):
-        self.assertEquals(False,
+        self.assertEqual(False,
                           tcase.Testcase.check_testcase_area(['full'], 'half'))
 
     @patch('dovetail.testcase.dt_utils')
@@ -445,7 +445,7 @@ class TestcaseTesting(unittest.TestCase):
             call('testcases_list', 'suite'),
             call('mandatory', None),
             call('optional', None)])
-        self.assertEquals([], result)
+        self.assertEqual([], result)
 
     @patch('dovetail.testcase.dt_cfg')
     @patch('dovetail.testcase.dt_utils')
@@ -474,7 +474,7 @@ class TestcaseTesting(unittest.TestCase):
                  .format(testsuite['name'])),
             call('There is no optional test case in test suite {}'
                  .format(testsuite['name']))])
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.testcase.dt_cfg')
     @patch('dovetail.testcase.dt_utils')
@@ -508,10 +508,10 @@ class TestcaseTesting(unittest.TestCase):
         mock_check.assert_has_calls([
             call('mandatory', 'area'),
             call('optional', 'area')])
-        self.assertEquals(['mandatory', 'optional'], result)
-        self.assertEquals(
+        self.assertEqual(['mandatory', 'optional'], result)
+        self.assertEqual(
             True, tcase.Testcase.testcase_list['mandatory'].is_mandatory)
-        self.assertEquals(
+        self.assertEqual(
             False, tcase.Testcase.testcase_list['optional'].is_mandatory)
 
     @patch('dovetail.testcase.dt_cfg')
@@ -546,11 +546,11 @@ class TestcaseTesting(unittest.TestCase):
         mock_check.assert_has_calls([
             call('mandatory', 'area'),
             call('optional', 'area')])
-        self.assertEquals(['mandatory', 'optional'], result)
-        self.assertEquals(True,
+        self.assertEqual(['mandatory', 'optional'], result)
+        self.assertEqual(True,
                           tcase.Testcase.testcase_list['mandatory']
                           .is_mandatory)
-        self.assertEquals(False,
+        self.assertEqual(False,
                           tcase.Testcase.testcase_list['optional']
                           .is_mandatory)
 
@@ -562,7 +562,7 @@ class TestcaseTesting(unittest.TestCase):
         result = testcase.prepare_cmd('type')
 
         mock_prepare.assert_called_once_with('type')
-        self.assertEquals(False, result)
+        self.assertEqual(False, result)
 
     @patch('dovetail.testcase.os.path')
     @patch('dovetail.testcase.dt_cfg')
@@ -586,18 +586,18 @@ class TestcaseTesting(unittest.TestCase):
             'Updated list of commands for test run with '
             'disabled API response validation: {}'
             .format(testcase.cmds))
-        self.assertEquals(['patch_cmd'], testcase.cmds)
-        self.assertEquals(True, result)
+        self.assertEqual(['patch_cmd'], testcase.cmds)
+        self.assertEqual(True, result)
 
     def test_testfactory_error(self):
-        self.assertEquals(None,
+        self.assertEqual(None,
                           tcase.TestcaseFactory.create('unknown',
                                                        self.testcase_yaml))
 
     def test_testfactory_k8s(self):
         k8s_testcase = tcase.TestcaseFactory.create('functest-k8s',
                                                     self.testcase_yaml)
-        self.assertEquals('functest-k8s', k8s_testcase.type)
+        self.assertEqual('functest-k8s', k8s_testcase.type)
 
     @patch('dovetail.testcase.dt_logger')
     def test_testsuite_create_log(self, mock_logger):
@@ -608,7 +608,7 @@ class TestcaseTesting(unittest.TestCase):
 
         tcase.Testsuite.create_log()
 
-        self.assertEquals(getlogger_obj, tcase.Testsuite.logger)
+        self.assertEqual(getlogger_obj, tcase.Testsuite.logger)
 
     def test_testsuite_get_test(self):
         suite = tcase.Testsuite('suite')
@@ -616,14 +616,14 @@ class TestcaseTesting(unittest.TestCase):
 
         result = suite.get_test('testcase')
 
-        self.assertEquals('value', result)
+        self.assertEqual('value', result)
 
     def test_testsuite_get_test_not_exists(self):
         suite = tcase.Testsuite('suite')
 
         result = suite.get_test('testcase')
 
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.testcase.yaml')
@@ -648,12 +648,12 @@ class TestcaseTesting(unittest.TestCase):
                           tcase.Testsuite.testsuite_list)
 
     def test_testsuite_get_none(self):
-        self.assertEquals(None, tcase.Testsuite.get('unknown'))
+        self.assertEqual(None, tcase.Testsuite.get('unknown'))
 
     def test_testsuite_get(self):
         tcase.Testsuite.testsuite_list.update({'key': 'value'})
-        self.assertEquals('value', tcase.Testsuite.get('key'))
+        self.assertEqual('value', tcase.Testsuite.get('key'))
 
     def test_testsuite_get_all(self):
         tcase.Testsuite.testsuite_list.update({'key': 'value'})
-        self.assertEquals({'key': 'value'}, tcase.Testsuite.get_all())
+        self.assertEqual({'key': 'value'}, tcase.Testsuite.get_all())

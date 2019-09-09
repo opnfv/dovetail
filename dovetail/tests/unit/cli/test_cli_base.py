@@ -24,7 +24,7 @@ class CliBaseTesting(unittest.TestCase):
         runner = CliRunner()
         result = runner.invoke(cli_base.cli, [])
 
-        self.assertEquals(result.exit_code, 0)
+        self.assertEqual(result.exit_code, 0)
 
     def test_testcase_list(self, mock_testcase):
         testsuite = 'suite'
@@ -33,7 +33,7 @@ class CliBaseTesting(unittest.TestCase):
         result = runner.invoke(cli_base.testcase_list, [testsuite])
 
         mock_testcase.list_testsuites.assert_called_once_with(testsuite)
-        self.assertEquals(result.exit_code, 0)
+        self.assertEqual(result.exit_code, 0)
 
     def test_testcase_show(self, mock_testcase):
         testcase = 'case'
@@ -42,7 +42,7 @@ class CliBaseTesting(unittest.TestCase):
         result = runner.invoke(cli_base.testcase_show, [testcase])
 
         mock_testcase.show_testcase.assert_called_once_with(testcase)
-        self.assertEquals(result.exit_code, 0)
+        self.assertEqual(result.exit_code, 0)
 
     def test_testcase_run(self, mock_testcase):
         run_args = ('arga', 'argb')
@@ -52,4 +52,4 @@ class CliBaseTesting(unittest.TestCase):
 
         expected = ' '.join(run_args)
         mock_testcase.run.assert_called_once_with(expected)
-        self.assertEquals(result.exit_code, 0)
+        self.assertEqual(result.exit_code, 0)

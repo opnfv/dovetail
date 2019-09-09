@@ -223,7 +223,7 @@ class TestRunnerTesting(unittest.TestCase):
         mock_utils.get_value_from_dict.assert_has_calls([
             call('report.source_archive_files', self.testcase_dict),
             call('report.dest_archive_files', self.testcase_dict)])
-        self.assertEquals(True, result)
+        self.assertEqual(True, result)
 
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.dt_utils')
@@ -246,7 +246,7 @@ class TestRunnerTesting(unittest.TestCase):
             "Can't find corresponding 'result_dest_files' "
             "for 'result_source_files' with testcase {}"
             .format(self.testcase_name))
-        self.assertEquals(False, result)
+        self.assertEqual(False, result)
 
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.dt_utils')
@@ -275,7 +275,7 @@ class TestRunnerTesting(unittest.TestCase):
         mock_os.path.isfile.assert_has_calls([call('src_file_path')])
         docker_runner.logger.error.assert_called_once_with(
             "Can't find file {}.".format('src_file_path'))
-        self.assertEquals(False, result)
+        self.assertEqual(False, result)
 
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.dt_utils')
@@ -304,7 +304,7 @@ class TestRunnerTesting(unittest.TestCase):
         mock_os.path.isfile.assert_has_calls([call('src_file_path')])
         mock_os.renames.assert_called_once_with(
             'src_file_path', 'dest_file_path')
-        self.assertEquals(True, result)
+        self.assertEqual(True, result)
 
     @patch('dovetail.test_runner.jinja2')
     def test_render(self, mock_jinja):
@@ -317,7 +317,7 @@ class TestRunnerTesting(unittest.TestCase):
 
         mock_jinja.Template.assert_called_once_with('task_template')
         template_obj.render.assert_called_with()
-        self.assertEquals(render_obj, result)
+        self.assertEqual(render_obj, result)
 
     @patch('dovetail.test_runner.dt_cfg')
     @patch('dovetail.test_runner.os')
@@ -345,7 +345,7 @@ class TestRunnerTesting(unittest.TestCase):
             call('OS_INSECURE'), call('DOVETAIL_HOME'), call('DEBUG'),
             call('OS_CACERT'), call('HOST_URL'), call('CSAR_FILE'),
             call('VNF_ARCHIVE_NAME')])
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.dt_cfg')
@@ -371,7 +371,7 @@ class TestRunnerTesting(unittest.TestCase):
             call('conf_path', docker_runner.config_file_name)])
         mock_utils.read_plain_file.assert_called_once_with(
             'config_file', docker_runner.logger)
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.test_runner.yaml.safe_load')
     @patch('dovetail.test_runner.dt_utils')
@@ -406,7 +406,7 @@ class TestRunnerTesting(unittest.TestCase):
         mock_add_info.assert_called_once_with(self.testcase)
         mock_render.assert_called_once_with(True, config_item='item')
         mock_load.assert_called_once_with('full_task')
-        self.assertEquals(
+        self.assertEqual(
             {'config_dir': 'one',
              'pod_file': 'two',
              'full_task_yaml': 'full_value',
@@ -446,7 +446,7 @@ class TestRunnerTesting(unittest.TestCase):
         mock_add_info.assert_called_once_with(self.testcase)
         mock_render.assert_called_once_with(True, config_item='item')
         mock_load.assert_called_once_with('full_task')
-        self.assertEquals(
+        self.assertEqual(
             {'config_dir': 'one',
              'pod_file': 'two',
              'full_task_yaml': 'full_value',
@@ -492,7 +492,7 @@ class TestRunnerTesting(unittest.TestCase):
             "Need key '{}' in {}".format('testcase_name', {'key': 'value'}))
         mock_render.assert_called_once_with(True, config_item='item')
         mock_load.assert_called_once_with('full_task')
-        self.assertEquals(
+        self.assertEqual(
             {'config_dir': 'one',
              'pod_file': 'two',
              'full_task_yaml': 'full_value',
@@ -585,7 +585,7 @@ class TestRunnerTesting(unittest.TestCase):
 
         result = docker_runner.create(self.testcase)
 
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.test_runner.constants')
     @patch('dovetail.test_runner.dt_utils')
@@ -606,7 +606,7 @@ class TestRunnerTesting(unittest.TestCase):
             call('conf_path', docker_runner.config_file_name)])
         mock_utils.read_plain_file.assert_has_calls([
             call('config_file', docker_runner.logger)])
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.test_runner.yaml.safe_load')
     @patch('dovetail.test_runner.constants')
@@ -639,7 +639,7 @@ class TestRunnerTesting(unittest.TestCase):
         mock_add_info.assert_has_calls([call(self.testcase)])
         mock_render.assert_has_calls([call(True, config_item='item')])
         mock_load.assert_has_calls([call('full_task')])
-        self.assertEquals(
+        self.assertEqual(
             {'config_dir': 'one',
              'pod_file': 'two',
              'full_task_yaml': 'full_value'},

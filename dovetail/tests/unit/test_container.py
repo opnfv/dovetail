@@ -192,7 +192,7 @@ class ContainerTesting(unittest.TestCase):
 
         result = self.container.get_container(container_name)
 
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     def test_get_container_none(self):
         container_name = 'container'
@@ -201,11 +201,11 @@ class ContainerTesting(unittest.TestCase):
 
         result = self.container.get_container(container_name)
 
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     def test_pull_image_none(self):
         result = self.container.pull_image(None)
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch.object(Container, 'pull_image_only')
     @patch.object(Container, 'get_image_id')
@@ -217,7 +217,7 @@ class ContainerTesting(unittest.TestCase):
 
         mock_get.assert_called_once_with(docker_image)
         mock_pull.assert_called_once_with(docker_image)
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch.object(Container, 'pull_image_only')
     @patch.object(Container, 'get_image_id')
@@ -233,7 +233,7 @@ class ContainerTesting(unittest.TestCase):
             call(docker_image), call(docker_image)])
         self.logger.error.assert_called_once_with(
             'Failed to get the id of image {}.'.format(docker_image))
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch.object(Container, 'pull_image_only')
     @patch.object(Container, 'get_image_id')
@@ -247,7 +247,7 @@ class ContainerTesting(unittest.TestCase):
         mock_pull.assert_called_once_with(docker_image)
         mock_get.assert_has_calls([
             call(docker_image), call(docker_image)])
-        self.assertEquals(docker_image, result)
+        self.assertEqual(docker_image, result)
 
     @patch.object(Container, 'pull_image_only')
     @patch.object(Container, 'get_image_id')
@@ -263,7 +263,7 @@ class ContainerTesting(unittest.TestCase):
             call(docker_image), call(docker_image)])
         self.logger.debug.assert_called_once_with(
             'Image {} has no changes, no need to remove.'.format(docker_image))
-        self.assertEquals(docker_image, result)
+        self.assertEqual(docker_image, result)
 
     @patch.object(Container, 'remove_image')
     @patch.object(Container, 'pull_image_only')
@@ -280,7 +280,7 @@ class ContainerTesting(unittest.TestCase):
         mock_get.assert_has_calls([
             call(docker_image), call(docker_image)])
         mock_remove.assert_called_once_with(old_obj)
-        self.assertEquals(docker_image, result)
+        self.assertEqual(docker_image, result)
 
     def test_pull_image_only(self):
         docker_image = 'image'
@@ -289,7 +289,7 @@ class ContainerTesting(unittest.TestCase):
 
         self.logger.debug.assert_called_once_with(
             'Success to pull docker image {}!'.format(docker_image))
-        self.assertEquals(True, result)
+        self.assertEqual(True, result)
 
     def test_pull_image_only_error(self):
         docker_image = 'image'
@@ -299,7 +299,7 @@ class ContainerTesting(unittest.TestCase):
 
         self.logger.error.assert_called_once_with(
             'Failed to pull docker image {}!'.format(docker_image))
-        self.assertEquals(False, result)
+        self.assertEqual(False, result)
 
     def test_remove_image(self):
         image_id = 'image_id'
@@ -311,7 +311,7 @@ class ContainerTesting(unittest.TestCase):
         self.logger.debug.assert_has_calls([
             call('Remove image {}.'.format(image_id)),
             call('Remove image {} successfully.'.format(image_id))])
-        self.assertEquals(True, result)
+        self.assertEqual(True, result)
 
     def test_remove_image_ancestors(self):
         image_id = 'image_id'
@@ -321,7 +321,7 @@ class ContainerTesting(unittest.TestCase):
 
         self.logger.debug.assert_called_once_with(
             'Image {} has containers, skip.'.format(image_id))
-        self.assertEquals(True, result)
+        self.assertEqual(True, result)
 
     def test_remove_image_error(self):
         image_id = 'image_id'
@@ -335,7 +335,7 @@ class ContainerTesting(unittest.TestCase):
             'Remove image {}.'.format(image_id))
         self.logger.error.assert_called_once_with(
             'Failed to remove image {}.'.format(image_id))
-        self.assertEquals(False, result)
+        self.assertEqual(False, result)
 
     def test_get_image_id(self):
         image_name = 'image_id'
@@ -345,7 +345,7 @@ class ContainerTesting(unittest.TestCase):
 
         result = self.container.get_image_id(image_name)
 
-        self.assertEquals(image_name, result)
+        self.assertEqual(image_name, result)
 
     def test_get_image_id_error(self):
         image_name = 'image_id'
@@ -354,7 +354,7 @@ class ContainerTesting(unittest.TestCase):
 
         result = self.container.get_image_id(image_name)
 
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.container.dt_utils')
     def test_get_config(self, mock_utils):
@@ -364,7 +364,7 @@ class ContainerTesting(unittest.TestCase):
         result = self.container._get_config('a', 'b', 'c')
 
         mock_utils.get_value_from_dict.assert_called_once_with('a', 'c')
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('dovetail.container.dt_utils')
     def test_get_config_none(self, mock_utils):
@@ -376,7 +376,7 @@ class ContainerTesting(unittest.TestCase):
             call('a', 'c'), call('a', 'b')])
         self.logger.error.assert_called_once_with(
             "Couldn't find key {}.".format('a'))
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.container.dt_cfg')
     @patch.object(Container, '_get_config')
@@ -390,7 +390,7 @@ class ContainerTesting(unittest.TestCase):
         mock_get_conf.assert_has_calls([
             call('image_name', 'value', {'type': 'bottlenecks'}),
             call('docker_tag', 'value', {'type': 'bottlenecks'})])
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('dovetail.container.dt_logger')
     def test_create_log(self, mock_logger):
@@ -400,7 +400,7 @@ class ContainerTesting(unittest.TestCase):
 
         self.container.create_log()
 
-        self.assertEquals(self.logger, self.container.logger)
+        self.assertEqual(self.logger, self.container.logger)
 
     @patch('dovetail.container.dt_utils')
     @patch('dovetail.container.dt_cfg')
@@ -425,7 +425,7 @@ class ContainerTesting(unittest.TestCase):
             call('envs', project_config),
             call('volumes', project_config)])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('dovetail.container.dt_utils')
     @patch('dovetail.container.dt_cfg')
@@ -440,7 +440,7 @@ class ContainerTesting(unittest.TestCase):
         mock_utils.get_value_from_dict.assert_has_calls([
             call('opts', 'value'),
             call('shell', 'value')])
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.container.dt_utils')
     @patch('dovetail.container.dt_cfg')
@@ -462,4 +462,4 @@ class ContainerTesting(unittest.TestCase):
             call('envs', project_config),
             call('volumes', project_config)])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)

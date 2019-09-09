@@ -49,7 +49,7 @@ class DovetailLoggerTesting(unittest.TestCase):
         logger_name = 'name'
         dovetail_logger = Logger(logger_name)
         mock_logging.getLogger.assert_called_once_with(logger_name)
-        self.assertEquals(dovetail_logger.logger.propagate, 0)
+        self.assertEqual(dovetail_logger.logger.propagate, 0)
         logger.setLevel.assert_called_once_with(level_const_debug)
         mock_os.path.exists.assert_called_once_with(file_path)
         # mock_os.makedirs.assert_called_once_with(file_path)
@@ -60,7 +60,7 @@ class DovetailLoggerTesting(unittest.TestCase):
         file_handler_obj.setLevel.assert_called_once_with(level_const_info)
         logger.addHandler.assert_has_calls([
             call(stream_handler_obj), call(file_handler_obj)])
-        self.assertEquals(dovetail_logger.getLogger(), logger)
+        self.assertEqual(dovetail_logger.getLogger(), logger)
 
     @patch('sys.stdout')
     @patch('dovetail.utils.dovetail_logger.os')
@@ -84,7 +84,7 @@ class DovetailLoggerTesting(unittest.TestCase):
         logger_name = 'name'
         dovetail_logger = Logger(logger_name)
         mock_logging.getLogger.assert_called_once_with(logger_name)
-        self.assertEquals(dovetail_logger.logger.propagate, 0)
+        self.assertEqual(dovetail_logger.logger.propagate, 0)
         logger.setLevel.assert_called_once_with(level_const_debug)
         mock_os.path.exists.assert_called_once_with(file_path)
         # mock_os.makedirs.assert_called_once_with(file_path)
@@ -95,4 +95,4 @@ class DovetailLoggerTesting(unittest.TestCase):
         file_handler_obj.setLevel.assert_called_once_with(level_const_debug)
         logger.addHandler.assert_has_calls([
             call(stream_handler_obj), call(file_handler_obj)])
-        self.assertEquals(dovetail_logger.getLogger(), logger)
+        self.assertEqual(dovetail_logger.getLogger(), logger)
