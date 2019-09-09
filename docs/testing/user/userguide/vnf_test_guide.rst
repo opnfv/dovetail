@@ -12,8 +12,8 @@ Overview
 As the LFN verification framework, Dovetail covers ONAP VNF tests by integrating
 VNF SDK and VVP. This guide introduces only how to use Dovetail to run the tests.
 For more details about VNF SDK and VVP, please refer to `ONAP VNF SDK Compliance Verification Program
-<https://docs.onap.org/en/latest/submodules/vnfsdk/model.git/docs/files/VNFSDK-LFN-CVC.html>`_
-and `ONAP VVP <https://docs.onap.org/en/latest/submodules/vvp/documentation.git/docs/index.html>`_.
+<https://docs.onap.org/en/dublin/submodules/vnfsdk/model.git/docs/files/VNFSDK-LFN-CVC.html>`_
+and `ONAP VVP <https://docs.onap.org/en/dublin/submodules/vvp/documentation.git/docs/index.html>`_.
 
 
 Definitions and abbreviations

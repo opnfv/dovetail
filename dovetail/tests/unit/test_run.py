@@ -46,7 +46,7 @@ class RunTesting(unittest.TestCase):
 
         mock_testsuite.load.assert_called_once_with()
         mock_testsuite.get.assert_called_once_with('testsuite')
-        self.assertEquals('suite_a', result)
+        self.assertEqual('suite_a', result)
 
     @patch('dovetail.run.dt_report.Report')
     def test_run_test_no_list(self, mock_report):
@@ -182,14 +182,14 @@ class RunTesting(unittest.TestCase):
 
         result = dt_run.filter_config(input_dict, Mock())
 
-        self.assertEquals(expected_dict, result)
+        self.assertEqual(expected_dict, result)
 
     @patch('dovetail.run.dt_cfg')
     def test_filter_config_none(self, mock_config):
         mock_config.dovetail_config = {'cli': {}}
         result = dt_run.filter_config({}, Mock())
 
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.run.dt_cfg')
     def test_filter_config_keyerror(self, mock_config):
@@ -291,8 +291,8 @@ class RunTesting(unittest.TestCase):
             'config_dir': 'pre_config_path',
             'patch_dir': 'patch_set_path',
             'userconfig_dir': 'userconfig_dir'}
-        self.assertEquals(expected_dict, mock_config.dovetail_config)
-        self.assertEquals(dovetail_home, result)
+        self.assertEqual(expected_dict, mock_config.dovetail_config)
+        self.assertEqual(dovetail_home, result)
 
     @patch('dovetail.run.os')
     def test_get_result_path_exception(self, mock_os):
@@ -300,7 +300,7 @@ class RunTesting(unittest.TestCase):
 
         result = dt_run.get_result_path()
 
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.run.constants')
     @patch('dovetail.run.dt_cfg')
@@ -346,7 +346,7 @@ class RunTesting(unittest.TestCase):
         dt_run.update_deploy_scenario(logger, deploy_scenario='a')
 
         logger.info.assert_called_once_with('DEPLOY_SCENARIO : %s', 'a')
-        self.assertEquals({'DEPLOY_SCENARIO': 'a'}, mock_os.environ)
+        self.assertEqual({'DEPLOY_SCENARIO': 'a'}, mock_os.environ)
 
     @patch('dovetail.run.dt_cfg')
     @patch.object(dt_run, 'filter_config')
@@ -372,7 +372,7 @@ class RunTesting(unittest.TestCase):
 
         logger.warning.assert_called_once_with(
             'Strict API response validation DISABLED.')
-        self.assertEquals(expected_dict, mock_config.dovetail_config)
+        self.assertEqual(expected_dict, mock_config.dovetail_config)
 
     @patch('dovetail.run.dt_cfg')
     @patch.object(dt_run, 'filter_config')
@@ -394,7 +394,7 @@ class RunTesting(unittest.TestCase):
             'no_api_validation': False
         }
 
-        self.assertEquals(expected_dict, mock_config.dovetail_config)
+        self.assertEqual(expected_dict, mock_config.dovetail_config)
 
     def test_check_testcase_list_not_in_list(self):
         logger = Mock()
@@ -403,7 +403,7 @@ class RunTesting(unittest.TestCase):
 
         logger.error.assert_called_once_with(
             'Test case testcase is not defined.')
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     def test_check_testcase_list_none(self):
         logger = Mock()
@@ -411,7 +411,7 @@ class RunTesting(unittest.TestCase):
 
         logger.error.assert_called_once_with(
             'There is no test case to be executed.')
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.run.dt_testcase.Testcase')
     def test_check_testcase_list(self, mock_testcase):
@@ -420,7 +420,7 @@ class RunTesting(unittest.TestCase):
 
         result = dt_run.check_testcase_list(testcase_list)
 
-        self.assertEquals(testcase_list, result)
+        self.assertEqual(testcase_list, result)
 
     @patch('dovetail.run.dt_testcase.Testcase')
     @patch.object(dt_run, 'check_testcase_list')
@@ -432,7 +432,7 @@ class RunTesting(unittest.TestCase):
 
         mock_check.assert_called_once_with(testcase_list, None)
         mock_testcase.load.assert_called_once_with()
-        self.assertEquals(testcase_list, result)
+        self.assertEqual(testcase_list, result)
 
     @patch('dovetail.run.dt_cfg')
     @patch('dovetail.run.dt_testcase.Testcase')
@@ -456,7 +456,7 @@ class RunTesting(unittest.TestCase):
         mock_testcase.get_testcases_for_testsuite.assert_called_once_with(
             'testsuite_yaml', 'area')
         mock_check.assert_called_once_with(testcase_list, None)
-        self.assertEquals(testcase_list, result)
+        self.assertEqual(testcase_list, result)
 
     @patch('dovetail.run.dt_cfg')
     @patch('dovetail.run.dt_testcase.Testcase')
@@ -472,7 +472,7 @@ class RunTesting(unittest.TestCase):
         mock_testcase.check_testarea.assert_called_once_with('area')
         logger.error.assert_called_once_with(
             'Test suite suite is not defined.')
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.run.dt_cfg')
     @patch('dovetail.run.dt_testcase.Testcase')
@@ -488,7 +488,7 @@ class RunTesting(unittest.TestCase):
         mock_testcase.check_testarea.assert_called_once_with('area')
         logger.error.assert_called_once_with(
             'Test area area is not defined.')
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.run.os')
@@ -540,13 +540,13 @@ class RunTesting(unittest.TestCase):
         logger_temp_obj.getLogger.assert_called_once_with()
         mock_logger.Logger.assert_called_once_with('run')
         mock_uuid.uuid1.assert_called_once_with()
-        self.assertEquals({'build_tag': 'daily-master-42'},
-                          mock_config.dovetail_config)
+        self.assertEqual({'build_tag': 'daily-master-42'},
+                         mock_config.dovetail_config)
         mock_get_result.assert_called_once_with()
         mock_clean.assert_called_once_with()
-        self.assertEquals({'DOVETAIL_HOME': 'dovetail_home', 'DEBUG': 'true',
-                           'OPNFV_CI': 'true', 'validation': 'enabled'},
-                          mock_os.environ)
+        self.assertEqual({'DOVETAIL_HOME': 'dovetail_home', 'DEBUG': 'true',
+                          'OPNFV_CI': 'true', 'validation': 'enabled'},
+                         mock_os.environ)
         mock_create_logs.assert_called_once_with()
         logger_obj.info.assert_has_calls([
             call('================================================'),
@@ -561,7 +561,7 @@ class RunTesting(unittest.TestCase):
         mock_get_list.assert_called_once_with(logger_obj, **kwargs_dict)
         mock_run.assert_called_once_with(
             testcase_list, kwargs_dict['report'], logger_obj)
-        self.assertEquals(expected.code, 0)
+        self.assertEqual(expected.code, 0)
 
     @patch('dovetail.run.uuid')
     @patch('dovetail.run.dt_cfg')
@@ -577,10 +577,10 @@ class RunTesting(unittest.TestCase):
         expected = cm.exception
 
         mock_uuid.uuid1.assert_called_once_with()
-        self.assertEquals({'build_tag': 'daily-master-42'},
-                          mock_config.dovetail_config)
+        self.assertEqual({'build_tag': 'daily-master-42'},
+                         mock_config.dovetail_config)
         mock_get_result.assert_called_once_with()
-        self.assertEquals(expected.code, 0)
+        self.assertEqual(expected.code, 0)
 
     @patch('__builtin__.open')
     @patch('dovetail.run.json')
@@ -629,18 +629,18 @@ class RunTesting(unittest.TestCase):
             dt_run.main([
                 '--testsuite=testsuite', '--debug', '--report', '2.0.0'])
         expected = cm.exception
-        self.assertEquals(expected.code, 2)
+        self.assertEqual(expected.code, 2)
 
         logger_temp_obj.getLogger.assert_called_once_with()
         mock_logger.Logger.assert_called_once_with('run')
         mock_uuid.uuid1.assert_called_once_with()
-        self.assertEquals({'build_tag': 'daily-master-42'},
-                          mock_config.dovetail_config)
+        self.assertEqual({'build_tag': 'daily-master-42'},
+                         mock_config.dovetail_config)
         mock_get_result.assert_called_once_with()
         mock_clean.assert_called_once_with()
-        self.assertEquals({'DOVETAIL_HOME': 'dovetail_home', 'DEBUG': 'true',
-                           'OPNFV_CI': 'false', 'validation': 'enabled'},
-                          mock_os.environ)
+        self.assertEqual({'DOVETAIL_HOME': 'dovetail_home', 'DEBUG': 'true',
+                          'OPNFV_CI': 'false', 'validation': 'enabled'},
+                         mock_os.environ)
         mock_create_logs.assert_called_once_with()
         logger_obj.info.assert_has_calls([
             call('================================================'),

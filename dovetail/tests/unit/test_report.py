@@ -66,7 +66,7 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.Report.create_log()
 
-        self.assertEquals(getlogger_obj, dt_report.Report.logger)
+        self.assertEqual(getlogger_obj, dt_report.Report.logger)
 
     @patch('dovetail.report.os.path')
     @patch('dovetail.report.dt_cfg')
@@ -98,7 +98,7 @@ class ReportTesting(unittest.TestCase):
             'Results have been stored with files: [\'results_file\'].')
         mock_get.assert_called_once_with(testcase_obj, ['results_file'])
         mock_check.assert_called_once_with(testcase_obj, 'result')
-        self.assertEquals('result', result)
+        self.assertEqual('result', result)
 
     @patch('dovetail.report.os.path')
     @patch('dovetail.report.dt_cfg')
@@ -128,7 +128,7 @@ class ReportTesting(unittest.TestCase):
         logger_obj.error.assert_called_once_with(
             'Failed to store results with file results_file.')
         mock_check.assert_called_once_with(testcase_obj)
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.report.os.path')
     @patch('dovetail.report.dt_cfg')
@@ -155,7 +155,7 @@ class ReportTesting(unittest.TestCase):
             "Failed to get 'check_results_files' from config "
             "file of test case name")
         mock_check.assert_called_once_with(testcase_obj)
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.report.CheckerFactory')
     def test_check_result(self, mock_factory):
@@ -233,7 +233,7 @@ class ReportTesting(unittest.TestCase):
             ]
         }
 
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('dovetail.report.os.getenv')
     @patch('dovetail.report.Testcase')
@@ -294,7 +294,7 @@ class ReportTesting(unittest.TestCase):
             ]
         }
 
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('dovetail.report.os.getenv')
     @patch('dovetail.report.Testcase')
@@ -355,7 +355,7 @@ class ReportTesting(unittest.TestCase):
             ]
         }
 
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('dovetail.report.datetime.datetime')
     @patch('dovetail.report.dt_cfg')
@@ -387,7 +387,7 @@ class ReportTesting(unittest.TestCase):
             'testcases_list': []
         }
 
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('dovetail.report.dt_cfg')
     @patch.object(dt_report.Report, 'generate_json')
@@ -432,7 +432,7 @@ class ReportTesting(unittest.TestCase):
         mock_generate.assert_called_once_with(testcase_list, duration)
         mock_save.assert_called_once_with(report_data)
         report.logger.info.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('dovetail.report.dt_cfg')
     @patch.object(dt_report.Report, 'generate_json')
@@ -458,7 +458,7 @@ class ReportTesting(unittest.TestCase):
         mock_generate.assert_called_once_with([], duration)
         mock_save.assert_called_once_with(report_data)
         report.logger.info.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json')
@@ -558,9 +558,9 @@ class ReportTesting(unittest.TestCase):
             testcase_obj, 'check_results_files')
         logger_obj.debug.assert_called_once_with(
             'Test case: validate -> result acquired')
-        self.assertEquals({'validate': 'result'},
-                          dt_report.Report.results['functest'])
-        self.assertEquals('result', result)
+        self.assertEqual({'validate': 'result'},
+                         dt_report.Report.results['functest'])
+        self.assertEqual('result', result)
 
     @patch('dovetail.report.CrawlerFactory')
     def test_get_result_no_result(self, mock_crawler):
@@ -585,7 +585,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.increase_retry.assert_called_once_with()
         logger_obj.debug.assert_called_once_with(
             'Test case: validate -> result acquired retry: retry')
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.report.CrawlerFactory')
     def test_get_result_no_crawler(self, mock_crawler):
@@ -605,7 +605,7 @@ class ReportTesting(unittest.TestCase):
         mock_crawler.create.assert_called_once_with('functest')
         logger_obj.error.assert_called_once_with(
             'Crawler is None: name')
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.report.dt_logger')
     def test_functest_crawler_create_log(self, mock_logger):
@@ -616,7 +616,7 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.FunctestCrawler.create_log()
 
-        self.assertEquals(getlogger_obj, dt_report.FunctestCrawler.logger)
+        self.assertEqual(getlogger_obj, dt_report.FunctestCrawler.logger)
 
     @patch('dovetail.report.dt_cfg')
     @patch('dovetail.report.os.path')
@@ -638,7 +638,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.name.assert_called_once_with()
         logger_obj.error.assert_called_once_with(
             'Result file not found: {}'.format(file_path))
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json')
@@ -693,7 +693,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.validate_testcase.assert_called_once_with()
         testcase_obj.sub_testcase.assert_called_once_with()
         testcase_obj.name.assert_called_once_with()
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json')
@@ -748,7 +748,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.validate_testcase.assert_called_once_with()
         testcase_obj.sub_testcase.assert_called_once_with()
         testcase_obj.name.assert_called_once_with()
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json.loads')
@@ -783,7 +783,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.name.assert_called_once_with()
         logger_obj.exception.assert_called_once_with(
             "Result data don't have key 'case_name'.")
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.report.dt_logger')
     def test_functestk8s_crawler_create_log(self, mock_logger):
@@ -794,7 +794,7 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.FunctestK8sCrawler.create_log()
 
-        self.assertEquals(getlogger_obj, dt_report.FunctestK8sCrawler.logger)
+        self.assertEqual(getlogger_obj, dt_report.FunctestK8sCrawler.logger)
 
     @patch('dovetail.report.FunctestK8sCrawler.crawl_from_file')
     @patch('dovetail.report.dt_cfg')
@@ -813,7 +813,7 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.FunctestK8sCrawler.crawl_from_file.assert_called_once_with(
             'testcase', 'file_path')
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.report.dt_logger')
     def test_yardstick_crawler_create_log(self, mock_logger):
@@ -824,7 +824,7 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.YardstickCrawler.create_log()
 
-        self.assertEquals(getlogger_obj, dt_report.YardstickCrawler.logger)
+        self.assertEqual(getlogger_obj, dt_report.YardstickCrawler.logger)
 
     @patch('dovetail.report.os.path')
     def test_yardstick_crawler_crawl_not_exists(self, mock_path):
@@ -839,7 +839,7 @@ class ReportTesting(unittest.TestCase):
         mock_path.exists.assert_called_once_with(file_path)
         logger_obj.error.assert_called_once_with(
             'Result file not found: {}'.format(file_path))
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json.loads')
@@ -881,7 +881,7 @@ class ReportTesting(unittest.TestCase):
             'result.criteria', data_dict)
         testcase_obj.validate_testcase.assert_called_once_with()
         testcase_obj.set_results.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json.loads')
@@ -914,7 +914,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.set_results.assert_called_once_with(expected)
         logger_obj.exception.assert_called_once_with(
             "Pass flag not found 'result'")
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('dovetail.report.dt_logger')
     def test_bottlenecks_crawler_create_log(self, mock_logger):
@@ -925,7 +925,7 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.BottlenecksCrawler.create_log()
 
-        self.assertEquals(getlogger_obj, dt_report.BottlenecksCrawler.logger)
+        self.assertEqual(getlogger_obj, dt_report.BottlenecksCrawler.logger)
 
     @patch('dovetail.report.os.path')
     def test_bottlenecks_crawler_crawl_not_exists(self, mock_path):
@@ -940,7 +940,7 @@ class ReportTesting(unittest.TestCase):
         mock_path.exists.assert_called_once_with(file_path)
         logger_obj.error.assert_called_once_with(
             'Result file not found: {}'.format(file_path))
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json.loads')
@@ -968,7 +968,7 @@ class ReportTesting(unittest.TestCase):
         mock_open.assert_called_once_with(file_path, 'r')
         mock_loads.assert_called_once_with(file_obj)
         testcase_obj.set_results.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json.loads')
@@ -996,7 +996,7 @@ class ReportTesting(unittest.TestCase):
         mock_open.assert_called_once_with(file_path, 'r')
         mock_loads.assert_called_once_with(file_obj)
         testcase_obj.set_results.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json.loads')
@@ -1023,7 +1023,7 @@ class ReportTesting(unittest.TestCase):
         testcase_obj.set_results.assert_called_once_with(expected)
         logger_obj.exception.assert_called_once_with(
             "Pass flag not found 'data_body'")
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('dovetail.report.os.path')
     def test_shell_crawler_crawl_not_exists(self, mock_path):
@@ -1034,7 +1034,7 @@ class ReportTesting(unittest.TestCase):
         result = crawler.crawl(None, [file_path])
 
         mock_path.exists.assert_called_once_with(file_path)
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.os.path')
@@ -1048,7 +1048,7 @@ class ReportTesting(unittest.TestCase):
 
         mock_path.exists.assert_called_once_with(file_path)
         mock_open.assert_called_once_with(file_path, 'r')
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json.load')
@@ -1067,7 +1067,7 @@ class ReportTesting(unittest.TestCase):
         mock_path.exists.assert_called_once_with(file_path)
         mock_open.assert_called_once_with(file_path, 'r')
         mock_load.assert_called_once_with(file_obj)
-        self.assertEquals('result', result)
+        self.assertEqual('result', result)
 
     @patch('dovetail.report.dt_logger')
     def test_onapvtp_crawler_create_log(self, mock_logger):
@@ -1078,7 +1078,7 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.OnapVtpCrawler.create_log()
 
-        self.assertEquals(getlogger_obj, dt_report.OnapVtpCrawler.logger)
+        self.assertEqual(getlogger_obj, dt_report.OnapVtpCrawler.logger)
 
     @patch('dovetail.report.dt_logger')
     def test_onapvvp_crawler_create_log(self, mock_logger):
@@ -1089,7 +1089,7 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.OnapVvpCrawler.create_log()
 
-        self.assertEquals(getlogger_obj, dt_report.OnapVvpCrawler.logger)
+        self.assertEqual(getlogger_obj, dt_report.OnapVvpCrawler.logger)
 
     @patch('dovetail.report.os.path')
     def test_onapvtp_crawler_crawl_not_exists(self, mock_path):
@@ -1104,7 +1104,7 @@ class ReportTesting(unittest.TestCase):
         mock_path.exists.assert_called_once_with(file_path)
         logger_obj.error.assert_called_once_with(
             'Result file not found: {}'.format(file_path))
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('dovetail.report.os.path')
     def test_onapvvp_crawler_crawl_not_exists(self, mock_path):
@@ -1119,7 +1119,7 @@ class ReportTesting(unittest.TestCase):
         mock_path.exists.assert_called_once_with(file_path)
         logger_obj.error.assert_called_once_with(
             'Result file not found: {}'.format(file_path))
-        self.assertEquals(None, result)
+        self.assertEqual(None, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.os.path')
@@ -1141,7 +1141,7 @@ class ReportTesting(unittest.TestCase):
         mock_open.assert_called_once_with(file_path, 'r')
         file_obj.read.assert_called_once_with()
         testcase_obj.set_results.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.os.path')
@@ -1163,7 +1163,7 @@ class ReportTesting(unittest.TestCase):
         mock_open.assert_called_once_with(file_path, 'r')
         file_obj.read.assert_called_once_with()
         testcase_obj.set_results.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.os.path')
@@ -1187,7 +1187,7 @@ class ReportTesting(unittest.TestCase):
         dt_report.OnapVvpCrawler.logger.exception.assert_called_once_with(
             'Result file has invalid format')
         testcase_obj.set_results.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.os.path')
@@ -1211,7 +1211,7 @@ class ReportTesting(unittest.TestCase):
         dt_report.OnapVvpCrawler.logger.exception.assert_called_once_with(
             "Outcome field not found 'outcome'")
         testcase_obj.set_results.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json.loads')
@@ -1241,7 +1241,7 @@ class ReportTesting(unittest.TestCase):
         mock_open.assert_called_once_with(file_path, 'r')
         mock_loads.assert_called_once_with(file_obj)
         testcase_obj.set_results.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json.loads')
@@ -1271,7 +1271,7 @@ class ReportTesting(unittest.TestCase):
         mock_open.assert_called_once_with(file_path, 'r')
         mock_loads.assert_called_once_with(file_obj)
         testcase_obj.set_results.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json.loads')
@@ -1303,7 +1303,7 @@ class ReportTesting(unittest.TestCase):
         dt_report.OnapVtpCrawler.logger.error.assert_called_once_with(
             'There is no property criteria.')
         testcase_obj.set_results.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json.loads')
@@ -1335,7 +1335,7 @@ class ReportTesting(unittest.TestCase):
         dt_report.OnapVtpCrawler.logger.exception.assert_called_once_with(
             "Pass flag not found 'results'")
         testcase_obj.set_results.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     @patch('__builtin__.open')
     @patch('dovetail.report.json.loads')
@@ -1358,17 +1358,17 @@ class ReportTesting(unittest.TestCase):
         mock_open.assert_called_once_with(file_path, 'r')
         mock_loads.assert_called_once_with(file_obj)
         testcase_obj.set_results.assert_called_once_with(expected)
-        self.assertEquals(expected, result)
+        self.assertEqual(expected, result)
 
     def test_crawler_factory(self):
         result = dt_report.CrawlerFactory.create('shell')
-        self.assertEquals(dt_report.ShellCrawler, result.__class__)
+        self.assertEqual(dt_report.ShellCrawler, result.__class__)
 
     def test_crawler_factory_none(self):
-        self.assertEquals(None, dt_report.CrawlerFactory.create('other'))
+        self.assertEqual(None, dt_report.CrawlerFactory.create('other'))
 
     def test_result_checker(self):
-        self.assertEquals('PASS', dt_report.ResultChecker.check())
+        self.assertEqual('PASS', dt_report.ResultChecker.check())
 
     @patch('dovetail.report.dt_logger')
     def test_functest_checker_create_log(self, mock_logger):
@@ -1379,40 +1379,40 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.FunctestChecker.create_log()
 
-        self.assertEquals(getlogger_obj, dt_report.FunctestChecker.logger)
+        self.assertEqual(getlogger_obj, dt_report.FunctestChecker.logger)
 
     def test_functest_get_sub_testcase_no_result(self):
-        self.assertEquals(
+        self.assertEqual(
             False, dt_report.FunctestChecker.get_sub_testcase(None, None))
 
     def test_functest_get_sub_testcase_simple_match(self):
-        self.assertEquals(
+        self.assertEqual(
             True,
             dt_report.FunctestChecker.get_sub_testcase('subt_a',
                                                        ['subt_b', 'subt_a']))
 
     def test_functest_get_sub_testcase_extended_match(self):
-        self.assertEquals(
+        self.assertEqual(
             True,
             dt_report.FunctestChecker.get_sub_testcase('subt_a',
                                                        ['subt_b', 'subt_a+']))
 
     def test_functest_get_sub_testcase_class_match(self):
-        self.assertEquals(
+        self.assertEqual(
             True,
             dt_report.FunctestChecker.get_sub_testcase('subclass_a.subt_a',
                                                        ['subclass_a',
                                                         'subclass_b.subt_b']))
 
     def test_functest_get_sub_testcase_class_no_match(self):
-        self.assertEquals(
+        self.assertEqual(
             False,
             dt_report.FunctestChecker.get_sub_testcase('subclass_a.subt_a',
                                                        ['subclass_a.subt_a_a',
                                                         'subclass_b.subt_b']))
 
     def test_functest_get_sub_no_match(self):
-        self.assertEquals(
+        self.assertEqual(
             False,
             dt_report.FunctestChecker.get_sub_testcase('subt_a',
                                                        ['subt_b']))
@@ -1469,7 +1469,7 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.FunctestK8sChecker.create_log()
 
-        self.assertEquals(getlogger_obj, dt_report.FunctestK8sChecker.logger)
+        self.assertEqual(getlogger_obj, dt_report.FunctestK8sChecker.logger)
 
     @patch('dovetail.report.dt_logger')
     def test_yardstick_checker_create_log(self, mock_logger):
@@ -1480,7 +1480,7 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.YardstickChecker.create_log()
 
-        self.assertEquals(getlogger_obj, dt_report.YardstickChecker.logger)
+        self.assertEqual(getlogger_obj, dt_report.YardstickChecker.logger)
 
     def test_yardstick_check_result(self):
         testcase_obj = Mock()
@@ -1507,7 +1507,7 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.BottlenecksChecker.create_log()
 
-        self.assertEquals(getlogger_obj, dt_report.BottlenecksChecker.logger)
+        self.assertEqual(getlogger_obj, dt_report.BottlenecksChecker.logger)
 
     def test_bottlenecks_check_result(self):
         testcase_obj = Mock()
@@ -1543,10 +1543,10 @@ class ReportTesting(unittest.TestCase):
 
     def test_checker_factory(self):
         result = dt_report.CheckerFactory.create('shell')
-        self.assertEquals(dt_report.ShellChecker, result.__class__)
+        self.assertEqual(dt_report.ShellChecker, result.__class__)
 
     def test_checker_factory_none(self):
-        self.assertEquals(None, dt_report.CheckerFactory.create('other'))
+        self.assertEqual(None, dt_report.CheckerFactory.create('other'))
 
     @patch('dovetail.report.dt_logger')
     def test_onapvtp_checker_create_log(self, mock_logger):
@@ -1557,7 +1557,7 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.OnapVtpChecker.create_log()
 
-        self.assertEquals(getlogger_obj, dt_report.OnapVtpChecker.logger)
+        self.assertEqual(getlogger_obj, dt_report.OnapVtpChecker.logger)
 
     def test_onapvtp_check_result_none(self):
         testcase_obj = Mock()
@@ -1584,7 +1584,7 @@ class ReportTesting(unittest.TestCase):
 
         dt_report.OnapVvpChecker.create_log()
 
-        self.assertEquals(getlogger_obj, dt_report.OnapVvpChecker.logger)
+        self.assertEqual(getlogger_obj, dt_report.OnapVvpChecker.logger)
 
     def test_onapvvp_check_result_none(self):
         testcase_obj = Mock()

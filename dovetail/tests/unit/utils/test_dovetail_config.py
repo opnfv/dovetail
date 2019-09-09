@@ -39,7 +39,7 @@ class DovetailConfigTesting(unittest.TestCase):
 
         dovetail_cfg.set_leaf_dict(dict_to_test, ['aa', 'bb', 'cc'], 'val')
 
-        self.assertEquals({'aa': {'bb': {'cc': 'val'}}}, dict_to_test)
+        self.assertEqual({'aa': {'bb': {'cc': 'val'}}}, dict_to_test)
 
     @patch.object(DovetailConfig, 'set_leaf_dict')
     @patch.object(DovetailConfig, 'dovetail_config')
