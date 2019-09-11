@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dad2c153_d9e13af7",
+        "filename": "dovetail/tests/unit/test_test_runner.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 502,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-09-11T01:28:53Z",
+      "side": 1,
+      "message": "builtins",
+      "range": {
+        "startLine": 502,
+        "startChar": 12,
+        "endLine": 502,
+        "endChar": 19
+      },
+      "revId": "a31e8f31f070486ad1cd4fb5d3ca0e3b8c86a607",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d2ed3b0b_3122bb64",
+        "filename": "dovetail/tests/unit/test_test_runner.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 547,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-09-11T01:28:53Z",
+      "side": 1,
+      "message": "builtins",
+      "range": {
+        "startLine": 547,
+        "startChar": 12,
+        "endLine": 547,
+        "endChar": 19
+      },
+      "revId": "a31e8f31f070486ad1cd4fb5d3ca0e3b8c86a607",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "383de44b_07f1af2f",
+        "filename": "dovetail/utils/dovetail_config.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 5469
+      },
+      "writtenOn": "2019-09-11T01:28:53Z",
+      "side": 1,
+      "message": "Will it work? I try to change it to be cmd_yml[list(cmd_yml.keys())[0]] and it works.",
+      "range": {
+        "startLine": 28,
+        "startChar": 49,
+        "endLine": 28,
+        "endChar": 63
+      },
+      "revId": "a31e8f31f070486ad1cd4fb5d3ca0e3b8c86a607",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    }
+  ]
+}
