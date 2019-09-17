@@ -1233,9 +1233,9 @@ class DovetailUtilsTesting(unittest.TestCase):
         subp_stdout = Mock()
         subprocess_obj.stdout = subp_stdout
         subprocess_obj.wait.return_value = 0
-        subp_stdout.readline.side_effect = [cmd_output, '']
+        subp_stdout.readline.side_effect = [cmd_output.encode()]
 
-        expected = (0, 'line')
+        expected = (0, "b'line'")
         result = dovetail_utils.exec_cmd(
             cmd, logger=logger, exit_on_error=True, info=False,
             exec_msg_on=True, err_msg='', verbose=verbose,
@@ -1276,7 +1276,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         subp_stdout = Mock()
         subprocess_obj.stdout = subp_stdout
         subprocess_obj.wait.return_value = 1
-        subp_stdout.readline.side_effect = [cmd_output, '']
+        subp_stdout.readline.side_effect = [cmd_output.encode()]
 
         dovetail_utils.exec_cmd(
             cmd, logger=logger, exit_on_error=True, info=False,
@@ -1286,7 +1286,6 @@ class DovetailUtilsTesting(unittest.TestCase):
         log_calls = [
             call(verbose, logger, "Executing command: '%s'" % cmd, 'debug'),
             call(verbose, logger, cmd_output, 'debug', True),
-            call(verbose, logger, '', 'debug', True),
             call(verbose, logger, "The command '%s' failed." % cmd, 'error')]
         mock_log.assert_has_calls(log_calls)
         mock_open.assert_called_once_with(cmd, shell=True, stdout=mock_pipe,
