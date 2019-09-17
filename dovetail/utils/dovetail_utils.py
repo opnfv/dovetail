@@ -61,7 +61,7 @@ def exec_cmd(cmd, logger=None, exit_on_error=False, info=False,
         DEBUG = os.getenv('DEBUG')
     for line in iter(p.stdout.readline, b''):
         exec_log(verbose, logger, line.strip(), level, True)
-        stdout += line
+        stdout += line.decode('utf-8')
         if progress_bar and (DEBUG is None or DEBUG.lower() != 'true'):
             show_progress_bar(count)
             count += 1
