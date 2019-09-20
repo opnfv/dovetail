@@ -50,7 +50,7 @@ Test Descriptions
 API Used and Reference
 ----------------------
 
-Images: https://developer.openstack.org/api-ref/image/v2/
+Images: https://docs.openstack.org/api-ref/image/v2/
 
 - create image
 - delete image

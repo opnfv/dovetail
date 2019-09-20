@@ -60,7 +60,7 @@ Test Descriptions
 API Used and Reference
 ----------------------
 
-Servers: https://developer.openstack.org/api-ref/compute/
+Servers: https://docs.openstack.org/api-ref/compute/
 
 - create server
 - delete server
@@ -79,7 +79,7 @@ Servers: https://developer.openstack.org/api-ref/compute/
 - create keypair
 - delete keypair
 
-Block storage: https://developer.openstack.org/api-ref/block-storage
+Block storage: https://docs.openstack.org/api-ref/block-storage/
 
 - create volume
 - delete volume
