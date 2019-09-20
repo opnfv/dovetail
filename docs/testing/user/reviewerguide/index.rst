@@ -17,7 +17,7 @@ This document provides detailed guidance for reviewers on how to handle the resu
 process.
 
 The OPNFV Verified program (OVP) provides the ability for users to upload test results in
-`OVP portal <https://verified.opnfv.org>`_ and request from OVP community to review them.
+`OVP portal <https://nfvi-verified.lfnetworking.org>`_ and request from OVP community to review them.
 After the user submit for review the test results **Status** is changed from 'private' to 'review'
 (as shown in figure 2).
 
@@ -26,7 +26,7 @@ The incoming results for review will be identified by the administrator with par
 and **Owner** values.
 
 Volunteers that will accept the review request can access the test results by login to the
-`OVP portal <https://verified.opnfv.org>`_ and the click on the **My Results** tab in top-level
+`OVP portal <https://nfvi-verified.lfnetworking.org>`_ and the click on the **My Results** tab in top-level
 navigation bar.
 
 .. image:: images/ovp_top_nav.png

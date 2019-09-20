@@ -31,7 +31,7 @@ This test area references the following specifications:
 
 - ETSI GS NFV-REL 001
 
-  - http://www.etsi.org/deliver/etsi_gs/NFV-REL/001_099/001/01.01.01_60/gs_nfv-rel001v010101p.pdf
+  - https://www.etsi.org/deliver/etsi_gs/NFV-REL/001_099/001/01.01.01_60/gs_nfv-rel001v010101p.pdf
 
 - OpenStack High Availability Guide
 
