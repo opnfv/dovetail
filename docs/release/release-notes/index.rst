@@ -29,7 +29,7 @@ Dovetail works in conjunction with a web portal interface dubbed the 'OVP web po
 users to upload test results to a centralized community repository. This facilitates user
 collaboration, result sharing, self-testing and community reviews. It also serves as a hub for
 new participants to learn about the program and access key resources. The link for this portal
-is at: `OPNFV Verified Program <https://verified.opnfv.org>`_.
+is at: `OPNFV Verified Program <https://nfvi-verified.lfnetworking.org>`_.
 
 Use of the OVP web portal is open to all and only requires a valid Linux Foundation or OpenStack
 ID to login. Users are welcome to use the portal to upload, inspect and share results in a private
@@ -220,17 +220,17 @@ Docker images:
 Documents
 ---------
 
-- `System Preparation Guide <http://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/systempreparation/index.html>`_
+- `System Preparation Guide <https://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/systempreparation/index.html>`_
 
-- `User Guide <http://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/userguide/testing_guide.html>`_
+- `User Guide <https://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/userguide/testing_guide.html>`_
 
-- `OPV Test Specifications <http://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/testspecification/index.html>`_
+- `OPV Test Specifications <https://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/testspecification/index.html>`_
 
-- `Dovetail CLI Reference <http://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/userguide/cli_reference.html>`_
+- `Dovetail CLI Reference <https://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/userguide/cli_reference.html>`_
 
-- `OPV Workflow <http://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/certificationworkflow/index.html>`_
+- `OPV Workflow <https://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/certificationworkflow/index.html>`_
 
-- `OPV Reviewer Guide <http://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/reviewerguide/index.html>`_
+- `OPV Reviewer Guide <https://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/reviewerguide/index.html>`_
 
 
 Testing with OPNFV Fraser Installers
@@ -262,7 +262,7 @@ Fraser release:
 Useful Links
 ============
 
- - `OVP Web Portal <https://verified.opnfv.org>`_
+ - `OVP Web Portal <https://nfvi-verified.lfnetworking.org>`_
 
  - `Wiki Project Page <https://wiki.opnfv.org/display/dovetail>`_
 
