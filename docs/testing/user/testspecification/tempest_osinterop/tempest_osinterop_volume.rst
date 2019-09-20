@@ -61,7 +61,7 @@ Test Descriptions
 API Used and Reference
 ----------------------
 
-Block storage: https://developer.openstack.org/api-ref/block-storage
+Block storage: https://docs.openstack.org/api-ref/block-storage/
 
 - create volume
 - delete volume
