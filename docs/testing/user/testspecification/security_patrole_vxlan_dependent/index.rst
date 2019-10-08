@@ -22,7 +22,7 @@ References
 - `OpenStack layer 3 networking service API reference <https://developer.openstack.org/api-ref/network/v2/index.html#layer-3-networking>`_
 - `OpenStack network security API reference <https://developer.openstack.org/api-ref/network/v2/index.html#security>`_
 - `OpenStack resource management API reference <https://developer.openstack.org/api-ref/network/v2/index.html#resource-management>`_
-- `OpenStack networking agents API reference <https://developer.openstack.org/api-ref/network/v2/index.html#networking-agents>`_
+- `OpenStack networking agents API reference <https://developer.openstack.org/api-ref/network/v2/index.html>`_
 
 
 System Under Test (SUT)
