@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f5544e33_f42966d2",
+        "filename": "docs/testing/user/testspecification/security_patrole/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2019-10-08T13:04:26Z",
+      "side": 1,
+      "message": "This part should be removed.\nOnce, I\u0027m trying to upload another patch, the jenkins is failed because this link is broken.\nMoreover, there is not such a paragraph in this page (i.e. networking-agent)",
+      "range": {
+        "startLine": 26,
+        "startChar": 102,
+        "endLine": 26,
+        "endChar": 120
+      },
+      "revId": "abf8f3db0064f106b5f78787295237a7cfa5b2f3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "320c848f_b1495a3b",
+        "filename": "docs/testing/user/testspecification/security_patrole_vxlan_dependent/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 7167
+      },
+      "writtenOn": "2019-10-08T13:04:26Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 25,
+        "startChar": 102,
+        "endLine": 25,
+        "endChar": 120
+      },
+      "revId": "abf8f3db0064f106b5f78787295237a7cfa5b2f3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    }
+  ]
+}
