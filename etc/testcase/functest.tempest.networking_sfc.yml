@@ -1,0 +1,31 @@
+##############################################################################
+# Copyright (c) 2019 opnfv.
+#
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Apache License, Version 2.0
+# which accompanies this distribution, and is available at
+# http://www.apache.org/licenses/LICENSE-2.0
+##############################################################################
+
+---
+functest.tempest.networking_sfc:
+  name: functest.tempest.networking_sfc
+  objective: validate SFC API CRUD operations by means of Tempest tests from networking-sfc repository
+  validate:
+    type: functest
+    testcase: networking-sfc
+    pre_condition:
+      - 'cp /home/opnfv/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
+  report:
+    source_archive_files:
+      - functest.log
+      - networking-sfc/rally.log
+      - networking-sfc/tempest-report.html
+    dest_archive_files:
+      - tempest_logs/functest.tempest.networking_sfc.functest.log
+      - tempest_logs/functest.tempest.networking_sfc.log
+      - tempest_logs/functest.tempest.networking_sfc.html
+    check_results_files:
+      - 'functest_results.txt'
+    portal_key_file: tempest_logs/functest.tempest.networking_sfc.html
+    sub_testcase_list:
