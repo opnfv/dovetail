@@ -319,29 +319,36 @@ class FunctestCrawler(Crawler):
         testcase.set_results(json_results)
         return json_results
 
-    @staticmethod
-    def get_details(data):
-        t_details = data['details']
-        details = {
-            'tests': t_details['tests_number'],
-            'failures': t_details['failures_number'],
-            'success': t_details['success'],
-            'errors': t_details['failures'],
-            'skipped': t_details['skipped']
-        }
-        return details
+    def get_details(self, data):
+        try:
+            t_details = data['details']
+            details = {
+                'tests': t_details['tests_number'],
+                'failures': t_details['failures_number'],
+                'success': t_details['success'],
+                'errors': t_details['failures'],
+                'skipped': t_details['skipped']
+            }
+            return details
+        except Exception as e:
+            self.logger.exception("Failed to get details, {}.".format(e))
+            return None
 
-    @staticmethod
-    def get_rally_details(data):
-        t_details = data['details'][0]['details']
-        details = {
-            'tests': len(t_details['success']) + len(t_details['failures']),
-            'failures': len(t_details['failures']),
-            'success': t_details['success'],
-            'errors': t_details['failures'],
-            'skipped': []
-        }
-        return details
+    def get_rally_details(self, data):
+        try:
+            t_details = data['details'][0]['details']
+            tests = len(t_details['success']) + len(t_details['failures'])
+            details = {
+                'tests': tests,
+                'failures': len(t_details['failures']),
+                'success': t_details['success'],
+                'errors': t_details['failures'],
+                'skipped': []
+            }
+            return details
+        except Exception as e:
+            self.logger.exception("Failed to get details, {}.".format(e))
+            return None
 
 
 class FunctestK8sCrawler(FunctestCrawler):

@@ -640,6 +640,28 @@ class ReportTesting(unittest.TestCase):
             'Result file not found: {}'.format(file_path))
         self.assertEqual(None, result)
 
+    def test_functest_crawler_get_details_exception(self):
+        logger_obj = Mock()
+        dt_report.FunctestCrawler.logger = logger_obj
+        data = None
+        crawler = dt_report.FunctestCrawler()
+
+        excepted = None
+        result = crawler.get_details(data)
+        logger_obj.exception.assert_called_once()
+        self.assertEqual(excepted, result)
+
+    def test_functest_crawler_get_rally_details_exception(self):
+        logger_obj = Mock()
+        dt_report.FunctestCrawler.logger = logger_obj
+        data = None
+        crawler = dt_report.FunctestCrawler()
+
+        excepted = None
+        result = crawler.get_rally_details(data)
+        logger_obj.exception.assert_called_once()
+        self.assertEqual(excepted, result)
+
     @patch('builtins.open')
     @patch('dovetail.report.json')
     @patch('dovetail.report.dt_cfg')
