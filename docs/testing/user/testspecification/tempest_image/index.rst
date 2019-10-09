@@ -17,7 +17,7 @@ network runtime operations functionality.
 References
 ==========
 
-`Image Service API v2 <https://developer.openstack.org/api-ref/image/v2/index.html#images>`_
+`Image Service API v2 <https://docs.openstack.org/api-ref/image/v2/index.html>`_
 
 System Under Test (SUT)
 =======================
