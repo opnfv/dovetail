@@ -31,7 +31,7 @@ References
 
 - SCPClient
 
-  - https://pypi.python.org/pypi/scp
+  - https://pypi.org/project/scp/
 
 
 Definitions and abbreviations

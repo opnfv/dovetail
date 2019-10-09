@@ -17,7 +17,7 @@ operations, by means of both positive and negative tests.
 References
 ================
 
-- `OpenStack API reference <https://developer.openstack.org/api-ref/network/v2/#trunk-networking>`_
+- `OpenStack API reference <https://docs.openstack.org/api-ref/network/v2/#trunk-networking>`_
 
 
 System Under Test (SUT)
