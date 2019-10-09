@@ -63,12 +63,12 @@ Test Descriptions
 API Used and Reference
 ----------------------
 
-Security Groups: https://developer.openstack.org/api-ref/network/v2/index.html#security-groups-security-groups
+Security Groups: https://docs.openstack.org/api-ref/network/v2/index.html#security-groups-security-groups
 
 - create security group
 - delete security group
 
-Networks: https://developer.openstack.org/api-ref/networking/v2/index.html#networks
+Networks: https://docs.openstack.org/api-ref/network/v2/index.html#networks
 
 - create network
 - delete network
@@ -76,27 +76,27 @@ Networks: https://developer.openstack.org/api-ref/networking/v2/index.html#netwo
 - create floating ip
 - delete floating ip
 
-Routers and interface: https://developer.openstack.org/api-ref/networking/v2/index.html#routers-routers
+Routers and interface: https://docs.openstack.org/api-ref/network/v2/index.html#routers-routers
 
 - create router
 - delete router
 - list routers
 - add interface to router
 
-Subnets: https://developer.openstack.org/api-ref/networking/v2/index.html#subnets
+Subnets: https://docs.openstack.org/api-ref/network/v2/index.html#subnets
 
 - create subnet
 - list subnets
 - delete subnet
 
-Servers: https://developer.openstack.org/api-ref/compute/
+Servers: https://docs.openstack.org/api-ref/compute/
 
 - create keypair
 - create server
 - delete server
 - add/assign floating ip
 
-Ports: https://developer.openstack.org/api-ref/networking/v2/index.html#ports
+Ports: https://docs.openstack.org/api-ref/network/v2/index.html#ports
 
 - update port
 - list ports

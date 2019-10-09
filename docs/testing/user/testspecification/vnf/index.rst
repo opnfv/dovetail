@@ -33,7 +33,7 @@ This test area references the following specifications and guides:
 
 - 3GPP LTE
 
-  - http://www.3gpp.org/technologies/keywords-acronyms/98-lte
+  - https://www.3gpp.org/technologies/keywords-acronyms/98-lte
 
 - ETSI -  TS 24.301
 
