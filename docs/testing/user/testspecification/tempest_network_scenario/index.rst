@@ -68,30 +68,30 @@ Test Descriptions
 API Used and Reference
 ----------------------
 
-Security Groups: https://developer.openstack.org/api-ref/network/v2/index.html#security-groups-security-groups
+Security Groups: https://docs.openstack.org/api-ref/network/v2/index.html#security-groups-security-groups
 
 - create security group
 - delete security group
 
-Networks: https://developer.openstack.org/api-ref/networking/v2/index.html#networks
+Networks: https://docs.openstack.org/api-ref/network/v2/index.html#networks
 
 - create network
 - delete network
 
-Routers and interface: https://developer.openstack.org/api-ref/networking/v2/index.html#routers-routers
+Routers and interface: https://docs.openstack.org/api-ref/network/v2/index.html#routers-routers
 
 - create router
 - update router
 - delete router
 - add interface to router
 
-Subnets: https://developer.openstack.org/api-ref/networking/v2/index.html#subnets
+Subnets: https://docs.openstack.org/api-ref/network/v2/index.html#subnets
 
 - create subnet
 - update subnet
 - delete subnet
 
-Servers: https://developer.openstack.org/api-ref/compute/
+Servers: https://docs.openstack.org/api-ref/compute/
 
 - create keypair
 - create server
@@ -99,13 +99,13 @@ Servers: https://developer.openstack.org/api-ref/compute/
 - add/assign floating IP
 - disassociate floating IP
 
-Ports: https://developer.openstack.org/api-ref/networking/v2/index.html#ports
+Ports: https://docs.openstack.org/api-ref/network/v2/index.html#ports
 
 - create port
 - update port
 - delete port
 
-Floating IPs: https://developer.openstack.org/api-ref/networking/v2/index.html#floating-ips-floatingips
+Floating IPs: https://docs.openstack.org/api-ref/network/v2/index.html#floating-ips-floatingips
 
 - create floating IP
 - delete floating IP

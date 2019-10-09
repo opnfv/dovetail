@@ -31,7 +31,7 @@ These runtime operations may include that create, list, verify and delete:
 References
 ==========
 
-`Identity API v3.0 <https://developer.openstack.org/api-ref/identity/v3/index.html>`_
+`Identity API v3.0 <https://docs.openstack.org/api-ref/identity/v3/index.html>`_
 
 System Under Test (SUT)
 =======================

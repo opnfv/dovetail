@@ -69,35 +69,35 @@ Test Descriptions
 API Used and Reference
 ----------------------
 
-Block storage: https://developer.openstack.org/api-ref/block-storage
+Block storage: https://docs.openstack.org/api-ref/block-storage/
 
 - create volume
 - delete volume
 - attach volume to server
 - detach volume from server
 
-Security Groups: https://developer.openstack.org/api-ref/network/v2/index.html#security-groups-security-groups
+Security Groups: https://docs.openstack.org/api-ref/network/v2/index.html#security-groups-security-groups
 
 - create security group
 - delete security group
 
-Networks: https://developer.openstack.org/api-ref/networking/v2/index.html#networks
+Networks: https://docs.openstack.org/api-ref/network/v2/index.html#networks
 
 - create network
 - delete network
 
-Routers and interface: https://developer.openstack.org/api-ref/networking/v2/index.html#routers-routers
+Routers and interface: https://docs.openstack.org/api-ref/network/v2/index.html#routers-routers
 
 - create router
 - delete router
 - add interface to router
 
-Subnets: https://developer.openstack.org/api-ref/networking/v2/index.html#subnets
+Subnets: https://docs.openstack.org/api-ref/network/v2/index.html#subnets
 
 - create subnet
 - delete subnet
 
-Servers: https://developer.openstack.org/api-ref/compute/
+Servers: https://docs.openstack.org/api-ref/compute/
 
 - create keypair
 - create server
@@ -120,17 +120,17 @@ Servers: https://developer.openstack.org/api-ref/compute/
 - migrate server
 - live-migrate server
 
-Ports: https://developer.openstack.org/api-ref/networking/v2/index.html#ports
+Ports: https://docs.openstack.org/api-ref/network/v2/index.html#ports
 
 - create port
 - delete port
 
-Floating IPs: https://developer.openstack.org/api-ref/networking/v2/index.html#floating-ips-floatingips
+Floating IPs: https://docs.openstack.org/api-ref/network/v2/index.html#floating-ips-floatingips
 
 - create floating IP
 - delete floating IP
 
-Availability zone: https://developer.openstack.org/api-ref/compute/
+Availability zone: https://docs.openstack.org/api-ref/compute/
 
 - get availability zone
 
