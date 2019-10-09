@@ -510,15 +510,12 @@ class DovetailUtilsTesting(unittest.TestCase):
         hosts_obj.add.assert_called_once_with([entry_obj])
         hosts_obj.write.assert_called_once()
 
-    @patch('dovetail.utils.dovetail_utils.objwalk')
-    def test_get_obj_by_path(self, mock_walk):
-        path = dist_path = 'path'
-        obj = 'obj'
-        mock_walk.return_value = [(path, obj)]
+    def test_get_obj_by_path(self):
+        obj = {'name': 'name', 'validate': {'testcase': 'testcase'}}
+        dst_path = ('name',)
 
-        expected = obj
-        result = dovetail_utils.get_obj_by_path(obj, dist_path)
-
+        expected = 'name'
+        result = dovetail_utils.get_obj_by_path(obj, dst_path)
         self.assertEqual(expected, result)
 
     @patch('dovetail.utils.dovetail_utils.objwalk')
