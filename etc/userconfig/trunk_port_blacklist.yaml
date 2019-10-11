@@ -1,8 +1,7 @@
 ---
 -
     scenarios:
-        - unknown
-        - os-nosdn-ovs-ha
+        - (.*)
     tests:
         # need VLAN type driver, otherwise the following 1 sub test case will skip
         - neutron_tempest_plugin.api.test_trunk.TrunkTestInheritJSONBase.test_add_subport
