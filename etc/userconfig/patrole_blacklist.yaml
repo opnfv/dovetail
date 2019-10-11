@@ -1,8 +1,7 @@
 ---
 -
     scenarios:
-        - unknown
-        - os-nosdn-ovs-ha
+        - (.*)
     tests:
         # need metering extension, otherwise the following 6 sub test cases will skip
         - patrole_tempest_plugin.tests.api.network.test_metering_label_rules_rbac.MeteringLabelRulesRbacTest.test_create_metering_label_rule
