@@ -7,7 +7,7 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 ##############################################################################
 
-ansible==2.2.0
+ansible==2.6.18
 click==6.7
 docker==3.4.1
 flask==1.0.2
