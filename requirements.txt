@@ -17,5 +17,5 @@ Jinja2==2.10
 os-client-config==1.29.0
 pbr==3.1.1
 python-hosts==0.4.1
-PyYAML==3.12
+PyYAML==5.1
 shade==1.27.2
