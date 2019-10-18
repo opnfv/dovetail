@@ -1,0 +1,8 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+1: Panagiotis Karalis <panos.pkaralis@gmail.com>
+Code-Review+2: Dan Xu <xudan16@huawei.com>
+Submitted-by: Dan Xu <xudan16@huawei.com>
+Submitted-at: Fri, 18 Oct 2019 01:17:52 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/c/dovetail/+/68638
+Project: dovetail
+Branch: refs/heads/master
