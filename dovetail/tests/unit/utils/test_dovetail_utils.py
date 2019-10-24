@@ -511,7 +511,7 @@ class DovetailUtilsTesting(unittest.TestCase):
         hosts_obj.write.assert_called_once()
 
     def test_get_obj_by_path(self):
-        obj = {'name': 'name', 'validate': {'testcase': 'testcase'}}
+        obj = {'list': ['a', 'b'], 'name': 'name'}
         dst_path = ('name',)
 
         expected = 'name'
