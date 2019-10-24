@@ -2,8 +2,8 @@ import json
 import os
 import shutil
 
-import constants
-import utils
+import app.constants as constants
+import app.utils as utils
 
 from dovetail.testcase import Testsuite, Testcase
 
@@ -134,8 +134,28 @@ def get_execution_status(dovetail_home, testsuite, request_testcases,
                    'timestart': None, 'endTime': None}
             results.append(res)
         if tc.startswith('bottlenecks'):
-            pass
+            status, result = get_bottlenecks_status(results_dir, tc)
+            res = {'testCaseName': tc, 'testSuiteName': testsuite,
+                   'scenario': 'nfvi', 'executionId': requestId,
+                   'results': result, 'status': status,
+                   'timestart': None, 'endTime': None}
+            results.append(res)
     return results
+
+
+def get_status_from_total_file(total_file, testcase):
+    with open(total_file, 'r') as f:
+        for jsonfile in f:
+            try:
+                data = json.loads(jsonfile)
+                for item in data['testcases_list']:
+                    if item['name'] == testcase:
+                        return item['result'], item['sub_testcase']
+            except KeyError as e:
+                return 'FAILED', None
+            except ValueError:
+                continue
+    return 'FAILED', None
 
 
 def get_functest_status(results_dir, testcase):
@@ -152,21 +172,10 @@ def get_functest_status(results_dir, testcase):
 
     # get criteria and sub_testcase from results.json when all tests completed
     if os.path.isfile(total_file):
-        with open(total_file, 'r') as f:
-            for jsonfile in f:
-                try:
-                    data = json.loads(jsonfile)
-                    for item in data['testcases_list']:
-                        if item['name'] == testcase:
-                            criteria = item['result']
-                            sub_testcase = item['sub_testcase']
-                            break
-                    else:
-                        return 'FAILED', None
-                except KeyError:
-                    return 'FAILED', None
-                except ValueError:
-                    continue
+        criteria, sub_testcase = get_status_from_total_file(total_file,
+                                                            testcase)
+        if criteria == 'FAILED':
+            return 'FAILED', None
 
     # get detailed results from functest_results.txt
     with open(functest_file, 'r') as f:
@@ -200,17 +209,58 @@ def get_yardstick_status(results_dir, testcase):
         if not os.path.isfile(total_file):
             return 'IN_PROGRESS', None
         return 'FAILED', None
+
+    criteria = None
+
+    # get criteria and sub_testcase from results.json when all tests completed
+    if os.path.isfile(total_file):
+        criteria, _ = get_status_from_total_file(total_file, testcase)
+        if criteria == 'FAILED':
+            return 'FAILED', None
+
     with open(yardstick_file, 'r') as f:
         for jsonfile in f:
             data = json.loads(jsonfile)
             try:
-                criteria = data['result']['criteria']
+                if not criteria:
+                    criteria = data['result']['criteria']
                 if criteria == 'PASS':
                     details = data['result']['testcases']
                     for key, value in details.items():
                         sla_pass = value['tc_data'][0]['data']['sla_pass']
                         if not 1 == sla_pass:
                             criteria = 'FAIL'
+            except KeyError:
+                return 'FAILED', None
+
+    status = 'COMPLETED' if criteria == 'PASS' else 'FAILED'
+    results = {'criteria': criteria, 'timestart': None, 'timestop': None}
+    return status, results
+
+
+def get_bottlenecks_status(results_dir, testcase):
+    bottlenecks_file = os.path.join(results_dir, 'stress_logs',
+                                    '{}.out'.format(testcase))
+    total_file = os.path.join(results_dir, 'results.json')
+    if not os.path.isfile(bottlenecks_file):
+        if not os.path.isfile(total_file):
+            return 'IN_PROGRESS', None
+        return 'FAILED', None
+
+    criteria = None
+
+    # get criteria and sub_testcase from results.json when all tests completed
+    if os.path.isfile(total_file):
+        criteria, _ = get_status_from_total_file(total_file, testcase)
+        if criteria == 'FAILED':
+            return 'FAILED', None
+
+    with open(bottlenecks_file, 'r') as f:
+        for jsonfile in f:
+            data = json.loads(jsonfile)
+            try:
+                if not criteria:
+                    criteria = data['data_body']['result']
             except KeyError:
                 return 'FAILED', None
 

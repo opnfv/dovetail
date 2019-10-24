@@ -9,7 +9,7 @@ import uuid
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-import server
+import app.server as server
 
 app = Flask(__name__)
 CORS(app)
@@ -51,9 +51,10 @@ def run_testcases():
                                os.pardir, os.pardir))
     run_script = os.path.join(repo_dir, 'run.py')
 
-    cmd = 'python {} {}'.format(run_script, input_str)
+    cmd = 'python3 {} {}'.format(run_script, input_str)
     api_home = os.path.join(dovetail_home, str(requestId))
-    subprocess.Popen(cmd, shell=True, env={'DOVETAIL_HOME': api_home})
+    subprocess.Popen(cmd, shell=True, env={'DOVETAIL_HOME': api_home,
+                     'LC_ALL': 'C.UTF-8', 'LANG': 'C.UTF-8'})
 
     testcases_file = os.path.join(dovetail_home, str(requestId),
                                   'results', 'testcases.json')
@@ -72,7 +73,7 @@ def run_testcases():
         testsuite = data['testsuite']
 
     result = server.get_execution_status(dovetail_home, testsuite,
-                                         testcases, requestId)
+                                         testcases, testcases, requestId)
 
     return jsonify({'result': result}), 200
 
