@@ -9,7 +9,7 @@ import uuid
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-import app.server as server
+from app.server import Server
 
 app = Flask(__name__)
 CORS(app)
@@ -17,13 +17,13 @@ CORS(app)
 
 @app.route('/api/v1/scenario/nfvi/testsuites', methods=['GET'])
 def get_all_testsuites():
-    testsuites = server.list_testsuites()
+    testsuites = Server.list_testsuites()
     return jsonify({'testsuites': testsuites}), 200
 
 
 @app.route('/api/v1/scenario/nfvi/testcases', methods=['GET'])
 def get_testcases():
-    testcases = server.list_testcases()
+    testcases = Server.list_testcases()
     return jsonify({'testcases': testcases}), 200
 
 
@@ -37,15 +37,17 @@ def run_testcases():
     else:
         return 'No DOVETAIL_HOME found in env.\n', 500
 
-    msg, ret = server.set_conf_files(request.json, dovetail_home, requestId)
+    server = Server(dovetail_home, requestId, request.json)
+
+    msg, ret = server.set_conf_files()
     if not ret:
         return msg, 500
 
-    msg, ret = server.set_vm_images(request.json, dovetail_home, requestId)
+    msg, ret = server.set_vm_images()
     if not ret:
         return msg, 500
 
-    input_str = server.parse_request(request.json)
+    input_str = server.parse_request()
 
     repo_dir = os.path.abspath(os.path.join(os.path.dirname(__file__),
                                os.pardir, os.pardir))
@@ -72,8 +74,7 @@ def run_testcases():
         testcases = data['testcases']
         testsuite = data['testsuite']
 
-    result = server.get_execution_status(dovetail_home, testsuite,
-                                         testcases, testcases, requestId)
+    result = server.get_execution_status(testsuite, testcases, testcases)
 
     return jsonify({'result': result}), 200
 
@@ -87,6 +88,7 @@ def get_testcases_status(exec_id):
     testcases = request.json['testcase']
     dovetail_home = os.getenv('DOVETAIL_HOME')
 
+    server = Server(dovetail_home, exec_id, request.json)
     testcases_file = os.path.join(dovetail_home, str(exec_id),
                                   'results', 'testcases.json')
     with open(testcases_file, "r") as f:
@@ -94,6 +96,7 @@ def get_testcases_status(exec_id):
             data = json.loads(jsonfile)
         testsuite = data['testsuite']
 
-    result = server.get_execution_status(dovetail_home, testsuite,
-                                         testcases, data['testcases'], exec_id)
+    result = server.get_execution_status(testsuite, testcases,
+                                         data['testcases'])
+
     return jsonify({'result': result}), 200
