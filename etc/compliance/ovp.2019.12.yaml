@@ -8,9 +8,9 @@
 ##############################################################################
 
 ---
-ovp.2019.0x:
-  name: ovp.2019.0x
-  version: '2019.0x'
+ovp.2019.12:
+  name: ovp.2019.12
+  version: '2019.12'
   testcases_list:
     mandatory:
       - functest.vping.userdata
