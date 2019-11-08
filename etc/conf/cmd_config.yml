@@ -28,7 +28,7 @@ cli:
       testsuite:
         flags:
           - '--testsuite'
-        default: 'ovp.2019.0x'
+        default: 'ovp.2019.12'
         help: 'compliance testsuite.'
       testarea:
         flags:

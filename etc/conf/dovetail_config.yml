@@ -26,7 +26,7 @@ testsuite_supported:
   - proposed_tests
   - debug
   - healthcheck
-  - ovp.2019.0x
+  - ovp.2019.12
   - onap.tosca.2019.04
   - onap.heat.2019.04
 
