@@ -8,6 +8,7 @@
 ##############################################################################
 
 ---
+version: '2019.12'
 cli_file_name: 'cmd_config.yml'
 result_file: 'results.json'
 
@@ -26,7 +27,7 @@ testsuite_supported:
   - proposed_tests
   - debug
   - healthcheck
-  - ovp.2019.0x
+  - ovp.2019.12
   - onap.tosca.2019.04
   - onap.heat.2019.04
 

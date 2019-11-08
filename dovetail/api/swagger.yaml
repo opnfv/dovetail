@@ -265,7 +265,7 @@ definitions:
         - "yardstick.ha.rabbitmq"
       testsuite:
         type: "string"
-        example: "ovp.2019.0x"
+        example: "ovp.2019.12"
       testarea:
         type: "array"
         items:
@@ -333,7 +333,7 @@ definitions:
         example: "functest.vping.ssh"
       testSuiteName:
         type: "string"
-        example: "ovp.2019.0x"
+        example: "ovp.2019.12"
       timestart:
         type: "string"
         format: "date-time"
