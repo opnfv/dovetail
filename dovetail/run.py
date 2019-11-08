@@ -239,8 +239,9 @@ def get_testcase_list(logger=None, **kwargs):
 
     if testsuite_validation and testarea_validation:
         testsuite_yaml = load_testsuite(testsuite)
-        dt_cfg.dovetail_config['version'] = dt_utils.get_value_from_dict(
-            'version', testsuite_yaml)
+        version = dt_utils.get_value_from_dict('version', testsuite_yaml)
+        if version:
+            dt_cfg.dovetail_config['version'] = version
         dt_cfg.dovetail_config['vnf_type'] = dt_utils.get_value_from_dict(
             'vnf_type', testsuite_yaml)
         testcase_list = dt_testcase.Testcase.get_testcases_for_testsuite(
