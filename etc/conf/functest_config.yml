@@ -22,7 +22,7 @@
 {% set build_tag = build_tag or '' %}
 {% set cacert_volume = '' %}
 {% if cacert %}
-    {% set cacert_volume = cacert + ':' + cacert %}
+    {% set cacert_volume = 'source=' + cacert + ',target=' + cacert %}
 {% endif %}
 {% set openrc_file = '/home/opnfv/functest/conf/env_file' %}
 {% set result_dir = '/home/opnfv/functest/results' %}
@@ -47,13 +47,14 @@ functest:
     - 'CI_DEBUG={{debug}}'
     - 'BUILD_TAG={{build_tag}}-{{testcase}}'
   volumes:
-    - '{{dovetail_home}}/pre_config/env_config.sh:{{openrc_file}}'
-    - {{cacert_volume}}
-    - '{{dovetail_home}}/pre_config:/home/opnfv/pre_config'
     - '{{dovetail_home}}/userconfig:{{userconfig_dir}}'
     - '{{dovetail_home}}/patches:{{patches_dir}}'
     - '{{dovetail_home}}/results:{{result_dir}}'
     - '{{dovetail_home}}/images:{{images_dir}}'
+  mounts:
+    - 'source={{dovetail_home}}/pre_config/env_config.sh,target={{openrc_file}}'
+    - 'source={{dovetail_home}}/pre_config,target=/home/opnfv/pre_config'
+    - {{cacert_volume}}
   patches_dir: {{patches_dir}}
   pre_condition:
     - 'echo test for precondition in functest'

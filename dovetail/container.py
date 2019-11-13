@@ -58,23 +58,28 @@ class Container(object):
         kwargs = dt_utils.get_value_from_dict('opts', project_cfg)
         shell = dt_utils.get_value_from_dict('shell', project_cfg)
         if not shell:
-            return None
+            return None, "Lacking of key word 'shell' in config file."
         env_list = dt_utils.get_value_from_dict('envs', project_cfg)
         if env_list:
             kwargs['environment'] = \
                 [env for env in env_list if env is not None]
         volume_list = dt_utils.get_value_from_dict('volumes', project_cfg)
         kwargs['volumes'] = [vol for vol in volume_list if vol is not None]
+
+        kwargs['mounts'], msg = dt_utils.get_mount_list(project_cfg)
+        if not kwargs['mounts']:
+            return None, msg
+
         kwargs['extra_hosts'] = dt_utils.get_hosts_info(self.logger)
 
         try:
             self.container = self.client.containers.run(
                 docker_image, shell, **kwargs)
         except (docker.errors.ContainerError, docker.errors.ImageNotFound,
-                docker.errors.APIError):
-            return None
+                docker.errors.APIError) as e:
+            return None, e
 
-        return self.container.id
+        return self.container.id, 'Successfully to create container.'
 
     def get_image_id(self, image_name):
         try:

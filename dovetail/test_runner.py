@@ -77,9 +77,10 @@ class DockerRunner(Runner):
                 self.logger.error("Failed to pull the image.")
                 return
 
-        container_id = container.create(docker_image)
+        container_id, msg = container.create(docker_image)
         if not container_id:
             self.logger.error('Failed to create container.')
+            self.logger.error(msg)
             return
 
         self.logger.debug('container id: {}'.format(container_id))

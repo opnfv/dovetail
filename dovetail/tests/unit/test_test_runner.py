@@ -107,7 +107,7 @@ class TestRunnerTesting(unittest.TestCase):
         docker_img_obj = Mock()
         container_obj.get_docker_image.return_value = docker_img_obj
         container_obj.pull_image.return_value = True
-        container_obj.create.return_value = False
+        container_obj.create.return_value = [None, 'error']
         mock_container.return_value = container_obj
 
         docker_runner.run()
@@ -116,8 +116,8 @@ class TestRunnerTesting(unittest.TestCase):
         container_obj.get_docker_image.assert_called_once_with()
         container_obj.pull_image.assert_called_once_with(docker_img_obj)
         container_obj.create.assert_called_once_with(docker_img_obj)
-        docker_runner.logger.error.assert_called_once_with(
-            'Failed to create container.')
+        docker_runner.logger.error.assert_has_calls([
+            call('Failed to create container.'), call('error')])
 
     @patch('dovetail.test_runner.dt_utils')
     @patch('dovetail.test_runner.dt_cfg')
@@ -137,7 +137,8 @@ class TestRunnerTesting(unittest.TestCase):
         container_obj.get_docker_image.return_value = docker_img_obj
         container_obj.pull_image.return_value = True
         container_id = '12345'
-        container_obj.create.return_value = container_id
+        container_msg = 'Successfully to create container.'
+        container_obj.create.return_value = [container_id, container_msg]
         mock_container.return_value = container_obj
         self.testcase.pre_condition.return_value = ['cmd']
         self.testcase.prepare_cmd.return_value = False
@@ -180,7 +181,8 @@ class TestRunnerTesting(unittest.TestCase):
         container_obj.get_docker_image.return_value = docker_img_obj
         container_obj.pull_image.return_value = True
         container_id = '12345'
-        container_obj.create.return_value = container_id
+        container_msg = 'Successfully to create container.'
+        container_obj.create.return_value = [container_id, container_msg]
         mock_container.return_value = container_obj
         self.testcase.pre_condition.return_value = ['cmd']
         self.testcase.prepare_cmd.return_value = True
