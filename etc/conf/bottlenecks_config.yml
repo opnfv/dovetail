@@ -17,7 +17,7 @@
 {% set build_tag = build_tag or '' %}
 {% set cacert_volume = '' %}
 {% if cacert %}
-    {% set cacert_volume = cacert + ':' + cacert %}
+    {% set cacert_volume = 'source=' + cacert + ',target=' + cacert %}
 {% endif %}
 {% set openrc_file = '/tmp/admin_rc.sh' %}
 {% set result_dir = '/home/opnfv/bottlenecks/results' %}
@@ -40,12 +40,13 @@ bottlenecks:
     - 'CI_DEBUG={{debug}}'
     - 'BUILD_TAG={{build_tag}}-{{testcase}}'
   volumes:
-    - '/var/run/docker.sock:/var/run/docker.sock'
     - '{{dovetail_home}}/results/bottlenecks:/tmp'
-    - '{{dovetail_home}}/pre_config/env_config.sh:{{openrc_file}}'
-    - {{cacert_volume}}
     - '{{dovetail_home}}/images:{{images_dir}}'
     - '{{dovetail_home}}/results:{{result_dir}}'
+  mounts:
+    - 'source=/var/run/docker.sock,target=/var/run/docker.sock'
+    - 'source={{dovetail_home}}/pre_config/env_config.sh,target={{openrc_file}}'
+    - {{cacert_volume}}
   pre_condition:
     - 'cp {{images_dir}}/ubuntu-16.04-server-cloudimg-amd64-disk1.img {{image_file}}'
   cmds:

@@ -33,9 +33,10 @@ functest-k8s:
     - 'CI_DEBUG={{debug}}'
     - 'BUILD_TAG={{build_tag}}-{{testcase}}'
   volumes:
-    - '{{dovetail_home}}/pre_config/k8.creds:{{openrc_file}}'
-    - '{{dovetail_home}}/pre_config/admin.conf:{{kube_file}}'
     - '{{dovetail_home}}/results/:{{result_dir}}'
+  mounts:
+    - 'source={{dovetail_home}}/pre_config/k8.creds,target={{openrc_file}}'
+    - 'source={{dovetail_home}}/pre_config/admin.conf,target={{kube_file}}'
   pre_condition:
     - 'echo test for precondition in functest'
   cmds:

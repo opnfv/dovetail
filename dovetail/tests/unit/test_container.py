@@ -409,6 +409,7 @@ class ContainerTesting(unittest.TestCase):
         container_id = 'container_id'
         mock_utils.get_value_from_dict.side_effect = [
             {'key': 'value'}, 'shell', 'envs', ['volume_one', 'volume_two']]
+        mock_utils.get_mount_list.side_effect = [['mount', 'list'], 'success']
         mock_utils.get_hosts_info.return_value = 'host_info'
         container_obj = Mock()
         container_obj.id = container_id
@@ -417,7 +418,7 @@ class ContainerTesting(unittest.TestCase):
         mock_config.dovetail_config = {'bottlenecks': project_config}
 
         expected = container_id
-        result = self.container.create(docker_image)
+        result, msg = self.container.create(docker_image)
 
         mock_utils.get_value_from_dict.assert_has_calls([
             call('opts', project_config),
@@ -426,6 +427,7 @@ class ContainerTesting(unittest.TestCase):
             call('volumes', project_config)])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
         self.assertEqual(expected, result)
+        self.assertEqual('Successfully to create container.', msg)
 
     @patch('dovetail.container.dt_utils')
     @patch('dovetail.container.dt_cfg')
@@ -435,12 +437,32 @@ class ContainerTesting(unittest.TestCase):
         mock_utils.get_value_from_dict.side_effect = ['opts', None]
         mock_utils.get_hosts_info.return_value = 'host_info'
 
-        result = self.container.create(docker_image)
+        result, msg = self.container.create(docker_image)
 
         mock_utils.get_value_from_dict.assert_has_calls([
             call('opts', 'value'),
             call('shell', 'value')])
         self.assertEqual(None, result)
+        self.assertEqual("Lacking of key word 'shell' in config file.", msg)
+
+    @patch('dovetail.container.dt_utils')
+    @patch('dovetail.container.dt_cfg')
+    def test_create_mounts_none(self, mock_config, mock_utils):
+        docker_image = 'docker_image'
+        project_config = {}
+        mock_config.dovetail_config = {'bottlenecks': project_config}
+        mock_utils.get_value_from_dict.side_effect = [
+            {'key': 'value'}, 'shell', ['envs'], ['volume_one']]
+        mock_utils.get_mount_list.side_effect = [[None, 'error']]
+        mock_utils.get_hosts_info.return_value = 'host_info'
+
+        result, msg = self.container.create(docker_image)
+
+        mock_utils.get_value_from_dict.assert_has_calls([
+            call('opts', project_config), call('shell', project_config),
+            call('envs', project_config), call('volumes', project_config)])
+        self.assertEqual(None, result)
+        self.assertEqual('error', msg)
 
     @patch('dovetail.container.dt_utils')
     @patch('dovetail.container.dt_cfg')
@@ -448,13 +470,14 @@ class ContainerTesting(unittest.TestCase):
         docker_image = 'docker_image'
         mock_utils.get_value_from_dict.side_effect = [
             {'key': 'value'}, 'shell', ['envs'], ['volume_one']]
+        mock_utils.get_mount_list.side_effect = [['mount', 'list'], 'success']
         mock_utils.get_hosts_info.return_value = 'host_info'
         mock_utils.check_https_enabled.return_value = True
         self.client.containers.run.side_effect = \
             docker.errors.ImageNotFound('error')
         project_config = {}
         mock_config.dovetail_config = {'bottlenecks': project_config}
-        result = self.container.create(docker_image)
+        result, msg = self.container.create(docker_image)
 
         mock_utils.get_value_from_dict.assert_has_calls([
             call('opts', project_config),
@@ -463,3 +486,4 @@ class ContainerTesting(unittest.TestCase):
             call('volumes', project_config)])
         mock_utils.get_hosts_info.assert_called_once_with(self.logger)
         self.assertEqual(None, result)
+        self.assertEqual('error', str(docker.errors.ImageNotFound('error')))
