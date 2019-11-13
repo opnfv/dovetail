@@ -23,7 +23,7 @@
 {% set build_tag = build_tag or '' %}
 {% set cacert_volume = '' %}
 {% if cacert %}
-    {% set cacert_volume = cacert + ':' + cacert %}
+    {% set cacert_volume = 'source=' + cacert + ',target=' + cacert %}
 {% endif %}
 {% set openrc_file = '/etc/yardstick/openstack.creds' %}
 {% set pod_file = '/etc/yardstick/pod.yaml' %}
@@ -43,12 +43,13 @@ yardstick:
     - 'CI_DEBUG={{debug}}'
     - 'BUILD_TAG={{build_tag}}-{{testcase}}"'
   volumes:
-    - '{{dovetail_home}}/pre_config/env_config.sh:{{openrc_file}}'
-    - {{cacert_volume}}
-    - '{{dovetail_home}}/pre_config/pod.yaml:{{pod_file}}'
     - '{{dovetail_home}}/images:/home/opnfv/images'
     - '{{dovetail_home}}/results:{{result_dir}}'
-    - '{{dovetail_home}}/pre_config:{{dovetail_home}}/pre_config'
+  mounts:
+    - 'source={{dovetail_home}}/pre_config,target={{dovetail_home}}/pre_config'
+    - 'source={{dovetail_home}}/pre_config/env_config.sh,target={{openrc_file}}'
+    - 'source={{dovetail_home}}/pre_config/pod.yaml,target={{pod_file}}'
+    - {{cacert_volume}}
   pre_condition:
     - 'echo this is pre_condition'
   cmds:

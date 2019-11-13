@@ -1380,3 +1380,23 @@ class DovetailUtilsTesting(unittest.TestCase):
         logger.debug.assert_not_called()
         logger.exception.assert_called_once_with(
             "The results cannot be pushed to DB.")
+
+    def test_get_mount_list_error_mount(self):
+        project_cfg = {'mounts': ['aaa']}
+        res, msg = dovetail_utils.get_mount_list(project_cfg)
+        self.assertEqual(None, res)
+        self.assertEqual('Error mount aaa.', msg)
+
+    def test_get_mount_list_keyerror_exception(self):
+        project_cfg = {'mounts': ['aaa=a,bbb=b', '']}
+        res, msg = dovetail_utils.get_mount_list(project_cfg)
+        self.assertEqual(None, res)
+        self.assertEqual("'target'", str(msg))
+
+    def test_get_mount_list(self):
+        project_cfg = {'mounts': ['target=a,source=b', '']}
+        res, msg = dovetail_utils.get_mount_list(project_cfg)
+        expected = [{'Source': 'b', 'Type': 'bind', 'ReadOnly': False,
+                     'Target': 'a'}]
+        self.assertEqual(expected, res)
+        self.assertEqual('Successfully to get mount list.', msg)

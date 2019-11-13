@@ -21,6 +21,7 @@ from distutils.version import LooseVersion
 import yaml
 import python_hosts
 import docker
+from docker.types import Mount
 
 from dovetail import constants
 from dovetail.utils.dovetail_config import DovetailConfig as dt_cfg
@@ -432,3 +433,26 @@ def push_results_to_db(case_name, details, start_date, stop_date, logger):
     except Exception:
         logger.exception('The results cannot be pushed to DB.')
         return False
+
+
+def get_mount_list(project_cfg):
+    mount_list = []
+    mounts = get_value_from_dict('mounts', project_cfg)
+    for mount in mounts:
+        if mount:
+            param_dict = {}
+            for param in mount.split(','):
+                key_word = param.split('=')
+
+                if len(key_word) != 2:
+                    return None, 'Error mount {}.'.format(mount)
+
+                param_dict[key_word[0]] = key_word[1]
+            try:
+                mount_list.append(Mount(target=param_dict['target'],
+                                        source=param_dict['source'],
+                                        type='bind'))
+            except Exception as e:
+                return None, e
+
+    return mount_list, 'Successfully to get mount list.'
