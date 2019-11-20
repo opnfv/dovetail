@@ -336,7 +336,7 @@ class FunctestCrawler(Crawler):
 
     def get_rally_details(self, data):
         try:
-            t_details = data['details'][0]['details']
+            t_details = data['details']['modules'][0]['details']
             tests = len(t_details['success']) + len(t_details['failures'])
             details = {
                 'tests': tests,

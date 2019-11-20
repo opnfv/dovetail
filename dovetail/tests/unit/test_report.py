@@ -741,12 +741,17 @@ class ReportTesting(unittest.TestCase):
             'criteria': 'criteria',
             'start_date': 'start_date',
             'stop_date': 'stop_date',
-            'details': [{
-                'details': {
-                    'success': ['subt_a'],
-                    'failures': ['subt_b', 'subt_c']
-                }
-            }]
+            'details': {
+                'modules': [
+                    {
+                        'details': {
+                            'success': ['subt_a'],
+                            'failures': ['subt_b', 'subt_c']
+                        },
+                        'module': 'module'
+                    }
+                ]
+            }
         }
 
         mock_json.loads.return_value = data_dict
