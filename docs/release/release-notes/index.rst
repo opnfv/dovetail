@@ -4,32 +4,22 @@
 .. _dovetail-releasenotes:
 
 ==================================================================
-OPNFV Verified Program (OVP) 2018.09 / Dovetail 2.2.0 Release Note
-==================================================================
-
-
-OPNFV 2018.09 Release
-=====================
+OVP 2019.12 Release Release Notes
+=================================
 
 The OPNFV Verified Program (OVP) allows vendors and operators to obtain 'OPNFV Verified'
-status based on an agreed upon set of compliance verification test cases that align to OPNFV
-releases. The reference System under Test (SUT) are the NFV components deployed by the OPNFV
-installers for a given release, where OVP 2018.09 is based on the Fraser release. Participants
-of the program can verify commercial or open source offerings against an OVP release. This implies
-that the SUT used for verification has interfaces, components, functions and behaviors that align
-to OPNFV installer integrations.
+status based on an agreed upon set of compliance verification test cases that align to LFN project releases (i.e. OPNFV or ONAP releases). The reference System under Test (SUT) are the NFV components deployed by the OPNFV installers for a given release or a VNF product meeting the requirements of a given ONAP release, where OVP 2019.12 is based on the OPNFV Hunter release and the ONAP El Alto release. Participants of the program can verify commercial or open source offerings against an OVP release. This implies that the SUT used for verification has interfaces, components, functions and behaviors that align
+to required integrations.
 
 Dovetail is the overall framework used to execute tests and collect results for OVP. Dovetail does
-not deliver test content directly. Rather, test content is developed in other OPNFV test frameworks
-such as Functest and upstream test communities such as OpenStack's RefStack/Tempest projects.
-Dovetail leverages this upstream test content and provides a common set of test platform services
+not deliver test content directly. Rather, test content is developed in other OPNFV and ONAP test frameworks such as Functest and upstream test communities such as OpenStack's RefStack/Tempest projects. Dovetail leverages this upstream test content and provides a common set of test platform services
 for the OVP.
 
 Dovetail works in conjunction with a web portal interface dubbed the 'OVP web portal' to allow
 users to upload test results to a centralized community repository. This facilitates user
 collaboration, result sharing, self-testing and community reviews. It also serves as a hub for
-new participants to learn about the program and access key resources. The link for this portal
-is at: `OPNFV Verified Program <https://nfvi-verified.lfnetworking.org>`_.
+new participants to learn about the program and access key resources. The link for this NFVI portal
+is at: `OPNFV NFVI Verified Program <https://nfvi-verified.lfnetworking.org>`_ and for the VNF portal is at: `OPNFV VNF Verified Program <https//vnf-verified.lfnetworking.org>`_.
 
 Use of the OVP web portal is open to all and only requires a valid Linux Foundation or OpenStack
 ID to login. Users are welcome to use the portal to upload, inspect and share results in a private
@@ -37,8 +27,9 @@ manner. In order to submit results for official review, the first step is apply 
 into the program with the participation form provided in the link: `OPNFV Verified Program
 Participation Form <https://na3.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=dc24bf38-ea41-40d4-9e58-9babc6eec778>`_
 
-Test Suites & Test Areas
-------------------------
+## NFVI Testing
+
+### Test Suites & Test Areas
 
 OVP/Dovetail groups test cases into test suites and test areas. Test suites are currently a basic
 categorization around releases for the most part. Executing the test suite 'ovp.2019.0x' without
@@ -54,8 +45,7 @@ The optional test cases are not required to be executed for the official complia
 review in the OVP 2018.09 release. However, execution of these cases is encouraged, as some
 optional test cases may become mandatory in future releases.
 
-Test Cases and Sub Test Cases
------------------------------
+### Test Cases and Sub Test Cases
 
 Each test area consists of multiple test cases where each test case can be a single test or
 broken down into sub test cases. A listing of test cases with the number of sub test cases noted
@@ -105,8 +95,7 @@ There are a total of 432 mandatory test cases.
 
 There are a total of 58 optional test cases.
 
-OPNFV Test Projects and Components
-----------------------------------
+### OPNFV Test Projects and Components
 
 The OPNFV test frameworks integrated into the Dovetail framework that deliver test content are:
 
@@ -114,23 +103,30 @@ The OPNFV test frameworks integrated into the Dovetail framework that deliver te
  * Yardstick
  * Bottlenecks
 
+## VNF Testing
 
-Acceptence and Marketing
-------------------------
+### Test Cases
 
-Upon successful community review of results for OVP 2018.09, the Linux Foundation Compliance
-Verification Committee (LFN CVC) on behalf of the Board of Directors can award a product 'OPNFV
+Add pointers to ONAP El Alto read the docs.
+
+### Test Requirements
+
+Add pointers to VNF RQTS in ONAP El Alto read the docs.
+
+Acceptance and Marketing
+========================
+
+Upon successful community review of submitted OVP results, the Linux Foundation Compliance
+Verification Committee (LFN CVC), on behalf of the LFN Board of Directors, can award a product 'OPNFV
 Verified' status. Use of 'OPNFV Verified' Program Marks shall be awarded to the platform used
 for compliance verification. The category label of 'Infrastructure' is used within the Program
 Marks logo and limits the scope of this OVP release to a SUT consisting of NFVI and VIM components
-using ETSI terminology. It does not provide compliance verification for specific VNFs in any fashion.
-The date '2018.09' corresponds to a reference SUT that aligns to the OPNFV Fraser release and
-currently aligns to the Dovetail framework version 2.2.0.
+using ETSI terminology. It does not provide compliance verification for specific VNFs in any fashion.  The category label of 'VNF' is used within the Program Marks logo and limits the scope of this OVP release to a SUT consisting of the VNF and, if required, its VNF Manager. 
 
 Organizations shall not use the Program Marks in any way that would associate it with any
 individual or company logo or brand, beyond the association to the specific platform to which it
 was awarded. While OpenStack RefStack interoperability and Tempest integration test cases are
-executed as part of the OVP 2018.09 compliance verification test suites, the OVP does not grant or
+executed as part of the compliance verification test suites, the OVP does not grant or
 award OpenStack Marks in any fashion. 'OPNFV Verified' status does not assert readiness for
 commercial deployment.
 
@@ -147,39 +143,20 @@ Release Data
 | **Project**                          | Dovetail                              |
 |                                      |                                       |
 +--------------------------------------+---------------------------------------+
-| **Repo tag**                         | ovp-2.0.0                             |
+| **Repo tag**                         | ovp-3.0.0                             |
 |                                      |                                       |
 +--------------------------------------+---------------------------------------+
 | **Release designation**              | OPNFV Verified Program (OVP)          |
-|                                      | 2018.09 (Fraser)                      |
+|                                      | 2019.12 (Hunter)                      |
 +--------------------------------------+---------------------------------------+
-| **Release date**                     | September 2018                        |
+| **Release date**                     | December 2019                         |
 |                                      |                                       |
 +--------------------------------------+---------------------------------------+
-| **Purpose of the delivery**          | Support OVP 2018.09 release with      |
-|                                      | OPNFV Fraser release as reference SUT |
+| **Purpose of the delivery**          | Support OVP 2019.12 release with      |
+|                                      | OPNFV Hunter release as reference SUT.|
+|                                      | Support VNF testing per ONAP El Alto  |
+|                                      | release.                              |
 +--------------------------------------+---------------------------------------+
-
-There is a patch version of Dovetail after the above release.
-
-+------------------------------+--------------------------------------------------------------------------------+
-| **Project**                  | Dovetail                                                                       |
-|                              |                                                                                |
-+------------------------------+--------------------------------------------------------------------------------+
-| **Repo tag**                 | ovp-2.2.0                                                                      |
-|                              |                                                                                |
-+------------------------------+--------------------------------------------------------------------------------+
-| **Release date**             | March 2019                                                                     |
-|                              |                                                                                |
-+------------------------------+--------------------------------------------------------------------------------+
-| **Purpose of the delivery**  | - Test scope update                                                            |
-|                              |    - Move 2 sub-test cases in functest.security.patrole to optional            |
-|                              |    - These 2 sub-test cases rely on vxlan as virtual networking implementation |
-|                              | - Three bug fixes                                                              |
-|                              |    - Yardstick: Add SLA check and reverse the creation order of servers        |
-|                              |    - Dovetail: Set Yardstick_TAG to be ovp-2.0.0 instead of stable             |
-|                              |    - Bottlenecks: Make ram_num configurable for DPDK                           |
-+------------------------------+--------------------------------------------------------------------------------+
 
 Deliverables
 ============
@@ -233,18 +210,15 @@ Documents
 - `OPV Reviewer Guide <https://docs.opnfv.org/en/stable-fraser/submodules/dovetail/docs/testing/user/reviewerguide/index.html>`_
 
 
-Testing with OPNFV Fraser Installers
+Testing with OPNFV Hunter Installers
 ====================================
 
-OVP 2018.09 and Dovetail 2.2.0 are known to be have been tested with the following OPNFV
+OVP 2019.12 and Dovetail 3.0.0 are known to be have been tested with the following OPNFV
 Fraser installer versions.
 
 +-----------------+----------------------+
 |   Installer     |      Version         |
 +=================+======================+
-|   Apex          |      stable/fraser   |
-+-----------------+----------------------+
-|   Compass       |      stable/fraser   |
 +-----------------+----------------------+
 |   Fuel          |      stable/fraser   |
 +-----------------+----------------------+
