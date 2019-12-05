@@ -160,8 +160,8 @@ results files:
    $ mkdir -p ${HOME}/dovetail
    $ export DOVETAIL_HOME=${HOME}/dovetail
 
-For example, Here we set dovetail home directory to be ``${HOME}/dovetail``.
-Then create two directories named ``pre_config`` and ``images`` inside this directory
+For example, here we set dovetail home directory to be ``${HOME}/dovetail``.
+Then create two directories named ``pre_config`` and ``images`` under this directory
 to store all Dovetail related config files and all test images respectively:
 
 .. code-block:: bash
@@ -275,7 +275,12 @@ Here is an example of what this file should contain.
      # Expected device name when a volume is attached to an instance.
      volume_device_name: vdb
 
-Use the listing above as a minimum to execute the mandatory test areas.
+     # One sub test case of functest.tempest.osinterop will be skipped if not provide this version.
+     # The default range of microversion for tempest is [None - None].
+     # Test case functest.tempest.osinterop required the range to be [2.2 - latest].
+     max_microversion: 2.65
+
+Use the listing above as a minimum to execute the mandatory test cases.
 
 If the optional BGPVPN Tempest API tests shall be run, Tempest needs to be told
 that the BGPVPN service is available. To do that, add the following to the
@@ -309,10 +314,12 @@ Below is a sample with the required syntax when password is employed by the cont
 
    nodes:
    -
-       # This can not be changed and must be node0.
+       # This info of node0 is used only for one optional test case 'yardstick.ha.controller_restart'.
+       # If you don't plan to test it, this Jumpserver node can be ignored.
+       # This can not be changed and **must** be node0.
        name: node0
 
-       # This must be Jumpserver.
+       # This **must** be Jumpserver.
        role: Jumpserver
 
        # This is the instance IP of a node which has ipmitool installed.
@@ -325,10 +332,13 @@ Below is a sample with the required syntax when password is employed by the cont
        password: root
 
    -
-       # This can not be changed and must be node1.
+       # Almost all HA test cases are trying to login to a controller node named 'node1'
+       # and then kill some processes running on it.
+       # If you don't want to reset the attack node name for each test case, this
+       # name can not be changed and **must** be node1.
        name: node1
 
-       # This must be controller.
+       # This **must** be controller.
        role: Controller
 
        # This is the instance IP of a controller node, which is the haproxy primary node
@@ -342,6 +352,13 @@ Below is a sample with the required syntax when password is employed by the cont
 
    process_info:
    -
+       # For all HA test cases, there are 2 parameters, 'attack_process' and 'attack_host',
+       # which support to be set by users instead of using the default values.
+       # The 'attack_process' is the process name of one HA test case which it try to kill.
+       # The 'attack_host' is the host name which the test case try to login and then kill
+       # the process running on it.
+       # Fllowing is 2 samples.
+
        # The default attack process of yardstick.ha.rabbitmq is 'rabbitmq-server'.
        # Here can be reset to 'rabbitmq'.
        testcase_name: yardstick.ha.rabbitmq
@@ -368,7 +385,7 @@ A sample is provided below to show the required syntax when using a key file.
 
        # Private ssh key for accessing the controller nodes. If a keyfile is
        # being used instead of password, it **must** be put under
-       # ``$DOVETAIL_HOME/pre_config/.
+       # $DOVETAIL_HOME/pre_config/ and named 'id_rsa'.
        key_filename: /home/dovetail/pre_config/id_rsa
 
 Under nodes, repeat entries for name, role, ip, user and password or key file for each of the
@@ -438,20 +455,26 @@ OPNFV's OVP web page first to determine the right tag for OVP testing.
 Online Test Host
 """"""""""""""""
 
-If the Test Host is online, you can directly pull Dovetail Docker image and download Ubuntu
-and Cirros images. All other dependent docker images will automatically be downloaded. The
-Ubuntu and Cirros images are used by Dovetail for image creation and VM instantiation within
-the SUT.
+If the Test Host is online, you can directly pull Dovetail Docker image, then all
+other dependent docker images will automatically be downloaded. Also you can download
+other related VM images such as Ubuntu and Cirros images which are used by Dovetail
+for image creation and VM instantiation within the SUT.
+
+Following given the download url for each VM images. Cirros-0.4.0 and Ubuntu-16.04
+are used by mandatory test cases, so they are the only 2 images **must** be downloaded
+before doing the test. There are also 2 other optional VM images, Ubuntu-14.04 and
+Cloudify-manager, which are used by optional test cases functest.vnf.vepc and functest.vnf.vims.
+If you don't plan to test these 2 test cases, you can skip downloading these 2 images.
 
 .. code-block:: bash
 
    $ wget -nc http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img -P ${DOVETAIL_HOME}/images
-   $ wget -nc https://cloud-images.ubuntu.com/releases/14.04/release/ubuntu-14.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/images
    $ wget -nc https://cloud-images.ubuntu.com/releases/16.04/release/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/images
-   $ wget -nc http://repository.cloudifysource.org/cloudify/4.0.1/sp-release/cloudify-manager-premium-4.0.1.qcow2 -P ${DOVETAIL_HOME}/images
+   $ wget -nc https://cloud-images.ubuntu.com/releases/14.04/release/ubuntu-14.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/images
+   $ wget -nc http://repository.cloudifysource.org/cloudify/19.01.24/community-release/cloudify-docker-manager-community-19.01.24.tar -P ${DOVETAIL_HOME}/images
 
-   $ sudo docker pull opnfv/dovetail:ovp-2.2.0
-   ovp-2.2.0: Pulling from opnfv/dovetail
+   $ sudo docker pull opnfv/dovetail:ovp-3.0.0
+   ovp-3.0.0: Pulling from opnfv/dovetail
    324d088ce065: Pull complete
    2ab951b6c615: Pull complete
    9b01635313e2: Pull complete
@@ -463,7 +486,7 @@ the SUT.
    0ad9f4168266: Pull complete
    d949894f87f6: Pull complete
    Digest: sha256:7449601108ebc5c40f76a5cd9065ca5e18053be643a0eeac778f537719336c29
-   Status: Downloaded newer image for opnfv/dovetail:ovp-2.2.0
+   Status: Downloaded newer image for opnfv/dovetail:ovp-3.0.0
 
 Offline Test Host
 """""""""""""""""
@@ -474,26 +497,25 @@ to pull all dependent images is because Dovetail normally does dependency checki
 and automatically pulls images as needed, if the Test Host is online. If the Test Host is
 offline, then all these dependencies will need to be manually copied.
 
-The Docker images and Cirros image below are necessary for all mandatory test cases.
+The Docker images, Ubuntu and Cirros image below are necessary for all mandatory test cases.
 
 .. code-block:: bash
 
-   $ sudo docker pull opnfv/dovetail:ovp-2.2.0
-   $ sudo docker pull opnfv/functest-smoke:opnfv-6.3.0
-   $ sudo docker pull opnfv/yardstick:ovp-2.0.0
-   $ sudo docker pull opnfv/bottlenecks:ovp-2.0.0
+   $ sudo docker pull opnfv/dovetail:ovp-3.0.0
+   $ sudo docker pull opnfv/functest-smoke:hunter
+   $ sudo docker pull opnfv/functest-healthcheck:hunter
+   $ sudo docker pull opnfv/yardstick:<need input>
+   $ sudo docker pull opnfv/bottlenecks:<need input>
    $ wget -nc http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img -P {ANY_DIR}
+   $ wget -nc https://cloud-images.ubuntu.com/releases/16.04/release/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/images
 
 The other Docker images and test images below are only used by optional test cases.
 
 .. code-block:: bash
 
-   $ sudo docker pull opnfv/functest-healthcheck:opnfv-6.3.0
-   $ sudo docker pull opnfv/functest-features:opnfv-6.3.0
-   $ sudo docker pull opnfv/functest-vnf:opnfv-6.3.0
+   $ sudo docker pull opnfv/functest-vnf:hunter
    $ wget -nc https://cloud-images.ubuntu.com/releases/14.04/release/ubuntu-14.04-server-cloudimg-amd64-disk1.img -P {ANY_DIR}
-   $ wget -nc https://cloud-images.ubuntu.com/releases/16.04/release/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P {ANY_DIR}
-   $ wget -nc http://repository.cloudifysource.org/cloudify/4.0.1/sp-release/cloudify-manager-premium-4.0.1.qcow2 -P {ANY_DIR}
+   $ wget -nc http://repository.cloudifysource.org/cloudify/19.01.24/community-release/cloudify-docker-manager-community-19.01.24.tar -P ${DOVETAIL_HOME}/images
 
 Once all these images are pulled, save the images, copy them to the Test Host, and then load
 the Dovetail image and all dependent images at the Test Host.
@@ -502,10 +524,10 @@ At the online host, save the images with the command below.
 
 .. code-block:: bash
 
-   $ sudo docker save -o dovetail.tar opnfv/dovetail:ovp-2.2.0 \
-     opnfv/functest-smoke:opnfv-6.3.0 opnfv/functest-healthcheck:opnfv-6.3.0 \
-     opnfv/functest-features:opnfv-6.3.0 opnfv/functest-vnf:opnfv-6.3.0 \
-     opnfv/yardstick:ovp-2.0.0 opnfv/bottlenecks:ovp-2.0.0
+   $ sudo docker save -o dovetail.tar opnfv/dovetail:ovp-3.0.0 \
+     opnfv/functest-smoke:hunter opnfv/functest-healthcheck:hunter \
+     opnfv/functest-vnf:hunter \
+     opnfv/yardstick:<need input> opnfv/bottlenecks:<need input>
 
 The command above creates a dovetail.tar file with all the images, which can then be copied
 to the Test Host. To load the Dovetail images on the Test Host execute the command below.
@@ -520,13 +542,12 @@ Now check to see that all Docker images have been pulled or loaded properly.
 
    $ sudo docker images
    REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE
-   opnfv/dovetail                  ovp-2.2.0           ac3b2d12b1b0        24 hours ago        784 MB
-   opnfv/functest-smoke            opnfv-6.3.0         010aacb7c1ee        17 hours ago        594.2 MB
-   opnfv/functest-healthcheck      opnfv-6.3.0         2cfd4523f797        17 hours ago        234 MB
-   opnfv/functest-features         opnfv-6.3.0         b61d4abd56fd        17 hours ago        530.5 MB
-   opnfv/functest-vnf              opnfv-6.3.0         929e847a22c3        17 hours ago        1.87 GB
-   opnfv/yardstick                 ovp-2.0.0           84b4edebfc44        17 hours ago        2.052 GB
-   opnfv/bottlenecks               ovp-2.0.0           3d4ed98a6c9a        21 hours ago        638 MB
+   opnfv/dovetail                  ovp-3.0.0           ac3b2d12b1b0        24 hours ago        784 MB
+   opnfv/functest-smoke            hunter              010aacb7c1ee        17 hours ago        594.2 MB
+   opnfv/functest-healthcheck      hunter              2cfd4523f797        17 hours ago        234 MB
+   opnfv/functest-vnf              hunter              929e847a22c3        17 hours ago        1.87 GB
+   opnfv/yardstick                 <need input>        84b4edebfc44        17 hours ago        2.052 GB
+   opnfv/bottlenecks               <need input>        3d4ed98a6c9a        21 hours ago        638 MB
 
 After copying and loading the Dovetail images at the Test Host, also copy the test images
 (Ubuntu, Cirros and cloudify-manager) to the Test Host.
@@ -534,7 +555,7 @@ After copying and loading the Dovetail images at the Test Host, also copy the te
 - Copy image ``cirros-0.4.0-x86_64-disk.img`` to ``${DOVETAIL_HOME}/images/``.
 - Copy image ``ubuntu-14.04-server-cloudimg-amd64-disk1.img`` to ``${DOVETAIL_HOME}/images/``.
 - Copy image ``ubuntu-16.04-server-cloudimg-amd64-disk1.img`` to ``${DOVETAIL_HOME}/images/``.
-- Copy image ``cloudify-manager-premium-4.0.1.qcow2`` to ``${DOVETAIL_HOME}/images/``.
+- Copy image ``cloudify-docker-manager-community-19.01.24.tar`` to ``${DOVETAIL_HOME}/images/``.
 
 Starting Dovetail Docker
 ------------------------
@@ -571,10 +592,10 @@ for the details of the CLI.
 
    $ dovetail run --testsuite <test-suite-name>
 
-The '--testsuite' option is used to control the set of tests intended for execution
+The ``--testsuite`` option is used to control the set of tests intended for execution
 at a high level. For the purposes of running the OVP test suite, the test suite name follows
-the following format, ``ovp.<major>.<minor>.<patch>``. The latest and default test suite is
-ovp.2019.0x.
+the following format, ``ovp.<release-version>``. The latest and default test suite is
+ovp.2019.12.
 
 .. code-block:: bash
 
@@ -584,18 +605,18 @@ This command is equal to
 
 .. code-block:: bash
 
-   $ dovetail run --testsuite ovp.2019.0x
+   $ dovetail run --testsuite ovp.2019.12
 
 Without any additional options, the above command will attempt to execute all mandatory and
-optional test cases with test suite ovp.2019.0x.
+optional test cases with test suite ovp.2019.12.
 To restrict the breadth of the test scope, it can also be specified using options
-'--mandatory' or '--optional'.
+``--mandatory`` or ``--optional``.
 
 .. code-block:: bash
 
    $ dovetail run --mandatory
 
-Also there is a '--testcase' option provided to run a specified test case.
+Also there is a ``--testcase`` option provided to run a specified test case.
 
 .. code-block:: bash
 
@@ -628,7 +649,7 @@ the DEPLOY_SCENARIO environment parameter having as substring the feature name "
 (e.g. os-nosdn-ovs-ha).
 
 Note for the users:
- - if their system uses DPDK, they should run with --deploy-scenario <xx-yy-ovs-zz>
+ - if their system uses DPDK, they should run with ``--deploy-scenario <xx-yy-ovs-zz>``
    (e.g. os-nosdn-ovs-ha)
  - this is an experimental feature
 
@@ -639,14 +660,14 @@ Note for the users:
 By default, results are stored in local files on the Test Host at ``$DOVETAIL_HOME/results``.
 Each time the 'dovetail run' command is executed, the results in the aforementioned directory
 are overwritten. To create a singular compressed result file for upload to the OVP portal or
-for archival purposes, the tool provides an option '--report'.
+for archival purposes, the tool provides an option ``--report``.
 
 .. code-block:: bash
 
    $ dovetail run --report
 
 If the Test Host is offline, ``--offline`` should be added to support running with
-local resources.
+local resources. Otherwise, it will try to download resources online during the run time.
 
 .. code-block:: bash
 
@@ -658,22 +679,23 @@ result file on the Test Host.
 .. code-block:: bash
 
    $ dovetail run --offline --testcase functest.vping.userdata --report
-   2018-05-22 08:16:16,353 - run - INFO - ================================================
-   2018-05-22 08:16:16,353 - run - INFO - Dovetail compliance: ovp.2019.0x!
-   2018-05-22 08:16:16,353 - run - INFO - ================================================
-   2018-05-22 08:16:16,353 - run - INFO - Build tag: daily-master-660de986-5d98-11e8-b635-0242ac110001
-   2018-05-22 08:19:31,595 - run - WARNING - There is no hosts file /home/dovetail/pre_config/hosts.yaml, may be some issues with domain name resolution.
-   2018-05-22 08:19:31,595 - run - INFO - Get hardware info of all nodes list in file /home/dovetail/pre_config/pod.yaml ...
-   2018-05-22 08:19:39,778 - run - INFO - Hardware info of all nodes are stored in file /home/dovetail/results/all_hosts_info.json.
-   2018-05-22 08:19:39,961 - run - INFO - >>[testcase]: functest.vping.userdata
-   2018-05-22 08:31:17,961 - run - INFO - Results have been stored with file /home/dovetail/results/functest_results.txt.
-   2018-05-22 08:31:17,969 - report.Report - INFO -
+   2019-12-04 07:31:13,156 - run - INFO - ================================================
+   2019-12-04 07:31:13,157 - run - INFO - Dovetail compliance: ovp.2019.12!
+   2019-12-04 07:31:13,157 - run - INFO - ================================================
+   2019-12-04 07:31:13,157 - run - INFO - Build tag: daily-master-0c9184e6-1668-11ea-b1cd-0242ac110002
+   2019-12-04 07:31:13,610 - run - INFO - >>[testcase]: functest.vping.userdata
+   2019-12-04 07:31:13,612 - dovetail.test_runner.DockerRunner - WARNING - There is no hosts file /home/ovp/pre_config/hosts.yaml. This may cause some issues with domain name resolution.
+   2019-12-04 07:31:14,587 - dovetail.test_runner.DockerRunner - INFO - Get hardware info of all nodes list in file /home/ovp/pre_config/pod.yaml ...
+   2019-12-04 07:31:14,587 - dovetail.test_runner.DockerRunner - INFO - Hardware info of all nodes are stored in file /home/dovetail/results/all_hosts_info.json.
+   2019-12-04 07:31:14,612 - dovetail.container.Container - WARNING - There is no hosts file /home/ovp/pre_config/hosts.yaml. This may cause some issues with domain name resolution.
+   2019-12-04 07:32:13,804 - dovetail.report.Report - INFO - Results have been stored with files: ['/home/ovp/results/functest_results.txt'].
+   2019-12-04 07:32:13,808 - dovetail.report.Report - INFO -
 
    Dovetail Report
-   Version: 1.0.0
-   Build Tag: daily-master-660de986-5d98-11e8-b635-0242ac110001
-   Upload Date: 2018-05-22 08:31:17 UTC
-   Duration: 698.01 s
+   Version: 2019.12
+   Build Tag: daily-master-0c9184e6-1668-11ea-b1cd-0242ac110002
+   Test Date: 2019-12-04 07:32:13 UTC
+   Duration: 60.20 s
 
    Pass Rate: 100.00% (1/1)
    vping:                     pass rate 100.00%
@@ -682,28 +704,27 @@ result file on the Test Host.
 
 When test execution is complete, a tar file with all result and log files is written in
 ``$DOVETAIL_HOME`` on the Test Host. An example filename is
-``${DOVETAIL_HOME}/logs_20180105_0858.tar.gz``. The file is named using a
-timestamp that follows the convention 'YearMonthDay-HourMinute'. In this case, it was generated
-at 08:58 on January 5th, 2018. This tar file is used for uploading the logs to the OVP portal.
+``${DOVETAIL_HOME}/logs_20191204_0732.tar.gz``. The file is named using a timestamp
+that follows the convention 'YearMonthDay_HourMinute'. In this case, it was generated
+at 07:32 on December 4th, 2019. This tar file is used for uploading the logs and
+results to the OVP portal.
 
 
 Making Sense of OVP Test Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When a tester is performing trial runs, Dovetail stores results in local files on the Test
-Host by default within the directory specified below.
-
-
-.. code-block:: bash
-
-       cd $DOVETAIL_HOME/results
-
-#. Local file
+Host by default within directory ``$DOVETAIL_HOME/results``.
 
    * Log file: dovetail.log
 
      * Review the dovetail.log to see if all important information has been captured
-       - in default mode without DEBUG.
+
+       * In default mode without DEBUG.
+
+       * Adding option ``-d/--debug`` to change the mode to be DEBUG.
+
+   * Result file: results.json
 
      * Review the results.json to see all results data including criteria for PASS or FAIL.
 
@@ -713,11 +734,11 @@ Host by default within the directory specified below.
        ``security_logs/functest.security.XXX.html`` respectively,
        which has the passed, skipped and failed test cases results.
 
-     * This kind of files need to be opened with a web browser.
+       * This kind of files need to be opened with a web browser.
 
-     * The skipped test cases are accompanied with the reason tag for the users to see why these test cases skipped.
+       * The skipped test cases are accompanied with the reason tag for the users to see why these test cases skipped.
 
-     * The failed test cases have rich debug information for the users to see why these test cases failed.
+       * The failed test cases have rich debug information for the users to see why these test cases failed.
 
    * Vping test cases
 
@@ -741,7 +762,7 @@ OVP Portal Web Interface
 
 The OVP portal is a public web interface for the community to collaborate on results
 and to submit results for official OPNFV compliance verification. The portal can be used as a
-resource by users and testers to navigate and inspect results more easily than by manually
+resource by users to navigate and inspect results more easily than by manually
 inspecting the log files. The portal also allows users to share results in a private manner
 until they are ready to submit results for peer community review.
 
@@ -751,11 +772,11 @@ until they are ready to submit results for peer community review.
 
    * Sign In / Sign Up Links
 
-     * Accounts are exposed through Linux Foundation or OpenStack account credentials.
+     * Accounts are exposed through Linux Foundation.
 
      * If you already have a Linux Foundation ID, you can sign in directly with your ID.
 
-     * If you do not have a Linux Foundation ID, you can sign up for a new one using 'Sign Up'
+     * If you do not have a Linux Foundation ID, you can sign up for a new one using 'Sign Up'.
 
    * My Results Tab
 
@@ -763,20 +784,27 @@ until they are ready to submit results for peer community review.
 
      * This page lists all results uploaded by you after signing in.
 
-     * Following the two steps below, the results are status uploaded and in status 'private'.
+     * Following the two steps below, the results are uploaded and in status 'private'.
 
-     * Obtain results tar file located at ``${DOVETAIL_HOME}/``, e.g. ``logs_20180105_0858.tar.gz``
+       * Obtain results tar file located at ``${DOVETAIL_HOME}/``, e.g. ``logs_20180105_0858.tar.gz``.
 
-     * Use the *Choose File* button where a file selection dialog allows you to choose your result
-       file from the hard-disk. Then click the *Upload* button and see a results ID once your
+       * Use the *Choose File* button where a file selection dialog allows you to choose your result
+       file from the hard-disk. Then click the *Upload result* button and see a results ID once your
        upload succeeds.
 
      * Results are remaining in status 'private' until they are submitted for review.
 
-     * Use the *Operation* column drop-down option 'submit to review', to expose results to
-       OPNFV community peer reviewers. Use the 'withdraw submit' option to reverse this action.
+     * Use the *Operation* column drop-down option *submit to review*, to expose results to
+       OPNFV community peer reviewers. Use the *withdraw submit* option to reverse this action.
 
-     * Use the *Operation* column drop-down option 'share with' to share results with other
+       * Results status are changed to be 'review' after submit to review.
+
+     * Use the *View Reviews* to find the review status including reviewers' names and the outcome.
+
+     * The administrator will approve the results which have got 2 positive outcome from 2 reviewers.
+       Then the status will be changed to be 'verified'.
+
+     * Use the *Operation* column drop-down option *share with* to share results with other
        users by supplying either the login user ID or the email address associated with
        the share target account. The result is exposed to the share target but remains private
        otherwise.
@@ -784,6 +812,8 @@ until they are ready to submit results for peer community review.
    * Profile Tab
 
      * This page shows your account info after you sign in.
+
+     * There are 3 different roles: administrator, user and reviewer.
 
 Updating Dovetail or a Test Suite
 ---------------------------------
@@ -796,5 +826,6 @@ Follow the instructions in section `Installing Dovetail on the Test Host`_ and
    sudo docker pull opnfv/dovetail:<dovetail_new_tag>
    sudo docker pull opnfv/functest:<functest_new_tag>
    sudo docker pull opnfv/yardstick:<yardstick_new_tag>
+   sudo docker pull opnfv/bottlenecks:<bottlenecks_new_tag>
 
 This step is necessary if dovetail software or the OVP test suite have updates.
