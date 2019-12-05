@@ -135,7 +135,7 @@ Dovetail List Commands
 
 .. code-block:: bash
 
-   root@1f230e719e44:~/dovetail/dovetail# dovetail list ovp.2019.0x
+   root@1f230e719e44:~/dovetail/dovetail# dovetail list ovp.2019.12
    - mandatory
        functest.vping.userdata
        functest.vping.ssh
@@ -166,6 +166,7 @@ Dovetail List Commands
        functest.tempest.vm_lifecycle
        functest.tempest.network_scenario
        functest.tempest.bgpvpn
+       functest.security.patrole_vxlan_dependent
        yardstick.ha.neutron_l3_agent
        yardstick.ha.controller_restart
        functest.vnf.vims
@@ -194,12 +195,15 @@ Dovetail Show Commands
      validate:
        type: functest
        testcase: vping_ssh
+       image_name: opnfv/functest-healthcheck
      report:
        source_archive_files:
          - functest.log
        dest_archive_files:
          - vping_logs/functest.vping.ssh.log
-       check_results_file: 'functest_results.txt'
+       check_results_file:
+         - 'functest_results.txt'
+       portal_key_file: vping_logs/functest.vping.ssh.log
        sub_testcase_list:
 
 .. code-block:: bash
@@ -214,20 +218,20 @@ Dovetail Show Commands
        testcase: tempest_custom
        pre_condition:
          - 'cp /home/opnfv/userconfig/pre_config/tempest_conf.yaml /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/tempest_conf.yaml'
-         - 'cp /home/opnfv/userconfig/pre_config/testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
-       pre_copy:
-         src_file: tempest_custom.txt
-         dest_path: /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt
+         - 'cp /home/opnfv/userconfig/tempest_custom_testcases.yaml /usr/lib/python2.7/site-packages/xtesting/ci/testcases.yaml'
+         - 'cp /home/opnfv/functest/results/tempest_custom.txt /usr/lib/python2.7/site-packages/functest/opnfv_tests/openstack/tempest/custom_tests/test_list.txt'
      report:
        source_archive_files:
          - functest.log
-         - tempest_custom/tempest.log
+         - tempest_custom/rally.log
          - tempest_custom/tempest-report.html
        dest_archive_files:
          - tempest_logs/functest.tempest.image.functest.log
          - tempest_logs/functest.tempest.image.log
          - tempest_logs/functest.tempest.image.html
-       check_results_file: 'functest_results.txt'
+       check_results_file:
+         - 'functest_results.txt'
+       portal_key_file: tempest_logs/functest.tempest.image.html
        sub_testcase_list:
          - tempest.api.image.v2.test_images.BasicOperationsImagesTest.test_register_upload_get_image_file[id-139b765e-7f3d-4b3d-8b37-3ca3876ee318,smoke]
          - tempest.api.image.v2.test_versions.VersionsTest.test_list_versions[id-659ea30a-a17c-4317-832c-0f68ed23c31d,smoke]
@@ -243,41 +247,43 @@ Dovetail Run Commands
    Dovetail compliance test entry!
 
    Options:
-   --deploy-scenario TEXT  Specify the DEPLOY_SCENARIO which will be used as input by each testcase respectively
+   --opnfv-ci              Only enabled when running with OPNFV CI jobs and pushing results to TestAPI DB
    --optional              Run all optional test cases.
+   --mandatory             Run all mandatory test cases.
+   --deploy-scenario TEXT  Specify the DEPLOY_SCENARIO which will be used as input by each testcase respectively
+   -n, --no-clean          Keep all Containers created for debuging.
+   --no-api-validation     disable strict API response validation
    --offline               run in offline method, which means not to update the docker upstream images, functest, yardstick, etc.
    -r, --report            Create a tarball file to upload to OVP web portal
+   -s, --stop              Flag for stopping on test case failure.
    -d, --debug             Flag for showing debug log on screen.
    --testcase TEXT         Compliance testcase. Specify option multiple times to include multiple test cases.
    --testarea TEXT         Compliance testarea within testsuite. Specify option multiple times to include multiple test areas.
-   -s, --stop              Flag for stopping on test case failure.
-   -n, --no-clean          Keep all Containers created for debuging.
-   --no-api-validation     disable strict API response validation
-   --mandatory             Run all mandatory test cases.
    --testsuite TEXT        compliance testsuite.
    -h, --help              Show this message and exit.
 
 .. code-block:: bash
 
    root@1f230e719e44:~/dovetail/dovetail# dovetail run --testcase functest.vping.ssh --offline -r --deploy-scenario os-nosdn-ovs-ha
-   2017-10-12 14:57:51,278 - run - INFO - ================================================
-   2017-10-12 14:57:51,278 - run - INFO - Dovetail compliance: ovp.2019.0x!
-   2017-10-12 14:57:51,278 - run - INFO - ================================================
-   2017-10-12 14:57:51,278 - run - INFO - Build tag: daily-master-b80bca76-af5d-11e7-879a-0242ac110002
-   2017-10-12 14:57:51,278 - run - INFO - DEPLOY_SCENARIO : os-nosdn-ovs-ha
-   2017-10-12 14:57:51,336 - run - WARNING - There is no hosts file /home/dovetail/pre_config/hosts.yaml, may be some issues with domain name resolution.
-   2017-10-12 14:57:51,336 - run - INFO - Get hardware info of all nodes list in file /home/cvp/pre_config/pod.yaml ...
-   2017-10-12 14:57:51,336 - run - INFO - Hardware info of all nodes are stored in file /home/cvp/results/all_hosts_info.json.
-   2017-10-12 14:57:51,517 - run - INFO - >>[testcase]: functest.vping.ssh
-   2017-10-12 14:58:21,325 - report.Report - INFO - Results have been stored with file /home/cvp/results/functest_results.txt.
-   2017-10-12 14:58:21,325 - report.Report - INFO -
+   2019-12-06 02:51:52,634 - run - INFO - ================================================
+   2019-12-06 02:51:52,634 - run - INFO - Dovetail compliance: ovp.2019.12!
+   2019-12-06 02:51:52,634 - run - INFO - ================================================
+   2019-12-06 02:51:52,634 - run - INFO - Build tag: daily-master-5b58584a-17d3-11ea-878a-0242ac110002
+   2019-12-06 02:51:52,634 - run - INFO - DEPLOY_SCENARIO : os-nosdn-ovs-ha
+   2019-12-06 02:51:53,077 - run - INFO - >>[testcase]: functest.vping.ssh
+   2019-12-06 02:51:53,078 - dovetail.test_runner.DockerRunner - WARNING - There is no hosts file /home/ovp/pre_config/hosts.yaml. This may cause some issues with domain name resolution.
+   2019-12-06 02:51:54,048 - dovetail.test_runner.DockerRunner - INFO - Get hardware info of all nodes list in file /home/ovp/pre_config/pod.yaml ...
+   2019-12-06 02:51:54,049 - dovetail.test_runner.DockerRunner - INFO - Hardware info of all nodes are stored in file /home/dovetail/results/all_hosts_info.json.
+   2019-12-06 02:51:54,073 - dovetail.container.Container - WARNING - There is no hosts file /home/ovp/pre_config/hosts.yaml. This may cause some issues with domain name resolution.
+   2019-12-06 02:52:57,982 - dovetail.report.Report - INFO - Results have been stored with files: ['/home/ovp/results/functest_results.txt'].
+   2019-12-06 02:52:57,986 - dovetail.report.Report - INFO -
 
    Dovetail Report
-   Version: 2018.09
-   Build Tag: daily-master-b80bca76-af5d-11e7-879a-0242ac110002
-   Test Date: 2018-08-13 03:23:56 UTC
-   Duration: 291.92 s
+   Version: 2019.12
+   Build Tag: daily-master-5b58584a-17d3-11ea-878a-0242ac110002
+   Test Date: 2019-12-06 02:52:57 UTC
+   Duration: 64.91 s
 
-   Pass Rate: 0.00% (1/1)
-   vping:                     pass rate 100%
+   Pass Rate: 100.00% (1/1)
+   vping:                     pass rate 100.00%
    -functest.vping.ssh        PASS
