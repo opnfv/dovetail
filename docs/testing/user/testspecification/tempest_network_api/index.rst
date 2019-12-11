@@ -2,9 +2,9 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) Ericsson AB
 
-===========================================
+======================================
 Tempest Network API test specification
-===========================================
+======================================
 
 
 Scope
@@ -82,7 +82,7 @@ The test area is structured in individual tests as listed below.
 For detailed information on the individual steps and assertions performed
 by the tests, review the Python source code accessible via the following links:
 
-All these test cases are included in the test case dovetail.tempest.network of
+All these test cases are included in the test case functest.tempest.network of
 OVP test suite.
 
 

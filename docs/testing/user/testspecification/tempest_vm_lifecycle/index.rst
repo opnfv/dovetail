@@ -59,7 +59,7 @@ Each test case is able to run independently, i.e. irrelevant of the state
 created by a previous test. Specifically, every test performs clean-up
 operations which return the system to the same state as before the test.
 
-All these test cases are included in the test case dovetail.tempest.vm_lifecycle of
+All these test cases are included in the test case functest.tempest.vm_lifecycle of
 OVP test suite.
 
 Test Descriptions
@@ -174,7 +174,7 @@ Test execution
 * **Test assertion 8:** Verify VM1's addresses have been refreshed after disassociating FIP1
 * Test action 10: Delete SG1, IMG1, KEYP1, VOL1, VM1 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates a minimum basic scenario. Specifically, the test verifies that:
@@ -227,7 +227,7 @@ Test execution
 * **Test assertion 3:** Verify SRC_HOST does not equal to DST_HOST
 * Test action 11: Delete KEYP1, VM1 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to cold migrate VMs. Specifically, the test verifies that:
@@ -274,7 +274,7 @@ Test execution
 * **Test assertion 3:** Verify can ping FIP1 successfully and can SSH to VM1 via FIP1
 * Test action 8: Delete KEYP1, VM1 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to pause and unpause VMs. Specifically, the test verifies that:
@@ -319,7 +319,7 @@ Test execution
 * **Test assertion 1:** Verify can ping FIP1 successfully and can SSH to VM1 via FIP1
 * Test action 6: Delete KEYP1, VM1 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to reboot servers. Specifically, the test verifies that:
@@ -362,7 +362,7 @@ Test execution
 * **Test assertion 1:** Verify can ping FIP1 successfully and can SSH to VM1 via FIP1
 * Test action 6: Delete KEYP1, VM1 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to rebuild servers. Specifically, the test verifies that:
@@ -407,7 +407,7 @@ Test execution
 * **Test assertion 1:** Verify can ping FIP1 successfully and can SSH to VM1 via FIP1
 * Test action 8: Delete KEYP1, VM1 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to resize servers. Specifically, the test verifies that:
@@ -453,7 +453,7 @@ Test execution
 * **Test assertion 2:** Verify can ping FIP1 successfully and can SSH to VM1 via FIP1
 * Test action 8: Delete KEYP1, VM1 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to stop and start servers. Specifically, the test verifies that:
@@ -501,7 +501,7 @@ Test execution
 * **Test assertion 2:** Verify can ping FIP1 successfully and can SSH to VM1 via FIP1
 * Test action 8: Delete KEYP1, VM1 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to suspend and resume servers. Specifically, the test verifies that:
@@ -553,7 +553,7 @@ Test execution
 * **Test assertion 4:** Verify VM1 status is 'ACTIVE'
 * Test action 10: Delete KEYP1, VM1 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to suspend and resume servers in sequence.
@@ -597,7 +597,7 @@ Test execution
 * **Test assertion 1:** VM1's status is 'ACTIVE'
 * Test action 6: Delete VM1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to resize volume backed servers.
@@ -646,7 +646,7 @@ Test execution
 * **Test assertion 1:** Verify the values written and read are the same
 * Test action 9: Delete SG1, KEYP1 and VM1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to shelve and unshelve servers.
@@ -694,7 +694,7 @@ Test execution
 * **Test assertion 1:** Verify T_STAMP1 equals to T_STAMP2
 * Test action 9: Delete SG1, KEYP1 and VM1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to shelve and unshelve volume backed servers.

@@ -2,9 +2,9 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) Ericsson AB
 
-===========================================
+================================
 Tempest Image test specification
-===========================================
+================================
 
 
 Scope
@@ -32,7 +32,7 @@ The test area is structured in individual tests as listed below.
 For detailed information on the individual steps and assertions performed
 by the tests, review the Python source code accessible via the following links:
 
-All these test cases are included in the test case dovetail.tempest.image of
+All these test cases are included in the test case functest.tempest.image of
 OVP test suite.
 
 - `Register, Upload, Get Image and Get Image File API's <https://github.com/openstack/tempest/blob/18.0.0/tempest/api/image/v2/test_images.py#L32>`_

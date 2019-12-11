@@ -2,9 +2,9 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) Ericsson AB
 
-===========================================
+==================================
 Tempest Compute test specification
-===========================================
+==================================
 
 
 Scope
@@ -86,7 +86,7 @@ The test area is structured in individual tests as listed below.
 For detailed information on the individual steps and assertions performed
 by the tests, review the Python source code accessible via the following links:
 
-All these test cases are included in the test case dovetail.tempest.compute of
+All these test cases are included in the test case functest.tempest.compute of
 OVP test suite.
 
 
@@ -110,8 +110,8 @@ by the tests, review the Python source code accessible via the following links:
 - `Security Groups test <https://github.com/openstack/tempest/blob/master/tempest/api/compute/security_groups/test_security_groups.py#L23>`_
     - tempest.api.compute.security_groups.test_security_groups.SecurityGroupsTestJSON.test_security_groups_create_list_delete
 
-- `Attach Interfaces test <https://github.com/openstack/tempest/blob/master/tempest/api/compute/servers/test_attach_interfaces.py#L32>`_
-    - tempest.api.compute.servers.test_attach_interfaces.AttachInterfacesTestJSON.test_add_remove_fixed_ip
+- `Attach Interfaces test <https://github.com/openstack/tempest/blob/master/tempest/api/compute/servers/test_attach_interfaces.py#L347>`_
+    - tempest.api.compute.servers.test_attach_interfaces.AttachInterfacesUnderV243Test.test_add_remove_fixed_ip
 
 
 - `Server Addresses test <https://github.com/openstack/tempest/blob/master/tempest/api/compute/servers/test_server_addresses.py#L21>`_

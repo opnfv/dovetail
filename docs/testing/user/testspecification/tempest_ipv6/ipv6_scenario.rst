@@ -9,7 +9,7 @@ Test Case 1 - IPv6 Address Assignment - Dual Stack, SLAAC, DHCPv6 Stateless
 Short name
 ----------
 
-dovetail.tempest.ipv6_scenario.dhcpv6_stateless
+functest.tempest.ipv6_scenario.dhcpv6_stateless
 
 Use case specification
 ----------------------
@@ -60,7 +60,7 @@ Test execution
 * Test action 14: List all networks, verifying the id is no longer present
 * **Test assertion 6:** The "id" parameter is not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to assign IPv6 addresses in ipv6_ra_mode
@@ -84,7 +84,7 @@ Test Case 2 - IPv6 Address Assignment - Dual Net, Dual Stack, SLAAC, DHCPv6 Stat
 Short name
 ----------
 
-dovetail.tempest.ipv6_scenario.dualnet_dhcpv6_stateless
+functest.tempest.ipv6_scenario.dualnet_dhcpv6_stateless
 
 Use case specification
 ----------------------
@@ -138,7 +138,7 @@ Test execution
 * Test action 16: List all networks, verifying the ids are no longer present
 * **Test assertion 6:** The two "id" parameters are not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to assign IPv6 addresses in ipv6_ra_mode 'dhcpv6_stateless'
@@ -163,7 +163,7 @@ Test Case 3 - IPv6 Address Assignment - Multiple Prefixes, Dual Stack, SLAAC, DH
 Short name
 ----------
 
-dovetail.tempest.ipv6_scenario.multiple_prefixes_dhcpv6_stateless
+functest.tempest.ipv6_scenario.multiple_prefixes_dhcpv6_stateless
 
 Use case specification
 ----------------------
@@ -216,7 +216,7 @@ Test execution
 * Test action 14: List all networks, verifying the id is no longer present
 * **Test assertion 6:** The "id" parameter is not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to assign IPv6 addresses in ipv6_ra_mode 'dhcpv6_stateless'
@@ -241,7 +241,7 @@ Test Case 4 - IPv6 Address Assignment - Dual Net, Multiple Prefixes, Dual Stack,
 Short name
 ----------
 
-dovetail.tempest.ipv6_scenario.dualnet_multiple_prefixes_dhcpv6_stateless
+functest.tempest.ipv6_scenario.dualnet_multiple_prefixes_dhcpv6_stateless
 
 Use case specification
 ----------------------
@@ -296,7 +296,7 @@ Test execution
 * Test action 16: List all networks, verifying the ids are no longer present
 * **Test assertion 6:** The two "id" parameters are not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to assign IPv6 addresses in ipv6_ra_mode 'dhcpv6_stateless'
@@ -321,7 +321,7 @@ Test Case 5 - IPv6 Address Assignment - Dual Stack, SLAAC
 Short name
 ----------
 
-dovetail.tempest.ipv6_scenario.slaac
+functest.tempest.ipv6_scenario.slaac
 
 Use case specification
 ----------------------
@@ -371,7 +371,7 @@ Test execution
 * Test action 14: List all networks, verifying the id is no longer present
 * **Test assertion 6:** The "id" parameter is not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to assign IPv6 addresses in ipv6_ra_mode 'slaac'
@@ -395,7 +395,7 @@ Test Case 6 - IPv6 Address Assignment - Dual Net, Dual Stack, SLAAC
 Short name
 ----------
 
-dovetail.tempest.ipv6_scenario.dualnet_slaac
+functest.tempest.ipv6_scenario.dualnet_slaac
 
 Use case specification
 ----------------------
@@ -448,7 +448,7 @@ Test execution
 * Test action 16: List all networks, verifying the ids are no longer present
 * **Test assertion 6:** The two "id" parameters are not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to assign IPv6 addresses in ipv6_ra_mode 'slaac'
@@ -473,7 +473,7 @@ Test Case 7 - IPv6 Address Assignment - Multiple Prefixes, Dual Stack, SLAAC
 Short name
 ----------
 
-dovetail.tempest.ipv6_scenario.multiple_prefixes_slaac
+functest.tempest.ipv6_scenario.multiple_prefixes_slaac
 
 Use case specification
 ----------------------
@@ -524,7 +524,7 @@ Test execution
 * Test action 14: List all networks, verifying the id is no longer present
 * **Test assertion 6:** The "id" parameter is not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to assign IPv6 addresses in ipv6_ra_mode 'slaac'
@@ -549,7 +549,7 @@ Test Case 8 - IPv6 Address Assignment - Dual Net, Dual Stack, Multiple Prefixes,
 Short name
 ----------
 
-dovetail.tempest.ipv6_scenario.dualnet_multiple_prefixes_slaac
+functest.tempest.ipv6_scenario.dualnet_multiple_prefixes_slaac
 
 Use case specification
 ----------------------
@@ -602,7 +602,7 @@ Test execution
 * Test action 16: List all networks, verifying the ids are no longer present
 * **Test assertion 6:** The two "id" parameters are not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to assign IPv6 addresses in ipv6_ra_mode 'slaac'

@@ -71,7 +71,7 @@ Test Case 1 - Concurrent capacity based on life-cycle ping test
 Short name
 ----------
 
-dovetail.stress.ping
+bottlenecks.stress.ping
 
 Use case specification
 ----------------------
@@ -133,7 +133,7 @@ Test execution
 * Test action 8: Go to *Test action 3* and do the test again to create *N2* VM pairs with PASS VM pairs counted as *S2*
 * Test action 9: If *S2<N3*, the SUT is marked with FAIL. Otherwise marked with PASS.
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 Typical setting of *(N1, N2, N3, P1)* is *(5, 5, 5, 10)*.

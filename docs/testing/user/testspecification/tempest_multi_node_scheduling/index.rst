@@ -53,7 +53,7 @@ on multiple nodes. Each test case is able to run independently, i.e. irrelevant 
 the state created by a previous test. Specifically, every test performs clean-up
 operations which return the system to the same state as before the test.
 
-All these test cases are included in the test case dovetail.tempest.multi_node_scheduling of
+All these test cases are included in the test case functest.tempest.multi_node_scheduling of
 OVP test suite.
 
 Test Descriptions
@@ -145,7 +145,7 @@ Test execution
   that every server ended up on a different host
 * Test action 6: Delete the created servers
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the functionality of VM resource scheduling.
@@ -190,7 +190,7 @@ Test execution
 * Test action 5: List all server groups
 * **Test assertion 4:** SERG1 and SERG2 are not in the list
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the functionality of creating and deleting server groups with the same name and policy.
@@ -233,7 +233,7 @@ Test execution
 * Test action 3: Delete SERG1 and list all server groups
 * **Test assertion 3:** SERG1 is not in the list
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the functionality of creating and deleting server group with affinity policy.
@@ -275,7 +275,7 @@ Test execution
 * Test action 3: Delete SERG1 and list all server groups
 * **Test assertion 3:** SERG1 is not in the list
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the functionality of creating and deleting server group with anti-affinity policy.
@@ -316,7 +316,7 @@ Test execution
 * **Test assertion 1:** SERG1 is in the list
 * Test action 4: Delete SERG1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the functionality of listing server groups.
@@ -358,7 +358,7 @@ Test execution
 * **Test assertion 1:** All values in D1 are the same as the values in D2
 * Test action 4: Delete SERG1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the functionality of showing server group details.

@@ -53,7 +53,7 @@ port security. Each test case is able to run independently, i.e. irrelevant of
 the state created by a previous test. Specifically, every test performs clean-up
 operations which return the system to the same state as before the test.
 
-All these test cases are included in the test case dovetail.tempest.network_security of
+All these test cases are included in the test case functest.tempest.network_security of
 OVP test suite.
 
 Test Descriptions
@@ -145,7 +145,7 @@ Test execution
 * **Test assertion 2:** The ping operation is successful
 * Test action 16: Delete SG1, NET1, NET2, SUBNET1, SUBNET2, R1, VM1, VM2 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to prevent MAC spoofing by using port security.
@@ -206,7 +206,7 @@ Test execution
 * Test action 14: Delete SG1, SG2, SG3, SG4, NET1, NET2, SUBNET1, SUBNET2, R1, R2,
   VM1, VM2, FIP1 and FIP2
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability of the security group to filter packets cross tenant.
@@ -263,7 +263,7 @@ Test execution
 * **Test assertion 2:** The ping operation is successful
 * Test action 11: Delete SG1, SG2, NET1, SUBNET1, R1, VM1, VM2 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability of the security group to filter packets in one tenant.
@@ -319,7 +319,7 @@ Test execution
 * **Test assertion 3:** Can SSH to VM1 successfully
 * Test action 11: Delete SG1, SG2, NET1, SUBNET1, R1, VM1 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability of multiple security groups to filter packets.
@@ -379,7 +379,7 @@ Test execution
 * **Test assertion 2:** The ping operation is successful
 * Test action 12: Delete SG1, SG2, NET1, SUBNET1, R1, VM1, VM2 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability of port security to disable security group.
@@ -436,7 +436,7 @@ Test execution
 * **Test assertion 2:** The ping operation is successful
 * Test action 13: Delete SG1, SG2, SG3, NET1, SUBNET1, R1, VM1, VM2 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to update port with a new security group.
