@@ -2,9 +2,9 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) Ericsson AB
 
-===========================================
+======================================
 Tempest Identity v3 test specification
-===========================================
+======================================
 
 
 Scope
@@ -46,7 +46,7 @@ The test area is structured in individual tests as listed below.
 For detailed information on the individual steps and assertions performed
 by the tests, review the Python source code accessible via the following links:
 
-All these test cases are included in the test case dovetail.tempest.identity_v3 of
+All these test cases are included in the test case functest.tempest.identity_v3 of
 OVP test suite.
 
 - `Create, Get, Update and Delete Credentials <https://github.com/openstack/tempest/blob/12.2.0/tempest/api/identity/admin/v3/test_credentials.py#L21>`_

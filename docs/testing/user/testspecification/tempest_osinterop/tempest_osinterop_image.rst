@@ -11,11 +11,11 @@ Scope
 
 The VIM image test area evaluates the ability of the system under test to support
 VIM image operations. The test cases documented here are the Image API test cases
-in the Openstack Interop guideline 2017.09 as implemented by the Refstack client.
+in the Openstack Interop guideline 2018.11 as implemented by the Refstack client.
 These test cases will evaluate basic Openstack (as a VIM) image operations including
 image creation, image list, image update and image deletion capabilities using Glance v2 API.
 
-Definitions and abbreviations
+Definitions and Abbreviations
 =============================
 
 The following terms and abbreviations are used in conjunction with this test area
@@ -40,7 +40,7 @@ to run independently, i.e. irrelevant of the state created by a previous test.
 For brevity, the test cases in this test area are summarized together based on
 the operations they are testing.
 
-All these test cases are included in the test case dovetail.tempest.osinterop of
+All these test cases are included in the test case functest.tempest.osinterop of
 OVP test suite.
 
 Test Descriptions
@@ -62,9 +62,9 @@ Images: https://docs.openstack.org/api-ref/image/v2/
 - add image tag
 - delete image tag
 
----------------------------------------
-Image get tests using the Glance v2 API
----------------------------------------
+-----------------------------------------------------
+Test Case 1 - Image get tests using the Glance v2 API
+-----------------------------------------------------
 
 Test case specification
 -----------------------
@@ -104,7 +104,7 @@ Test execution
   whether the 6 images' ids are not in the show list.
 * **Test assertion 6:** The 6 images' ids are not found in the show list.
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 The first two test cases evaluate the ability to use Glance v2 API to show image
@@ -124,9 +124,9 @@ Post conditions
 
 None
 
---------------------------------------
-CRUD image operations in Images API v2
---------------------------------------
+----------------------------------------------------
+Test Case 2 - CRUD image operations in Images API v2
+----------------------------------------------------
 
 Test case specification
 -----------------------
@@ -148,7 +148,7 @@ Test execution
 * Test action 2: List all images and check whether the ids listed are in the created images list.
 * **Test assertion 1:** The ids get from the list images API are in the created images list.
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the ability to use Glance v2 API to list images.
@@ -163,9 +163,9 @@ Post conditions
 
 None
 
-----------------------------------------
-Image list tests using the Glance v2 API
-----------------------------------------
+------------------------------------------------------
+Test Case 3 - Image list tests using the Glance v2 API
+------------------------------------------------------
 
 Test case specification
 -----------------------
@@ -224,7 +224,7 @@ Test execution
   the 6 ids are not in the show list.
 * **Test assertion 8:** The stored 6 ids are not found in the show list.
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the ability to use Glance v2 API to list images with
@@ -245,9 +245,9 @@ Post conditions
 
 None
 
-------------------------------------------
-Image update tests using the Glance v2 API
-------------------------------------------
+--------------------------------------------------------
+Test Case 4 - Image update tests using the Glance v2 API
+--------------------------------------------------------
 
 Test case specification
 -----------------------
@@ -291,7 +291,7 @@ Test execution
   and check whether the ids are not in the show list.
 * **Test assertion 6:** The two ids are not found in the show list.
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the ability to use Glance v2 API to update images with
@@ -308,9 +308,9 @@ Post conditions
 
 None
 
---------------------------------------------
-Image deletion tests using the Glance v2 API
---------------------------------------------
+----------------------------------------------------------
+Test Case 5 - Image deletion tests using the Glance v2 API
+----------------------------------------------------------
 
 Test case specification
 -----------------------
@@ -349,7 +349,7 @@ Test execution
   and check whether the ids are in the list.
 * **Test assertion 5:** The two ids are not found in the list.
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 The first three test cases evaluate the ability to use Glance v2 API to delete images

@@ -11,7 +11,7 @@ Scope
 
 The VIM compute operations test area evaluates the ability of the system under
 test to support VIM compute operations. The test cases documented here are the
-compute API test cases in the OpenStack Interop guideline 2017.09 as implemented
+compute API test cases in the OpenStack Interop guideline 2018.11 as implemented
 by the RefStack client. These test cases will evaluate basic OpenStack (as a VIM)
 compute operations, including:
 
@@ -22,7 +22,7 @@ compute operations, including:
 - Basic server operations
 - Volume management operations
 
-Definitions and abbreviations
+Definitions and Abbreviations
 =============================
 
 The following terms and abbreviations are used in conjunction with this test area
@@ -30,14 +30,15 @@ The following terms and abbreviations are used in conjunction with this test are
 - API - Application Programming Interface
 - NFVi - Network Functions Virtualization infrastructure
 - SUT - System Under Test
-- UUID - Universally Unique Identifier
+- UUID - Universally Unique IDentifier
 - VIM - Virtual Infrastructure Manager
 - VM - Virtual Machine
 
 System Under Test (SUT)
 =======================
 
-The system under test is assumed to be the NFVi and VIM deployed with a Pharos compliant infrastructure.
+The system under test is assumed to be the NFVi and VIM deployed with a Pharos
+compliant infrastructure.
 
 Test Area Structure
 ====================
@@ -50,7 +51,7 @@ the same state as before the test.
 For brevity, the test cases in this test area are summarized together based on
 the operations they are testing.
 
-All these test cases are included in the test case dovetail.tempest.osinterop of
+All these test cases are included in the test case functest.tempest.osinterop of
 OVP test suite.
 
 Test Descriptions
@@ -752,6 +753,51 @@ This test evaluates the functionality of listing flavors within the Compute API.
 Specifically, the test verifies that:
 
 * Can list flavors with/without details within the Compute API.
+
+In order to pass this test, all test assertions listed in the test execution above need to pass.
+
+Post conditions
+---------------
+
+N/A
+
+--------------------------------------------------------
+Test Case 10 - Keypair operations within the Compute API
+--------------------------------------------------------
+
+Test case specification
+-----------------------
+
+This test case evaluates the Compute API ability of creating keypair with type,
+the reference is,
+
+tempest.api.compute.keypairs.test_keypairs_v22.KeyPairsV22TestJSON.test_keypairsv22_create_list_show_with_type
+
+Test preconditions
+------------------
+
+* Compute server extension API
+
+Basic test flow execution description and pass/fail criteria
+------------------------------------------------------------
+
+Test execution
+''''''''''''''
+
+* Test action 1: Create a keypair with type 'x509' and a random name
+* **Test assertion 1:** The keypair type received in the response body is equal to 'x509'
+* Test action 2: Show the details of this created keypair
+* **Test assertion 2:** The keypair type received in the response body is equal to 'x509'
+* Test action 3: List all keypairs and find the one with the same name as given in test action 1
+* **Test assertion 3:** The keypair type of this keypair is equal to 'x509'
+
+Pass / fail criteria
+''''''''''''''''''''
+
+This test evaluates the functionality of keypair operations within the Compute API.
+Specifically, the test verifies that:
+
+* Can create keypair by specifying keypair type.
 
 In order to pass this test, all test assertions listed in the test execution above need to pass.
 

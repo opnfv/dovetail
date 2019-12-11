@@ -3,11 +3,11 @@
 .. (c) Huawei Technologies Co.,Ltd and others
 
 =============================================
-OpenStack Interoperability test specification
+OpenStack Interoperability Test Specification
 =============================================
 
 The test cases documented here are the API test cases in the OpenStack
-Interop guideline 2017.09 as implemented by the RefStack client.
+Interop guideline 2018.11 as implemented by the RefStack client.
 
 References
 ================
@@ -16,9 +16,9 @@ References
 
   - https://wiki.openstack.org/wiki/Governance/InteropWG
 
-- OpenStack Interoperability guidelines (version 2017.09)
+- OpenStack Interoperability guidelines (version 2018.11)
 
-  - https://github.com/openstack/interop/blob/master/2017.09.json
+  - https://github.com/openstack/interop/blob/master/2018.11.json
 
 - Refstack client
 
