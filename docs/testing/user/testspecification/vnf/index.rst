@@ -82,14 +82,14 @@ return the system to the same state as before the test.
 Test Descriptions
 =================
 
-----------------------------------------------------------------
+------------------
 Test Case 1 - vEPC
-----------------------------------------------------------------
+------------------
 
 Short name
 ----------
 
-dovetail.vnf.vepc
+functest.vnf.vepc
 
 
 Use case specification
@@ -136,7 +136,7 @@ Test execution
 * Test action 5: The deployed VMs are deleted.
 
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 The VNF Manager (juju) should be deployed successfully
@@ -153,14 +153,14 @@ Post conditions
 
 The clean-up operations are run.
 
-----------------------------------------------------------------
+------------------
 Test Case 2 - vIMS
-----------------------------------------------------------------
+------------------
 
 Short name
 ----------
 
-dovetail.vnf.vims
+functest.vnf.vims
 
 Use case specification
 ----------------------
@@ -202,7 +202,7 @@ Test execution
 * Test action 5: The deployed VMs are deleted.
 
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 The VNF orchestrator (Cloudify) should be deployed successfully.

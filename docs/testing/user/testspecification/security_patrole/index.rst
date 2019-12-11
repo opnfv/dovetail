@@ -45,7 +45,7 @@ by the tests, review the Python source code accessible via the following links.
 These tests cover the RBAC tests of image basic operations.
 
 Implementation:
-`BasicOperationsImagesRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/image/test_images_rbac.py>`_
+`BasicOperationsImagesRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/image/test_images_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.image.test_images_rbac.BasicOperationsImagesRbacTest.test_create_image
 - patrole_tempest_plugin.tests.api.image.test_images_rbac.BasicOperationsImagesRbacTest.test_create_image_tag
@@ -66,10 +66,9 @@ Implementation:
 These tests cover the RBAC tests of image namespaces.
 
 Implementation:
-`ImageNamespacesRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/image/test_image_namespace_rbac.py>`_
+`ImageNamespacesRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/image/test_image_namespace_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.image.test_image_namespace_rbac.ImageNamespacesRbacTest.test_create_metadef_namespace
-- patrole_tempest_plugin.tests.api.image.test_image_namespace_rbac.ImageNamespacesRbacTest.test_list_metadef_namespaces
 - patrole_tempest_plugin.tests.api.image.test_image_namespace_rbac.ImageNamespacesRbacTest.test_modify_metadef_namespace
 
 
@@ -78,7 +77,7 @@ Implementation:
 These tests cover the RBAC tests of image namespaces objects.
 
 Implementation:
-`ImageNamespacesObjectsRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/image/test_image_namespace_objects_rbac.py>`_
+`ImageNamespacesObjectsRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/image/test_image_namespace_objects_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.image.test_image_namespace_objects_rbac.ImageNamespacesObjectsRbacTest.test_create_metadef_object_in_namespace
 - patrole_tempest_plugin.tests.api.image.test_image_namespace_objects_rbac.ImageNamespacesObjectsRbacTest.test_list_metadef_objects_in_namespace
@@ -91,7 +90,7 @@ Implementation:
 These tests cover the RBAC tests of image namespaces property.
 
 Implementation:
-`NamespacesPropertyRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/image/test_image_namespace_property_rbac.py>`_
+`NamespacesPropertyRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/image/test_image_namespace_property_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.image.test_image_namespace_property_rbac.NamespacesPropertyRbacTest.test_add_md_properties
 - patrole_tempest_plugin.tests.api.image.test_image_namespace_property_rbac.NamespacesPropertyRbacTest.test_get_md_properties
@@ -104,7 +103,7 @@ Implementation:
 These tests cover the RBAC tests of image namespaces tags.
 
 Implementation:
-`NamespaceTagsRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/image/test_image_namespace_tags_rbac.py>`_
+`NamespaceTagsRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/image/test_image_namespace_tags_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.image.test_image_namespace_tags_rbac.NamespaceTagsRbacTest.test_create_namespace_tag
 - patrole_tempest_plugin.tests.api.image.test_image_namespace_tags_rbac.NamespaceTagsRbacTest.test_create_namespace_tags
@@ -118,7 +117,7 @@ Implementation:
 These tests cover the RBAC tests of image resource types.
 
 Implementation:
-`ImageResourceTypesRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/image/test_image_resource_types_rbac.py>`_
+`ImageResourceTypesRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/image/test_image_resource_types_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.image.test_image_resource_types_rbac.ImageResourceTypesRbacTest.test_add_metadef_resource_type
 - patrole_tempest_plugin.tests.api.image.test_image_resource_types_rbac.ImageResourceTypesRbacTest.test_get_metadef_resource_type
@@ -130,7 +129,7 @@ Implementation:
 These tests cover the RBAC tests of image member.
 
 Implementation:
-`ImagesMemberRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/image/test_images_member_rbac.py>`_
+`ImagesMemberRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/image/test_images_member_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.image.test_images_member_rbac.ImagesMemberRbacTest.test_add_image_member
 - patrole_tempest_plugin.tests.api.image.test_images_member_rbac.ImagesMemberRbacTest.test_delete_image_member
@@ -143,8 +142,8 @@ Implementation:
 These tests cover the RBAC tests of network agents.
 
 Implementation:
-`AgentsRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/network/test_agents_rbac.py#L24>`_ and
-`DHCPAgentSchedulersRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/network/test_agents_rbac.py#L147>`_.
+`AgentsRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/network/test_agents_rbac.py#L24>`_ and
+`DHCPAgentSchedulersRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/network/test_agents_rbac.py#L147>`_.
 
 - patrole_tempest_plugin.tests.api.network.test_agents_rbac.AgentsRbacTest.test_show_agent
 - patrole_tempest_plugin.tests.api.network.test_agents_rbac.AgentsRbacTest.test_update_agent
@@ -158,7 +157,7 @@ Implementation:
 These tests cover the RBAC tests of network floating ips.
 
 Implementation:
-`FloatingIpsRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/network/test_floating_ips_rbac.py>`_
+`FloatingIpsRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/network/test_floating_ips_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.network.test_floating_ips_rbac.FloatingIpsRbacTest.test_create_floating_ip
 - patrole_tempest_plugin.tests.api.network.test_floating_ips_rbac.FloatingIpsRbacTest.test_create_floating_ip_floatingip_address
@@ -172,25 +171,24 @@ Implementation:
 These tests cover the RBAC tests of network basic operations.
 
 Implementation:
-`NetworksRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/network/test_networks_rbac.py>`_
+`NetworksRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/network/test_networks_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network
+- patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_is_default
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_router_external
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_network_shared
-- patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_create_subnet
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_delete_network
-- patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_delete_subnet
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_list_dhcp_agents_on_hosting_network
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_show_network
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_show_network_provider_network_type
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_show_network_provider_physical_network
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_show_network_provider_segmentation_id
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_show_network_router_external
-- patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_show_subnet
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_update_network
+- patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_update_network_provider_physical_network
+- patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_update_network_provider_segmentation_id
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_update_network_router_external
 - patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_update_network_shared
-- patrole_tempest_plugin.tests.api.network.test_networks_rbac.NetworksRbacTest.test_update_subnet
 
 
 **Network ports RBAC test:**
@@ -198,14 +196,14 @@ Implementation:
 These tests cover the RBAC tests of network ports.
 
 Implementation:
-`PortsRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/network/test_ports_rbac.py>`_
+`PortsRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/network/test_ports_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_create_port
 - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_create_port_allowed_address_pairs
 - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_create_port_binding_host_id
 - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_create_port_binding_profile
 - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_create_port_device_owner
-- patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_create_port_fixed_ips
+- patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_create_port_fixed_ips_ip_address
 - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_create_port_mac_address
 - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_create_port_security_enabled
 - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_delete_port
@@ -219,7 +217,7 @@ Implementation:
 - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_update_port_binding_host_id
 - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_update_port_binding_profile
 - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_update_port_device_owner
-- patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_update_port_fixed_ips
+- patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_update_port_fixed_ips_ip_address
 - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_update_port_mac_address
 - patrole_tempest_plugin.tests.api.network.test_ports_rbac.PortsRbacTest.test_update_port_security_enabled
 
@@ -229,7 +227,7 @@ Implementation:
 These tests cover the RBAC tests of network routers.
 
 Implementation:
-`RouterRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/network/test_routers_rbac.py>`_
+`RouterRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/network/test_routers_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_add_router_interface
 - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_create_router
@@ -237,6 +235,7 @@ Implementation:
 - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_create_router_external_fixed_ips
 - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_delete_router
 - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_remove_router_interface
+- patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_show_high_availability_router
 - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_show_router
 - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_update_router
 - patrole_tempest_plugin.tests.api.network.test_routers_rbac.RouterRbacTest.test_update_router_enable_snat
@@ -250,7 +249,7 @@ Implementation:
 These tests cover the RBAC tests of network security groups.
 
 Implementation:
-`SecGroupRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/network/test_security_groups_rbac.py>`_
+`SecGroupRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/network/test_security_groups_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_create_security_group
 - patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_create_security_group_rule
@@ -259,7 +258,7 @@ Implementation:
 - patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_list_security_group_rules
 - patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_list_security_groups
 - patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_show_security_group_rule
-- patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_show_security_groups
+- patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_show_security_group
 - patrole_tempest_plugin.tests.api.network.test_security_groups_rbac.SecGroupRbacTest.test_update_security_group
 
 
@@ -268,7 +267,7 @@ Implementation:
 These tests cover the RBAC tests of network service providers.
 
 Implementation:
-`ServiceProvidersRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/network/test_service_providers_rbac.py>`_
+`ServiceProvidersRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/network/test_service_providers_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.network.test_service_providers_rbac.ServiceProvidersRbacTest.test_list_service_providers
 
@@ -278,7 +277,7 @@ Implementation:
 These tests cover the RBAC tests of network subnetpools.
 
 Implementation:
-`SubnetPoolsRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/network/test_subnetpools_rbac.py>`_
+`SubnetPoolsRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/network/test_subnetpools_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.network.test_subnetpools_rbac.SubnetPoolsRbacTest.test_create_subnetpool
 - patrole_tempest_plugin.tests.api.network.test_subnetpools_rbac.SubnetPoolsRbacTest.test_create_subnetpool_shared
@@ -293,10 +292,36 @@ Implementation:
 These tests cover the RBAC tests of network subnets.
 
 Implementation:
-`SubnetsRbacTest <https://github.com/openstack/patrole/blob/0.2.0/patrole_tempest_plugin/tests/api/network/test_subnets_rbac.py>`_
+`SubnetsRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/network/test_subnets_rbac.py>`_
 
 - patrole_tempest_plugin.tests.api.network.test_subnets_rbac.SubnetsRbacTest.test_create_subnet
 - patrole_tempest_plugin.tests.api.network.test_subnets_rbac.SubnetsRbacTest.test_delete_subnet
 - patrole_tempest_plugin.tests.api.network.test_subnets_rbac.SubnetsRbacTest.test_list_subnets
 - patrole_tempest_plugin.tests.api.network.test_subnets_rbac.SubnetsRbacTest.test_show_subnet
 - patrole_tempest_plugin.tests.api.network.test_subnets_rbac.SubnetsRbacTest.test_update_subnet
+
+
+**Network flavors RBAC test:**
+
+These tests cover the RBAC tests of network flavors.
+
+Implementation:
+`FlavorsRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/network/test_flavors_rbac.py>`_
+
+- patrole_tempest_plugin.tests.api.network.test_flavors_rbac.FlavorsPluginRbacTest.test_create_flavor
+- patrole_tempest_plugin.tests.api.network.test_flavors_rbac.FlavorsPluginRbacTest.test_delete_flavor
+- patrole_tempest_plugin.tests.api.network.test_flavors_rbac.FlavorsPluginRbacTest.test_list_flavors
+- patrole_tempest_plugin.tests.api.network.test_flavors_rbac.FlavorsPluginRbacTest.test_show_flavor
+- patrole_tempest_plugin.tests.api.network.test_flavors_rbac.FlavorsPluginRbacTest.test_update_flavor
+
+
+**Network segments RBAC test:**
+
+These tests cover the RBAC tests of network segments.
+
+Implementation:
+`SegmentsRbacTest <https://github.com/openstack/patrole/blob/0.4.0/patrole_tempest_plugin/tests/api/network/test_network_segments_rbac.py>`_
+
+- patrole_tempest_plugin.tests.api.network.test_network_segments_rbac.NetworkSegmentsRbacTest.test_create_network_segments
+- patrole_tempest_plugin.tests.api.network.test_network_segments_rbac.NetworkSegmentsRbacTest.test_show_network_segments
+- patrole_tempest_plugin.tests.api.network.test_network_segments_rbac.NetworkSegmentsRbacTest.test_update_network_segments

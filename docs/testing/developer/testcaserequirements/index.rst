@@ -23,7 +23,7 @@ portability across NFVI instances. All OVP tests are available in open source
 and are executed in open source test frameworks.
 
 
-Test case requirements
+Test Case Requirements
 ======================
 
 The following requirements are mandatory for a test to be submitted for
@@ -101,7 +101,7 @@ consideration in the OVP test suite:
   - Use case specification
   - Test preconditions
   - Basic test flow execution description and test assertions
-  - Pass fail criteria
+  - Pass/Fail criteria
 
 - The following things may be documented for the test case:
 
@@ -120,9 +120,9 @@ Dovetail Test Suite Naming Convention
 Test case naming and structuring must comply with the following conventions.
 The fully qualified name of a test case must comprise three sections:
 
-`<testproject>.<test_area>.<test_case_name>`
+`<test_project>.<test_area>.<test_case_name>`
 
-- **testproject**: The fully qualified test case name must identify the test
+- **test_project**: The fully qualified test case name must identify the test
   project which developed and maintains the test case.
 
 - **test_area**: The fully qualified test case name must identify the test case

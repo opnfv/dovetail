@@ -58,7 +58,7 @@ test case is able to run independently, i.e. irrelevant of the state created by
 a previous test. Specifically, every test performs clean-up operations which
 return the system to the same state as before the test.
 
-All these test cases are included in the test case dovetail.tempest.network_scenario of
+All these test cases are included in the test case functest.tempest.network_scenario of
 OVP test suite.
 
 Test Descriptions
@@ -149,7 +149,7 @@ Test execution
 * **Test assertion 5:** Ping FIP1 and SSH to VM2 via FIP1 successfully
 * Test action 8: Delete SG1, NET1, SUBNET1, R1, VM1, VM2 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the functionality of basic network operations.
@@ -220,7 +220,7 @@ Test execution
 * **Test assertion 2:** Ping NET2's internal gateway successfully
 * Test action 8: Delete SG1, NET1, NET2, SUBNET1, SUBNET2, R1, NIC2, VM1 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the functionality of adding network to an active VM.
@@ -278,7 +278,7 @@ Test execution
   retrieve the VM1's configured dns and verify it has been successfully updated
 * Test action 7: Delete SG1, NET1, SUBNET1, R1, VM1 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the functionality of updating subnet's configurations.
@@ -336,7 +336,7 @@ Test execution
 * **Test assertion 6:** Ping FIP1 via SSHCLNT1 successfully
 * Test action 10: Delete SG1, NET1, SUBNET1, R1, SSHCLNT1, VM1, VM2 and FIP1, FIP2
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the VM public and project connectivity status by changing VM port
@@ -395,7 +395,7 @@ Test execution
 * **Test assertion 3:** Ping FIP1 and SSH to VM1 with FIP1 successfully
 * Test action 8: Delete SG1, NET1, SUBNET1, R1, VM1 and FIP1
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the router public connectivity status by changing

@@ -9,7 +9,7 @@ Test Case 1 - Create and Delete Bulk Network, IPv6 Subnet and Port
 Short name
 ----------
 
-dovetail.tempest.ipv6_api.bulk_network_subnet_port_create_delete
+functest.tempest.ipv6_api.bulk_network_subnet_port_create_delete
 
 Use case specification
 ----------------------
@@ -61,7 +61,7 @@ Test execution
 * Test action 18: List all networks, verifying the network ids are no longer present
 * **Test assertion 8:** The two "id" parameters are not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to use bulk create commands to create networks, IPv6 subnets and ports on
@@ -84,7 +84,7 @@ Test Case 2 - Create, Update and Delete an IPv6 Network and Subnet
 Short name
 -----------
 
-dovetail.tempest.ipv6_api.network_subnet_create_update_delete
+functest.tempest.ipv6_api.network_subnet_create_update_delete
 
 Use case specification
 ----------------------
@@ -125,7 +125,7 @@ Test execution
 * **Test assertion 5:** The network "id" is not present in the network list
 
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to create, update, delete network, IPv6 subnet on the
@@ -148,7 +148,7 @@ Test Case 3 - Check External Network Visibility
 Short name
 -----------
 
-dovetail.tempest.ipv6_api.external_network_visibility
+functest.tempest.ipv6_api.external_network_visibility
 
 Use case specification
 ----------------------
@@ -189,7 +189,7 @@ Test execution
 * **Test assertion 4:** There is no subnet of the external network with the configured
   public network id
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to use list commands to list external networks, pre-configured
@@ -211,7 +211,7 @@ Test Case 4 - List IPv6 Networks and Subnets
 Short name
 -----------
 
-dovetail.tempest.ipv6_api.network_subnet_list
+functest.tempest.ipv6_api.network_subnet_list
 
 Use case specification
 ----------------------
@@ -248,7 +248,7 @@ Test execution
 * Test action 8: List all networks, verifying the network id is no longer present
 * **Test assertion 4:** The network "id" parameter is not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to use create commands to create network, IPv6 subnet, list
@@ -270,7 +270,7 @@ Test Case 5 - Show Details of an IPv6 Network and Subnet
 Short name
 ----------
 
-dovetail.tempest.ipv6_api.network_subnet_show
+functest.tempest.ipv6_api.network_subnet_show
 
 Use case specification
 ----------------------
@@ -308,7 +308,7 @@ Test execution
 * Test action 8: List all networks, verifying the network id is no longer present
 * **Test assertion 4:** The "id" parameter is not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to use create commands to create network, IPv6 subnet and show
@@ -330,7 +330,7 @@ Test Case 6 - Create an IPv6 Port in Allowed Allocation Pools
 Short name
 ----------
 
-dovetail.tempest.ipv6_api.port_create_in_allocation_pool
+functest.tempest.ipv6_api.port_create_in_allocation_pool
 
 Use case specification
 ----------------------
@@ -373,7 +373,7 @@ Test execution
 * Test action 12: List all networks, verifying the network id is no longer present
 * **Test assertion 5:** The "id" parameter is not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to use create commands to create an IPv6 subnet within allowed
@@ -395,7 +395,7 @@ Test Case 7 - Create an IPv6 Port with Empty Security Groups
 Short name
 -----------
 
-dovetail.tempest.ipv6_api.port_create_empty_security_group
+functest.tempest.ipv6_api.port_create_empty_security_group
 
 Use case specification
 ----------------------
@@ -431,7 +431,7 @@ Test execution
 * Test action 10: List all networks, verifying the network id is no longer present
 * **Test assertion 4:** The "id" parameter is not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to use create commands to create port with
@@ -452,7 +452,7 @@ Test Case 8 - Create, Update and Delete an IPv6 Port
 Short name
 ----------
 
-dovetail.tempest.ipv6_api.port_create_update_delete
+functest.tempest.ipv6_api.port_create_update_delete
 
 Use case specification
 ----------------------
@@ -489,7 +489,7 @@ Test execution
 * Test action 9: List all networks, verifying the network id is no longer present
 * **Test assertion 4:** The "id" parameter is not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to use create/update/delete commands to create/update/delete port
@@ -511,7 +511,7 @@ Test Case 9 - List IPv6 Ports
 Short name
 ----------
 
-dovetail.tempest.ipv6_api.port_list
+functest.tempest.ipv6_api.port_list
 
 Use case specification
 ----------------------
@@ -543,7 +543,7 @@ Test execution
 * Test action 7: List all networks, verifying the network id is no longer present
 * **Test assertion 3:** The "id" parameter is not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to use list commands to list the networks and ports on
@@ -564,7 +564,7 @@ Test Case 10 - Show Key/Valus Details of an IPv6 Port
 Short name
 ----------
 
-dovetail.tempest.ipv6_api.port_show_details
+functest.tempest.ipv6_api.port_show_details
 
 Use case specification
 ----------------------
@@ -602,7 +602,7 @@ Test execution
 * Test action 8: List all networks, verifying the network id is no longer present
 * **Test assertion 4:** The "id" parameter is not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to use show commands to show port details on the SUT API.
@@ -625,7 +625,7 @@ Test Case 11 - Add Multiple Interfaces for an IPv6 Router
 Short name
 -----------
 
-dovetail.tempest.ipv6_api.router_add_multiple_interface
+functest.tempest.ipv6_api.router_add_multiple_interface
 
 Use case specification
 ----------------------
@@ -667,7 +667,7 @@ Test execution
 * **Test assertion 3:** The interfaces, router, IPv6 subnets and networks ids are not present in the lists
   after deleting
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to use bulk create commands to create networks, IPv6 subnets and ports on
@@ -690,7 +690,7 @@ Test Case 12 - Add and Remove an IPv6 Router Interface with port_id
 Short name
 ----------
 
-dovetail.tempest.ipv6_api.router_interface_add_remove_with_port
+functest.tempest.ipv6_api.router_interface_add_remove_with_port
 
 Use case specification
 ----------------------
@@ -728,7 +728,7 @@ Test execution
   ones are not found in the list.
 * **Test assertion 3:** interfaces, ports, routers, subnets and networks are not found in the lists after deleting
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to use add/remove commands to add/remove router interface to the port,
@@ -750,7 +750,7 @@ Test Case 13 - Add and Remove an IPv6 Router Interface with subnet_id
 Short name
 ----------
 
-dovetail.tempest.ipv6_api.router_interface_add_remove
+functest.tempest.ipv6_api.router_interface_add_remove
 
 Use case specification
 ----------------------
@@ -794,7 +794,7 @@ Test execution
 * Test action 13: List all networks, verifying the network id is no longer present
 * **Test assertion 7:** The network "id" parameter is not present in the network list
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to add and remove router interface with the subnet id on the
@@ -818,7 +818,7 @@ Test Case 14 - Create, Show, List, Update and Delete an IPv6 router
 Short name
 ----------
 
-dovetail.tempest.ipv6_api.router_create_show_list_update_delete
+functest.tempest.ipv6_api.router_create_show_list_update_delete
 
 Use case specification
 ----------------------
@@ -856,7 +856,7 @@ Test execution
 * Test action 7: List all routers, verifying the router id is no longer present
 * **Test assertion 8:** The "id" parameter is not present in the router list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to create, show, list, update and delete router on
@@ -882,7 +882,7 @@ Test Case 15 - Create, List, Update, Show and Delete an IPv6 security group
 Short name
 ----------
 
-dovetail.tempest.ipv6_api.security_group_create_list_update_show_delete
+functest.tempest.ipv6_api.security_group_create_list_update_show_delete
 
 Use case specification
 ----------------------
@@ -917,7 +917,7 @@ Test execution
 * Test action 7: List all security groups, verifying the security group's id is no longer present
 * **Test assertion 6:** The "id" parameter is not present in the security group list
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test evaluates the ability to create list, update, show and delete security group on
@@ -940,7 +940,7 @@ Test Case 16 - Create, Show and Delete IPv6 security group rule
 Short name
 ----------
 
-dovetail.tempest.ipv6_api.security_group_rule_create_show_delete
+functest.tempest.ipv6_api.security_group_rule_create_show_delete
 
 Use case specification
 ----------------------
@@ -977,7 +977,7 @@ Test execution
 * Test action 8: List all security groups, verifying the security group's id is no longer present
 * **Test assertion 4:** The security group "id" parameter is not present in the list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to create, show, list and delete security group rules on
@@ -998,7 +998,7 @@ Test Case 17 - List IPv6 Security Groups
 Short name
 ----------
 
-dovetail.tempest.ipv6_api.security_group_list
+functest.tempest.ipv6_api.security_group_list
 
 Use case specification
 ----------------------
@@ -1023,7 +1023,7 @@ Test execution
   if the default security group exists
 * **Test assertion 1:** The default security group is in the list
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test evaluates the ability to list security groups on the SUT API.
