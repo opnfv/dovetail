@@ -11,7 +11,7 @@ Scope
 
 The VIM volume operations test area evaluates the ability of the system under
 test to support VIM volume operations. The test cases documented here are the
-volume API test cases in the OpenStack Interop guideline 2017.09 as implemented
+volume API test cases in the OpenStack Interop guideline 2018.11 as implemented
 by the RefStack client. These test cases will evaluate basic OpenStack (as a VIM)
 volume operations, including:
 
@@ -24,7 +24,7 @@ volume operations, including:
 - Volume metadata operations
 - Volume snapshot operations
 
-Definitions and abbreviations
+Definitions and Abbreviations
 =============================
 
 The following terms and abbreviations are used in conjunction with this test area
@@ -51,7 +51,7 @@ the same state as before the test.
 For brevity, the test cases in this test area are summarized together based on
 the operations they are testing.
 
-All these test cases are included in the test case dovetail.tempest.osinterop of
+All these test cases are included in the test case functest.tempest.osinterop of
 OVP test suite.
 
 Test Descriptions
@@ -77,49 +77,8 @@ Block storage: https://docs.openstack.org/api-ref/block-storage/
 - update snapshot
 - delete snapshot
 
------------------------------------------------------
-Test Case 1 - Upload volumes with Cinder v2 or v3 API
------------------------------------------------------
-
-Test case specification
------------------------
-
-tempest.api.volume.test_volumes_actions.VolumesActionsTest.test_volume_upload
-
-Test preconditions
-------------------
-
-* Volume extension API
-
-Basic test flow execution description and pass/fail criteria
-------------------------------------------------------------
-
-Test execution
-''''''''''''''
-* Test action 1: Create a volume VOL1
-* Test action 2: Convert VOL1 and upload image IMG1 to the Glance
-* Test action 3: Wait until the status of IMG1 is 'ACTIVE' and VOL1 is 'available'
-* Test action 4: Show the details of IMG1
-* **Test assertion 1:** The name of IMG1 shown is the same as the name used to upload it
-* **Test assertion 2:** The disk_format of IMG1 is the same as the disk_format of VOL1
-
-Pass / fail criteria
-''''''''''''''''''''
-
-This test case evaluates the volume API ability of uploading images.
-Specifically, the test verifies that:
-
-* The Volume can convert volumes and upload images.
-
-In order to pass this test, all test assertions listed in the test execution above need to pass.
-
-Post conditions
----------------
-
-N/A
-
 --------------------------------------------------------------------------------------
-Test Case 2 - Volume service availability zone operations with the Cinder v2 or v3 API
+Test Case 1 - Volume service availability zone operations with the Cinder v2 or v3 API
 --------------------------------------------------------------------------------------
 
 Test case specification
@@ -140,7 +99,7 @@ Test execution
 * Test action 1: List all existent availability zones
 * **Test assertion 1:** Verify the availability zone list length is greater than 0
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the volume API ability of listing availability zones.
@@ -156,7 +115,7 @@ Post conditions
 N/A
 
 --------------------------------------------------------------------
-Test Case 3 - Volume cloning operations with the Cinder v2 or v3 API
+Test Case 2 - Volume cloning operations with the Cinder v2 or v3 API
 --------------------------------------------------------------------
 
 Test case specification
@@ -190,7 +149,7 @@ Test execution
 * Test action 7: Update the name of VOL3 and description with the original value
 * **Test assertion 6:** Verify VOL3's bootable flag is 'False'
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the volume API ability of creating a cloned volume from a source volume,
@@ -210,7 +169,7 @@ Post conditions
 N/A
 
 --------------------------------------------------------------------------
-Test Case 4 - Image copy-to-volume operations with the Cinder v2 or v3 API
+Test Case 3 - Image copy-to-volume operations with the Cinder v2 or v3 API
 --------------------------------------------------------------------------
 
 Test case specification
@@ -249,7 +208,7 @@ Test execution
 * Test action 11: Update the name of VOL3 and description with the original value
 * **Test assertion 8:** Verify VOL3's bootable flag is 'True'
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the volume API ability of updating volume's bootable flag and creating
@@ -270,7 +229,7 @@ Post conditions
 N/A
 
 ----------------------------------------------------------------------------------
-Test Case 5 - Volume creation and deletion operations with the Cinder v2 or v3 API
+Test Case 4 - Volume creation and deletion operations with the Cinder v2 or v3 API
 ----------------------------------------------------------------------------------
 
 Test case specification
@@ -320,7 +279,7 @@ Test execution
 * Test action 13: Create a volume with volume size '0'
 * **Test assertion 12:** Verify create volume failed, a bad request error is returned in the response
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the volume API ability of creating a volume, getting volume
@@ -343,7 +302,7 @@ Post conditions
 N/A
 
 --------------------------------------------------------------------------------------
-Test Case 6 - Volume service extension listing operations with the Cinder v2 or v3 API
+Test Case 5 - Volume service extension listing operations with the Cinder v2 or v3 API
 --------------------------------------------------------------------------------------
 
 Test case specification
@@ -366,7 +325,7 @@ Test execution
 * Test action 1: List all cinder service extensions
 * **Test assertion 1:** Verify all extensions are list in the extension list
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the volume API ability of listing all existent volume service extensions.
@@ -381,7 +340,7 @@ Post conditions
 N/A
 
 ----------------------------------------------------------------
-Test Case 7 - Volume GET operations with the Cinder v2 or v3 API
+Test Case 6 - Volume GET operations with the Cinder v2 or v3 API
 ----------------------------------------------------------------
 
 Test case specification
@@ -409,7 +368,7 @@ Test execution
 * Test action 3: Retrieve a volume with a nonexistent volume ID
 * **Test assertion 3:** Verify retrieve volume failed, a 'Not Found' error is returned in the response
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the volume API ability of getting volumes.
@@ -425,7 +384,7 @@ Post conditions
 N/A
 
 --------------------------------------------------------------------
-Test Case 8 - Volume listing operations with the Cinder v2 or v3 API
+Test Case 7 - Volume listing operations with the Cinder v2 or v3 API
 --------------------------------------------------------------------
 
 Test case specification
@@ -510,7 +469,7 @@ Test execution
 * Test action 22: List all existent volumes and paginate the volume list by desired volume IDs
 * **Test assertion 24:** Verify only the desired volumes are listed in the filtered volume list
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the volume API ability of getting a list of volumes and filtering the volume list.
@@ -529,7 +488,7 @@ Post conditions
 N/A
 
 ---------------------------------------------------------------------
-Test Case 9 - Volume metadata operations with the Cinder v2 or v3 API
+Test Case 8 - Volume metadata operations with the Cinder v2 or v3 API
 ---------------------------------------------------------------------
 
 Test case specification
@@ -561,7 +520,7 @@ Test execution
 * Test action 6: Update one metadata item 'key3' of VOL2
 * **Test assertion 5:** Verify the metadata of VOL2 is updated
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the volume API ability of creating metadata for a volume, getting the
@@ -580,9 +539,9 @@ Post conditions
 
 N/A
 
----------------------------------------------------------------------------------------
-Test Case 10 - Verification of read-only status on volumes with the Cinder v2 or v3 API
----------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+Test Case 9 - Verification of read-only status on volumes with the Cinder v2 or v3 API
+--------------------------------------------------------------------------------------
 
 Test case specification
 -----------------------
@@ -605,7 +564,7 @@ Test execution
 * Test action 2: Update a provided volume VOL1's read-only access mode to 'False'
 * **Test assertion 2:** Verify VOL1 is not in read-only access mode
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the volume API ability of setting and updating volume read-only access mode.
@@ -620,61 +579,8 @@ Post conditions
 
 N/A
 
--------------------------------------------------------------------------
-Test Case 11 - Volume reservation operations with the Cinder v2 or v3 API
--------------------------------------------------------------------------
-
-Test case specification
------------------------
-
-tempest.api.volume.test_volumes_actions.VolumesActionsTest.test_reserve_unreserve_volume
-tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_reserve_volume_with_negative_volume_status
-tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_reserve_volume_with_nonexistent_volume_id
-tempest.api.volume.test_volumes_negative.VolumesNegativeTest.test_unreserve_volume_with_nonexistent_volume_id
-
-Test preconditions
-------------------
-
-* Volume extension API
-
-Basic test flow execution description and pass/fail criteria
-------------------------------------------------------------
-
-Test execution
-''''''''''''''
-
-* Test action 1: Update a provided volume VOL1 as reserved
-* **Test assertion 1:** Verify VOL1 is in 'attaching' status
-* Test action 2: Update VOL1 as un-reserved
-* **Test assertion 2:** Verify VOL1 is in 'available' status
-* Test action 3: Update a provided volume VOL2 as reserved
-* Test action 4: Update VOL2 as reserved again
-* **Test assertion 3:** Verify update VOL2 status failed, a bad request error is returned in the response
-* Test action 5: Update VOL2 as un-reserved
-* Test action 6: Update a non-existent volume as reserved by using an invalid volume ID
-* **Test assertion 4:** Verify update non-existent volume as reserved failed, a 'Not Found' error is returned in the response
-* Test action 7: Update a non-existent volume as un-reserved by using an invalid volume ID
-* **Test assertion 5:** Verify update non-existent volume as un-reserved failed, a 'Not Found' error is returned in the response
-
-Pass / fail criteria
-''''''''''''''''''''
-
-This test case evaluates the volume API ability of reserving and un-reserving volumes.
-Specifically, the test verifies that:
-
-* Volume can be reserved and un-reserved.
-* Update a non-existent volume as reserved is not allowed.
-* Update a non-existent volume as un-reserved is not allowed.
-
-In order to pass this test, all test assertions listed in the test execution above need to pass.
-
-Post conditions
----------------
-
-N/A
-
 ----------------------------------------------------------------------------------------
-Test Case 12 - Volume snapshot creation/deletion operations with the Cinder v2 or v3 API
+Test Case 10 - Volume snapshot creation/deletion operations with the Cinder v2 or v3 API
 ----------------------------------------------------------------------------------------
 
 Test case specification
@@ -753,7 +659,7 @@ Test execution
 * Test action 27: Create a snapshot from a volume by using an empty volume ID
 * **Test assertion 21:** Verify create snapshot failed, a 'Not Found' error is returned in the response
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the volume API ability of managing snapshot and snapshot metadata.
@@ -784,7 +690,7 @@ Post conditions
 N/A
 
 --------------------------------------------------------------------
-Test Case 13 - Volume update operations with the Cinder v2 or v3 API
+Test Case 11 - Volume update operations with the Cinder v2 or v3 API
 --------------------------------------------------------------------
 
 Test case specification
@@ -812,7 +718,7 @@ Test execution
 * Test action 3: Update a non-existent volume by using a random generated volume ID
 * **Test assertion 3:** Verify update volume failed, a 'Not Found' error is returned in the response
 
-Pass / fail criteria
+Pass / Fail criteria
 ''''''''''''''''''''
 
 This test case evaluates the volume API ability of updating volume attributes.
@@ -821,6 +727,44 @@ Specifically, the test verifies that:
 * Update a volume without passing the volume ID is not allowed.
 * Update a volume using an invalid volume ID is not allowed.
 * Update a non-existent volume is not allowed.
+
+In order to pass this test, all test assertions listed in the test execution above need to pass.
+
+Post conditions
+---------------
+
+N/A
+
+-------------------------------------------------------------------
+Test Case 12 - Volume list version operation with the Cinder v3 API
+-------------------------------------------------------------------
+
+Test case specification
+-----------------------
+
+tempest.api.volume.test_versions.VersionsTest.test_list_versions
+
+Test preconditions
+------------------
+
+* Volume API
+
+Basic test flow execution description and pass/fail criteria
+------------------------------------------------------------
+
+Test execution
+''''''''''''''
+
+* Test action 1: List volume API versions
+* **Test assertion 1:** The list versions operation is successful executed
+
+Pass / Fail criteria
+''''''''''''''''''''
+
+This test case evaluates the volume API ability of listing volume API versions.
+Specifically, the test verifies that:
+
+* Successfully listing volume API versions.
 
 In order to pass this test, all test assertions listed in the test execution above need to pass.
 
