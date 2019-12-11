@@ -14,7 +14,7 @@ support VIM identity operations. The tests in this area will evaluate
 API discovery operations within the Identity v3 API, auth operations within
 the Identity API.
 
-Definitions and abbreviations
+Definitions and Abbreviations
 =============================
 
 The following terms and abbreviations are used in conjunction with this test area
@@ -34,7 +34,7 @@ Test Area Structure
 The test area is structured based on VIM identity operations. Each test case
 is able to run independently, i.e. irrelevant of the state created by a previous test.
 
-All these test cases are included in the test case dovetail.tempest.osinterop of
+All these test cases are included in the test case functest.tempest.osinterop of
 OVP test suite.
 
 Dependency Description
@@ -42,15 +42,15 @@ Dependency Description
 
 The VIM identity operations test cases are a part of the OpenStack
 interoperability tempest test cases. For Fraser based dovetail release, the
-OpenStack interoperability guidelines (version 2017.09) is adopted, which is
+OpenStack interoperability guidelines (version 2018.11) is adopted, which is
 valid for Mitaka, Newton, Ocata and Pike releases of Openstack.
 
 Test Descriptions
 =================
 
-----------------------------------------------------
-API discovery operations within the Identity v3 API
-----------------------------------------------------
+-----------------------------------------------------------------
+Test Case 1 - API discovery operations within the Identity v3 API
+-----------------------------------------------------------------
 
 Use case specification
 -----------------------
@@ -79,7 +79,7 @@ Test execution
   'stable', 'experimental', 'supported', 'deprecated' are all of the identity api 'status'
   values.
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test case passes if all test action steps execute successfully and all assertions
@@ -91,14 +91,15 @@ Post conditions
 
 None
 
-------------------------------------------
-Auth operations within the Identity API
-------------------------------------------
+-----------------------------------------------------
+Test Case 2 - Auth operations within the Identity API
+-----------------------------------------------------
 
 Use case specification
 -----------------------
 
 tempest.api.identity.v3.test_tokens.TokensV3Test.test_create_token
+tempest.api.identity.v3.test_tokens.TokensV3Test.test_validate_token
 
 Test preconditions
 -------------------
@@ -119,8 +120,16 @@ Test execution
   passes if it is equal to the user_name which is used to get token.
 * Test action 4: Get the method in getting token response message, the test
   passes if it is equal to the password which is used to get token.
+* Test action 5: Get the token by system credentials and show the token,
+  the test passes if the response bodies of the get and show operations are the same.
+* Test action 6: Get the user_id in showing token response message, the test
+  passes if it is equal to the user_id which is used to get token.
+* Test action 7: Get the username in showing token response message, the test
+  passes if it is equal to the username which is used to get token.
+* Test action 8: Delete this token by non-admin compute client, the test passes
+  if it raises a NotFound exception.
 
-Pass / fail criteria
+Pass / Fail criteria
 '''''''''''''''''''''
 
 This test case passes if all test action steps execute successfully and all assertions
@@ -132,3 +141,39 @@ Post conditions
 
 None
 
+--------------------------------------------------------
+Test Case 3 - Catalog operations within the Identity API
+--------------------------------------------------------
+
+Use case specification
+-----------------------
+
+tempest.api.identity.v3.test_catalog.IdentityCatalogTest.test_catalog_standardization
+
+Test preconditions
+-------------------
+
+None
+
+Basic test flow execution description and pass/fail criteria
+------------------------------------------------------------
+
+Test execution
+'''''''''''''''
+
+* Test action 1: Show all catalogs by non-admin catalog client, the test passes
+  if the catalog types getting in the show response message equal to the
+  standard service values. Standard catalog types of 'keystone', 'nova', 'glance' and
+  'swift' should be 'identity', 'compute', 'image' and 'object-store' respectively.
+
+Pass / Fail criteria
+'''''''''''''''''''''
+
+This test case passes if all test action steps execute successfully and all assertions
+are affirmed. If any test steps fails to execute successfully or any of the assertions
+is not met, the test case fails.
+
+Post conditions
+---------------
+
+None
