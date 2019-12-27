@@ -27,7 +27,7 @@
 
 bottlenecks:
   image_name: opnfv/bottlenecks
-  docker_tag: latest
+  docker_tag: 8.0.1-latest
   opts:
     detach: true
     stdin_open: true
@@ -35,7 +35,7 @@ bottlenecks:
   shell: '/bin/bash'
   envs:
     - 'DEPLOY_SCENARIO={{deploy_scenario}}'
-    - 'Yardstick_TAG=stable'
+    - 'Yardstick_TAG=opnfv-8.0.0'
     - 'OUTPUT_FILE={{testcase}}.out'
     - 'CI_DEBUG={{debug}}'
     - 'BUILD_TAG={{build_tag}}-{{testcase}}'

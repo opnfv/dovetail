@@ -504,8 +504,8 @@ The Docker images, Ubuntu and Cirros image below are necessary for all mandatory
    $ sudo docker pull opnfv/dovetail:ovp-3.0.0
    $ sudo docker pull opnfv/functest-smoke:hunter
    $ sudo docker pull opnfv/functest-healthcheck:hunter
-   $ sudo docker pull opnfv/yardstick:<need input>
-   $ sudo docker pull opnfv/bottlenecks:<need input>
+   $ sudo docker pull opnfv/yardstick:opnfv-8.0.0
+   $ sudo docker pull opnfv/bottlenecks:8.0.1-latest
    $ wget -nc http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img -P {ANY_DIR}
    $ wget -nc https://cloud-images.ubuntu.com/releases/16.04/release/ubuntu-16.04-server-cloudimg-amd64-disk1.img -P ${DOVETAIL_HOME}/images
 
@@ -527,7 +527,7 @@ At the online host, save the images with the command below.
    $ sudo docker save -o dovetail.tar opnfv/dovetail:ovp-3.0.0 \
      opnfv/functest-smoke:hunter opnfv/functest-healthcheck:hunter \
      opnfv/functest-vnf:hunter \
-     opnfv/yardstick:<need input> opnfv/bottlenecks:<need input>
+     opnfv/yardstick:opnfv-8.0.0 opnfv/bottlenecks:8.0.1-latest
 
 The command above creates a dovetail.tar file with all the images, which can then be copied
 to the Test Host. To load the Dovetail images on the Test Host execute the command below.
@@ -541,13 +541,13 @@ Now check to see that all Docker images have been pulled or loaded properly.
 .. code-block:: bash
 
    $ sudo docker images
-   REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE
-   opnfv/dovetail                  ovp-3.0.0           ac3b2d12b1b0        24 hours ago        784 MB
-   opnfv/functest-smoke            hunter              010aacb7c1ee        17 hours ago        594.2 MB
-   opnfv/functest-healthcheck      hunter              2cfd4523f797        17 hours ago        234 MB
-   opnfv/functest-vnf              hunter              929e847a22c3        17 hours ago        1.87 GB
-   opnfv/yardstick                 <need input>        84b4edebfc44        17 hours ago        2.052 GB
-   opnfv/bottlenecks               <need input>        3d4ed98a6c9a        21 hours ago        638 MB
+   REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
+   opnfv/dovetail                ovp-3.0.0           4b68659da24d        22 hours ago        825MB
+   opnfv/functest-smoke          hunter              c0253f6de153        3 weeks ago         556MB
+   opnfv/functest-healthcheck    hunter              fb6d766e38e0        3 weeks ago         379MB
+   opnfv/functest-vnf            hunter              31466d52d155        21 hours ago        1.1GB
+   opnfv/yardstick               opnfv-8.0.0         189d7d9fbcb2        7 months ago        2.54GB
+   opnfv/bottlenecks             8.0.1-latest        44c1b9fb25aa        5 hours ago         837MB
 
 After copying and loading the Dovetail images at the Test Host, also copy the test images
 (Ubuntu, Cirros and cloudify-manager) to the Test Host.
