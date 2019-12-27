@@ -31,7 +31,7 @@
 
 yardstick:
   image_name: opnfv/yardstick
-  docker_tag: latest
+  docker_tag: opnfv-8.0.0
   opts:
     detach: true
     stdin_open: true

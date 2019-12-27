@@ -30,7 +30,7 @@ Consequently, such cloud implementations do not pass Tempest tests which
 validate API responses despite actually implementing and providing the tested
 functionality.
 
-This document describes an exemption process for use within the OPNFV Verified
+This document describes an exemption process for use within the OPNFV Verification
 Program which
 
 i) allows vendors to pass Tempest tests if the tested functionality is
@@ -63,7 +63,7 @@ is actually available. As a result, a Tempest test failing due to extended API
 responses does not provide information about whether the tested functionality
 is available or not.
 
-The OPNFV Verified Program has inherited the policy to strictly validate API
+The OPNFV Verification Program has inherited the policy to strictly validate API
 responses from OpenStack by including a selection of Tempest tests in its
 compliance test suite. However, it was never discussed if OVP should adopt this
 policy as well. It turns out that this policy causes challenges for vendors of
@@ -168,7 +168,7 @@ responses is as follows:
    not.
 
 #. The exemption will be made available to participants of OVP as part of a
-   service release of OVP 2018.01 and 2018.09.
+   service release of OVP 2018.01, 2018.09 and 2019.12.
 
 #. The C&C committee will monitor the situation around exemptions and may
    decide changes to the above process at any time, including the possibility
