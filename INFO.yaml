@@ -13,11 +13,11 @@ project_creation_date: 'September 1st, 2015'
 project_category: 'Testing'
 lifecycle_state: 'Incubation'
 project_lead: &opnfv_dovetail_ptl
-    name: 'Dan Xu'
-    email: 'xudan16@huawei.com'
+    name: 'Kanagaraj Manickam'
+    email: 'kanagaraj.manickam@huawei.com'
     company: 'huawei.com'
-    id: 'xudan'
-    timezone: 'Asia/Shanghai'
+    id: 'mkr1481'
+    timezone: 'India/Bangalore'
 primary_contact: *opnfv_dovetail_ptl
 issue_tracking:
     type: 'jira'
@@ -64,6 +64,10 @@ committers:
       email: 'georg.kunz@ericsson.com'
       company: 'ericsson.com'
       id: 'georgkunz'
+    - name: 'Dan Xu'
+      email: 'xudan16@huawei.com'
+      company: 'huawei.com'
+      id: 'xudan'
 tsc:
     # yamllint disable rule:line-length
     approval: 'http//meetbot.opnfv.org/meetings/opnfv-meeting/2015/opnfv-meeting.2015-09-01-13.59.html'
