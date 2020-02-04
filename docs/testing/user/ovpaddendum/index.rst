@@ -20,7 +20,7 @@ release. This information is intended as an overview for OVP testers and for
 the Dovetail Project to help guide test-tool and test-case development for the
 OVP 2019.12 release. The Dovetail project is responsible for documenting
 test-case specifications as well as implementing the OVP tool-chain through
-collaboration with the OPNFV testing community. OVP testing focuses on
+collaboration with the OPNFV and ONAP testing communities. OVP testing focuses on
 establishing the ability of the System Under Test (SUT) to perform NFVI and VIM
 operations and support Service Provider oriented features that ensure
 manageable, resilient and secure networks.
@@ -29,15 +29,15 @@ manageable, resilient and secure networks.
 Meaning of Compliance
 =====================
 
-OPNFV Compliance indicates adherence of an NFV platform to behaviors defined
-through specific platform capabilities, allowing to prepare, instantiate,
+OPNFV Compliance indicates adherence of an NFV platform and VNF to behaviors 
+defined through specific platform capabilities, allowing to prepare, instantiate,
 operate and remove VNFs running on the NFVI. OVP 2019.12 compliance evaluates
 the ability of a platform to support Service Provider network capabilities and
-workloads that are supported in the OPNFV platform as of this release.
-Compliance test cases are designated as compulsory or optional based on the
-maturity of OPNFV capabilities as well as industry expectations. Compulsory
-test cases may for example include NFVI management capabilities whereas tests
-for certain high-availability features may be deemed as optional.
+workloads that are supported in the OPNFV and ONAP platforms as of this release.
+Test cases are designated as compulsory or optional based on the maturity 
+of capabilities as well as industry expectations. Compulsory test cases may for 
+example include NFVI management capabilities whereas tests for certain 
+high-availability features may be deemed as optional.
 
 Test coverage and pass/fail criteria are designed to ensure an acceptable level
 of compliance but not be so restrictive as to disqualify variations in platform
@@ -47,14 +47,24 @@ implementations, capabilities and features.
 SUT Assumptions
 ===============
 
-Assumptions about the System Under Test (SUT) include ...
+Assumptions about the NFVI System Under Test (SUT) for the OVP Infrastructure 
+badge include ...
 
 - The minimal specification of physical infrastructure, including controller
-  nodes, compute nodes and networks, is defined by the `Pharos specification`_.
+  nodes, compute nodes and networks, is defined for the NFVI by the 
+  `Pharos specification`_.
 
 - The SUT is fully deployed and operational, i.e. SUT deployment tools are
   out of scope of testing.
 
+Assumptions about the VNF System Under Test (SUT) for the OVP VNF 
+badge include ...
+
+- The VNF templates and disk image(s) file are available, and the disk 
+image(s) have been deployed to the ONAP Cloud Site.
+
+- The required value for the VNF pre-load files are available for the 
+selected ONAP Cloud Site.
 
 Scope of Testing
 ================
@@ -64,7 +74,7 @@ outlines the key objectives of the OVP as follows:
 
 - Help build the market for
 
-  - OPNFV based infrastructure
+  - LFN based infrastructure
 
   - applications designed to run on that infrastructure
 
@@ -76,8 +86,8 @@ outlines the key objectives of the OVP as follows:
 - Enhance interoperability
 
 The guidelines further directs the scope to be constrained to "features,
-capabilities, components, and interfaces included in an OPNFV release that are
-generally available in the industry (e.g., through adoption by an upstream
+capabilities, components, and interfaces included in an OPNFV and ONAP releases 
+that are generally available in the industry (e.g., through adoption by an upstream
 community)", and that compliance verification is evaluated using "functional
 tests that focus on defined interfaces and/or behaviors without regard to the
 implementation of the underlying system under test".
@@ -92,6 +102,13 @@ also out of scope or for further study. Newer functional areas such as MANO
 (outside of APIs in the NFVI and VIM) are still developing and are for future
 considerations.
 
+ONAP provides a comprehensive platform for real-time, policy-driven orchestration 
+and automation of physical and virtual network functions that will enable software, 
+network, IT and cloud providers and developers to rapidly automate new services and 
+support complete lifecycle management. By unifying member resources, ONAP is 
+accelerating the development of a vibrant ecosystem around a globally shared 
+architecture and implementation for network automation–with an open standards focus–
+faster than any one product could on its own.
 
 General Approach
 ----------------
@@ -170,7 +187,7 @@ including:
 - simple virtual machine resource scheduling on multiple nodes
 
 OPNFV mainly supports OpenStack as the VIM up to the 2019.12 release. The VNFs
-used in the OVP program, and features in scope for the program which are
+used in the OVP NFVI program, and features in scope for the program which are
 considered to be basic to all VNFs, require commercial OpenStack distributions
 to support a common basic level of cloud capabilities, and to be compliant to a
 common specification for these capabilities. This requirement significantly
@@ -288,7 +305,7 @@ There are a lot of projects in OPNFV developing use cases and sample VNFs. The
 2019.12 release of OVP features two such use-case tests, spawning and verifying
 a vIMS and a vEPC, correspondingly.
 
-8. Additional capabilities
+8. Additional NFVI capabilities
 
 In addition to the capabilities analyzed above, there are further system
 aspects which are of importance for the OVP. These comprise operational and
@@ -305,7 +322,16 @@ considered widely available in commercial systems in order to include them in
 the OVP. Hence, these aspects are left for inclusion in future releases of the
 OVP.
 
+9. VNF Compliance
 
+VNF Compliance verifies the VNF template files conform to the requirements documented 
+in by ONAP VNFRQTS project.  
+
+10. VNF Validation
+
+VNF Validation verifies the VNF is able to onbroad within ONAP and ONAP is able to 
+perform basic orchestration operations with the VNF, including instantiating the 
+VNF on the Cloud Site. 
 
 Scope of the 2019.12 release of the OVP
 ---------------------------------------
@@ -313,7 +339,7 @@ Scope of the 2019.12 release of the OVP
 Summarizing the results of the analysis above, the scope of the 2019.12 release
 of OVP is as follows:
 
-- Mandatory test scope:
+- Mandatory NFVI test scope:
 
   - functest.vping.userdata
   - functest.vping.ssh
@@ -338,7 +364,7 @@ of OVP is as follows:
   - yardstick.ha.database
   - bottlenecks.stress.ping
 
-- Optional test scope:
+- Optional NFVI test scope:
 
   - functest.tempest.ipv6_scenario
   - functest.tempest.multi_node_scheduling
@@ -350,6 +376,10 @@ of OVP is as follows:
   - yardstick.ha.controller_restart
   - functest.vnf.vims
   - functest.vnf.vepc
+
+- Mandatory VNF test scope:
+
+  - Refer to `ONAP VNF Test Case Descriptions <https://docs.onap.org/en/elalto/submodules/vnfrqts/testcases.git/docs/index.html>`_
 
 \* The OPNFV OVP utilizes the same set of test cases as the OpenStack
 interoperability program *OpenStack Powered Compute*. Passing the OPNFV OVP

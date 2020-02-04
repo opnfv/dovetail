@@ -2,12 +2,15 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) OPNFV, Huawei Technologies Co.,Ltd and others.
 
-====================================
-Conducting OVP Testing with Dovetail
-====================================
+=========================================
+Conducting OVP NFVI Testing with Dovetail
+=========================================
 
 Overview
 --------
+
+This guide provides the instructions for the OVP Infrastructure testing.  For the 
+OVP VNF testing, please refer to the next section.
 
 The Dovetail testing framework for OVP consists of two major parts: the testing client which
 executes all test cases in a lab (vendor self-testing or a third party lab),
@@ -788,9 +791,7 @@ until they are ready to submit results for peer community review.
 
        * Obtain results tar file located at ``${DOVETAIL_HOME}/``, e.g. ``logs_20180105_0858.tar.gz``.
 
-       * Use the *Choose File* button where a file selection dialog allows you to choose your result
-       file from the hard-disk. Then click the *Upload result* button and see a results ID once your
-       upload succeeds.
+       * Use the *Choose File* button where a file selection dialog allows you to choose your result file from the hard-disk. Then click the *Upload result* button and see a results ID once your upload succeeds.
 
      * Results are remaining in status 'private' until they are submitted for review.
 
