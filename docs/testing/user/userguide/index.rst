@@ -14,3 +14,4 @@ OVP Testing User Guide
    testing_guide.rst
    cli_reference.rst
    api_testing_guide.rst
+   vnf_test_guide.rst
