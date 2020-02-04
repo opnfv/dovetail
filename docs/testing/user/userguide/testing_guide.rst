@@ -788,9 +788,7 @@ until they are ready to submit results for peer community review.
 
        * Obtain results tar file located at ``${DOVETAIL_HOME}/``, e.g. ``logs_20180105_0858.tar.gz``.
 
-       * Use the *Choose File* button where a file selection dialog allows you to choose your result
-       file from the hard-disk. Then click the *Upload result* button and see a results ID once your
-       upload succeeds.
+       * Use the *Choose File* button where a file selection dialog allows you to choose your result file from the hard-disk. Then click the *Upload result* button and see a results ID once your upload succeeds.
 
      * Results are remaining in status 'private' until they are submitted for review.
 

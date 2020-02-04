@@ -37,8 +37,8 @@ manner. In order to submit results for official review, the first step is apply 
 into the program with the participation form provided in the link: `OPNFV Verification Program
 Participation Form <https://na3.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=dc24bf38-ea41-40d4-9e58-9babc6eec778>`_
 
-Test Suites and Test Areas
---------------------------
+NFVI Test Suites and Test Areas
+-------------------------------
 
 OVP/Dovetail groups test cases into test suites and test areas. Test suites are currently a basic
 categorization around releases for the most part. Executing the test suite 'ovp.2019.12' without
@@ -54,8 +54,8 @@ The optional test cases are not required to be executed for the official complia
 review in the OVP 2019.12 release. However, execution of these cases is encouraged, as some
 optional test cases may become mandatory in future releases.
 
-Test Cases and Sub Test Cases
------------------------------
+NFVI Test Cases and Sub Test Cases
+----------------------------------
 
 Each test area consists of multiple test cases where each test case can be a single test or
 broken down into sub test cases. A listing of test cases with the number of sub test cases noted
@@ -110,10 +110,20 @@ OPNFV Test Projects and Components
 
 The OPNFV test frameworks integrated into the Dovetail framework that deliver test content are:
 
- * Functest (leverages OpenStack RefStack/Tempest projects in addition to supplying native test cases)
- * Yardstick
- * Bottlenecks
+ - Functest (leverages OpenStack RefStack/Tempest projects in addition to supplying native test cases)
+ - Yardstick
+ - Bottlenecks
 
+ONAP Test Projects and Components
+---------------------------------
+
+The ONAP test project used with this OVP release to provide the test requirements and test 
+scripting are:
+
+- VNFRQTS
+- VNFSDK
+- VTP
+- VVP 
 
 Acceptence and Marketing
 ------------------------
@@ -147,7 +157,7 @@ Release Data
 | **Project**                          | Dovetail                              |
 |                                      |                                       |
 +--------------------------------------+---------------------------------------+
-| **Repo tag**                         | ovp-3.0.0                             |
+| **Repo tag**                         | ovp-3.0.1                             |
 |                                      |                                       |
 +--------------------------------------+---------------------------------------+
 | **Release designation**              | OPNFV Verification Program (OVP)      |
@@ -159,6 +169,10 @@ Release Data
 | **Purpose of the delivery**          | Support OVP 2019.12 release with      |
 |                                      | OPNFV Hunter release as reference SUT |
 +--------------------------------------+---------------------------------------+
+| **Notes**                            | Point release ovp-3.0.1 updates,      |
+|                                      | changes, and corrects the             |
+|                                      | documentation only.                   |
++--------------------------------------+---------------------------------------+
 
 
 Deliverables
@@ -166,6 +180,10 @@ Deliverables
 
 Software
 --------
+
+OPNFV Software
+""""""""""""""
+
 +-------------------------+-----------------------------------+----------------+
 |  **Docker Container**   | **Docker Image**                  | **Tag**        |
 +-------------------------+-----------------------------------+----------------+
@@ -182,8 +200,7 @@ Software
 |   bottlenecks           |    opnfv/bottlenecks              |   8.0.1-latest |
 +-------------------------+-----------------------------------+----------------+
 
-
-Docker images:
+**Docker images:**
 
 - `Dovetail Docker images <https://hub.docker.com/r/opnfv/dovetail>`_
 - `Functest-smoke Docker images <https://hub.docker.com/r/opnfv/functest-smoke/>`_
@@ -192,24 +209,37 @@ Docker images:
 - `Yardstick Docker images <https://hub.docker.com/r/opnfv/yardstick/>`_
 - `Bottlenecks Docker images <https://hub.docker.com/r/opnfv/bottlenecks/>`_
 
+ONAP Software
+"""""""""""""
 
++-------------------------+---------------------------------------------+
+| **Item**                |  **Repo Link**                              |
++-------------------------+---------------------------------------------+
+| VTP/VNFSDK Test Scripts | `<https://git.onap.org/vnfsdk/refrepo>`_    |
++-------------------------+---------------------------------------------+
+| VVP Robot Test Scripts  | `<https://git.onap.org/oom/>`_              |
++-------------------------+---------------------------------------------+
 
 Documents
 ---------
 
-- `System Preparation Guide <https://opnfv-dovetail.readthedocs.io/en/latest/testing/user/systempreparation/index.html>`_
+- `System Preparation Guide <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/systempreparation/index.html>`_
 
-- `User Guide <https://opnfv-dovetail.readthedocs.io/en/latest/testing/user/userguide/testing_guide.html>`_
+- `NFVI User Guide <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/userguide/testing_guide.html>`_
 
-- `OPV Test Specifications <https://opnfv-dovetail.readthedocs.io/en/latest/testing/user/testspecification/index.html>`_
+- `VNF User Guide: <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/userguide/testing_guide.html>`_
 
-- `Dovetail CLI Reference <https://opnfv-dovetail.readthedocs.io/en/latest/testing/user/userguide/cli_reference.html>`_
+- `OPV NFVI Test Specifications <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/testspecification/index.html>`_
 
-- `Dovetail RESTful API <https://opnfv-dovetail.readthedocs.io/en/latest/testing/user/userguide/api_testing_guide.html>`_
+- `ONAP VNF Test Specifications <https://docs.onap.org/en/elalto/submodules/vnfrqts/testcases.git/docs/index.html>`_
 
-- `OPV Workflow <https://opnfv-dovetail.readthedocs.io/en/latest/testing/user/certificationworkflow/index.html>`_
+- `Dovetail CLI Reference <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/userguide/cli_reference.html>`_
 
-- `OPV Reviewer Guide <https://opnfv-dovetail.readthedocs.io/en/latest/testing/user/reviewerguide/index.html>`_
+- `Dovetail RESTful API <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/userguide/api_testing_guide.html>`_
+
+- `OPV Workflow <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/certificationworkflow/index.html>`_
+
+- `OPV Reviewer Guide <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/reviewerguide/index.html>`_
 
 
 Testing with OPNFV Hunter Installers
@@ -228,10 +258,11 @@ Hunter installer versions.
 Hunter Known Restrictions/Issues
 ================================
 
-Please refer to the Dovetail project JIRA for known issues with the Dovetail
-Hunter release:
+Please refer to the OPNFV and ONAP JIRA for known issues with each applicable project:
 
-.. https://jira.opnfv.org/projects/DOVETAIL
+- `<https://jira.opnfv.org/projects/DOVETAIL>`_
+- `<https://jira.onap.org/projects/VVP>`_
+- `<https://jira.onap.org/projects/VNFSDK>`_
 
 
 Useful Links
