@@ -1,19 +1,26 @@
 .. This work is licensed under a Creative Commons Attribution 4.0 International License.
 .. http://creativecommons.org/licenses/by/4.0
-.. (c) OPNFV, Huawei Technologies Co.,Ltd and others.
+.. (c) OPNFV, ONAP, and others.
 
-=========================================
-Conducting ONAP VNF Testing with Dovetail
-=========================================
+.. _dovetail-vnf_testers_guide:
+
+===================================
+Conducting ONAP VNF Testing for OVP
+===================================
 
 Overview
 --------
 
-As the LFN verification framework, Dovetail covers ONAP VNF tests by integrating
-VNF SDK and VVP. This guide introduces only how to use Dovetail to run the tests.
+As the LFN verification framework, the Dovetail team has worked with the ONAP VVP, and VTP
+projects to enable VNF testing, results submission, and results review to be completed
+throught the same web portal and processes used for the NFVI testing.
 For more details about VNF SDK and VVP, please refer to `ONAP VNF SDK Compliance Verification Program
-<https://docs.onap.org/en/dublin/submodules/vnfsdk/model.git/docs/files/VNFSDK-LFN-CVC.html>`_
-and `ONAP VVP <https://docs.onap.org/en/dublin/submodules/vvp/documentation.git/docs/index.html>`_.
+<https://docs.onap.org/en/elalto/submodules/vnfsdk/model.git/docs/files/VNFSDK-LFN-CVC.html>`_
+and `ONAP VVP <https://docs.onap.org/en/elalto/submodules/vvp/documentation.git/docs/index.html>`_.
+
+Testing is available for both HEAT and TOSCA defined VNFs, but the process is different depending
+on the template language.  This userguide covers the testing process for both VNF types in the
+two sections below.
 
 
 Definitions and abbreviations
@@ -21,158 +28,687 @@ Definitions and abbreviations
 
 - LFN - Linux Foundation Networking
 - ONAP - Open Network Automation Platform
+- OVP - OPNFV Verification Program
 - VNF - Virtual Network Function
-- SDK - Software Development Kit
+- VNF SDK - VNF Software Development Kit
+- VTP - VNF Test Platform
 - VVP - VNF Validation Program
 
+Testing of HEAT based VNFs
+--------------------------
 
 Environment Preparation
------------------------
-
-Currently, there are only VNF package validation tests which do not rely on the
-ONAP deployment. As a result, the preparation is very simple.
-
-
-Install Docker
-^^^^^^^^^^^^^^
-
-The main prerequisite software for Dovetail is Docker. Please refer to `official
-Docker installation guide <https://docs.docker.com/install/>`_ which is relevant
-to your Test Host's operating system.
-
-
-Install VNF SDK Backend (optional)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If it is TOSCA based VNF, then VNF SDK Backend must be installed before the
-tests. There is a `docker-compose.yml` in VNFSDK repo which runs 2 docker containers. Use
-the following commands to run the containers:
-
-.. code-block:: bash
-
-   $ export NEXUS_DOCKER_REPO=nexus3.onap.org:10001
-   $ export REFREPO_TAG=1.2.1-STAGING-20181228T020411Z
-   $ export POSTGRES_TAG=latest
-   $ export MTU=1450
-   $ wget https://raw.githubusercontent.com/onap/vnfsdk-refrepo/master/vnfmarket-be/deployment/install/docker-compose.yml
-   $ sudo docker-compose up -d
-
-
-The command `docker ps` can be used to check if the 2 containers named
-'refrepo' and 'postgres' are running.
-
-The VNF package to be tested should be copied to the container 'refrepo'.
-
-.. code-block:: bash
-
-   $ sudo docker cp /path/to/VNF/name.csar refrepo:/opt
-
-
-Run Tests with Dovetail
------------------------
-
-Setting up Configuration Files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-For convenience and as a convention, we will create a home directory for storing
-all Dovetail related config files and results files:
-
-.. code-block:: bash
-
-   $ mkdir -p ${HOME}/dovetail
-   $ export DOVETAIL_HOME=${HOME}/dovetail
-
-
-For example, here we set Dovetail home directory to be ``${HOME}/dovetail``.
-Afterwards, we will create a directory named ``pre_config`` inside this directory
-to store all Dovetail config related files and a directory named ``results``, where
-test results are going to be saved:
-
-.. code-block:: bash
-
-   $ mkdir -p ${DOVETAIL_HOME}/pre_config
-   $ mkdir -p ${DOVETAIL_HOME}/results
-   $ chmod 777 ${DOVETAIL_HOME}/results
-
-
-There should be a file `env_config.sh` inside ``pre_config`` directory to provide
-some info needed by test cases.
-
-For TOSCA based VNFs, it should look like this:
-
-.. code-block:: bash
-
-   $ cat ${DOVETAIL_HOME}/pre_config/env_config.sh
-   export HOST_URL="http://<docker host ip>:8702"
-   export CSAR_FILE="/opt/name.csar"
-
-
-For HEAT based VNFs, the user should copy an archive of the HEAT template VNF
-packages to `pre_config`. The archive must be in zip (.zip) format.
-In addition, the zip of HEAT templates must be a flat collection of files, which
-means there should be no top-level directory and no sub-directories.
-
-Configuration file `env_config.sh` should look like this for HEAT based VNFs:
-
-.. code-block:: bash
-
-   $ cat ${DOVETAIL_HOME}/pre_config/env_config.sh
-   export VNF_ARCHIVE_NAME="vnf_archive_name"
-
-
-Starting Dovetail Docker
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Use the command below to create a Dovetail container and get access to its shell:
-
-.. code-block:: bash
-
-   $ sudo docker run --privileged=true -it \
-             -e DOVETAIL_HOME=$DOVETAIL_HOME \
-             -v $DOVETAIL_HOME:$DOVETAIL_HOME \
-             -v /var/run/docker.sock:/var/run/docker.sock \
-             opnfv/dovetail:<tag> /bin/bash
-
-
-The ``-e`` option sets the DOVETAIL_HOME environment variable in the container
-and the ``-v`` options mount files from the Test Host to the destination path
-inside the container. The latter option allows the Dovetail container to read
-the configuration files and write result files into DOVETAIL_HOME on the Test
-Host. The user should be within the Dovetail container shell, once the command
-above is executed. In order to run ONAP VNF tests 'latest' <tag> must be used.
-
-
-Running OVP Test Suites
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Run VNF tests with the following command:
+Prerequisites
+"""""""""""""
+
+- `ONAP ElAlto Release deployed via OOM <https://onap.readthedocs.io/en/latest/submodules/oom.git/docs/oom_quickstart_guide.html>`_
+- An OpenStack deployment is available and privisioned as ONAP's Cloud Site
+- kubectl is installed on the system used to start the testing
+- bash
+- VNF Heat Templates
+- Preload json files
+
+After deploying ONAP, you need to configure ONAP with:
+
+- A cloud owner
+- A cloud region
+- A subscriber
+- A service type
+- A project name
+- An owning entity
+- A platform
+- A line of business
+- A cloud site
+
+If you're not familiar with how to configure ONAP, there are guides that use
+`robot <https://onap.readthedocs.io/en/elalto/submodules/integration.git/docs/docs_robot.html>`_
+or `direct api <https://wiki.onap.org/pages/viewpage.action?pageId=25431491>`_ requests available
+to help, as well as a guide for adding a new OpenStack site to ONAP.
+
+VVP Test Tool Setup
+"""""""""""""""""""
+
+On your local machine, or the system from which you will run the tests, you will need to clone the
+ONAP OOM project repo:
 
 .. code-block:: bash
 
-   $ dovetail run --testsuite <suite name> -d -r
+    git clone --branch 5.0.1-ONAP ssh://<username>@gerrit.onap.org:29418/oom --recurse-submodules
 
+VNF Preparation
+^^^^^^^^^^^^^^^
 
-For TOSCA based VNFs, `<suite name>` is `onap.tosca.2019.04` and for
-HEAT based ones, it is `onap.heat.2019.04`.
+The vnf lifecycle validation testsuite requires the VNF to be packaged into a specific directory
+hierarchy, shown below.
 
-When test execution is complete, a tar file with all result and log files is
-written in ``$DOVETAIL_HOME`` on the Test Host. An example filename is
-``${DOVETAIL_HOME}/logs_20180105_0858.tar.gz``. The file is named using a
-timestamp that follows the convention ‘YearMonthDay-HourMinute’. In this case,
-it was generated at 08:58 on January 5th, 2018. This tar file is used for
-uploading the logs to `OVP VNF portal`_.
+.. code-block::
 
-NOTE: If Dovetail run fails when testing `onap-vtp.validate.csar`, then follow the
-below guidelines to run the test again.
+    vnf_folder
+    ├── /templates
+    |   └── base.yaml
+    |   └── base.env
+    |   └── incremental_0.yaml
+    |   └── incremental_0.env
+    |   └── ...
+    ├── /preloads
+    |   └── base_preload.json
+    |   └── incremental_0_preload.json
+    |   └── ...
+    └── vnf-details.json
+
+- The name for vnf_folder is free-form, and can be located anywhere on your computer. The path to this folder will be passed to the testsuite as an argument.
+- /templates should contain your VVP-compliant VNF heat templates.
+- /preloads should contain a preload file for each VNF module (TODO: add link to preload documentation).
+    - For a VNF-API preload: vnf-name, vnf-type, generic-vnf-type, and generic-vnf-name should be empty strings.
+    - For a GR-API preload: vnf-name, vnf-type, vf-module-type, and vf-module-name should be empty strings.
+    - This information will be populated at runtime by the testsuite.
+- vnf-details should be a json file with the information that will be used by ONAP to instantiate the VNF. The structure of vnf-details is shown below.
+- VNF disk image must be uploaded and available in the OpenStack project being managed by ONAP
+- Modules must contain an entry for each module of the VNF. Only one module can be a base module.
+- api_type should match the format of the preloads that are provided in the package.
+- The other information should match what was used to configure ONAP during the pre-requisite section of this guide.
+
+.. code-block:: json
+
+    {
+        "vnf_name": "The Vnf Name",
+        "description": "Description of the VNF",
+        "modules": [
+            {
+            "filename": "base.yaml",
+            "isBase": "true",
+            "preload": "base_preload.json"
+            },
+            {
+            "filename": "incremental_0.yaml",
+            "isBase": "false",
+            "preload": "incremental_0.json"
+            },
+            ...
+        ],
+        "api_type": "[gr_api] or [vnf_api]",
+        "subscriber": "<subscriber name>",
+        "service_type": "<service type>",
+        "tenant_name": "<name of tenant>",
+        "region_id": "<name of region>",
+        "cloud_owner": "<name of cloud owner>",
+        "project_name": "<name of project>",
+        "owning_entity": "<name of owning entity>",
+        "platform": "<name of platform>",
+        "line_of_business": "<name of line of business>",
+        "os_password": "<openstack password>"
+    }
+
+Runnign the HEAT VNF Test
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The ONAP OOM Robot framework will run the test, using kubectl to manage the execution.  The framework
+will copy your VNF template files to the robot container required to execute the test.
 
 .. code-block:: bash
 
-   $ sudo docker exec -it refrepo bash
-   $ export OPEN_CLI_HOME=/opt/vtp
-   $ cd $OPEN_CLI_HOME/bin
-   $ ./oclip-grpc-server.sh
-   $ #Exit docker by running CTRL+p+q
+     cd oom/kubernetes/robot
+    $ ./instantiate-k8s.sh --help
+    ./instantiate-k8s.sh [options]
 
+    required:
+    -n, --namespace <namespace>       namespace that robot pod is running under.
+    -f, --folder <folder>             path to folder containing heat templates, preloads, and vnf-details.json.
+
+    additional options:
+    -p, --poll                        some cloud environments (like azure) have a short time out value when executing
+                                      kubectl. If your shell exits before the testsuite finishes, using this option
+                                      will poll the testsuite logs every 30 seconds until the test finishes.
+    -t, --tag <tag>                   robot testcase tag to execute (default is instantiate_vnf).
+
+    This script executes the VNF instantiation robot testsuite.
+    - It copies the VNF folder to the robot container that is part of the ONAP deployment.
+    - It models, distributes, and instantiates a heat-based VNF.
+    - It copies the logs to an output directory, and creates a tarball for upload to the OVP portal.
+
+
+**Sample execution:**
+
+.. code-block:: bash
+
+    $ ./instantiate-k8s.sh --namespace onap --folder /tmp/vnf-instantiation/examples/VNF_API/pass/multi_module/ --poll
+    ...
+    ...
+    ...
+    ...
+    ------------------------------------------------------------------------------
+    Testsuites.Vnf Instantiation :: The main driver for instantiating ... | PASS |
+    1 critical test, 1 passed, 0 failed
+    1 test total, 1 passed, 0 failed
+    ==============================================================================
+    Testsuites                                                            | PASS |
+    1 critical test, 1 passed, 0 failed
+    1 test total, 1 passed, 0 failed
+    ==============================================================================
+    Output:  /share/logs/0003_ete_instantiate_vnf/output.xml
+    + set +x
+    testsuite has finished
+    Copying Results from pod...
+    /tmp/vnf-instantiation /tmp/vnf-instantiation
+    a log.html
+    a results.json
+    a stack_report.json
+    a validation-scripts.json
+    /tmp/vnf-instantiation
+    VNF test results: /tmp/vnfdata.46749/vnf_heat_results.tar.gz
+
+The testsuite takes about 10-15 minutes for a simple VNF, and will take longer for a more complicated VNF.
+
+Reporting Results
+"""""""""""""""""
+Once the testsuite is finished, it will create a directory and tarball in /tmp (the name of the directory
+and file is shown at the end of the stdout of the script). There will be a results.json in that directory
+that has the ultimate outcome of the test, in the structure shown below.
+
+**Log Files**
+
+The output tar file will have 4 log files in it.
+
+- results.json: This is high-level results file of all of the test steps, and is consumed by the OVP portal.
+- report.json: This is the output of the vvp validation scripts.
+- stack_report.json: This is the output from querying openstack to validate the heat modules.
+- log.html: This is the robot log, and contains each execution step of the testcase.
+
+If the result is "PASS", that means the testsuite was successful and the tarball is ready for submission
+to the OVP portal.
+
+**results.json**
+
+.. code-block:: json
+
+    {
+        "vnf_checksum": "afc57604a3b3b7401d5b8648328807b594d7711355a2315095ac57db4c334a50",
+        "build_tag": "vnf-validation-53270",
+        "version": "2019.09",
+        "test_date": "2019-09-04 17:50:10.575",
+        "duration": 437.002,
+        "vnf_type": "heat",
+        "testcases_list": [
+            {
+                "mandatory": "true",
+                "name": "onap-vvp.validate.heat",
+                "result": "PASS",
+                "objective": "onap heat template validation",
+                "sub_testcase": [],
+                "portal_key_file": "report.json"
+            },
+            {
+                "mandatory": "true",
+                "name": "onap-vvp.lifecycle_validate.heat",
+                "result": "PASS",
+                "objective": "onap vnf lifecycle validation",
+                "sub_testcase": [
+                    {
+                        "name": "model-and-distribute",
+                        "result": "PASS"
+                    },
+                    {
+                        "name": "instantiation",
+                        "result": "PASS"
+                    }
+                ],
+                "portal_key_file": "log.html"
+            },
+            {
+                "mandatory": "true",
+                "name": "stack_validation",
+                "result": "PASS",
+                "objective": "onap vnf openstack validation",
+                "sub_testcase": [],
+                "portal_key_file": "stack_report.json"
+            }
+        ]
+    }
+
+
+Additional Resources
+^^^^^^^^^^^^^^^^^^^^
+
+- `ONAP VVP Project <https://wiki.onap.org/display/DW/VNF+Validation+Program+Project>`_
+- `VVP Wiki Users Guide (this will track current ONAP master) <https://wiki.onap.org/pages/viewpage.action?pageId=68546123>`_
+
+Sample VNF templates are available on the VVP Wiki Users Guide page.
+
+Testing of TOSCA based VNFs
+---------------------------
+
+VNF Test Platform (VTP) provides an platform to on-board different test cases required for
+OVP for various VNF testing provided by VNFSDK (for TOSCA) and VVP(for HEAT)  projects in
+ONAP. And it generates the test case outputs which would be uploaded into OVP portal for
+VNF badging.
+
+TOSCA VNF Test Environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+As pre-requestiests steps, Its assumed that, successful ONAP, Vendor VNFM and OpenStack
+cloud are already available. Below installation steps help to setup VTP components and CLI.
+
+.. image:: images/tocsa_vnf_test_environment.png
+    :align: center
+    :scale: 100%
+
+Installation
+^^^^^^^^^^^^
+
+Clone the VNFSDK repo.
+
+.. code-block:: bash
+
+    git clone --branch elalto https://git.onap.org/vnfsdk/refrepo
+
+Install the VTP by using script *refrepo/vnfmarket-be/deployment/install/vtp_install.sh*
+
+Follow the steps as below (in sequence):
+
+- vtp_install.sh --download : It will download all required artifacts into /opt/vtp_stage
+- vtp_install.sh --install : It will install VTP (/opt/controller) and CLI (/opt/oclip)
+- vtp_install.sh --start : It will start VTP controller as tomcat service and CLI as oclip service
+- vtp_install.sh --verify : It will verify the setup is done properly by running some test cases.
+
+Last step (verify) would check the health of VTP components and TOSCA VNF compliance and validation test cases.
+
+Check Available Test Cases
+""""""""""""""""""""""""""
+
+VTP supports to check the compliance of VNF and PNF based on ONAP VNFREQS.
+
+To check:
+
+- Go to command console
+- Run command oclip
+- Now it will provide a command prompt:
+
+*oclip:open-cli>*
+
+Now run command as below and check the supported compliance testcases for VNFREQS.
+
+- csar-validate - Helps to validate given VNF CSAR for all configured VNFREQS.
+- csar-validate-rxxx - Helps to validate given VNF CSAR for a given VNFREQS xxx.
+
+.. code-block:: bash
+
+    oclip:open-cli>schema-list --product onap-dublin --service vnf-compliance
+    +--------------+----------------+------------------------+--------------+----------+------+
+    |product       |service         |command                 |ocs-version   |enabled   |rpc   |
+    +--------------+----------------+------------------------+--------------+----------+------+
+    |onap-dublin   |vnf-compliance  |csar-validate-r10087    |1.0           |true      |      |
+    +--------------+----------------+------------------------+--------------+----------+------+
+    |onap-dublin   |vnf-compliance  |csar-validate           |1.0           |true      |      |
+    +--------------+----------------+------------------------+--------------+----------+------+
+    |onap-dublin   |vnf-compliance  |csar-validate-r26885    |1.0           |true      |      |
+    +--------------+----------------+------------------------+--------------+----------+------+
+    |onap-dublin   |vnf-compliance  |csar-validate-r54356    |1.0           |true      |      |
+    ...
+
+To know the details of each VNFREQS, run as below.
+
+.. code-block:: bash
+
+    oclip:open-cli>use onap-dublin
+    oclip:onap-dublin>csar-validate-r54356 --help
+    usage: oclip csar-validate-r54356
+
+    Data types used by NFV node and is based on TOSCA/YAML constructs specified in draft GS NFV-SOL 001.
+    The node data definitions/attributes used in VNFD MUST comply.
+
+Now run command as below and check the supported validation testcases
+
+.. code-block:: bash
+
+    oclip:onap-dublin>use open-cli
+    oclip:open-cli>schema-list --product onap-dublin --service vnf-validation
+    +--------------+----------------+----------------------+--------------+----------+------+
+    |product       |service         |command               |ocs-version   |enabled   |rpc   |
+    +--------------+----------------+----------------------+--------------+----------+------+
+    |onap-dublin   |vnf-validation  |vnf-tosca-provision   |1.0           |true      |      |
+    +--------------+----------------+----------------------+--------------+----------+------+
+
+Configure ONAP with required VNFM and cloud details
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**1. Setup the OCOMP profile onap-dublin**
+
+Run following command to configure the ONAP service URL and creadentials as given below, which will be
+used by VTP while executing the test cases
+
+.. code-block:: bash
+
+    oclip:open-cli>use onap-dublin
+    oclip:onap-dublin>profile onap-dublin
+    oclip:onap-dublin>set sdc.onboarding:host-url=http://159.138.8.8:30280
+    oclip:onap-dublin>set sdc.onboarding:host-username=cs0008
+    oclip:onap-dublin>set sdc.onboarding:host-password=demo123456!
+    oclip:onap-dublin>set sdc.catalog:host-url=http://159.138.8.8:30205
+    oclip:onap-dublin>set sdc.catalog:host-password=demo123456\!
+    oclip:onap-dublin>set sdc.catalog:host-username=cs0008
+    oclip:onap-dublin>set sdc.catalog:service-model-approve:host-username=gv0001
+    oclip:onap-dublin>set sdc.catalog:service-model-distribute:host-username=op0001
+    oclip:onap-dublin>set sdc.catalog:service-model-test-start:host-username=jm0007
+    oclip:onap-dublin>set sdc.catalog:service-model-test-accept:host-username=jm0007
+    oclip:onap-dublin>set sdc.catalog:service-model-add-artifact:host-username=ocomp
+    oclip:onap-dublin>set sdc.catalog:vf-model-add-artifact:host-username=ocomp
+    oclip:onap-dublin>set aai:host-url=https://159.138.8.8:30233
+    oclip:onap-dublin>set aai:host-username=AAI
+    oclip:onap-dublin>set aai:host-password=AAI
+    oclip:onap-dublin>set vfc:host-url=http://159.138.8.8:30280
+    oclip:onap-dublin>set multicloud:host-url=http://159.138.8.8:30280
+
+NOTE: Mostly all above entries value would be same execept the IP address used in the
+URL, which would be ONAP k8s cluser IP.
+
+By default, SDC onboarding service does not provide node port, which is available to
+access from external ONAP network. so to enable for external access, register the SDC
+onboarding service into MSB and use MSB url for sdc.onboarding:host-url.
+
+.. code-block:: bash
+
+    oclip:onap-dublin> microservice-create --service-name sdcob --service-version v1.0 --service-url /onboarding-api/v1.0 --path /onboarding-api/v1.0 --node-ip 172.16.1.0 --node-port 8081
+
+NOTE: To find the node-ip and node-port, use the following steps.
+
+Find out SDC onboarding service IP and port details as given here:
+
+.. code-block:: bash
+
+    [root@onap-dublin-vfw-93996-50c1z ~]# kubectl get pods -n onap -o wide | grep sdc-onboarding-be
+    dev-sdc-sdc-onboarding-be-5564b877c8-vpwr5 2/2 Running 0 29d 172.16.1.0 192.168.2.163 <none> <none>
+    dev-sdc-sdc-onboarding-be-cassandra-init-mtvz6 0/1 Completed 0 29d 172.16.0.220 192.168.2.163 <none> <none>
+    [root@onap-dublin-vfw-93996-50c1z ~]#
+
+Note down the IP address for sdc-onboarding-be 172.16.1.0
+
+.. code-block:: bash
+
+    [root@onap-dublin-vfw-93996-50c1z ~]# kubectl get services -n onap -o wide | grep sdc-onboarding-be
+    sdc-onboarding-be ClusterIP 10.247.198.92 <none> 8445/TCP,8081/TCP 29d app=sdc-onboarding-be,release=dev-sdc
+    [root@onap-dublin-vfw-93996-50c1z ~]#
+
+Note down the port for sdc-onboarding-be 8445 8081
+
+Similarly, other service IP and Port could be discovered like above, in case not know earlier :)
+
+Verify these details once by typing 'set'
+
+.. code-block:: bash
+
+    oclip:onap-dublin> set
+
+This profile would be used by user while running the test cases with ONAP setup configured in it, as below
+oclip --profile onap-dublin vnf-tosca-provision ....
+
+**2. Setup SDC consumer**
+
+SDC uses consumer concept to configure required VN model and service model artifacts. So
+following commands required to run, which will create consumer named ocomp, which is
+already configured in onap-dublin profile created in above steps.
+
+.. code-block:: bash
+
+    oclip --product onap-dublin --profile onap-dublin sdc-consumer-create --consumer-name ocomp
+
+NOTE: command oclip could be used in scripting mode as above or in interactive mode as used
+in earlier steps
+
+**3. Update the cloud and vnfm driver details**
+
+In the configuration file /opt/oclip/conf/vnf-tosca-provision.json, update the cloud
+and VNFM details.
+
+.. code-block:: json
+
+    "cloud": {
+            "identity-url": "http://10.12.11.1:5000/v3",
+            "username": "admin",
+            "password": "password",
+            "region": "RegionOVP",
+            "version": "ocata",
+            "tenant": "ocomp"
+        },
+        "vnfm":{
+            "hwvnfmdriver":{
+                "version": "v1.0",
+                "url": "http://159.138.8.8:38088",
+                "username": "admin",
+                "password": "xxxx"
+            },
+            "gvnfmdriver":{
+                "version": "v1.0",
+                "url": "http://159.138.8.8:30280"
+            }
+        }
+
+**4.Configure the decided VNFRES (optional)**
+VTP allows to configure the set of VNFREQS to be considered while running the VNF
+compliance test cases in the configuration file /opt/oclip/conf/vnfreqs.properties.
+
+If not available, please create this file with following entries:
+
+.. code-block:: bash
+
+    vnfreqs.enabled=r02454,r04298,r07879,r09467,r13390,r23823,r26881,r27310,r35851,r40293,r43958,r66070,r77707,r77786,r87234,r10087,r21322,r26885,r40820,r35854,r65486,r17852,r46527,r15837,r54356,r67895,r95321,r32155,r01123,r51347,r787965,r130206
+    pnfreqs.enabled=r10087,r87234,r35854,r15837,r17852,r293901,r146092,r57019,r787965,r130206
+    # ignored all chef and ansible related tests
+    vnferrors.ignored=
+    pnferrors.ignored=
+
+Runnign the TOSCA VNF Test
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Every test provided in VTP is given with guidelines on how to use it. On every execution of test cases, use the following additional arguments based on requirements
+
+- --product onap-dublin - It helps VTP choose the test cases written for onap-dublin version
+- --profile onap-dublin - It helps VTP to use the profile settings provided by admin (optional)
+- --request-id - It helps VTP to  track the progress of the test cases execution and user could use this id for same. (optional)
+
+So, final test case execution would be as below.  To find the test case arguments details, run second command below.
+
+.. code-block:: bash
+
+    oclip --product onap-dublin --profile onap-dublin --request-id req-1 <test case name> <test case arguments>
+    oclip --product onap-dublin <test case name> --help
+
+Running TOSCA VNF Compliance Testing
+""""""""""""""""""""""""""""""""""""
+
+To run compliance test as below with given CSAR file
+
+.. clode-block:: bash
+
+    oclip --product onap-dublin csar-validate --csar <csar file complete path>
+
+It will produce the result format as below:
+
+.. code-block:: json
+
+    {
+        "date": "Fri Sep 20 17:34:24 CST 2019",
+        "criteria": "PASS",
+        "contact": "ONAP VTP Team onap-discuss@lists.onap.org",
+        "results": [
+        {
+            "description": "V2.4.1 (2018-02)",
+            "passed": true,
+            "vnfreqName": "SOL004",
+            "errors": []
+        },
+        {
+            "description": "If the VNF or PNF CSAR Package utilizes Option 2 for package security, then the complete CSAR file MUST be digitally signed with the VNF or PNF provider private key. The VNF or PNF provider delivers one zip file consisting of the CSAR file, a signature file and a certificate file that includes the VNF or PNF provider public key. The certificate may also be included in the signature container, if the signature format allows that. The VNF or PNF provider creates a zip file consisting of the CSAR file with .csar extension, signature and certificate files. The signature and certificate files must be siblings of the CSAR file with extensions .cms and .cert respectively.\n",
+            "passed": true,
+            "vnfreqName": "r787965",
+            "errors": []
+        }
+        ],
+        "platform": "VNFSDK - VNF Test Platform (VTP) 1.0",
+        "vnf": {
+        "mode": "WITH_TOSCA_META_DIR",
+        "vendor": "ONAP",
+        "name": null,
+        "type": "TOSCA",
+        "version": null
+        }
+    }
+
+In case of errors, the errors section will have list of details as below.  Each error block, will be
+given with error code and error details. Error code would be very useful to provide the troubleshooting
+guide in future. Note, to generate the test result in OVP archieve format, its recommended to run this compliance
+test with request-id similar to running validation test as below.
+
+.. code-block:: bash
+
+    [
+    {
+        "vnfreqNo": "R66070",
+        "code": "0x1000",
+        "message": "MissinEntry-Definitions file",
+        "lineNumber": -1
+    }
+    ]
+
+Running TOSCA VNF Validation Testing
+""""""""""""""""""""""""""""""""""""
+VTP provides validation test case with following modes:
+
+.. image:: images/tosca_vnf_test_flow.png
+    :align: left
+    :scale: 100%
+
+
+setup:    Create requires Vendor, Service Subscription and VNF cloud in ONAP
+standup: From the given VSP csar, VNF csar and NS csar, it creates VF Model, NS Model and NS service
+cleanup: Remove those entries created during provision
+provision: Runs setup -> standup
+validate: Runs setup -> standup -> cleanup
+checkup: mode helps to verify automation is deployed properly.
+
+For OVP badging, validate mode would be used as below:
+
+.. code-block:: bash
+
+    oclip --request-id WkVVu9fD--product onap-dublin --profile onap-dublin vnf-tosca-provision --vsp <vsp csar> --vnf-csar <v
+
+Validation testing would take for a while to complete the test execution, so user could use the above
+given request-id, to tracking the progress as below:
+
+.. code-block:: bash
+
+    oclip execution-list --request-id WkVVu9fD
+    +------------+------------------------+--------------+------------------+------------------------------+--------------+------------+--------------------------+--------------------------+
+    |request-id  |execution-id            |product       |service           |command                       |profile       |status      |start-time                |end-time                  |
+    +------------+------------------------+--------------+------------------+------------------------------+--------------+------------+--------------------------+--------------------------+
+    |WkVVu9fD    |WkVVu9fD-1568731678753  |onap-dublin   |vnf-validation    |vnf-tosca-provision           |              |in-progress |2019-09-17T14:47:58.000   |                        |
+    +------------+------------------------+--------------+------------------+------------------------------+--------------+------------+--------------------------+--------------------------+
+    |WkVVu9fD    |WkVVu9fD-1568731876397  |onap-dublin   |sdc.catalog       |service-model-test-request    |onap-dublin   |in-progress |2019-09-17T14:51:16.000   |                          |
+    +------------+------------------------+--------------+------------------+------------------------------+--------------+------------+--------------------------+--------------------------+
+    |WkVVu9fD    |WkVVu9fD-1568731966966  |onap-dublin   |sdc.onboarding    |vsp-archive                   |onap-dublin   |completed   |2019-09-17T14:52:46.000   |2019-09-17T14:52:47.000   |
+    +------------+------------------------+--------------+------------------+------------------------------+--------------+------------+--------------------------+--------------------------+
+    |WkVVu9fD    |WkVVu9fD-1568731976982  |onap-dublin   |aai               |subscription-delete           |onap-dublin   |completed   |2019-09-17T14:52:56.000   |2019-09-17T14:52:57.000   |
+    +------------+------------------------+--------------+------------------+------------------------------+--------------+------------+--------------------------+--------------------------+
+    |WkVVu9fD    |WkVVu9fD-1568731785780  |onap-dublin   |aai               |vnfm-create                   |onap-dublin   |completed   |2019-09-17T14:49:45.000   |2019-09-17T14:49:46.000   |
+    ......
+
+While executing the test cases, VTP provides unique execution-id (2nd column) for each step. As you note
+in the example above, some steps are in-progress, while others are completed already. If there is error
+then status will be set to failed.
+
+To find out the foot-print of each step, following commands are available
+
+.. code-block:: bash
+
+    oclip execution-show-out --execution-id WkVVu9fD-1568731785780       - Reports the standard output logs
+    oclip execution-show-err --execution-id WkVVu9fD-1568731785780        - Reports the standard error logs
+    oclip execution-show-debug --execution-id WkVVu9fD-1568731785780  - Reports the debug details like HTTP request and responseoclip execution-show --execution-id WkVVu9fD-1568731785780              - Reports the complete foot-print of inputs, outputs of steps
+
+Track the progress of the vnf-tosca-provision test cases until its completed. Then the out of the validation
+test cases could be retrieved as below:
+
+.. code-block:: bash
+
+    oclip execution-show --execution-id WkVVu9fD-1568731678753              - use vnf tosca test case execution id here
+
+It will provides the output format as below:
+
+.. code-block:: json
+
+    {
+    "output": {
+        "ns-id": null,
+        "vnf-id": "",
+        "vnfm-driver": "hwvnfmdriver",
+        "vnf-vendor-name": "huawei",
+        "onap-objects": {
+        "ns_instance_id": null,
+        "tenant_version": null,
+        "service_type_id": null,
+        "tenant_id": null,
+        "subscription_version": null,
+        "esr_vnfm_id": null,
+        "location_id": null,
+        "ns_version": null,
+        "vnf_status": "active",
+        "entitlement_id": null,
+        "ns_id": null,
+        "cloud_version": null,
+        "cloud_id": null,
+        "vlm_version": null,
+        "esr_vnfm_version": null,
+        "vlm_id": null,
+        "vsp_id": null,
+        "vf_id": null,
+        "ns_instance_status": "active",
+        "service_type_version": null,
+        "ns_uuid": null,
+        "location_version": null,
+        "feature_group_id": null,
+        "vf_version": null,
+        "vsp_version": null,
+        "agreement_id": null,
+        "vf_uuid": null,
+        "ns_vf_resource_id": null,
+        "vsp_version_id": null,
+        "customer_version": null,
+        "vf_inputs": null,
+        "customer_id": null,
+        "key_group_id": null,
+        },
+        "vnf-status": "active",
+        "vnf-name": "vgw",
+        "ns-status": "active"
+    },
+    "input": {
+        "mode": "validate",
+        "vsp": "/tmp/data/vtp-tmp-files/1568731645518.csar",
+        "vnfm-driver": "hwvnfmdriver",
+        "config-json": "/opt/oclip/conf/vnf-tosca-provision.json",
+        "vnf-vendor-name": "huawei",
+        "ns-csar": "/tmp/data/vtp-tmp-files/1568731660745.csar",
+        "onap-objects": "{}",
+        "timeout": "600000",
+        "vnf-name": "vgw",
+        "vnf-csar": "/tmp/data/vtp-tmp-files/1568731655310.csar"
+    },
+    "product": "onap-dublin",
+    "start-time": "2019-09-17T14:47:58.000",
+    "service": "vnf-validation",
+    "end-time": "2019-09-17T14:53:46.000",
+    "request-id": "WkVVu9fD-1568731678753",
+    "command": "vnf-tosca-provision",
+    "status": "completed"
+    }
+
+Reporting Results
+"""""""""""""""""
+
+VTP provides translation tool to migrate the VTP result into OVP portal format and generates the tar file
+for the given test case execution.  Please refer `<https://github.com/onap/vnfsdk-refrepo/tree/master/vnfmarket-be/deployment/vtp2ovp>`_ for more details.
+
+Once tar is generated, it can be used to submit into OVP portal `<https://vnf-verified.lfnetworking.org/>`_
 
 .. References
 .. _`OVP VNF portal`: https://vnf-verified.lfnetworking.org

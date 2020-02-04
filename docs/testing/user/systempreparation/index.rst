@@ -5,9 +5,9 @@
 
 .. _dovetail-system_preparation_guide:
 
-============================
-OVP System Preparation Guide
-============================
+=================================
+OVP NFVI System Preparation Guide
+=================================
 
 This document provides a general guide to hardware system prerequisites
 and expectations for running OPNFV OVP testing. For detailed guide of
