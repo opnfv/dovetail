@@ -1,0 +1,307 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0c0bf0ac_4bf3422b",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "Should we say OVP 2019.12 is based on the OPNFV Hunter release and the ONAP El Alto release?",
+      "range": {
+        "startLine": 17,
+        "startChar": 65,
+        "endLine": 17,
+        "endChar": 80
+      },
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4a2a1ce7_00ebd46c",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "I don\u0027t believe the OPNFV installers are related to the ONAP badging. Should this be expanded to cover the two scenarios: NFVI and NFV validation would use the ONAP installers and VNFs would configured and deployed via ONAP?",
+      "range": {
+        "startLine": 16,
+        "startChar": 56,
+        "endLine": 17,
+        "endChar": 30
+      },
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e5808304_34d9bf49",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "and ONAP",
+      "range": {
+        "startLine": 20,
+        "startChar": 31,
+        "endLine": 20,
+        "endChar": 32
+      },
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "97305054_b81a2f1d",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "In the context of VNF testing this statement is not accurate.  Dovetail does not play a direct role, but does define the resource format.  I\u0027m not sure if the intent of this particular document is to focus on verification in the context of just NFVI or if it is to cover both.  If both, then this paragraph should be revised.",
+      "range": {
+        "startLine": 22,
+        "startChar": 1,
+        "endLine": 22,
+        "endChar": 83
+      },
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "463c77bc_42825eff",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "Suggest adding that other test engines/tools may publish results in a compatible format.",
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1c85e577_bad5f470",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "I feel like we\u0027re missing some sort of overview of the scope of the various badges.  Maybe it\u0027s elsewhere, but up front it would be useful to lay out that there are 3 badges and how they relate and differ.",
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "522df7b6_215156bb",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "The ONAP projects\n\nThese aren\u0027t all test projects",
+      "range": {
+        "startLine": 120,
+        "startChar": 9,
+        "endLine": 120,
+        "endChar": 21
+      },
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "af59ee45_6c60d64c",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "VTP isn\u0027t an ONAP project, bur rather a component of VNFSDK.",
+      "range": {
+        "startLine": 125,
+        "startChar": 2,
+        "endLine": 125,
+        "endChar": 5
+      },
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c2be6e80_ea6b0c4a",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "YOu can\u0027t clone the repos from this link.  I would suggest using this link instead: https://gerrit.onap.org/r/admin/repos/oom  \n\nand \n\nhttps://gerrit.onap.org/r/admin/repos/vnfsdk/refrepo",
+      "range": {
+        "startLine": 220,
+        "startChar": 30,
+        "endLine": 220,
+        "endChar": 55
+      },
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d44f1565_b68a5b0f",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "OVP",
+      "range": {
+        "startLine": 242,
+        "startChar": 3,
+        "endLine": 242,
+        "endChar": 6
+      },
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cdce981f_83651947",
+        "filename": "docs/testing/user/ovpaddendum/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "I think the Pharos specification is definitely relevant to the NFVI badge, but I don\u0027t know that a Pharos compatible infrastructure is necessary for the VNF badge.  I don\u0027t believe Pharos is a pre-requisite for deploying ONAP and that is really the only pre-req for the VNF badge (an ONAP install and an OpenStack cloud)\n\nThe SUT itself depends on the badge. The SUT is the VNF or the NFVI depending on the badge",
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9f4a4e00_b01dd741",
+        "filename": "docs/testing/user/ovpaddendum/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "Is this section being filled in later?",
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3a0c54be_05220000",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "Much of this section is only applicable for NFVI testing.  Perhaps we need some preface that this the following instructions for using Dovetail are related to the NFVI badge.  The title should also reflect this as was done with VNF testing guide",
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a67d7bcf_2441078b",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "I think documenting the test steps here will ultimately be problematic.  The OPNFV and ONAP release schedules are not synchronized.  As new versions of ONAP are released, these instructions will need to change and placing the instructions here will make pushing out that documentation with the ONAP release difficult.  Can we simply move this content into the ONAP Read The Docs and link to it?\n\nWe were hesitant to put the instructions in RTD in El Alto just because it hadn\u0027t been fully tested and it would be more difficult to change.  However, now that we\u0027ve had several VNFs use the process, I feel comfortable backporting this to El Alto.  We can make it an appendix in the VNF Requirements project",
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e827272e_d67cd381",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 7492
+      },
+      "writtenOn": "2020-02-05T20:28:37Z",
+      "side": 1,
+      "message": "Similar to the comment above. I would think this material would likely need to be in the VNFSDK documentation vs. here.",
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    }
+  ]
+}
