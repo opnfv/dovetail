@@ -47,7 +47,8 @@ implementations, capabilities and features.
 SUT Assumptions
 ===============
 
-Assumptions about the System Under Test (SUT) include ...
+Assumptions about the NFVI System Under Test (SUT) for the OVP Infrastructure 
+badge include ...
 
 - The minimal specification of physical infrastructure, including controller
   nodes, compute nodes and networks, is defined for the NFVI by the 
@@ -56,6 +57,14 @@ Assumptions about the System Under Test (SUT) include ...
 - The SUT is fully deployed and operational, i.e. SUT deployment tools are
   out of scope of testing.
 
+Assumptions about the VNF System Under Test (SUT) for the OVP VNF 
+badge include ...
+
+- The VNF templates and disk image(s) file are available, and the disk 
+image(s) have been deployed to the ONAP Cloud Site.
+
+- The required value for the VNF pre-load files are available for the 
+selected ONAP Cloud Site.
 
 Scope of Testing
 ================
@@ -315,10 +324,14 @@ OVP.
 
 9. VNF Compliance
 
-
+VNF Compliance verifies the VNF template files conform to the requirements documented 
+in by ONAP VNFRQTS project.  
 
 10. VNF Validation
 
+VNF Validation verifies the VNF is able to onbroad within ONAP and ONAP is able to 
+perform basic orchestration operations with the VNF, including instantiating the 
+VNF on the Cloud Site. 
 
 Scope of the 2019.12 release of the OVP
 ---------------------------------------

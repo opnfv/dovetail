@@ -2,12 +2,15 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. (c) OPNFV, Huawei Technologies Co.,Ltd and others.
 
-====================================
-Conducting OVP Testing with Dovetail
-====================================
+=========================================
+Conducting OVP NFVI Testing with Dovetail
+=========================================
 
 Overview
 --------
+
+This guide provides the instructions for the OVP Infrastructure testing.  For the 
+OVP VNF testing, please refer to the next section.
 
 The Dovetail testing framework for OVP consists of two major parts: the testing client which
 executes all test cases in a lab (vendor self-testing or a third party lab),

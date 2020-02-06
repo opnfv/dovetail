@@ -13,23 +13,24 @@ OPNFV 2019.12 Release
 
 The OPNFV Verification Program (OVP) allows vendors and operators to obtain 'OPNFV Verified'
 status based on an agreed upon set of compliance verification test cases that align to OPNFV
-releases. The reference System under Test (SUT) are the NFV components deployed by the OPNFV
-installers for a given release, where OVP 2019.12 is based on the Hunter release. Participants
-of the program can verify commercial or open source offerings against an OVP release. This implies
-that the SUT used for verification has interfaces, components, functions and behaviors that align
-to OPNFV installer integrations.
+releases. The reference System under Test (SUT) is either the NFV components deployed by the OPNFV
+installers for a given release, where OVP 2019.12 is based on the OPNFV Hunter release, or a VNF 
+being on-boarded and orchestrated by the ONAP El Alto release. Participants of the program can 
+verify commercial or open source offerings against an OVP release. This implies that the SUT 
+used for verification has interfaces, components, functions and behaviors that align to OPNFV 
+installer integrations and ONAP deployments.
 
-Dovetail is the overall framework used to execute tests and collect results for OVP. Dovetail does
-not deliver test content directly. Rather, test content is developed in other OPNFV test frameworks
-such as Functest and upstream test communities such as OpenStack's RefStack/Tempest projects.
-Dovetail leverages this upstream test content and provides a common set of test platform services
-for the OVP.
+Dovetail is the overall framework used to execute tests and collect results for the OVP 
+Infrastructure badge. Dovetail does not deliver test content directly. Rather, test content 
+is developed in other OPNFV test frameworks such as Functest and upstream test communities such 
+as OpenStack's RefStack/Tempest projects. Dovetail leverages this upstream test content and 
+provides a common set of test platform services for the OVP.
 
-Dovetail works in conjunction with a web portal interface dubbed the 'OVP web portal' to allow
-users to upload test results to a centralized community repository. This facilitates user
-collaboration, result sharing, self-testing and community reviews. It also serves as a hub for
-new participants to learn about the program and access key resources. The link for this portal
-is at: `OPNFV Verification Program <https://nfvi-verified.lfnetworking.org>`_.
+Approved test tools (OPNFV Dovetail, ONAP VTP, and ONAP VVP)  work in conjunction with a web portal 
+interface dubbed the 'OVP web portal' to allow users to upload test results to a centralized community 
+repository. This facilitates user collaboration, result sharing, self-testing and community reviews. 
+It also serves as a hub for new participants to learn about the program and access key resources. The 
+link for this portal is at: `OPNFV Verification Program <https://nfvi-verified.lfnetworking.org>`_.
 
 Use of the OVP web portal is open to all and only requires a valid Linux Foundation
 ID to login. Users are welcome to use the portal to upload, inspect and share results in a private
@@ -117,12 +118,11 @@ The OPNFV test frameworks integrated into the Dovetail framework that deliver te
 ONAP Test Projects and Components
 ---------------------------------
 
-The ONAP test project used with this OVP release to provide the test requirements and test 
-scripting are:
+The ONAP test projects and components used with this OVP release to provide the test requirements 
+and test scripting are:
 
 - VNFRQTS
 - VNFSDK
-- VTP
 - VVP 
 
 Acceptence and Marketing
@@ -212,13 +212,13 @@ OPNFV Software
 ONAP Software
 """""""""""""
 
-+-------------------------+---------------------------------------------+
-| **Item**                |  **Repo Link**                              |
-+-------------------------+---------------------------------------------+
-| VTP/VNFSDK Test Scripts | `<https://git.onap.org/vnfsdk/refrepo>`_    |
-+-------------------------+---------------------------------------------+
-| VVP Robot Test Scripts  | `<https://git.onap.org/oom/>`_              |
-+-------------------------+---------------------------------------------+
++-------------------------+--------------------------------------------------------------+
+| **Item**                |  **Repo Link**                                               |
++-------------------------+--------------------------------------------------------------+
+| VTP/VNFSDK Test Scripts | `<https://gerrit.onap.org/r/admin/repos/vnfsdk/refrepo>`_    |
++-------------------------+--------------------------------------------------------------+
+| VVP Robot Test Scripts  | `<https://gerrit.onap.org/r/admin/repos/oom>`_               |
++-------------------------+--------------------------------------------------------------+
 
 Documents
 ---------
@@ -229,7 +229,7 @@ Documents
 
 - `VNF User Guide: <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/userguide/testing_guide.html>`_
 
-- `OPV NFVI Test Specifications <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/testspecification/index.html>`_
+- `OVP NFVI Test Specifications <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/testspecification/index.html>`_
 
 - `ONAP VNF Test Specifications <https://docs.onap.org/en/elalto/submodules/vnfrqts/testcases.git/docs/index.html>`_
 
@@ -237,9 +237,9 @@ Documents
 
 - `Dovetail RESTful API <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/userguide/api_testing_guide.html>`_
 
-- `OPV Workflow <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/certificationworkflow/index.html>`_
+- `OVP Workflow <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/certificationworkflow/index.html>`_
 
-- `OPV Reviewer Guide <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/reviewerguide/index.html>`_
+- `OVP Reviewer Guide <https://opnfv-dovetail.readthedocs.io/en/stable-hunter/testing/user/reviewerguide/index.html>`_
 
 
 Testing with OPNFV Hunter Installers
