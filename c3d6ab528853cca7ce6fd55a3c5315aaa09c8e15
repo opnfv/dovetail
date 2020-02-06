@@ -111,6 +111,24 @@
     },
     {
       "key": {
+        "uuid": "36b6b475_220c32d0",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2020-02-06T19:38:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "463c77bc_42825eff",
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1c85e577_bad5f470",
         "filename": "docs/release/release-notes/index.rst",
         "patchSetId": 2
@@ -151,6 +169,30 @@
     },
     {
       "key": {
+        "uuid": "e646637b_d6837080",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2020-02-06T19:38:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "522df7b6_215156bb",
+      "range": {
+        "startLine": 120,
+        "startChar": 9,
+        "endLine": 120,
+        "endChar": 21
+      },
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "af59ee45_6c60d64c",
         "filename": "docs/release/release-notes/index.rst",
         "patchSetId": 2
@@ -162,6 +204,30 @@
       "writtenOn": "2020-02-05T20:28:37Z",
       "side": 1,
       "message": "VTP isn\u0027t an ONAP project, bur rather a component of VNFSDK.",
+      "range": {
+        "startLine": 125,
+        "startChar": 2,
+        "endLine": 125,
+        "endChar": 5
+      },
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "954b2639_c1a65508",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2020-02-06T19:38:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "af59ee45_6c60d64c",
       "range": {
         "startLine": 125,
         "startChar": 2,
@@ -197,6 +263,30 @@
     },
     {
       "key": {
+        "uuid": "07d3605c_40f72039",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2020-02-06T19:38:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c2be6e80_ea6b0c4a",
+      "range": {
+        "startLine": 220,
+        "startChar": 30,
+        "endLine": 220,
+        "endChar": 55
+      },
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d44f1565_b68a5b0f",
         "filename": "docs/release/release-notes/index.rst",
         "patchSetId": 2
@@ -208,6 +298,30 @@
       "writtenOn": "2020-02-05T20:28:37Z",
       "side": 1,
       "message": "OVP",
+      "range": {
+        "startLine": 242,
+        "startChar": 3,
+        "endLine": 242,
+        "endChar": 6
+      },
+      "revId": "c3d6ab528853cca7ce6fd55a3c5315aaa09c8e15",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "63a387ff_ac2b8143",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 3543
+      },
+      "writtenOn": "2020-02-06T19:38:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d44f1565_b68a5b0f",
       "range": {
         "startLine": 242,
         "startChar": 3,
