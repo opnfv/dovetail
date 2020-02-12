@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3b4d08d1_0e8e77ae",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2409
+      },
+      "writtenOn": "2020-02-12T11:58:54Z",
+      "side": 1,
+      "message": "please remove trailing whitespace (and the others found below)",
+      "revId": "51520477f458c8f8f058e6aabed9029560ad1a4c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c6da0248_99903e37",
+        "filename": "docs/testing/user/ovpaddendum/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2409
+      },
+      "writtenOn": "2020-02-12T11:58:54Z",
+      "side": 1,
+      "message": "Missing ref?",
+      "revId": "51520477f458c8f8f058e6aabed9029560ad1a4c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f875eec7_25343e73",
+        "filename": "docs/testing/user/ovpaddendum/index.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2409
+      },
+      "writtenOn": "2020-02-12T11:58:54Z",
+      "side": 1,
+      "message": "please remove trailing whitespace (and the others found below)",
+      "revId": "51520477f458c8f8f058e6aabed9029560ad1a4c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ae87dec6_5f952c2a",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2409
+      },
+      "writtenOn": "2020-02-12T11:58:54Z",
+      "side": 1,
+      "message": "please remove trailing whitespace",
+      "revId": "51520477f458c8f8f058e6aabed9029560ad1a4c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "70ecf156_ee546cdb",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2409
+      },
+      "writtenOn": "2020-02-12T11:58:54Z",
+      "side": 1,
+      "message": "please remove trailing whitespace (and the others found below)",
+      "revId": "51520477f458c8f8f058e6aabed9029560ad1a4c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    }
+  ]
+}
