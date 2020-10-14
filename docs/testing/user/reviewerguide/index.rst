@@ -24,7 +24,7 @@ The incoming results for review will be identified by the administrator with par
 and **Owner** values.
 
 Volunteers that will accept the review request can access the test results by login to the
-`OVP portal <https://nfvi-verified.lfnetworking.org>`_ and then click on the **Incoming Reviews**
+`OVP portal`_ and then click on the **Incoming Reviews**
 tab in top-level navigation bar.
 
 .. image:: images/ovp_top_nav.png
@@ -69,30 +69,7 @@ Mandatory Test Case Results
 
 Test results can be displayed by clicking on the hyperlink under the **Test ID** column.
 Reviewers should validate that results for all mandatory test cases are included in the overall
-test suite. The required mandatory test cases are:
-
-- bottlenecks.stress.ping
-- functest.security.patrole
-- functest.tempest.compute
-- functest.tempest.identity_v3
-- functest.tempest.image
-- functest.tempest.ipv6_api
-- functest.tempest.network_api
-- functest.tempest.neutron_trunk_ports
-- functest.tempest.osinterop
-- functest.tempest.volume
-- functest.vping.ssh
-- functest.vping.userdata
-- yardstick.ha.cinder_api
-- yardstick.ha.cpu_load
-- yardstick.ha.database
-- yardstick.ha.disk_load
-- yardstick.ha.glance_api
-- yardstick.ha.haproxy
-- yardstick.ha.keystone
-- yardstick.ha.neutron_server
-- yardstick.ha.nova_api
-- yardstick.ha.rabbitmq
+test suite.
 
 *Note, that the 'Test ID' column in this view condenses the UUID used for 'Test ID' to
 eight characters even though the 'Test ID' is a longer UUID in the back-end.*
@@ -126,25 +103,12 @@ as shown in the figure below.
 +------------------------+--------------------------+
 | **Mandatory Test Case**| **Location**             |
 +------------------------+--------------------------+
-| bottlenecks            | results/stress_logs/     |
-+------------------------+--------------------------+
 | functest.vping         | results/vping_logs/      |
 +------------------------+--------------------------+
 | functest.tempest       | results/tempest_logs/    |
 +------------------------+--------------------------+
 | functest.security      | results/security_logs/   |
 +------------------------+--------------------------+
-| yardstick              | results/ha_logs/         |
-+------------------------+--------------------------+
-
-
-Bottlenecks Logs
-----------------
-
-It must contain the 'SUCCESS' result at the end of Bottlenecks log as shown in following example:
-
-  2019-12-03 07:35:14,630 [INFO] yardstick.benchmark.core.task task.py:129 Testcase: "ping_bottlenecks" SUCCESS!!!
-
 
 Functest Logs
 -------------
@@ -175,20 +139,6 @@ below. All test cases must have run successfully.
     :align: center
     :scale: 100%
 
-
-Yardstick Logs
---------------
-
-The yardstick log must contain the 'SUCCESS' result for each of the test-cases within this
-test area. This can be verified by searching the log for the keyword 'SUCCESS'.
-
-An example of a FAILED and a SUCCESS test case are listed below:
-
- 2018-08-28 10:25:09,946 [ERROR] yardstick.benchmark.scenarios.availability.monitor.monitor_multi monitor_multi.py:78 SLA **failure**: 14.015082 > 5.000000
-
- 2018-08-28 10:23:41,907 [INFO] yardstick.benchmark.core.task task.py:127 Testcase: "opnfv_yardstick_tc052" **SUCCESS**!!!
-
-
 SUT Info Verification
 =====================
 
@@ -213,7 +163,6 @@ present for identify, compute, image, volume and network at a minimum by inspect
 Inspect the **Hosts** listing found below the Endpoints secion of the SUT info page and ensure
 at least two hosts are present, as two controllers are required the for the mandatory HA
 test cases.
-
 
 Approve or Not Approve Results
 ==============================

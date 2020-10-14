@@ -14,15 +14,15 @@ Dovetail
 
    testing/user/certificationworkflow/ApplicationForm
    testing/user/certificationworkflow/index
-   testing/user/instructionsperinstaller/index
-   testing/user/ovpaddendum/exemption-strict-API-validation
    testing/user/ovpaddendum/index
    testing/user/reviewerguide/index
    testing/user/systempreparation/index
-   testing/user/testspecification/index
    testing/user/userguide/index
 
+   testing/developer/index
    testing/developer/testcaserequirements/index
    testing/developer/genericframework/index
+   testing/developer/api_testing_guide
+   testing/developer/cli_reference
 
    release/release-notes/index
