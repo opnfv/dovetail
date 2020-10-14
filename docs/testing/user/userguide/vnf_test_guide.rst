@@ -43,7 +43,7 @@ Environment Preparation
 Prerequisites
 """""""""""""
 
-- `ONAP ElAlto Release deployed via OOM <https://onap.readthedocs.io/en/latest/submodules/oom.git/docs/oom_quickstart_guide.html>`_
+- `ONAP ElAlto Release deployed via OOM <https://docs.onap.org/projects/onap-oom/en/latest/>`_
 - An OpenStack deployment is available and privisioned as ONAP's Cloud Site
 - kubectl is installed on the system used to start the testing
 - bash
@@ -519,7 +519,7 @@ Running TOSCA VNF Compliance Testing
 
 To run compliance test as below with given CSAR file
 
-.. clode-block:: bash
+.. code-block:: bash
 
     oclip --product onap-dublin csar-validate --csar <csar file complete path>
 
