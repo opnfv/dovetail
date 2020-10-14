@@ -628,9 +628,7 @@ Also there is a ``--testcase`` option provided to run a specified test case.
 Dovetail allows the user to disable strict API response validation implemented
 by Nova Tempest tests by means of the ``--no-api-validation`` option. Usage of
 this option is only advisable if the SUT returns Nova API responses that
-contain additional attributes. For more information on this command line option
-and its intended usage, refer to
-:ref:`dovetail-exemption_process_api_response_validation`.
+contain additional attributes. 
 
 .. code-block:: bash
 

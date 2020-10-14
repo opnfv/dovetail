@@ -11,7 +11,5 @@ OVP Testing User Guide
 .. toctree::
    :maxdepth: 2
 
-   testing_guide.rst
-   cli_reference.rst
-   api_testing_guide.rst
+   testing_guide.rst   
    vnf_test_guide.rst
