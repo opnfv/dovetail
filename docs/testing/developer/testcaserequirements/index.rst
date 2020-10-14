@@ -8,10 +8,6 @@
 OVP Test Case Requirements
 ==========================
 
-.. toctree::
-   :maxdepth: 2
-
-
 OVP Test Suite Purpose and Goals
 ================================
 
@@ -29,8 +25,7 @@ Test Case Requirements
 The following requirements are mandatory for a test to be submitted for
 consideration in the OVP test suite:
 
-- All test cases must be fully documented, in a common format. Please consider
-  the existing :ref:`dovetail-test_case_specification` as examples.
+- All test cases must be fully documented, in a common format.
 
   - Clearly identifying the test procedure and expected results / metrics to
     determine a “pass” or “fail” result.
