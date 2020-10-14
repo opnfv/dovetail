@@ -6,23 +6,19 @@
 .. _dovetail-ovp-addendum:
 
 =======================================
-Guidelines Addendum for 2019.12 release
+Guidelines Addendum for 2020.r1 release
 =======================================
-
-.. toctree::
-   :maxdepth: 2
-
 
 Introduction
 ============
 
 This addendum provides a high-level description of the testing scope and
-pass/fail criteria used in the OPNFV Verification Program (OVP) for the 2019.12
+pass/fail criteria used in the OPNFV Verification Program (OVP) for the 2020.r1
 release. This information is intended as an overview for OVP testers and for
 the Dovetail Project to help guide test-tool and test-case development for the
-OVP 2019.12 release. The Dovetail project is responsible for documenting
+OVP 2020.r1 release. The Dovetail project is responsible for documenting
 test-case specifications as well as implementing the OVP tool-chain through
-collaboration with the OPNFV and ONAP testing communities. OVP testing focuses on
+collaboration with the CNNT, OPNFV and ONAP testing communities. OVP testing focuses on
 establishing the ability of the System Under Test (SUT) to perform NFVI and VIM
 operations and support Service Provider oriented features that ensure
 manageable, resilient and secure networks.
@@ -31,9 +27,9 @@ manageable, resilient and secure networks.
 Meaning of Compliance
 =====================
 
-OPNFV Compliance indicates adherence of an NFV platform and VNF to behaviors
+OPNFV Compliance indicates adherence of an NFVI platform and VNF to behaviors
 defined through specific platform capabilities, allowing to prepare, instantiate,
-operate and remove VNFs running on the NFVI. OVP 2019.12 compliance evaluates
+operate and remove VNFs running on the NFVI. OVP 2020.r1 compliance evaluates
 the ability of a platform to support Service Provider network capabilities and
 workloads that are supported in the OPNFV and ONAP platforms as of this release.
 Test cases are designated as compulsory or optional based on the maturity
@@ -54,7 +50,7 @@ badge include ...
 
 - The minimal specification of physical infrastructure, including controller
   nodes, compute nodes and networks, is defined for the NFVI by the
-  `Pharos specification`_.
+  `CNTT Reference Implementation RI1`_.
 
 - The SUT is fully deployed and operational, i.e. SUT deployment tools are
   out of scope of testing.
@@ -217,16 +213,7 @@ feature requirements expand beyond common OpenStack (or other VIM)
 requirements. OPNFV OVP will incorporate test cases to verify compliance in
 these areas as they become mature. Because these extensions may impose new API
 demands, maturity and industry adoption is a prerequisite for making them a
-mandatory requirement for OPNFV compliance. At the time of the 2019.12 release,
-we have promoted tests of the OpenStack IPv6 API from optional to mandatory
-while keeping BGPVPN as optional test area. Passing optional tests will not be
-required to pass OPNFV compliance verification.
-
-BGPVPNs are relevant due to the wide adoption of MPLS/BGP based VPNs in wide
-area networks, which makes it necessary for data centers hosting VNFs to be
-able to seamlessly interconnect with such networks. SFC is also an important
-NFV requirement, however its implementation has not yet been accepted or
-adopted in the upstream at the time of the 2019.12 release.
+mandatory requirement for OPNFV compliance. 
 
 3. High availability
 
@@ -267,12 +254,12 @@ capabilities expected of an end-user deployment. It is an area that we should
 address in the near future, to define a common set of requirements and develop
 test cases for verifying those requirements.
 
-The 2019.12 release includes new test cases which verify that the role-based
+The release includes new test cases which verify that the role-based
 access control (RBAC) functionality of the VIM is behaving as expected.
 
 Another common requirement is security vulnerability scanning. While the OPNFV
 security project integrated tools for security vulnerability scanning, this has
-not been fully analyzed or exercised in 2019.12 release. This area needs
+not been fully analyzed or exercised in the release. This area needs
 further work to identify the required level of security for the purpose of
 OPNFV in order to be integrated into the OVP. End-user inputs on specific
 requirements in security is needed.
@@ -285,7 +272,7 @@ essential information and control mechanisms. These subsystems include
 telemetry, fault management (e.g. alarms), performance management, audits, and
 control mechanisms such as security and configuration policies.
 
-The current 2019.12 release implements some enabling capabilities in NFVI/VIM
+The current release implements some enabling capabilities in NFVI/VIM
 such as telemetry, policy, and fault management. However, the specification of
 expected system components, behavior and the test cases to verify them have not
 yet been adequately developed. We will therefore not be testing this area at
@@ -302,10 +289,6 @@ and between VNFs and the cloud platform in a more realistic fashion. End-users
 consider use-case-level testing as a significant tool in verifying OPNFV
 compliance because it validates design patterns and support for the types of
 NFVI features that users care about.
-
-There are a lot of projects in OPNFV developing use cases and sample VNFs. The
-2019.12 release of OVP features two such use-case tests, spawning and verifying
-a vIMS and a vEPC, correspondingly.
 
 8. Additional NFVI capabilities
 
@@ -335,11 +318,13 @@ VNF Validation verifies the VNF is able to onbroad within ONAP and ONAP is able 
 perform basic orchestration operations with the VNF, including instantiating the
 VNF on the Cloud Site.
 
-Scope of the 2019.12 release of the OVP
+Scope of the 2020.r1 release of the OVP
 ---------------------------------------
 
-Summarizing the results of the analysis above, the scope of the 2019.12 release
+Summarizing the results of the analysis above, the scope of this release
 of OVP is as follows:
+
+**FIXME - Need to update this scope, per what is included in the xTesting / Functest.**
 
 - Mandatory NFVI test scope:
 
@@ -401,7 +386,7 @@ Scope considerations for future OVP releases
 --------------------------------------------
 
 Based on the previous analysis, the following items are outside the scope of
-the 2019.12 release of OVP but are being considered for inclusion in future
+this release of OVP but are being considered for inclusion in future
 releases:
 
 - service assurance
@@ -438,19 +423,6 @@ documented and accepted by the reviewers.
 Applicants who choose to run the optional test cases can include the results
 of the optional test cases to highlight the additional compliance.
 
-
-Exemption from strict API response validation
-=============================================
-
-Vendors of commercial NFVI products may have extended the Nova API to support
-proprietary add-on features. These additions can cause Nova Tempest API tests
-to fail due to unexpected data in API responses. In order to resolve this
-transparently in the context of OVP, a temporary exemption process has been
-created. More information on the exemption can be found in section
-:ref:`dovetail-exemption_process_api_response_validation`.
-
-
 .. References
-.. _`OVP Governance Guidelines`: https://www.opnfv.org/wp-content/uploads/sites/12/2018/01/OVP-Governance-Guidelines-1.0.1-012218.pdf
-.. _`Pharos specification`: https://wiki.opnfv.org/display/pharos/Pharos+Specification
-
+.. _`OVP Governance Guidelines`: https://wiki.lfnetworking.org/download/attachments/8257540/LFN_CVP_Guidelines_1.1.0.docx
+.. _`CNTT Reference Implementation RI1`: https://github.com/cntt-n/CNTT/tree/Baldy/doc/ref_impl/cntt-ri
