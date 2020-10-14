@@ -6,10 +6,6 @@
 Dovetail as a Generic Test Framework
 ====================================
 
-.. toctree::
-   :maxdepth: 2
-
-
 Overview
 ========
 

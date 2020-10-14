@@ -43,7 +43,7 @@ Environment Preparation
 Prerequisites
 """""""""""""
 
-- `ONAP ElAlto Release deployed via OOM <https://onap.readthedocs.io/en/latest/submodules/oom.git/docs/oom_quickstart_guide.html>`_
+- `ONAP Frankfurt Release deployed via OOM <https://docs.onap.org/projects/onap-oom/en/frankfurt/>`_
 - An OpenStack deployment is available and privisioned as ONAP's Cloud Site
 - kubectl is installed on the system used to start the testing
 - bash
@@ -63,7 +63,7 @@ After deploying ONAP, you need to configure ONAP with:
 - A cloud site
 
 If you're not familiar with how to configure ONAP, there are guides that use
-`robot <https://onap.readthedocs.io/en/elalto/submodules/integration.git/docs/docs_robot.html>`_
+`robot <https://docs.onap.org/projects/onap-integration/en/frankfurt/docs_robot.html#docs-robot>`_
 or `direct api <https://wiki.onap.org/pages/viewpage.action?pageId=25431491>`_ requests available
 to help, as well as a guide for adding a new OpenStack site to ONAP.
 
@@ -75,7 +75,7 @@ ONAP OOM project repo:
 
 .. code-block:: bash
 
-    git clone --branch 5.0.1-ONAP ssh://<username>@gerrit.onap.org:29418/oom --recurse-submodules
+    git clone --branch 6.0.1-ONAP ssh://<username>@gerrit.onap.org:29418/oom --recurse-submodules
 
 VNF Preparation
 ^^^^^^^^^^^^^^^
@@ -519,7 +519,7 @@ Running TOSCA VNF Compliance Testing
 
 To run compliance test as below with given CSAR file
 
-.. clode-block:: bash
+.. code-block:: bash
 
     oclip --product onap-dublin csar-validate --csar <csar file complete path>
 
