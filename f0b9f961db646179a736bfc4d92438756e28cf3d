@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cd6750da_f2a510ec",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 5887
+      },
+      "writtenOn": "2020-10-21T03:01:23Z",
+      "side": 1,
+      "message": "can you update it with \u0027web portal (Dovetail)\u0027",
+      "range": {
+        "startLine": 23,
+        "startChar": 89,
+        "endLine": 23,
+        "endChar": 99
+      },
+      "revId": "f0b9f961db646179a736bfc4d92438756e28cf3d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "726289c9_d72171ab",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 5887
+      },
+      "writtenOn": "2020-10-21T03:01:23Z",
+      "side": 1,
+      "message": "is it frankfurt?",
+      "range": {
+        "startLine": 46,
+        "startChar": 8,
+        "endLine": 46,
+        "endChar": 14
+      },
+      "revId": "f0b9f961db646179a736bfc4d92438756e28cf3d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    }
+  ]
+}
