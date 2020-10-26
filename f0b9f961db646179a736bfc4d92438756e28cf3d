@@ -25,6 +25,75 @@
     },
     {
       "key": {
+        "uuid": "dd3fa4fa_90c6b3c4",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 7599
+      },
+      "writtenOn": "2020-10-26T20:26:35Z",
+      "side": 1,
+      "message": "VVP OVP Test Suite",
+      "range": {
+        "startLine": 156,
+        "startChar": 2,
+        "endLine": 156,
+        "endChar": 24
+      },
+      "revId": "f0b9f961db646179a736bfc4d92438756e28cf3d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d819247d_61a22687",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 7599
+      },
+      "writtenOn": "2020-10-26T20:26:35Z",
+      "side": 1,
+      "message": "https://github.com/onap/vvp-test-engine/tree/frankfurt/ovp_testsuite",
+      "range": {
+        "startLine": 156,
+        "startChar": 30,
+        "endLine": 156,
+        "endChar": 71
+      },
+      "revId": "f0b9f961db646179a736bfc4d92438756e28cf3d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8d6c69ed_21b27039",
+        "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 7599
+      },
+      "writtenOn": "2020-10-26T20:26:35Z",
+      "side": 1,
+      "message": "The execution instructions for heat based VNFs in Frankfurt was moved here: https://github.com/onap/vvp-test-engine/tree/frankfurt/ovp_testsuite . I would just point users there instead.",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 26
+      },
+      "revId": "f0b9f961db646179a736bfc4d92438756e28cf3d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "726289c9_d72171ab",
         "filename": "docs/testing/user/userguide/vnf_test_guide.rst",
         "patchSetId": 4
