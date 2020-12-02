@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d1c35205_026869d2",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 3405
+      },
+      "writtenOn": "2020-12-02T09:53:03Z",
+      "side": 1,
+      "message": "Baraque could have been considered. Latest CNTT release.",
+      "revId": "1e48a7b235be95e49c42d3a7c739ca4caf38e01c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e3656724_4af4b40c",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 3405
+      },
+      "writtenOn": "2020-12-02T09:53:03Z",
+      "side": 1,
+      "message": "Xtesting +link?",
+      "revId": "1e48a7b235be95e49c42d3a7c739ca4caf38e01c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2f2c906f_5d35e644",
+        "filename": "docs/release/release-notes/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 3405
+      },
+      "writtenOn": "2020-12-02T09:53:03Z",
+      "side": 1,
+      "message": "mandatory RC1 test cases are leveraging smoke_cntt and benchmarking_cntt (fine tuning for CNTT Compliance)",
+      "revId": "1e48a7b235be95e49c42d3a7c739ca4caf38e01c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dd1930e5_0d20e4e4",
+        "filename": "docs/testing/user/reviewerguide/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 3405
+      },
+      "writtenOn": "2020-12-02T09:53:03Z",
+      "side": 1,
+      "message": "All the result dirs must be updated as Dovetail is no longuer wrapping the test cases.",
+      "revId": "1e48a7b235be95e49c42d3a7c739ca4caf38e01c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "af39041c_ae386a12",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 3405
+      },
+      "writtenOn": "2020-12-02T09:53:03Z",
+      "side": 1,
+      "message": "blank char",
+      "revId": "1e48a7b235be95e49c42d3a7c739ca4caf38e01c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6ae33734_d1e89df9",
+        "filename": "docs/testing/user/systempreparation/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 3405
+      },
+      "writtenOn": "2020-12-02T09:53:03Z",
+      "side": 1,
+      "message": "Badly or Baraque?",
+      "revId": "1e48a7b235be95e49c42d3a7c739ca4caf38e01c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "106307ed_36b5fb52",
+        "filename": "docs/testing/user/userguide/testing_guide.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 635,
+      "author": {
+        "id": 3405
+      },
+      "writtenOn": "2020-12-02T09:53:03Z",
+      "side": 1,
+      "message": "No that\u0027s not the CNTT way.",
+      "revId": "1e48a7b235be95e49c42d3a7c739ca4caf38e01c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": true
+    }
+  ]
+}
