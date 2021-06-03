@@ -1,0 +1,42 @@
+# Dovetail CI
+#
+# Runs tox and documentation builds on verify and merge and run docker
+# builds on merges and tags.
+---
+include:
+  - project: anuket/releng
+    file: '/gitlab-templates/RTD.gitlab-ci.yml'
+  - project: anuket/releng
+    file: '/gitlab-templates/Docker.gitlab-ci.yml'
+  - project: anuket/releng
+    file: '/gitlab-templates/GoogleStorage.gitlab-ci.yml'
+
+variables:
+  DOCKER_REGISTRY: docker.io
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+.unit-test-defaults: &unit-test-defaults
+  stage: test
+  image: python:3.5
+  before_script:
+    - pip install tox
+  cache:
+    paths:
+      - .cache/pip
+      - venv/
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+py35:
+  <<: *unit-test-defaults
+  script:
+    tox -e py35
+  artifacts:
+    reports:
+      cobertura: coverage.xml
+      junit: report.xml
+
+pep8:
+  <<: *unit-test-defaults
+  script:
+    tox -e pep8
